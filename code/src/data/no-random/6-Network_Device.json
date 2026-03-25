@@ -1,0 +1,563 @@
+[
+  {
+    "question": "อุปกรณ์ Hub ทำงานในชั้นใดของ TCP/IP protocol suite?",
+    "options": [
+      "Physical layer",
+      "Data-link layer",
+      "Network layer",
+      "Transport layer"
+    ],
+    "answer": 0,
+    "explanation": "Hub เป็นอุปกรณ์ที่ทำงานเฉพาะในชั้น Physical layer โดยจะทำหน้าที่รับสัญญาณที่เริ่มอ่อนหรือบิดเบือนและส่งสัญญาณใหม่ออกไปโดยไม่ทำการกรองหรือเปลี่ยนแปลงข้อมูล"
+  },
+  {
+    "question": "Repeater มีหน้าที่หลักอย่างไรในเครือข่าย?",
+    "options": [
+      "เปลี่ยน MAC address ของแพ็กเก็ต",
+      "กรองแพ็กเก็ตตามปลายทาง",
+      "รับสัญญาณแล้วทำการขยายหรือสร้างสัญญาณใหม่",
+      "จัดสรร IP address ให้กับโหนด"
+    ],
+    "answer": 2,
+    "explanation": "Repeater จะทำหน้าที่รับสัญญาณที่เริ่มอ่อนลงและสร้างสัญญาณใหม่ให้กลับมาชัดเจนอีกครั้ง แต่ไม่ได้กรองหรือเปลี่ยนข้อมูลในแพ็กเก็ต"
+  },
+  {
+    "question": "อุปกรณ์ Link-layer Switch สามารถตรวจสอบข้อมูลในเฟรมได้จากข้อมูลใด?",
+    "options": [
+      "IP address ใน Network layer",
+      "Port number ใน Transport layer",
+      "MAC address ใน Data-link layer",
+      "Application header ใน Application layer"
+    ],
+    "answer": 2,
+    "explanation": "Link-layer Switch สามารถตรวจสอบและตัดสินใจส่งต่อข้อมูลโดยอ้างอิงจาก MAC address ที่อยู่ใน Data-link layer ของเฟรม"
+  },
+  {
+    "question": "เหตุใด Link-layer Switch จึงสามารถกรอง (filter) เฟรมได้?",
+    "options": [
+      "เพราะ Hub มีตารางกรองของ MAC address",
+      "เพราะ Switch มีตารางที่ใช้สำหรับตรวจสอบ MAC address",
+      "เพราะ Switch ทำงานใน Network layer",
+      "เพราะ Switch เปลี่ยน IP address ของแพ็กเก็ต"
+    ],
+    "answer": 1,
+    "explanation": "Link-layer Switch มีตารางซึ่งบันทึก MAC address ของโหนดและพอร์ตที่เกี่ยวข้อง ทำให้สามารถเลือกส่งต่อ (filter) หรือบล็อกเฟรมได้ตามจุดหมายปลายทาง"
+  },
+  {
+    "question": "อุปกรณ์ใดที่ทำงานถึงชั้น Network layer ใน TCP/IP protocol suite?",
+    "options": [
+      "Hub",
+      "Repeater",
+      "Link-layer Switch",
+      "Router"
+    ],
+    "answer": 3,
+    "explanation": "Router เป็นอุปกรณ์ที่ทำงานในชั้น Network layer (รวมถึง Physical และ Data-link layer) สามารถอ่านและเปลี่ยนแปลง IP address ในแพ็กเก็ตได้"
+  },
+  {
+    "question": "Transparent Switch คืออะไร?",
+    "options": [
+      "Switch ที่ผู้ใช้ต้องกำหนดค่า MAC address เอง",
+      "Switch ที่โหนดในระบบไม่ต้องรับรู้การมีอยู่ของสวิตช์",
+      "Switch ที่เปลี่ยนแปลง MAC address ของทุกแพ็กเก็ต",
+      "Switch ที่ทำงานใน Network layer"
+    ],
+    "answer": 1,
+    "explanation": "Transparent Switch คือสวิตช์ที่โหนดปลายทางไม่ต้องทราบว่ามีสวิตช์ในเครือข่าย การเพิ่มหรือลบสวิตช์จะไม่ทำให้ต้องปรับเปลี่ยนการตั้งค่าของโหนด"
+  },
+  {
+    "question": "เพราะเหตุใดจึงต้องมีการป้องกัน Loop ในระบบที่มีสวิตช์หลายตัว?",
+    "options": [
+      "เพื่อให้สวิตช์ทำงานได้เร็วขึ้น",
+      "เพื่อป้องกันสวิตช์สูญเสียตาราง MAC address",
+      "เพื่อป้องกัน Broadcast Storm ที่อาจทำให้เกิดการส่งเฟรมวนซ้ำไม่สิ้นสุด",
+      "เพื่อเพิ่มจำนวนพอร์ตของสวิตช์ได้มากขึ้น"
+    ],
+    "answer": 2,
+    "explanation": "เมื่อมีการเชื่อมต่อสวิตช์แบบซ้ำซ้อน อาจเกิด Loop ทำให้เฟรม Broadcast ส่งวนซ้ำตลอดเวลา จึงจำเป็นต้องป้องกัน Loop เพื่อหลีกเลี่ยง Broadcast Storm"
+  },
+  {
+    "question": "Spanning Tree Algorithm ถูกใช้เพื่อจุดประสงค์ใด?",
+    "options": [
+      "เปลี่ยน MAC address ของเฟรมให้ถูกต้อง",
+      "สร้างเส้นทางเชื่อมต่อแบบซ้ำซ้อนเพื่อเพิ่มความเร็ว",
+      "เลือกเส้นทางที่ทำให้เกิดการวน Loop ในเครือข่าย",
+      "หาเส้นทางที่ปราศจาก Loop เพื่อเชื่อมโยงสวิตช์"
+    ],
+    "answer": 3,
+    "explanation": "Spanning Tree Algorithm ใช้เพื่อสร้างโครงสร้างต้นไม้ (Tree) ที่ไม่มีการวนซ้ำ ช่วยให้เครือข่ายปราศจาก Loop และยังคงสามารถเชื่อมโยงสวิตช์ได้อย่างมีประสิทธิภาพ"
+  },
+  {
+    "question": "ข้อใดเป็นข้อดีของ Link-layer Switch ในการกำจัดปัญหาการชนกัน (collision)?",
+    "options": [
+      "Switch สร้างเฟรมใหม่ทุกครั้งที่ส่งออก",
+      "แต่ละพอร์ตของ Switch จะทำงานเป็น Collision Domain แยกกัน",
+      "Switch เปลี่ยน IP address ของโหนดเพื่อเลี่ยงการชนกัน",
+      "Switch ไม่มีการเก็บตาราง MAC address"
+    ],
+    "answer": 1,
+    "explanation": "เนื่องจาก Switch มีหลายพอร์ต และแต่ละพอร์ตจะเป็น Collision Domain ของตัวเอง ทำให้โหนดที่เชื่อมต่อแต่ละพอร์ตไม่ชนกัน เพิ่มประสิทธิภาพการส่งข้อมูล"
+  },
+  {
+    "question": "เหตุใดอุปกรณ์ Link-layer Switch จึงสามารถเชื่อมอุปกรณ์ที่มีความเร็วต่างกันได้?",
+    "options": [
+      "เพราะ Switch เปลี่ยน Protocol ของแพ็กเก็ตทั้งหมด",
+      "เพราะ Switch จะไม่สนใจ MAC address ของแต่ละโหนด",
+      "เพราะ Switch ทำงานเฉพาะที่ Physical layer",
+      "เพราะ Switch สามารถรับและส่งเฟรมโดยไม่เปลี่ยนรูปแบบ Data-link layer"
+    ],
+    "answer": 3,
+    "explanation": "Switch สามารถรับเฟรมจากโหนดที่มีความเร็วหรือสื่อที่ต่างกันได้ และส่งต่อไปยังโหนดอื่นตราบใดที่รูปแบบ Data-link layer ไม่เปลี่ยนแปลง"
+  },
+  {
+    "question": "Router ทำงานในชั้นใดบ้างของ TCP/IP protocol suite?",
+    "options": [
+      "Physical, Data-link และ Network layer",
+      "Physical, Network และ Transport layer",
+      "Data-link, Network และ Application layer",
+      "เฉพาะ Data-link layer เท่านั้น"
+    ],
+    "answer": 0,
+    "explanation": "Router ทำงานใน Physical layer (รับ-ส่งสัญญาณ), Data-link layer (ตรวจสอบ MAC address), และ Network layer (ตรวจสอบและเปลี่ยนแปลง IP address)"
+  },
+  {
+    "question": "สิ่งใดต่อไปนี้เป็นข้อแตกต่างสำคัญระหว่าง Router กับ Switch?",
+    "options": [
+      "Router มีตาราง MAC address ส่วน Switch ไม่มี",
+      "Router มีการเปลี่ยน Link-layer address ของแพ็กเก็ต ส่วน Switch ไม่เปลี่ยน",
+      "Router ไม่สามารถกรองแพ็กเก็ตได้ แต่ Switch ทำได้",
+      "Switch ทำงานใน Network layer ส่วน Router ทำงานใน Data-link layer"
+    ],
+    "answer": 1,
+    "explanation": "Router จะเปลี่ยน Link-layer address (ทั้งต้นทางและปลายทาง) เมื่อส่งต่อแพ็กเก็ต ในขณะที่ Switch ไม่เปลี่ยน MAC address ของเฟรม"
+  },
+  {
+    "question": "Router มี Link-layer address กี่ชุด?",
+    "options": [
+      "1 ชุด สำหรับทุกพอร์ต",
+      "1 ชุด รวมทุกพอร์ต",
+      "ไม่มี Link-layer address เพราะอยู่ใน Network layer",
+      "2 ชุด สำหรับการรับและส่ง"
+    ],
+    "answer": 0,
+    "explanation": "Router มี Link-layer address แยกตามจำนวนพอร์ตแต่ละพอร์ต ซึ่งใช้ในการรับและส่งข้อมูลในชั้น Data-link layer"
+  },
+  {
+    "question": "Virtual LAN (VLAN) มีแนวคิดหลักคืออะไร?",
+    "options": [
+      "การแบ่ง LAN ตามตำแหน่งทางกายภาพ (physical)",
+      "การแบ่ง LAN ตามเครือข่ายอินเทอร์เน็ต",
+      "การแบ่ง LAN ตามตัวเลข MAC address เท่านั้น",
+      "การแบ่ง LAN แบบตรรกะ (logical) ไม่อิงกับการเดินสายจริง"
+    ],
+    "answer": 3,
+    "explanation": "VLAN แบ่งเครือข่ายโดยใช้การกำหนดค่าแบบตรรกะ (logical) ผ่านซอฟต์แวร์ แทนที่จะอิงกับการเดินสาย (physical) เพียงอย่างเดียว"
+  },
+  {
+    "question": "เพราะเหตุใดการใช้งาน VLAN จึงได้รับความนิยม?",
+    "options": [
+      "ช่วยกระจาย Collision Domain ได้ดีกว่า Hub",
+      "สามารถกำหนด VLAN ให้ทุกอุปกรณ์รับ IP address เดียวกัน",
+      "แบ่งกลุ่มเครือข่ายได้แบบไม่ต้องพึ่งการเปลี่ยนสายเคเบิลจริง",
+      "กำหนดตาราง MAC address ได้ง่ายขึ้น"
+    ],
+    "answer": 2,
+    "explanation": "VLAN ช่วยให้ผู้ดูแลระบบสามารถแบ่งกลุ่มคอมพิวเตอร์หรืออุปกรณ์ได้แบบตรรกะ โดยไม่จำเป็นต้องเปลี่ยนการเดินสายของเครือข่ายจริง"
+  },
+  {
+    "question": "การกำหนดสมาชิก VLAN ด้วยหมายเลขพอร์ตของ Switch หมายความว่าอย่างไร?",
+    "options": [
+      "เลือกอุปกรณ์เข้ากลุ่ม VLAN ตามโปรโตคอลที่ใช้",
+      "เลือกอุปกรณ์เข้ากลุ่ม VLAN ตาม IP address",
+      "เลือกอุปกรณ์เข้ากลุ่ม VLAN ตามพอร์ตที่เชื่อมต่อกับ Switch",
+      "เลือกอุปกรณ์เข้ากลุ่ม VLAN ตาม MAC address โดยตรง"
+    ],
+    "answer": 2,
+    "explanation": "บางระบบจะกำหนดสมาชิก VLAN ตามหมายเลขพอร์ตของ Switch ทำให้ทุกอุปกรณ์ที่เสียบพอร์ตนั้นจะอยู่ใน VLAN เดียวกัน"
+  },
+  {
+    "question": "การกำหนด VLAN ด้วย MAC address เหมาะสมในสถานการณ์ใด?",
+    "options": [
+      "เมื่อเราต้องการแบ่ง VLAN ตามจำนวนพอร์ต",
+      "เมื่อ MAC address ของแต่ละอุปกรณ์มีความคงที่ไม่เปลี่ยน",
+      "เมื่อเราต้องการให้ IP address เปลี่ยนแบบอัตโนมัติ",
+      "เมื่อ Switch ไม่รองรับการทำงานแบบ Transparent"
+    ],
+    "answer": 1,
+    "explanation": "MAC address ของอุปกรณ์มักไม่เปลี่ยน ทำให้การกำหนด VLAN ด้วย MAC address สามารถระบุอุปกรณ์ได้แน่นอน แม้จะย้ายไปเสียบพอร์ตใดบน Switch"
+  },
+  {
+    "question": "การกำหนด VLAN แบบ Manual Configuration มีลักษณะอย่างไร?",
+    "options": [
+      "Switch จะตรวจสอบและกำหนด VLAN ให้เองโดยอัตโนมัติ",
+      "ผู้ดูแลระบบเป็นผู้ตั้งค่า VLAN ของทุกพอร์ตหรือทุก MAC address เอง",
+      "ระบบจะกำหนดให้มี VLAN เดียวในเครือข่ายทั้งหมด",
+      "อุปกรณ์ใน VLAN ต้องส่งสัญญาณ Broadcast ซ้ำซ้อน"
+    ],
+    "answer": 1,
+    "explanation": "Manual Configuration คือผู้ดูแลระบบต้องเข้าไปกำหนดว่าแต่ละพอร์ตหรืออุปกรณ์จะอยู่ใน VLAN ใดด้วยตัวเอง"
+  },
+  {
+    "question": "ข้อใดอธิบายถึง Automatic Configuration ของ VLAN?",
+    "options": [
+      "ผู้ดูแลระบบต้องกำหนดค่าอุปกรณ์ทุกตัวในสวิตช์",
+      "ไม่มีการกำหนดค่าใด ๆ ทั้งสิ้น",
+      "สวิตช์จะตรวจสอบเงื่อนไข (Criteria) และเชื่อมต่อ-ตัดการเชื่อมต่อ VLAN ให้ตามที่กำหนด",
+      "อุปกรณ์ทั้งหมดอยู่ใน VLAN เดียวกัน"
+    ],
+    "answer": 2,
+    "explanation": "Automatic Configuration หมายถึงสวิตช์จะใช้เกณฑ์ที่กำหนดล่วงหน้า เช่น MAC address หรือ Protocol ในการตัดสินใจปรับเปลี่ยนการเป็นสมาชิก VLAN โดยอัตโนมัติ"
+  },
+  {
+    "question": "Semiautomatic Configuration ของ VLAN ผสมผสานรูปแบบใด?",
+    "options": [
+      "ผสมระหว่างการแบ่ง VLAN ตามหมายเลขพอร์ตและตาม MAC address",
+      "ผสมระหว่างการตั้งค่าแบบ Manual และการอัปเดตสมาชิกแบบ Automatic",
+      "ผสมระหว่างการกำหนด IP address ในชั้น Network layer และ Data-link layer",
+      "ผสมระหว่างการกำหนดค่า VLAN และการเปลี่ยน MAC address"
+    ],
+    "answer": 1,
+    "explanation": "Semiautomatic Configuration มักเริ่มต้นจากผู้ดูแลระบบตั้งค่าแบบ Manual หลังจากนั้นสวิตช์จะปรับย้ายหรือปรับเปลี่ยนสมาชิก VLAN แบบ Automatic ตามเงื่อนไข"
+  },
+  {
+    "question": "ในการเชื่อม Switch หลายตัวเพื่อสร้าง VLAN เดียวกัน จำเป็นต้องมีข้อมูลอะไรระหว่าง Switch?",
+    "options": [
+      "ตาราง Network layer address ของทุกอุปกรณ์",
+      "ตาราง MAC address อย่างเดียว",
+      "ข้อมูลสมาชิก VLAN ที่อัปเดตหรือแลกเปลี่ยนกัน",
+      "การตั้งค่า Firewall ในแต่ละ Switch"
+    ],
+    "answer": 2,
+    "explanation": "Switch แต่ละตัวต้องรู้ว่าสถานีใดอยู่ใน VLAN ใด จึงต้องมีการแลกเปลี่ยนข้อมูลสมาชิก VLAN เป็นระยะเพื่อให้ส่ง Broadcast ไปถูกกลุ่ม"
+  },
+  {
+    "question": "Frame Tagging ใน VLAN ทำหน้าที่อะไร?",
+    "options": [
+      "เพิ่มหมายเลข IP ให้กับแพ็กเก็ต",
+      "บ่งบอกว่ากำลังใช้โปรโตคอลใด",
+      "ทำให้ Switch ทราบว่าเฟรมนี้สังกัด VLAN ใด",
+      "ลดขนาดของเฟรมเพื่อส่งได้เร็วขึ้น"
+    ],
+    "answer": 2,
+    "explanation": "Frame Tagging คือการเพิ่มส่วนหัวพิเศษในเฟรมเพื่อระบุ VLAN ที่ต้องการให้ Switch อื่นทราบว่าจะส่งเฟรมนี้ไปยัง VLAN ใด"
+  },
+  {
+    "question": "Trunk ระหว่าง Switch ใน VLAN หมายถึงอะไร?",
+    "options": [
+      "ช่องสัญญาณที่แบ่งเวลาส่ง (TDM) เพื่อส่งเฟรม VLAN หลายกลุ่มผ่านสายเดียวกัน",
+      "สายสัญญาณที่ไม่สามารถส่งข้อมูลหลาย VLAN ได้",
+      "ช่องสัญญาณเพื่อเชื่อมต่อเฉพาะ VLAN เดียวกันเท่านั้น",
+      "การกระจาย IP address อัตโนมัติให้ Switch"
+    ],
+    "answer": 0,
+    "explanation": "Trunk คือการเชื่อมต่อระหว่าง Switch ที่แบ่งช่องสัญญาณเพื่อให้ส่งเฟรมของ VLAN หลายกลุ่มผ่านสายกายภาพเส้นเดียว โดยอาจอิงเวลา (TDM) หรือวิธีการอื่น"
+  },
+  {
+    "question": "เมื่อมีการส่ง Broadcast Frame ข้าม Switch หลายตัวใน VLAN ใด VLAN หนึ่ง สิ่งใดช่วยให้ Switch อื่นทราบว่าควรส่งเฟรมนั้นให้ใครบ้าง?",
+    "options": [
+      "การใช้ ARP Table แทน VLAN Table",
+      "การเพิ่ม Frame Tag สำหรับ VLAN",
+      "Switch จะส่งเฟรมไปทุกพอร์ตโดยไม่กรอง",
+      "Switch ใช้วิธีสุ่มพอร์ตปลายทาง"
+    ],
+    "answer": 1,
+    "explanation": "Switch จะเพิ่มข้อมูล Tag เข้าไปในเฟรมว่าเป็น VLAN ใด เพื่อให้ Switch ปลายทางรู้ว่าเฟรมนี้เป็นของ VLAN ไหน จึงกระจายเฉพาะใน VLAN นั้น"
+  },
+  {
+    "question": "มาตรฐาน IEEE 802.1Q ระบุอะไรเกี่ยวกับ VLAN?",
+    "options": [
+      "ระบุโครงสร้าง IP address สำหรับ VLAN",
+      "กำหนดรูปแบบ Frame Tagging สำหรับ VLAN",
+      "ห้ามมี Broadcast ใน VLAN เดียวกัน",
+      "กำหนดให้ทุก VLAN ต้องอยู่ใน Subnet เดียวกัน"
+    ],
+    "answer": 1,
+    "explanation": "IEEE 802.1Q คือมาตรฐานที่กำหนดรูปแบบของ Frame Tagging เพื่อสื่อสาร VLAN ข้าม Switch จากผู้ผลิตต่าง ๆ ให้เป็นมาตรฐานเดียวกัน"
+  },
+  {
+    "question": "ข้อใดคือข้อดีด้านต้นทุนเมื่อใช้ VLAN?",
+    "options": [
+      "Switch ใน VLAN ทุกตัวฟรีค่าอุปกรณ์",
+      "ไม่ต้องเปลี่ยนสายเคเบิลเมื่อย้ายหรือปรับกลุ่มผู้ใช้",
+      "ช่วยลดค่าไฟฟ้าเนื่องจากไม่มีการปล่อยสัญญาณซ้ำ",
+      "ไม่ต้องใช้ Broadcast Frame อีกต่อไป"
+    ],
+    "answer": 1,
+    "explanation": "การใช้ VLAN ช่วยลดต้นทุนและเวลาที่ต้องใช้ในการเปลี่ยนสายกายภาพของเครือข่าย เมื่อมีการย้ายหรือปรับกลุ่มผู้ใช้"
+  },
+  {
+    "question": "เพราะเหตุใด VLAN จึงช่วยเพิ่มความปลอดภัยได้?",
+    "options": [
+      "เพราะ MAC address ของทุกอุปกรณ์ถูกเข้ารหัส",
+      "เพราะอุปกรณ์ใน VLAN เดียวกันจะมองไม่เห็นอุปกรณ์ใน VLAN อื่นโดยตรงผ่าน Broadcast",
+      "เพราะไม่ต้องใช้งาน Spanning Tree Algorithm",
+      "เพราะทุก VLAN ต้องใช้ IP address ชุดเดียวกัน"
+    ],
+    "answer": 1,
+    "explanation": "VLAN ช่วยแยก Broadcast Domain ตามกลุ่มตรรกะ ทำให้การส่ง Broadcast อยู่ใน VLAN นั้นเท่านั้น จึงลดความเสี่ยงในการเข้าถึงข้อมูลจากบุคคลภายนอก VLAN"
+  },
+  {
+    "question": "VLAN ช่วยสร้าง Virtual Work Group ได้อย่างไร?",
+    "options": [
+      "บังคับให้ทุกโหนดมีหมายเลข MAC address เดียวกัน",
+      "กระจายสัญญาณไปในทุกพอร์ตอย่างอิสระ",
+      "จับกลุ่มโหนดตามตำแหน่งสายเคเบิลกายภาพ",
+      "จับกลุ่มโหนดแบบตรรกะเพื่อสื่อสารกันอย่างเฉพาะเจาะจง"
+    ],
+    "answer": 3,
+    "explanation": "VLAN สามารถรวมโหนดที่อยู่คนละส่วนของเครือข่ายทางกายภาพเข้าด้วยกันเป็นกลุ่มเดียว (Virtual Work Group) ได้อย่างสะดวก"
+  },
+  {
+    "question": "Repeater ต่างจาก Hub อย่างไร?",
+    "options": [
+      "Repeater และ Hub ทำงานเหมือนกันทุกประการ",
+      "Hub มีหลายพอร์ต ส่วน Repeater มีพอร์ตเดียวหรือสองพอร์ต",
+      "Repeater ทำการเปลี่ยน MAC address แต่ Hub ไม่เปลี่ยน",
+      "Hub ใช้สำหรับเครือข่ายไร้สาย ส่วน Repeater ใช้กับเครือข่ายสาย"
+    ],
+    "answer": 1,
+    "explanation": "Repeater รับสัญญาณแล้วขยายโดยทั่วไปมีพอร์ตจำนวนน้อย ในขณะที่ Hub เป็น Repeater หลายพอร์ตที่กระจายสัญญาณไปยังพอร์ตทั้งหมด"
+  },
+  {
+    "question": "ข้อใดเป็นความแตกต่างระหว่าง Switch และ Bridging Hub?",
+    "options": [
+      "Switch ทำงานในชั้น Physical layer เท่านั้น",
+      "Switch สามารถกรองแพ็กเก็ตตาม MAC address ส่วน Bridging Hub ไม่สามารถทำได้",
+      "Switch ส่งสัญญาณไปทุกพอร์ตเสมอ ส่วน Bridging Hub กรองตาม MAC address",
+      "Switch ไม่สามารถสร้างตารางที่เรียนรู้ MAC address ได้"
+    ],
+    "answer": 1,
+    "explanation": "Switch มีความสามารถในการตรวจสอบตาราง MAC address และตัดสินใจส่งต่อ (filter) หรือ flood เฟรม ส่วน Bridging Hub จะทำงานได้จำกัดกว่า"
+  },
+  {
+    "question": "Link-layer Switch เรียนรู้ MAC address ของแต่ละโหนดได้อย่างไร?",
+    "options": [
+      "มีการตั้งค่า MAC address ลงใน Switch ทีละพอร์ต",
+      "ใช้ Spanning Tree Algorithm ในการสร้างตาราง MAC address",
+      "อ่าน MAC address จากเฟรมต้นทางแล้วบันทึกไว้ในตาราง",
+      "Switch ไม่สามารถเรียนรู้ได้ ต้องกำหนดด้วยตนเอง"
+    ],
+    "answer": 2,
+    "explanation": "Switch จะเรียนรู้ MAC address โดยการอ่านจากเฟรมที่ส่งเข้ามา (source MAC address) แล้วบันทึกลงในตารางพร้อมระบุพอร์ตที่รับเข้ามา"
+  },
+  {
+    "question": "Transparent Switch ช่วยลดภาระของผู้ใช้หรือโหนดอย่างไร?",
+    "options": [
+      "โหนดไม่ต้องเปลี่ยน MAC address เมื่อมีการเพิ่มหรือลบ Switch",
+      "โหนดไม่ต้องเรียนรู้ IP address ของ Switch",
+      "โหนดไม่ต้องใช้สายเคเบิลอีกต่อไป",
+      "โหนดสามารถตั้งค่า VLAN ได้เอง"
+    ],
+    "answer": 0,
+    "explanation": "คุณสมบัติของ Transparent Switch คือโหนดหรือผู้ใช้ไม่ต้องรับรู้ว่ามีสวิตช์และไม่ต้องปรับแก้การตั้งค่าใด ๆ เมื่อมีการเพิ่มหรือลบสวิตช์"
+  },
+  {
+    "question": "Switch ตัดสินใจว่าจะส่งเฟรมออกทางพอร์ตใดจากข้อมูลใด?",
+    "options": [
+      "IP address ของโหนดปลายทาง",
+      "MAC address ของโหนดปลายทาง",
+      "หมายเลขโปรโตคอลของเฟรม",
+      "ข้อมูลจาก Transport layer (Port Number)"
+    ],
+    "answer": 1,
+    "explanation": "Switch ใช้ MAC address ปลายทางเทียบกับตารางเพื่อหาว่าควรส่งเฟรมออกพอร์ตใด หากไม่พบข้อมูลก็จะ Broadcast ไปทุกพอร์ตยกเว้นพอร์ตที่รับเข้า"
+  },
+  {
+    "question": "Collision มักเกิดขึ้นใน Hub เพราะอะไร?",
+    "options": [
+      "Hub มีการเปลี่ยน IP address ตลอดเวลา",
+      "Hub มีการกำหนด VLAN หลายกลุ่ม",
+      "ทุกพอร์ตของ Hub อยู่ใน Collision Domain เดียวกัน",
+      "Hub ตรวจสอบ MAC address ของทุกเฟรมก่อนส่ง"
+    ],
+    "answer": 2,
+    "explanation": "Hub ทำหน้าที่เหมือน Repeater หลายพอร์ต จึงรวมทุกอุปกรณ์อยู่ใน Collision Domain เดียว ทำให้เกิดการชนกันได้ง่าย"
+  },
+  {
+    "question": "Spanning Tree Algorithm จำเป็นในระบบ Switch หลายตัวเพราะเหตุใด?",
+    "options": [
+      "เพื่อเร่งความเร็วในการเรียนรู้ MAC address",
+      "เพื่อป้องกันการส่งข้อมูลผิด VLAN",
+      "เพื่อป้องกันการเกิด Loop และ Broadcast Storm",
+      "เพื่อเปลี่ยน IP address ของแต่ละเฟรม"
+    ],
+    "answer": 2,
+    "explanation": "Spanning Tree Algorithm ช่วยป้องกันการเกิด Loop เมื่อมีการเชื่อมต่อสวิตช์หลายตัวแบบซ้ำซ้อน ป้องกัน Broadcast Storm ที่อาจทำให้เครือข่ายล่ม"
+  },
+  {
+    "question": "ใน Spanning Tree Algorithm เส้นทางสวิตช์ที่ถูกเลือกต้องมีลักษณะใด?",
+    "options": [
+      "เป็นเส้นทางที่มีค่าแบนด์วิดท์ต่ำที่สุด",
+      "เป็นเส้นทางที่ไม่มีการวน Loop",
+      "เป็นเส้นทางที่ใช้ IP address เหมือนกันทั้งหมด",
+      "เป็นเส้นทางที่มี Collision มากที่สุด"
+    ],
+    "answer": 1,
+    "explanation": "Spanning Tree Algorithm จะเลือกเส้นทางที่สร้างโครงสร้างต้นไม้ (Tree) ไม่มีการวนซ้ำ เพื่อให้เครือข่ายทำงานได้อย่างมีประสิทธิภาพและเสถียร"
+  },
+  {
+    "question": "Physical layer device คืออุปกรณ์ที่ทำหน้าที่อะไร?",
+    "options": [
+      "ประมวลผล IP address",
+      "จัดการกับสัญญาณไฟฟ้าหรือแสง",
+      "กรองเฟรมตาม MAC address",
+      "วิเคราะห์แพ็กเก็ตใน Transport layer"
+    ],
+    "answer": 1,
+    "explanation": "Physical layer device จะทำงานเกี่ยวกับการส่งและรับสัญญาณ เช่น สัญญาณไฟฟ้าหรือแสง โดยไม่มีการตรวจสอบหรือกรองข้อมูล"
+  },
+  {
+    "question": "Data-link layer device มีหน้าที่ใดต่อไปนี้?",
+    "options": [
+      "ตรวจสอบ IP address ของแพ็กเก็ต",
+      "ประมวลผลข้อมูลเฉพาะ Transport layer",
+      "วิเคราะห์และควบคุมการส่งต่อเฟรมโดยใช้ MAC address",
+      "เข้ารหัสข้อมูลทั้งหมดก่อนส่ง"
+    ],
+    "answer": 2,
+    "explanation": "Data-link layer device จะทำงานกับเฟรมที่มี MAC address เป็นตัวระบุต้นทางและปลายทาง ช่วยในการส่งต่อและกรองเฟรม"
+  },
+  {
+    "question": "การแยกแยะระหว่าง Data-link layer address กับ Network layer address มีความสำคัญอย่างไร?",
+    "options": [
+      "เพราะ IP address และ MAC address ใช้แทนกันได้",
+      "เพราะ IP address ทำหน้าที่นำส่งข้อมูลข้ามเครือข่าย ส่วน MAC address ใช้สื่อสารภายในวง LAN",
+      "เพราะ MAC address มี 16 บิต ส่วน IP address มี 16 บิต",
+      "เพราะ Switch ต้องตรวจสอบเฉพาะ IP address เสมอ"
+    ],
+    "answer": 1,
+    "explanation": "MAC address ระบุอุปกรณ์ในเครือข่ายระดับลิงก์ ส่วน IP address ใช้กำหนดเส้นทางข้อมูลในระดับเครือข่าย (ข้าม Network ต่าง ๆ) จึงมีบทบาทต่างกัน"
+  },
+  {
+    "question": "TDM (Time-Division Multiplexing) ถูกนำมาใช้ใน Trunk ของ VLAN เพื่ออะไร?",
+    "options": [
+      "แบ่งเวลาให้เฟรมของ VLAN ต่าง ๆ เดินทางสลับกันในสายเดียว",
+      "กำหนดให้ทุก VLAN ส่งข้อมูลพร้อมกัน",
+      "ลดความเร็วในการส่งเฟรมของ VLAN",
+      "ยกเลิกการใช้ MAC address ในการส่งเฟรม"
+    ],
+    "answer": 0,
+    "explanation": "TDM จะจัดสรรช่องเวลาบนสายเดียวกัน เพื่อให้แต่ละ VLAN ส่งข้อมูลคนละช่วงเวลา ทำให้หลาย VLAN แชร์สายเดียวกันได้"
+  },
+  {
+    "question": "Loop เกิดขึ้นได้อย่างไรในระบบ Switch หลายตัว?",
+    "options": [
+      "เมื่อ Switch ไม่มีตาราง MAC address",
+      "เมื่อมีการเชื่อม Switch หลายตัวเข้าด้วยกันแบบซ้ำซ้อน (redundant links)",
+      "เมื่อ IP address ของทุกอุปกรณ์ซ้ำกัน",
+      "เมื่อ Hub รับส่งสัญญาณช้าเกินไป"
+    ],
+    "answer": 1,
+    "explanation": "Loop จะเกิดเมื่อมีเส้นทางซ้ำซ้อนระหว่าง Switch ทำให้ข้อมูล Broadcast อาจวิ่งวนไม่มีที่สิ้นสุด จึงต้องใช้ Spanning Tree Algorithm เพื่อป้องกัน"
+  },
+  {
+    "question": "Repeater หรือ Hub ทำการขยายสัญญาณได้อย่างไร?",
+    "options": [
+      "รับ MAC address ปลายทางแล้วแปลงสัญญาณ",
+      "ตรวจสอบ IP address ก่อนส่งต่อ",
+      "รับสัญญาณที่อ่อนแล้วขยายหรือสร้างใหม่เป็นสัญญาณที่แข็งแรงขึ้น",
+      "เข้ารหัสสัญญาณด้วยวิธีพิเศษ"
+    ],
+    "answer": 2,
+    "explanation": "Repeater หรือ Hub จะรับสัญญาณที่อ่อนลงแล้วทำการขยายหรือกำเนิดสัญญาณใหม่ แต่ไม่ได้มีการตรวจสอบหรือเปลี่ยนข้อมูลภายในแพ็กเก็ต"
+  },
+  {
+    "question": "ผู้ดูแลระบบ (Network Administrator) มีบทบาทอย่างไรในการกำหนดค่า VLAN?",
+    "options": [
+      "ทำการตั้งค่าและกำหนดเกณฑ์ (Criteria) สำหรับ Manual หรือ Automatic Configuration",
+      "ไม่เกี่ยวข้องเพราะ VLAN ตั้งค่าเองอัตโนมัติทั้งหมด",
+      "ต้องออกแบบ IP address ใหม่ทุกครั้งที่เพิ่มโหนด",
+      "ต้องปิดการทำงานของ Switch ทุกตัวก่อน"
+    ],
+    "answer": 0,
+    "explanation": "ผู้ดูแลระบบเป็นผู้กำหนดรูปแบบสมาชิก VLAN ไม่ว่าจะเป็น Manual, Automatic หรือ Semiautomatic โดยเลือกวิธีการกำหนดหรือเงื่อนไขในการแบ่งกลุ่ม"
+  },
+  {
+    "question": "การใช้ 48-bit MAC address ในการกำหนดสมาชิก VLAN มีข้อดีอะไร?",
+    "options": [
+      "MAC address เปลี่ยนง่ายเมื่อมีอุปกรณ์ใหม่",
+      "MAC address ไม่ซ้ำกันในอุปกรณ์เนื่องจากมีความยาวถึง 48 บิต",
+      "MAC address ช่วยลดจำนวน Collision Domain",
+      "MAC address ข้ามเครือข่าย LAN ได้โดยอัตโนมัติ"
+    ],
+    "answer": 1,
+    "explanation": "MAC address โดยปกติเป็นเลข 48 บิตที่ไม่ซ้ำกันในระดับโลก (Globally Unique) จึงเหมาะสำหรับระบุอุปกรณ์ในการกำหนดสมาชิก VLAN"
+  },
+  {
+    "question": "Switch ใช้วิธี Bridging อย่างไรในการส่งต่อเฟรม?",
+    "options": [
+      "ใช้ตาราง MAC address เพื่อค้นหาพอร์ตปลายทาง",
+      "สุ่มส่งไปทุกพอร์ตเพื่อหาปลายทาง",
+      "ตรวจสอบ IP address ของโหนดก่อนเสมอ",
+      "ส่งทุกเฟรมเฉพาะไปยัง Router"
+    ],
+    "answer": 0,
+    "explanation": "Switch ใช้หลักการ Bridge ซึ่งมีตาราง MAC address บันทึกไว้ เมื่อได้รับเฟรมจะตรวจสอบ MAC ปลายทางแล้วส่งไปพอร์ตที่สอดคล้องในตาราง"
+  },
+  {
+    "question": "Collision Domain ใน Hub เปรียบเทียบกับ Switch แตกต่างกันอย่างไร?",
+    "options": [
+      "Hub มีหลาย Collision Domain ส่วน Switch มี Collision Domain เดียว",
+      "Hub และ Switch ทั้งคู่มีจำนวน Collision Domain เท่ากัน",
+      "Hub ทุกพอร์ตใช้ Collision Domain เดียวกัน ส่วน Switch แยก Collision Domain ตามพอร์ต",
+      "Switch มี Collision Domain เดียวทั้งหมด"
+    ],
+    "answer": 2,
+    "explanation": "Hub จะทำให้ทุกพอร์ตอยู่ใน Collision Domain เดียว ขณะที่ Switch แยก Collision Domain ตามพอร์ต ทำให้ลดการชนกันและเพิ่มประสิทธิภาพ"
+  },
+  {
+    "question": "Broadcast Domain ใน VLAN มีความหมายว่าอย่างไร?",
+    "options": [
+      "ขอบเขตการกระจาย Broadcast ที่จำกัดอยู่ในกลุ่ม VLAN เดียวกัน",
+      "ขอบเขตการกระจาย Collision ในเครือข่ายทั้งหมด",
+      "ขอบเขตการส่งข้อมูลเฉพาะพอร์ตใดพอร์ตหนึ่ง",
+      "ขอบเขตการส่งข้อมูลที่ครอบคลุมทั้งโลก"
+    ],
+    "answer": 0,
+    "explanation": "VLAN จะกำหนด Broadcast Domain แยกตามกลุ่ม ทำให้ Broadcast ถูกจำกัดอยู่ใน VLAN นั้น ไม่กระจายไปยัง VLAN อื่น"
+  },
+  {
+    "question": "Router ตรวจสอบ Address ใดบ้างก่อนส่งต่อแพ็กเก็ต?",
+    "options": [
+      "ตรวจสอบทั้ง Link-layer address และ Network-layer address",
+      "ตรวจสอบเฉพาะ IP address",
+      "ตรวจสอบเฉพาะ MAC address",
+      "ไม่ตรวจสอบ Address เลย"
+    ],
+    "answer": 0,
+    "explanation": "Router ทำงานทั้งใน Data-link layer (ตรวจ MAC address) และ Network layer (ตรวจ IP address) เพื่อส่งต่อแพ็กเก็ตได้อย่างถูกต้อง"
+  },
+  {
+    "question": "ตามมาตรฐาน IEEE 802.1d Switch แบบ Transparent จะต้องปฏิบัติตามข้อใด?",
+    "options": [
+      "Forwarding เฟรมตามตารางและเรียนรู้ MAC address อัตโนมัติ",
+      "เปลี่ยน MAC address ในทุกเฟรมที่รับ",
+      "ส่งเฟรมไปยัง Hub เสมอ",
+      "ไม่อนุญาตให้มีการเรียนรู้ MAC address ใหม่"
+    ],
+    "answer": 0,
+    "explanation": "IEEE 802.1d ระบุว่าระบบจะต้อง Forward เฟรมไปยังพอร์ตที่ถูกต้อง สร้างตารางด้วยการเรียนรู้จากเฟรมที่เข้ามา และป้องกัน Loop"
+  },
+  {
+    "question": "การเรียนรู้ (Learning) ใน Link-layer Switch หมายถึงอะไร?",
+    "options": [
+      "เรียนรู้ IP address และกำหนดเส้นทางอัตโนมัติ",
+      "เรียนรู้ MAC address จากเฟรมที่เข้ามาเพื่อเติมตารางเชื่อมโยง (MAC-Port)",
+      "เรียนรู้ Protocol ต่าง ๆ ในเครือข่าย",
+      "เรียนรู้ Spanning Tree Algorithm เท่านั้น"
+    ],
+    "answer": 1,
+    "explanation": "Switch จะเรียนรู้ MAC address ของโหนดจากเฟรมต้นทางที่เข้ามา และบันทึกลงในตารางว่าจะรับเฟรมนี้มาจากพอร์ตใด"
+  },
+  {
+    "question": "การ Block พอร์ตใน Spanning Tree Algorithm มีจุดประสงค์เพื่ออะไร?",
+    "options": [
+      "ช่วยให้การส่งเฟรมเกิดซ้ำหลายเส้นทาง",
+      "ลดความเร็วเครือข่ายลงเพื่อประหยัดพลังงาน",
+      "ป้องกัน Loop โดยปิดพอร์ตที่ก่อให้เกิดวงจรซ้ำซ้อน",
+      "เปลี่ยนการทำงานของ Switch เป็น Hub"
+    ],
+    "answer": 2,
+    "explanation": "Spanning Tree Algorithm จะ Block พอร์ตที่ทำให้เกิดวงจรซ้ำซ้อน (Loop) เพื่อป้องกัน Broadcast Storm และรักษาเส้นทางที่มีประสิทธิภาพที่สุด"
+  }
+]

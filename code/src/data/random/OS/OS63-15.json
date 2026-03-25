@@ -1,0 +1,57 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is NOT a topic in computer security?",
+    "options": [
+      { "statement": "Power outage", "istrue": true },
+      { "statement": "Malware", "istrue": false },
+      { "statement": "Network attacks", "istrue": false },
+      { "statement": "Unauthorized access", "istrue": false }
+    ],
+    "explanation": "Power outage is a reliability or availability concern, not a computer security topic."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does DOS not do in an attack scenario?",
+    "options": [
+      { "statement": "User’s data in DOS attacked database is lost", "istrue": true },
+      { "statement": "Makes services unavailable", "istrue": false },
+      { "statement": "Overloads system resources", "istrue": false },
+      { "statement": "Prevents legitimate access", "istrue": false }
+    ],
+    "explanation": "A Denial-of-Service attack disrupts service availability but does not directly delete or alter user data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Using WiFi without permission for free is classified as what type of attack?",
+    "options": [
+      { "statement": "Data breach", "istrue": false },
+      { "statement": "Theft of service", "istrue": true },
+      { "statement": "Spoofing", "istrue": false },
+      { "statement": "Phishing", "istrue": false }
+    ],
+    "explanation": "Unauthorized use of WiFi access without permission is considered theft of service."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a man-in-the-middle attack?",
+    "options": [
+      { "statement": "An attacker secretly intercepts and possibly alters communication between two parties", "istrue": true },
+      { "statement": "An attacker directly deletes system files", "istrue": false },
+      { "statement": "An attacker impersonates a hardware device", "istrue": false },
+      { "statement": "An attacker steals CPU cycles", "istrue": false }
+    ],
+    "explanation": "A man-in-the-middle attack occurs when an attacker positions themselves between two communicating parties to intercept or modify data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "When signing up, what should be stored in the database?",
+    "options": [
+      { "statement": "Password", "istrue": false },
+      { "statement": "Password and salt", "istrue": false },
+      { "statement": "hash(password)", "istrue": false },
+      { "statement": "hash(password + salt)", "istrue": true }
+    ],
+    "explanation": "For secure authentication, systems store a salted hash: hash(password + salt), not the raw password."
+  }
+]

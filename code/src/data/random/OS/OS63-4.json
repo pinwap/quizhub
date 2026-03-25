@@ -1,0 +1,134 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is Pthread?",
+    "options": [
+      { "statement": "POSIX thread library", "istrue": true },
+      { "statement": "Windows thread library", "istrue": false },
+      { "statement": "Java threading model", "istrue": false },
+      { "statement": "Linux kernel module", "istrue": false }
+    ],
+    "explanation": "Pthread refers to the POSIX standard for threads, providing a portable multithreading API."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the benefit of multithreading in GUI?",
+    "options": [
+      { "statement": "Responsiveness", "istrue": true },
+      { "statement": "Security", "istrue": false },
+      { "statement": "Memory saving", "istrue": false },
+      { "statement": "Faster compilation", "istrue": false }
+    ],
+    "explanation": "Multithreading keeps GUIs responsive by letting background tasks run without freezing the interface."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the benefit of multithreading in error diffusion?",
+    "options": [
+      { "statement": "Economy of resources", "istrue": true },
+      { "statement": "Responsiveness", "istrue": false },
+      { "statement": "Higher reliability", "istrue": false },
+      { "statement": "Faster booting", "istrue": false }
+    ],
+    "explanation": "In tasks like error diffusion, multithreading improves economy by sharing resources efficiently."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is not suitable for multicore execution?",
+    "options": [
+      { "statement": "Sum of n in array", "istrue": false },
+      { "statement": "Sort data in array", "istrue": false },
+      { "statement": "Binary search", "istrue": true },
+      { "statement": "Matrix multiplication", "istrue": false }
+    ],
+    "explanation": "Binary search is inherently sequential and less suitable for multicore parallelization."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the speedup of CPU with 2 cores, 75% parallel and 25% serial using Amdahl’s Law?",
+    "options": [
+      { "statement": "1.60", "istrue": true },
+      { "statement": "1.75", "istrue": false },
+      { "statement": "2.00", "istrue": false },
+      { "statement": "1.50", "istrue": false }
+    ],
+    "explanation": "Applying Amdahl’s Law with 75% parallelizable workload on 2 cores yields a speedup of 2.28."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the thread model in Windows?",
+    "options": [
+      { "statement": "One-to-one", "istrue": true },
+      { "statement": "Many-to-one", "istrue": false },
+      { "statement": "Many-to-many", "istrue": false },
+      { "statement": "User-level only", "istrue": false }
+    ],
+    "explanation": "Windows uses the one-to-one threading model, mapping each user thread to a kernel thread."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the thread model in Linux?",
+    "options": [
+      { "statement": "One-to-one", "istrue": false },
+      { "statement": "Many-to-one", "istrue": false },
+      { "statement": "Many-to-many", "istrue": true },
+      { "statement": "User-level only", "istrue": false }
+    ],
+    "explanation": "Linux supports a many-to-many threading model, though implementations may vary."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What will happen with other threads when exec() is used?",
+    "options": [
+      { "statement": "They pause", "istrue": false },
+      { "statement": "They continue", "istrue": false },
+      { "statement": "They terminate", "istrue": true },
+      { "statement": "They migrate to another process", "istrue": false }
+    ],
+    "explanation": "When a thread calls exec(), the entire process image is replaced, terminating all other threads."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does CTRL+C signal send to?",
+    "options": [
+      { "statement": "Running process", "istrue": true },
+      { "statement": "Parent process only", "istrue": false },
+      { "statement": "Kernel", "istrue": false },
+      { "statement": "Idle process", "istrue": false }
+    ],
+    "explanation": "CTRL+C sends an interrupt signal to the currently running process in the terminal."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the Java interface for threading?",
+    "options": [
+      { "statement": "Runnable", "istrue": true },
+      { "statement": "Callable", "istrue": false },
+      { "statement": "Executor", "istrue": false },
+      { "statement": "Threadable", "istrue": false }
+    ],
+    "explanation": "Java provides the Runnable interface for defining tasks executed by threads."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "We have a processor with 2 cores and hyper-threading. What is the number of logical processors?",
+    "options": [
+      { "statement": "2", "istrue": false },
+      { "statement": "4", "istrue": true },
+      { "statement": "8", "istrue": false },
+      { "statement": "16", "istrue": false }
+    ],
+    "explanation": "A 2-core processor with hyper-threading provides 4 logical processors (2 x 2)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What type of thread cancellation is commonly used in Linux?",
+    "options": [
+      { "statement": "Asynchronous", "istrue": false },
+      { "statement": "Deferred", "istrue": true },
+      { "statement": "Immediate", "istrue": false },
+      { "statement": "Forced", "istrue": false }
+    ],
+    "explanation": "Deferred cancellation allows a thread to check for cancellation points safely, avoiding resource inconsistency."
+  }
+]

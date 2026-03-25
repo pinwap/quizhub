@@ -1,0 +1,223 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Unauthoritative response ในการทำงานของ DNS หมายถึงอะไร",
+    "options": [
+      { "statement": "คำตอบที่ได้จากการทำงานของ DNS มาจากฐานข้อมูลของ DNS อื่นที่ไม่ใช่ local DNS", "istrue": false },
+      { "statement": "คำตอบที่ได้จากการทำงานของ DNS มาจากฐานข้อมูลภายใน Local DNS", "istrue": false },
+      { "statement": "คำตอบที่ได้จากการทำงานของ DNS มาจากการทำงานของระบบ DNS อื่น", "istrue": false },
+      { "statement": "คำตอบที่ได้จากการทำงานของ DNS มาจาก cache memory ของ DNS", "istrue": true }
+    ],
+    "explanation": "Unauthoritative response คือคำตอบที่เซิร์ฟเวอร์ DNS ส่งกลับจากข้อมูลที่เก็บอยู่ในแคช ไม่ได้มาจากโซนที่ตนมีสิทธิ์ดูแลโดยตรง จึงตรงกับตัวเลือก “มาจาก cache memory ของ DNS”. ตัวเลือกอื่นกล่าวถึงข้อมูลจากเซิร์ฟเวอร์อื่นหรือจากฐานข้อมูลภายใน ซึ่งไม่ใช่ลักษณะของ unauthoritative response จึงไม่ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Socket หมายถึงอะไรที่ถูกต้องที่สุด",
+    "options": [
+      { "statement": "โครงสร้างข้อมูลที่สร้างและใช้งานโดย application program", "istrue": false },
+      { "statement": "โครงสร้างข้อมูลที่สร้างโดย application layer เพื่อการส่งข้อมูลและรับข้อมูลจาก application program ทั้งสองฝั่ง", "istrue": false },
+      { "statement": "โครงสร้างข้อมูลที่ใช้ในการส่งข้อมูลระหว่างแหล่งส่งข้อมูลต้นทางและแหล่งรับข้อมูลปลายทาง", "istrue": false },
+      { "statement": "โครงสร้างข้อมูลที่สร้างและใช้งานโดย application program เพื่อการส่งข้อมูลและรับข้อมูลจาก application program ทั้งสองฝั่ง", "istrue": true }
+    ],
+    "explanation": "Socket คือจุดปลายทางสื่อสาร (endpoint) ที่โปรแกรมประยุกต์สร้างขึ้นและใช้ส่ง‑รับข้อมูลกับโปรแกรมที่ปลายทาง จึงตรงกับตัวเลือกที่บอกว่า “สร้างและใช้งานโดย application program เพื่อการส่งข้อมูลและรับข้อมูลจาก application program ทั้งสองฝั่ง”. ตัวเลือกอื่นกล่าวไม่ครบถึงการส่ง‑รับทั้งสองด้าน หรือระบุชั้นผิด จึงไม่ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องที่สุดเกี่ยวกับ Domain Name System (DNS)",
+    "options": [
+      { "statement": "จับคู่ระหว่าง MAC address กับ IP address", "istrue": false },
+      { "statement": "หาค่า IP address เมื่อรู้ชื่อของระบบที่ต้องการเชื่อมต่อ", "istrue": false },
+      { "statement": "จับคู่ระหว่าง IP address กับชื่อของระบบที่ต้องการเชื่อมต่อ", "istrue": true },
+      { "statement": "หาค่า MAC address เมื่อรู้ชื่อของระบบที่ต้องการเชื่อมต่อ", "istrue": false }
+    ],
+    "explanation": "DNS ทำหน้าที่เป็นระบบแปลงชื่อโดเมนให้เป็นที่อยู่ IP และในกรณี reverse lookup ก็สามารถแปลงที่อยู่ IP กลับเป็นชื่อโดเมนได้ จึงเป็นการจับคู่ระหว่าง IP address กับชื่อระบบที่ต้องการเชื่อมต่ออย่างถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การดำเนินการแบบ peer‑to‑peer มีลักษณะอย่างไรที่ถูกต้องที่สุด",
+    "options": [
+      { "statement": "อุปกรณ์ทำหน้าที่ร้องขอบริการ และอุปกรณ์ทำหน้าที่ให้บริการ เป็นคนละอุปกรณ์กัน", "istrue": false },
+      { "statement": "อุปกรณ์ทำหน้าที่ร้องขอบริการสามารถทำหน้าที่ในการให้บริการข้อมูลกับเครื่องอื่นได้ตลอดเวลา", "istrue": true },
+      { "statement": "อุปกรณ์ทำหน้าที่ร้องขอบริการและอุปกรณ์ทำหน้าที่ให้บริการเป็นคนละอุปกรณ์และต้องอยู่คนละเครือข่าย", "istrue": false },
+      { "statement": "อุปกรณ์ทำหน้าที่ร้องขอบริการสามารถทำหน้าที่ในการให้บริการกับเครื่องอื่นในเครือข่ายอื่นเสมอ", "istrue": false }
+    ],
+    "explanation": "สถาปัตยกรรม P2P กำหนดให้โหนดหนึ่งสามารถเป็นได้ทั้งผู้ร้องขอ (client) และผู้ให้บริการ (server) สลับบทบาทได้ จึงตรงกับตัวเลือกที่สอง ส่วนตัวเลือกอื่นแยกบทบาท client‑server ออกจากกันหรือมีเงื่อนไขด้านเครือข่าย จึงขัดกับแนวคิด P2P"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับการทำงานของ SCTP",
+    "options": [
+      { "statement": "การส่งข้อมูลเป็นแบบ multistream", "istrue": false },
+      { "statement": "การส่งข้อมูลเป็นแบบ byte‑stream oriented", "istrue": true },
+      { "statement": "การส่งข้อมูลมีขอบเขตในการแลกเปลี่ยนข้อมูล", "istrue": false },
+      { "statement": "เป็นการเชื่อมต่อแบบ connection‑oriented", "istrue": false }
+    ],
+    "explanation": "SCTP เป็นโพรโทคอลแบบ message‑oriented (มีขอบเขตของข้อความชัดเจน) และรองรับ multistream ภายใน 1 association ทั้งยังเป็น connection‑oriented. ดังนั้นคำว่า “byte‑stream oriented” เป็นคุณสมบัติของ TCP ไม่ใช่ SCTP จึงเป็นคำกล่าวที่ไม่ถูกต้อง. ตัวเลือกอื่นเป็นคุณสมบัติจริงของ SCTP จึงไม่ใช่คำตอบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่ประเภทของเอกสารที่ใช้บนระบบ WWW",
+    "options": [
+      { "statement": "Passive document", "istrue": true },
+      { "statement": "Active document", "istrue": false },
+      { "statement": "Static document", "istrue": false },
+      { "statement": "Dynamic document", "istrue": false }
+    ],
+    "explanation": "ใน WWW เอกสารแบ่งเป็น static (เนื้อหาไม่เปลี่ยน), dynamic (สร้างใหม่ทุกครั้ง) และ active (มีโค้ดเคลื่อนไหวเช่น applet). ไม่มีศัพท์ว่า “Passive document” จึงเป็นตัวเลือกที่ไม่ใช่ประเภทเอกสาร ส่วนอีกสามตัวเป็นประเภทที่มีอยู่จริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้กล่าวถูกต้อง",
+    "options": [
+      { "statement": "การทำงานของโพรโทคอลในระดับ application layer จะต้องใช้ความสามารถของโพรโทคอลในระดับ Transport layer เสมอ", "istrue": true },
+      { "statement": "การทำงานของโพรโทคอลในระดับ transport layer จะทำงานไม่ได้หากไม่มีการใช้ ICMP", "istrue": false },
+      { "statement": "การทำงานของโพรโทคอลในระดับ application layer จะต้องใช้ความสามารถของ SCTP เสมอ", "istrue": false },
+      { "statement": "การทำงานของโพรโทคอลในระดับ application layer จะต้องใช้ความสามารถของ TCP เท่านั้น", "istrue": false }
+    ],
+    "explanation": "ทุกโปรโตคอลในชั้น Application ต้องอาศัยบริการของ Transport layer (TCP, UDP, SCTP) จึงทำงานได้ จึงทำให้ตัวเลือกแรกถูกต้อง. ข้อ 2 พึ่ง ICMP ผิดบริบท, ข้อ 3 ผูกกับ SCTP เท่านั้น และข้อ 4 บังคับ TCP เท่านั้น ต่างไม่ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่คุณสมบัติของ HTTP",
+    "options": [
+      { "statement": "มีขอบเขตในการส่งข้อมูลเสมอ", "istrue": true },
+      { "statement": "ใช้เพื่อส่งเอกสารผ่านโปรแกรม web", "istrue": false },
+      { "statement": "มีการเชื่อมต่อแบบ connection‑oriented", "istrue": false },
+      { "statement": "เป็นโพรโทคอลที่มีความน่าเชื่อถือ", "istrue": false }
+    ],
+    "explanation": "HTTP เป็นโปรโตคอลเชิงข้อความที่ทำงานเหนือ TCP (เชื่อมต่อแบบ connection‑oriented และเชื่อถือได้) ใช้รับส่งเอกสารเว็บ แต่ไม่กำหนด “ขอบเขตในการส่งข้อมูล” เหมือน message boundary ใน SCTP จึงทำให้ตัวเลือก “มีขอบเขตในการส่งข้อมูลเสมอ” ไม่ใช่คุณสมบัติของ HTTP"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นลักษณะการทำงานเพื่อส่งข้อมูลด้วย FTP",
+    "options": [
+      { "statement": "Server เปิดการเชื่อมต่อตลอดเวลา แม้หลังจากการให้บริการกับ client แล้ว หรือมีการปิดการเชื่อมต่อเฉพาะ client เมื่อมีการร้องขอ", "istrue": false },
+      { "statement": "Server เปิดการเชื่อมต่อตลอดเวลา แม้หลังจากการให้บริการกับ client แล้ว และแม้ client จะร้องขอปิดการบริการก็ไม่สามารถจะกระทำได้", "istrue": false },
+      { "statement": "Server เปิดการเชื่อมต่อเป็นระยะ ๆ เพื่อให้ client ร้องขอการบริการได้เป็นช่วงจังหวะเวลาที่กำหนด", "istrue": false },
+      { "statement": "Server เปิดการเชื่อมต่อเฉพาะเมื่อ client มีไฟล์ที่ต้องการส่ง และปิดการเชื่อมต่อเมื่อสิ้นสุดการส่งไฟล์แล้ว", "istrue": true }
+    ],
+    "explanation": "FTP ใช้ data connection แบบชั่วคราว—จะเปิดเมื่อมีการโอนย้ายไฟล์และปิดทันทีที่สิ้นสุด จึงตรงกับตัวเลือกสุดท้าย. ตัวเลือกอื่นพูดถึงการเปิดเชื่อมต่อถาวรหรือเปิดตามช่วงเวลา ซึ่งไม่ตรงกับสถาปัตยกรรมของ FTP"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ unauthoritative response นั้น ข้อมูลที่เก็บใน cache ของระบบ DNS ต้องมีการกำหนดค่าใด",
+    "options": [
+      { "statement": "Processing time", "istrue": false },
+      { "statement": "Response time", "istrue": false },
+      { "statement": "Time To Live", "istrue": true },
+      { "statement": "Latency time", "istrue": false }
+    ],
+    "explanation": "ระยะเวลาที่ข้อมูล DNS จะอยู่ในแคชกำหนดโดยค่า TTL (Time To Live) หากไม่มี TTL เซิร์ฟเวอร์จะไม่รู้ว่าควรเก็บคำตอบนานเท่าใด. ค่าที่เหลือ (Processing, Response, Latency) เป็นตัวชี้วัดเวลา ไม่เกี่ยวกับอายุข้อมูลในแคช"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับการทำงานของ TCP",
+    "options": [
+      { "statement": "การเชื่อมต่อใช้กลไก handshaking", "istrue": false },
+      { "statement": "เป็นการเชื่อมต่อที่สนับสนุนการแลกเปลี่ยนข้อมูลปริมาณมาก", "istrue": false },
+      { "statement": "เป็นการเชื่อมต่อแบบ connection‑oriented", "istrue": false },
+      { "statement": "การส่งข้อมูลมีขอบเขตในการแลกเปลี่ยนข้อมูล", "istrue": true }
+    ],
+    "explanation": "TCP เป็น byte stream ต่อเนื่อง ไม่มีกรอบ (boundary) ของแต่ละข้อความ จึงทำให้ข้อความที่อ้างว่ามี “ขอบเขตในการแลกเปลี่ยนข้อมูล” ไม่ถูกต้อง. ส่วนคุณสมบัติการ handshake, เป็น connection‑oriented และรองรับปริมาณข้อมูลมาก เป็นข้อเท็จจริงเกี่ยวกับ TCP"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "HTTP ใช้บริการของโพรโทคอลใดต่อไปนี้",
+    "options": [
+      { "statement": "UDP", "istrue": false },
+      { "statement": "SCTP", "istrue": false },
+      { "statement": "IP", "istrue": false },
+      { "statement": "TCP", "istrue": true }
+    ],
+    "explanation": "HTTP layer ทำงานอยู่เหนือ TCP เพื่อให้ได้การขนส่งที่เชื่อถือได้เรียงลำดับถูกต้อง. ตัวเลือกอื่น (UDP, SCTP, IP) ไม่ใช่โพรโทคอลหลักที่ HTTP ใช้อย่างเป็นมาตรฐาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อ client ต้องการสร้างการเชื่อมต่อเพื่อการสื่อสาร ข้อมูลใดต่อไปนี้จะถูกใช้ในระดับ application layer",
+    "options": [
+      { "statement": "MAC address",       "istrue": false },
+      { "statement": "Port number",       "istrue": false },
+      { "statement": "Socket address",    "istrue": true },
+      { "statement": "IP address",        "istrue": false }
+    ],
+    "explanation": "Application layer ใช้ socket address ซึ่งประกอบด้วย IP address และ port number เพื่อระบุกระบวนการ (process) บนโฮสต์ต้นทางและปลายทาง ทำให้แอปพลิเคชันสามารถเชื่อมต่อและรับส่งข้อมูลระหว่างกันได้อย่างถูกต้อง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารในระดับ application layer จะเป็นการใช้ข้อมูลใดต่อไปนี้",
+    "options": [
+      { "statement": "Fixed IP address และ remote IP address", "istrue": false },
+      { "statement": "Local socket address และ Remote socket address", "istrue": true },
+      { "statement": "Local socket address", "istrue": false },
+      { "statement": "Remote socket address", "istrue": false }
+    ],
+    "explanation": "การสื่อสารสมบูรณ์ต้องมี socket ทั้งฝั่งผู้ส่งและผู้รับ (Local & Remote) เพื่อระบุต้นทาง‑ปลายทางครบถ้วน. ตัวเลือกที่ระบุเพียง IP หรือ socket ฝั่งเดียวจึงไม่เพียงพอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำงานของ FTP มีการใช้ port number เท่าไรเพื่อการควบคุมการเชื่อมต่อ",
+    "options": [
+      { "statement": "53", "istrue": false },
+      { "statement": "25", "istrue": false },
+      { "statement": "21", "istrue": true },
+      { "statement": "20", "istrue": false }
+    ],
+    "explanation": "FTP ใช้พอร์ต 21 สำหรับ control connection (คำสั่ง‑ตอบกลับ) ส่วนพอร์ต 20 ใช้กับ data connection แบบ active mode เฉพาะบางกรณี ดังนั้นค่าที่ถูกต้องสำหรับการควบคุมคือ 21 ส่วน 25 ใช้กับ SMTP และ 53 กับ DNS"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่โหมดในการส่งข้อมูลด้วย FTP",
+    "options": [
+      { "statement": "Byte mode", "istrue": true },
+      { "statement": "Stream mode", "istrue": false },
+      { "statement": "Compressed mode", "istrue": false },
+      { "statement": "Block mode", "istrue": false }
+    ],
+    "explanation": "FTP กำหนดโหมดส่งข้อมูล 3 แบบคือ Stream, Block และ Compressed. ไม่มี “Byte mode” จึงเป็นคำตอบที่ไม่ใช่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การส่งข้อมูลด้วย UDP นั้นมีข้อดีอย่างไร",
+    "options": [
+      { "statement": "ส่งข้อมูลได้ถูกต้องตรงตามปลายทางที่ต้องการ", "istrue": false },
+      { "statement": "ส่งข้อมูลได้อย่างปลอดภัย", "istrue": false },
+      { "statement": "ส่งข้อมูลได้อย่างสมบูรณ์", "istrue": false },
+      { "statement": "ส่งข้อมูลได้ด้วยความเร็วสูง", "istrue": true }
+    ],
+    "explanation": "UDP ไม่มีการตรวจสอบความถูกต้องปลายทางหรือกลไกความปลอดภัย แต่หัวข้อสั้นและไม่มีการเชื่อมต่อ ทำให้มี latency ต่ำและส่งข้อมูลได้เร็ว จึงทำให้ “ความเร็วสูง” เป็นข้อดีกว่าด้านอื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้ไม่ใช่ generic domain",
+    "options": [
+      { "statement": "www.utah.edu", "istrue": false },
+      { "statement": "www.geeksforgeeks.org", "istrue": false },
+      { "statement": "Shopee.com", "istrue": false },
+      { "statement": "chula.ac.th", "istrue": true }
+    ],
+    "explanation": "โดเมน .com .org .edu จัดเป็น generic TLD ส่วน .ac.th อยู่ภายใต้ ccTLD .th (country‑code) จึงไม่ใช่ generic domain ทำให้ chula.ac.th เป็นคำตอบที่ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นการเชื่อมต่อแบบ persistent",
+    "options": [
+      { "statement": "Server เปิดการเชื่อมต่อตลอดเวลา แม้หลังจากการให้บริการกับ client แล้ว หรือมีการปิดการเชื่อมต่อเฉพาะ client เมื่อมีการร้องขอ", "istrue": true },
+      { "statement": "Server เปิดการเชื่อมต่อเฉพาะเมื่อ client ร้องขอการบริการ และปิดการเชื่อมต่อเมื่อสิ้นสุดการบริการ", "istrue": false },
+      { "statement": "Server เปิดการเชื่อมต่อตลอดเวลา แม้หลังจากการให้บริการกับ client แล้ว และแม้ client จะร้องขอปิดการบริการก็ไม่สามารถจะกระทำได้", "istrue": false },
+      { "statement": "Server เปิดการเชื่อมต่อเป็นระยะ ๆ เพื่อให้ client ร้องขอการบริการได้เป็นช่วงจังหวะเวลาที่กำหนด", "istrue": false }
+    ],
+    "explanation": "Persistent connection คือการคงการเชื่อมต่อไว้หลังจบการให้บริการ เพื่อพร้อมรับคำขอใหม่ ๆ จนกว่าฝ่ายใดฝ่ายหนึ่งจะปิด ตัวเลือกแรกอธิบายคุณสมบัตินี้ได้ตรงที่สุด ตัวเลือกอื่นปิดทันทีหรือเป็นช่วง ๆ ไม่จัดเป็น persistent"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Web application ถือว่าเป็น application ประเภทใด",
+    "options": [
+      { "statement": "Nonstandard application‑layer protocol", "istrue": false },
+      { "statement": "Special application‑layer protocol", "istrue": false },
+      { "statement": "Standard application‑layer protocol", "istrue": true },
+      { "statement": "Semi standard application‑layer protocol", "istrue": false }
+    ],
+    "explanation": "Web application ใช้ HTTP ซึ่งเป็นโพรโทคอลมาตรฐานที่ IETF กำหนด จึงจัดอยู่ในกลุ่ม Standard application‑layer protocol. ตัวเลือกอื่นบ่งบอกว่าไม่มาตรฐานหรือกึ่งมาตรฐาน จึงไม่ตรง"
+  }
+]

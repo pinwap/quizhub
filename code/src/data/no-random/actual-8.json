@@ -1,0 +1,222 @@
+[
+  {
+    "question": "1. ความหมายของ Update Timer ใน RIP คืออะไร?",
+    "options": [
+      "ระยะเวลาที่รอคอยให้เกิดการปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 180 วินาที",
+      "ระยะเวลาที่รอคอยให้เราท์เตอร์ที่ติดกันตอบสนองต่อความต้องการในการปรับปรุงตารางเส้นทาง",
+      "ระยะเวลาภายหลังจากสถานะ Invalid เกิดขึ้น คิดเป็น 240 วินาที",
+      "ระยะเวลาที่เราท์เตอร์ต้องปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 30 วินาที"
+    ],
+    "answer": 3,
+    "explanation": "Update Timer คือช่วงเวลาที่เราท์เตอร์จะส่งข้อมูลอัปเดตตารางเส้นทาง (Routing Table) ให้แก่เราท์เตอร์เพื่อนบ้านเป็นระยะ ๆ โดยค่าเริ่มต้นของ RIP จะอยู่ที่ 30 วินาที เมื่อถึงเวลานี้ เราท์เตอร์จะกระจายข้อมูล Routing Table ของตนเองออกไป"
+  },
+  {
+    "question": "2. ปัจจุบัน ASN (Autonomous System Number) มีความยาวเป็นจำนวนกี่บิต?",
+    "options": [
+      "16",
+      "32",
+      "64",
+      "128"
+    ],
+    "answer": 1,
+    "explanation": "ASN เดิมมีความยาวเพียง 16 บิต แต่เนื่องจากจำนวนระบบอัตโนมัติ (AS) ที่เพิ่มขึ้น จึงมีการขยาย ASN เป็น 32 บิต เพื่อรองรับได้มากขึ้น"
+  },
+  {
+    "question": "3. การทำงานเพื่อหาเส้นทางภายใน AS ขนาดใหญ่ ควรใช้โพรโทคอลใด?",
+    "options": [
+      "RIP และ IGRP",
+      "OSPF และ IGRP",
+      "EIGRP และ OSPF",
+      "OSPF และ RIP"
+    ],
+    "answer": 1,
+    "explanation": "OSPF และ IGRP เป็นตัวอย่างของ Interior Gateway Protocol (IGP) ที่สามารถใช้ภายใน AS ที่มีขนาดใหญ่ได้ (แม้ IGRP จะเป็นโปรโตคอลรุ่นเก่าของ Cisco แต่ก็ยังถูกจัดเป็น IGP) ส่วน OSPF เป็น Link-State Protocol ที่ปรับขยาย (scalable) สำหรับเครือข่ายใหญ่"
+  },
+  {
+    "question": "4. ข้อมูลเส้นทางของ neighbors และค่า path cost ถูกเก็บไว้ที่ใด?",
+    "options": [
+      "Link-State Advertisements (LSA)",
+      "Routing Table",
+      "Routing Packet",
+      "Link-State Database (LSDB)"
+    ],
+    "answer": 0,
+    "explanation": "ในโพรโทคอล Link-State (เช่น OSPF) จะมีการประกาศข้อมูลของเพื่อนบ้าน (neighbors) และค่า cost ผ่าน Link-State Advertisements (LSA) ซึ่งถูกใช้ในการสร้างฐานข้อมูล Link-State (LSDB) เพื่อให้เราท์เตอร์แต่ละตัวรู้จักโครงสร้างเครือข่าย"
+  },
+  {
+    "question": "5. ลักษณะที่โดดเด่นของวิธีการ Link-State Routing คือข้อใด?",
+    "options": [
+      "สามารถหาเส้นทางที่มีค่า cost ติดลบได้อย่างรวดเร็ว",
+      "แก้การวนลูปภายในกราฟได้",
+      "ต้องมีการสร้างแผนที่ของเครือข่ายทั้งหมดก่อนการหาเส้นทางที่สั้นที่สุด",
+      "ต้องใช้เวกเตอร์ในการคำนวณเส้นทางที่สั้นที่สุด"
+    ],
+    "answer": 2,
+    "explanation": "โพรโทคอล Link-State Routing (เช่น OSPF) จะรวบรวมข้อมูล topology ของเครือข่าย (สร้างแผนที่เครือข่าย) เอาไว้ใน LSDB แล้วจึงใช้ Dijkstra Algorithm เพื่อคำนวณเส้นทางที่สั้นที่สุดจากแผนที่ดังกล่าว"
+  },
+  {
+    "question": "6. ข้อใดไม่ใช่ลักษณะการทำงานของ RIP?",
+    "options": [
+      "มีการปรับปรุง Routing Table เป็นระยะ ๆ",
+      "การปรับปรุง Routing Table ใช้วิธีการแบบ Baseband",
+      "การปรับปรุง Routing Table เป็นการปรับปรุงทั้งตาราง",
+      "เราท์เตอร์มีความเชื่อมั่นในข้อมูลที่ได้จากเราท์เตอร์ข้างเคียงเสมอ"
+    ],
+    "answer": 1,
+    "explanation": "RIP ใช้การอัปเดตตารางเส้นทางผ่าน UDP (port 520) บน IP ซึ่งไม่เกี่ยวกับการใช้สื่อหรือเทคนิค Baseband จึงทำให้ \"การปรับปรุง Routing Table ใช้วิธีการแบบ Baseband\" ไม่ใช่ลักษณะของ RIP"
+  },
+  {
+    "question": "7. ข้อใดต่อไปนี้เป็น Multihomed Network?",
+    "options": [
+      "เครือข่ายกลางของมหาวิทยาลัยทั่วประเทศ (UniNet)",
+      "เครือข่ายของจุฬาลงกรณ์มหาวิทยาลัย (Chula Net)",
+      "เครือข่ายโทรศัพท์ของบริษัท AIS",
+      "เครือข่ายโทรศัพท์ของบริษัท True"
+    ],
+    "answer": 1,
+    "explanation": "Chula Net (เครือข่ายของจุฬาลงกรณ์มหาวิทยาลัย) เชื่อมต่อกับผู้ให้บริการหรือเครือข่ายภายนอกหลายเส้นทาง (ISP หลายแห่ง) ทำให้เป็น Multihomed Network"
+  },
+  {
+    "question": "8. อัลกอริทึมใดที่นำมาใช้ในการหาเส้นทางแบบ Distance Vector?",
+    "options": [
+      "Bellman-Ford",
+      "Dijkstra's Algorithm",
+      "OSPF",
+      "Spanning Tree"
+    ],
+    "answer": 0,
+    "explanation": "Distance Vector Routing เช่น RIP ใช้อัลกอริทึม Bellman-Ford ในการคำนวณหาเส้นทางที่มีระยะทาง (distance) น้อยที่สุด"
+  },
+  {
+    "question": "9. Transient AS หมายถึง AS ที่มีลักษณะการเชื่อมต่ออย่างไร?",
+    "options": [
+      "AS ที่เชื่อมต่อกับ AS มากกว่าหนึ่งแห่ง แต่ไม่ยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้",
+      "AS ที่เชื่อมต่อกับ AS เพียงหนึ่งแห่ง และยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้",
+      "AS ที่เชื่อมต่อกับ AS มากกว่าหนึ่งแห่ง และยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้",
+      "AS ที่เชื่อมต่อกับ AS เพียงหนึ่งแห่ง แต่ไม่ยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้"
+    ],
+    "answer": 2,
+    "explanation": "Transient AS (หรือบางครั้งเรียกว่า Transit AS) เป็นระบบอัตโนมัติที่เชื่อมต่อกับหลาย AS และยอมให้ข้อมูลของ AS อื่นวิ่งผ่าน (transit) ได้"
+  },
+  {
+    "question": "10. โพรโทคอลใดของ Unicast Routing Protocol ที่เป็น Distance Vector?",
+    "options": [
+      "RIP",
+      "OSPF",
+      "BGP",
+      "IGP"
+    ],
+    "answer": 0,
+    "explanation": "RIP เป็น Distance Vector Protocol ส่วน OSPF เป็น Link-State และ BGP เป็น Path-Vector"
+  },
+  {
+    "question": "11. Path-Vector Routing แตกต่างจาก Distance Vector และ Link-State Routing อย่างไร?",
+    "options": [
+      "Distance Vector และ Link-State Routing ไม่สามารถกำหนดนโยบายหรือเงื่อนไขของการหาเส้นทางได้ เช่นเดียวกับที่ Path-Vector ทำได้",
+      "Distance Vector และ Link-State Routing สามารถหาเส้นทางได้ปลอดภัยมากกว่า Path-Vector",
+      "Distance Vector และ Link-State Routing มีความเหมือนกันทุกประการกับ Path-Vector Routing",
+      "Distance Vector และ Link-State Routing มีการกำหนด cost ของการเลือกเส้นทางชัดเจนมากกว่า Path-Vector Routing"
+    ],
+    "answer": 0,
+    "explanation": "Path-Vector Routing (เช่น BGP) มีความยืดหยุ่นสูงในการกำหนดนโยบายหรือเงื่อนไขสำหรับเลือกเส้นทางที่ต้องการ ในขณะที่ Distance Vector และ Link-State จะคำนวณเส้นทางสั้นที่สุดตามเมตริก (metric/cost) เป็นหลัก"
+  },
+  {
+    "question": "12. หน้าที่ของ EGP คืออะไร?",
+    "options": [
+      "การหาเส้นทางของระบบเครือข่าย AS หนึ่งเพื่อไปสู่อีก AS หนึ่ง",
+      "การหาเส้นทางภายใน AS เพื่อการส่งข้อมูล",
+      "การกำหนดเงื่อนไขการหาเส้นทางที่เหมาะสมที่สุด",
+      "การหาเส้นทางเพื่อเชื่อมต่ออินเทอร์เน็ต"
+    ],
+    "answer": 0,
+    "explanation": "EGP (Exterior Gateway Protocol) ใช้สำหรับคำนวณเส้นทางในการส่งข้อมูลระหว่างระบบอัตโนมัติ (AS) หลาย ๆ ระบบ เพื่อให้สามารถติดต่อกันได้"
+  },
+  {
+    "question": "13. ข้อใดไม่เป็นคุณสมบัติที่ดีของ RIP?",
+    "options": [
+      "สามารถติดตั้งได้ง่าย",
+      "มีความครอบคลุมในการทำงาน",
+      "อัปเดตข้อมูลตารางเส้นทางอัตโนมัติ",
+      "มีความปลอดภัยในการส่งข้อมูล"
+    ],
+    "answer": 3,
+    "explanation": "RIP ไม่มีกลไกด้านความปลอดภัยในตัว (ไม่มีการเข้ารหัสหรือยืนยันตัวตน) จึงไม่ใช่ข้อดีหรือจุดเด่นของ RIP"
+  },
+  {
+    "question": "14. การทำงานของ OSPF เป็นการทำงานภายในหรือภายนอก AS?",
+    "options": [
+      "การทำงานภายใน AS เป็นประเภท Distance Vector Routing Algorithm",
+      "การทำงานภายนอก AS เป็นประเภท Link-State Routing Algorithm",
+      "การทำงานภายใน AS เป็นประเภท Link-State Routing Algorithm",
+      "การทำงานภายนอก AS เป็นประเภท Distance Vector Routing Algorithm"
+    ],
+    "answer": 2,
+    "explanation": "OSPF (Open Shortest Path First) เป็น Interior Gateway Protocol (IGP) ที่ทำงานภายใน AS และใช้ Link-State Algorithm (Dijkstra) ในการคำนวณเส้นทาง"
+  },
+  {
+    "question": "15. BGP เป็นโพรโทคอลประเภทใด?",
+    "options": [
+      "Interdomain Routing Protocol แบบ Link-State Routing Algorithm",
+      "Exterior Gateway Protocol แบบ Path-Vector Algorithm",
+      "Interdomain Routing Protocol แบบ Distance Vector Algorithm",
+      "Intradomain Routing Protocol แบบ Path-Vector Algorithm"
+    ],
+    "answer": 1,
+    "explanation": "BGP (Border Gateway Protocol) เป็น Exterior Gateway Protocol ที่ใช้แนวทาง Path-Vector สำหรับเผยแพร่เส้นทางระหว่าง AS ต่าง ๆ"
+  },
+  {
+    "question": "16. RIP ทำงานในระดับใดของโมเดล OSI?",
+    "options": [
+      "Physical Layer",
+      "Data Link Layer",
+      "Network Layer",
+      "Transport Layer"
+    ],
+    "answer": 2,
+    "explanation": "RIP เป็นโปรโตคอลที่ใช้แลกเปลี่ยนข้อมูลเส้นทาง (routing information) ระหว่างเราท์เตอร์ โดยอยู่ในขอบเขตของ Network Layer (แม้จะสื่อสารผ่าน UDP ใน Transport Layer แต่ตัวการทำงานหลักเกี่ยวกับการกำหนดเส้นทางถือเป็นหน้าที่ของ Network Layer)"
+  },
+  {
+    "question": "17. ข้อใดต่อไปนี้แตกต่างจาก EGP?",
+    "options": [
+      "Inter-AS Routing Protocol",
+      "Interdomain Routing Protocol",
+      "Exterior Gateway Protocol",
+      "Intra-AS Routing Protocol"
+    ],
+    "answer": 3,
+    "explanation": "EGP (Exterior Gateway Protocol) เป็นโพรโทคอลที่ใช้ระหว่าง AS (interdomain) ส่วน Intra-AS Routing Protocol ใช้ภายใน AS เท่านั้น จึงต่างจาก EGP"
+  },
+  {
+    "question": "18. เพราะเหตุใดใน Forwarding Table ของ RIP จึงต้องเก็บ Address ไว้สองค่า?",
+    "options": [
+      "เพราะ Address หนึ่งหมายถึงปลายทางที่ต้องการไป และอีก Address หนึ่งหมายถึงเราท์เตอร์ถัดไป",
+      "เพราะ Address หนึ่งหมายถึงต้นทางของข้อมูลที่ส่ง และอีก Address หนึ่งหมายถึงปลายทางที่ต้องการไป",
+      "เพราะ Address หนึ่งหมายถึงต้นทางของข้อมูลที่ส่ง และอีก Address หนึ่งหมายถึงเราท์เตอร์ถัดไป",
+      "เพราะ Address หนึ่งหมายถึงต้นทางของข้อมูลที่ส่ง และอีก Address หนึ่งหมายถึงเราท์เตอร์ปลายทางที่ติดกับอุปกรณ์รับข้อมูล"
+    ],
+    "answer": 0,
+    "explanation": "ใน RIP Forwarding Table จะระบุ (1) ปลายทาง (Destination Network) และ (2) เราท์เตอร์ถัดไป (Next Hop) เพื่อให้ทราบว่าแพ็กเก็ตที่มุ่งไปยังเครือข่ายใด ควรส่งต่อไปที่เราท์เตอร์ไหน"
+  },
+  {
+    "question": "19. ความหมายของ Invalid Timer ใน RIP คืออะไร?",
+    "options": [
+      "ระยะเวลาที่เราท์เตอร์ต้องปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 30 วินาที",
+      "ระยะเวลาที่รอคอยให้เกิดการปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 180 วินาที",
+      "ระยะเวลาที่รอคอยให้เราท์เตอร์ที่ติดกันตอบสนองต่อความต้องการปรับปรุงตารางเส้นทาง",
+      "ระยะเวลาหลังจากสถานะ Invalid เกิดขึ้น คิดเป็น 240 วินาที"
+    ],
+    "answer": 1,
+    "explanation": "Invalid Timer ของ RIP มีค่า 180 วินาที หมายถึงถ้าไม่ได้รับการอัปเดตเส้นทางจากเราท์เตอร์เพื่อนบ้านเลยในช่วงเวลานี้ จะถือว่าเส้นทางนั้นไม่สามารถใช้งานได้อีกต่อไป"
+  },
+  {
+    "question": "20. การส่งข้อมูลระหว่าง AS สามารถทราบได้ว่าต้นทางและปลายทางมาจาก AS ใด โดยพิจารณาจากข้อมูลใด?",
+    "options": [
+      "Autonomous Number",
+      "Sequence Number",
+      "Network Number",
+      "Network ID"
+    ],
+    "answer": 0,
+    "explanation": "Autonomous System Number (ASN) เป็นตัวระบุว่าข้อมูลนั้นมาจาก AS ใดหรือมุ่งไปยัง AS ใด ช่วยให้เราท์เตอร์ภายนอกรู้ว่าควรส่งต่อข้อมูลไปทางใด"
+  }
+]

@@ -1,0 +1,1060 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "อะไรคือแรงผลักดันหลักที่ทำให้เกิดการพัฒนาจาก 'Traditional Devices' (เช่น Desktop) ไปสู่ 'Modern Connected Devices' (เช่น IoT, Wearables) ตามที่สะท้อนในเนื้อหา?",
+    "options": [
+      {
+        "statement": "ความต้องการลดขนาดอุปกรณ์ให้เล็กลงเพียงอย่างเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "การเปลี่ยนแปลงกระบวนทัศน์จาก 'Client-Server' ไปเป็น 'Mobile Code Offloading'",
+        "istrue": false
+      },
+      {
+        "statement": "ความต้องการการเชื่อมต่อแบบ 'Always On' และจำนวนอุปกรณ์ที่เพิ่มขึ้นมหาศาล (พันล้านชิ้น)",
+        "istrue": true
+      },
+      {
+        "statement": "การที่ Mainframes มีราคาแพงเกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาแสดงให้เห็นว่าการวิวัฒนาการไปสู่ IoT/Wearables เกี่ยวข้องกับการเพิ่มจำนวนอุปกรณ์เป็นหลักพันล้าน (Billion) และสถานะการเชื่อมต่อแบบ 'Always On' ซึ่งขับเคลื่อนความต้องการโครงสร้างพื้นฐานแบบใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด 'Service Synchronization & Orchestration' จึงเป็นความท้าทายทางเทคนิคที่สำคัญสำหรับ Edge Computing มากกว่า Cloud Computing แบบดั้งเดิม?",
+    "options": [
+      {
+        "statement": "เพราะ Edge Computing มีพลังประมวลผลน้อยกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Edge Computing มีสถาปัตยกรรมแบบกระจายศูนย์ (Distributed) สูง มีหลายชั้น (layers) และอาจมีผู้ให้บริการหลายราย (multi-providers)",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Edge Computing ไม่สามารถรองรับ 'Soft State' ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Edge Computing ใช้สำหรับอุปกรณ์เคลื่อนที่เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความซับซ้อนของ Edge มาจากการที่ทรัพยากรและการบริการถูกกระจายไปตามสถานที่ต่างๆ (เช่น Cloudlets) ซึ่งอาจมาจากผู้ให้บริการหลายราย ทำให้การประสานงาน (Orchestration) ซับซ้อนกว่า Cloud แบบรวมศูนย์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทหนึ่งต้องการใช้ SDN เพื่อจัดการเครือข่าย Edge Computing หากบริการใน 'Cloudlet District 1' ทำงานหนักเกินไป SDN Controller ควรทำสิ่งใดเพื่อแก้ปัญหานี้?",
+    "options": [
+      {
+        "statement": "ปิด 'Cloudlet District 1' ทันที",
+        "istrue": false
+      },
+      {
+        "statement": "สั่งการ 'OpenFlow-enabled Switches' ให้เปลี่ยนเส้นทาง (reroute) ทราฟฟิกใหม่บางส่วนไปยัง 'Cloudlet District 2'",
+        "istrue": true
+      },
+      {
+        "statement": "ร้องขอให้ผู้ใช้หยุดการใช้งานชั่วคราว",
+        "istrue": false
+      },
+      {
+        "statement": "เพิ่มพลังการประมวลผลให้ 'Cloudlet District 1' โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "หน้าที่ของ SDN Controller คือการจัดการและควบคุมเครือข่าย (ผ่าน OpenFlow) เพื่อดำเนินการต่างๆ เช่น 'Performance tuning' หรือ 'Service migration' โดยการปรับเปลี่ยนเส้นทางทราฟฟิก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือเป้าหมายหลักของ 'Service commissioning and migration' ในสถาปัตยกรรม SDN-Edge?",
+    "options": [
+      {
+        "statement": "เพื่อตรวจสอบว่าบริการใดมีผู้ใช้งานมากที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อรักษาความปลอดภัยของข้อมูลผู้ใช้",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อจัดสรรและย้ายทรัพยากรบริการ (เช่น VM) ไปยังตำแหน่งที่เหมาะสมที่สุด (เช่น Cloudlet ที่ใกล้ที่สุด) เพื่อรักษาประสิทธิภาพ",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อค้นหาว่ามีบริการใหม่ใดบ้างในเครือข่าย",
+        "istrue": false
+      }
+    ],
+    "explanation": "Commissioning (การติดตั้ง) และ Migration (การย้าย) เป็นกระบวนการจัดการวงจรชีวิตของบริการ เพื่อให้แน่ใจว่าบริการทำงานในตำแหน่งที่เหมาะสมที่สุดตามความต้องการของผู้ใช้และภาระงาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่ 'Conventional Cloud & Datacenter' ถูกจัดกลุ่มว่า 'Highly Regular' ในขณะที่ 'Fog Computing' ถูกจัดว่า 'Irregular' สะท้อนถึงความแตกต่างในด้านใด?",
+    "options": [
+      {
+        "statement": "Cloud จัดการงานที่คาดเดาได้และเป็นแบบแผน (เช่น Web hosting) ในขณะที่ Fog มักจัดการกับข้อมูลที่คาดเดาไม่ได้จากเซ็นเซอร์ IoT",
+        "istrue": true
+      },
+      {
+        "statement": "Cloud ไม่เสถียร (Irregular) ในขณะที่ Fog เสถียรมาก (Highly Regular)",
+        "istrue": false
+      },
+      {
+        "statement": "Cloud อยู่ใกล้ผู้ใช้ (Edge) ในขณะที่ Fog อยู่ไกล (Center)",
+        "istrue": false
+      },
+      {
+        "statement": "Cloud ใช้สำหรับ IoT เท่านั้น ในขณะที่ Fog ใช้สำหรับ Mobile Gadgets",
+        "istrue": false
+      }
+    ],
+    "explanation": "Highly Regular' หมายถึงภาระงานที่เป็นมาตรฐานและคาดเดาได้ (เช่น Standard Utility Computing) 'Irregular' หมายถึงข้อมูลหรือเหตุการณ์ที่คาดเดาไม่ได้ (เช่น ข้อมูลจาก IoT, Mobile Gadgets)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากบริษัทโทรคมนาคมต้องการปรับปรุงคุณภาพการให้บริการเครือข่ายมือถือ (เช่น 5G) โดยลดความหน่วงแฝง เทคโนโลยีใดจะเหมาะสมที่สุดตามแนวคิด 'WORLD OF EDGE COMPUTING'?",
+    "options": [
+      {
+        "statement": "Mobile-Edge Computing (MEC)",
+        "istrue": true
+      },
+      {
+        "statement": "Conventional Cloud & Datacenter",
+        "istrue": false
+      },
+      {
+        "statement": "Mobile Cloud Computing (MCC)",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlets",
+        "istrue": false
+      }
+    ],
+    "explanation": "MEC ถูกจัดอยู่ในกลุ่ม 'Edge' และ 'Highly Regular' ซึ่งสอดคล้องกับ 'Telecommunication Infrastructure' และถูกกระตุ้นโดยการเติบโตของ 'mobile traffic' ตามที่ระบุในเนื้อหา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือสถานการณ์ที่แสดงถึงข้อได้เปรียบหลักของ Edge Computing (EC) เหนือ Cloud Computing (CC) ตามตารางเปรียบเทียบ?",
+    "options": [
+      {
+        "statement": "การสำรองข้อมูล (Backup) ขนาด 10TB จากเซิร์ฟเวอร์ส่วนกลาง",
+        "istrue": false
+      },
+      {
+        "statement": "การฝึกโมเดล AI ขนาดใหญ่ที่ใช้เวลาประมวลผล 3 วัน",
+        "istrue": false
+      },
+      {
+        "statement": "การเล่นเกม AR (Augmented Reality) ที่ต้องการการตอบสนองทันทีเมื่อผู้เล่นหันศีรษะ",
+        "istrue": true
+      },
+      {
+        "statement": "การให้บริการเว็บไซต์ E-commerce ที่มีผู้ใช้ทั่วโลก",
+        "istrue": false
+      }
+    ],
+    "explanation": "เกม AR ต้องการ 'Lower latency' และ 'Mobility Support' สูง ซึ่งเป็นจุดแข็งของ Edge Computing ตามตารางเปรียบเทียบ ในขณะที่การประมวลผลขนาดใหญ่ (ข้อ 1, 2) เหมาะกับ CC มากกว่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรม 'THE POSSIBLE COOPERATION OF EDGE AND CLOUD' แนะนำให้แบ่งงานอย่างไรเพื่อให้เกิดประสิทธิภาพสูงสุด?",
+    "options": [
+      {
+        "statement": "ส่งทุกงานไปที่ Cloud Datacenter เพื่อใช้พลังประมวลผลสูงสุด",
+        "istrue": false
+      },
+      {
+        "statement": "ประมวลผลทุกงานที่อุปกรณ์ (Edge Devices) เพื่อลดความหน่วง",
+        "istrue": false
+      },
+      {
+        "statement": "ส่งงานที่ไวต่อความหน่วง (Delay-sensitive) ไปยัง Fog/Edge และส่งงานที่ทนต่อความหน่วงได้ (Delay-tolerant) ไปยัง Cloud",
+        "istrue": true
+      },
+      {
+        "statement": "ส่งงานที่ใช้ WAN ไปยัง Fog และงานที่ใช้ LAN ไปยัง Cloud",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดงชัดเจนว่า 'Delay sensitive tasks' (เช่น การตอบสนองเรียลไทม์) ควรถูก Offload ไปยัง Fog/Mobile-Edge (ผ่าน LAN) ในขณะที่ 'Delay-tolerant tasks' (เช่น การวิเคราะห์ข้อมูลขนาดใหญ่) ถูก Offload ไปยัง Cloud Datacenter (ผ่าน WAN)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด 'Regulating Core Network Traffic' จึงเป็นหนึ่งในความจำเป็น (Needs) ของ Edge Computing ในยุค IoT?",
+    "options": [
+      {
+        "statement": "เพื่อเพิ่มปริมาณทราฟฟิกที่วิ่งเข้าสู่ Core Network",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะอุปกรณ์ IoT และ Wearable สร้างข้อมูลปริมาณมหาศาล (เช่น 15PB/เดือน) การประมวลผลที่ Edge ช่วยกรองและลดทราฟฟิกก่อนส่งไป Cloud",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อทำให้ Core Network ทำงานช้าลง",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Edge Computing ไม่มี Core Network",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาชี้ให้เห็นว่าอุปกรณ์จำนวนมากสร้างทราฟฟิกมหาศาล Edge Computing ช่วย 'ควบคุม' (Regulate) ทราฟฟิกนี้โดยการประมวลผลข้อมูลบางส่วนที่ต้นทาง ลดภาระของเครือข่ายหลัก (Core Network)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือแรงจูงใจหลักของ 'Mobile Cloud Computing (MCC)' ที่เกี่ยวข้องโดยตรงกับข้อจำกัดของอุปกรณ์พกพา?",
+    "options": [
+      {
+        "statement": "การให้บริการแอปพลิเคชันที่หลากหลาย (Diverse application services)",
+        "istrue": false
+      },
+      {
+        "statement": "การเอาชนะปัญหาการขาดแคลนทรัพยากร (เช่น CPU, แบตเตอรี่) ในอุปกรณ์พกพา",
+        "istrue": true
+      },
+      {
+        "statement": "การรองรับ Virtualization",
+        "istrue": false
+      },
+      {
+        "statement": "การสร้างเครือข่าย Ad-hoc",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุแรงจูงใจของ MCC ว่าเพื่อ 'Extending the battery life-time' และ 'Overcome resource shortage issue in mobile devices' ซึ่งทั้งสองเป็นข้อจำกัดทางกายภาพของอุปกรณ์พกพา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คุณสมบัติใดที่ตารางเปรียบเทียบระบุว่า MCC (Mobile Cloud Computing) สามารถให้ได้ แต่ Cloud Computing แบบดั้งเดิมทำไม่ได้?",
+    "options": [
+      {
+        "statement": "Scalability (การขยายตัว)",
+        "istrue": false
+      },
+      {
+        "statement": "Reliability (ความน่าเชื่อถือ)",
+        "istrue": false
+      },
+      {
+        "statement": "Conversing Energy (การประหยัดพลังงาน [สำหรับอุปกรณ์ปลายทาง]) และ Mobility Management (การจัดการการเคลื่อนที่)",
+        "istrue": true
+      },
+      {
+        "statement": "Enhancing Storage Capacity (การเพิ่มพื้นที่จัดเก็บ)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตารางแสดงเครื่องหมาย 'X' (ไม่มี) สำหรับ Cloud Computing ในช่อง 'Conversing Energy' และ 'Mobility Management' ในขณะที่ MCC มีคุณสมบัติเหล่านี้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Cloudlet ถูกนำเสนอเพื่อแก้ปัญหา 'ช่องว่าง' (Gap) ระหว่าง MCC และ CC อย่างไร?",
+    "options": [
+      {
+        "statement": "Cloudlet แก้ปัญหา 'High latency' ของ CC และ 'Weak computation power' ของ MCC",
+        "istrue": true
+      },
+      {
+        "statement": "Cloudlet มี 'High latency' แต่มี 'Weak computation power'",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlet แทนที่ CC ทั้งหมดด้วยพลังประมวลผลที่สูงกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlet ทำให้ MCC ไม่จำเป็นอีกต่อไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุว่า Cloudlet เป็น 'intermediate layer' (ชั้นกลาง) ที่มาแก้ปัญหาของ MCC (ที่พลังประมวลผลน้อย) และ CC (ที่มีความหน่วงสูง) โดย Cloudlet มี 'Enough computation power' และ 'Low response time'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม 'Face Identification' การที่ 'Fog Server' ทำ 'Face Detection' และ 'Image Preprocess' ก่อนส่งไป 'Cloud Server' มีประโยชน์อย่างไร?",
+    "options": [
+      {
+        "statement": "เพิ่มภาระงานให้ Cloud Server",
+        "istrue": false
+      },
+      {
+        "statement": "ลดปริมาณข้อมูลที่ต้องส่งผ่านเครือข่าย (ส่งเฉพาะใบหน้าที่ตัดแล้ว) และลดภาระงานของ Cloud Server (ที่ไม่ต้องทำ Detection เอง)",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ 'Pattern Recognition' เกิดขึ้นที่ Fog Server",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Smart Glasses ทำงานหนักขึ้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือตัวอย่างคลาสสิกของ Fog Computing: การประมวลผลข้อมูลเบื้องต้น (Detection, Preprocess) ที่ 'Fog' (ใกล้ผู้ใช้) เพื่อกรองข้อมูล, ลดความหน่วง, และลดปริมาณข้อมูลก่อนส่งส่วนที่จำเป็น (Pattern Recognition) ไปที่ 'Cloud'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากตัวอย่าง 'Face Identification' เหตุใดกระบวนการ 'Pattern Recognition' จึงยังคงถูกเก็บไว้ที่ 'Cloud Server'?",
+    "options": [
+      {
+        "statement": "เพราะเป็นกระบวนการที่ง่ายและรวดเร็วที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Fog Server ไม่สามารถส่งข้อมูลกลับไป Smart Glasses ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 'Pattern Recognition' มักต้องการพลังประมวลผลสูงและเข้าถึงฐานข้อมูลขนาดใหญ่ (Image DB) ซึ่ง Cloud มีทรัพยากรเหมาะสมกว่า",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Cloud Server อยู่ใกล้ผู้ใช้มากกว่า Fog Server",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cloud Server เหมาะสำหรับงานที่ต้องใช้ทรัพยากรประมวลผลหนัก (Intensive) และฐานข้อมูลขนาดใหญ่ (Image DB) แม้ว่าจะมีความหน่วงสูงกว่า Fog ก็ตาม นี่คือการแบ่งงาน (Cooperation) ที่เหมาะสม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้จัดเป็น 'Functional service' ของ Mobile-Edge Computing (MEC) ตามคำนิยามที่ให้มา?",
+    "options": [
+      {
+        "statement": "Service availability (ความพร้อมใช้งานของบริการ)",
+        "istrue": false
+      },
+      {
+        "statement": "Service load (ภาระงานของบริการ)",
+        "istrue": false
+      },
+      {
+        "statement": "Latency, energy efficiency, throughput (ความหน่วง, ประสิทธิภาพพลังงาน, ปริมาณงาน)",
+        "istrue": true
+      },
+      {
+        "statement": "Number of API requests (จำนวนการเรียก API)",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาได้แบ่งประเภทบริการของ MEC ไว้ชัดเจน โดยกลุ่ม 'Functional' (เกี่ยวกับฟังก์ชันการทำงาน) ประกอบด้วย latency, energy efficiency, throughput, goodput, packet loss, jitter, และ QoS"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่ 'Common Set of Properties' (คุณสมบัติร่วม) ของ Edge Computing proposals (MEC, Cloudlet, Fog)?",
+    "options": [
+      {
+        "statement": "การมีเซิร์ฟเวอร์แบบกระจาย (Distributed Servers)",
+        "istrue": false
+      },
+      {
+        "statement": "การให้ทรัพยากรประมวลผลที่ขอบ (Computational Resource at the edge)",
+        "istrue": false
+      },
+      {
+        "statement": "การรองรับการตระหนักรู้บริบท (Context-awareness)",
+        "istrue": false
+      },
+      {
+        "statement": "การเป็นเจ้าของโดยองค์กรเดียว (Single Ownership)",
+        "istrue": true
+      }
+    ],
+    "explanation": "'Ownership' (ความเป็นเจ้าของ) ถูกจัดอยู่ใน 'Differentiated Areas' (พื้นที่ที่แตกต่างกัน) ไม่ใช่ 'Common Set of Properties' (คุณสมบัติร่วม)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากแอปพลิเคชันหนึ่งต้องการความต่อเนื่องของทราฟฟิกสูงมาก (High Flow Characteristics/Traffic Continuity) แต่ไม่เน้นต้นทุน (Cost) เทคโนโลยีใดเหมาะสมที่สุดตาม Radar Chart?",
+    "options": [
+      {
+        "statement": "MEC",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlet",
+        "istrue": false
+      },
+      {
+        "statement": "Fog Computing",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้งสามเทคโนโลยีไม่รองรับ Flow Characteristics",
+        "istrue": false
+      }
+    ],
+    "explanation": "Radar Chart แสดงให้เห็นว่า 'Fog Computing' (เส้นสีเหลือง) มีค่าสูงสุดในแกน 'Flow Characteristics (Traffic Continuity)' ในขณะที่ Cloudlet มีค่าต่ำสุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จาก Radar Chart, ข้อใดคือข้อเสียเปรียบ (Trade-off) ที่ชัดเจนที่สุดของ 'MEC'?",
+    "options": [
+      {
+        "statement": "แม้จะมี 'Coverage' และ 'Active Users' สูง แต่ก็มี 'Server Density' และ 'Cost/CAPEX' (ประสิทธิภาพด้านต้นทุน) ที่ต่ำกว่า Cloudlet",
+        "istrue": true
+      },
+      {
+        "statement": "มี 'Flow Characteristics' ที่ดีที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "มี 'Server Density' สูงที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "มี 'Coverage' ต่ำที่สุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "กราฟแสดง MEC (สีน้ำเงิน) มีค่าสูงที่ Coverage/Active Users แต่มีค่าต่ำ (ใกล้ศูนย์กลาง) ที่ Server Density และ Cost/CAPEX ซึ่งแสดงถึงจุดแข็งและจุดอ่อน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โรงงานอุตสาหกรรมต้องการใช้ระบบ 'Cognitive Assistance' (เช่น AR) เพื่อช่วยช่างเทคนิคซ่อมเครื่องจักร โดยต้องแสดงผลข้อมูลซ่อมบำรุงแบบเรียลไทม์ เหตุใด Edge Computing จึงจำเป็นสำหรับ Use Case นี้?",
+    "options": [
+      {
+        "statement": "เพราะโรงงานไม่มีอินเทอร์เน็ต",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ AR และการวิเคราะห์แบบเรียลไทม์ต้องการ 'Low Latency' (ความหน่วงต่ำ) ซึ่ง Cloud Computing ที่อยู่ไกลไม่สามารถรับประกันได้",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Edge Computing ใช้พลังงานน้อยกว่าเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Cloud Computing ไม่รองรับ AR",
+        "istrue": false
+      }
+    ],
+    "explanation": "'Cognitive Assistance' และ 'Augmented Reality' (AR) เป็น Use Cases ที่ระบุไว้ ซึ่งทั้งคู่มีความอ่อนไหวต่อความหน่วง (Delay Sensitiveness) สูง การประมวลผลที่ Edge (ในโรงงาน) จึงเหมาะสมกว่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม SDN 3 ชั้น, 'Northbound Applications' (เช่น Load Balancer, Firewall) มีบทบาทอย่างไร?",
+    "options": [
+      {
+        "statement": "เป็นอุปกรณ์ฮาร์ดแวร์ที่เชื่อมต่อกับ Cloudlet",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นแอปพลิเคชันเชิงตรรกะที่กำหนด 'นโยบาย' หรือ 'คำสั่ง' (เช่น 'ให้ทำการ balance load') และส่งไปยัง SDN Controller",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นโปรโตคอลที่ใช้สื่อสารกับสวิตช์",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นอุปกรณ์ปลายทางของผู้ใช้ (เช่น มือถือ, แว่นตา)",
+        "istrue": false
+      }
+    ],
+    "explanation": "Northbound Applications คือแอปพลิเคชันที่ 'ใช้' เครือข่าย SDN โดยการส่งคำสั่ง (ผ่าน Northbound API) ไปยัง SDN Controller เพื่อให้เครือข่ายทำงานตามที่ต้องการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิดหลักของการแยก 'SDN Infrastructure' (Control Plane) ออกจาก 'Edge Layer' (Data Plane) คืออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อทำให้เครือข่ายมีราคาแพงขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อรวมการควบคุม (Control) ไว้ที่ศูนย์กลาง (SDN Controller) ทำให้สามารถจัดการและตั้งโปรแกรมเครือข่ายที่ซับซ้อน (เช่น Edge) ได้อย่างยืดหยุ่น",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อย้ายการประมวลผลทั้งหมดไปไว้ที่ SDN Controller",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อบังคับให้ผู้ใช้ Edge Layer ทุกคนต้องใช้ OpenFlow",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวใจของ SDN คือการแยก Control Plane (Controller) ออกจาก Data Plane (Switches, Edge Layer) เพื่อให้การจัดการเครือข่ายเป็นแบบ 'Programmable' และ 'Centralized' ซึ่งเพิ่มความยืดหยุ่น (Flexibility)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ประโยชน์ของ 'Virtual machine mobility' ที่ SDN มอบให้ Edge Computing คืออะไร?",
+    "options": [
+      {
+        "statement": "SDN ทำให้ VM ทำงานเร็วขึ้นโดยไม่ต้องย้ายที่",
+        "istrue": false
+      },
+      {
+        "statement": "SDN ช่วยให้การย้าย VM (บริการ) ระหว่าง Cloudlet หรือเซิร์ฟเวอร์เป็นไปอย่างราบรื่น โดย Controller จะอัปเดตเส้นทางเครือข่าย (Flow rules) ให้อัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "SDN ป้องกันไม่ให้ VM ย้ายที่ได้",
+        "istrue": false
+      },
+      {
+        "statement": "SDN เปลี่ยน VM ให้เป็นฮาร์ดแวร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อ VM (ที่ให้บริการ) ย้ายจากโฮสต์ A ไป B ในเครือข่ายทั่วไป การเชื่อมต่ออาจหลุด แต่ใน SDN Controller สามารถ reprogram สวิตช์ได้ทันทีเพื่อให้ทราฟฟิกไปที่โฮสต์ B อย่างไร้รอยต่อ (Seamless)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรม 'MULTI-TIER' (Tier-1, 2, 3) พยายามแก้ไขปัญหาข้อจำกัดของ Cloud Computing แบบดั้งเดิมอย่างไร?",
+    "options": [
+      {
+        "statement": "โดยการยกเลิก Cloud Datacenter (Tier-3) ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการนำทรัพยากรการประมวลผล (Cloudlet, Metro Cloud) มาไว้ใกล้ผู้ใช้มากขึ้น (Tier-1, 2) เพื่อลด 'Service Delay'",
+        "istrue": true
+      },
+      {
+        "statement": "โดยการเพิ่ม 'Service Delay' ให้สูงขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการลด 'Computational Power' ในทุก Tier",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cloud แบบดั้งเดิม (Tier-3) มีปัญหา 'Service Delay' สูง สถาปัตยกรรม Multi-tier จึงเพิ่ม Tier-1 (Cloudlet) และ Tier-2 (Metro Cloud) เพื่อให้มีตัวเลือกในการประมวลผลที่ใกล้ผู้ใช้มากขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความท้าทายหลักที่สถาปัตยกรรม 'MULTI-TIER' ต้องเผชิญ ตามที่ระบุในแผนภาพ?",
+    "options": [
+      {
+        "statement": "การที่ Tier-3 มีพลังประมวลผลน้อยเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "การที่ Tier-1 มี Service Delay สูงเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "การต้องเลือกระหว่าง 'Service Delay' ต่ำ (ที่ Tier-1) กับ 'Computational Power' สูง (ที่ Tier-3)",
+        "istrue": true
+      },
+      {
+        "statement": "การขาดแคลน SDN Controller",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดง Trade-off ที่ชัดเจน: 'Decreasing Service Delay' (ชี้ลงไป Tier-1) และ 'Increasing Computational Power' (ชี้ขึ้นไป Tier-3) การบริหารจัดการ Trade-off นี้ (โดย Service Orchestrator) คือความท้าทาย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิด 'Service-Centric Access' (การเข้าถึงโดยเน้นบริการ) ในเครือข่าย SDN หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "ผู้ใช้ต้องระบุที่อยู่ IP ของเซิร์ฟเวอร์ 'Healthcare' ด้วยตนเอง",
+        "istrue": false
+      },
+      {
+        "statement": "เครือข่าย (ผ่าน SDN Controller และ Service Discovery) ฉลาดพอที่จะ 'เข้าใจ' ว่าผู้ใช้ร้องขอ 'Health Service' และจะหาเส้นทางไปยังเซิร์ฟเวอร์ที่เหมาะสมให้เอง",
+        "istrue": true
+      },
+      {
+        "statement": "เครือข่ายจะปฏิเสธทุกบริการที่ไม่ใช่ 'Health Service'",
+        "istrue": false
+      },
+      {
+        "statement": "ผู้ใช้สามารถเข้าถึงได้เฉพาะบริการที่อยู่ใกล้ที่สุดเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "แทนที่จะเชื่อมต่อโดยใช้ IP (Network-Centric) ผู้ใช้แค่ร้องขอ 'บริการ' (Service-Centric) จากนั้น SDN Controller และ Orchestrator จะประสานงาน (ขั้นตอนที่ 2, 3) เพื่อค้นหาและเชื่อมต่อบริการนั้น (ขั้นตอนที่ 6)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในกระบวนการ 'Health Service Request' บทบาทของ 'Service Discovery & Orchestration' (ขั้นตอนที่ 3) คืออะไร?",
+    "options": [
+      {
+        "statement": "รับคำขอจากผู้ใช้โดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นเซิร์ฟเวอร์ที่ให้บริการ Healthcare",
+        "istrue": false
+      },
+      {
+        "statement": "บอก SDN Controller ว่า 'Healthcare' service ที่พร้อมใช้งานอยู่ที่ไหน และควรจัดการทรัพยากรอย่างไร",
+        "istrue": true
+      },
+      {
+        "statement": "ทำหน้าที่เป็นเราเตอร์ตัวสุดท้ายก่อนถึงเซิร์ฟเวอร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "SDN Controller (ขั้นตอนที่ 2) รู้ 'วิธี' ควบคุมเครือข่าย แต่ไม่รู้ 'ว่า' บริการอยู่ที่ไหน มันจึงต้องถาม 'Service Discovery & Orchestration' (ขั้นตอนที่ 3) เพื่อหาตำแหน่งและนโยบายของบริการนั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เป้าหมายหลักของ 'Service Function Chaining (SFC)' คืออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อให้ทราฟฟิกไปถึงเซิร์ฟเวอร์เร็วที่สุด โดยข้ามทุกบริการ",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อบังคับให้ทราฟฟิกต้องไหลผ่าน 'ห่วงโซ่' ของบริการ (เช่น Firewall, DPI) ตามลำดับที่กำหนดไว้ก่อนถึงปลายทาง",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อรวม Firewall, DPI, และ Load Balancer ไว้ในเครื่องเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อส่งข้อมูลจาก Server กลับไป Client",
+        "istrue": false
+      }
+    ],
+    "explanation": "SFC คือการ 'ล่ามโซ่' (Chaining) บริการต่างๆ (Service Functions) เข้าด้วยกัน เพื่อให้แน่ใจว่าทราฟฟิกจะถูกประมวลผลตามนโยบาย (เช่น ต้องผ่าน Firewall ก่อน) ก่อนไปถึง Server"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด SDN จึงมีประโยชน์อย่างมากในการทำ 'Service Function Chaining (SFC)' ด้วย 'Virtualized Network Functions' (NFV)?",
+    "options": [
+      {
+        "statement": "เพราะ SDN Controller สามารถ 'ตั้งโปรแกรม' เราเตอร์ (ผ่าน OpenFlow) ให้ 'บังคับ' ทราฟฟิกวิ่งไปยัง VM ของบริการต่างๆ (Firewall VM, DPI VM) ตามลำดับที่ถูกต้อง",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ SDN ทำให้ VM ทำงานช้าลง",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ SDN Controller ทำหน้าที่เป็น Firewall VM, DPI VM, และ Load Balancer VM ในตัวเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ SDN ไม่จำเป็นต้องใช้เราเตอร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในอดีต SFC ต้องใช้ฮาร์ดแวร์เฉพาะและสายเคเบิล แต่เมื่อใช้ NFV (บริการกลายเป็น VM) และ SDN (เครือข่ายที่ตั้งโปรแกรมได้) SDN Controller สามารถ 'วาด' เส้นทางเสมือน (SFC) ผ่าน VM เหล่านี้ได้ตามต้องการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถานการณ์ 'Connected Vehicles' เหตุใดการสื่อสารแบบ 'V2V' (Vehicle-to-Vehicle) จึงมีความสำคัญอย่างยิ่งยวดต่อความปลอดภัย?",
+    "options": [
+      {
+        "statement": "เพื่อให้รถยนต์สามารถสตรีมวิดีโอจาก Cloud ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้รถคันหน้าสามารถส่งสัญญาณ 'เบรกกะทันหัน' ไปยังรถคันหลังได้โดยตรงและทันที (Low Latency) โดยไม่ต้องรอการสื่อสารผ่าน Cloud",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อรายงานข้อมูลการจราจรไปยัง Infrastructure",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้คนขับสามารถโทรศัพท์ระหว่างรถได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "V2V คือการสื่อสารโดยตรงระหว่างรถ ซึ่งให้ความหน่วงต่ำที่สุด (Ultra-Low Latency) จำเป็นสำหรับสถานการณ์ฉุกเฉิน (เช่น การเบรก) ที่การรอข้อมูลจาก Cloud (V2C) อาจช้าเกินไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรม V2X (Vehicle-to-Everything) ที่แสดงในภาพ เป็นตัวอย่างของ Use Case ใดของ Edge Computing?",
+    "options": [
+      {
+        "statement": "Smart Grid",
+        "istrue": false
+      },
+      {
+        "statement": "Body Area Network (BAN)",
+        "istrue": false
+      },
+      {
+        "statement": "Connected Vehicles and Smart Traffic Lights",
+        "istrue": true
+      },
+      {
+        "statement": "Language and Speech Processing",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ V2X แสดงองค์ประกอบของ 'Connected Vehicles' (Vehicle) และ 'Smart Traffic Lights' (Traffic Light) ซึ่งตรงกับหนึ่งใน Use Cases ที่ระบุไว้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือ 'Research Directions' ที่มุ่งเน้นการปรับปรุงการสื่อสารระหว่าง SDN Controller ที่อยู่ในโดเมนเดียวกันหรือต่างโดเมน?",
+    "options": [
+      {
+        "statement": "Enhancing OpenFlow (ปรับปรุงโปรโตคอล Southbound)",
+        "istrue": false
+      },
+      {
+        "statement": "Northbound Interface Standardization (กำหนดมาตรฐาน API สำหรับแอปพลิเคชัน)",
+        "istrue": false
+      },
+      {
+        "statement": "East-West Interface (อินเทอร์เฟซสำหรับการสื่อสารระหว่าง Controller)",
+        "istrue": true
+      },
+      {
+        "statement": "Enhancing the Forwarding Plane (ปรับปรุงระนาบการส่งข้อมูล)",
+        "istrue": false
+      }
+    ],
+    "explanation": "Northbound คือ 'บน' (App-to-Controller), Southbound คือ 'ล่าง' (Controller-to-Switch), และ East-West คือ 'ข้าง' (Controller-to-Controller) ซึ่งจำเป็นสำหรับการทำงานร่วมกันในระบบขนาดใหญ่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหา 'Geographical Scalability' ใน 'RESEARCH DIRECTIONS' สำหรับ SDN-Edge หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "ความท้าทายในการจัดการเครือข่ายที่กระจายตัวทางภูมิศาสตร์เป็นวงกว้าง (เช่น Cloudlets ในหลายเมือง) ด้วย SDN Controller เพียงตัวเดียว",
+        "istrue": true
+      },
+      {
+        "statement": "ความท้าทายในการเพิ่มจำนวนผู้ดูแลระบบ",
+        "istrue": false
+      },
+      {
+        "statement": "ความท้าทายในการเพิ่มความเร็วของ Forwarding Plane",
+        "istrue": false
+      },
+      {
+        "statement": "ความท้าทายในการ Debug โปรโตคอล OpenFlow",
+        "istrue": false
+      }
+    ],
+    "explanation": "'Geographical Scalability' หมายถึงความสามารถในการขยายตัวในเชิงพื้นที่ทางภูมิศาสตร์ Edge Computing มีการกระจายตัวสูง การที่ SDN Controller ตัวเดียวจะจัดการทุกอย่างที่อยู่ไกลกันจึงเป็นความท้าทาย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในตารางเปรียบเทียบ EC vs CC เหตุใด Edge Computing จึงระบุว่ามี 'Mobility Support' สูง (High) ในขณะที่ Cloud Computing มีต่ำ (Low)?",
+    "options": [
+      {
+        "statement": "เพราะเซิร์ฟเวอร์ Edge สามารถเคลื่อนที่ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Edge Computing ถูกออกแบบมาเพื่อรองรับอุปกรณ์ปลายทาง (เช่น มือถือ, รถยนต์) ที่กำลังเคลื่อนที่ โดยมีทรัพยากร (เช่น Cloudlet, MEC) อยู่ใกล้ๆ ทำให้การเชื่อมต่อสั้นและ Handover ทำได้ง่ายกว่า",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Cloud Computing ไม่รองรับอุปกรณ์พกพา",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Edge Computing ใช้ WAN เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cloud (Centralized) อยู่ไกล การเคลื่อนที่ของผู้ใช้ทำให้ Latency เปลี่ยนแปลงตลอดเวลา แต่ Edge (Distributed) มีโหนดอยู่ทุกที่ ทำให้ผู้ใช้ที่เคลื่อนที่สามารถเชื่อมต่อกับโหนดที่ใกล้ที่สุดได้เสมอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นการประเมินที่ถูกต้องเกี่ยวกับข้อจำกัดของ 'Cloudlet' เมื่อเทียบกับ 'Fog Computing' ตาม Radar Chart?",
+    "options": [
+      {
+        "statement": "Cloudlet มี 'Flow Characteristics' (ความต่อเนื่องของทราฟฟิก) ที่ต่ำมาก (ใกล้ศูนย์) เมื่อเทียบกับ Fog Computing",
+        "istrue": true
+      },
+      {
+        "statement": "Cloudlet มี 'Cost/CAPEX' (ต้นทุน) ที่แย่กว่า (สูงกว่า) Fog Computing มาก",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlet มี 'Server Density' ต่ำกว่า Fog Computing",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlet มี 'Coverage' กว้างกว่า Fog Computing",
+        "istrue": false
+      }
+    ],
+    "explanation": "จุดอ่อนที่ชัดเจนที่สุดของ Cloudlet ในกราฟคือแกน 'Flow Characteristics (Traffic Continuity)' ที่มีค่าน้อยที่สุด ในขณะที่ Fog Computing มีค่าสูงที่สุดในแกนนี้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่ Edge Computing ต้องการ 'Finer Granularity of Control' (การควบคุมที่ละเอียดยิ่งขึ้น) หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "ต้องการลดจำนวน SDN Controller ลง",
+        "istrue": false
+      },
+      {
+        "statement": "ต้องการให้ SDN Controller สามารถกำหนดนโยบายและควบคุมทราฟฟิกในระดับที่เจาะจงมากขึ้น (เช่น ควบคุมตามประเภทแอปพลิเคชัน, ผู้ใช้, หรืออุปกรณ์) ไม่ใช่แค่ตาม IP",
+        "istrue": true
+      },
+      {
+        "statement": "ต้องการให้การควบคุมทั้งหมดเกิดขึ้นที่ Forwarding Plane",
+        "istrue": false
+      },
+      {
+        "statement": "ต้องการมาตรฐาน Northbound Interface เพียงแบบเดียว",
+        "istrue": false
+      }
+    ],
+    "explanation": "'Granularity' หมายถึงความละเอียด 'Finer Granularity' คือการควบคุมที่ละเอียดขึ้น ซึ่งจำเป็นใน Edge ที่มีอุปกรณ์และบริการหลากหลายประเภท"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถานการณ์ใดที่ 'Mobile Cloud Computing (MCC)' (แบบ Infrastructure-based) จะมีประสิทธิภาพด้อยกว่า 'Cloudlet-based MCC'?",
+    "options": [
+      {
+        "statement": "เมื่อผู้ใช้ต้องการเข้าถึงฐานข้อมูลขนาดใหญ่ที่ Central Cloud",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อผู้ใช้ต้องการประมวลผลแอปพลิเคชันที่ไวต่อความหน่วง (Delay-sensitive) ขณะกำลังเคลื่อนที่",
+        "istrue": true
+      },
+      {
+        "statement": "เมื่อผู้ใช้ต้องการยืดอายุการใช้งานแบตเตอรี่",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อผู้ใช้ต้องการเข้าถึงบริการที่หลากหลาย",
+        "istrue": false
+      }
+    ],
+    "explanation": "MCC แบบ Infrastructure-based ยังคงใช้ Cloud ที่อยู่ไกล (High Latency) แต่ Cloudlet-based MCC ใช้ Cloudlet ที่อยู่ใกล้ (Low Latency) ซึ่ง Cloudlet ถูกออกแบบมาเพื่อแก้ปัญหา Latency ของ CC/MCC"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่ Edge Computing รองรับ 'Soft State' (เทียบกับ 'Hard State' ของ Cloud) มีนัยสำคัญอย่างไรต่อ 'Seamless Service Delivery'?",
+    "options": [
+      {
+        "statement": "'Soft State' ทำให้ระบบซับซ้อนและล่มง่ายกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "'Soft State' (ที่สถานะสามารถสร้างขึ้นใหม่ได้ง่าย) ทำให้การย้าย (Migration) หรือการกู้คืน (Fallback) บริการทำได้ง่ายขึ้นเมื่อผู้ใช้เคลื่อนที่หรือเกิดข้อผิดพลาด",
+        "istrue": true
+      },
+      {
+        "statement": "'Soft State' หมายถึงบริการที่ไม่สำคัญ",
+        "istrue": false
+      },
+      {
+        "statement": "'Soft State' ใช้ได้เฉพาะกับอุปกรณ์ IoT เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Soft State (สถานะชั่วคราว/สร้างใหม่ได้) มีความยืดหยุ่นสูง ช่วยให้ระบบสามารถ 'handle fallback operations' (ตามที่ระบุใน Technical Challenges) ซึ่งจำเป็นในสภาพแวดล้อมที่ผันผวนของ Edge"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด 'Military and Hostile Environments' (สภาพแวดล้อมทางทหาร) จึงเป็น Use Case ที่ดีสำหรับ Edge Computing?",
+    "options": [
+      {
+        "statement": "เพราะสภาพแวดล้อมเหล่านี้มักมีการเชื่อมต่ออินเทอร์เน็ตไปยัง Cloud (WAN) ที่เสถียรและรวดเร็ว",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Edge Computing (เช่น Cloudlet เคลื่อนที่) สามารถทำงานได้แบบ Offline หรือกึ่ง Offline โดยไม่ต้องพึ่งพาการเชื่อมต่อ Cloud ตลอดเวลา",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Cloud Computing ไม่ปลอดภัย",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Edge Computing มีพลังประมวลผลสูงกว่า Cloud",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในเขตสงครามหรือพื้นที่ภัยพิบัติ การเชื่อมต่อ WAN ไปยัง Cloud อาจถูกตัดขาดหรือไม่เสถียร Edge Computing (เช่น Cloudlet) มีคุณสมบัติ 'Offline availability' (ตามที่ระบุในเนื้อหา) ทำให้ยังคงประมวลผลที่หน้างานได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เปรียบเทียบข้อดีของ Cloudlet และ MEC: หากคุณสร้างแอปพลิเคชันสำหรับ 'Smart Grid' (โครงข่ายไฟฟ้าอัจฉริยะ) ที่ต้องติดตั้งเซิร์ฟเวอร์ขนาดเล็กจำนวนมาก (High Server Density) ในต้นทุนที่ต่ำ (Low Cost/CAPEX) คุณจะเลือกเทคโนโลยีใดตาม Radar Chart?",
+    "options": [
+      {
+        "statement": "MEC, เพราะมี Coverage กว้าง",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlet, เพราะมีจุดเด่นด้าน 'Server Density' และ 'Cost/CAPEX'",
+        "istrue": true
+      },
+      {
+        "statement": "Fog Computing, เพราะมี Flow Characteristics ดี",
+        "istrue": false
+      },
+      {
+        "statement": "Conventional Cloud, เพราะ Smart Grid ไม่ต้องการ Low Latency",
+        "istrue": false
+      }
+    ],
+    "explanation": "โจทย์เน้น 'High Server Density' และ 'Low Cost/CAPEX' ซึ่งตาม Radar Chart, 'Cloudlet' (เส้นสีส้ม) มีค่าสูง (ดี) ในทั้งสองแกนนี้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือตัวอย่างของ 'Body Area Network (BAN) & Healthcare' ที่ใช้ประโยชน์จาก Edge Computing ได้ชัดเจนที่สุด?",
+    "options": [
+      {
+        "statement": "การเก็บประวัติการรักษา (EHR) ของผู้ป่วยทั้งหมดไว้บน Central Cloud",
+        "istrue": false
+      },
+      {
+        "statement": "การที่เซ็นเซอร์วัดหัวใจของผู้ป่วยส่งข้อมูลไปประมวลผลที่ Cloudlet ในโรงพยาบาล เพื่อเตือนภัย (Alert) ทันทีหากพบคลื่นหัวใจผิดปกติ",
+        "istrue": true
+      },
+      {
+        "statement": "การใช้ Smartwatch เพื่อนับก้าวและซิงค์ข้อมูลกับ Cloud วันละครั้ง",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้แอปพลิเคชันค้นหาโรงพยาบาลบนมือถือ",
+        "istrue": false
+      }
+    ],
+    "explanation": "BAN และ Healthcare ที่วิกฤตต้องการ 'Real-Time QoS' และ 'Low Latency' (จาก Needs และ EC vs CC) การส่งข้อมูลไป Cloudlet (Edge) ในโรงพยาบาลเพื่อวิเคราะห์ทันที ตอบโจทย์นี้ได้ดีกว่าการส่งไป Central Cloud"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "อะไรคือความแตกต่างที่สำคัญที่สุดระหว่าง 'Fog Computing' และ 'Cloudlet' แม้ว่าทั้งคู่จะอยู่ใกล้ Edge?",
+    "options": [
+      {
+        "statement": "Cloudlet มักเน้นการให้บริการโครงสร้างพื้นฐาน (คล้าย Micro-Datacenter) ในขณะที่ Fog Computing เป็นแนวคิดที่กว้างกว่า (อาจรวมถึงเราเตอร์, สวิตช์อัจฉริยะ) และเน้น 'Flow Characteristics'",
+        "istrue": true
+      },
+      {
+        "statement": "Cloudlet มีราคาแพงกว่า Fog Computing เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "Fog Computing ไม่สามารถทำงานร่วมกับ Cloud ได้ แต่ Cloudlet ทำได้",
+        "istrue": false
+      },
+      {
+        "statement": "Cloudlet ใช้สำหรับงาน 'Highly Regular' เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "จาก Radar Chart, Cloudlet เด่นด้าน Server Density/Cost (โครงสร้างพื้นฐาน) แต่ Fog เด่นด้าน Flow Characteristics และจากเมทริกซ์ 2D ทั้งคู่รองรับงาน 'Irregular' แต่ Fog มีแนวคิดที่กว้างกว่า (ครอบคลุมถึงระดับ Network Fabric)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากตาราง EC vs CC ข้อใดสรุปความแตกต่างด้าน 'การจัดการ' (Management) ได้ถูกต้อง?",
+    "options": [
+      {
+        "statement": "ทั้ง EC และ CC ถูกจัดการโดย Service Provider (ผู้ให้บริการ)",
+        "istrue": false
+      },
+      {
+        "statement": "CC มักถูกจัดการโดย Service Provider (เช่น AWS, Google) ในขณะที่ EC อาจถูกจัดการโดย 'Local Business' (เช่น โรงงาน, โรงพยาบาล)",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้ง EC และ CC ถูกจัดการโดย Local Business",
+        "istrue": false
+      },
+      {
+        "statement": "EC ไม่จำเป็นต้องมีการจัดการ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตารางเปรียบเทียบระบุชัดเจนว่า Management ของ CC คือ 'Service Provider' ในขณะที่ EC คือ 'Local Business' ซึ่งสะท้อนถึงการที่ Edge server ตั้งอยู่ในพื้นที่ขององค์กรนั้นๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการประยุกต์ใช้ 'Service-Centric Structure' (ซึ่งเป็นความท้าทายของ EC) ได้ดีที่สุด?",
+    "options": [
+      {
+        "statement": "การที่ผู้ใช้ร้องขอ 'Video Streaming' และเครือข่าย SDN/Edge สามารถหาเซิร์ฟเวอร์ที่ใกล้ที่สุดและมีแบนด์วิดท์พอให้บริการโดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "การที่ผู้ใช้ต้องป้อน IP Address ของเซิร์ฟเวอร์ Video Streaming ด้วยตนเอง",
+        "istrue": false
+      },
+      {
+        "statement": "การที่ทุกบริการถูกรวมไว้ที่เซิร์ฟเวอร์เดียว",
+        "istrue": false
+      },
+      {
+        "statement": "การที่ผู้ใช้ไม่สามารถย้ายระหว่างบริการได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "Service-Centric Structure หมายถึงโครงสร้างที่เน้น 'บริการ' เป็นหลัก (ดังในแผนภาพ Health Service) ความท้าทายคือการจัดการ 'interaction between services and servers' ที่ซับซ้อนนี้ ซึ่ง SDN ช่วยได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากแผนภาพ 'EVOLUTION' ข้อใดคือการวิเคราะห์แนวโน้มโครงสร้างพื้นฐาน (Infrastructure) ที่ถูกต้อง?",
+    "options": [
+      {
+        "statement": "แนวโน้มคือการกลับไปใช้ Mainframes เพราะมีประสิทธิภาพสูงสุด",
+        "istrue": false
+      },
+      {
+        "statement": "แนวโน้มคือการย้ายจากศูนย์กลาง (Mainframes, Servers) ไปสู่การประมวลผลแบบกระจาย (Cloud) และกระจายยิ่งขึ้น (Edge Computing)",
+        "istrue": true
+      },
+      {
+        "statement": "แนวโน้มคือ Edge Computing จะมาแทนที่ Cloud Computing ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "แนวโน้มคือโครงสร้างพื้นฐานไม่มีการเปลี่ยนแปลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดงการเคลื่อนที่จากซ้ายไปขวา (ตามเวลา) จาก Mainframes -> Servers -> Cloud Computing -> และแตกแขนงไปยัง Edge Computing ซึ่งแสดงถึงการกระจายตัว (Decentralization/Distribution) ที่เพิ่มขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดสรุปประโยชน์ของ 'SDN' ต่อ 'Edge Computing' ได้ดีที่สุด?",
+    "options": [
+      {
+        "statement": "SDN ทำให้ Edge Computing ช้าลง แต่ปลอดภัยขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "SDN ให้ 'High resolution and effective control' (การควบคุมที่ละเอียดและมีประสิทธิภาพ) และ 'Flexibility' (ความยืดหยุ่น) ซึ่งจำเป็นต่อการจัดการสถาปัตยกรรม Edge ที่ซับซ้อนและกระจายตัว",
+        "istrue": true
+      },
+      {
+        "statement": "SDN ทำหน้าที่เป็น Cloudlet เพียงอย่างเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "SDN เพิ่มต้นทุน (Low cost solution คือข้อเสีย)",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวข้อ 'How Can SDN Help Edge Computing' ระบุประโยชน์หลักๆ คือการควบคุมที่ยืดหยุ่น (Flexibility), การควบคุมที่มีประสิทธิภาพ (High resolution control), และการรองรับนวัตกรรม (Low barrier on Innovation) ซึ่งทั้งหมดจำเป็นสำหรับ Edge"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถานการณ์ใดที่การใช้ 'Conventional Cloud' (Cloud แบบดั้งเดิม) จะเป็นทางเลือกที่แย่ที่สุด?",
+    "options": [
+      {
+        "statement": "การเก็บข้อมูลสำรองระยะยาวของบริษัท",
+        "istrue": false
+      },
+      {
+        "statement": "การให้บริการเว็บไซต์ E-commerce ทั่วโลก",
+        "istrue": false
+      },
+      {
+        "statement": "การควบคุมระบบเบรกอัตโนมัติของรถยนต์ (Connected Vehicle)",
+        "istrue": true
+      },
+      {
+        "statement": "การประมวลผลแบบ Batch processing รายงานการเงินตอนสิ้นเดือน",
+        "istrue": false
+      }
+    ],
+    "explanation": "การควบคุมเบรก (Connected Vehicle Use Case) ต้องการความหน่วงต่ำระดับมิลลิวินาที (Ultra-Low Latency) การส่งคำสั่งไป-กลับ Cloud (High Latency) จะช้าเกินไปและอันตรายอย่างยิ่ง จึงต้องใช้ Edge (V2V/V2I)"
+  }
+]

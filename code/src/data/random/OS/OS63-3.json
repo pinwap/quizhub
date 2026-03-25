@@ -1,0 +1,156 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which information is not in PCB?",
+    "options": [
+      { "statement": "Process state", "istrue": false },
+      { "statement": "Program counter", "istrue": false },
+      { "statement": "Register", "istrue": false },
+      { "statement": "Bootstrap program", "istrue": true }
+    ],
+    "explanation": "A Process Control Block (PCB) stores process state, program counter, registers, etc., but not the bootstrap program."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the time complexity of adding an item to the ready queue?",
+    "options": [
+      { "statement": "O(1)", "istrue": true },
+      { "statement": "O(log n)", "istrue": false },
+      { "statement": "O(n)", "istrue": false },
+      { "statement": "O(n log n)", "istrue": false }
+    ],
+    "explanation": "Adding a process to the ready queue is an O(1) operation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the operation of the long-term scheduler?",
+    "options": [
+      { "statement": "Add process into ready queue", "istrue": true },
+      { "statement": "Remove process from ready queue", "istrue": false },
+      { "statement": "Handle I/O request", "istrue": false },
+      { "statement": "Perform context switch", "istrue": false }
+    ],
+    "explanation": "The long-term scheduler controls admission of jobs into the ready queue."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the operation of the short-term scheduler?",
+    "options": [
+      { "statement": "Add process into ready queue", "istrue": false },
+      { "statement": "Remove process from ready queue", "istrue": true },
+      { "statement": "Create new jobs", "istrue": false },
+      { "statement": "Handle interrupts", "istrue": false }
+    ],
+    "explanation": "The short-term scheduler selects a process from the ready queue for execution."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the parent process id?",
+    "options": [
+      { "statement": "pid = 0", "istrue": false },
+      { "statement": "pid > 0", "istrue": true },
+      { "statement": "pid < 0", "istrue": false },
+      { "statement": "pid = -1", "istrue": false }
+    ],
+    "explanation": "A parent process always has a positive process identifier (pid > 0)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the orphan parent?",
+    "options": [
+      { "statement": "init", "istrue": true },
+      { "statement": "kernel", "istrue": false },
+      { "statement": "shell", "istrue": false },
+      { "statement": "systemd", "istrue": false }
+    ],
+    "explanation": "When a parent terminates, the init process becomes the new parent of orphan processes."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the cause of a zombie process?",
+    "options": [
+      { "statement": "Child terminated but parent has not called wait()", "istrue": true },
+      { "statement": "Parent terminated first", "istrue": false },
+      { "statement": "Process blocked on I/O", "istrue": false },
+      { "statement": "Process in ready queue", "istrue": false }
+    ],
+    "explanation": "A zombie process occurs when a child exits but the parent has not collected its exit status via wait()."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is wait() system call?",
+    "options": [
+      { "statement": "Wait for I/O", "istrue": false },
+      { "statement": "Wait for any child process", "istrue": true },
+      { "statement": "Wait for a timer", "istrue": false },
+      { "statement": "Wait for a signal", "istrue": false }
+    ],
+    "explanation": "The wait() system call suspends the parent until any of its children terminates."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is not a process type of Chrome?",
+    "options": [
+      { "statement": "Browser", "istrue": false },
+      { "statement": "Renderer", "istrue": false },
+      { "statement": "Plug-in", "istrue": false },
+      { "statement": "Downloader", "istrue": true }
+    ],
+    "explanation": "Chrome uses browser, renderer, and plug-in processes, but not a downloader process."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is another definition of sandbox?",
+    "options": [
+      { "statement": "Virtual machine", "istrue": true },
+      { "statement": "Kernel mode", "istrue": false },
+      { "statement": "Thread", "istrue": false },
+      { "statement": "Bootloader", "istrue": false }
+    ],
+    "explanation": "A sandbox is an isolated environment similar to a virtual machine to run applications securely."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does a zero-capacity buffer imply?",
+    "options": [
+      { "statement": "Non-blocking communication", "istrue": false },
+      { "statement": "Blocking communication", "istrue": true },
+      { "statement": "Infinite buffering", "istrue": false },
+      { "statement": "Shared memory", "istrue": false }
+    ],
+    "explanation": "A zero-capacity buffer implies the sender must block until the receiver is ready."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is the correct pair of service and port number?",
+    "options": [
+      { "statement": "Telnet: 23", "istrue": false },
+      { "statement": "FTP: 21", "istrue": false },
+      { "statement": "HTTP: 80", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "Common services include Telnet (23), FTP (21), and HTTP (80)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the port number of a client socket?",
+    "options": [
+      { "statement": "Fixed at 80", "istrue": false },
+      { "statement": "<= 1024", "istrue": false },
+      { "statement": "> 1024", "istrue": true },
+      { "statement": "Always 0", "istrue": false }
+    ],
+    "explanation": "Client sockets typically use ephemeral ports, which are numbers greater than 1024."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the loopback address?",
+    "options": [
+      { "statement": "127.0.0.1", "istrue": true },
+      { "statement": "192.168.1.1", "istrue": false },
+      { "statement": "0.0.0.0", "istrue": false },
+      { "statement": "255.255.255.255", "istrue": false }
+    ],
+    "explanation": "The loopback address is 127.0.0.1, used for testing network communication within the host."
+  }
+]

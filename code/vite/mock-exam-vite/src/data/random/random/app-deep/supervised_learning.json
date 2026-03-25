@@ -1,0 +1,1488 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวผิดเกี่ยวกับ Loss function",
+    "options": [
+      {
+        "statement": "เป็น Function ที่วัดค่าความแตกต่างของสิ่งที่โมเดลทำนายกับค่าจริง",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น Function ที่ Learning algorithm ใช้สำหรับ Minimise",
+        "istrue": false
+      },
+      {
+        "statement": "ค่า Loss เยอะๆ ยิ่งดี",
+        "istrue": true
+      },
+      {
+        "statement": "Mean squared error เป็น Loss function ประเภทหนึ่งที่ใช้ใน regression",
+        "istrue": false
+      }
+    ],
+    "explanation": "Loss function คือฟังก์ชันที่ใช้วัดค่าความผิดพลาดของโมเดล ดังนั้นค่า Loss ยิ่งน้อยจึงจะยิ่งดี (หมายถึงโมเดลทำนายได้ใกล้เคียงค่าจริง)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวผิดเกี่ยวกับ Hyper-parameters",
+    "options": [
+      {
+        "statement": "สามารถหาค่าที่เหมาะสมได้จากการวัดประสิทธิภาพของโมเดลในระหว่างการทำ cross-validation",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นค่าที่ถูกกำหนดก่อนการเทรนโมเดล",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นค่าที่มีการเปลี่ยนแปลงด้วย Learning algorithm",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นค่าที่ควบคุมการหาค่า Model parameters ให้ตรงกับความต้องการ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hyper-parameters เป็นค่าที่ผู้สร้างโมเดลต้องกำหนดเองก่อนเริ่มการเทรน ไม่สามารถเรียนรู้หรือเปลี่ยนแปลงได้โดยตัว Learning algorithm เอง (ค่าที่เปลี่ยนโดย Learning algorithm เรียกว่า Model parameters เช่น weight และ bias)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากเราต้องการวัดค่า Unbiased generalisation performance เราต้องแยก Test set ออกจาก Process ใดบ้าง",
+    "options": [
+      {
+        "statement": "Training",
+        "istrue": false
+      },
+      {
+        "statement": "Model selection",
+        "istrue": false
+      },
+      {
+        "statement": "Hyper-parameter tuning",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "เพื่อให้ได้ผลการประเมินประสิทธิภาพของโมเดลที่แท้จริงและไม่เอนเอียง (Unbiased) ตัว Test set จะต้องไม่ถูกนำไปยุ่งเกี่ยวในทุกขั้นตอนของการสร้างและปรับแต่งโมเดลเลย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือคำจำกัดความของ Overfitting",
+    "options": [
+      {
+        "statement": "Test error < Training error",
+        "istrue": false
+      },
+      {
+        "statement": "Training error สูง",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อเพิ่ม Model complexity แล้ว Training error ลดลง แต่ Test error เพิ่มขึ้น",
+        "istrue": true
+      },
+      {
+        "statement": "Training error < Test error",
+        "istrue": false
+      }
+    ],
+    "explanation": "Overfitting เกิดจากการที่โมเดลซับซ้อนเกินไปจนจดจำรายละเอียดและ Noise ในข้อมูลเทรน (ทำให้ Training error ต่ำลงเรื่อยๆ) แต่นำไปใช้งานจริงกับข้อมูลใหม่ได้แย่ลง (ทำให้ Test error กลับเพิ่มสูงขึ้น)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การแก้ปัญหา Overfitting ทำได้โดย",
+    "options": [
+      {
+        "statement": "เพิ่ม Training samples",
+        "istrue": false
+      },
+      {
+        "statement": "ใส่ Regularisation term ลงไปใน Loss function",
+        "istrue": false
+      },
+      {
+        "statement": "ลดจำนวน Degrees of polynomials ในกรณีของ Linear regression models",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "การเพิ่มข้อมูล (Data Augmentation/More samples), การทำ Regularization, และการลดความซับซ้อนของโมเดล ล้วนเป็นวิธีการหลักที่ช่วยลดอาการ Overfitting ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Error ประเภทใดไม่ขึ้นอยู่กับ Model complexity หรือโมเดลที่เลือกใช้",
+    "options": [
+      {
+        "statement": "Irreducible error",
+        "istrue": true
+      },
+      {
+        "statement": "Bias",
+        "istrue": false
+      },
+      {
+        "statement": "Variance",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Irreducible error คือค่าความคลาดเคลื่อนที่เกิดจาก Noise หรือปัจจัยภายนอกในตัวข้อมูลเอง ซึ่งไม่สามารถหลีกเลี่ยงหรือลดได้ ไม่ว่าจะใช้โมเดลที่ซับซ้อนมากแค่ไหนก็ตาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ค่าของ Normalized root mean squared error (NRMSE) อยู่ในช่วงใด",
+    "options": [
+      {
+        "statement": "[0,1]",
+        "istrue": false
+      },
+      {
+        "statement": "(-∞,∞)",
+        "istrue": false
+      },
+      {
+        "statement": "[-1,1]",
+        "istrue": false
+      },
+      {
+        "statement": "[0,∞)",
+        "istrue": true
+      }
+    ],
+    "explanation": "RMSE มีค่าตั้งแต่ 0 ขึ้นไป และเมื่อถูก Normalize ด้วยค่าความกว้างหรือค่าเฉลี่ย ก็ยังคงเป็นค่าบวกเสมอ โดยไม่ได้มีเพดานสูงสุดถูกจำกัดไว้ที่ 1 ทำให้มีช่วงคือ 0 ถึงอนันต์ [0,∞)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โปรแกรมจัดความพอใจสินค้าจากคำรีวิวว่าเป็น positive หรือ negative เป็น Classification ประเภทใด",
+    "options": [
+      {
+        "statement": "Binary classification",
+        "istrue": true
+      },
+      {
+        "statement": "Multi-class classification",
+        "istrue": false
+      },
+      {
+        "statement": "Multi-label classification",
+        "istrue": false
+      }
+    ],
+    "explanation": "การจัดกลุ่มเป้าหมายออกเป็นเพียงแค่ 2 คลาสเท่านั้น (เช่น Yes/No, Positive/Negative) เรียกว่า Binary classification"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือชื่อของ Binary classifier",
+    "options": [
+      {
+        "statement": "Linear regression",
+        "istrue": false
+      },
+      {
+        "statement": "Lasso regression",
+        "istrue": false
+      },
+      {
+        "statement": "Ridge regression",
+        "istrue": false
+      },
+      {
+        "statement": "Logistic regression",
+        "istrue": true
+      }
+    ],
+    "explanation": "Logistic regression เป็น Algorithm ที่ชื่อมีคำว่า Regression แต่จริงๆ แล้วถูกใช้งานสำหรับแก้ปัญหา Classification โดยเฉพาะแบบ Binary classification"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือ Loss function ที่เหมาะสมในการทำ Binary classification",
+    "options": [
+      {
+        "statement": "Root Mean Squared Error (RMSE)",
+        "istrue": false
+      },
+      {
+        "statement": "Cross entropy loss",
+        "istrue": true
+      },
+      {
+        "statement": "Mean Absolute Error (MAE)",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cross entropy loss (หรือ Binary Cross Entropy / Log Loss) เป็น Loss function มาตรฐานที่ออกแบบมาสำหรับวัดความผิดพลาดของการทำนายความน่าจะเป็นในปัญหา Classification"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าต้องการทำ Multi-class classification ที่สามารถได้ 4 คลาส จะต้องสร้าง Binary classifier อย่างน้อยที่สุดกี่อัน โดยที่คำนึงถึง Unknown class ด้วย",
+    "options": [
+      {
+        "statement": "1",
+        "istrue": false
+      },
+      {
+        "statement": "3",
+        "istrue": false
+      },
+      {
+        "statement": "6",
+        "istrue": false
+      },
+      {
+        "statement": "4",
+        "istrue": true
+      }
+    ],
+    "explanation": "ในวิธีการแบบ One-vs-Rest (OvR) สำหรับจัดกลุ่ม 4 คลาสหลัก จะต้องสร้าง Binary classifier 4 ตัว เพื่อเช็คแต่ละคลาส หากทั้ง 4 ตัวทำนายผลเป็น Negative ทั้งหมด จะถูกจัดไปอยู่ใน Unknown class ได้พอดี"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดไม่ควรใช้เป็น Evaluation metrics สำหรับปัญหา Classification ได้",
+    "options": [
+      {
+        "statement": "Mean Squared",
+        "istrue": true
+      },
+      {
+        "statement": "Confusion matrix",
+        "istrue": false
+      },
+      {
+        "statement": "Precision-recall และ F1-secore",
+        "istrue": false
+      },
+      {
+        "statement": "Accuracy",
+        "istrue": false
+      }
+    ],
+    "explanation": "Mean Squared Error (MSE) เป็นตัวชี้วัดสำหรับปัญหา Regression ที่ผลลัพธ์เป็นตัวเลขต่อเนื่อง ไม่สามารถนำมาใช้ประเมินผลลัพธ์ที่เป็นหมวดหมู่ (Classification) ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเรียงลำดับขั้นตอนในการ Machine learning project ไม่เหมาะสม",
+    "options": [
+      {
+        "statement": "Over sampling -> Split train-test -> Train model -> Evaluate model",
+        "istrue": true
+      },
+      {
+        "statement": "Split train-test -> Data transformation ด้วย fit_tranform บน tranining set -> Train model -> Evaluate model",
+        "istrue": false
+      },
+      {
+        "statement": "Split train-test -> Train model -> Evaluate model",
+        "istrue": false
+      },
+      {
+        "statement": "Cross-validation -> Train model -> Evaluate model",
+        "istrue": false
+      }
+    ],
+    "explanation": "การทำ Over sampling ก่อน Split train-test จะทำให้ข้อมูลที่ถูกสร้างซ้ำหลุดรอดเข้าไปอยู่ใน Test set ได้ เกิดปัญหา Data leakage ทำให้ผลประเมินโมเดลดูดีเกินจริง (ต้องทำหลังจากการ Split และทำบน Train set เท่านั้น)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Output activation function ควรใช้สำหรับ Binary classification",
+    "options": [
+      {
+        "statement": "ReLu",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ใช้ Activation function",
+        "istrue": false
+      },
+      {
+        "statement": "Sigmoid",
+        "istrue": true
+      },
+      {
+        "statement": "Tanh",
+        "istrue": false
+      }
+    ],
+    "explanation": "Sigmoid function ช่วยแปลงค่าผลลัพธ์สุดท้ายให้ถูกจำกัดอยู่ในช่วง 0 ถึง 1 ซึ่งสามารถตีความหมายออกมาในรูปแบบความน่าจะเป็นในการเกิดคลาสใดคลาสหนึ่งได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดเป็นการทำ Regularization ใน SVM",
+    "options": [
+      {
+        "statement": "ลดค่า ε สำหรับ Regression",
+        "istrue": false
+      },
+      {
+        "statement": "เพิ่มค่า Slack variable",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ Kernel ที่มีความซับซ้อนมากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ลดค่า Slack variable",
+        "istrue": true
+      }
+    ],
+    "explanation": "ใน SVM การทำ Regularization สามารถทำได้โดยการลดค่า Slack variable (เช่น C ใน SVM) ซึ่งจะช่วยให้โมเดลมีความยืดหยุ่นมากขึ้นในการจัดการกับข้อมูลที่ไม่สามารถแยกได้อย่างสมบูรณ์ (Non-separable data) และช่วยลดโอกาสเกิด Overfitting"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้อง",
+    "options": [
+      {
+        "statement": "Stacking มีการเทรนโมเดลอีกตัวหนึ่งเพื่อมารวบรวมคำตอบเพื่อเป็นคำตอบสุดท้าย",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": true
+      },
+      {
+        "statement": "Boosting ไม่สามารถสร้างโมเดลหลายๆโมเดลแบบ Parallel ได้ เนื่องจากต้องพยายามแก้ไข Error ที่เกิดจากโมเดลก่อนหน้า",
+        "istrue": false
+      },
+      {
+        "statement": "Bagging สามารถสร้างโมเดลหลายๆโมเดลแบบ Parallel ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อความทั้งหมดในตัวเลือกเป็นคุณสมบัติที่ถูกต้องของเทคนิคการทำ Ensemble Model รูปแบบต่างๆ ทั้ง Stacking, Boosting และ Bagging"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดไม่ใช่จุดประสงค์ของการทำ Feature engineering",
+    "options": [
+      {
+        "statement": "เพื่อให้ข้อมูลมีความเหมาะสมในการเทรนโมเดลมากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้แปลความหมายได้เหมาะสมขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแก้ปัญหา Overfitting",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อทำให้ความสัมพันธ์ระหว่าง Features กับ Target มีความซับซ้อนลดลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Feature engineering มุ่งเน้นเรื่องการสกัดตัวแปรเพื่อดึงเอาความสัมพันธ์ในข้อมูลออกมาให้โมเดลเรียนรู้ได้ดีที่สุด การแก้ปัญหา Overfitting มักเป็นหน้าที่ของการทำ Regularization หรือการสุ่มข้อมูลมากกว่า (การสร้าง feature ใหม่มากเกินไปกลับเป็นสาเหตุให้ overfit ได้ด้วยซ้ำ)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โมเดลในตัวเลือกใดไม่จำเป็นต้องทำ Feature scaling",
+    "options": [
+      {
+        "statement": "Neural network",
+        "istrue": false
+      },
+      {
+        "statement": "Support vector machine",
+        "istrue": false
+      },
+      {
+        "statement": "Linear regression",
+        "istrue": false
+      },
+      {
+        "statement": "Tree-based models",
+        "istrue": true
+      }
+    ],
+    "explanation": "โมเดลที่ทำงานในรูปแบบของ Tree (เช่น Decision Tree, Random Forest, XGBoost) ใช้เงื่อนไขเปรียบเทียบค่าความมากกว่า-น้อยกว่า (Split) จึงไม่ได้รับผลกระทบจากขนาดสเกลของข้อมูล ไม่จำเป็นต้องแปลงสเกลให้เท่ากันแบบโมเดลที่คำนวณระยะห่าง (Distance-based)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องเกี่ยวกับ SHAP",
+    "options": [
+      {
+        "statement": "SHAP ใช้ได้กับปัญหา Classification เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "SHAP เป็นวิธีที่ใช้ในการแปลความหมายของการทำนายว่า Features ใดมีความสำคัญเท่าไหร่",
+        "istrue": true
+      },
+      {
+        "statement": "SHAP ใช้ได้กับ Tree-based models เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "SHAP ใช้ได้กับปัญหา Regression เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "SHAP (SHapley Additive exPlanations) เป็นเทคนิคสำหรับการอธิบายผลของโมเดล (Explainable AI) ซึ่งอธิบายถึงความสำคัญและอิทธิพลที่แต่ละ Feature ส่งผลต่อผลลัพธ์ในการทำนายของโมเดล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่เหตุผลในการทำ Train-test splits หรือ cross-validations ใน Machine learning project",
+    "options": [
+      {
+        "statement": "เพื่อป้องกันการ Overfitting",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อสามารถตรวจสอบได้ว่าโมเดล Overfitting หรือไม่",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อ Tune hyper-parameters",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อใช้สำหรับ Model selection",
+        "istrue": false
+      }
+    ],
+    "explanation": "การทำ Train-test splits ช่วยในการประเมินและตรวจสอบว่าโมเดลเกิด Overfitting หรือไม่ แต่ไม่ใช่วิธีการที่ป้องกันการเกิด Overfitting โดยตรง (การป้องกันต้องใช้วิธีเช่น Regularization)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวผิดเกี่ยวกับ Ridge regression",
+    "options": [
+      {
+        "statement": "Linear regression ที่มี Regularisation term",
+        "istrue": false
+      },
+      {
+        "statement": "Regularization term ที่ใช้คือ L2-norm",
+        "istrue": false
+      },
+      {
+        "statement": "Regularization term ที่ใช้คือ L1-norm",
+        "istrue": true
+      },
+      {
+        "statement": "Regularization term ที่ใช้มีชื่อเรียกอีกอย่างหนึ่งว่า Weight decay",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ridge regression ใช้ Regularization term แบบ L2-norm ส่วน L1-norm นั้นเป็นของ Lasso regression"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Weight decay term ทำให้เกิดปรากฏการณ์ดังต่อไปนี้",
+    "options": [
+      {
+        "statement": "Weights ที่ Learning algorithms หาได้จะมีค่าเข้าใกล้ศูนย์",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ลดการ Overfitting",
+        "istrue": false
+      },
+      {
+        "statement": "เปรียบเสมือนการเลือก Features โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "Weight decay (การทำ Regularization) จะพยายามบีบให้ค่า Weights มีขนาดเล็กลง ซึ่งช่วยลดความซับซ้อนของโมเดล ลด Overfitting และลดความสำคัญของบางฟีเจอร์ลง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โมเดลที่เหมาะสมควรมี",
+    "options": [
+      {
+        "statement": "Low bias, high variance",
+        "istrue": false
+      },
+      {
+        "statement": "Low bias, low variance",
+        "istrue": true
+      },
+      {
+        "statement": "High bias, high variance",
+        "istrue": false
+      },
+      {
+        "statement": "High biag, high variance",
+        "istrue": false
+      }
+    ],
+    "explanation": "โมเดลที่ดีที่สุดควรมีความแม่นยำสูง (Low bias) และมีความเสถียรเมื่อเจอข้อมูลใหม่ๆ (Low variance)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Total error ประกอบด้วย",
+    "options": [
+      {
+        "statement": "Bias",
+        "istrue": false
+      },
+      {
+        "statement": "Variance",
+        "istrue": false
+      },
+      {
+        "statement": "Irreducible error",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "Total Error ของโมเดลเกิดจาก Bias^2 + Variance + Irreducible error"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่สามารถใช้เป็น Evaluation metrics สำหรับปัญหา Regression",
+    "options": [
+      {
+        "statement": "Root Mean Squared Error (RMSE)",
+        "istrue": false
+      },
+      {
+        "statement": "Mean Absolute Error (MAE)",
+        "istrue": false
+      },
+      {
+        "statement": "Accuracy",
+        "istrue": true
+      },
+      {
+        "statement": "R-squared",
+        "istrue": false
+      }
+    ],
+    "explanation": "Accuracy ใช้สำหรับวัดผลในปัญหา Classification (การจัดกลุ่ม) ไม่ใช่วัดผลความคลาดเคลื่อนของตัวเลขต่อเนื่องในปัญหา Regression"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ค่าของ R-squared อยู่ในช่วงใด",
+    "options": [
+      {
+        "statement": "[-1,1]",
+        "istrue": false
+      },
+      {
+        "statement": "[0,1]",
+        "istrue": false
+      },
+      {
+        "statement": "[0,∞)",
+        "istrue": true
+      },
+      {
+        "statement": "(-∞,∞)",
+        "istrue": false
+      }
+    ],
+    "explanation": "อิงจากตัวเลือกที่ถูกไฮไลต์ (โดยทั่วไป R-squared ปกติจะมีค่าไม่เกิน 1 แต่อาจติดลบได้ในบางบริบทการคำนวณ)"
+  },
+  {
+    "options": [
+      {
+        "statement": "Tanh",
+        "istrue": false
+      },
+      {
+        "statement": "ReLu",
+        "istrue": false
+      },
+      {
+        "statement": "Sigmoid",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่ใช้ Activation function",
+        "istrue": false
+      }
+    ],
+    "explanation": "Sigmoid function บีบค่า output ให้อยู่ระหว่าง 0 ถึง 1 ซึ่งสามารถนำมาตีความในรูปแบบของความน่าจะเป็น (Probability) ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สมการใดใช้สำหรับการทำนายใน ​Linear SVM classifier",
+    "options": [
+      {
+        "statement": "คำตอบที่ถูกคือข้อ a",
+        "istrue": true
+      },
+      {
+        "statement": "คำตอบที่ถูกคือข้อ b",
+        "istrue": false
+      },
+      {
+        "statement": "คำตอบที่ถูกคือข้อ c",
+        "istrue": false
+      },
+      {
+        "statement": "คำตอบที่ถูกคือข้อ d",
+        "istrue": false
+      }
+    ],
+    "explanation": "สมการเชิงเส้นในการทำนายผลของ SVM คือ w^T * x + b"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดเป็น Loss function ของ Linear SVM classifier สำหรับ Binary classification",
+    "options": [
+      {
+        "statement": "คำตอบที่ถูกคือข้อ a",
+        "istrue": true
+      },
+      {
+        "statement": "คำตอบที่ถูกคือข้อ b",
+        "istrue": false
+      },
+      {
+        "statement": "คำตอบที่ถูกคือข้อ c",
+        "istrue": false
+      },
+      {
+        "statement": "คำตอบที่ถูกคือข้อ d",
+        "istrue": false
+      }
+    ],
+    "explanation": "Loss function ที่ SVM ใช้งานหลักๆ คือ Hinge Loss"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดเป็นการทำ Regularization ใน SVM",
+    "options": [
+      {
+        "statement": "เพิ่มค่า Slack variable",
+        "istrue": false
+      },
+      {
+        "statement": "ลดค่า Slack variable",
+        "istrue": true
+      },
+      {
+        "statement": "ใช้ Kernel ที่มีความซับซ้อนมากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ลดค่า ε สำหรับ Regression",
+        "istrue": false
+      }
+    ],
+    "explanation": "การปรับค่า Slack variable เป็นการควบคุมว่าจะอนุญาตให้มี Error ฝั่งตรงข้าม Margin มากน้อยแค่ไหน (ตามคำตอบที่เฉลย)"
+  },
+  {
+    "options": [
+      {
+        "statement": "เพิ่มความลึกของต้นไม้",
+        "istrue": false
+      },
+      {
+        "statement": "เพิ่มจำนวน Samples น้อยสุดที่จะเกิดการ Split",
+        "istrue": true
+      },
+      {
+        "statement": "ลดจำนวน Samples น้อยสุดที่จะเกิดการ Split",
+        "istrue": false
+      }
+    ],
+    "explanation": "การกำหนดให้ต้องมี Sample ขั้นต่ำใน Node มากขึ้นเพื่อทำการแบ่งกิ่ง (min_samples_split) จะช่วยยับยั้งไม่ให้ต้นไม้ลึกจนเกินไป เป็นการลดความซับซ้อน (Pruning)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดต่อไปนี้กล่าวถูกต้อง",
+    "options": [
+      {
+        "statement": "การสร้าง Decision tree เป็น Greedy algorithm",
+        "istrue": true
+      },
+      {
+        "statement": "การทำ Feature scaling มีผลต่อผลลัพธ์ของต้นไม้",
+        "istrue": false
+      },
+      {
+        "statement": "Decision tree อาจมี Decision boundaries ที่ไม่ตั้งฉากกัน",
+        "istrue": false
+      },
+      {
+        "statement": "Decision tree ใช้ได้กับ Classification เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Decision Tree เลือกเส้นทางที่ดีที่สุด ณ Node นั้นๆ โดยไม่ได้มองการณ์ไกลถึงความเหมาะสมโดยรวม (Local optimum) จึงจัดเป็น Greedy algorithm"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ensemble learning จะได้ผลดีถ้า",
+    "options": [
+      {
+        "statement": "มีโมเดลที่หลากหลายมากเพียงพอ",
+        "istrue": true
+      },
+      {
+        "statement": "โมเดลแต่ละโมเดลที่เทรนจะต้องเป็นประเภทเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ Majority vote ในการรวบรวมเป็นคำตอบสุดท้ายเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "มีโมเดลที่มี Performance ที่สูงๆเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวใจสำคัญของ Ensemble learning คือความหลากหลาย (Diversity) โมเดลแต่ละตัวควรมีจุดอ่อนที่แตกต่างกัน เพื่อนำมาโหวตชดเชยซึ่งกันและกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดเป็นประเภทของ Ensemble learning",
+    "options": [
+      {
+        "statement": "Bagging",
+        "istrue": false
+      },
+      {
+        "statement": "Boosting",
+        "istrue": false
+      },
+      {
+        "statement": "Stacking",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": true
+      }
+    ],
+    "explanation": "ทั้ง Bagging (เช่น Random Forest), Boosting (เช่น XGBoost) และ Stacking ล้วนเป็นเทคนิค Ensemble"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้อง",
+    "options": [
+      {
+        "statement": "Bagging สามารถสร้างโมเดลหลายๆโมเดลแบบ Parallel ได้",
+        "istrue": false
+      },
+      {
+        "statement": "Boosting ไม่สามารถสร้างโมเดลหลายๆโมเดลแบบ Parallel ได้ เนื่องจากต้องพยายามแก้ไข Error ที่เกิดจากโมเดลก่อนหน้า",
+        "istrue": false
+      },
+      {
+        "statement": "Stacking มีการเทรนโมเดลอีกตัวหนึ่งเพื่อมารวบรวมคำตอบเพื่อเป็นคำตอบสุดท้าย",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": true
+      }
+    ],
+    "explanation": "ทุกตัวเลือกอธิบายลักษณะเฉพาะตัวของอัลกอริทึมกลุ่ม Ensemble ได้อย่างถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การรวมคำตอบเพื่อเป็นคำตอบสุดท้ายของ Random forest ทำอย่างไร",
+    "options": [
+      {
+        "statement": "หาค่าเฉลี่ยจากคำตอบของต้นไม้ทุกต้น",
+        "istrue": true
+      },
+      {
+        "statement": "เทรน Linear regression บนคำตอบของต้นไม้ทุกต้น",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้คำตอบของต้นไม้ที่มีผลการทำนายดีสุด",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้คำตอบของต้นไม้ที่ใหญ่ที่สุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในกรณี Regression จะนำผลลัพธ์จากต้นไม้ทุกต้นมาหาค่าเฉลี่ย (ถ้าเป็น Classification มักจะใช้ Majority vote หรือเฉลี่ย Probability)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โมเดลใดใช้ Stump เป็น Estimator",
+    "options": [
+      {
+        "statement": "AdaBoost",
+        "istrue": true
+      },
+      {
+        "statement": "Gradient Boosting",
+        "istrue": false
+      },
+      {
+        "statement": "XGBoost",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": false
+      }
+    ],
+    "explanation": "Stump คือ Decision Tree ที่มีความลึกแค่ 1 ชั้น ซึ่งเป็น Base estimator ดั้งเดิมที่นิยมใช้ใน AdaBoost"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โมเดลใดไม่ได้สร้างต้นไม้โดยการ Fit error ของต้นก่อนหน้า แต่ใช้การให้นำ้หนักที่มากขึ้นกับ Samples ที่ต้นไม้ก่อนหน้าทำนายผิด",
+    "options": [
+      {
+        "statement": "AdaBoost",
+        "istrue": true
+      },
+      {
+        "statement": "Gradient Boosting",
+        "istrue": false
+      },
+      {
+        "statement": "XGBoost",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": false
+      }
+    ],
+    "explanation": "AdaBoost (Adaptive Boosting) ปรับโมเดลถัดไปโดยการเพิ่มค่าน้ำหนัก (Weights) ให้กับข้อมูลที่ตัวก่อนหน้าทำนายผิดพลาด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดกล่าวถูกต้อง",
+    "options": [
+      {
+        "statement": "AdaBoost, Gradient Boosting, XGBoost ใช้สำหรับ Classification และ Regression",
+        "istrue": false
+      },
+      {
+        "statement": "Stump คือ Decision tree ที่มีความลึก 1 หน่วย ประกอบไปด้วย 1 Decision node และ 2 Leaf nodes",
+        "istrue": false
+      },
+      {
+        "statement": "AdaBoost, Gradient Boosting, XGBoost ใช้ Weak learners หลายๆตัวในการหาคำตอบสุดท้าย",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": true
+      }
+    ],
+    "explanation": "ทุกข้อความอธิบายคุณสมบัติและลักษณะพื้นฐานของโมเดล Boosting ได้ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดไม่ใช่จุดประสงค์ของการทำ Feature engineering",
+    "options": [
+      {
+        "statement": "เพื่อให้ข้อมูลมีความเหมาะสมในการเทรนโมเดลมากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้แปลความหมายได้เหมาะสมขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อทำให้ความสัมพันธ์ระหว่าง Features กับ Target มีความซับซ้อนลดลง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแก้ปัญหา Overfitting",
+        "istrue": true
+      }
+    ],
+    "explanation": "การแก้ปัญหา Overfitting เป็นผลพลอยได้หรือเกิดจากการทำ Regularization / Feature Selection มากกว่า ไม่ใช่เป้าประสงค์หลักโดยตรงของการสร้าง Feature ใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Mutual information ที่ใช้วัดความสัมพันธ์ของตัวแปรสองตัวใดๆ มีค่าอยู่ในช่วงใด",
+    "options": [
+      {
+        "statement": "[-1,1]",
+        "istrue": false
+      },
+      {
+        "statement": "[0,1]",
+        "istrue": false
+      },
+      {
+        "statement": "[0,∞)",
+        "istrue": true
+      },
+      {
+        "statement": "(-∞,∞)",
+        "istrue": false
+      }
+    ],
+    "explanation": "Mutual information เป็นการวัดปริมาณข้อมูลที่มีร่วมกัน จึงไม่มีค่าติดลบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดไม่ใช่ตัวอย่างของการทำ Feature engineering",
+    "options": [
+      {
+        "statement": "การสร้าง Feature ใหม่ที่บ่งบอกอัตราส่วนการใช้บัตรเครดิตต่อวงเงินในแต่ละเดือน",
+        "istrue": false
+      },
+      {
+        "statement": "การนำ Features และ Target มาทำ Clustering และใช้ Cluster label เป็น Feature ใหม่",
+        "istrue": true
+      },
+      {
+        "statement": "การสร้าง Feature ใหม่ที่บ่งบอกว่านักศึกษาคนหนึ่งเรียนคณะอะไรจากรหัสนิสิต",
+        "istrue": false
+      },
+      {
+        "statement": "การสร้าง Feature ใหม่โดยการหาค่าเฉลี่ยการใช้นำ้ประปาในแต่ละสัปดาห์",
+        "istrue": false
+      }
+    ],
+    "explanation": "การนำค่า Target มาร่วมสร้าง Feature ในตอนต้นอาจทำให้เกิดปัญหา Data Leakage (Target Leakage) ซึ่งทำให้โมเดลทำงานบนข้อมูลจริงไม่ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หลังจากการแปลงระดับการศึกษาที่มีค่าดังต่อไปนี้ Primary school, High school, และ University ด้วยวิธี Ordinal encoding จะทำให้ได้ Feature vector ที่มีกี่ Dimension",
+    "options": [
+      {
+        "statement": "1",
+        "istrue": true
+      },
+      {
+        "statement": "2",
+        "istrue": false
+      },
+      {
+        "statement": "3",
+        "istrue": false
+      },
+      {
+        "statement": "4",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ordinal encoding จะแปลงค่าลำดับชั้นเหล่านั้นให้อยู่ในคอลัมน์เดียวด้วยตัวเลขเช่น 1, 2, 3 จึงมีเพียง 1 Dimension"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หลังจากการแปลงประเภทห้องพักที่มีค่าดังต่อไปนี้ Single, Deluxe, Grand ด้วยวิธี One-hot encoding จะทำให้ได้ Feature vector ที่มีกี่ Dimension",
+    "options": [
+      {
+        "statement": "1",
+        "istrue": false
+      },
+      {
+        "statement": "3",
+        "istrue": true
+      },
+      {
+        "statement": "5",
+        "istrue": false
+      },
+      {
+        "statement": "7",
+        "istrue": false
+      }
+    ],
+    "explanation": "One-hot encoding จะสร้างคอลัมน์ใหม่ (Dimension ใหม่) จำนวนเท่ากับประเภทหมวดหมู่ที่มี ในกรณีนี้คือ 3 ประเภท"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดกล่าวผิด",
+    "options": [
+      {
+        "statement": "Distance ระหว่าง One-hot vectors ใด ๆ มีค่าเท่ากันเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "Word embedding คือการเปลี่ยนคำแต่ละคำให้เป็น Numeric vector",
+        "istrue": false
+      },
+      {
+        "statement": "Distance ระหว่าง Ordinal encoded vectors ใดๆมีค่าเท่ากับ 1 เสมอ",
+        "istrue": true
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": false
+      }
+    ],
+    "explanation": "ระยะห่างของ Ordinal encoding ขึ้นอยู่กับตัวเลขที่แปลงออกมา เช่น ระยะห่างระหว่าง 1 กับ 3 จะมีค่ามากกว่า 1 กับ 2 จึงไม่เท่ากับ 1 เสมอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดเป็นวิธีจัดการ Missing data",
+    "options": [
+      {
+        "statement": "Sample removal",
+        "istrue": false
+      },
+      {
+        "statement": "Feature removal",
+        "istrue": false
+      },
+      {
+        "statement": "Imputation",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": true
+      }
+    ],
+    "explanation": "ทั้งการลบแถว ลบคอลัมน์ หรือการเติมข้อมูลด้วยค่าเฉลี่ย/มัธยฐาน ล้วนเป็นวิธีจัดการ Missing data ที่ใช้เป็นประจำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้ามี Feature หนึ่งที่มีข้อมูลหายไป 95% ควรจัดการอย่างไร",
+    "options": [
+      {
+        "statement": "Remove samples ที่ไม่มีข้อมูลของ Feature นั้น",
+        "istrue": false
+      },
+      {
+        "statement": "Remove feature นั้นทิ้งไป",
+        "istrue": true
+      },
+      {
+        "statement": "แทนที่ข้อมูลที่หายไปด้วย 0",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": false
+      }
+    ],
+    "explanation": "หากข้อมูลสูญหายมากถึง 95% การพยายามซ่อมแซมจะส่งผลให้มี Bias ที่สูงมาก การลบคอลัมน์นั้นทิ้งเป็นทางเลือกที่เหมาะสมที่สุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Feature หนึ่งใน มีค่าเป็น 10,20,10,30,20 และ 10,30,20 สำหรับใน Training set และ Test set ตามลำดับ ถ้าจะใช้ค่าเฉลี่ยในการ Impute missing values ควรใช้ค่าอะไรในการ Impute Missing values ใน Test set",
+    "options": [
+      {
+        "statement": "18",
+        "istrue": true
+      },
+      {
+        "statement": "20",
+        "istrue": false
+      },
+      {
+        "statement": "18.75",
+        "istrue": false
+      },
+      {
+        "statement": "0",
+        "istrue": false
+      }
+    ],
+    "explanation": "เพื่อป้องกัน Data Leakage ต้องใช้ค่าเฉลี่ยที่มาจาก Training set เท่านั้น ( (10+20+10+30+20)/5 = 18 ) นำไปเติมใส่ Test set"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Feature transformation แบบใดที่ไม่เปลี่ยน Distribution shape",
+    "options": [
+      {
+        "statement": "Power transforms",
+        "istrue": false
+      },
+      {
+        "statement": "Min-max scaling",
+        "istrue": false
+      },
+      {
+        "statement": "Standardization",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกตัวเลือก",
+        "istrue": true
+      }
+    ],
+    "explanation": "อิงตามคำตอบเฉลย (หากพิจารณาอย่างเคร่งครัด Linear transformation เช่น Min-max/Standardization จะรักษารูปทรงของการแจกแจงไว้ได้)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โมเดลในตัวเลือกใดไม่จำเป็นต้องทำ Feature scaling",
+    "options": [
+      {
+        "statement": "Linear regression",
+        "istrue": false
+      },
+      {
+        "statement": "Neural network",
+        "istrue": false
+      },
+      {
+        "statement": "Tree-based models",
+        "istrue": true
+      },
+      {
+        "statement": "Support vector machine",
+        "istrue": false
+      }
+    ],
+    "explanation": "โมเดลกลุ่ม Tree สนใจเพียงแค่จุดตัด (Threshold) การแบ่งค่าซ้าย-ขวา จึงไม่ได้รับผลกระทบจากเรื่องของขนาดระยะห่างหรือสเกลของข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ฟังก์ชัน fit_transform ใน sklearn ควรใช้กับข้อมูลใด",
+    "options": [
+      {
+        "statement": "Training set",
+        "istrue": true
+      },
+      {
+        "statement": "Test set",
+        "istrue": false
+      },
+      {
+        "statement": "Validation set",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกต้องทุกตัวเลือก",
+        "istrue": false
+      }
+    ],
+    "explanation": "fit_transform เป็นการเรียนรู้พารามิเตอร์ของชุดข้อมูลแล้วแปลงข้อมูลเลย ควรทำกับ Training set เพื่อป้องกัน Data Leakage ไปยัง Test set"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าจะทำการ Fine-tune โมเดล Random Forest ด้วยวิธี Grid search โดยมี hyperparameters ดังต่อไปนี้ จำนวนต้นไม้ 10,50,100 ต้น ความลึกมากสุดของต้นไม้แต่ละต้นเป็น 15, 10, 5 และมีการทำ 10-fold cross-validation ดังนั้นจะต้องเทรนโมเดลทั้งหมดกี่รอบ",
+    "options": [
+      {
+        "statement": "1 รอบ",
+        "istrue": false
+      },
+      {
+        "statement": "10 รอบ",
+        "istrue": false
+      },
+      {
+        "statement": "60 รอบ",
+        "istrue": false
+      },
+      {
+        "statement": "90 รอบ",
+        "istrue": true
+      }
+    ],
+    "explanation": "จำนวนการรันทั้งหมด = 3 ตัวเลือกต้นไม้ x 3 ตัวเลือกลึก x 10 Fold = 90 รอบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับ Randomized search",
+    "options": [
+      {
+        "statement": "สามารถกำหนดจำนวนรอบในการเทรนโมเดลเพื่อหา Hyperparameters ที่เหมาะสมได้",
+        "istrue": false
+      },
+      {
+        "statement": "ค่า Hyperparameter เป็นการสุ่มจาก Distribution ที่กำหนดให้",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้วิธี Randomized search เมื่อรู้ค่าที่แน่นอนของ Hyperparameters ที่จะทดลอง",
+        "istrue": true
+      },
+      {
+        "statement": "ค่า Hyperparameters ที่เหมาะสมที่สุดที่ได้จาก Randomized search คือค่าที่ทำให้โมเดลมีประสิทธิภาพบน Validation sets มากที่สุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "ถ้ารู้ค่าที่แน่นอนและมีจำนวนน้อยแล้วมักจะใช้ Grid search แต่เราใช้ Randomized search เมื่อพื้นที่การค้นหาใหญ่เกินไปและไม่สามารถสแกนได้ครบทุกจุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กำหนดให้จำนวนต้นไม้ที่เหมาะสมที่สุดในโมเดล ​Random Forest คือ 100 ต้น ซึ่งได้จากการทำ Grid search โดยทดลองด้วยจำนวน 10, 50, 100 ต้น ควรทำอย่างไรต่อ",
+    "options": [
+      {
+        "statement": "Search ต่อ เพราะว่าค่าที่เหมาะสมเป็นค่าที่ขอบที่ทดลอง",
+        "istrue": true
+      },
+      {
+        "statement": "นำไปใช้ได้เลย เพราะเป็นค่าที่ทำให้โมเดลมีประสิทธิภาพที่ดีที่สุดแล้ว",
+        "istrue": false
+      }
+    ],
+    "explanation": "หากผลลัพธ์ที่ดีที่สุดตกอยู่ตรงค่าขอบของช่วงค้นหาพอดี เป็นไปได้ว่าค่าที่ดีกว่านั้นอาจจะอยู่นอกช่วงที่เราตั้งไว้ จึงควรขยายขอบเขตและค้นหาต่อไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดคือจุดประสงค์ของการทำ Model analysis",
+    "options": [
+      {
+        "statement": "เพื่อเข้าใจ Errors ในการทำนายมากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเข้าใจว่า Features ใดสำคัญต่อ Target ที่ทำนาย",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเข้าใจว่า Features ใดบ้างมีอิทธิพลในการทำนายในแต่ละ Instance",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกต้องทุกตัวเลือก",
+        "istrue": true
+      }
+    ],
+    "explanation": "Model Analysis ช่วยทำให้โมเดลตีความได้ เข้าใจพฤติกรรม และหาสาเหตุของข้อผิดพลาดต่างๆ ได้ครบถ้วน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องเกี่ยวกับ SHAP",
+    "options": [
+      {
+        "statement": "SHAP เป็นวิธีที่ใช้ในการแปลความหมายของการทำนายว่า Features ใดมีความสำคัญเท่าไหร่",
+        "istrue": true
+      },
+      {
+        "statement": "SHAP ใช้ได้กับปัญหา Regression เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "SHAP ใช้ได้กับปัญหา Classification เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "SHAP ใช้ได้กับ Tree-based models เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "SHAP (SHapley Additive exPlanations) เป็นวิธีการทางทฤษฎีเกม (Game theory) สำหรับการอธิบายผลลัพธ์ของโมเดลทางเลือกใดๆ ก็ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดเป็นการ Visualisation เพื่อช่วยในการทำ Error analysis",
+    "options": [
+      {
+        "statement": "Confusion matrix สำหรับปัญหา Classification",
+        "istrue": false
+      },
+      {
+        "statement": "Scatter plot ระหว่างค่าจริงกับค่าที่โมเดลทำนาย สำหรับปัญหา Regression",
+        "istrue": false
+      },
+      {
+        "statement": "Force plot เพื่อแสดงค่า SHAP สำหรับผลการทำนาย Samples ที่โมเดลทำนายผิด",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกต้องทุกตัวเลือก",
+        "istrue": true
+      }
+    ],
+    "explanation": "ตัวเลือกทั้งหมดเป็นเครื่องมือแผนภาพชั้นนำที่ใช้ในการวิเคราะห์ข้อผิดพลาดและผลลัพธ์ของโมเดลได้อย่างดีเยี่ยม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือชื่อของ Binary classifier",
+    "options": [
+      {
+        "statement": "Ridge regression",
+        "istrue": false
+      },
+      {
+        "statement": "Linear regression",
+        "istrue": false
+      },
+      {
+        "statement": "Logistic regression",
+        "istrue": true
+      },
+      {
+        "statement": "Lasso regression",
+        "istrue": false
+      }
+    ],
+    "explanation": "แม้ว่า Logistic Regression จะมีคำว่า Regression อยู่ในชื่อ แต่อันที่จริงแล้วมันถูกใช้ในการทำ Classification แบบ Binary (การตัดสินความน่าจะเป็นระหว่าง 2 หมวดหมู่)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าต้องการทำ Multi-class classification ที่สามารถได้ 4 คลาส จะต้องสร้าง Binary classifier อย่างน้อยที่สุดกี่อัน โดยที่คำนึงถึง Unknown class ด้วย",
+    "options": [
+      {
+        "statement": "1",
+        "istrue": false
+      },
+      {
+        "statement": "3",
+        "istrue": false
+      },
+      {
+        "statement": "4",
+        "istrue": true
+      },
+      {
+        "statement": "6",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใช้วิธีแบบ One-vs-Rest โดยการเทรน Binary classifier เพื่อจับคู่กับคลาสหลักทั้ง 4 หากทุกตัวพยากรณ์ว่าไม่ใช่ ก็ตกไปอยู่ในกลุ่ม Unknown class ได้โดยไม่ต้องสร้างเพิ่ม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือ Loss function ที่เหมาะสมในการทำ Binary classification",
+    "options": [
+      {
+        "statement": "Root Mean Squared Error (RMSE)",
+        "istrue": false
+      },
+      {
+        "statement": "Mean Absolute Error (MAE)",
+        "istrue": false
+      },
+      {
+        "statement": "Cross entropy loss",
+        "istrue": true
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cross Entropy Loss (Log loss) ออกแบบมาเพื่อวัดค่าพยากรณ์ที่อยู่ในรูปแบบความน่าจะเป็น (Probability) ได้เหมาะสมที่สุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตัวเลือกใดไม่เหมาะใช้เป็น Evaluation metrics สำหรับปัญหา Classification",
+    "options": [
+      {
+        "statement": "Confusion matrix",
+        "istrue": false
+      },
+      {
+        "statement": "Mean Squared Error",
+        "istrue": true
+      },
+      {
+        "statement": "Precision-recall และ F1-score",
+        "istrue": false
+      },
+      {
+        "statement": "Accuracy",
+        "istrue": false
+      }
+    ],
+    "explanation": "Mean Squared Error ถูกใช้กับปัญหาประเภท Regression ที่คำตอบเป็นตัวเลขต่อเนื่องเท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เส้นทแยงมุมใน ROC curve ใกล้เคียงกับประสิทธิภาพของ Classifier ประเภทใดมากที่สุด",
+    "options": [
+      {
+        "statement": "Perfect classifier",
+        "istrue": false
+      },
+      {
+        "statement": "Random classifier",
+        "istrue": true
+      },
+      {
+        "statement": "Classifier ที่ Overfitting กับ Training data",
+        "istrue": false
+      },
+      {
+        "statement": "Classifier ที่ Underfitting กับ Training data",
+        "istrue": false
+      }
+    ],
+    "explanation": "เส้นทแยงมุมใน ROC มีพื้นที่ใต้กราฟ (AUC) อยู่ที่ 0.5 เสมอ ซึ่งเทียบเท่ากับการโยนเหรียญเดาสุ่มคำตอบ (Random guess)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ค่าใดต่อไปนี้ไม่ควรใช้วัดประสิทธิภาพของโมเดลได้โดยลำพัง",
+    "options": [
+      {
+        "statement": "Precision",
+        "istrue": true
+      },
+      {
+        "statement": "Accuracy",
+        "istrue": false
+      },
+      {
+        "statement": "F1-score",
+        "istrue": false
+      }
+    ],
+    "explanation": "Precision เน้นเฉพาะความแม่นยำในการทำนายเป็นบวก แต่หากโมเดลมองข้ามเคสบวกบางอย่างไป (False Negative สูง) Precision เพียงอย่างเดียวจะไม่สามารถสะท้อนข้อผิดพลาดนี้ได้ ต้องใช้ Recall หรือ F1 ควบคู่ด้วย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Imbalanced dataset คืออะไร",
+    "options": [
+      {
+        "statement": "ข้อมูลที่มีจำนวน Features มาก",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลที่มีจำนวน Samples ในแต่ละคลาสแตกต่างกันมาก",
+        "istrue": true
+      },
+      {
+        "statement": "ข้อมูลที่มี Missing values",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลที่ไม่มี Labels",
+        "istrue": false
+      }
+    ],
+    "explanation": "Imbalanced data คือข้อมูลที่สัดส่วนระหว่างคลาสหลักกับคลาสรองต่างกันอย่างเห็นได้ชัด เช่น ผู้ป่วยโรคร้ายแรงที่มีเพียง 1% ของผู้ตรวจร่างกายทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคนิคใดต่อไปนี้สามารถช่วยแก้ปัญหา Imbalanced dataset ได้",
+    "options": [
+      {
+        "statement": "Oversampling ของ Minority class",
+        "istrue": false
+      },
+      {
+        "statement": "Undersampling ของ Majority class",
+        "istrue": false
+      },
+      {
+        "statement": "ปรับปรุง Cost function โดยให้น้ำหนักของ Minority class มากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "ทั้งการเพิ่มข้อมูลกลุ่มน้อย การลดข้อมูลกลุ่มใหญ่ และการเพิ่มน้ำหนักจุดลงโทษ (Class weight) ล้วนเป็นวิธีการรักษาสมดุลข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำกล่าวต่อไปนี้ถูกต้องหรือไม่ “การทำ Oversampling ควรทำก่อน Train-test splits”",
+    "options": [
+      {
+        "statement": "ถูกต้อง",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ถูกต้อง",
+        "istrue": true
+      }
+    ],
+    "explanation": "ต้องแบ่ง Train-test ให้เรียบร้อยเสียก่อนแล้วจึงค่อยทำ Oversampling ในส่วนของ Train เท่านั้น เพื่อป้องกันไม่ให้ข้อมูลซ้ำซ้อนกันรั่วไหลไปอยู่ใน Test set (Data Leakage)"
+  }
+]

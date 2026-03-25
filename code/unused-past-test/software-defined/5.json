@@ -1,0 +1,1129 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Container Orchestration เข้ามามีบทบาทเพื่อแก้ไขโจทย์ปัญหาหลักในเรื่องใด?",
+    "options": [
+      {
+        "statement": "การสร้าง Container Image ให้มีขนาดเล็กลง",
+        "istrue": false
+      },
+      {
+        "statement": "การบริหารจัดการกองทัพของ Container จำนวนมากที่ต้องทำงานกระจายกันอยู่บนคอมพิวเตอร์หลายเครื่อง",
+        "istrue": true
+      },
+      {
+        "statement": "การเขียนโค้ดสำหรับแอปพลิเคชันแบบ Microservices",
+        "istrue": false
+      },
+      {
+        "statement": "การทำให้ Container ทำงานได้เร็วขึ้นบนเครื่องเดียว",
+        "istrue": false
+      }
+    ],
+    "explanation": "Container Orchestration ถูกสร้างขึ้นมาเพื่อจัดการความซับซ้อนของการ deploy, scaling, และบริหารจัดการแอปพลิเคชันที่ประกอบด้วย container จำนวนมากในสภาพแวดล้อมแบบ cluster"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Kubernetes (K8s) คืออะไร?",
+    "options": [
+      {
+        "statement": "ระบบปฏิบัติการสำหรับ Cloud",
+        "istrue": false
+      },
+      {
+        "statement": "ซอฟต์แวร์สำหรับรัน Container ที่มีขนาดเล็กกว่า Docker",
+        "istrue": false
+      },
+      {
+        "statement": "แพลตฟอร์ม Container Orchestrator แบบ Open-Source ที่ได้กลายเป็นมาตรฐานของอุตสาหกรรม",
+        "istrue": true
+      },
+      {
+        "statement": "ฐานข้อมูลสำหรับเก็บสถานะของ Cluster",
+        "istrue": false
+      }
+    ],
+    "explanation": "Kubernetes เป็นแพลตฟอร์มสำหรับทำ Container Orchestration ที่ถูกสร้างโดย Google และปัจจุบันได้รับการดูแลโดย CNCF ซึ่งเป็นที่ยอมรับในวงกว้าง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปรัชญา 'Declarative Configuration' ของ Kubernetes หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "การสั่งให้ระบบทำงานทีละขั้นตอนอย่างละเอียด (Imperative)",
+        "istrue": false
+      },
+      {
+        "statement": "การ 'บอก' หรือ 'พรรณนา' ถึงสถานะที่เราต้องการ (Desired State) แล้วปล่อยให้ระบบจัดการเอง",
+        "istrue": true
+      },
+      {
+        "statement": "การเขียนโค้ดทั้งหมดด้วยภาษา YAML",
+        "istrue": false
+      },
+      {
+        "statement": "การตั้งค่าทุกอย่างผ่านหน้าจอ UI เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "แนวคิดแบบ Declarative คือการที่เรากำหนดผลลัพธ์สุดท้ายที่ต้องการในไฟล์ตั้งค่า แล้ว Kubernetes จะทำงานอย่างต่อเนื่องเพื่อปรับสถานะปัจจุบันให้ตรงกับสถานะที่เราต้องการนั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ความสามารถ 'Self-Healing' ของ Kubernetes เป็นผลโดยตรงมาจากปรัชญาข้อใด?",
+    "options": [
+      {
+        "statement": "Immutable Infrastructure",
+        "istrue": false
+      },
+      {
+        "statement": "Open-Source",
+        "istrue": false
+      },
+      {
+        "statement": "Declarative Configuration",
+        "istrue": true
+      },
+      {
+        "statement": "Production-Grade",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจาก Kubernetes รู้ 'สถานะที่ต้องการ' อยู่เสมอ (เช่น ต้องการ Redis 3 ตัว) เมื่อมันตรวจพบว่า 'สถานะปัจจุบัน' ไม่ตรง (เช่น มี Redis ตายไป 1 ตัว) มันจึงสามารถเยียวยาตัวเองโดยการสร้างตัวใหม่ขึ้นมาทดแทนได้โดยอัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิด 'Immutable Infrastructure' ใน Kubernetes หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "เราไม่สามารถลบทรัพยากรใดๆ ใน Cluster ได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "หากต้องการอัปเดตแอปพลิเคชัน เราจะสร้าง Image เวอร์ชันใหม่แล้วนำไปแทนที่ของเก่า แทนที่จะเข้าไปแก้ไขของเก่าโดยตรง",
+        "istrue": true
+      },
+      {
+        "statement": "โครงสร้างพื้นฐานของ Cluster ไม่สามารถเปลี่ยนแปลงได้หลังจากการติดตั้งครั้งแรก",
+        "istrue": false
+      },
+      {
+        "statement": "ทุกการเปลี่ยนแปลงต้องทำผ่าน API Server เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "หลักการนี้ช่วยให้การอัปเดตและ Rollback มีความน่าเชื่อถือและคาดเดาได้ โดยหลีกเลี่ยงการเปลี่ยนแปลงที่อาจทำให้สถานะของระบบไม่สอดคล้องกัน (configuration drift)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ส่วนประกอบใดใน Control Plane ที่ทำหน้าที่เป็น 'สมอง' คอยตัดสินใจว่าจะนำ Container ไปรันที่ Node เครื่องไหน?",
+    "options": [
+      {
+        "statement": "API Server",
+        "istrue": false
+      },
+      {
+        "statement": "etcd",
+        "istrue": false
+      },
+      {
+        "statement": "Scheduler",
+        "istrue": true
+      },
+      {
+        "statement": "Controller Manager",
+        "istrue": false
+      }
+    ],
+    "explanation": "Scheduler มีหน้าที่หลักในการหา Node ที่เหมาะสมที่สุดสำหรับ Pod ที่ยังไม่ถูกจัดสรร โดยพิจารณาจากทรัพยากรที่ร้องขอ, นโยบายต่างๆ, และข้อจำกัดอื่นๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ซอฟต์แวร์ใดใน Node ที่ทำหน้าที่เป็นเอเจนต์คอยสื่อสารกับ Control Plane และดูแล Container ใน Node นั้นๆ?",
+    "options": [
+      {
+        "statement": "Kubelet",
+        "istrue": true
+      },
+      {
+        "statement": "Kube-proxy",
+        "istrue": false
+      },
+      {
+        "statement": "Container Runtime",
+        "istrue": false
+      },
+      {
+        "statement": "etcd",
+        "istrue": false
+      }
+    ],
+    "explanation": "Kubelet เป็นส่วนประกอบที่สำคัญที่สุดบน Worker Node มันรับคำสั่งจาก API Server และรับผิดชอบในการสร้าง, เริ่ม, หยุด, และดูแลวงจรชีวิตของ Pods บน Node ของมัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือคำอธิบายที่ถูกต้องที่สุดเกี่ยวกับ 'Pod' ใน Kubernetes?",
+    "options": [
+      {
+        "statement": "Pod คือชื่อเรียกอีกอย่างหนึ่งของ Container",
+        "istrue": false
+      },
+      {
+        "statement": "Pod คือ 'หน่วยของงาน' ที่เล็กที่สุดใน Kubernetes ซึ่งเป็น 'กล่อง' ที่ห่อหุ้ม Container หนึ่งตัวหรือมากกว่า",
+        "istrue": true
+      },
+      {
+        "statement": "Pod คือเครื่องคอมพิวเตอร์ที่ใช้รันแอปพลิเคชัน",
+        "istrue": false
+      },
+      {
+        "statement": "Pod คือฐานข้อมูลที่เก็บสถานะของ Cluster",
+        "istrue": false
+      }
+    ],
+    "explanation": "Pod เป็น abstraction layer ที่อยู่เหนือ container ทำให้ Kubernetes สามารถจัดการกลุ่มของ container ที่ทำงานร่วมกันอย่างใกล้ชิดเป็นหน่วยเดียวกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เครื่องมือ Command-Line (CLI) ที่ใช้ในการสั่งงาน Kubernetes Cluster ชื่อว่าอะไร?",
+    "options": [
+      {
+        "statement": "k8s-cli",
+        "istrue": false
+      },
+      {
+        "statement": "docker-ctl",
+        "istrue": false
+      },
+      {
+        "statement": "kubeadm",
+        "istrue": false
+      },
+      {
+        "statement": "kubectl",
+        "istrue": true
+      }
+    ],
+    "explanation": "`kubectl` เป็นเครื่องมือหลักที่ผู้ใช้และผู้ดูแลระบบใช้ในการโต้ตอบกับ Kubernetes API Server เพื่อจัดการทรัพยากรต่างๆ ใน cluster"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `kubectl apply -f my-app.yaml` เป็นการทำงานในรูปแบบใด?",
+    "options": [
+      {
+        "statement": "Imperative (เชิงคำสั่ง)",
+        "istrue": false
+      },
+      {
+        "statement": "Declarative (เชิงพรรณนา)",
+        "istrue": true
+      },
+      {
+        "statement": "Interactive (เชิงโต้ตอบ)",
+        "istrue": false
+      },
+      {
+        "statement": "Automatic (เชิงอัตโนมัติ)",
+        "istrue": false
+      }
+    ],
+    "explanation": "`kubectl apply` เป็นคำสั่งหลักสำหรับการทำงานแบบ Declarative โดยมันจะรับไฟล์ manifest และทำให้สถานะของ cluster ตรงกับที่นิยามไว้ในไฟล์นั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หลังจากรัน Pod ด้วย `kubectl run` แล้ว เรายังไม่สามารถเข้าถึงแอปจากภายนอกได้ทันที วิธีที่ง่ายที่สุดในการทดลองเข้าถึง Pod คือคำสั่งใด?",
+    "options": [
+      {
+        "statement": "kubectl expose",
+        "istrue": false
+      },
+      {
+        "statement": "kubectl port-forward",
+        "istrue": true
+      },
+      {
+        "statement": "kubectl connect",
+        "istrue": false
+      },
+      {
+        "statement": "kubectl attach",
+        "istrue": false
+      }
+    ],
+    "explanation": "`kubectl port-forward` สร้างอุโมงค์การเชื่อมต่อโดยตรงจากเครื่อง local ของเราไปยัง port ของ Pod ที่ระบุ ทำให้สามารถทดสอบแอปพลิเคชันได้อย่างรวดเร็วโดยไม่ต้องสร้าง Service"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในไฟล์ Manifest ของ Kubernetes, คีย์ `kind` ใช้สำหรับทำอะไร?",
+    "options": [
+      {
+        "statement": "ตั้งชื่อให้กับทรัพยากร",
+        "istrue": false
+      },
+      {
+        "statement": "ระบุเวอร์ชันของ API ที่จะใช้",
+        "istrue": false
+      },
+      {
+        "statement": "บอกประเภทของ Object ที่เราต้องการจะสร้าง (เช่น Pod, Deployment, Service)",
+        "istrue": true
+      },
+      {
+        "statement": "ระบุ Image ของ Container ที่จะใช้",
+        "istrue": false
+      }
+    ],
+    "explanation": "`kind` เป็นฟิลด์ที่จำเป็นในทุก manifest file เพื่อบอกให้ Kubernetes API Server รู้ว่าเรากำลังจะสร้างหรือจัดการกับทรัพยากรประเภทใด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ไฟล์ `kubeconfig` มีส่วนประกอบที่ทำหน้าที่เป็น 'โปรไฟล์การเชื่อมต่อ' ซึ่งผูก cluster, user, และ namespace เข้าด้วยกัน เรียกว่าอะไร?",
+    "options": [
+      {
+        "statement": "profiles",
+        "istrue": false
+      },
+      {
+        "statement": "connections",
+        "istrue": false
+      },
+      {
+        "statement": "contexts",
+        "istrue": true
+      },
+      {
+        "statement": "links",
+        "istrue": false
+      }
+    ],
+    "explanation": "Contexts ช่วยให้เราสามารถสลับการทำงานระหว่าง cluster หรือ namespace ต่างๆ ได้อย่างง่ายดายด้วยคำสั่ง `kubectl config use-context`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ประโยชน์ที่สำคัญที่สุดของการใช้ Labels คู่กับ Selectors คืออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อให้ Pod ทำงานเร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้สามารถเลือกทำงานกับกลุ่มของ Object ที่มีคุณสมบัติตรงกันได้ในคำสั่งเดียว",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อเพิ่มข้อมูล Metadata ให้กับ Pod",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อจำกัดการใช้ทรัพยากร",
+        "istrue": false
+      }
+    ],
+    "explanation": "Labels และ Selectors เป็นกลไกหลักที่ Kubernetes ใช้ในการจัดกลุ่มและเชื่อมโยงทรัพยากรต่างๆ เข้าด้วยกัน เช่น การที่ Service รู้ว่าจะต้องส่ง traffic ไปให้ Pods กลุ่มไหน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดในการใช้งานจริงเราจึงควรใช้ 'Deployment' แทนการสร้าง 'Pod' โดยตรง?",
+    "options": [
+      {
+        "statement": "เพราะ Deployment สร้างได้เร็วกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Pod ไม่สามารถเชื่อมต่อเครือข่ายได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Deployment มีความสามารถในการ Self-healing, Scaling, และจัดการ Rollout ซึ่ง Pod ไม่มี",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Pod ใช้ทรัพยากรมากกว่า",
+        "istrue": false
+      }
+    ],
+    "explanation": "Deployment เป็น controller ระดับสูงที่เพิ่มความสามารถในการจัดการวงจรชีวิตของแอปพลิเคชันเข้ามา ทำให้ระบบมีความเสถียรและดูแลรักษาง่ายกว่าการใช้ Pod เดี่ยวๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในไฟล์ Manifest ของ Deployment, ส่วน `template` มีไว้เพื่ออะไร?",
+    "options": [
+      {
+        "statement": "เป็นพิมพ์เขียวของตัว Deployment เอง",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น 'พิมพ์เขียว' ของ Pod ที่จะให้ Deployment สร้างและดูแล",
+        "istrue": true
+      },
+      {
+        "statement": "เป็น template สำหรับสร้าง Service",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น template สำหรับไฟล์ kubeconfig",
+        "istrue": false
+      }
+    ],
+    "explanation": "ส่วน `spec.template` ภายใน Deployment manifest จะมีโครงสร้างเหมือนกับ manifest ของ Pod ทุกประการ และจะถูกใช้เป็นต้นแบบในการสร้าง Pods ทั้งหมดที่ Deployment นั้นๆ ควบคุมอยู่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหาหลักของ Pods ที่ทำให้ Kubernetes Object 'Service' ถูกสร้างขึ้นมาคืออะไร?",
+    "options": [
+      {
+        "statement": "Pods ทำงานช้าเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "Pods ไม่คงทนถาวรและมี IP Address ที่ไม่คงที่",
+        "istrue": true
+      },
+      {
+        "statement": "Pods มีความปลอดภัยต่ำ",
+        "istrue": false
+      },
+      {
+        "statement": "Pods ไม่สามารถใช้ Labels ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจาก Pods สามารถถูกสร้างและทำลายได้ตลอดเวลา ทำให้ IP address ของมันไม่น่าเชื่อถือ Service จึงถูกสร้างขึ้นมาเพื่อเป็นจุดเข้าถึง (endpoint) ที่คงที่สำหรับกลุ่มของ Pods"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Kubernetes Service ทำหน้าที่เป็น Load Balancer ภายใน Cluster โดยอัตโนมัติได้อย่างไร?",
+    "options": [
+      {
+        "statement": "โดยการสร้าง Pod ใหม่ขึ้นมาเพื่อกระจายโหลด",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการใช้ Label Selector เพื่อค้นหา Pods ทั้งหมดที่ต้องดูแล แล้วกระจาย Traffic ไปยัง Pods เหล่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "โดยการจำกัดจำนวนการเชื่อมต่อ",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการส่ง traffic ทั้งหมดไปที่ Pod ตัวแรกเสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Service จะคอยติดตาม Pods ที่มี label ตรงกับ selector ของมันอยู่เสมอ และเมื่อมี traffic เข้ามา มันจะเลือก Pod ตัวใดตัวหนึ่งที่พร้อมทำงานอยู่ในกลุ่มนั้นเพื่อส่ง traffic ต่อไปให้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การอัปเดตแอปพลิเคชันโดยใช้ Deployment และ Service ทำให้เกิด 'Zero-downtime' ได้อย่างไร?",
+    "options": [
+      {
+        "statement": "โดยการหยุดการทำงานของระบบทั้งหมดก่อนแล้วค่อยอัปเดต",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการสร้าง Pods เวอร์ชันใหม่ขึ้นมาก่อน, ให้ Service เริ่มส่ง traffic ไปที่ตัวใหม่, แล้วจึงค่อยๆ ลบ Pods เวอร์ชันเก่าทิ้ง (Rolling Update)",
+        "istrue": true
+      },
+      {
+        "statement": "โดยการบังคับให้ผู้ใช้ log out ออกจากระบบทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการสร้าง Cluster ใหม่ทั้งหมดสำหรับการอัปเดต",
+        "istrue": false
+      }
+    ],
+    "explanation": "กระบวนการ Rolling Update ช่วยให้มั่นใจได้ว่าจะมี Pod ที่พร้อมให้บริการผู้ใช้อยู่เสมอในระหว่างการอัปเดต ทำให้ผู้ใช้ไม่รู้สึกถึงการหยุดชะงักของบริการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Kubernetes Object ใดที่ทำหน้าที่เป็น 'ผู้จัดการเส้นทางจราจร' สำหรับ HTTP/HTTPS จากภายนอก Cluster?",
+    "options": [
+      {
+        "statement": "Service",
+        "istrue": false
+      },
+      {
+        "statement": "Deployment",
+        "istrue": false
+      },
+      {
+        "statement": "Ingress",
+        "istrue": true
+      },
+      {
+        "statement": "Pod",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ingress ทำหน้าที่เป็น API Gateway หรือ Reverse Proxy ที่อยู่หน้า cluster คอยรับ traffic จากภายนอกแล้วส่งต่อไปยัง Service ภายในที่ถูกต้องตามกฎ (rule) ที่กำหนด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การจะใช้งาน Ingress Object ได้ เราจำเป็นต้องติดตั้งอะไรใน Cluster ก่อน?",
+    "options": [
+      {
+        "statement": "Helm",
+        "istrue": false
+      },
+      {
+        "statement": "Ingress Controller",
+        "istrue": true
+      },
+      {
+        "statement": "Docker",
+        "istrue": false
+      },
+      {
+        "statement": "Kubelet",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ingress Object เป็นเพียง 'ชุดของกฎ' แต่ตัวที่จะนำกฎนั้นไปปฏิบัติงานจริงๆ คือ Ingress Controller ซึ่งเป็นซอฟต์แวร์ที่เราต้องติดตั้งเพิ่มเติมใน cluster"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Helm คืออะไรในโลกของ Kubernetes?",
+    "options": [
+      {
+        "statement": "CLI tool สำหรับจัดการ Pods",
+        "istrue": false
+      },
+      {
+        "statement": "Package Manager สำหรับ Kubernetes ที่ช่วยให้การติดตั้งแอปพลิเคชันที่ซับซ้อนง่ายขึ้น",
+        "istrue": true
+      },
+      {
+        "statement": "ฐานข้อมูลของ Cluster",
+        "istrue": false
+      },
+      {
+        "statement": "Ingress Controller ชนิดหนึ่ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Helm ทำหน้าที่คล้ายกับ `apt` หรือ `pip` โดยแพ็กเกจของ Helm ที่เรียกว่า 'Chart' จะรวบรวมไฟล์ YAML ทั้งหมดที่จำเป็นในการติดตั้งแอปพลิเคชันหนึ่งๆ ไว้ด้วยกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากต้องการเก็บรหัสผ่านฐานข้อมูลเพื่อนำไปใช้ใน Pod ควรใช้ Object ประเภทใด?",
+    "options": [
+      {
+        "statement": "ConfigMap",
+        "istrue": false
+      },
+      {
+        "statement": "Secret",
+        "istrue": true
+      },
+      {
+        "statement": "Label",
+        "istrue": false
+      },
+      {
+        "statement": "Annotation",
+        "istrue": false
+      }
+    ],
+    "explanation": "Secret ถูกออกแบบมาเพื่อเก็บข้อมูลที่ละเอียดอ่อนโดยเฉพาะ โดยข้อมูลจะถูกเก็บในรูปแบบเข้ารหัส (base64) ใน etcd เพื่อเพิ่มความปลอดภัย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Workload Controller ใดที่ออกแบบมาเพื่อแอปพลิเคชันแบบ Stateful เช่น Database ที่ต้องการตัวตน (Hostname) และพื้นที่จัดเก็บที่คงที่?",
+    "options": [
+      {
+        "statement": "Deployment",
+        "istrue": false
+      },
+      {
+        "statement": "DaemonSet",
+        "istrue": false
+      },
+      {
+        "statement": "StatefulSet",
+        "istrue": true
+      },
+      {
+        "statement": "Job",
+        "istrue": false
+      }
+    ],
+    "explanation": "StatefulSet ให้การรับประกันเกี่ยวกับลำดับและเอกลักษณ์ของ Pods ซึ่งจำเป็นอย่างยิ่งสำหรับระบบแบบกระจายที่ต้องการ state เช่น database clustering"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าคุณต้องการให้มี Agent สำหรับเก็บ Log รันอยู่บน Node 'ทุกเครื่อง' ใน Cluster ควรใช้ Workload Controller ประเภทใด?",
+    "options": [
+      {
+        "statement": "Deployment",
+        "istrue": false
+      },
+      {
+        "statement": "DaemonSet",
+        "istrue": true
+      },
+      {
+        "statement": "StatefulSet",
+        "istrue": false
+      },
+      {
+        "statement": "CronJob",
+        "istrue": false
+      }
+    ],
+    "explanation": "DaemonSet ถูกออกแบบมาเพื่อรับประกันว่าจะมีสำเนาของ Pod หนึ่งตัวรันอยู่บนทุก Node (หรือกลุ่มของ Node) ซึ่งเหมาะสำหรับงานที่เป็น infrastructure-level เช่น monitoring และ logging agents"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Workload Controller ใดที่เหมาะสำหรับรันงานที่ 'ทำครั้งเดียวแล้วจบ' เช่น งานประมวลผลข้อมูลตอนกลางคืน?",
+    "options": [
+      {
+        "statement": "Deployment",
+        "istrue": false
+      },
+      {
+        "statement": "DaemonSet",
+        "istrue": false
+      },
+      {
+        "statement": "StatefulSet",
+        "istrue": false
+      },
+      {
+        "statement": "Job",
+        "istrue": true
+      }
+    ],
+    "explanation": "Job จะสร้าง Pod ขึ้นมาเพื่อทำงานที่กำหนด และจะคอยดูแลให้งานนั้นสำเร็จลุล่วง (exit code 0) เมื่อสำเร็จแล้ว Job ก็จะจบการทำงานไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าต้องการรันงานสำรองข้อมูลทุกๆ เที่ยงคืน ควรใช้ Workload Controller ประเภทใด?",
+    "options": [
+      {
+        "statement": "Deployment",
+        "istrue": false
+      },
+      {
+        "statement": "DaemonSet",
+        "istrue": false
+      },
+      {
+        "statement": "Job",
+        "istrue": false
+      },
+      {
+        "statement": "CronJob",
+        "istrue": true
+      }
+    ],
+    "explanation": "CronJob คือการนำ Job มาเพิ่มความสามารถในการตั้งเวลาทำงานซ้ำๆ ตามตารางเวลา (schedule) ที่กำหนดในรูปแบบของ cron expression"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ ส่วนประกอบของ Control Plane?",
+    "options": [
+      {
+        "statement": "API Server",
+        "istrue": false
+      },
+      {
+        "statement": "etcd",
+        "istrue": false
+      },
+      {
+        "statement": "Kubelet",
+        "istrue": true
+      },
+      {
+        "statement": "Scheduler",
+        "istrue": false
+      }
+    ],
+    "explanation": "Kubelet เป็นส่วนประกอบที่ทำงานอยู่บน Worker Nodes ไม่ใช่บน Control Plane"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `kubectl describe pod my-pod` ใช้ทำอะไร?",
+    "options": [
+      {
+        "statement": "ลบ Pod ที่ชื่อ my-pod",
+        "istrue": false
+      },
+      {
+        "statement": "แสดงข้อมูลสถานะแบบสรุปของ Pod ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "แสดงข้อมูลรายละเอียดเชิงลึกและ Events ที่เกี่ยวข้องกับ Pod ที่ชื่อ my-pod",
+        "istrue": true
+      },
+      {
+        "statement": "เข้าไปใน shell ของ Pod ที่ชื่อ my-pod",
+        "istrue": false
+      }
+    ],
+    "explanation": "`kubectl describe` เป็นคำสั่งที่มีประโยชน์มากในการดีบัก เพราะมันให้ข้อมูลที่ละเอียดกว่า `kubectl get` เช่น สถานะล่าสุด, เหตุการณ์ (Events) ที่เกิดขึ้น, และการตั้งค่าต่างๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Container ที่อยู่ใน Pod เดียวกันสามารถสื่อสารกันเองผ่าน `localhost` ได้เพราะอะไร?",
+    "options": [
+      {
+        "statement": "เพราะมันรันอยู่บน Node ที่ต่างกัน",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะมันแชร์ Network Namespace (และ IP Address) เดียวกัน",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Kubernetes Service สร้างการเชื่อมต่อให้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะมันใช้ Container Runtime เดียวกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Pod สร้างสภาพแวดล้อมที่ทำให้ container ภายในรู้สึกเหมือนกำลังทำงานอยู่บนเครื่องเดียวกัน ทำให้สามารถสื่อสารกันผ่าน `localhost` และแชร์ทรัพยากรบางอย่างได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `kubectl scale --replicas=5 deployment/my-app` เป็นตัวอย่างของการทำงานแบบใด?",
+    "options": [
+      {
+        "statement": "Declarative, เพราะเป็นการแก้ไขไฟล์ YAML",
+        "istrue": false
+      },
+      {
+        "statement": "Imperative, เพราะเป็นการ 'สั่ง' ให้ระบบเปลี่ยนจำนวน replica ในทันที",
+        "istrue": true
+      },
+      {
+        "statement": "Self-Healing, เพราะเป็นการซ่อมแซม Pod",
+        "istrue": false
+      },
+      {
+        "statement": "Immutable, เพราะเป็นการสร้าง Deployment ใหม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้คำสั่งโดยตรงจาก command-line เพื่อเปลี่ยนแปลงสถานะของระบบถือเป็นการทำงานแบบ Imperative ในขณะที่การแก้ไขฟิลด์ `replicas` ในไฟล์ YAML แล้ว `apply` ถือเป็นแบบ Declarative"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ingress แบบ Name-Based Virtual Hosting ใช้เกณฑ์อะไรในการแยกแยะและส่งต่อ Traffic?",
+    "options": [
+      {
+        "statement": "URL Path (เช่น /video)",
+        "istrue": false
+      },
+      {
+        "statement": "Hostname (เช่น video.example.com)",
+        "istrue": true
+      },
+      {
+        "statement": "IP Address ของผู้ใช้",
+        "istrue": false
+      },
+      {
+        "statement": "Port ที่เข้ามา",
+        "istrue": false
+      }
+    ],
+    "explanation": "Name-Based Virtual Hosting ช่วยให้สามารถโฮสต์หลายๆ เว็บไซต์หรือแอปพลิเคชันที่อยู่คนละโดเมน/ซับโดเมนได้บน IP Address สาธารณะเพียงไอพีเดียว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ฐานข้อมูล `etcd` ใน Control Plane มีความสำคัญอย่างไร?",
+    "options": [
+      {
+        "statement": "เป็นที่เก็บ Container Image ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นฐานข้อมูลที่เก็บ 'Desired State' และสถานะปัจจุบันทั้งหมดของ Cluster ซึ่งเป็นแหล่งความจริงเพียงหนึ่งเดียว (Single Source of Truth)",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นฐานข้อมูลที่แอปพลิเคชันของเราใช้",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นที่เก็บ Log ของ Pod ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "etcd เป็นหัวใจของ Control Plane ที่เก็บข้อมูลการตั้งค่าและสถานะทั้งหมดของ cluster การสำรองข้อมูล etcd จึงเป็นสิ่งสำคัญอย่างยิ่ง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือคู่หูที่สมบูรณ์แบบสำหรับการรันแอปพลิเคชันแบบ Stateless ใน Kubernetes?",
+    "options": [
+      {
+        "statement": "Pod และ Service",
+        "istrue": false
+      },
+      {
+        "statement": "Deployment และ Service",
+        "istrue": true
+      },
+      {
+        "statement": "StatefulSet และ DaemonSet",
+        "istrue": false
+      },
+      {
+        "statement": "Job และ CronJob",
+        "istrue": false
+      }
+    ],
+    "explanation": "Deployment ทำหน้าที่ดูแล 'วงจรชีวิต' ของ Pods (การสร้าง, การอัปเดต, การเยียวยาตัวเอง) ในขณะที่ Service ทำหน้าที่เป็น 'เครือข่าย' ที่มีเสถียรภาพเพื่อเปิดช่องทางการเข้าถึง Pods เหล่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า Node เครื่องหนึ่งใน Cluster ล่มไป จะเกิดอะไรขึ้นกับ Pods ที่เคยรันอยู่บน Node นั้น?",
+    "options": [
+      {
+        "statement": "Pods ทั้งหมดจะหายไปอย่างถาวร",
+        "istrue": false
+      },
+      {
+        "statement": "Controller Manager (ผ่าน ReplicaSet) จะตรวจพบว่าจำนวน Pods ไม่ตรงกับ Desired State และ Scheduler จะทำการสร้าง Pods ใหม่ขึ้นมาทดแทนบน Node อื่นที่ยังทำงานได้ดีอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "Pods จะย้ายตัวเองไปยัง Node อื่น",
+        "istrue": false
+      },
+      {
+        "statement": "Cluster ทั้งหมดจะหยุดทำงาน",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือตัวอย่างที่ชัดเจนที่สุดของความสามารถในการ Self-Healing ของ Kubernetes ซึ่งทำงานร่วมกันระหว่าง Controller Manager และ Scheduler"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Annotations แตกต่างจาก Labels อย่างไร?",
+    "options": [
+      {
+        "statement": "ไม่แตกต่างกันเลย สามารถใช้แทนกันได้",
+        "istrue": false
+      },
+      {
+        "statement": "Labels ใช้สำหรับ 'คัดเลือก' (identifying) Object ด้วย Selector ในขณะที่ Annotations ใช้สำหรับแนบข้อมูลที่ไม่ใช่เพื่อการคัดเลือก (non-identifying)",
+        "istrue": true
+      },
+      {
+        "statement": "Annotations มีประสิทธิภาพสูงกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "Labels ใช้ได้กับ Pod เท่านั้น แต่ Annotations ใช้ได้กับทุก Object",
+        "istrue": false
+      }
+    ],
+    "explanation": "ให้คิดว่า Labels คือ 'แท็ก' ที่ใช้ในการกรองและจัดกลุ่ม ในขณะที่ Annotations คือ 'โน้ต' หรือ 'คอมเมนต์' ที่ให้ข้อมูลเพิ่มเติมสำหรับมนุษย์หรือเครื่องมืออื่นๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าคุณต้องการเข้าไปใน shell ของ container ที่อยู่ใน pod ชื่อ `my-app-12345` ควรใช้คำสั่งใด?",
+    "options": [
+      {
+        "statement": "kubectl run -it my-app-12345 -- bash",
+        "istrue": false
+      },
+      {
+        "statement": "kubectl exec -it my-app-12345 -- bash",
+        "istrue": true
+      },
+      {
+        "statement": "kubectl attach my-app-12345",
+        "istrue": false
+      },
+      {
+        "statement": "kubectl port-forward my-app-12345",
+        "istrue": false
+      }
+    ],
+    "explanation": "`kubectl exec` เป็นคำสั่งสำหรับรันคำสั่งเพิ่มเติม 'ภายใน' container ที่กำลังทำงานอยู่แล้ว การใช้ `-it` และคำสั่ง `bash` เป็นวิธีมาตรฐานในการเข้าถึง interactive shell"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ ConfigMap และ Secret ส่งเสริมแนวปฏิบัติที่ดีในการพัฒนาซอฟต์แวร์อย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้โค้ดทำงานเร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการแยก 'โค้ด' ออกจาก 'ค่าตั้งค่า (Configuration)' ทำให้ Image เดียวกันสามารถนำไปใช้ในสภาพแวดล้อมที่แตกต่างกันได้ (เช่น Dev, Staging, Prod)",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ไม่จำเป็นต้องใช้ฐานข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Image มีขนาดเล็กลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "การแยก configuration ออกมาช่วยให้เราสามารถสร้าง build artifact (Docker image) เพียงครั้งเดียว แล้วนำไป deploy ในหลายๆ environment ได้โดยแค่เปลี่ยน config ที่ inject เข้าไป ซึ่งเป็นหลักการของ Twelve-Factor App"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Service ที่ถูกสร้างขึ้นมาโดยไม่ได้ระบุ Type จะมี Type เป็นอะไรโดยปริยาย?",
+    "options": [
+      {
+        "statement": "NodePort",
+        "istrue": false
+      },
+      {
+        "statement": "LoadBalancer",
+        "istrue": false
+      },
+      {
+        "statement": "ClusterIP",
+        "istrue": true
+      },
+      {
+        "statement": "ExternalName",
+        "istrue": false
+      }
+    ],
+    "explanation": "`ClusterIP` เป็น type พื้นฐานที่สุดของ Service ซึ่งจะให้ IP address ที่สามารถเข้าถึงได้จาก 'ภายใน' cluster เท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "วิธีที่ง่ายและแนะนำที่สุดสำหรับผู้เริ่มต้นในการทดลอง Kubernetes บนเครื่องตัวเองคือวิธีใด?",
+    "options": [
+      {
+        "statement": "ติดตั้ง Cluster บน AWS EKS",
+        "istrue": false
+      },
+      {
+        "statement": "เปิดใช้งาน Kubernetes ที่มาพร้อมกับ Docker Desktop",
+        "istrue": true
+      },
+      {
+        "statement": "คอมไพล์ Kubernetes จากซอร์สโค้ด",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ Minikube ที่มีหลาย Nodes",
+        "istrue": false
+      }
+    ],
+    "explanation": "Kubernetes ที่มากับ Docker Desktop เป็นวิธีที่สะดวกที่สุดเพราะมันถูกรวมมาให้แล้ว ไม่ต้องติดตั้งอะไรเพิ่มเติม และสามารถเปิด-ปิดได้ง่ายผ่านหน้า UI"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความจริงเกี่ยวกับ Container Runtime ใน Kubernetes Node?",
+    "options": [
+      {
+        "statement": "Kubernetes มี Container Runtime เป็นของตัวเองและไม่ต้องการ Docker",
+        "istrue": false
+      },
+      {
+        "statement": "Node ทุกเครื่องใน Cluster ต้องใช้ Container Runtime ยี่ห้อเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "Kubelet จะเป็นผู้สั่งงาน Container Runtime (เช่น Docker) ให้ทำการรัน, หยุด, หรือลบ container จริงๆ",
+        "istrue": true
+      },
+      {
+        "statement": "Container Runtime จะทำงานอยู่บน Control Plane เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Kubernetes เองไม่ได้รัน container โดยตรง แต่จะทำงานผ่าน Interface ที่เรียกว่า CRI (Container Runtime Interface) เพื่อสั่งงาน Container Runtime ที่ติดตั้งอยู่บน Node นั้นๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในไฟล์ YAML, การเยื้อง (indentation) มีความสำคัญหรือไม่?",
+    "options": [
+      {
+        "statement": "ไม่มีความสำคัญเลย",
+        "istrue": false
+      },
+      {
+        "statement": "มีความสำคัญอย่างยิ่ง เพราะ YAML ใช้การเยื้องเพื่อแสดงโครงสร้างและความสัมพันธ์แบบพ่อ-ลูกของข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "มีความสำคัญเฉพาะในส่วน `spec` เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "มีความสำคัญเฉพาะเมื่อใช้กับ `kubectl` เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "YAML (YAML Ain't Markup Language) เป็น data serialization language ที่ใช้การเว้นวรรค (spaces) ในการจัดโครงสร้างข้อมูล การเยื้องที่ผิดพลาดจะทำให้ไฟล์ไม่สามารถถูก parse ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `kubectl get pods -o wide` มีประโยชน์อย่างไร?",
+    "options": [
+      {
+        "statement": "แสดง Pods ทั้งหมดในทุกๆ namespace",
+        "istrue": false
+      },
+      {
+        "statement": "แสดงข้อมูลเพิ่มเติมใน output เช่น IP Address ของ Pod และชื่อ Node ที่ Pod นั้นรันอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "แสดง output ในรูปแบบไฟล์ YAML",
+        "istrue": false
+      },
+      {
+        "statement": "แสดง Pods ที่มี Label ติดอยู่เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Option `-o wide` (output wide) เป็นวิธีที่รวดเร็วในการดูข้อมูลที่สำคัญเพิ่มเติมโดยไม่ต้องใช้คำสั่ง `describe` ที่ให้ข้อมูลละเอียดเกินไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือสาเหตุหลักที่ทำให้ Pods ที่ถูกควบคุมโดย Deployment มีชื่อที่ดูเหมือนสุ่ม (เช่น `kuard-78599f579-abcde`)?",
+    "options": [
+      {
+        "statement": "เพื่อความปลอดภัย",
+        "istrue": false
+      },
+      {
+        "statement": "ชื่อ Pod จะถูกสร้างโดย ReplicaSet ที่ Deployment ดูแลอยู่ เพื่อให้มั่นใจว่าชื่อจะไม่ซ้ำกันและสามารถจัดการการอัปเดตเวอร์ชันได้",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นข้อผิดพลาดของ Kubernetes",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อทำให้เดายาก",
+        "istrue": false
+      }
+    ],
+    "explanation": "Deployment จะสร้าง ReplicaSet สำหรับแต่ละเวอร์ชันของแอปพลิเคชัน และ ReplicaSet จะเพิ่ม hash ของ template เข้าไปในชื่อ Pod เพื่อป้องกันการชนกันของชื่อและเพื่อให้สามารถจัดการ Pods ของแต่ละเวอร์ชันได้อย่างถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เราจะคัดลอกไฟล์ `app.log` จาก Pod ชื่อ `my-pod` มาไว้ที่เครื่อง local ของเราได้อย่างไร?",
+    "options": [
+      {
+        "statement": "kubectl exec my-pod -- cat /path/to/app.log",
+        "istrue": false
+      },
+      {
+        "statement": "kubectl cp my-pod:/path/to/app.log ./app.log",
+        "istrue": true
+      },
+      {
+        "statement": "kubectl logs my-pod > app.log",
+        "istrue": false
+      },
+      {
+        "statement": "kubectl get file my-pod app.log",
+        "istrue": false
+      }
+    ],
+    "explanation": "`kubectl cp` เป็นคำสั่งที่ถูกออกแบบมาสำหรับการคัดลอกไฟล์และไดเรกทอรีระหว่างเครื่อง local และ container ที่อยู่ใน pod โดยมี синтаксисคล้ายกับคำสั่ง `scp`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณต้องการให้แอปพลิเคชันของคุณสามารถเข้าถึงได้จากภายนอกโดยใช้ Load Balancer ที่ผู้ให้บริการคลาวด์จัดหาให้ ควรสร้าง Service ประเภทใด?",
+    "options": [
+      {
+        "statement": "ClusterIP",
+        "istrue": false
+      },
+      {
+        "statement": "NodePort",
+        "istrue": false
+      },
+      {
+        "statement": "LoadBalancer",
+        "istrue": true
+      },
+      {
+        "statement": "ExternalName",
+        "istrue": false
+      }
+    ],
+    "explanation": "Service type `LoadBalancer` เป็นการบอกให้ Kubernetes (ร่วมกับ cloud provider) ทำการสร้างและตั้งค่า external load balancer ขึ้นมาจริงๆ และชี้ traffic เข้ามายัง Service นั้นใน cluster"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ชื่อ Kubernetes ย่อมาจากอะไร?",
+    "options": [
+      {
+        "statement": "K และ s คืออักษรตัวแรกและตัวสุดท้าย และ 8 คือจำนวนตัวอักษรที่อยู่ระหว่างกลาง",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นเวอร์ชันที่ 8 ของโปรเจกต์ภายในของ Google",
+        "istrue": false
+      },
+      {
+        "statement": "หมายถึงมีส่วนประกอบหลัก 8 อย่าง",
+        "istrue": false
+      },
+      {
+        "statement": "มาจากรหัส 1000 ในเลขฐานสอง (binary)",
+        "istrue": false
+      }
+    ],
+    "explanation": "K8s เป็น numeronym (การย่อคำโดยใช้ตัวเลข) ของคำว่า Kubernetes โดย K คือตัวแรก, s คือตัวสุดท้าย, และ 8 คือจำนวนตัวอักษร 'ubernete' ที่อยู่ตรงกลาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ บริการ Kubernetes สำเร็จรูปบนคลาวด์ (Managed Kubernetes Service)?",
+    "options": [
+      {
+        "statement": "GKE (Google Kubernetes Engine)",
+        "istrue": false
+      },
+      {
+        "statement": "AKS (Azure Kubernetes Service)",
+        "istrue": false
+      },
+      {
+        "statement": "EKS (Amazon Elastic Kubernetes Service)",
+        "istrue": false
+      },
+      {
+        "statement": "Minikube",
+        "istrue": true
+      }
+    ],
+    "explanation": "Minikube เป็นเครื่องมือสำหรับรัน Kubernetes cluster แบบ node เดียวบนเครื่องคอมพิวเตอร์ส่วนบุคคลเพื่อการเรียนรู้และพัฒนา ไม่ใช่บริการบนคลาวด์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โดยสรุปแล้ว ความสัมพันธ์ระหว่าง Deployment และ Pod คืออะไร?",
+    "options": [
+      {
+        "statement": "Pod ควบคุม Deployment",
+        "istrue": false
+      },
+      {
+        "statement": "Deployment 'ดูแล' ให้มีจำนวน Pods ที่ถูกต้องทำงานอยู่เสมอตาม 'พิมพ์เขียว' ที่กำหนด",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้งสองอย่างคือสิ่งเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "Deployment รันอยู่ภายใน Pod",
+        "istrue": false
+      }
+    ],
+    "explanation": "Deployment เป็น controller ที่ทำงานในระดับที่สูงกว่า Pod โดยมันจะใช้ ReplicaSet เพื่อสร้างและจัดการวงจรชีวิตของ Pods ให้ตรงกับสถานะที่ผู้ใช้ต้องการ"
+  }
+]

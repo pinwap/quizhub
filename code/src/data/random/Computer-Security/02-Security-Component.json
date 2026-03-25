@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following best distinguishes 'Security' from 'Privacy' based on the provided material?",
+    "options": [
+      {
+        "statement": "Security is about rights; Privacy is about mechanics.",
+        "istrue": false
+      },
+      {
+        "statement": "Security focuses on 'Who can do what when' (Control), while Privacy focuses on the freedom to control personal information (Rights).",
+        "istrue": true
+      },
+      {
+        "statement": "Security and Privacy are exactly the same concept.",
+        "istrue": false
+      },
+      {
+        "statement": "Privacy is only for government data, while Security is for personal data.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Security emphasizes mechanisms and control (guarding the system), whereas Privacy emphasizes the individual's right to control their own personal data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "A hacker breaches a hospital database and discovers that a specific patient has a confidential medical condition. The patient had previously posted about this condition publicly on social media. Is this a privacy violation?",
+    "options": [
+      {
+        "statement": "Yes, it is definitely a privacy violation because the hacker stole data.",
+        "istrue": false
+      },
+      {
+        "statement": "No, because the system was not actually hacked.",
+        "istrue": false
+      },
+      {
+        "statement": "It is a Security issue, but NOT a Privacy issue, because the information was already public (Go public).",
+        "istrue": true
+      },
+      {
+        "statement": "It is neither a security nor a privacy issue.",
+        "istrue": false
+      }
+    ],
+    "explanation": "If the information is already public knowledge (voluntarily disclosed), accessing it does not violate privacy rights, though the method of access (hacking) remains a security breach."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The concept of 'Privacy Trade-off' implies that:",
+    "options": [
+      {
+        "statement": "We must pay money to keep our data private.",
+        "istrue": false
+      },
+      {
+        "statement": "We often have to give up some personal information in exchange for using a service (e.g., giving medical history to a doctor).",
+        "istrue": true
+      },
+      {
+        "statement": "Privacy is more important than any service.",
+        "istrue": false
+      },
+      {
+        "statement": "Companies never use our data for anything other than the service itself.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The trade-off exists because accurate services (like medical treatment) require access to personal data, forcing users to balance privacy against utility."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "According to the 'Hard Truths' section, what might Facebook do with a message you type but decide to delete before sending?",
+    "options": [
+      {
+        "statement": "It is permanently erased immediately.",
+        "istrue": false
+      },
+      {
+        "statement": "It is sent to the recipient anyway.",
+        "istrue": false
+      },
+      {
+        "statement": "The system may still collect and analyze the content of the unsent message.",
+        "istrue": true
+      },
+      {
+        "statement": "It posts the message to your timeline automatically.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Modern platforms often track user behavior in real-time, including data entry that is not finalized or submitted, to analyze user intent."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the AAA model, which component answers the question 'Who are you?'",
+    "options": [
+      {
+        "statement": "Authorization",
+        "istrue": false
+      },
+      {
+        "statement": "Authentication",
+        "istrue": true
+      },
+      {
+        "statement": "Accounting",
+        "istrue": false
+      },
+      {
+        "statement": "Administration",
+        "istrue": false
+      }
+    ],
+    "explanation": "Authentication is the process of verifying the identity of a user (proving they are who they claim to be)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "You have successfully logged into a company server, but when you try to delete a customer file, the system denies access. Which part of the AAA model is restricting you?",
+    "options": [
+      {
+        "statement": "Authentication",
+        "istrue": false
+      },
+      {
+        "statement": "Authorization",
+        "istrue": true
+      },
+      {
+        "statement": "Accounting",
+        "istrue": false
+      },
+      {
+        "statement": "Auditing",
+        "istrue": false
+      }
+    ],
+    "explanation": "Authorization determines what a verified user is allowed to do. You are authenticated (logged in), but not authorized to perform that specific action."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Kerberos' (the three-headed dog) used as an analogy for the AAA model?",
+    "options": [
+      {
+        "statement": "Because security systems must be aggressive.",
+        "istrue": false
+      },
+      {
+        "statement": "Because the dog guards the gates of heaven.",
+        "istrue": false
+      },
+      {
+        "statement": "Because a complete security system requires all three 'heads' (Authentication, Authorization, Accounting) working together.",
+        "istrue": true
+      },
+      {
+        "statement": "Because it represents three different types of hackers.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Just as Kerberos needs all three heads to be an effective guardian, a security system is incomplete if it lacks any one of the AAA components."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the ATM example, checking if the account has enough balance to withdraw funds represents which AAA component?",
+    "options": [
+      {
+        "statement": "Authentication",
+        "istrue": false
+      },
+      {
+        "statement": "Authorization",
+        "istrue": true
+      },
+      {
+        "statement": "Accounting",
+        "istrue": false
+      },
+      {
+        "statement": "Analysis",
+        "istrue": false
+      }
+    ],
+    "explanation": "Checking the balance is determining the user's privilege or ability to perform the requested transaction (withdraw money), which is Authorization."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The phrase 'All input is evil' relates to which security concept?",
+    "options": [
+      {
+        "statement": "Validation of Input",
+        "istrue": true
+      },
+      {
+        "statement": "Password Encryption",
+        "istrue": false
+      },
+      {
+        "statement": "Biometrics",
+        "istrue": false
+      },
+      {
+        "statement": "Accounting",
+        "istrue": false
+      }
+    ],
+    "explanation": "This concept warns developers to never trust user data, as it could contain malicious code (like SQL Injection), necessitating strict input validation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If a system lacks 'Accounting' (Auditing), what is the primary risk?",
+    "options": [
+      {
+        "statement": "Users cannot log in.",
+        "istrue": false
+      },
+      {
+        "statement": "Users can access any file they want.",
+        "istrue": false
+      },
+      {
+        "statement": "There is no record of who did what, making it impossible to investigate incidents.",
+        "istrue": true
+      },
+      {
+        "statement": "The system will be slow.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Accounting answers 'What did you do?'. Without it, there are no logs or history to trace malicious activities or errors."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the Chinese proverb 'It's easy to know men's faces, not their hearts' imply in the context of Digital Authentication?",
+    "options": [
+      {
+        "statement": "Facial recognition is the best technology.",
+        "istrue": false
+      },
+      {
+        "statement": "We can see a login attempt, but it's hard to verify if the person behind the keyboard is truly the account owner.",
+        "istrue": true
+      },
+      {
+        "statement": "Computers have feelings like humans.",
+        "istrue": false
+      },
+      {
+        "statement": "Passwords should be based on emotional words.",
+        "istrue": false
+      }
+    ],
+    "explanation": "It highlights the difficulty of verifying identity online; having the correct credentials (face) doesn't guarantee the intent or identity (heart) of the user."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is an example of 'What you have' authentication?",
+    "options": [
+      {
+        "statement": "A Password",
+        "istrue": false
+      },
+      {
+        "statement": "A PIN code",
+        "istrue": false
+      },
+      {
+        "statement": "A Smart Card or Key Token",
+        "istrue": true
+      },
+      {
+        "statement": "A Fingerprint",
+        "istrue": false
+      }
+    ],
+    "explanation": "Physical objects that a user must possess, like cards, keys, or tokens, fall under the 'What you have' category."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the main advantage of 'Challenge & Response' authentication (like a car remote) over a static password?",
+    "options": [
+      {
+        "statement": "It prevents Replay Attacks because the code changes every time.",
+        "istrue": true
+      },
+      {
+        "statement": "It is easier to remember.",
+        "istrue": false
+      },
+      {
+        "statement": "It does not require any battery.",
+        "istrue": false
+      },
+      {
+        "statement": "It allows multiple users to share the same key.",
+        "istrue": false
+      }
+    ],
+    "explanation": "In Challenge & Response, the system sends a new 'challenge' each time. The response is calculated based on this unique challenge, so an intercepted signal (replay) cannot be used again."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Using 'Login with Facebook' on a shopping website is an example of which authentication type?",
+    "options": [
+      {
+        "statement": "What you know",
+        "istrue": false
+      },
+      {
+        "statement": "Biometrics",
+        "istrue": false
+      },
+      {
+        "statement": "Third-Party Authentication (Who do you trust?)",
+        "istrue": true
+      },
+      {
+        "statement": "Zero-Knowledge Proof",
+        "istrue": false
+      }
+    ],
+    "explanation": "The shopping site trusts Facebook to verify the user's identity, acting as a trusted third party."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the 'Where is Waldo?' Zero-Knowledge Proof analogy, what does the perforated paper represent?",
+    "options": [
+      {
+        "statement": "The password itself.",
+        "istrue": false
+      },
+      {
+        "statement": "A method to prove knowledge (location) without revealing the secret information (coordinates).",
+        "istrue": true
+      },
+      {
+        "statement": "A firewall blocking the view.",
+        "istrue": false
+      },
+      {
+        "statement": "The hacker trying to find Waldo.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The paper allows the prover to show they found Waldo (proof) without showing the background context that would reveal his exact location (zero knowledge)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the Ali Baba's Cave example, how does the verifier confirm the girl knows the magic word?",
+    "options": [
+      {
+        "statement": "By asking her to whisper the word.",
+        "istrue": false
+      },
+      {
+        "statement": "By checking if she can exit from a specifically requested path (A or B) consistently.",
+        "istrue": true
+      },
+      {
+        "statement": "By walking into the cave with her.",
+        "istrue": false
+      },
+      {
+        "statement": "By guessing the word himself.",
+        "istrue": false
+      }
+    ],
+    "explanation": "If she knows the secret word, she can open the door connecting A and B, allowing her to exit from whichever side the verifier calls out, regardless of which side she entered."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is storing passwords in 'Plaintext' considered the most dangerous method?",
+    "options": [
+      {
+        "statement": "It takes up too much space.",
+        "istrue": false
+      },
+      {
+        "statement": "If the database is stolen, anyone can read the passwords immediately without any effort.",
+        "istrue": true
+      },
+      {
+        "statement": "It causes the computer to run slowly.",
+        "istrue": false
+      },
+      {
+        "statement": "It is incompatible with modern browsers.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Plaintext means the password is saved exactly as typed. A breach means total compromise of all user accounts immediately."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary characteristic of a 'Hash' function?",
+    "options": [
+      {
+        "statement": "It can be easily reversed to find the original password.",
+        "istrue": false
+      },
+      {
+        "statement": "It is a one-way function; you cannot calculate the original password from the hash.",
+        "istrue": true
+      },
+      {
+        "statement": "It encrypts data using a private key.",
+        "istrue": false
+      },
+      {
+        "statement": "It shortens long passwords to 4 digits.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hashing converts input into a fixed string of characters. Crucially, it is designed to be irreversible (one-way)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the purpose of adding 'Salt' to a password before hashing it?",
+    "options": [
+      {
+        "statement": "To make the password shorter.",
+        "istrue": false
+      },
+      {
+        "statement": "To ensure that two identical passwords result in different hashes, defeating Rainbow Table attacks.",
+        "istrue": true
+      },
+      {
+        "statement": "To allow the admin to recover the password.",
+        "istrue": false
+      },
+      {
+        "statement": "To speed up the login process.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Salt is random data added to the password. Even if two users have the password '123456', their salts will differ, resulting in different hashes, making pre-computed tables (Rainbow Tables) useless."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why do modern systems use 'Slow Hashing' (like Bcrypt)?",
+    "options": [
+      {
+        "statement": "Because modern computers are too slow.",
+        "istrue": false
+      },
+      {
+        "statement": "To make Brute-force attacks computationally expensive and time-consuming for hackers.",
+        "istrue": true
+      },
+      {
+        "statement": "To save electricity.",
+        "istrue": false
+      },
+      {
+        "statement": "To make the internet connection more stable.",
+        "istrue": false
+      }
+    ],
+    "explanation": "By intentionally making the verification process slow (e.g., taking 0.5 seconds), it doesn't bother a normal user, but it makes trying millions of guesses per second impossible for a hacker."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which password has higher 'Entropy' (harder to guess)?",
+    "options": [
+      {
+        "statement": "password1234",
+        "istrue": false
+      },
+      {
+        "statement": "X9#mP2!qL$ (Short random characters)",
+        "istrue": false
+      },
+      {
+        "statement": "CorrectHorseBatteryStaple (Long passphrase)",
+        "istrue": true
+      },
+      {
+        "statement": "12345678",
+        "istrue": false
+      }
+    ],
+    "explanation": "Length is a major factor in entropy. A long passphrase often provides more possible combinations (and is harder to brute force) than a shorter complex string."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "A 'Dictionary Attack' works by:",
+    "options": [
+      {
+        "statement": "Trying every possible combination of characters (aaaa, aaab, etc.).",
+        "istrue": false
+      },
+      {
+        "statement": "Using a list of common words and phrases to guess the password.",
+        "istrue": true
+      },
+      {
+        "statement": "Stealing the physical server.",
+        "istrue": false
+      },
+      {
+        "statement": "Looking up the password in a phone book.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dictionary attacks exploit the human tendency to use meaningful words. They cycle through predefined lists of words rather than random characters."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'Rainbow Table'?",
+    "options": [
+      {
+        "statement": "A list of colorful passwords.",
+        "istrue": false
+      },
+      {
+        "statement": "A pre-computed table of passwords and their corresponding hash values used for quick lookups.",
+        "istrue": true
+      },
+      {
+        "statement": "A type of firewall.",
+        "istrue": false
+      },
+      {
+        "statement": "A chart showing the strength of a password.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A Rainbow Table trades storage space for speed. Instead of calculating the hash for every guess, the hacker looks up the hash in the table to find the password immediately."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary benefit of 'Multi-Factor Authentication' (MFA)?",
+    "options": [
+      {
+        "statement": "It allows you to use the same password everywhere.",
+        "istrue": false
+      },
+      {
+        "statement": "Even if your password is stolen, the attacker still cannot access your account without the second factor (e.g., your phone).",
+        "istrue": true
+      },
+      {
+        "statement": "It stops viruses from downloading.",
+        "istrue": false
+      },
+      {
+        "statement": "It automatically changes your password every day.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MFA requires two different types of evidence (e.g., password + OTP). Compromising one factor (password) is not enough to breach the account."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Account Lockout' policy (e.g., locking after 3 failed attempts) is designed to prevent which specific attack?",
+    "options": [
+      {
+        "statement": "Phishing",
+        "istrue": false
+      },
+      {
+        "statement": "Online Brute-force Attack",
+        "istrue": true
+      },
+      {
+        "statement": "SQL Injection",
+        "istrue": false
+      },
+      {
+        "statement": "Man-in-the-Middle",
+        "istrue": false
+      }
+    ],
+    "explanation": "Locking the account stops an attacker from making thousands of guesses. It forces them to stop, rendering online brute-force attacks ineffective."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the main function of a 'Password Manager'?",
+    "options": [
+      {
+        "statement": "To hack into other people's accounts.",
+        "istrue": false
+      },
+      {
+        "statement": "To scan your computer for viruses.",
+        "istrue": false
+      },
+      {
+        "statement": "To generate and store complex, unique passwords for every site, so you only need to remember one master password.",
+        "istrue": true
+      },
+      {
+        "statement": "To speed up your internet connection.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Password Managers solve the 'Human Factor' problem by handling the complexity of remembering unique, strong passwords for every service."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following scenarios best demonstrates 'Integrity' in data security?",
+    "options": [
+      {
+        "statement": "Encrypting a file so no one can read it.",
+        "istrue": false
+      },
+      {
+        "statement": "Ensuring that a money transfer of 100 baht arrives as exactly 100 baht, not 1000 or 10.",
+        "istrue": true
+      },
+      {
+        "statement": "Keeping a backup of the database.",
+        "istrue": false
+      },
+      {
+        "statement": "Hiding the server in a secure room.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Integrity ensures that data remains accurate and consistent, and has not been altered or tampered with during transmission or storage."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If you have Authentication and Authorization but lack Accounting, why is the system considered 'Not Secure'?",
+    "options": [
+      {
+        "statement": "Because the system will crash frequently.",
+        "istrue": false
+      },
+      {
+        "statement": "Because you cannot prove who performed a malicious action after it happens.",
+        "istrue": true
+      },
+      {
+        "statement": "Because users will not be able to log out.",
+        "istrue": false
+      },
+      {
+        "statement": "Because the database will get full too quickly.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Without Accounting (logs), there is no accountability. If a legitimate user abuses their authorization, there is no evidence to trace it back to them."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Biometrics (Fingerprint, Iris scan) falls under which authentication category in the provided material?",
+    "options": [
+      {
+        "statement": "What you know",
+        "istrue": false
+      },
+      {
+        "statement": "What you have (or What you are)",
+        "istrue": true
+      },
+      {
+        "statement": "Who you trust",
+        "istrue": false
+      },
+      {
+        "statement": "Where you are",
+        "istrue": false
+      }
+    ],
+    "explanation": "Biometrics are physical characteristics inherent to the user. The material groups them under 'What you have' (or traditionally 'What you are') as they are physical attributes you possess."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Threat Modeling'?",
+    "options": [
+      {
+        "statement": "Drawing pictures of hackers.",
+        "istrue": false
+      },
+      {
+        "statement": "Proactively identifying potential vulnerabilities and attack vectors before a system is built or deployed.",
+        "istrue": true
+      },
+      {
+        "statement": "Installing antivirus software.",
+        "istrue": false
+      },
+      {
+        "statement": "Hiring a bodyguard for the server room.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Threat Modeling is the process of analyzing a system's design to identify where and how it might be attacked, allowing for preemptive defense planning."
+  }
+]

@@ -1,0 +1,1129 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหาดั้งเดิมที่ DevOps ถูกสร้างขึ้นมาเพื่อแก้ไขคืออะไร?",
+    "options": [
+      {
+        "statement": "ปัญหาการขาดแคลนนักพัฒนาซอฟต์แวร์",
+        "istrue": false
+      },
+      {
+        "statement": "ปัญหากำแพงและความขัดแย้งระหว่างทีม Development (Dev) และทีม Operations (Ops)",
+        "istrue": true
+      },
+      {
+        "statement": "ปัญหาค่าใช้จ่ายของฮาร์ดแวร์ที่สูงเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "ปัญหาการเขียนโค้ดที่ไม่มีคุณภาพ",
+        "istrue": false
+      }
+    ],
+    "explanation": "DevOps คือวัฒนธรรมที่มุ่งเน้นการทลายกำแพงระหว่างทีม Dev (ที่ต้องการความเร็ว) และทีม Ops (ที่ต้องการความเสถียร) เพื่อให้ทำงานร่วมกันได้อย่างราบรื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เป้าหมายหลักของ DevOps คืออะไร?",
+    "options": [
+      {
+        "statement": "ลดจำนวนทีม Operations ลง",
+        "istrue": false
+      },
+      {
+        "statement": "บังคับให้ทุกคนใช้เครื่องมือเดียวกันทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "ลดระยะเวลาของวงจรการพัฒนาซอฟต์แวร์ (SDLC) ให้สั้นลง",
+        "istrue": true
+      },
+      {
+        "statement": "เพิ่มจำนวนฟีเจอร์ในแต่ละ Release",
+        "istrue": false
+      }
+    ],
+    "explanation": "การลดระยะเวลาของ SDLC ช่วยให้องค์กรสามารถส่งมอบซอฟต์แวร์ที่มีคุณภาพให้ผู้ใช้ได้บ่อยขึ้น, รวดเร็วขึ้น, และน่าเชื่อถือมากขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Continuous Integration (CI) คือแนวปฏิบัติที่เน้นเรื่องใดเป็นสำคัญ?",
+    "options": [
+      {
+        "statement": "การ Deploy โค้ดขึ้น Production ทุกวัน",
+        "istrue": false
+      },
+      {
+        "statement": "การที่นักพัฒนา Commit โค้ดเข้าสู่ศูนย์กลางบ่อยๆ และทุกครั้งจะมีการ Build และ Test โดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "การอนุมัติ Release ด้วยมือเป็นขั้นตอนสุดท้าย",
+        "istrue": false
+      },
+      {
+        "statement": "การเฝ้าระวังระบบ Production",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวใจของ CI คือการรวมโค้ด (Integrate) บ่อยๆ เพื่อตรวจจับข้อผิดพลาดที่เกิดจากการรวมโค้ดให้เร็วที่สุดเท่าที่จะทำได้ผ่านระบบอัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างที่สำคัญที่สุดระหว่าง Continuous Delivery และ Continuous Deployment?",
+    "options": [
+      {
+        "statement": "ไม่มีความแตกต่างกันเลย",
+        "istrue": false
+      },
+      {
+        "statement": "Continuous Delivery จะ Deploy ขึ้น Production โดยอัตโนมัติ แต่ Continuous Deployment ต้องรอการอนุมัติด้วยมือ",
+        "istrue": false
+      },
+      {
+        "statement": "Continuous Delivery จะหยุดที่ Testing Environment เพื่อรอ 'การอนุมัติด้วยมือ' ขั้นสุดท้าย แต่ Continuous Deployment จะ Deploy ขึ้น Production โดยอัตโนมัติทั้งหมด",
+        "istrue": true
+      },
+      {
+        "statement": "Continuous Deployment เป็นส่วนหนึ่งของ Continuous Integration",
+        "istrue": false
+      }
+    ],
+    "explanation": "จุดตัดสินคือ 'การแทรกแซงจากมนุษย์' ก่อนขึ้น Production โดย Continuous Delivery ยังมีขั้นตอนการอนุมัติด้วยมือ ในขณะที่ Continuous Deployment ไม่มีเลย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคโนโลยีใดที่ถือเป็น 'รากฐาน' ที่ทำให้ DevOps และ CI/CD Pipeline เป็นไปได้จริง?",
+    "options": [
+      {
+        "statement": "Agile Development",
+        "istrue": false
+      },
+      {
+        "statement": "Cloud Computing",
+        "istrue": false
+      },
+      {
+        "statement": "Infrastructure as Code (IaC)",
+        "istrue": true
+      },
+      {
+        "statement": "Microservices",
+        "istrue": false
+      }
+    ],
+    "explanation": "IaC ทำให้เราสามารถสร้างและจัดการสภาพแวดล้อม (Dev, Test, Prod) ได้ด้วยโค้ด ซึ่งเป็นสิ่งจำเป็นอย่างยิ่งสำหรับการสร้างระบบอัตโนมัติที่ทำงานข้ามสภาพแวดล้อมเหล่านี้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Infrastructure as Code (IaC) คืออะไร?",
+    "options": [
+      {
+        "statement": "การเขียนโค้ดแอปพลิเคชันให้ทำงานบน Infrastructure ได้",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ AI ช่วยจัดการเซิร์ฟเวอร์",
+        "istrue": false
+      },
+      {
+        "statement": "แนวปฏิบัติในการบริหารจัดการและจัดเตรียม Infrastructure ผ่านการเขียนโค้ดแทนการทำด้วยมือ",
+        "istrue": true
+      },
+      {
+        "statement": "ภาษาโปรแกรมชนิดใหม่สำหรับจัดการฮาร์ดแวร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "IaC คือการนำแนวคิดการพัฒนาซอฟต์แวร์มาใช้กับการจัดการโครงสร้างพื้นฐาน ทำให้สามารถควบคุมเวอร์ชัน, ทดสอบ, และทำงานอัตโนมัติได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เครื่องมือ IaC ประเภท 'Provisioning Tools' มีหน้าที่หลักคืออะไร?",
+    "options": [
+      {
+        "statement": "ติดตั้งซอฟต์แวร์บนเซิร์ฟเวอร์ที่มีอยู่แล้ว",
+        "istrue": false
+      },
+      {
+        "statement": "สร้างทรัพยากรพื้นฐาน (เช่น VM, Network) ขึ้นมาจากศูนย์",
+        "istrue": true
+      },
+      {
+        "statement": "สร้างแม่แบบหรือ Image ของเซิร์ฟเวอร์",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมการทำงานร่วมกันของ Container",
+        "istrue": false
+      }
+    ],
+    "explanation": "Provisioning Tools เช่น Terraform มีหน้าที่ในการสร้างโครงสร้างพื้นฐานหลักที่จำเป็นสำหรับแอปพลิเคชัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ansible จัดเป็นเครื่องมือ IaC ประเภทใด?",
+    "options": [
+      {
+        "statement": "Provisioning Tools",
+        "istrue": false
+      },
+      {
+        "statement": "Configuration Management Tools",
+        "istrue": true
+      },
+      {
+        "statement": "Server Templating Tools",
+        "istrue": false
+      },
+      {
+        "statement": "Orchestration Tools",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ansible เก่งในเรื่องการจัดการการตั้งค่า, ติดตั้งซอฟต์แวร์, และบังคับใช้สถานะบนเซิร์ฟเวอร์ที่ถูกสร้างขึ้นมาแล้ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Docker จัดเป็นเครื่องมือ IaC ประเภทใด?",
+    "options": [
+      {
+        "statement": "Provisioning Tools",
+        "istrue": false
+      },
+      {
+        "statement": "Configuration Management Tools",
+        "istrue": false
+      },
+      {
+        "statement": "Server Templating Tools",
+        "istrue": true
+      },
+      {
+        "statement": "Orchestration Tools",
+        "istrue": false
+      }
+    ],
+    "explanation": "Docker (ผ่าน Dockerfile) ทำหน้าที่สร้าง 'แม่แบบ' หรือ 'Image' ที่มีทุกอย่างพร้อมใช้งานแล้ว ซึ่งเป็นรูปแบบหนึ่งของ Server Templating"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำงานของ Terraform ประกอบด้วย 3 ขั้นตอนหลักคืออะไร?",
+    "options": [
+      {
+        "statement": "Init, Plan, Destroy",
+        "istrue": false
+      },
+      {
+        "statement": "Write, Plan, Apply",
+        "istrue": true
+      },
+      {
+        "statement": "Code, Build, Test",
+        "istrue": false
+      },
+      {
+        "statement": "Push, Pull, Commit",
+        "istrue": false
+      }
+    ],
+    "explanation": "วงจรการทำงานของ Terraform คือการ เขียน (Write) โค้ดเพื่อพรรณนาถึงสถานะที่ต้องการ, วางแผน (Plan) ว่าจะทำอะไรบ้าง, และ ลงมือทำ (Apply) ตามแผนนั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ไฟล์ State (`.tfstate`) ของ Terraform มีหน้าที่สำคัญอย่างไร?",
+    "options": [
+      {
+        "statement": "เก็บโค้ด Terraform ทั้งหมดของโปรเจกต์",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นไฟล์ที่ใช้สำหรับตั้งค่า Provider",
+        "istrue": false
+      },
+      {
+        "statement": "บันทึก 'สถานะปัจจุบัน' ของ Infrastructure ที่ Terraform สร้างไว้ เพื่อใช้เปรียบเทียบกับโค้ดในขั้นตอน Plan",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นไฟล์ Log ของการทำงาน",
+        "istrue": false
+      }
+    ],
+    "explanation": "State File ทำหน้าที่เป็น 'แผนที่' ที่บอก Terraform ว่ามีทรัพยากรอะไรบ้างที่มันกำลังจัดการอยู่ ซึ่งจำเป็นอย่างยิ่งสำหรับขั้นตอนการวางแผน (plan) และการเปลี่ยนแปลง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ส่วนประกอบใดใน Terraform ที่ทำให้สามารถพูดคุยกับ API ของผู้ให้บริการต่างๆ เช่น AWS, Google Cloud, หรือ Docker ได้?",
+    "options": [
+      {
+        "statement": "Resources",
+        "istrue": false
+      },
+      {
+        "statement": "Variables",
+        "istrue": false
+      },
+      {
+        "statement": "Modules",
+        "istrue": false
+      },
+      {
+        "statement": "Providers",
+        "istrue": true
+      }
+    ],
+    "explanation": "Providers คือปลั๊กอินที่ทำหน้าที่แปลโค้ด HCL ของ Terraform ไปเป็น API calls ที่ผู้ให้บริการแต่ละรายเข้าใจ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `terraform init` ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "สร้าง Infrastructure ทั้งหมดขึ้นมาทันที",
+        "istrue": false
+      },
+      {
+        "statement": "ดาวน์โหลดและติดตั้งปลั๊กอิน (Provider) ที่จำเป็นสำหรับโปรเจกต์",
+        "istrue": true
+      },
+      {
+        "statement": "แสดงแผนการทำงานว่าจะสร้างอะไรบ้าง",
+        "istrue": false
+      },
+      {
+        "statement": "ลบ Infrastructure ทั้งหมดทิ้ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "`terraform init` เป็นคำสั่งแรกที่ต้องรันเสมอเพื่อเตรียมความพร้อมให้โปรเจกต์ โดยจะทำการดาวน์โหลด provider ที่ระบุไว้ในโค้ด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดขั้นตอน `terraform plan` จึงมีความสำคัญอย่างยิ่งต่อความปลอดภัย?",
+    "options": [
+      {
+        "statement": "เพราะมันจะสแกนหาช่องโหว่ในโค้ด",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะมันจะสร้างแผนสำรองข้อมูลโดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะมันจะแสดงให้เราเห็น 'ก่อน' ว่า Terraform จะทำอะไรบ้าง (สร้าง, แก้ไข, ลบ) ช่วยให้เราตรวจสอบและป้องกันความผิดพลาดได้",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะมันจะเข้ารหัสไฟล์ State",
+        "istrue": false
+      }
+    ],
+    "explanation": "`terraform plan` เป็นขั้นตอนการทบทวน (review) ที่สำคัญ ทำให้ผู้ใช้สามารถเห็นผลกระทบของการเปลี่ยนแปลงก่อนที่จะนำไปใช้งานจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `terraform destroy` ใช้ทำอะไร?",
+    "options": [
+      {
+        "statement": "หยุดการทำงานของเซิร์ฟเวอร์ชั่วคราว",
+        "istrue": false
+      },
+      {
+        "statement": "ล้างแคชของ Terraform",
+        "istrue": false
+      },
+      {
+        "statement": "รื้อถอนหรือลบ Infrastructure ทั้งหมดที่ถูกจัดการโดยโปรเจกต์ Terraform นั้นๆ",
+        "istrue": true
+      },
+      {
+        "statement": "ย้อนกลับไปใช้โค้ดเวอร์ชันก่อนหน้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "`terraform destroy` เป็นคำสั่งสำหรับทำลายล้างทรัพยากรทั้งหมดที่นิยามไว้ในโค้ดและถูกบันทึกไว้ใน state file"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ส่วนประกอบใดใน Terraform ที่เปรียบได้กับ 'Input' หรือ 'Parameter' ของโปรแกรม?",
+    "options": [
+      {
+        "statement": "Output Values",
+        "istrue": false
+      },
+      {
+        "statement": "Data Sources",
+        "istrue": false
+      },
+      {
+        "statement": "Variables",
+        "istrue": true
+      },
+      {
+        "statement": "Modules",
+        "istrue": false
+      }
+    ],
+    "explanation": "Variables ช่วยให้โค้ด Terraform สามารถนำกลับมาใช้ซ้ำได้ (reusable) โดยการแยกค่าที่อาจเปลี่ยนแปลงได้ออกมาจากโค้ดหลัก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หน้าที่หลักของ Ansible คืออะไร?",
+    "options": [
+      {
+        "statement": "สร้าง Virtual Machine ขึ้นมาจากศูนย์",
+        "istrue": false
+      },
+      {
+        "statement": "จัดการการตั้งค่า (Configuration Management) และบังคับใช้สถานะบนเซิร์ฟเวอร์ที่มีอยู่แล้ว",
+        "istrue": true
+      },
+      {
+        "statement": "เฝ้าระวังประสิทธิภาพของระบบ",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง CI/CD Pipeline",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ansible เชี่ยวชาญในการทำให้เซิร์ฟเวอร์ที่ทำงานอยู่มีสถานะตรงตามที่เราต้องการ เช่น มีซอฟต์แวร์ที่ถูกต้องติดตั้งอยู่, มีไฟล์ config ที่ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือจุดเด่นที่สุดของ Ansible ที่ทำให้แตกต่างจากเครื่องมือ Configuration Management อื่นๆ?",
+    "options": [
+      {
+        "statement": "ทำงานได้เร็วกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น Open-source",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นแบบ Agentless (ไม่ต้องติดตั้งซอฟต์แวร์ใดๆ บนเครื่องเป้าหมาย)",
+        "istrue": true
+      },
+      {
+        "statement": "เขียนด้วยภาษา Python",
+        "istrue": false
+      }
+    ],
+    "explanation": "การที่เป็น Agentless ทำให้ Ansible ง่ายต่อการเริ่มต้นใช้งานและลดภาระในการดูแลรักษา เพราะขอแค่เครื่องเป้าหมายเปิดให้เชื่อมต่อผ่าน SSH ได้ก็พอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ansible ใช้ภาษาใดในการเขียน Playbook?",
+    "options": [
+      {
+        "statement": "Python",
+        "istrue": false
+      },
+      {
+        "statement": "HCL",
+        "istrue": false
+      },
+      {
+        "statement": "JSON",
+        "istrue": false
+      },
+      {
+        "statement": "YAML",
+        "istrue": true
+      }
+    ],
+    "explanation": "Ansible เลือกใช้ YAML เพราะเป็นภาษาที่มนุษย์อ่านและเขียนได้ง่าย มีโครงสร้างที่ชัดเจน เหมาะสำหรับการพรรณนาถึงสถานะของระบบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรมของ Ansible, 'Inventory' คืออะไร?",
+    "options": [
+      {
+        "statement": "ชุดคำสั่งที่บอกว่าจะต้องทำอะไรบ้าง",
+        "istrue": false
+      },
+      {
+        "statement": "'สมุดรายชื่อ' หรือบัญชีรายชื่อของเซิร์ฟเวอร์เป้าหมาย (Managed Nodes) ที่ Ansible จะเข้าไปจัดการ",
+        "istrue": true
+      },
+      {
+        "statement": "เครื่องมือย่อยๆ ที่ใช้ในการทำงานจริง",
+        "istrue": false
+      },
+      {
+        "statement": "คลังสำหรับแบ่งปันชุดคำสั่งสำเร็จรูป",
+        "istrue": false
+      }
+    ],
+    "explanation": "Inventory คือไฟล์ที่ใช้กำหนดว่า host ไหนบ้างที่ Ansible จะทำงานด้วย และสามารถจัดกลุ่ม host เหล่านั้นเพื่อให้ง่ายต่อการอ้างอิงใน Playbook"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Ansible, 'Playbook' คืออะไร?",
+    "options": [
+      {
+        "statement": "รายชื่อของเซิร์ฟเวอร์ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "คำสั่งที่ใช้รันงานเฉพาะกิจครั้งเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "'คัมภีร์' หรือไฟล์ YAML ที่รวบรวมชุดของคำสั่ง (Tasks) ที่จะให้ Ansible ทำงานตามลำดับ",
+        "istrue": true
+      },
+      {
+        "statement": "ปลั๊กอินสำหรับเชื่อมต่อกับ Cloud",
+        "istrue": false
+      }
+    ],
+    "explanation": "Playbook คือหัวใจของ Ansible ที่ทำให้กระบวนการจัดการ Configuration เป็นอัตโนมัติ, ทำซ้ำได้, และสามารถเก็บเป็นโค้ดได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ Ad-Hoc Commands ของ Ansible เหมาะสำหรับงานประเภทใด?",
+    "options": [
+      {
+        "statement": "งานที่ซับซ้อนและต้องทำซ้ำๆ บ่อยๆ",
+        "istrue": false
+      },
+      {
+        "statement": "งานง่ายๆ ที่ทำครั้งเดียวแล้วจบ เช่น ตรวจสอบการเชื่อมต่อหรือรีสตาร์ทเซิร์ฟเวอร์",
+        "istrue": true
+      },
+      {
+        "statement": "งานที่ต้องใช้สิทธิ์ root เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "งานที่ต้องจัดการเซิร์ฟเวอร์มากกว่า 100 เครื่อง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ad-Hoc commands เหมาะสำหรับงานที่รวดเร็วและไม่จำเป็นต้องบันทึกไว้เป็นกระบวนการที่เป็นทางการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คุณสมบัติ 'Idempotency' ของ Ansible หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "การรัน Playbook แต่ละครั้งจะให้ผลลัพธ์ที่แตกต่างกันเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "Playbook สามารถทำงานได้บนทุกระบบปฏิบัติการ",
+        "istrue": false
+      },
+      {
+        "statement": "การรัน Playbook เดิมซ้ำกี่ครั้งก็ตาม ผลลัพธ์สุดท้ายจะต้องเหมือนกันเสมอ และจะทำการเปลี่ยนแปลงก็ต่อเมื่อจำเป็นเท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "Playbook จะทำงานเร็วขึ้นทุกครั้งที่รันซ้ำ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Idempotency เป็นหลักการที่สำคัญที่ทำให้ Ansible ปลอดภัยในการใช้งานซ้ำๆ เพราะมันจะตรวจสอบสถานะก่อนลงมือทำเสมอ หากระบบอยู่ในสถานะที่ต้องการแล้ว มันก็จะไม่ทำอะไรเลย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณรัน Playbook เดิมเป็นครั้งที่สอง และ Ansible รายงานผลว่า `changed=0`, นั่นหมายความว่าอะไร?",
+    "options": [
+      {
+        "statement": "Playbook ทำงานล้มเหลว",
+        "istrue": false
+      },
+      {
+        "statement": "สถานะปัจจุบันของระบบตรงกับสถานะที่พรรณนาไว้ใน Playbook แล้ว Ansible จึงไม่จำเป็นต้องทำการเปลี่ยนแปลงใดๆ",
+        "istrue": true
+      },
+      {
+        "statement": "Ansible ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์เป้าหมายได้",
+        "istrue": false
+      },
+      {
+        "statement": "มีการเปลี่ยนแปลงเกิดขึ้น 1 อย่าง",
+        "istrue": false
+      }
+    ],
+    "explanation": "`changed=0` เป็นการยืนยันว่าระบบอยู่ในสถานะที่ถูกต้องตามที่ต้องการแล้ว ซึ่งเป็นผลมาจากคุณสมบัติ Idempotency"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ansible Galaxy คืออะไร?",
+    "options": [
+      {
+        "statement": "เวอร์ชัน Enterprise ของ Ansible",
+        "istrue": false
+      },
+      {
+        "statement": "คลังสำหรับแบ่งปันและดาวน์โหลดชุดคำสั่งสำเร็จรูป (Roles, Collections) ที่สร้างโดยชุมชนผู้ใช้งาน",
+        "istrue": true
+      },
+      {
+        "statement": "เครื่องมือสำหรับสร้าง Inventory",
+        "istrue": false
+      },
+      {
+        "statement": "หน้าจอ UI สำหรับจัดการ Ansible",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ansible Galaxy ช่วยให้นำโค้ดที่คนอื่นเขียนไว้แล้วมาใช้ซ้ำได้ง่ายขึ้นมาก ทำให้ไม่ต้องเริ่มเขียนทุกอย่างจากศูนย์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการเปรียบเทียบหน้าที่ของ Terraform และ Ansible ที่ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "Terraform และ Ansible ทำหน้าที่เหมือนกันทุกประการ",
+        "istrue": false
+      },
+      {
+        "statement": "Terraform ตกแต่งบ้าน, Ansible สร้างบ้าน",
+        "istrue": false
+      },
+      {
+        "statement": "Terraform สร้างบ้าน (Provisioning), Ansible ตกแต่งบ้าน (Configuration)",
+        "istrue": true
+      },
+      {
+        "statement": "Terraform ใช้กับ Cloud, Ansible ใช้กับเซิร์ฟเวอร์จริงเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเปรียบเทียบนี้ช่วยให้เห็นภาพชัดเจนว่า Terraform เก่งในการสร้างโครงสร้างพื้นฐาน ในขณะที่ Ansible เก่งในการจัดการสิ่งที่อยู่บนโครงสร้างพื้นฐานนั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดเราจึงยังต้องการใช้ Ansible ในการจัดการ Deployment เข้าสู่ Kubernetes Cluster?",
+    "options": [
+      {
+        "statement": "เพราะ `kubectl` ไม่สามารถสร้าง Pod ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Ansible สามารถทำหน้าที่เป็น 'วาทยกร' ควบคุมกระบวนการทั้งหมดที่อาจเกี่ยวข้องกับขั้นตอนนอก Cluster ได้",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Ansible ทำงานได้เร็วกว่า `kubectl`",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Kubernetes ไม่รองรับไฟล์ YAML",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ansible สามารถเข้ามาจัดการ Workflow ที่ซับซ้อนกว่าได้ เช่น การตั้งค่า Firewall ภายนอก, การรัน Test, หรือการ Deploy ตามลำดับขั้นตอนที่ซับซ้อน ซึ่งอยู่นอกเหนือขอบเขตของ `kubectl`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Playbook, คีย์ `hosts: webservers` หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "ให้สร้างเซิร์ฟเวอร์ใหม่ชื่อ `webservers`",
+        "istrue": false
+      },
+      {
+        "statement": "ให้ Play นี้ทำงานกับกลุ่มของ Host ที่ชื่อ `webservers` ซึ่งนิยามไว้ในไฟล์ Inventory",
+        "istrue": true
+      },
+      {
+        "statement": "ให้ติดตั้ง Web Server บน Host ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "ให้เชื่อมต่อกับ Host ที่ชื่อ `webservers` เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "`hosts` เป็นคีย์ระดับบนสุดใน Play ที่ใช้สำหรับระบุเป้าหมาย (target) ของ Task ทั้งหมดที่อยู่ภายใต้ Play นั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากต้องการใช้สิทธิ์ root (sudo) ใน Task ของ Ansible Playbook, ควรเพิ่มคีย์ใดเข้าไป?",
+    "options": [
+      {
+        "statement": "sudo: yes",
+        "istrue": false
+      },
+      {
+        "statement": "root: true",
+        "istrue": false
+      },
+      {
+        "statement": "become: yes",
+        "istrue": true
+      },
+      {
+        "statement": "escalate: true",
+        "istrue": false
+      }
+    ],
+    "explanation": "คีย์ `become: yes` เป็นวิธีมาตรฐานในการบอก Ansible ให้ทำการยกระดับสิทธิ์ (Privilege Escalation) สำหรับ Task นั้นๆ ซึ่งโดยปกติคือการใช้ `sudo`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ansible Module `apt` ใช้สำหรับทำอะไร?",
+    "options": [
+      {
+        "statement": "คัดลอกไฟล์",
+        "istrue": false
+      },
+      {
+        "statement": "จัดการแพ็กเกจบนระบบปฏิบัติการ Debian/Ubuntu",
+        "istrue": true
+      },
+      {
+        "statement": "จัดการ Service (start, stop, restart)",
+        "istrue": false
+      },
+      {
+        "statement": "รันคำสั่ง Shell",
+        "istrue": false
+      }
+    ],
+    "explanation": "`apt` module เป็น wrapper สำหรับคำสั่ง `apt-get` หรือ `apt` ทำให้สามารถติดตั้ง, อัปเดต, หรือลบแพ็กเกจได้อย่าง idempotently"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การรัน `ansible all -m ping` มีวัตถุประสงค์หลักเพื่ออะไร?",
+    "options": [
+      {
+        "statement": "ตรวจสอบความเร็วของเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "รีสตาร์ท Host ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "ทดสอบว่า Ansible สามารถเชื่อมต่อและรันคำสั่งพื้นฐานบน Host ทั้งหมดใน Inventory ได้หรือไม่",
+        "istrue": true
+      },
+      {
+        "statement": "ติดตั้ง Ansible บน Host ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "`ping` module ไม่ใช่ ICMP ping แต่เป็นการทดสอบการเชื่อมต่อ SSH, การหา Python interpreter, และการรัน module พื้นฐาน ซึ่งเป็นขั้นตอนแรกที่ดีในการตรวจสอบความพร้อมของระบบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Terraform, `resource \"docker_container\" \"nginx\"` ส่วนที่เป็น `\"nginx\"` คืออะไร?",
+    "options": [
+      {
+        "statement": "ชื่อของ Image ที่จะใช้",
+        "istrue": false
+      },
+      {
+        "statement": "ชื่อของ Container ที่จะถูกสร้างขึ้นจริง",
+        "istrue": false
+      },
+      {
+        "statement": "ชื่อเล่น (Local Name) ของ Resource นี้ที่ใช้สำหรับอ้างอิงภายในโค้ด Terraform เท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "ชื่อของ Provider",
+        "istrue": false
+      }
+    ],
+    "explanation": "Terraform ใช้รูปแบบ `[resource-type].[local-name]` ในการอ้างอิงถึง resource ภายในโค้ด เช่น `docker_image.nginx.image_id`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าคุณแก้ไขโค้ดในไฟล์ `.tf` ของคุณ, คำสั่งใดที่คุณควรจะรันเป็นลำดับถัดไปเพื่อดูผลกระทบของการเปลี่ยนแปลง?",
+    "options": [
+      {
+        "statement": "terraform init",
+        "istrue": false
+      },
+      {
+        "statement": "terraform apply",
+        "istrue": false
+      },
+      {
+        "statement": "terraform plan",
+        "istrue": true
+      },
+      {
+        "statement": "terraform destroy",
+        "istrue": false
+      }
+    ],
+    "explanation": "หลังจากแก้ไขโค้ด ควรจะรัน `terraform plan` เสมอเพื่อตรวจสอบว่าแผนการทำงาน (execution plan) ที่ Terraform สร้างขึ้นนั้นตรงกับที่เราคาดหวังหรือไม่ ก่อนที่จะ `apply` จริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการทำงานของ Terraform ที่ถูกต้องในการสร้าง Docker Container ตามตัวอย่าง?",
+    "options": [
+      {
+        "statement": "สร้าง Container ก่อน แล้วค่อยดึง Image มาใส่",
+        "istrue": false
+      },
+      {
+        "statement": "ดึง Image (Resource 1) มาก่อน แล้วจึงสร้าง Container โดยอ้างอิงถึง Image นั้น (Resource 2)",
+        "istrue": true
+      },
+      {
+        "statement": "ทำทั้งสองอย่างพร้อมๆ กัน",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง Container เปล่าๆ แล้วให้ผู้ใช้ติดตั้ง Image เอง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Terraform จะสร้างกราฟความสัมพันธ์ (dependency graph) โดยอัตโนมัติ และจะสร้าง resource ที่เป็น dependency (ในที่นี้คือ `docker_image`) ก่อน resource ที่ต้องพึ่งพามัน (ในที่นี้คือ `docker_container`)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ ประโยชน์ของการใช้ IaC?",
+    "options": [
+      {
+        "statement": "สามารถควบคุมเวอร์ชันของ Infrastructure ได้",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Roll-back ทำได้ง่ายขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ลดความจำเป็นในการทดสอบซอฟต์แวร์ลง",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้กระบวนการสร้าง Infrastructure เป็นอัตโนมัติและทำซ้ำได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "IaC ไม่ได้ลดความจำเป็นในการทดสอบซอฟต์แวร์ แต่ในทางกลับกัน มันช่วยให้การสร้างสภาพแวดล้อมสำหรับการทดสอบทำได้ง่ายและน่าเชื่อถือมากขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Terraform Modules เปรียบได้กับอะไรในภาษาโปรแกรมทั่วไป?",
+    "options": [
+      {
+        "statement": "ตัวแปร (Variables)",
+        "istrue": false
+      },
+      {
+        "statement": "ฟังก์ชัน หรือ ไลบรารี (Functions or Libraries)",
+        "istrue": true
+      },
+      {
+        "statement": "คำสั่งเงื่อนไข (If-else statements)",
+        "istrue": false
+      },
+      {
+        "statement": "ลูป (Loops)",
+        "istrue": false
+      }
+    ],
+    "explanation": "Modules ช่วยให้เราสามารถห่อหุ้มกลุ่มของ resources ที่เกี่ยวข้องกันไว้เป็นหน่วยเดียวที่สามารถนำกลับมาใช้ซ้ำได้ ซึ่งเป็นแนวคิดเดียวกับการสร้างฟังก์ชันหรือไลบรารี"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ansible สื่อสารกับ Managed Nodes ผ่านโปรโตคอลอะไร?",
+    "options": [
+      {
+        "statement": "HTTP",
+        "istrue": false
+      },
+      {
+        "statement": "FTP",
+        "istrue": false
+      },
+      {
+        "statement": "SSH",
+        "istrue": true
+      },
+      {
+        "statement": "Telnet",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้ SSH เป็นช่องทางการสื่อสารหลักเป็นเหตุผลที่ทำให้ Ansible เป็นแบบ Agentless เพราะ SSH client และ server มีอยู่แล้วในระบบปฏิบัติการส่วนใหญ่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Terraform Data Sources ใช้ทำอะไร?",
+    "options": [
+      {
+        "statement": "สร้างข้อมูลใหม่ใน Cloud",
+        "istrue": false
+      },
+      {
+        "statement": "ดึงข้อมูลจาก Infrastructure ที่มีอยู่แล้วหรือจากภายนอกเข้ามาใช้ในโค้ด Terraform",
+        "istrue": true
+      },
+      {
+        "statement": "ลบข้อมูลที่ไม่ต้องการ",
+        "istrue": false
+      },
+      {
+        "statement": "แสดงข้อมูลผลลัพธ์ออกทางหน้าจอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Data Sources ทำหน้าที่เป็น read-only ทำให้เราสามารถอ้างอิงถึงทรัพยากรที่ไม่ได้ถูกจัดการโดย Terraform หรือข้อมูลแบบไดนามิกได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Terraform, ถ้า `terraform plan` แสดงผลลัพธ์เป็น `~` (tilde) หน้าชื่อ Resource, นั่นหมายความว่าอะไร?",
+    "options": [
+      {
+        "statement": "Resource นั้นจะถูกสร้างใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "Resource นั้นจะถูกลบทิ้ง",
+        "istrue": false
+      },
+      {
+        "statement": "Resource นั้นจะถูกแก้ไข (update in-place)",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่มีการเปลี่ยนแปลงใดๆ กับ Resource นั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "`+` หมายถึง create, `-` หมายถึง destroy, และ `~` หมายถึง update ซึ่งเป็นการเปลี่ยนแปลง attribute ของ resource ที่มีอยู่แล้ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นตัวอย่างของ Ad-Hoc Command ใน Ansible?",
+    "options": [
+      {
+        "statement": "ansible-playbook nginx.yaml",
+        "istrue": false
+      },
+      {
+        "statement": "ansible all -m ping",
+        "istrue": true
+      },
+      {
+        "statement": "terraform apply",
+        "istrue": false
+      },
+      {
+        "statement": "docker run nginx",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ad-Hoc commands คือการรัน module ของ Ansible โดยตรงจาก command line โดยไม่ได้ใช้ Playbook"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Ansible Playbook, `tasks` คืออะไร?",
+    "options": [
+      {
+        "statement": "รายชื่อของ Host ที่จะทำงานด้วย",
+        "istrue": false
+      },
+      {
+        "statement": "รายการของงานที่จะให้ Ansible ทำตามลำดับ ซึ่งแต่ละงานจะเรียกใช้ Module หนึ่งตัว",
+        "istrue": true
+      },
+      {
+        "statement": "ตัวแปรที่ใช้ใน Playbook",
+        "istrue": false
+      },
+      {
+        "statement": "ผลลัพธ์ของการรัน Playbook",
+        "istrue": false
+      }
+    ],
+    "explanation": "ส่วน `tasks` เป็นรายการของ action ที่จะถูก execute บน host เป้าหมาย โดยแต่ละ task คือการเรียกใช้ Ansible module พร้อมกับ argument ที่ต้องการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เครื่องมือใดที่ช่วยให้เรามั่นใจได้ว่าสภาพแวดล้อมของ Dev, Testing, และ Production มีหน้าตาเหมือนกันทุกประการ?",
+    "options": [
+      {
+        "statement": "Git",
+        "istrue": false
+      },
+      {
+        "statement": "Jenkins",
+        "istrue": false
+      },
+      {
+        "statement": "Infrastructure as Code (เช่น Terraform)",
+        "istrue": true
+      },
+      {
+        "statement": "Jira",
+        "istrue": false
+      }
+    ],
+    "explanation": "IaC ทำให้เราสามารถสร้างสภาพแวดล้อมที่เหมือนกันเป๊ะๆ ซ้ำๆ ได้จากโค้ดเพียงชุดเดียว ซึ่งช่วยลดปัญหา 'it works on my machine' และเพิ่มความน่าเชื่อถือของการทดสอบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Terraform สามารถทำงานร่วมกับผู้ให้บริการคลาวด์ได้หลากหลาย (Multi-cloud) เพราะอะไร?",
+    "options": [
+      {
+        "statement": "เพราะมันเป็นของบริษัท HashiCorp",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะมีสถาปัตยกรรมแบบปลั๊กอินที่เรียกว่า Providers ซึ่งสามารถพัฒนาขึ้นมาเพื่อรองรับ API ของแต่ละค่ายได้",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะผู้ให้บริการคลาวด์ทุกค่ายใช้ API เดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะมันรันอยู่บน Kubernetes",
+        "istrue": false
+      }
+    ],
+    "explanation": "สถาปัตยกรรมแบบ Provider-based ทำให้ Terraform มีความยืดหยุ่นสูงและสามารถขยายการรองรับไปยังเทคโนโลยีใหม่ๆ ได้อย่างต่อเนื่อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Ansible, `service` module ที่มี `state: started` เป็นตัวอย่างของคุณสมบัติ Idempotency อย่างไร?",
+    "options": [
+      {
+        "statement": "มันจะพยายาม start service ทุกครั้งที่รัน",
+        "istrue": false
+      },
+      {
+        "statement": "ถ้า service ยังไม่ทำงาน มันจะ start ให้ (changed=1) แต่ถ้า service ทำงานอยู่แล้ว มันจะไม่ทำอะไรเลย (changed=0)",
+        "istrue": true
+      },
+      {
+        "statement": "มันจะ restart service ทุกครั้งที่รัน",
+        "istrue": false
+      },
+      {
+        "statement": "มันจะตรวจสอบสถานะของ service เท่านั้น แต่ไม่ทำการเปลี่ยนแปลงใดๆ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ansible module ถูกออกแบบมาให้ idempotent โดยจะตรวจสอบสถานะปัจจุบันก่อน หากตรงกับ state ที่ต้องการแล้ว ก็จะไม่ดำเนินการใดๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าทีม Ops ต้องการความมั่นคงและไม่ชอบการเปลี่ยนแปลง ในขณะที่ทีม Dev ต้องการพัฒนาฟีเจอร์ใหม่ๆ ให้เร็วที่สุด นี่คือตัวอย่างของอะไร?",
+    "options": [
+      {
+        "statement": "CI/CD Pipeline ที่ดี",
+        "istrue": false
+      },
+      {
+        "statement": "วัฒนธรรม DevOps ที่แข็งแกร่ง",
+        "istrue": false
+      },
+      {
+        "statement": "ปัญหา 'กำแพง' ระหว่างทีม Dev และ Ops",
+        "istrue": true
+      },
+      {
+        "statement": "การใช้ Infrastructure as Code",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความขัดแย้งของเป้าหมาย (conflicting goals) ระหว่างสองทีมนี้คือปัญหาคลาสสิกที่ DevOps พยายามเข้ามาแก้ไขโดยการสร้างเป้าหมายร่วมกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ ส่วนหนึ่งของวงจร DevOps Continuous Lifecycle?",
+    "options": [
+      {
+        "statement": "Plan, Code, Build, Test",
+        "istrue": false
+      },
+      {
+        "statement": "Release, Deploy, Operate, Monitor",
+        "istrue": false
+      },
+      {
+        "statement": "Approval, Meeting, Reporting, Budgeting",
+        "istrue": true
+      },
+      {
+        "statement": "การนำ Feedback กลับมาปรับปรุงในวงจรต่อไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "วงจรของ DevOps เน้นไปที่กระบวนการทางเทคนิคที่เกี่ยวข้องกับการพัฒนาและส่งมอบซอฟต์แวร์โดยตรง ในขณะที่การอนุมัติ, การประชุม, การทำรีพอร์ต เป็นกระบวนการทางการบริหารจัดการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ Terraform และ Ansible ร่วมกันเป็นตัวอย่างของอะไร?",
+    "options": [
+      {
+        "statement": "การเลือกใช้เครื่องมือที่เหมาะสมกับงานแต่ละประเภท (Provisioning vs. Configuration)",
+        "istrue": true
+      },
+      {
+        "statement": "การแข่งขันระหว่างสองเครื่องมือ",
+        "istrue": false
+      },
+      {
+        "statement": "การทำงานที่ซ้ำซ้อนกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การเปลี่ยนจากเครื่องมือเก่าไปสู่เครื่องมือใหม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "เครื่องมือแต่ละตัวมีความเชี่ยวชาญที่แตกต่างกัน การนำจุดแข็งของแต่ละตัวมาใช้ร่วมกันทำให้ได้ระบบอัตโนมัติที่สมบูรณ์และมีประสิทธิภาพสูงสุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Terraform Output Values มีประโยชน์อย่างไร?",
+    "options": [
+      {
+        "statement": "ใช้สำหรับรับค่า Input จากผู้ใช้",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้สำหรับแสดงข้อมูลที่ได้จากการสร้าง Infrastructure (เช่น IP Address ของเซิร์ฟเวอร์) ออกมาให้ผู้ใช้ทราบ",
+        "istrue": true
+      },
+      {
+        "statement": "ใช้สำหรับเขียน Log การทำงาน",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้สำหรับลบ Resource",
+        "istrue": false
+      }
+    ],
+    "explanation": "Output values ทำให้เราสามารถดึงข้อมูลที่ถูกสร้างขึ้นแบบไดนามิกออกมาจาก Terraform state เพื่อนำไปใช้ต่อในขั้นตอนอื่นหรือแสดงให้ผู้ใช้เห็นได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นจริงเกี่ยวกับ Ansible และ Master Server?",
+    "options": [
+      {
+        "statement": "Ansible จำเป็นต้องมี Master Server ที่ทำงานตลอดเวลา",
+        "istrue": false
+      },
+      {
+        "statement": "Ansible เป็นแบบ Master-less ทำงานโดยการ push คำสั่งจาก Control Node ไปยังเครื่องเป้าหมาย",
+        "istrue": true
+      },
+      {
+        "statement": "Managed Node ทุกตัวต้องติดตั้ง Master Agent",
+        "istrue": false
+      },
+      {
+        "statement": "Master Server ของ Ansible เรียกว่า Ansible Galaxy",
+        "istrue": false
+      }
+    ],
+    "explanation": "สถาปัตยกรรมแบบ Master-less และ Agentless ทำให้ Ansible มีโครงสร้างที่เรียบง่ายและง่ายต่อการบำรุงรักษา"
+  }
+]

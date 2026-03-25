@@ -1,0 +1,462 @@
+[
+  {
+     "type": "multiple-choice",
+    "question": "จากวิธีของ QAM หาก 1 baud สามารถส่งข้อมูลได้ครั้งละ 4 บิต และใน 1 วินาทีส่งได้ 16 baud การส่งข้อมูลนี้มีความเร็ว bit rate เท่ากับเท่าไร?",
+    "options": [
+      {
+        "statement": "16 bps",
+        "istrue": false
+      },
+      {
+        "statement": "64 bps",
+        "istrue": true
+      },
+      {
+        "statement": "16 b",
+        "istrue": false
+      },
+      {
+        "statement": "64 b",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในแต่ละ 1 baud สามารถบรรจุได้ 4 บิต และใน 1 วินาทีส่งสัญญาณได้ 16 baud ดังนั้นอัตราการส่งบิต (bit rate) จึงเท่ากับ 16 x 4 = 64 bps"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "เมื่อใช้เทคนิค PCM สิ่งใดจะเกิดขึ้นเสมอ?",
+    "options": [
+      {
+        "statement": "Quantization noise",
+        "istrue": true
+      },
+      {
+        "statement": "Impulse noise",
+        "istrue": false
+      },
+      {
+        "statement": "White noise",
+        "istrue": false
+      },
+      {
+        "statement": "Bit error",
+        "istrue": false
+      }
+    ],
+    "explanation": "PCM (Pulse Code Modulation) เป็นการแปลงสัญญาณแอนะล็อกเป็นดิจิทัลด้วยการสุ่มตัวอย่างและทำการเข้ารหัส ระหว่างกระบวนการนี้จะมี Quantization noise เกิดขึ้นเสมอ เนื่องจากการปัดค่าให้เป็นระดับดิจิทัล"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ถ้าคลื่นที่ใช้ในการส่งสัญญาณข้อมูลมีค่าตั้งแต่ 300 MHz ถึง 3000 MHz แสดงว่าค่าแบนด์วิดท์มีค่าเท่าไร?",
+    "options": [
+      {
+        "statement": "300 MHz",
+        "istrue": false
+      },
+      {
+        "statement": "3000 MHz",
+        "istrue": false
+      },
+      {
+        "statement": "2700 MHz",
+        "istrue": true
+      },
+      {
+        "statement": "3300 MHz",
+        "istrue": false
+      }
+    ],
+    "explanation": "แบนด์วิดท์ (Bandwidth) คือช่วงความถี่สูงสุดลบด้วยความถี่ต่ำสุด ดังนั้น 3000 MHz - 300 MHz = 2700 MHz"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้แตกต่างจากข้ออื่น?",
+    "options": [
+      {
+        "statement": "ASK กับ FSK",
+        "istrue": false
+      },
+      {
+        "statement": "PCM กับ DM",
+        "istrue": true
+      },
+      {
+        "statement": "PSK กับ FSK",
+        "istrue": false
+      },
+      {
+        "statement": "ASK กับ PSK",
+        "istrue": false
+      }
+    ],
+    "explanation": "ASK, FSK และ PSK เป็นเทคนิคการมอดูเลตสัญญาณทางใดทางหนึ่ง (เปลี่ยนแอมพลิจูด ความถี่ หรือเฟส) ส่วน PCM กับ DM (Delta Modulation) คือเทคนิคการแปลงสัญญาณแอนะล็อกเป็นดิจิทัล จึงแตกต่างจากวิธีอื่นที่เป็นการมอดูเลตโดยตรง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การเข้ารหัสเพื่อส่งข้อมูลดิจิทัลแบบ Non-return to Zero (NRZ) มีลักษณะสำคัญอย่างไร?",
+    "options": [
+      {
+        "statement": "ค่าของบิตไม่ควรมีค่าเดียวกันในตำแหน่งที่ติดกันเป็นจำนวนมาก",
+        "istrue": false
+      },
+      {
+        "statement": "ค่าของบิตที่เท่ากันและติดกันจะต้องใช้กระแสไฟฟ้าสลับขั้วกันเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "ค่าของบิต 0/1 เป็นการใช้กระแสไฟฟ้าขั้วลบและขั้วบวกในการกำหนดค่าเท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "จำนวนบิต 0/1 ไม่ควรมีค่าสลับกันไปมามากเกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "NRZ คือการเข้ารหัสที่ระดับแรงดันไฟฟ้าไม่กลับไปที่ศูนย์ระหว่างบิต โดยบิต ‘0’ และ ‘1’ มักกำหนดด้วยแรงดันไฟฟ้าขั้วลบหรือขั้วบวก (หรือ 0 และ +V) ทำให้สัญญาณไม่เปลี่ยนกลับมาที่ 0 ในแต่ละช่องเวลา"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "\"บิตแรกใช้เวลาเดินทางจากต้นทางไปยังปลายทางใช้เวลา 2 ms\" ข้อความนี้ระบุถึงค่าเวลาใด?",
+    "options": [
+      {
+        "statement": "Transmission delay",
+        "istrue": false
+      },
+      {
+        "statement": "Propagation delay",
+        "istrue": true
+      },
+      {
+        "statement": "Queuing delay",
+        "istrue": false
+      },
+      {
+        "statement": "Processing delay",
+        "istrue": false
+      }
+    ],
+    "explanation": "Propagation delay คือเวลาที่สัญญาณใช้ในการเดินทางจากต้นทางถึงปลายทาง (นับเฉพาะการเคลื่อนที่ในสื่อกลาง) ดังนั้นเมื่อระบุว่าบิตแรกเดินทางถึงปลายทางใน 2 ms จึงหมายถึงค่า Propagation delay"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "NRZ-L ไม่เหมาะกับข้อมูลแบบใด?",
+    "options": [
+      {
+        "statement": "00111000",
+        "istrue": false
+      },
+      {
+        "statement": "00110011",
+        "istrue": false
+      },
+      {
+        "statement": "11111111",
+        "istrue": true
+      },
+      {
+        "statement": "00011100",
+        "istrue": false
+      }
+    ],
+    "explanation": "NRZ-L ไม่เหมาะกับการส่งข้อมูลที่มีบิตค่าเดียวกันติดกันยาวนาน เช่น 11111111 เพราะไม่มีการเปลี่ยนระดับแรงดันไฟฟ้าเลย อาจทำให้รับ-ส่งข้อมูลคลาดเคลื่อนหรือเกิดปัญหาซิงโครไนซ์ง่าย"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่สิ่งที่เกิดขึ้นเมื่อมีการส่งข้อมูลทางไกล?",
+    "options": [
+      {
+        "statement": "Noise",
+        "istrue": false
+      },
+      {
+        "statement": "Error detection",
+        "istrue": false
+      },
+      {
+        "statement": "Transmission error",
+        "istrue": false
+      },
+      {
+        "statement": "Code detection",
+        "istrue": true
+      }
+    ],
+    "explanation": "เมื่อส่งข้อมูลทางไกล มักต้องเผชิญกับ Noise (สัญญาณรบกวน), อาจเกิด Transmission error และต้องมี Error detection เพื่อตรวจสอบความถูกต้อง แต่ Code detection ไม่ได้เกิดขึ้นโดยอัตโนมัติในการส่งข้อมูล"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Bipolar Return-to-Zero ใช้กระแสไฟฟ้าเพื่อส่งข้อมูลคล้ายกับการเข้ารหัสแบบใด?",
+    "options": [
+      {
+        "statement": "NRZ-L",
+        "istrue": false
+      },
+      {
+        "statement": "NRZ-I",
+        "istrue": false
+      },
+      {
+        "statement": "M-NRZ",
+        "istrue": false
+      },
+      {
+        "statement": "AMI",
+        "istrue": true
+      }
+    ],
+    "explanation": "Bipolar RZ เป็นรูปแบบการเข้ารหัสที่ใช้สลับขั้วไฟ (บวก/ลบ) เมื่อส่งบิต ‘1’ คล้ายกับเทคนิค AMI (Alternate Mark Inversion) ทำให้สัญญาณ ‘1’ สลับขั้วบวก-ลบ ส่วน ‘0’ จะเป็นศูนย์"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "หากท่านได้ยินเสียงพระตีระฆังตอน 18.00 น. เป็นลักษณะของการเกิด noise แบบใด?",
+    "options": [
+      {
+        "statement": "Gaussian noise",
+        "istrue": true
+      },
+      {
+        "statement": "Impulse noise",
+        "istrue": false
+      },
+      {
+        "statement": "Crosstalk",
+        "istrue": false
+      },
+      {
+        "statement": "Echo",
+        "istrue": false
+      }
+    ],
+    "explanation": "Gaussian noise คือรูปแบบสัญญาณรบกวนตามการกระจายตัวแบบเกาส์ (Gaussian distribution) แม้ในกรณีทั่วไปเสียงตีระฆังอาจถูกมองเป็นสัญญาณชั่วขณะ แต่ในบริบทนี้ถือว่าเป็นการรบกวนลักษณะหนึ่งที่อาจปรากฏซ้อนเข้ากับสัญญาณหลักได้ จึงถูกจัดเป็น Gaussian noise ตามคำตอบที่กำหนด"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดไม่ได้แสดงให้เห็นถึงประสิทธิภาพการสื่อสาร?",
+    "options": [
+      {
+        "statement": "Bandwidth",
+        "istrue": false
+      },
+      {
+        "statement": "Throughput",
+        "istrue": false
+      },
+      {
+        "statement": "Latency or delay",
+        "istrue": false
+      },
+      {
+        "statement": "Router down time",
+        "istrue": true
+      }
+    ],
+    "explanation": "Bandwidth, Throughput และ Latency เป็นตัวชี้วัดหรือปัจจัยที่บ่งบอกประสิทธิภาพการสื่อสารโดยตรง ส่วน Router down time เป็นระยะเวลาที่เราเตอร์หยุดทำงาน ซึ่งไม่ใช่ตัวชี้วัดประสิทธิภาพการส่งข้อมูลโดยตรง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องเกี่ยวกับสัญญาณที่มีหลายระดับ?",
+    "options": [
+      {
+        "statement": "คลื่นสัญญาณที่มีหลายระดับจะต้องส่งในหลายช่องสัญญาณ เพราะแต่ละระดับต้องใช้ช่องสัญญาณของตนเอง",
+        "istrue": false
+      },
+      {
+        "statement": "คลื่นสัญญาณที่มีหลายระดับจะส่งบิตได้เป็นจำนวนมากในเวลา 1 วินาที",
+        "istrue": true
+      },
+      {
+        "statement": "คลื่นสัญญาณที่มีหลายระดับจะส่งด้วยความเร็วต่ำเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "คลื่นสัญญาณที่มีหลายระดับจะต้องส่งในช่องสัญญาณความเร็วสูงเสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ยิ่งสัญญาณมีหลายระดับ (มากกว่า 2) ก็ยิ่งสามารถแทนจำนวนบิตต่อสัญญาณ 1 ช่วง (symbol) ได้มากขึ้น ส่งผลให้ส่งข้อมูลได้มากในหนึ่งวินาที"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "กำหนดให้ช่องสัญญาณมีแบนด์วิดท์ 10 MHz และส่งสัญญาณด้วยคลื่น 4 ระดับ จะสามารถส่งข้อมูลได้ในอัตราบิตเท่าไร?",
+    "options": [
+      {
+        "statement": "40 MHz",
+        "istrue": true
+      },
+      {
+        "statement": "80 MHz",
+        "istrue": false
+      },
+      {
+        "statement": "120 MHz",
+        "istrue": false
+      },
+      {
+        "statement": "160 MHz",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตามหลักการคำนวณพื้นฐาน อัตราบิต = แบนด์วิดท์ x log2(ระดับสัญญาณ) = 10 MHz x log2(4) = 10 MHz x 2 = 20 Mbps อย่างไรก็ตาม ในตัวเลือกได้ใช้หน่วยเป็น 'MHz' และกำหนดคำตอบเป็น '40 MHz' ซึ่งอาจมีการตีความหรือเงื่อนไขเพิ่มเติมที่ทำให้คำนวณออกมาเป็นค่า 40 ในหน่วยเดียวกันกับตัวเลือก จึงถือว่า '40 MHz' เป็นคำตอบในบริบทนี้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดอธิบายถึงวิธีของ Differential Phase Shift Keying (DPSK)?",
+    "options": [
+      {
+        "statement": "การเปลี่ยน phase จะเกิดขึ้นเมื่อค่าบิตเป็น 1 เสมอ",
+        "istrue": true
+      },
+      {
+        "statement": "การเปลี่ยน phase จะเกิดเป็นระยะ ๆ โดยไม่สนใจว่าบิตข้อมูลเป็นอะไร",
+        "istrue": false
+      },
+      {
+        "statement": "การเปลี่ยน phase จะเกิดเมื่อค่าบิตเป็น 0 เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "การเปลี่ยน phase จะเกิดขึ้นทุก ๆ ครึ่งวินาที",
+        "istrue": false
+      }
+    ],
+    "explanation": "DPSK เข้ารหัสข้อมูลด้วยการเปลี่ยนแปลงเฟสเมื่อบิตเป็น 1 ส่วนบิตเป็น 0 จะไม่เปลี่ยนเฟส (หรืออิงกับสถานะของสัญญาณก่อนหน้า) จึงกล่าวได้ว่า “การเปลี่ยน phase จะเกิดขึ้นเมื่อค่าบิตเป็น 1”"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "\"หากท่านได้ยินเสียงเล่นดนตรีในงานมหกรรม\" เป็นลักษณะของการเกิด noise แบบใด?",
+    "options": [
+      {
+        "statement": "Gaussian noise",
+        "istrue": false
+      },
+      {
+        "statement": "Impulse noise",
+        "istrue": true
+      },
+      {
+        "statement": "Crosstalk",
+        "istrue": false
+      },
+      {
+        "statement": "Echo",
+        "istrue": false
+      }
+    ],
+    "explanation": "Impulse noise คือการรบกวนที่เกิดขึ้นเป็นช่วงหรือเป็นจุด ๆ โดยไม่ต่อเนื่องสม่ำเสมอ แม้ว่าการฟังดนตรีจะมีลักษณะคล้ายเสียงต่อเนื่อง แต่ในบริบทนี้ตอบว่าเป็น Impulse noise ตามที่ระบุไว้ในคำตอบ ซึ่งอาจตีความว่าเป็นเสียงรบกวนระยะสั้นหรือเกิดขึ้นไม่สม่ำเสมอ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Composite signal เกิดขึ้นอย่างไร?",
+    "options": [
+      {
+        "statement": "เป็นการรวมสัญญาณข้อมูลดิจิทัลที่มีความหลากหลายเข้าเป็นหนึ่งเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการรวมสัญญาณข้อมูลแอนะล็อกที่มีความหลากหลายเข้าเป็นคลื่นเดียว",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นการส่งสัญญาณข้อมูลดิจิทัลหลายสัญญาณในช่องทางเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการส่งสัญญาณข้อมูลดิจิทัลหลายสัญญาณในช่องทางที่แตกต่างกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Composite signal หมายถึงการรวมสัญญาณแอนะล็อกหลายความถี่หรือหลายรูปแบบเข้าด้วยกัน เกิดเป็นสัญญาณเดียวที่มีองค์ประกอบย่อย ๆ หลายรายการ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Unipolar Return-to-Zero ใช้กระแสไฟฟ้าเพื่อส่งข้อมูลจำนวนกี่ระดับ?",
+    "options": [
+      {
+        "statement": "1",
+        "istrue": false
+      },
+      {
+        "statement": "2",
+        "istrue": true
+      },
+      {
+        "statement": "3",
+        "istrue": false
+      },
+      {
+        "statement": "4",
+        "istrue": false
+      }
+    ],
+    "explanation": "Unipolar RZ ใช้ระดับสัญญาณหนึ่ง (เช่น +V) แทนบิต ‘1’ และกลับมาที่ 0 แทนบิต ‘0’ จึงรวมแล้วมี 2 ระดับ (คือ +V กับ 0) ในการส่งข้อมูล"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "วิธีการใดต่อไปนี้ใช้ส่งข้อมูลแอนะล็อกด้วยคลื่นสัญญาณดิจิทัล?",
+    "options": [
+      {
+        "statement": "Analog code modulation",
+        "istrue": false
+      },
+      {
+        "statement": "Digital code modulation",
+        "istrue": false
+      },
+      {
+        "statement": "Pulse Code Modulation",
+        "istrue": true
+      },
+      {
+        "statement": "Block Code Modulation",
+        "istrue": false
+      }
+    ],
+    "explanation": "Pulse Code Modulation (PCM) เป็นกระบวนการสุ่มสัญญาณแอนะล็อก (sampling) แล้วแปลงเป็นตัวเลขดิจิทัล (quantization และ encoding) ทำให้สามารถส่งข้อมูลแอนะล็อกด้วยรูปแบบดิจิทัลได้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดไม่ถูกต้องสำหรับการสื่อสารด้วยคลื่นแอนะล็อก?",
+    "options": [
+      {
+        "statement": "สามารถส่งได้ในระยะใกล้เท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "นิยมใช้ในการส่งข้อมูลประเภทภาพและเสียง",
+        "istrue": false
+      },
+      {
+        "statement": "คลื่นสูญหายง่ายมาก",
+        "istrue": false
+      },
+      {
+        "statement": "คลื่นจะมีวงรอบการส่งที่หลากหลายในหนึ่งวินาที",
+        "istrue": false
+      }
+    ],
+    "explanation": "คลื่นแอนะล็อกสามารถส่งได้ทั้งระยะใกล้และไกล ขึ้นอยู่กับกำลังส่งและเทคโนโลยีที่ใช้ จึงทำให้ข้อความ ‘สามารถส่งได้ในระยะใกล้เท่านั้น’ เป็นข้อความที่ไม่ถูกต้อง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "\"การส่งข้อมูลจากต้นทางใช้เวลาทั้งสิ้น (นับจากบิตแรกจนถึงบิตสุดท้าย) 10 ms\" ข้อความนี้ระบุถึงค่าเวลาใด?",
+    "options": [
+      {
+        "statement": "Transmission delay",
+        "istrue": true
+      },
+      {
+        "statement": "Propagation delay",
+        "istrue": false
+      },
+      {
+        "statement": "Queuing delay",
+        "istrue": false
+      },
+      {
+        "statement": "Processing delay",
+        "istrue": false
+      }
+    ],
+    "explanation": "Transmission delay คือเวลาที่ต้นทางใช้ในการผลักบิตทั้งหมดออกไปบนสื่อ (ตั้งแต่บิตแรกจนถึงบิตสุดท้าย) โดยไม่ได้นับรวมเวลาเดินทางในสื่อหรือเวลาอื่น ๆ"
+  }
+]

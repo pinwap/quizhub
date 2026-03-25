@@ -1,0 +1,112 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What are the names of Part I, Part II, and Part III in mass-storage structure?",
+    "options": [
+      { "statement": "Track, sector, cylinder", "istrue": true },
+      { "statement": "Cylinder, block, platter", "istrue": false },
+      { "statement": "Block, track, head", "istrue": false },
+      { "statement": "Sector, page, frame", "istrue": false }
+    ],
+    "explanation": "Mass-storage structures consist of tracks, sectors, and cylinders as fundamental addressing units."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the characteristic of solid-state disks (SSDs)?",
+    "options": [
+      { "statement": "No moving parts", "istrue": false },
+      { "statement": "No seek time or latency", "istrue": false },
+      { "statement": "Less capacity and shorter lifespan than hard disks", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "SSDs have no mechanical components, no seek latency, and typically less capacity with limited write cycles."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which device uses constant linear velocity (CLV)?",
+    "options": [
+      { "statement": "CD-ROM drive", "istrue": false },
+      { "statement": "DVD-ROM drive", "istrue": false },
+      { "statement": "Hard drive", "istrue": false },
+      { "statement": "Both CD-ROM and DVD-ROM", "istrue": true }
+    ],
+    "explanation": "Optical drives such as CD-ROM and DVD-ROM use CLV to maintain constant data rate across the disc."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is NOT correct about NAS and SAN?",
+    "options": [
+      { "statement": "SAN has a built-in file system", "istrue": true },
+      { "statement": "NAS provides file-level access", "istrue": false },
+      { "statement": "SAN provides block-level access", "istrue": false },
+      { "statement": "NAS uses Ethernet while SAN often uses Fibre Channel", "istrue": false }
+    ],
+    "explanation": "SAN does not include a built-in file system; it provides block-level storage only."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What scheduling algorithm is illustrated by C-LOOK?",
+    "options": [
+      { "statement": "A variant of SCAN that moves only in one direction", "istrue": true },
+      { "statement": "A FIFO disk scheduling algorithm", "istrue": false },
+      { "statement": "An algorithm that reverses direction every time", "istrue": false },
+      { "statement": "A purely random seek algorithm", "istrue": false }
+    ],
+    "explanation": "C-LOOK moves the head in one direction and jumps back to the first request, improving seek efficiency."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is stored in the Master Boot Record (MBR)?",
+    "options": [
+      { "statement": "Boot code and partition table", "istrue": true },
+      { "statement": "BIOS firmware", "istrue": false },
+      { "statement": "Filesystem metadata", "istrue": false },
+      { "statement": "User configuration data", "istrue": false }
+    ],
+    "explanation": "The MBR contains boot code and the partition table necessary for system startup."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which RAID level provides best performance without any redundancy?",
+    "options": [
+      { "statement": "RAID 0", "istrue": true },
+      { "statement": "RAID 1", "istrue": false },
+      { "statement": "RAID 5", "istrue": false },
+      { "statement": "RAID 1+0", "istrue": false }
+    ],
+    "explanation": "RAID 0 uses striping only, offering high performance but no redundancy."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which RAID level uses block-level striping with parity?",
+    "options": [
+      { "statement": "RAID 5", "istrue": true },
+      { "statement": "RAID 0", "istrue": false },
+      { "statement": "RAID 1", "istrue": false },
+      { "statement": "RAID 2", "istrue": false }
+    ],
+    "explanation": "RAID 5 stripes data and parity across disks, offering good performance and redundancy."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which RAID level distributes parity and allows one-disk failure recovery?",
+    "options": [
+      { "statement": "RAID 5", "istrue": true },
+      { "statement": "RAID 0", "istrue": false },
+      { "statement": "RAID 1+0", "istrue": false },
+      { "statement": "RAID 3", "istrue": false }
+    ],
+    "explanation": "RAID 5 spreads parity across disks and tolerates a single disk failure."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which RAID configuration mirrors then stripes disks?",
+    "options": [
+      { "statement": "RAID 1+0", "istrue": true },
+      { "statement": "RAID 0+1", "istrue": false },
+      { "statement": "RAID 5", "istrue": false },
+      { "statement": "RAID 6", "istrue": false }
+    ],
+    "explanation": "RAID 1+0 mirrors pairs of disks first and then stripes across them, giving high redundancy and performance."
+  }
+]

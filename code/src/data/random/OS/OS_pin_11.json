@@ -1,0 +1,303 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบายความหมายของ Blocking I/O ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "โปรเซสจะหยุดรอจนกว่า I/O จะเสร็จจึงทำงานต่อ",
+        "istrue": true
+      },
+      {
+        "statement": "โปรเซสสามารถไปทำงานอื่นต่อได้โดยไม่ต้องรอ I/O",
+        "istrue": false
+      },
+      { "statement": "เป็น asynchronous โดยธรรมชาติ", "istrue": false },
+      { "statement": "ไม่ต้องใช้ interrupt เพื่อปลุกโปรเซส", "istrue": false }
+    ],
+    "explanation": "Blocking = process ถูกบล็อก รอ I/O เสร็จจริงก่อนถึงจะกลับมาทำงานต่อ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความหมายของ Non-blocking I/O?",
+    "options": [
+      {
+        "statement": "การเรียก I/O จะคืนค่าให้ทันทีไม่ว่า I/O จะเสร็จหรือไม่",
+        "istrue": true
+      },
+      {
+        "statement": "การเรียก I/O ต้องรอจน hardware ส่ง interrupt ก่อน",
+        "istrue": false
+      },
+      { "statement": "เป็น synchronous เสมอ", "istrue": false },
+      { "statement": "ไม่สามารถใช้กับ network I/O ได้", "istrue": false }
+    ],
+    "explanation": "Non-blocking คืนค่าทันที ถ้ายังไม่มี data จะส่ง error เช่น EAGAIN"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นลักษณะของ Synchronous I/O?",
+    "options": [
+      {
+        "statement": "การ call เสร็จเมื่อข้อมูลถูกคัดลอกเสร็จสมบูรณ์แล้ว",
+        "istrue": true
+      },
+      { "statement": "การ call เสร็จทันทีไม่รอผล", "istrue": false },
+      { "statement": "ไม่ต้องใช้ device driver", "istrue": false },
+      { "statement": "เป็น non-blocking เสมอ", "istrue": false }
+    ],
+    "explanation": "Synchronous = การเรียกฟังก์ชันจะเสร็จต่อเมื่อ I/O เสร็จโดยสมบูรณ์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นลักษณะของ Asynchronous I/O ตามภาพสไลด์?",
+    "options": [
+      {
+        "statement": "การ call คืนค่าทันที แล้ว I/O ทำอยู่เบื้องหลัง",
+        "istrue": true
+      },
+      { "statement": "ต้อง block รอเสมอ", "istrue": false },
+      { "statement": "ไม่ใช้ interrupt", "istrue": false },
+      {
+        "statement": "โปรเซสไม่สามารถทำงานอื่นได้ระหว่างรอ I/O",
+        "istrue": false
+      }
+    ],
+    "explanation": "Async I/O เรียกแล้วไปทำงานอื่นต่อ OS จะ interrupt เมื่อเสร็จ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน synchronous blocking I/O ใครเป็นผู้ปลุกโปรเซสให้กลับมาทำงาน?",
+    "options": [
+      { "statement": "interrupt handler", "istrue": true },
+      { "statement": "user process เอง", "istrue": false },
+      { "statement": "compiler", "istrue": false },
+      { "statement": "scheduler โดยไม่ต้องอาศัย interrupt", "istrue": false }
+    ],
+    "explanation": "เมื่อ hardware ทำเสร็จ จะส่ง interrupt → interrupt handler ปลุกโปรเซส"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบายความสัมพันธ์ระหว่าง device driver กับ interrupt handler ได้ถูกต้อง?",
+    "options": [
+      {
+        "statement": "device driver ส่งคำสั่งให้ hardware และ interrupt handlerรับผลเมื่อ hardware เสร็จ",
+        "istrue": true
+      },
+      {
+        "statement": "interrupt handler ใช้แทน device driver",
+        "istrue": false
+      },
+      { "statement": "device driver ทำงานใน user mode เสมอ", "istrue": false },
+      {
+        "statement": "interrupt handler ทำงานก่อน I/O เริ่มต้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "device driver → ส่งคำสั่งให้ HW ; interrupt handler → ทำงานเมื่อ HW เสร็จ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Non-blocking I/O ถ้าข้อมูลยังไม่พร้อม การเรียก read() มักจะคืนค่าอะไร?",
+    "options": [
+      { "statement": "-1 พร้อม errno = EAGAIN", "istrue": true },
+      { "statement": "0 เสมอ", "istrue": false },
+      { "statement": "จำนวนข้อมูลทั้งหมดใน device", "istrue": false },
+      { "statement": "ผลลัพธ์แบบ synchronous", "istrue": false }
+    ],
+    "explanation": "Non-blocking read จะ return -1/EAGAIN ถ้ายังไม่มีข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในตัวอย่าง C#, ทำไมการเรียก wt.Close() ก่อน WriteLineAsync() เสร็จ จึงเกิด error?",
+    "options": [
+      {
+        "statement": "เพราะ stream ยังทำงานอยู่จาก asynchronous operation ก่อนหน้า",
+        "istrue": true
+      },
+      { "statement": "เพราะ Close() ไม่เคยใช้กับ async", "istrue": false },
+      {
+        "statement": "เพราะ WriteLineAsync() เป็น synchronous function",
+        "istrue": false
+      },
+      { "statement": "เพราะ StreamWriter ไม่รองรับ async", "istrue": false }
+    ],
+    "explanation": "WriteLineAsync ยังไม่เสร็จ ทำให้ Close() ปิด resource ที่กำลังใช้งานอยู่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน JavaScript, Promise ใช้ทำอะไร?",
+    "options": [
+      {
+        "statement": "จัดการงาน asynchronous และ callback เมื่อเสร็จ",
+        "istrue": true
+      },
+      { "statement": "สร้าง thread ใหม่", "istrue": false },
+      { "statement": "ใช้แทน device driver", "istrue": false },
+      { "statement": "ทำ synchronous I/O", "istrue": false }
+    ],
+    "explanation": "Promise = abstraction สำหรับ async operation ใน JS"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุผลใดที่ JavaScript ต้องใช้ Promise/async-await แทนการสร้าง thread?",
+    "options": [
+      {
+        "statement": "เพราะ JavaScript ทำงานใน single-threaded environment (event loop)",
+        "istrue": true
+      },
+      { "statement": "เพราะ JavaScript ไม่มี interrupt", "istrue": false },
+      { "statement": "เพราะไม่รองรับ asynchronous", "istrue": false },
+      { "statement": "เพราะ I/O ทั้งหมดเป็น synchronous", "istrue": false }
+    ],
+    "explanation": "JS มี event loop ทำงานแบบ single-threaded จึงใช้ async-await และ Promise"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Task.Run() ใน C# มีบทบาทอย่างไร?",
+    "options": [
+      {
+        "statement": "ส่งงานไปทำบน thread pool แทนที่จะทำใน thread ปัจจุบัน",
+        "istrue": true
+      },
+      { "statement": "บังคับให้เป็น synchronous", "istrue": false },
+      { "statement": "หยุดไม่ให้ async ทำงาน", "istrue": false },
+      { "statement": "เปลี่ยน device driver", "istrue": false }
+    ],
+    "explanation": "Task.Run() ใช้รันงานแบบ asynchronous บน thread pool"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือจุดเด่นของ asynchronous I/O ที่ภาพได้อธิบาย?",
+    "options": [
+      {
+        "statement": "ใช้ CPU อย่างมีประสิทธิภาพเพราะไม่ต้องรอ I/O เสร็จ",
+        "istrue": true
+      },
+      { "statement": "ทำงานเร็วกว่า hardware ทุกชนิด", "istrue": false },
+      { "statement": "ใช้ thread มากขึ้นเสมอ", "istrue": false },
+      { "statement": "ไม่ต้องใช้ interrupt", "istrue": false }
+    ],
+    "explanation": "Async I/O ปล่อยให้ hardware ทำงาน ส่วน CPU ไปทำงานอื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดแสดงตัวอย่างของการ busy-wait?",
+    "options": [
+      { "statement": "โปรเซส loop เช็คสถานะ device ตลอดเวลา", "istrue": true },
+      { "statement": "ใช้ interrupt เพื่อรอผลลัพธ์", "istrue": false },
+      { "statement": "ใช้ await ดูผล", "istrue": false },
+      { "statement": "ใช้ Promise แล้วไปทำงานอื่น", "istrue": false }
+    ],
+    "explanation": "Busy-wait = การ polling โดย loop ดูสถานะอุปกรณ์เรื่อย ๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดถูกต้องเกี่ยวกับ interrupt handler?",
+    "options": [
+      {
+        "statement": "ทำงานใน kernel mode และไม่ควรใช้เวลานาน",
+        "istrue": true
+      },
+      { "statement": "เป็นส่วนหนึ่งของ user process", "istrue": false },
+      { "statement": "สามารถ block รอ event อื่นได้", "istrue": false },
+      { "statement": "ใช้แทน scheduler ได้", "istrue": false }
+    ],
+    "explanation": "Interrupt handler ต้องทำงานเร็วเพื่อไม่ให้ระบบค้าง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นตัวอย่าง asynchronous workload ที่ควรใช้หลาย tasks ตามที่ภาพอธิบาย?",
+    "options": [
+      {
+        "statement": "แบ่งโจทย์ออกเป็นหลายช่วงแล้วรันขนานกันบนหลาย cores",
+        "istrue": true
+      },
+      { "statement": "รอ I/O ทีละคำสั่งแบบ blocking", "istrue": false },
+      { "statement": "ใช้ loop while() เพื่อเช็คสถานะ I/O", "istrue": false },
+      {
+        "statement": "ให้ user process ทำ interrupt แทน kernel",
+        "istrue": false
+      }
+    ],
+    "explanation": "ภาพอธิบายการสร้างหลาย tasks เพื่อใช้ multi-core parallel processing"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการส่ง Param(1, i) ซ้ำใน loop ของ async tasks อาจทำให้เกิด bug?",
+    "options": [
+      {
+        "statement": "ค่า i เปลี่ยนไปตาม loop ทำให้ task ใช้ค่าที่ผิด",
+        "istrue": true
+      },
+      { "statement": "เพราะ async ใช้ pointer เสมอ", "istrue": false },
+      { "statement": "เพราะ async ห้ามส่ง object", "istrue": false },
+      {
+        "statement": "เพราะ Task.Run() หยุดทำงานเมื่อใช้ object เดียวกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "ถ้าใช้ Param(1, i) แล้ว i เปลี่ยน → task จะได้ค่า i ที่ผิด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือผลของ Task.WhenAny() ตามที่ภาพอธิบาย?",
+    "options": [
+      { "statement": "คืนค่าของ task ที่เสร็จก่อน", "istrue": true },
+      { "statement": "รอทุก task เสร็จแล้วคืนค่า", "istrue": false },
+      { "statement": "หยุด tasks ที่เหลือทั้งหมด", "istrue": false },
+      { "statement": "บังคับให้ tasks ทำงานแบบ synchronous", "istrue": false }
+    ],
+    "explanation": "Task.WhenAny() ให้ผลของ task ตัวแรกที่เสร็จก่อน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดถูกต้องเกี่ยวกับการใช้ async-await ใน C#?",
+    "options": [
+      {
+        "statement": "เมธอดต้องประกาศเป็น async ถ้ามีการ await ภายใน",
+        "istrue": true
+      },
+      {
+        "statement": "async ทำให้ฟังก์ชันกลายเป็น multi-thread ทันที",
+        "istrue": false
+      },
+      { "statement": "await บังคับให้ thread block เสมอ", "istrue": false },
+      { "statement": "async ใช้แทน interrupt handler", "istrue": false }
+    ],
+    "explanation": "async จำเป็นเมื่อมี await เพื่อบอกคอมไพเลอร์ว่าฟังก์ชันมี continuation"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดแสดงความถูกต้องของ Asynchronous I/O ทางด้านประสิทธิภาพ?",
+    "options": [
+      {
+        "statement": "ช่วยให้ CPU ทำงานอื่นได้ในขณะที่ I/O กำลังดำเนินการ",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ I/O เร็วกว่าความเร็วของ hardware จริงมาก",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ resources มากกว่า synchronous เสมอ",
+        "istrue": false
+      },
+      { "statement": "ต้องใช้ threads จำนวนเท่ากับจำนวน I/O", "istrue": false }
+    ],
+    "explanation": "Async I/O คือการใช้เวลาของ CPU ให้คุ้มค่า ไม่ปล่อยให้ว่างรอ I/O"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นผลกระทบเมื่อ interrupt handler ทำงานนานเกินไป?",
+    "options": [
+      {
+        "statement": "ระบบจะมี latency สูงขึ้นและอาจ drop interrupts",
+        "istrue": true
+      },
+      { "statement": "การ context switch จะเร็วขึ้น", "istrue": false },
+      { "statement": "scheduler ไม่ถูกใช้งานอีกต่อไป", "istrue": false },
+      { "statement": "hardware จะหยุดส่งสัญญาณ I/O", "istrue": false }
+    ],
+    "explanation": "interrupt handler ที่ช้า → ทำให้ระบบ lag และอาจเกิด lost interrupts"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is the meaning of least privilege?",
+    "options": [
+      { "statement": "Allow read only", "istrue": true },
+      { "statement": "Allow full access", "istrue": false },
+      { "statement": "Allow write only", "istrue": false },
+      { "statement": "Allow execute only", "istrue": false }
+    ],
+    "explanation": "Least privilege means giving a user or process only the minimal permissions necessary, such as read-only access."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is NOT in a domain?",
+    "options": [
+      { "statement": "User", "istrue": false },
+      { "statement": "Process", "istrue": false },
+      { "statement": "Procedure", "istrue": false },
+      { "statement": "File", "istrue": true }
+    ],
+    "explanation": "Domains define a set of access rights for users, processes, and procedures—not files."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is similar to switching domain?",
+    "options": [
+      { "statement": "chmod", "istrue": false },
+      { "statement": "Changing role or privilege set", "istrue": true },
+      { "statement": "Changing file permissions", "istrue": false },
+      { "statement": "Switching I/O devices", "istrue": false }
+    ],
+    "explanation": "Domain switching is equivalent to changing the current privilege set or active access rights."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does * mean in an access matrix?",
+    "options": [
+      { "statement": "Granting permission", "istrue": true },
+      { "statement": "Denying permission", "istrue": false },
+      { "statement": "Reading permission", "istrue": false },
+      { "statement": "Executing permission", "istrue": false }
+    ],
+    "explanation": "The * symbol indicates permission to grant or modify rights in the access matrix."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does object owner mean?",
+    "options": [
+      { "statement": "The owner can edit the whole column", "istrue": true },
+      { "statement": "The owner can only read the object", "istrue": false },
+      { "statement": "The owner cannot change access rights", "istrue": false },
+      { "statement": "Ownership applies only to directories", "istrue": false }
+    ],
+    "explanation": "In the access matrix, the object owner controls all rights in the object's column."
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "“นิยมส่งจดหมายไปหาอุบลแต่ปรากฏว่าจดหมายเกิดการกระจายไปในกลุ่มของผู้ทำงานในบริษัทด้วย” แสดงให้เห็นว่าคุณสมบัติด้านความปลอดภัยข้อใดที่ถูกละเมิด",
+    "options": [
+      { "statement": "Integrity", "istrue": false },
+      { "statement": "Authenticity", "istrue": false },
+      { "statement": "Availability", "istrue": false },
+      { "statement": "Confidentiality", "istrue": true }
+    ],
+    "explanation": "การเผยแพร่จดหมายไปยังผู้อื่นโดยไม่ได้รับอนุญาตหมายถึงข้อมูลถูกเปิดเผยต่อผู้ที่ไม่ควรเข้าถึง นั่นคือการละเมิดความลับ (Confidentiality) ส่วน Integrity คือการแก้ไขเนื้อหา, Authenticity คือการยืนยันต้นทาง, Availability คือการพร้อมใช้งาน ไม่เกี่ยวกับการเผยแพร่ข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเข้ารหัสแบบ traditional symmetric-key cipher เป็นการเข้ารหัสแบบใด",
+    "options": [
+      { "statement": "Stream cipher", "istrue": false },
+      { "statement": "Character-oriented ciphers", "istrue": true },
+      { "statement": "Bit-oriented cipher", "istrue": false },
+      { "statement": "Block cipher", "istrue": false }
+    ],
+    "explanation": "Traditional symmetric-key ciphers เช่น Caesar, Vigenère ใช้การเข้ารหัสทีละอักขระจึงจัดเป็น character-oriented ciphers. Stream cipher และ block cipher เป็นสถาปัตยกรรมของ ciphers สมัยใหม่ ส่วน bit-oriented ก็เน้นหน่วยบิต ไม่ใช่แบบดั้งเดิม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อมูลใน ticket ที่เกิดจากการทำงานของ KDC นั้นถูกเข้ารหัสจากกุญแจประเภทใดเป็นลำดับแรก",
+    "options": [
+      { "statement": "Secret key ที่ KDC ขึ้นเพื่อ sender", "istrue": false },
+      { "statement": "Secret key ที่สร้างขึ้นโดย sender", "istrue": false },
+      { "statement": "Secret key ที่ KDC สร้างขึ้นเพื่อ receiver", "istrue": true },
+      { "statement": "Secret key ที่สร้างขึ้นโดย receiver", "istrue": false }
+    ],
+    "explanation": "ใน Kerberos KDC จะสร้าง ticket และเข้ารหัสด้วยกุญแจลับของบริการผู้รับ (receiver) เป็นอันดับแรก เพื่อให้เฉพาะบริการนั้นถอดรหัสได้ ส่วนกุญแจของ sender หรือ receiver เองจะใช้ในส่วนอื่นของการแลกกุญแจ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับ security association",
+    "options": [
+      { "statement": "เปลี่ยนการเชื่อมต่อแบบ connectionless service เป็น connection-oriented service", "istrue": false },
+      { "statement": "Security association เป็นเกิดขึ้น ณ ฝั่งการทำงานของ sender เท่านั้น", "istrue": true },
+      { "statement": "การทำงานของ security association เป็นการทำงานร่วมกับ security association database เสมอ", "istrue": false },
+      { "statement": "เกิดเมื่อการสื่อสารทั้งสองฝั่งต้องการความปลอดภัยของข้อมูลด้าน integrity และ confidentiality", "istrue": false }
+    ],
+    "explanation": "Security Association เป็นข้อตกลงด้านการรักษาความปลอดภัยระหว่างสองฝั่ง (ทั้ง sender และ receiver) จึงไม่เกิดขึ้นเฉพาะฝั่ง sender. ส่วนการใช้ SADB และความต้องการ integrity/confidentiality เป็นคุณสมบัติที่ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นปรากฏการณ์ของการ replaying",
+    "options": [
+      { "statement": "สมพรแอบใช้ username และ password ของสมหญิงเมื่อสมหญิงป่วย", "istrue": false },
+      { "statement": "ยุคลได้รับจดหมายเวียนของผู้จัดการแต่กลับอ้างว่าไม่ได้รับข้อมูลใด ๆ เลย", "istrue": false },
+      { "statement": "สมพรแอบดักจับข้อมูลที่สมหญิงส่งไปให้ยุคลแล้วดำเนินการเปลี่ยนแปลงข้อความนั้นให้ยุคลเสียหาย", "istrue": false },
+      { "statement": "สมรแอบดักจับข้อมูลการถอนเงินของยุคล แล้วดำเนินการส่งข้อมูลนั้นอีกครั้งเพื่อถอนเงินมาใช้เอง", "istrue": true }
+    ],
+    "explanation": "Replaying คือการดักจับข้อความแล้วส่งซ้ำไปยังปลายทางเพื่อให้กระทำการซ้ำ เช่น สั่งถอนเงินซ้ำ ตัวเลือกสี่ตรงกับนิยาม ขณะที่ตัวอื่นเป็น impersonation, denial หรือ modification"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคโนโลยีใดที่ใช้ในการพรางข้อมูลเอกสารเพื่อป้องกันการคัดลอกเอกสารนั้น ๆ",
+    "options": [
+      { "statement": "Enciphering", "istrue": false },
+      { "statement": "Steganography", "istrue": true },
+      { "statement": "Cryptography", "istrue": false },
+      { "statement": "Digest", "istrue": false }
+    ],
+    "explanation": "Steganography คือการซ่อนข้อมูลภายในเอกสารเพื่อไม่ให้รู้ว่ามีข้อมูลลับอยู่ ส่วน Enciphering/Cryptography คือการเข้ารหัสให้ไม่อ่านได้, Digest คือการสรุปค่า hash ไม่เกี่ยวกับการพราง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับ stream cipher",
+    "options": [
+      { "statement": "การเข้ารหัสแบบ stream cipher เป็นการเข้ารหัสแบบ character-oriented cipher", "istrue": true },
+      { "statement": "การเข้ารหัสแบบ stream cipher มีความยุ่งยากซับซ้อนน้อยกว่าการเข้ารหัสแบบ block cipher", "istrue": false },
+      { "statement": "การเข้ารหัสแบบ stream cipher ป้องกันความเสียหายในระดับ bit ในขณะที่มีการสื่อสารได้ดีกว่า block cipher", "istrue": false },
+      { "statement": "การเข้ารหัสแบบ stream cipher มีความเร็วกว่าการเข้ารหัสแบบ block cipher", "istrue": false }
+    ],
+    "explanation": "Stream cipher จะสร้าง keystream เพื่อ XOR กับข้อมูลทีละบิตหรือทีละไบต์ จัดเป็น bit-oriented cipher ไม่ได้เข้ารหัสทีละอักขระตามตัวอักษร จึงไม่ใช่ character-oriented cipher"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดแสดงให้เห็นถึงสิ่งที่เรียกว่าคุณสมบัติ “something you have”",
+    "options": [
+      { "statement": "Keystroke", "istrue": false },
+      { "statement": "Pin", "istrue": false },
+      { "statement": "ID card", "istrue": true },
+      { "statement": "Fingerprint", "istrue": false }
+    ],
+    "explanation": "“Something you have” คือสิ่งที่ผู้ใช้ถืออยู่ เช่น บัตรประจำตัว (ID card). Keystroke/Pin เป็น “something you know”, Fingerprint เป็น “something you are”"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิดพื้นฐานของการเข้ารหัสแบบ asymmetric key cipher คือข้อใด",
+    "options": [
+      { "statement": "การใช้ public key ของผู้รับในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้รับในการถอดรหัสข้อมูลปลายทาง", "istrue": true },
+      { "statement": "การใช้ public key ของผู้รับในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้ส่งในการถอดรหัสข้อมูลปลายทาง", "istrue": false },
+      { "statement": "การใช้ public key ของผู้ส่งในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้ส่งในการถอดรหัสข้อมูลปลายทาง", "istrue": false },
+      { "statement": "การใช้ public key ของผู้ส่งในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้รับในการถอดรหัสข้อมูลปลายทาง", "istrue": false }
+    ],
+    "explanation": "Asymmetric cipher ใช้ public key ของผู้รับเข้ารหัสเพื่อให้เฉพาะผู้รับถอดได้ด้วย private key ของตน ตัวเลือกอื่นสลับบทบาท key ผิดทั้งกระบวนการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้ไม่ถูกต้องเกี่ยวกับ Digital signature",
+    "options": [
+      { "statement": "Digital signature เป็นการรักษาความปลอดภัยแบบ Asymmetric cipher", "istrue": false },
+      { "statement": "Digital signature ไม่มีคุณสมบัติในการรักษา confidentiality ของข้อมูล", "istrue": false },
+      { "statement": "Digital signature ไม่มีการใช้ hash function ในการรักษาความปลอดภัยของข้อมูล", "istrue": true },
+      { "statement": "Digital signature มีคุณสมบัติในการรักษา integrity ของข้อมูล", "istrue": false }
+    ],
+    "explanation": "Digital signature ใช้ hash function ก่อนเข้ารหัสด้วย private key จึงรับรอง integrity. ข้อที่ว่า “ไม่มีการใช้ hash function” จึงไม่ถูกต้อง ขณะที่อีกสามข้อเป็นข้อเท็จจริง"
+  }
+]

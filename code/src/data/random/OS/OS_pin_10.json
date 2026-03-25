@@ -1,0 +1,288 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "1. ข้อใดอธิบายความแตกต่างที่ถูกต้องระหว่าง IO-bound async และ CPU-bound async ใน C#?",
+    "options": [
+      {
+        "statement": "IO-bound async ใช้ asynchronous methods ของ library และไม่สร้าง thread ใหม่",
+        "istrue": true
+      },
+      {
+        "statement": "CPU-bound async ใช้ asynchronous methods ของ library และไม่สร้าง thread ใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "IO-bound async ต้องแบ่งงานเป็นหลาย task เพื่อใช้หลาย core",
+        "istrue": false
+      },
+      {
+        "statement": "CPU-bound async ใช้ await โดยไม่ต้องสร้าง task",
+        "istrue": false
+      }
+    ],
+    "explanation": "IO-bound ใช้ async I/O ไม่ต้องสร้าง thread; CPU-bound ต้องสร้าง task และใช้หลาย thread"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "2. เหตุใดโค้ด C# ที่ใช้ WriteLineAsync() จึงเกิด error เมื่อเรียก Close() ก่อน await?",
+    "options": [
+      {
+        "statement": "เพราะ Close() จะบังคับให้ stream จบการทำงานทันทีแม้ async ยังไม่เสร็จ",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ WriteLineAsync() ต้องเปิดไฟล์ใหม่ก่อนเสมอ",
+        "istrue": false
+      },
+      { "statement": "เพราะ Close() จะสร้าง thread ใหม่เสมอ", "istrue": false },
+      { "statement": "เพราะ async method ห้ามใช้กับไฟล์", "istrue": false }
+    ],
+    "explanation": "Close() ปิด resource เร็วเกินไป ทำให้ async operation บน stream ยังไม่เสร็จและถูกใช้งานอยู่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "3. JavaScript ใช้รูปแบบใดในการรองรับ asynchronous execution?",
+    "options": [
+      { "statement": "Multi-thread execution", "istrue": false },
+      { "statement": "Event loop + Promise", "istrue": true },
+      { "statement": "Kernel-managed async threads", "istrue": false },
+      { "statement": "Hardware-level async I/O", "istrue": false }
+    ],
+    "explanation": "JavaScript เป็น single-threaded และใช้ event loop + Promise/Callback/Async-await จัดการงาน async"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "4. ข้อใดคือผลลัพธ์ของการ reject ใน Promise?",
+    "options": [
+      { "statement": "เข้าสู่ .then()", "istrue": false },
+      { "statement": "เข้าสู่ .catch()", "istrue": true },
+      {
+        "statement": "เข้าสู่ finally() เสมอโดยไม่ผ่าน catch",
+        "istrue": false
+      },
+      { "statement": "หยุดสคริปต์ทันที", "istrue": false }
+    ],
+    "explanation": "reject trigger .catch() ซึ่งเป็น handler สำหรับ error"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "5. เหตุใด JavaScript ถึงไม่ต้องสร้าง thread ใหม่สำหรับงาน async?",
+    "options": [
+      {
+        "statement": "เพราะ JavaScript engine ไม่รองรับ multi-thread",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ async ถูกจัดการด้วย event loop และ callback queue",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ async ทั้งหมดถูกแปลงเป็น synchronous",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ OS บังคับให้รันใน main thread เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "JavaScript ใช้ event loop ทำงาน ไม่ต้องสร้าง thread ใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "6. การใช้ Task.Run() ใน C# เหมาะกับงานลักษณะใด?",
+    "options": [
+      { "statement": "งานที่ต้องรอ I/O เช่น อ่านไฟล์", "istrue": false },
+      {
+        "statement": "งานที่ต้องใช้ CPU หนัก เช่น loop หลายล้านครั้ง",
+        "istrue": true
+      },
+      { "statement": "งาน UI update โดยตรง", "istrue": false },
+      { "statement": "งาน asynchronous network I/O", "istrue": false }
+    ],
+    "explanation": "Task.Run() ใช้สำหรับ CPU-bound เท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "7. หาก C# async CPU-bound ใช้ Task.Run() 10 งานบนเครื่อง 4 cores จะเกิดอะไรขึ้น?",
+    "options": [
+      {
+        "statement": "งานทั้งหมดจะรันพร้อมกันแบบ 10 threads เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "OS จะจัดสรร thread ให้สอดคล้องกับจำนวน core และสลับเวลารัน",
+        "istrue": true
+      },
+      { "statement": "งานจะถูก serialize ไม่เกิด parallel", "istrue": false },
+      { "statement": "ทุกงานจะรันบน main thread", "istrue": false }
+    ],
+    "explanation": "Thread pool และ OS scheduler จะกระจายงานตาม core ที่มี"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "8. ใน I/O-bound async ของ C# เหตุใดจึงไม่สร้าง thread ใหม่?",
+    "options": [
+      {
+        "statement": "เพราะ library ทำ async ผ่าน OS I/O completion ports",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ async ใน C# ไม่รองรับ multi-thread",
+        "istrue": false
+      },
+      { "statement": "เพราะ I/O-bound ห้ามใช้ thread", "istrue": false },
+      { "statement": "เพราะ await จะลบ thread เดิมทิ้ง", "istrue": false }
+    ],
+    "explanation": "I/O completion ports จัดการ async I/O โดยไม่ต้องใช้ thread ใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9. ตัวเลือกใดต่อไปนี้เป็นลักษณะของ Promise ใน JavaScript?",
+    "options": [
+      { "statement": "Promise ทำงานทันทีที่สร้าง", "istrue": true },
+      { "statement": "Promise จะไม่ทำงานจนกว่าจะมี await", "istrue": false },
+      {
+        "statement": "Promise ต้องใช้ then เท่านั้น ห้ามใช้ catch",
+        "istrue": false
+      },
+      { "statement": "Promise ไม่สามารถ reject ได้", "istrue": false }
+    ],
+    "explanation": "Promise executor รันทันทีเมื่อสร้าง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "10. อะไรคือปัญหาการ pass parameter reference ในการสร้าง Task หลายงาน (C#)?",
+    "options": [
+      {
+        "statement": "ค่าของตัวแปร reference อาจถูกเปลี่ยนในรอบ loop ทำให้ทุก task ใช้ค่าเดียวกัน",
+        "istrue": true
+      },
+      { "statement": "Task จะไม่ยอมรับ reference parameter", "istrue": false },
+      { "statement": "Task จะลบตัวแปร reference ทิ้ง", "istrue": false },
+      { "statement": "Task ไม่สามารถรับ input", "istrue": false }
+    ],
+    "explanation": "การใช้ reference ตัวเดียวในทุก task ทำให้ค่าซ้ำกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "11. ใน event loop ของ JavaScript งานใดถูกประมวลผลก่อน?",
+    "options": [
+      { "statement": "microtask queue เช่น promise callbacks", "istrue": true },
+      { "statement": "render queue", "istrue": false },
+      { "statement": "macro task เช่น setTimeout เสมอ", "istrue": false },
+      { "statement": "UI thread ก่อนเสมอ", "istrue": false }
+    ],
+    "explanation": "Promise อยู่ใน microtask queue ซึ่งมี priority สูงกว่า macro task"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "12. การใช้ await Task.WhenAny() มีประโยชน์อย่างไร?",
+    "options": [
+      { "statement": "รอให้ทุก task เสร็จแล้วคืนผล", "istrue": false },
+      { "statement": "คืนผล task แรกที่เสร็จทันที", "istrue": true },
+      { "statement": "รอเฉพาะ task ที่ error", "istrue": false },
+      { "statement": "ยกเลิกทุก task ที่เหลือ", "istrue": false }
+    ],
+    "explanation": "WhenAny คืน task ที่เสร็จเป็น task แรก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13. หากต้องจัดการ error ใน C# async ควรใช้อะไร?",
+    "options": [
+      { "statement": "try/catch รอบ await", "istrue": true },
+      { "statement": "onError()", "istrue": false },
+      { "statement": "reject()", "istrue": false },
+      { "statement": "finally() เท่านั้น", "istrue": false }
+    ],
+    "explanation": "await จะ throw error ผ่าน try/catch"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "14. การเรียกใช้ WriteLineAsync() โดยไม่มี await ผลที่อาจเกิดขึ้นคืออะไร?",
+    "options": [
+      {
+        "statement": "ไฟล์ถูกเขียนไม่ครบหรือเขียนไม่ทันก่อนปิด",
+        "istrue": true
+      },
+      { "statement": "เกิด deadlock เสมอ", "istrue": false },
+      {
+        "statement": "ระบบปฏิบัติการจะบังคับให้ await ให้เอง",
+        "istrue": false
+      },
+      { "statement": "ไฟล์จะถูกลบอัตโนมัติ", "istrue": false }
+    ],
+    "explanation": "ไม่ await ทำให้ไม่รับประกันว่า async I/O เสร็จ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "15. คำสั่ง resolve() ใน JavaScript มีผลอย่างไร?",
+    "options": [
+      { "statement": "เปลี่ยนสถานะ Promise เป็น fulfilled", "istrue": true },
+      { "statement": "เปลี่ยนสถานะเป็น rejected", "istrue": false },
+      { "statement": "หยุดโปรแกรมทันที", "istrue": false },
+      { "statement": "สร้าง thread ใหม่", "istrue": false }
+    ],
+    "explanation": "resolve ⇒ fulfilled"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "16. Task ใน C# จะถูกจัดการโดยอะไร?",
+    "options": [
+      {
+        "statement": "Thread pool ที่ถูกจัดการโดย runtime และ OS",
+        "istrue": true
+      },
+      { "statement": "Hardware interrupts", "istrue": false },
+      { "statement": "UI thread", "istrue": false },
+      { "statement": "CPU register queue", "istrue": false }
+    ],
+    "explanation": "Task ใช้ thread pool"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "17. JavaScript promise executor ทำงานช่วงใด?",
+    "options": [
+      { "statement": "ทำงานทันทีที่สร้าง Promise", "istrue": true },
+      { "statement": "ทำงานหลัง await เท่านั้น", "istrue": false },
+      { "statement": "ทำงานใน tick ถัดไปเสมอ", "istrue": false },
+      { "statement": "ทำงานใน worker thread", "istrue": false }
+    ],
+    "explanation": "executor รันทันที"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "18. การส่งงาน async I/O ไป OS แล้วปล่อยให้ thread ว่างเกิดขึ้นในสถานการณ์ใด?",
+    "options": [
+      { "statement": "I/O-bound async เช่น File.ReadAsync()", "istrue": true },
+      { "statement": "CPU-bound async เช่น Task.Run()", "istrue": false },
+      { "statement": "synchronous I/O", "istrue": false },
+      { "statement": "การใช้ lock()", "istrue": false }
+    ],
+    "explanation": "I/O-bound ทำงานผ่าน IOCP (I/O completion ports)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "19. await Task.WhenAll() ใช้เมื่อใด?",
+    "options": [
+      { "statement": "ต้องการผลลัพธ์ทุก task", "istrue": true },
+      { "statement": "ต้องการรู้ว่า task ใดเร็วสุด", "istrue": false },
+      { "statement": "ต้องการ cancel งาน", "istrue": false },
+      { "statement": "ต้องการให้ทุก task ทำงานทีละอัน", "istrue": false }
+    ],
+    "explanation": "WhenAll รอทุก task"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "20. ใน C# CPU-bound async ใดคือวิธีที่ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "ใช้ Task.Run() เพื่อแบ่งงานคำนวณออกเป็นหลายส่วน",
+        "istrue": true
+      },
+      { "statement": "ใช้ WriteLineAsync()", "istrue": false },
+      { "statement": "ใช้ Promise.then()", "istrue": false },
+      { "statement": "ใช้ async โดยไม่สร้าง task", "istrue": false }
+    ],
+    "explanation": "CPU-bound ต้องใช้ Task.Run"
+  }
+]

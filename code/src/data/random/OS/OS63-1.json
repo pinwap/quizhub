@@ -1,0 +1,332 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is the OS design goal in user view?",
+    "options": [
+      { "statement": "Ease of use", "istrue": true },
+      { "statement": "Performance", "istrue": false },
+      { "statement": "Resource utilization", "istrue": false },
+      { "statement": "Performance and resource utilization", "istrue": false }
+    ],
+    "explanation": "From the user view, the main goal is ease of use so that users can interact with the operating system conveniently."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the OS design goal in system view?",
+    "options": [
+      { "statement": "Resource allocator", "istrue": false },
+      { "statement": "Control program", "istrue": false },
+      { "statement": "Ease of use", "istrue": false },
+      { "statement": "Both resource allocator and control program", "istrue": true }
+    ],
+    "explanation": "From the system view, the OS functions as a resource allocator and control program, ensuring proper use of resources."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the most essential part of an operating system?",
+    "options": [
+      { "statement": "Kernel", "istrue": true },
+      { "statement": "System program", "istrue": false },
+      { "statement": "Application program", "istrue": false },
+      { "statement": "All of the above", "istrue": false }
+    ],
+    "explanation": "The kernel is the core part of the operating system, always running and managing hardware resources."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the execution mode of system calls?",
+    "options": [
+      { "statement": "Kernel mode", "istrue": false },
+      { "statement": "Supervisor mode", "istrue": false },
+      { "statement": "Privileged mode", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "System calls execute in kernel mode, which is also called supervisor mode or privileged mode."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which category includes the C compiler and C library?",
+    "options": [
+      { "statement": "Kernel", "istrue": false },
+      { "statement": "System program", "istrue": true },
+      { "statement": "Application program", "istrue": false },
+      { "statement": "Utility", "istrue": false }
+    ],
+    "explanation": "Compilers and libraries are system programs that support development and execution of applications."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is the resource that an OS cannot manage?",
+    "options": [
+      { "statement": "Processor", "istrue": false },
+      { "statement": "Cache", "istrue": true },
+      { "statement": "Memory", "istrue": false },
+      { "statement": "Hard disk", "istrue": false }
+    ],
+    "explanation": "The operating system manages processors, memory, and storage, but hardware-managed cache is not directly controlled by the OS."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is another name of the bootstrap program?",
+    "options": [
+      { "statement": "Operating system", "istrue": false },
+      { "statement": "Firmware", "istrue": true },
+      { "statement": "Middleware", "istrue": false },
+      { "statement": "Software", "istrue": false }
+    ],
+    "explanation": "The bootstrap program stored in ROM is firmware that loads the operating system."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the first program being executed when a computer starts?",
+    "options": [
+      { "statement": "Operating system", "istrue": false },
+      { "statement": "Firmware", "istrue": true },
+      { "statement": "Middleware", "istrue": false },
+      { "statement": "Software", "istrue": false }
+    ],
+    "explanation": "Firmware, such as BIOS, is the first program executed to initialize hardware and load the OS."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What device stores firmware?",
+    "options": [
+      { "statement": "ROM", "istrue": false },
+      { "statement": "EEPROM", "istrue": false },
+      { "statement": "Microprocessor", "istrue": false },
+      { "statement": "Both ROM and EEPROM", "istrue": true }
+    ],
+    "explanation": "Firmware is stored in ROM or EEPROM, which are non-volatile memory devices."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which device requires a driver?",
+    "options": [
+      { "statement": "CPU", "istrue": false },
+      { "statement": "Cache", "istrue": false },
+      { "statement": "RAM", "istrue": false },
+      { "statement": "SCSI device", "istrue": true }
+    ],
+    "explanation": "Peripheral devices like SCSI disks require drivers to allow the OS to communicate with them."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the usefulness of DMA?",
+    "options": [
+      { "statement": "CPU is less busy", "istrue": true },
+      { "statement": "CPU performs all data transfers", "istrue": false },
+      { "statement": "Data transfer is slower", "istrue": false },
+      { "statement": "It reduces memory size", "istrue": false }
+    ],
+    "explanation": "DMA(Direct Memory Access) transfers data directly between devices and memory, freeing the CPU from managing data transfer."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the category of Windows 10?",
+    "options": [
+      { "statement": "Cooperative multitasking", "istrue": false },
+      { "statement": "Preemptive multitasking", "istrue": false },
+      { "statement": "Time sharing", "istrue": false },
+      { "statement": "Both preemptive multitasking and time sharing", "istrue": true }
+    ],
+    "explanation": "Windows 10 uses preemptive multitasking and supports time-sharing environments."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is true about interrupts?",
+    "options": [
+      { "statement": "Can be triggered by hardware", "istrue": false },
+      { "statement": "Can be triggered by software", "istrue": false },
+      { "statement": "Can be triggered by system call", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "Interrupts may be initiated by hardware devices, software instructions, or system calls."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "An interrupt vector points to?",
+    "options": [
+      { "statement": "The hardware that triggered the interrupt", "istrue": true },
+      { "statement": "The CPU cache", "istrue": false },
+      { "statement": "The user program", "istrue": false },
+      { "statement": "The file system", "istrue": false }
+    ],
+    "explanation": "The interrupt vector provides the address of the service routine for the device that caused the interrupt."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How many SCSI connections are typically supported?",
+    "options": [
+      { "statement": "1 device", "istrue": false },
+      { "statement": "2 devices", "istrue": false },
+      { "statement": "5 devices", "istrue": false },
+      { "statement": "7 or more devices", "istrue": true }
+    ],
+    "explanation": "A SCSI bus can support 7 or more devices depending on configuration."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the cheapest processor configuration?",
+    "options": [
+      { "statement": "1 processor, 1 core", "istrue": false },
+      { "statement": "1 processor, 2 cores with hyper-threading", "istrue": true },
+      { "statement": "2 processors, 4 cores", "istrue": false },
+      { "statement": "Multicore without hyper-threading", "istrue": false }
+    ],
+    "explanation": "The cheapest setup mentioned is one processor with 2 cores using hyper-threading."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What do modern operating systems exploit in processors?",
+    "options": [
+      { "statement": "Asymmetric multiprocessing", "istrue": false },
+      { "statement": "Symmetric multiprocessing", "istrue": true },
+      { "statement": "Single-core only", "istrue": false },
+      { "statement": "Cache only", "istrue": false }
+    ],
+    "explanation": "Modern operating systems are designed to exploit symmetric multiprocessing for performance."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the advantage of time sharing?",
+    "options": [
+      { "statement": "Throughput", "istrue": true },
+      { "statement": "No protection", "istrue": false },
+      { "statement": "Higher hardware cost", "istrue": false },
+      { "statement": "Only one program at a time", "istrue": false }
+    ],
+    "explanation": "Time sharing improves throughput by allowing multiple jobs to share CPU time effectively."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is protection in operating systems?",
+    "options": [
+      { "statement": "Only some users can edit a file", "istrue": true },
+      { "statement": "Password cannot be stolen", "istrue": false },
+      { "statement": "Each process gets equal time slice", "istrue": false },
+      { "statement": "Prevent hardware failure", "istrue": false }
+    ],
+    "explanation": "Protection refers to controlling access so that only authorized users or processes can modify resources."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is security in operating systems?",
+    "options": [
+      { "statement": "Only some users can edit a file", "istrue": false },
+      { "statement": "Admin password cannot be stolen", "istrue": true },
+      { "statement": "Each process gets equal time slice", "istrue": false },
+      { "statement": "Prevent cache access", "istrue": false }
+    ],
+    "explanation": "Security refers to defense against external attacks, such as protecting credentials from being stolen."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What hardware is required for time-sharing OS?",
+    "options": [
+      { "statement": "Single-core CPU", "istrue": false },
+      { "statement": "Multicore processor", "istrue": true },
+      { "statement": "Only ROM", "istrue": false },
+      { "statement": "Cache", "istrue": false }
+    ],
+    "explanation": "Time-sharing systems require multicore or multiprocessing hardware to support multiple jobs efficiently."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is an example of SaaS?",
+    "options": [
+      { "statement": "Microsoft Office 365", "istrue": true },
+      { "statement": "Heroku", "istrue": false },
+      { "statement": "Amazon EC2", "istrue": false },
+      { "statement": "Linux kernel", "istrue": false }
+    ],
+    "explanation": "Software as a Service provides applications over the internet, such as Microsoft Office 365."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is an example of PaaS?",
+    "options": [
+      { "statement": "Microsoft Office 365", "istrue": false },
+      { "statement": "Heroku", "istrue": true },
+      { "statement": "Amazon EC2", "istrue": false },
+      { "statement": "Linux kernel", "istrue": false }
+    ],
+    "explanation": "Platform as a Service provides a development and deployment environment, such as Heroku."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is an example of IaaS?",
+    "options": [
+      { "statement": "Microsoft Office 365", "istrue": false },
+      { "statement": "Heroku", "istrue": false },
+      { "statement": "Amazon EC2", "istrue": true },
+      { "statement": "Linux kernel", "istrue": false }
+    ],
+    "explanation": "Infrastructure as a Service provides computing resources such as virtual machines, like Amazon EC2."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which item means guest OS?",
+    "options": [
+      { "statement": "OS runs on virtual machine", "istrue": true },
+      { "statement": "Firmware", "istrue": false },
+      { "statement": "Middleware", "istrue": false },
+      { "statement": "BIOS", "istrue": false }
+    ],
+    "explanation": "A guest OS is an operating system running inside a virtual machine managed by a host OS."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What will happen if the hardware is NUMA but OS does not support it?",
+    "options": [
+      { "statement": "The system crashes", "istrue": false },
+      { "statement": "The program executes correctly but slower", "istrue": true },
+      { "statement": "The program executes faster", "istrue": false },
+      { "statement": "The OS does not boot", "istrue": false }
+    ],
+    "explanation": "Programs will still run but with performance degradation because memory locality is not optimized."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the example of multitasking in the textbook?",
+    "options": [
+      { "statement": "Lawyer handling multiple cases", "istrue": true },
+      { "statement": "CPU cache", "istrue": false },
+      { "statement": "Firmware loading OS", "istrue": false },
+      { "statement": "Admin password protection", "istrue": false }
+    ],
+    "explanation": "The textbook uses a lawyer handling multiple clients as an analogy for multitasking."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is essential in a time-sharing OS?",
+    "options": [
+      { "statement": "Only one user can run at a time", "istrue": false },
+      { "statement": "Each job receives equal time slice", "istrue": true },
+      { "statement": "No user protection", "istrue": false },
+      { "statement": "Jobs run only sequentially", "istrue": false }
+    ],
+    "explanation": "The key to time sharing is dividing CPU time into equal slices among multiple jobs."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What software license is issued by the Free Software Foundation?",
+    "options": [
+      { "statement": "GPL", "istrue": true },
+      { "statement": "MIT", "istrue": false },
+      { "statement": "Apache", "istrue": false },
+      { "statement": "BSD", "istrue": false }
+    ],
+    "explanation": "The GNU General Public License (GPL) is issued by the Free Software Foundation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What did Linus Torvalds invent?",
+    "options": [
+      { "statement": "Linux kernel", "istrue": true },
+      { "statement": "GNU utilities", "istrue": false },
+      { "statement": "UNIX", "istrue": false },
+      { "statement": "Windows NT kernel", "istrue": false }
+    ],
+    "explanation": "Linus Torvalds created the Linux kernel in 1991, which became the core of Linux operating systems."
+  }
+]

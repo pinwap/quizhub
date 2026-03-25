@@ -1,0 +1,156 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What are the best criteria for patients in scheduling analogy?",
+    "options": [
+      { "statement": "Throughput", "istrue": false },
+      { "statement": "Waiting time", "istrue": true },
+      { "statement": "CPU utilization", "istrue": false },
+      { "statement": "Response time", "istrue": false }
+    ],
+    "explanation": "For patients, the best analogy criterion is waiting time, reflecting how long they wait before being treated."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the average process burst time/time quantum?",
+    "options": [
+      { "statement": "<= 8 milliseconds", "istrue": true },
+      { "statement": "10 milliseconds", "istrue": false },
+      { "statement": "15 milliseconds", "istrue": false },
+      { "statement": "20 milliseconds", "istrue": false }
+    ],
+    "explanation": "Time quantum is usually set to 8 milliseconds or less for responsive scheduling."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If doctors have high salary, what is the best criterion for hospitals in scheduling analogy?",
+    "options": [
+      { "statement": "Waiting time", "istrue": false },
+      { "statement": "Turnaround time", "istrue": false },
+      { "statement": "Utilization", "istrue": true },
+      { "statement": "Response time", "istrue": false }
+    ],
+    "explanation": "For hospitals, utilization is the best analogy criterion, maximizing the use of expensive resources like doctors."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What scheduling algorithm will cause convoy effect?",
+    "options": [
+      { "statement": "First-come, first-served", "istrue": true },
+      { "statement": "Shortest job first", "istrue": false },
+      { "statement": "Round-robin", "istrue": false },
+      { "statement": "Priority scheduling", "istrue": false }
+    ],
+    "explanation": "First-come, first-served scheduling can lead to convoy effect when long jobs delay short ones."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the calculated average waiting time for the given process set?\nProcess | Arrival Time | Burst Time\nP1   |    0 ms     |     8 ms\nP2   |    1 ms     |     4 ms\nP3   |    2 ms     |     9 ms\nP4   |    3 ms     |     5 ms",
+    "options": [
+      { "statement": "6.5 milliseconds", "istrue": true },
+      { "statement": "5 milliseconds", "istrue": false },
+      { "statement": "8 milliseconds", "istrue": false },
+      { "statement": "10 milliseconds", "istrue": false }
+    ],
+    "explanation": "The average waiting time from the given arrival and burst times is 6.5 ms."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the value of next CPU burst if α = 0.8?",
+    "options": [
+      { "statement": "Use τn+1 = α tn + (1 – α) τn", "istrue": true },
+      { "statement": "Use τn+1 = tn – τn", "istrue": false },
+      { "statement": "Use τn+1 = α τn – tn", "istrue": false },
+      { "statement": "Use τn+1 = tn / τn", "istrue": false }
+    ],
+    "explanation": "The next CPU burst is predicted using exponential averaging: τn+1 = α tn + (1 – α) τn."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the solution of starvation in priority scheduling?",
+    "options": [
+      { "statement": "Aging", "istrue": true },
+      { "statement": "Round-robin", "istrue": false },
+      { "statement": "Deadlock prevention", "istrue": false },
+      { "statement": "Time slicing", "istrue": false }
+    ],
+    "explanation": "Aging gradually increases the priority of waiting processes to prevent starvation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is approximately scheduling algorithm?",
+    "options": [
+      { "statement": "Round-robin", "istrue": true },
+      { "statement": "First-come, first-served", "istrue": false },
+      { "statement": "Priority scheduling", "istrue": false },
+      { "statement": "Shortest job first", "istrue": false }
+    ],
+    "explanation": "Round-robin scheduling approximates fair CPU sharing among processes."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which scheduling algorithms are divided by time slice?",
+    "options": [
+      { "statement": "Multilevel queue", "istrue": false },
+      { "statement": "Multilevel feedback queue", "istrue": false },
+      { "statement": "Round robin only", "istrue": false },
+      { "statement": "Both multilevel queue and multilevel feedback queue", "istrue": true }
+    ],
+    "explanation": "Both multilevel queue and multilevel feedback queue scheduling use time slicing."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why does Windows need to use a high amount of RAM?",
+    "options": [
+      { "statement": "Because of no long-term scheduling", "istrue": true },
+      { "statement": "Because of short-term scheduling", "istrue": false },
+      { "statement": "Because of aging", "istrue": false },
+      { "statement": "Because of thread pooling", "istrue": false }
+    ],
+    "explanation": "Windows lacks long-term scheduling, so more processes stay in memory, requiring more RAM."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "DEADLOCK: What is the limitation of the Resource-allocation graph?",
+    "options": [
+      { "statement": "Cannot distinguish between cyclic graph with several instances", "istrue": true },
+      { "statement": "Cannot handle single instance", "istrue": false },
+      { "statement": "Cannot show resource ownership", "istrue": false },
+      { "statement": "Cannot show process states", "istrue": false }
+    ],
+    "explanation": "A resource-allocation graph cannot represent multiple instances of a resource, only single instances."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How to prevent circular wait?",
+    "options": [
+      { "statement": "Each process can request only a single instance per request", "istrue": false },
+      { "statement": "Each process can request resources only in an increasing order", "istrue": true },
+      { "statement": "Each process must follow request, use, and release", "istrue": false },
+      { "statement": "Each process must use a semaphore", "istrue": false }
+    ],
+    "explanation": "Circular wait can be prevented if processes request resources in a predefined increasing order."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is not a safe sequence?\n Allocation--|----Max----|-Available-|----Need----\n-- A B C ---|  A B C    |   A B C   |    A B C     \nP0  0 1 0  |  7 5 3    |   3 3 2   | P0 7 4 3\nP1  2 0 0  |  3 2 2    |           | P1 1 2 2\nP2  3 0 2  |  9 0 2    |           | P2 6 0 0\nP3  2 1 1  |  2 2 2    |           | P3 0 1 1\nP4  0 0 2  |  4 3 3    |           | P4 4 3 1",
+    "options": [
+      { "statement": "P1, P4, P3, P2, P0", "istrue": false },
+      { "statement": "P4, P3, P1, P2, P0", "istrue": true },
+      { "statement": "P1, P3, P4, P2, P0", "istrue": false },
+      { "statement": "P3, P1, P4, P2, P0", "istrue": false }
+    ],
+    "explanation": "The sequence P4, P3, P1, P2, P0 is not safe because resources cannot be allocated without causing deadlock."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What will a database do with deadlock?",
+    "options": [
+      { "statement": "Deadlock detection and recovery", "istrue": true },
+      { "statement": "Ignore deadlock", "istrue": false },
+      { "statement": "Only prevention", "istrue": false },
+      { "statement": "Abort system", "istrue": false }
+    ],
+    "explanation": "Databases usually handle deadlocks through detection and recovery, allowing transactions to roll back."
+  }
+]

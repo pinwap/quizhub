@@ -1,0 +1,90 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is not mutual exclusion?",
+    "options": [
+      { "statement": "Bicycle", "istrue": false },
+      { "statement": "T-shirt", "istrue": false },
+      { "statement": "Radio", "istrue": true },
+      { "statement": "Others", "istrue": false }
+    ],
+    "explanation": "Mutual exclusion applies to resources that cannot be shared simultaneously like a bicycle or T-shirt, but a radio can be shared by many listeners."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the hardware required for test-and-set?",
+    "options": [
+      { "statement": "Cache", "istrue": false },
+      { "statement": "Interrupt controller", "istrue": false },
+      { "statement": "Atomic instruction", "istrue": true },
+      { "statement": "DMA", "istrue": false }
+    ],
+    "explanation": "Test-and-set requires atomic instructions to ensure indivisible operations on shared variables."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a semaphore?",
+    "options": [
+      { "statement": "Available resources unit", "istrue": true },
+      { "statement": "CPU instruction", "istrue": false },
+      { "statement": "Compiler directive", "istrue": false },
+      { "statement": "Process ID", "istrue": false }
+    ],
+    "explanation": "A semaphore is an abstract data type used to control access to a common resource, representing available units of that resource."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How many semaphore usages will prevent bound waiting?",
+    "options": [
+      { "statement": "1 semaphore", "istrue": false },
+      { "statement": "2 semaphores", "istrue": false },
+      { "statement": "3 semaphores", "istrue": true },
+      { "statement": "4 semaphores", "istrue": false }
+    ],
+    "explanation": "Three semaphores are needed in certain designs to prevent bound waiting, ensuring fairness."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a spinlock?",
+    "options": [
+      { "statement": "A lock where a process repeatedly checks until it acquires the lock", "istrue": true },
+      { "statement": "A lock that always blocks the process", "istrue": false },
+      { "statement": "A scheduler algorithm", "istrue": false },
+      { "statement": "A type of semaphore", "istrue": false }
+    ],
+    "explanation": "A spinlock is a busy-wait lock where a thread loops until the lock becomes available."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is starvation in semaphore?",
+    "options": [
+      { "statement": "A process never gets resources because others keep acquiring them", "istrue": true },
+      { "statement": "A process terminates unexpectedly", "istrue": false },
+      { "statement": "A process is blocked for I/O", "istrue": false },
+      { "statement": "A process executes too fast", "istrue": false }
+    ],
+    "explanation": "Starvation occurs when processes wait indefinitely for resources due to unfair semaphore scheduling."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the semaphore wait() and signal() implementation, what are statement1 and statement2?",
+    "options": [
+      { "statement": "block(P) and wakeup()", "istrue": false },
+      { "statement": "block() and wakeup(P)", "istrue": true },
+      { "statement": "wakeup(P) and block()", "istrue": false },
+      { "statement": "wakeup() and block(P)", "istrue": false }
+    ],
+    "explanation": "In semaphore operations, statement1 corresponds to block() and statement2 corresponds to wakeup(P)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the readers-writers problem code, what ensures mutual exclusion when updating read_count?",
+    "options": [
+      { "statement": "mutex semaphore", "istrue": true },
+      { "statement": "rw_mutex semaphore", "istrue": false },
+      { "statement": "spinlock", "istrue": false },
+      { "statement": "condition variable", "istrue": false }
+    ],
+    "explanation": "The mutex semaphore ensures exclusive access to read_count so that it is updated correctly by multiple readers."
+  }
+]

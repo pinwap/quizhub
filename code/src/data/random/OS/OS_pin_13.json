@@ -1,0 +1,282 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which statement best describes the role of the File Control Block (FCB) / inode during the open() operation?",
+    "options": [
+      {
+        "statement": "It stores metadata such as permissions, size, and block pointers.",
+        "istrue": true
+      },
+      { "statement": "It stores actual file contents.", "istrue": false },
+      {
+        "statement": "It is created anew every time a file is opened.",
+        "istrue": false
+      },
+      { "statement": "It exists only inside user space.", "istrue": false }
+    ],
+    "explanation": "FCB/inode stores file metadata and pointers to data blocks. It is loaded into the open-file table during open()."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary reason that Linked Allocation provides poor random access performance?",
+    "options": [
+      {
+        "statement": "Blocks are stored contiguously on disk.",
+        "istrue": false
+      },
+      {
+        "statement": "Each block contains a pointer to the next block, requiring sequential traversal.",
+        "istrue": true
+      },
+      {
+        "statement": "The directory entry stores too many pointers.",
+        "istrue": false
+      },
+      {
+        "statement": "Linked Allocation requires index blocks for mapping.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Linked Allocation forces the system to follow pointers block-by-block, making random access slow."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In FAT, what is the purpose of storing next-block pointers inside a table rather than inside the data blocks?",
+    "options": [
+      { "statement": "To reduce internal fragmentation.", "istrue": false },
+      {
+        "statement": "To enable faster traversal because the FAT table is cached in memory.",
+        "istrue": true
+      },
+      { "statement": "To enforce contiguous allocation.", "istrue": false },
+      {
+        "statement": "To eliminate all forms of fragmentation.",
+        "istrue": false
+      }
+    ],
+    "explanation": "FAT keeps block pointers in a memory-resident table, enabling faster block lookup than Linked Allocation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which allocation method suffers from external fragmentation?",
+    "options": [
+      { "statement": "Contiguous Allocation", "istrue": true },
+      { "statement": "Linked Allocation", "istrue": false },
+      { "statement": "Indexed Allocation", "istrue": false },
+      { "statement": "FAT", "istrue": false }
+    ],
+    "explanation": "Contiguous Allocation requires continuous disk space, causing external fragmentation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which directory structure implementation provides the fastest search on average?",
+    "options": [
+      { "statement": "Linear list", "istrue": false },
+      { "statement": "Hash table–based directory", "istrue": true },
+      { "statement": "Linked list sorted by time", "istrue": false },
+      { "statement": "Circular list", "istrue": false }
+    ],
+    "explanation": "Hash tables give average O(1) search time."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the main disadvantage of using very large cluster sizes in FAT32?",
+    "options": [
+      { "statement": "Decreased internal fragmentation", "istrue": false },
+      {
+        "statement": "Increased internal fragmentation and reduced efficiency",
+        "istrue": true
+      },
+      { "statement": "FAT table becomes too small", "istrue": false },
+      { "statement": "Directory entries become invalid", "istrue": false }
+    ],
+    "explanation": "Large clusters waste space for small files—internal fragmentation increases."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which free-space management method stores a group of free block numbers inside the first free block?",
+    "options": [
+      { "statement": "Counting", "istrue": false },
+      { "statement": "Grouping", "istrue": true },
+      { "statement": "Linked list", "istrue": false },
+      { "statement": "Bitmap", "istrue": false }
+    ],
+    "explanation": "Grouping stores n–1 free block numbers inside the first free block."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which free-space method is best when free blocks often occur as long contiguous runs?",
+    "options": [
+      { "statement": "Bitmap", "istrue": false },
+      { "statement": "Counting", "istrue": true },
+      { "statement": "Grouping", "istrue": false },
+      { "statement": "Indexed free-space list", "istrue": false }
+    ],
+    "explanation": "Counting represents contiguous free blocks efficiently using (start, count) pairs."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the purpose of a superblock (volume control block)?",
+    "options": [
+      { "statement": "Store file contents", "istrue": false },
+      {
+        "statement": "Store volume metadata, such as block size and number of free blocks",
+        "istrue": true
+      },
+      { "statement": "Store file permissions", "istrue": false },
+      { "statement": "Store user credentials", "istrue": false }
+    ],
+    "explanation": "Superblock contains metadata describing the entire file system."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why does Indexed Allocation require additional overhead?",
+    "options": [
+      {
+        "statement": "It stores pointers in every data block.",
+        "istrue": false
+      },
+      {
+        "statement": "It requires an index block for each file.",
+        "istrue": true
+      },
+      { "statement": "It forces files to be contiguous.", "istrue": false },
+      { "statement": "It uses double pointers for all files.", "istrue": false }
+    ],
+    "explanation": "Indexed Allocation needs index blocks, increasing overhead especially for small files."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which statement is TRUE about UNIX inode structure?",
+    "options": [
+      { "statement": "It uses only direct blocks.", "istrue": false },
+      {
+        "statement": "It supports multi-level indexing for very large files.",
+        "istrue": true
+      },
+      { "statement": "Inode contains file contents.", "istrue": false },
+      { "statement": "Inode contains the superblock.", "istrue": false }
+    ],
+    "explanation": "Inode supports direct, single, double, and triple indirect pointers for scalable file size."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which allocation strategy provides the best performance for purely sequential access?",
+    "options": [
+      { "statement": "Contiguous Allocation", "istrue": true },
+      { "statement": "FAT", "istrue": false },
+      { "statement": "Indexed", "istrue": false },
+      { "statement": "Linked Allocation", "istrue": false }
+    ],
+    "explanation": "Contiguous gives sequential access with minimal seek."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which file system structure is loaded into kernel memory during mount?",
+    "options": [
+      { "statement": "Superblock", "istrue": true },
+      { "statement": "User directory entry", "istrue": false },
+      { "statement": "Physical block contents", "istrue": false },
+      { "statement": "Open-file table of each process", "istrue": false }
+    ],
+    "explanation": "Mounting loads the superblock into memory."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which allocation method requires compaction (defragmentation) to maintain good performance?",
+    "options": [
+      { "statement": "Linked Allocation", "istrue": false },
+      { "statement": "Indexed Allocation", "istrue": false },
+      { "statement": "Contiguous Allocation", "istrue": true },
+      { "statement": "FAT", "istrue": false }
+    ],
+    "explanation": "Contiguous allocation suffers from external fragmentation, requiring compaction."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is FAT not suitable for very large partitions?",
+    "options": [
+      {
+        "statement": "The FAT table must scale with disk size, requiring very large memory.",
+        "istrue": true
+      },
+      {
+        "statement": "FAT does not support sequential access.",
+        "istrue": false
+      },
+      {
+        "statement": "FAT requires triple indirect pointers.",
+        "istrue": false
+      },
+      { "statement": "FAT cannot store metadata.", "istrue": false }
+    ],
+    "explanation": "Large disks → many clusters → very large FAT table → large RAM usage."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which operation requires access to both system-wide and per-process open-file tables?",
+    "options": [
+      { "statement": "open()", "istrue": false },
+      { "statement": "close()", "istrue": false },
+      { "statement": "read()", "istrue": true },
+      { "statement": "mount()", "istrue": false }
+    ],
+    "explanation": "read() uses per-process table to locate system-wide table entry, which holds FCB."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Bitmap free-space management is most efficient when:",
+    "options": [
+      { "statement": "Disk size is small.", "istrue": false },
+      {
+        "statement": "Large amounts of contiguous free blocks must be found quickly.",
+        "istrue": true
+      },
+      { "statement": "Free blocks rarely change.", "istrue": false },
+      {
+        "statement": "Data blocks contain their own metadata.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bitmaps allow efficient scanning for contiguous free regions."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the open() process, what happens after the FCB is found on disk?",
+    "options": [
+      {
+        "statement": "It is copied into the system-wide open-file table.",
+        "istrue": true
+      },
+      { "statement": "It is executed by the CPU.", "istrue": false },
+      { "statement": "It is deleted from disk.", "istrue": false },
+      { "statement": "It is moved to user space.", "istrue": false }
+    ],
+    "explanation": "Open copies FCB to system-wide OFT to support all future I/O."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which file-system structure helps avoid double caching?",
+    "options": [
+      { "statement": "Dual buffer cache", "istrue": false },
+      { "statement": "Unified buffer cache", "istrue": true },
+      { "statement": "Page replacement cache", "istrue": false },
+      { "statement": "Direct memory cache", "istrue": false }
+    ],
+    "explanation": "Unified buffer cache merges page cache and buffer cache to prevent redundant caching."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which characteristic makes log-structured (journaling) file systems recover faster after crashes?",
+    "options": [
+      { "statement": "All data blocks are mirrored.", "istrue": false },
+      {
+        "statement": "Metadata updates are written sequentially to a journal.",
+        "istrue": true
+      },
+      { "statement": "All files are stored contiguously.", "istrue": false },
+      { "statement": "FAT table is stored twice.", "istrue": false }
+    ],
+    "explanation": "Writing metadata changes to a journal enables quick replay and consistent recovery."
+  }
+]

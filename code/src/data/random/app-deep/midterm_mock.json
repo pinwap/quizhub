@@ -1,0 +1,452 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ในสไลด์ ML for Science กล่าวถึง 'Sampling Bias' และ 'Sampling Noise' ข้อใดอธิบายความแตกต่างได้ถูกต้องที่สุด",
+    "options": [
+      { "statement": "Sampling Bias เกิดจากขนาดข้อมูลที่เล็กเกินไป ส่วน Sampling Noise เกิดจากกระบวนการสุ่มที่ไม่ดี", "istrue": false },
+      { "statement": "Sampling Bias เกิดจากวิธีเลือกข้อมูลที่ไม่เป็นตัวแทนของประชากร ส่วน Sampling Noise เกิดจากความบังเอิญที่มักเกิดในข้อมูลขนาดเล็ก", "istrue": true },
+      { "statement": "ทั้งสองอย่างมีความหมายเหมือนกัน คือข้อมูลไม่พอ", "istrue": false },
+      { "statement": "Sampling Bias แก้ได้ด้วยการเพิ่ม Model Complexity", "istrue": false }
+    ],
+    "explanation": "Bias คือความลำเอียงของระบบการสุ่ม (เช่น สุ่มราคาบ้านเฉพาะในเมือง) แต่ Noise คือความแปรปรวนจากดวงหรือความบังเอิญที่ส่งผลมากเมื่อ n น้อยครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ 3x3 Convolution สองชั้นต่อกัน (Stride=1) จะมี 'Receptive Field' เทียบเท่ากับ Convolution ขนาดเท่าใดเพียงชั้นเดียว",
+    "options": [
+      { "statement": "5 x 5", "istrue": true },
+      { "statement": "6 x 6", "istrue": false },
+      { "statement": "7 x 7", "istrue": false },
+      { "statement": "9 x 9", "istrue": false }
+    ],
+    "explanation": "การซ้อน 3x3 สองชั้นจะขยายการมองเห็นพื้นที่เป็น 5x5 และถ้าซ้อนสามชั้นจะเป็น 7x7 ซึ่งเป็นเหตุผลที่ VGGNet นิยมใช้ 3x3 หลายชั้นแทน Filter ขนาดใหญ่ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม MobileNet สิ่งที่ช่วยให้โมเดลมีขนาดเล็กและคำนวณเร็วขึ้นมากคือการเปลี่ยน Standard Convolution เป็นอะไร",
+    "options": [
+      { "statement": "Fully Connected Convolution", "istrue": false },
+      { "statement": "Depthwise Separable Convolution", "istrue": true },
+      { "statement": "Dilated Convolution", "istrue": false },
+      { "statement": "Transposed Convolution", "istrue": false }
+    ],
+    "explanation": "MobileNet แยกการคำนวณแนวลึก (Depthwise) และแนวขวาง (Pointwise 1x1) ออกจากกัน ทำให้จำนวนการคูณลดลงมหาศาลครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณเทรนโมเดลแล้วพบว่า Training Loss ลดลงจนเกือบศูนย์ แต่ Validation Accuracy กลับต่ำกว่า Training Accuracy มาก และ Validation Loss เริ่ม 'พุ่งสูงขึ้น' (U-Shape) ข้อใดเป็นแนวทางแก้ไขที่ตรงจุดที่สุด",
+    "options": [
+      { "statement": "เพิ่มขนาด Hidden Layer เพื่อให้โมเดลจำเก่งขึ้น", "istrue": false },
+      { "statement": "ใช้ Early Stopping และเพิ่ม Weight Decay (L2 Regularization)", "istrue": true },
+      { "statement": "เปลี่ยนไปใช้ Linear Activation แทน ReLU", "istrue": false },
+      { "statement": "เพิ่ม Learning Rate ให้สูงขึ้นเพื่อให้โมเดลกระโดดออกจากหลุม", "istrue": false }
+    ],
+    "explanation": "นี่คืออาการ Overfitting ที่รุนแรง การหยุดก่อนที่จะพัง (Early Stopping) และการคุมน้ำหนักไม่ให้ใหญ่เกิน (Weight Decay) จะช่วยให้โมเดล generalize ได้ดีขึ้นครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในการทำ Object Detection ขั้นตอน 'Non-Maximum Suppression (NMS)' มีหน้าที่สำคัญอย่างไร",
+    "options": [
+      { "statement": "ช่วยขยายขนาด Bounding Box ให้คลุมวัตถุ", "istrue": false },
+      { "statement": "คัดกรอง Bounding Box ที่ทับซ้อนกันของวัตถุชิ้นเดียวกัน และเหลือไว้เพียงกล่องที่คะแนนสูงสุด", "istrue": true },
+      { "statement": "เพิ่มจำนวน Anchor Boxes ให้มากขึ้น", "istrue": false },
+      { "statement": "คำนวณหาค่า mAP ของโมเดล", "istrue": false }
+    ],
+    "explanation": "โมเดลมักทายกล่องซ้อนกันหลายใบที่วัตถุตัวเดียว NMS จะใช้ IoU เพื่อลบกล่องที่ซ้ำซ้อนออกครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "ใน PyTorch หากมีโมเดล `nn.Linear(512, 10)` ชั้นนี้จะมีจำนวนน้ำหนัก (Weights) รวมกับ Bias ทั้งหมดกี่พารามิเตอร์",
+    "correctAnswer": "5130",
+    "explanation": "วิธีคิด: (512 * 10) + 10 (bias สำหรับแต่ละ output node) = 5120 + 10 = 5130 ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามกฎ 'Linear Scaling Rule' ของการจูน Hyperparameter หากคุณเพิ่ม Batch Size ขึ้นเป็น 4 เท่า (เช่น จาก 32 เป็น 128) คุณควรปรับ Learning Rate อย่างไร",
+    "options": [
+      { "statement": "ลดลง 4 เท่า", "istrue": false },
+      { "statement": "คงเดิม", "istrue": false },
+      { "statement": "เพิ่มขึ้น 4 เท่า", "istrue": true },
+      { "statement": "หารด้วยรากที่สองของ 4", "istrue": false }
+    ],
+    "explanation": "เมื่อ Batch ใหญ่ขึ้น ความแปรปรวนของ Gradient จะลดลง ทำให้เราสามารถใช้ก้าวที่ใหญ่ขึ้น (Higher LR) เพื่อเร่งการเรียนรู้ได้โดยไม่หลุดวงโคจรครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องเกี่ยวกับ 'Vanishing Gradient' ใน Deep Neural Network",
+    "options": [
+      { "statement": "เกิดจากการที่ Weight มีค่าใหญ่เกินไปจนทะลุเพดาน", "istrue": false },
+      { "statement": "เกิดจากอนุพันธ์ของ Activation Function (เช่น Sigmoid) มีค่าน้อยกว่า 1 มากๆ เมื่อคูณกันหลายชั้นค่าจะเข้าใกล้ 0", "istrue": true },
+      { "statement": "แก้ได้โดยการใช้ Pooling Layer เยอะๆ", "istrue": false },
+      { "statement": "มักเกิดกับชั้นหลังๆ (Output Layer) ของโมเดล", "istrue": false }
+    ],
+    "explanation": "ในการ Backprop อนุพันธ์จะถูกคูณสะสมย้อนกลับไป ถ้าแต่ละค่ามีค่าน้อย (Sigmoid slope max = 0.25) ยิ่งลึกค่ายิ่งหายไปจนชั้นแรกๆ ไม่โดนปรับน้ำหนักครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "ในการออกแบบโมเดลเพื่อแก้ปัญหาที่มีข้อมูลเป็น 'Graph Structure' (เช่น โครงสร้างโมเลกุลหรือความสัมพันธ์เพื่อน) เราควรเลือกใช้สถาปัตยกรรมประเภทใด (อักษรย่อ 3 ตัว)",
+    "correctAnswer": "GNN",
+    "explanation": "GNN (Graph Neural Networks) ออกแบบมาเพื่อรับ Input ที่มีความสัมพันธ์เชิงโครงสร้างแบบกราฟครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในงาน Multi-label Classification ที่ข้อมูลหนึ่งชุดสามารถมีได้หลายป้ายกำกับ เราควรใช้ Activation Function และ Loss Function ตัวใดที่ Output Layer",
+    "options": [
+      { "statement": "Softmax + Cross Entropy", "istrue": false },
+      { "statement": "Sigmoid + Binary Cross Entropy (BCE)", "istrue": true },
+      { "statement": "ReLU + MSE", "istrue": false },
+      { "statement": "Tanh + Hinge Loss", "istrue": false }
+    ],
+    "explanation": "Multi-label คือการมองแต่ละ Label แยกกันเป็นอิสระ (Binary class n ตัว) จึงต้องใช้ Sigmoid แยกรายตัวและใช้ BCE ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "AlexNet ใช้เทคนิค 'Data Augmentation' แบบใดที่เป็นจุดเด่นในสไลด์เพื่อช่วยลด Overfitting",
+    "options": [
+      { "statement": "การหมุนภาพ 360 องศา", "istrue": false },
+      { "statement": "การสุ่ม Crop ภาพขนาด 224x224 จาก 256x256 และการทำ Horizontal Reflection", "istrue": true },
+      { "statement": "การใส่ Noise แบบ Gaussian", "istrue": false },
+      { "statement": "การเปลี่ยนสีภาพเป็นขาวดำทั้งหมด", "istrue": false }
+    ],
+    "explanation": "AlexNet เพิ่มปริมาณข้อมูลได้ถึง 2048 เท่าจากการ Crop และ Flip ภาพในระหว่างเทรนครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในเรื่องของ Optimizer ข้อใดคือความแตกต่างสำคัญระหว่าง SGD และ Adam",
+    "options": [
+      { "statement": "SGD คำนวณได้ช้ากว่า Adam มาก", "istrue": false },
+      { "statement": "Adam มีการปรับ Learning Rate แยกตามแต่ละพารามิเตอร์ (Adaptive) โดยใช้ Momentum และ Scaling", "istrue": true },
+      { "statement": "SGD ไม่ต้องกำหนด Learning Rate", "istrue": false },
+      { "statement": "Adam ใช้หน่วยความจำ (Memory) น้อยกว่า SGD", "istrue": false }
+    ],
+    "explanation": "Adam (Adaptive Moment Estimation) จะเก็บสถิติของ Gradient ในอดีตมาช่วยปรับ LR ให้เหมาะสมกับแต่ละ Weight ทำให้เทรนง่ายกว่า SGD พื้นฐานครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "หากต้องการตรวจสอบว่าจุดไหนในรูปภาพที่โมเดล CNN ใช้ในการตัดสินใจเลือก Class นั้นๆ (Visualizing Discriminative Regions) เรามักใช้เทคนิคที่เรียกว่า ..........................",
+    "correctAnswer": "Grad-CAM",
+    "explanation": "Grad-CAM (Gradient-weighted Class Activation Mapping) ใช้ข้อมูล Gradient ในชั้นสุดท้ายเพื่อสร้าง Heatmap บนรูปภาพครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในโมเดล Faster R-CNN ชั้น 'RoI Pooling' มีหน้าที่หลักเพื่ออะไร",
+    "options": [
+      { "statement": "เพื่อหาตำแหน่งของวัตถุ", "istrue": false },
+      { "statement": "เพื่อสกัด Feature จากรูปภาพต้นฉบับ", "istrue": false },
+      { "statement": "เพื่อปรับขนาด Feature Map ของบริเวณที่เสนอ (Proposals) ให้มีขนาดเท่ากันก่อนเข้า FC Layer", "istrue": true },
+      { "statement": "เพื่อลดความละเอียดของภาพทั้งหมด", "istrue": false }
+    ],
+    "explanation": "Proposals ที่ RPN หามาได้มีหลายขนาด แต่ชั้น Fully Connected (FC) ต้องการ Input ขนาดคงที่ RoI Pooling จึงต้องจัดการตรงนี้ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำว่า 'Fine-tuning' ในบริบทของ Transfer Learning หมายถึงอะไร",
+    "options": [
+      { "statement": "การเทรนใหม่ตั้งแต่ต้นด้วยข้อมูลทั้งหมด", "istrue": false },
+      { "statement": "การปรับจูน Hyperparameter เฉพาะส่วนของ Optimizer", "istrue": false },
+      { "statement": "การนำ Pre-trained model มาเทรนต่อด้วย Learning Rate ที่ 'ต่ำมาก' เพื่อปรับน้ำหนักของชั้นที่ Freeze ไว้เบื้องต้น", "istrue": true },
+      { "statement": "การเพิ่ม Layer ใหม่เข้าไปในตอนท้ายอย่างเดียว", "istrue": false }
+    ],
+    "explanation": "Fine-tuning คือการค่อยๆ ปรับน้ำหนักที่เก่งอยู่แล้วให้เข้ากับงานใหม่ โดยมักใช้ LR ที่น้อยกว่าปกติมากเพื่อไม่ให้ทำลายความรู้เดิมครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในมุมมองของ Classical Programming กับ Machine Learning ข้อใดอธิบายกระบวนการของ Machine Learning ได้ถูกต้องที่สุด",
+    "options": [
+      { "statement": "เราป้อน Rules และ Data เพื่อให้ได้ Answer", "istrue": false },
+      { "statement": "เราป้อน Data และ Answer เพื่อให้ได้ Learned Rules", "istrue": true },
+      { "statement": "เราใช้แรงงานคนในการเขียนเงื่อนไข If-Else ทั้งหมด", "istrue": false },
+      { "statement": "Machine Learning ไม่จำเป็นต้องใช้ข้อมูลในการเรียนรู้", "istrue": false }
+    ],
+    "explanation": "Machine Learning (Supervised) คือการนำ Data และ Answer (Label) มาเข้า Learning Algorithm เพื่อสร้าง Model หรือ Rules ออกมาครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากโมเดลของคุณมีค่า Accuracy สูงมากในกลุ่ม Training data แต่พอนำไปใช้กับข้อมูลใหม่แล้วผลลัพธ์แย่มาก (High Variance) เหตุการณ์นี้เรียกว่าอะไรและควรแก้ด้วยวิธีใด",
+    "options": [
+      { "statement": "Underfitting / เพิ่มจำนวน Hidden Layer", "istrue": false },
+      { "statement": "Overfitting / ใช้เทคนิค Regularization เช่น Dropout", "istrue": true },
+      { "statement": "Good Fit / ไม่ต้องแก้ไขอะไร", "istrue": false },
+      { "statement": "Bias Problem / เปลี่ยนไปใช้ Linear Regression", "istrue": false }
+    ],
+    "explanation": "การที่โมเดลจำแม่นแต่ในเซตเทรนแต่ทำโจทย์ใหม่ไม่ได้คือ Overfitting ครับ การแก้ต้องใช้ Regularization หรือเพิ่มข้อมูลครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในงานแพทย์ที่ต้องการคัดกรองผู้ป่วย (Screening) เรากลัวการที่โมเดลทำนายว่า 'ไม่เป็นโรค' ทั้งที่จริงๆ 'เป็นโรค' (False Negative) มากที่สุด เราควรพิจารณา Metric ใดเป็นพิเศษ",
+    "options": [
+      { "statement": "Precision", "istrue": false },
+      { "statement": "Accuracy", "istrue": false },
+      { "statement": "Recall (Sensitivity)", "istrue": true },
+      { "statement": "Specificity", "istrue": false }
+    ],
+    "explanation": "Recall ใช้วัดความสามารถในการตรวจจับสิ่งที่ถูกต้องทั้งหมด ถ้า Recall ต่ำ แสดงว่าเราปล่อยคนป่วยหลุดไป (FN เยอะ) ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ทำไมเราถึงนิยมใช้ ReLU แทน Sigmoid ใน Hidden Layer ของ Deep Neural Network",
+    "options": [
+      { "statement": "เพราะ ReLU ให้ค่า Output ระหว่าง 0 ถึง 1", "istrue": false },
+      { "statement": "เพราะ ReLU ช่วยลดปัญหา Vanishing Gradient ในฝั่งค่าบวก", "istrue": true },
+      { "statement": "เพราะ Sigmoid คำนวณได้เร็วกว่ามาก", "istrue": false },
+      { "statement": "เพราะ ReLU เป็น Function ที่เป็นเส้นตรง (Linear) ทั้งหมด", "istrue": false }
+    ],
+    "explanation": "Sigmoid มีช่วงที่ Gradient แบนราบทำให้ค่าจางหาย (Vanishing) แต่ ReLU ในฝั่งบวกจะมี Gradient คงที่คือ 1 ทำให้เทรนง่ายกว่าครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กระบวนการปรับ Weights โดยใช้กฎลูกโซ่ (Chain Rule) เพื่อหาอนุพันธ์ของ Loss เทียบกับน้ำหนักในแต่ละชั้นเรียกว่าอะไร",
+    "options": [
+      { "statement": "Forward Pass", "istrue": false },
+      { "statement": "Inference", "istrue": false },
+      { "statement": "Backpropagation", "istrue": true },
+      { "statement": "Max Pooling", "istrue": false }
+    ],
+    "explanation": "Backpropagation คือหัวใจของการเทรน NN โดยใช้ Chain Rule ส่ง Error ย้อนกลับไปปรับน้ำหนักครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "จงคำนวณจำนวน Parameter (Weight + Bias) ของชั้น Convolution ที่มี Input 3 Channels, ใช้ Filter ขนาด 3x3 จำนวน 16 ตัว",
+    "correctAnswer": "448",
+    "explanation": "วิธีคิด: ((3 * 3 * 3) + 1) * 16 = (27 + 1) * 16 = 448 ครับ (อย่าลืม +1 ของ Bias ต่อหนึ่ง Filter นะ)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า Input image ขนาด 32x32 ผ่านชั้น Convolution ที่มี Filter 5x5, Stride 1 และไม่มี Padding (Padding=0) มิติของ Output (W x H) จะเป็นเท่าใด",
+    "options": [
+      { "statement": "32 x 32", "istrue": false },
+      { "statement": "28 x 28", "istrue": true },
+      { "statement": "30 x 30", "istrue": false },
+      { "statement": "27 x 27", "istrue": false }
+    ],
+    "explanation": "สูตร: (32 - 5 + 2*0)/1 + 1 = 28 ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม ResNet การใช้ 'Skip Connection' หรือ 'Residual Connection' มีวัตถุประสงค์เพื่ออะไร",
+    "options": [
+      { "statement": "เพื่อลดขนาดของรูปภาพ (Downsampling)", "istrue": false },
+      { "statement": "เพื่อแก้ปัญหา Degradation และ Vanishing Gradient เมื่อโมเดลลึกมากๆ", "istrue": true },
+      { "statement": "เพื่อใช้ Filter หลายขนาดขนานกัน", "istrue": false },
+      { "statement": "เพื่อทำ Data Augmentation ในตัว", "istrue": false }
+    ],
+    "explanation": "Skip Connection ช่วยให้ Gradient ไหลผ่าน Layer ต่างๆ ได้ง่ายขึ้น ทำให้เราเทรนโมเดลที่ลึกเป็นร้อยชั้นได้ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในโมเดล Inception (GoogLeNet) การใช้ 1x1 Convolution มีหน้าที่หลักคืออะไร",
+    "options": [
+      { "statement": "ขยายขนาดภาพให้ใหญ่ขึ้น", "istrue": false },
+      { "statement": "ลดจำนวน Channels (Dimension Reduction) เพื่อประหยัดการคำนวณ", "istrue": true },
+      { "statement": "ใช้แทนการทำ Dropout", "istrue": false },
+      { "statement": "ทำหน้าที่เป็นตัวแยกประเภท (Classifier)", "istrue": false }
+    ],
+    "explanation": "1x1 Conv ช่วยลดความลึกของ Feature Map ก่อนเข้า 3x3 หรือ 5x5 ทำให้พารามิเตอร์รวมลดลงมากครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "EfficientNet ใช้หลักการที่เรียกว่า 'Compound Scaling' ในการปรับแต่งสิ่งใดไปพร้อมกัน",
+    "options": [
+      { "statement": "Depth, Width และ Resolution", "istrue": true },
+      { "statement": "Learning Rate และ Batch Size", "istrue": false },
+      { "statement": "Weights และ Biases เท่านั้น", "istrue": false },
+      { "statement": "Padding และ Stride", "istrue": false }
+    ],
+    "explanation": "EfficientNet ค้นพบว่าการปรับทั้งความลึก ความกว้าง และความละเอียดภาพตามสัดส่วนที่เหมาะสมจะให้ประสิทธิภาพสูงสุดครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากคำแนะนำในสไลด์ ML for Science ของคุณ Konpat (annotated) ข้อใดกล่าวถูกต้องเกี่ยวกับ Dropout",
+    "options": [
+      { "statement": "ควรใช้ใน CNN เป็นหลัก", "istrue": false },
+      { "statement": "เป็นเทคนิคแรกที่ควรใส่เพื่อเร่งการเรียนรู้", "istrue": false },
+      { "statement": "ไม่จำเป็นต้องใช้ใน CNN เพราะ Conv มีการแชร์ Weight อยู่แล้ว", "istrue": true },
+      { "statement": "ช่วยลด Training Error ให้เป็นศูนย์เสมอ", "istrue": false }
+    ],
+    "explanation": "ในสไลด์ระบุว่า Dropout มักใช้ใน MLP หรือ Transformer แต่ใน CNN ไม่ค่อยจำเป็นและอาจทำให้เทรนช้าลงครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากกราฟ Loss ของคุณมีการแกว่งขึ้นลงอย่างรุนแรง (Large Oscillations) หรือมีค่าเป็น NaN ปัญหานี้มักเกิดจากอะไร",
+    "options": [
+      { "statement": "Learning Rate ต่ำเกินไป", "istrue": false },
+      { "statement": "Learning Rate สูงเกินไป", "istrue": true },
+      { "statement": "ใช้ Batch Size ใหญ่เกินไป", "istrue": false },
+      { "statement": "ลืมใส่ Padding", "istrue": false }
+    ],
+    "explanation": "LR ที่สูงเกินไปจะทำให้โมเดลกระโดดข้ามจุดต่ำสุดและระเบิดออกได้ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในการจูน Hyperparameter เทคนิค 'Triplet Rule' ตามสไลด์แนะนำให้ทำอย่างไร",
+    "options": [
+      { "statement": "จูนพารามิเตอร์ 3 ตัวพร้อมกันเสมอ", "istrue": false },
+      { "statement": "ลองค่า (Lower, Current, Higher) เพื่อหาทิศทางที่ควรไปต่อ", "istrue": true },
+      { "statement": "เทรนโมเดล 3 ครั้งแล้วเอาค่าเฉลี่ย", "istrue": false },
+      { "statement": "ใช้ข้อมูลเพียง 3% ในการเทรน", "istrue": false }
+    ],
+    "explanation": "Triplet Rule คือการลองค่าที่ต่ำกว่าและสูงกว่าค่าปัจจุบันเพื่อดูว่า Trend ของโมเดลดีขึ้นไปทางไหนครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "ใน PyTorch หากเราต้องการเปลี่ยนมิติของ x จาก (Batch, 16, 5, 5) ให้กลายเป็นแบบ Flatten เพื่อเข้า Linear layer ต้องใช้คำสั่ง x.view(-1, ______ )",
+    "correctAnswer": "400",
+    "explanation": "วิธีคิด: 16 * 5 * 5 = 400 ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในงาน Object Detection ค่า IoU (Intersection over Union) คำนวณอย่างไร",
+    "options": [
+      { "statement": "พื้นที่ทับซ้อนบวกพื้นที่รวม", "istrue": false },
+      { "statement": "พื้นที่ทับซ้อนหารด้วยพื้นที่รวม", "istrue": true },
+      { "statement": "ความกว้างคูณความสูงของกล่อง", "istrue": false },
+      { "statement": "จำนวนวัตถุที่ทายถูกทั้งหมด", "istrue": false }
+    ],
+    "explanation": "IoU คือสัดส่วนการทับซ้อนกันของกล่องที่ทำนายกับกล่องจริงครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ส่วนประกอบใดใน Faster R-CNN ที่ทำหน้าที่สแกน Feature Map และเสนอตำแหน่งที่ 'น่าจะเป็นวัตถุ' (Region Proposals)",
+    "options": [
+      { "statement": "Softmax Layer", "istrue": false },
+      { "statement": "RPN (Region Proposal Network)", "istrue": true },
+      { "statement": "Fully Connected Layer", "istrue": false },
+      { "statement": "Backbone (ResNet/VGG)", "istrue": false }
+    ],
+    "explanation": "RPN คือหัวใจของ Two-stage detector ที่ช่วยหาตำแหน่งเบื้องต้นก่อนส่งไปจำแนกประเภทครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "Metric สำคัญที่เป็นการหาค่าเฉลี่ยของ Precision ในหลายๆ ระดับความเชื่อมั่นและ IoU ของงาน Object Detection เรียกว่าอะไร (อักษรย่อ)",
+    "correctAnswer": "mAP",
+    "explanation": "mAP (mean Average Precision) คือตัวชี้วัดมาตรฐานของงานตรวจจับวัตถุครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำ 'Global Average Pooling' แทนการใช้ Fully Connected Layer ขนาดใหญ่ที่ท้ายโมเดล CNN มีประโยชน์อย่างไร",
+    "options": [
+      { "statement": "ช่วยเพิ่มความเร็วในการเทรน", "istrue": false },
+      { "statement": "ช่วยลดจำนวนพารามิเตอร์ลงอย่างมากและลด Overfitting", "istrue": true },
+      { "statement": "ทำให้ภาพมีสีสันสดใสขึ้น", "istrue": false },
+      { "statement": "ทำให้โมเดลรับขนาดภาพที่เล็กลงได้เท่านั้น", "istrue": false }
+    ],
+    "explanation": "Global Average Pooling ยุบแต่ละ Channel ให้เหลือค่าเดียว ทำให้ไม่ต้องใช้ FC ที่มีน้ำหนักมหาศาลครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณต้องการทำระบบคัดแยกอีเมลว่า 'สำคัญ', 'งาน', 'ครอบครัว', 'โปรโมชั่น' โดยที่หนึ่งอีเมลอาจจะมีได้หลายหมวดพร้อมกัน งานนี้คือประเภทใด",
+    "options": [
+      { "statement": "Binary Classification", "istrue": false },
+      { "statement": "Multi-class Classification", "istrue": false },
+      { "statement": "Multi-label Classification", "istrue": true },
+      { "statement": "Regression", "istrue": false }
+    ],
+    "explanation": "หนึ่งข้อมูลมีได้หลายป้ายกำกับพร้อมกันคือ Multi-label ครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "AlexNet เป็นโมเดลที่โด่งดังมากในการใช้เทคนิค 'Overlapping Pooling' หากสไลด์ระบุว่า Window size = 3 และ Stride = 2 นี่ถือเป็น Overlapping หรือไม่ (ตอบ ใช่ หรือ ไม่ใช่)",
+    "correctAnswer": "ใช่",
+    "explanation": "ถ้า Window size ใหญ่กว่า Stride แสดงว่ามีการทับซ้อนกันครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในคำสั่ง PyTorch `torch.sum(x, dim=1)` หาก x มี shape เป็น (5, 10) ผลลัพธ์ที่ได้จะมี shape เป็นเท่าใด",
+    "options": [
+      { "statement": "(5, 1)", "istrue": false },
+      { "statement": "(10)", "istrue": false },
+      { "statement": "(5)", "istrue": true },
+      { "statement": "(1)", "istrue": false }
+    ],
+    "explanation": "dim=1 คือการยุบมิติในแนวคอลัมน์ จะเหลือผลรวมตามจำนวนแถว (5 แถว) ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุผลที่ VGGNet เลือกใช้แต่ Filter ขนาด 3x3 ซ้อนกันหลายชั้น แทนที่จะใช้ 7x7 ชั้นเดียวคืออะไร",
+    "options": [
+      { "statement": "เพื่อให้โมเดลมีความเป็น Non-linearity มากขึ้นและพารามิเตอร์น้อยลง", "istrue": true },
+      { "statement": "เพราะสมัยนั้นยังไม่มีใครผลิต Filter 7x7 ได้", "istrue": false },
+      { "statement": "เพื่อให้ภาพที่ได้มีความเบลอมากขึ้น", "istrue": false },
+      { "statement": "3x3 มีค่าเฉลี่ยเลขคณิตที่ดีกว่า", "istrue": false }
+    ],
+    "explanation": "การใช้ 3x3 สามชั้น ได้ Receptive Field เท่ากับ 7x7 แต่ใช้พารามิเตอร์น้อยกว่าและผ่าน Activation Function มากกว่า (Non-linear มากกว่า) ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในกราฟ Epoch vs Accuracy หากเส้น Training สูงขึ้นเรื่อยๆ แต่ Validation นิ่งหรือลดลง การแก้ไขปัญหาที่ 'ง่ายที่สุด' และควรทำอันดับแรกๆ คือข้อใด",
+    "options": [
+      { "statement": "เปลี่ยน Architecture ของโมเดลใหม่ทั้งหมด", "istrue": false },
+      { "statement": "ลด Learning Rate ลงทันที 100 เท่า", "istrue": false },
+      { "statement": "ทำ Data Augmentation หรือเพิ่มปริมาณข้อมูล", "istrue": true },
+      { "statement": "ลบ Layer ทิ้งให้หมด", "istrue": false }
+    ],
+    "explanation": "นี่คืออาการ Overfitting การเพิ่มความหลากหลายของข้อมูลด้วย Augmentation คือทางแก้มาตรฐานครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "ในโปรเจกต์ Multimodal หากเราใช้ Image Branch (ResNet) และ Tabular Branch (MLP) มาบรรจบกันที่ชั้นสุดท้าย วิธีการรวมกันที่นิยมที่สุดคือการนำ Feature Vector มา ______ (Concatenate / Add / Multiply)",
+    "correctAnswer": "Concatenate",
+    "explanation": "การต่อ Vector (Concatenate) ช่วยให้โมเดลรักษาข้อมูลจากทั้งสองแหล่งไว้ครบถ้วนก่อนเข้าชั้นตัดสินใจครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความหมายของ 'Sliding Window' ในยุคดั้งเดิมของ Object Detection",
+    "options": [
+      { "statement": "การเลื่อนหน้าต่างไปรอบๆ บ้าน", "istrue": false },
+      { "statement": "การเลื่อนกรอบขนาดคงที่ไปบนรูปภาพเพื่อส่งเข้าโมเดลจำแนกทีละส่วน", "istrue": true },
+      { "statement": "การเลื่อนมิติของ Tensor ในโค้ด", "istrue": false },
+      { "statement": "การเลื่อนความเร็วในการเทรน", "istrue": false }
+    ],
+    "explanation": "Sliding Window คือการไล่สแกนทีละจุดบนภาพซึ่งช้ามากครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในการทำ Transfer Learning หาก Dataset ใหม่ของคุณมีขนาด 'เล็กมาก' แต่มีความ 'คล้ายคลึง' กับ ImageNet คุณควรทำอย่างไร",
+    "options": [
+      { "statement": "เทรนใหม่ทั้งหมด (Train from scratch)", "istrue": false },
+      { "statement": "Freeze Base layers และเทรนเฉพาะส่วนหัว (Classifier)", "istrue": true },
+      { "statement": "Freeze ส่วนหัวและเทรน Base layers", "istrue": false },
+      { "statement": "ห้ามใช้ Transfer Learning ในกรณีนี้", "istrue": false }
+    ],
+    "explanation": "ถ้าข้อมูลน้อยและคล้ายของเดิม การ Freeze ส่วนที่เก่งอยู่แล้ว (Feature Extractor) แล้วแก้แค่ส่วนท้ายจะได้ผลดีที่สุดครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Anchor Boxes ในงาน Object Detection ถูกสร้างมาเพื่อแก้ปัญหาอะไร",
+    "options": [
+      { "statement": "เพื่อยึดเหนี่ยวโมเดลไม่ให้หลุดวงโคจร", "istrue": false },
+      { "statement": "เพื่อให้โมเดลสามารถตรวจจับวัตถุที่มีรูปร่างและขนาด (Scale/Aspect Ratio) ต่างกันได้", "istrue": true },
+      { "statement": "เพื่อใช้แทนสีของพิกเซล", "istrue": false },
+      { "statement": "เพื่อลดการทำ Padding", "istrue": false }
+    ],
+    "explanation": "Anchor คือกล่องอ้างอิงหลายๆ ทรง ช่วยให้โมเดลหาจุดเริ่มในการทาย Bounding Box ของวัตถุต่างชนิดได้ง่ายขึ้นครับ"
+  },
+  {
+    "type": "fill-in-blank",
+    "question": "ถ้า Input มี 16 Channels ผ่านชั้น Convolution 1x1 ที่มี Filter 8 ตัว จำนวน Channels ของ Output จะเป็นเท่าใด",
+    "correctAnswer": "8",
+    "explanation": "1x1 Conv ทำหน้าที่เปลี่ยนจำนวน Channel ตามจำนวน Filter ครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสไลด์ ML for Science ข้อใดคือผลจากการใช้ 'Small Batch Size'",
+    "options": [
+      { "statement": "ทำให้ Gradient มีความนิ่งสูงมาก", "istrue": false },
+      { "statement": "มี Noise เยอะ ซึ่งอาจช่วยให้หลุดจาก Local Minima ได้", "istrue": true },
+      { "statement": "ประหยัดเวลาการเทรนต่อ 1 Epoch มากที่สุด", "istrue": false },
+      { "statement": "ทำให้ค่า Loss เป็น 0 เสมอ", "istrue": false }
+    ],
+    "explanation": "Batch เล็กมีความเป็น Stochastic สูง (Noise เยอะ) ช่วยให้การค้นหาจุดต่ำสุดมีความยืดหยุ่นครับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณออกแบบโมเดล Multimodal เพื่อทำนายคะแนนความพึงพอใจ (0-100) ตัวแปร Output เป็นเลขต่อเนื่อง คุณควรใช้ Loss Function ใด",
+    "options": [
+      { "statement": "Cross-Entropy Loss", "istrue": false },
+      { "statement": "Mean Squared Error (MSE)", "istrue": true },
+      { "statement": "Binary Cross-Entropy", "istrue": false },
+      { "statement": "Hinge Loss", "istrue": false }
+    ],
+    "explanation": "งานที่ทำนายเลขต่อเนื่อง (Regression) ต้องใช้ MSE ครับ"
+  }
+]

@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Why is the TCP/IP network infrastructure considered inherently vulnerable according to the course material?",
+    "options": [
+      {
+        "statement": "Because it uses too much electricity.",
+        "istrue": false
+      },
+      {
+        "statement": "Because it is a complex system composed of many layers and protocols, and complexity increases the chance of things going wrong.",
+        "istrue": true
+      },
+      {
+        "statement": "Because it is owned by a single company.",
+        "istrue": false
+      },
+      {
+        "statement": "Because it only works on Windows.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Complexity is the enemy of security. The TCP/IP model involves many moving parts, meaning a failure in any single layer can compromise the whole system."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following represents the correct logical order of a typical hacking methodology?",
+    "options": [
+      {
+        "statement": "Exploitation -> Scanning -> Reconnaissance -> Information Gathering",
+        "istrue": false
+      },
+      {
+        "statement": "Reconnaissance -> Information Gathering -> Scanning -> Exploitation",
+        "istrue": true
+      },
+      {
+        "statement": "Scanning -> Exploitation -> Reconnaissance -> Information Gathering",
+        "istrue": false
+      },
+      {
+        "statement": "Information Gathering -> Exploitation -> Scanning -> Reconnaissance",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hackers follow a systematic approach: first understanding the target (Recon), gathering specific data (Info Gathering), looking for vulnerabilities (Scanning), and finally attacking (Exploitation)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary purpose of the 'Reconnaissance' phase?",
+    "options": [
+      {
+        "statement": "To crash the server immediately.",
+        "istrue": false
+      },
+      {
+        "statement": "To understand the target and plan the attack strategy.",
+        "istrue": true
+      },
+      {
+        "statement": "To steal passwords.",
+        "istrue": false
+      },
+      {
+        "statement": "To install a virus.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Reconnaissance is about 'Knowing your enemy' before making any technical moves."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which tool would a hacker use to find 'Social Information' such as the domain owner's email address or phone number?",
+    "options": [
+      {
+        "statement": "Wireshark",
+        "istrue": false
+      },
+      {
+        "statement": "Nmap",
+        "istrue": false
+      },
+      {
+        "statement": "Whois",
+        "istrue": true
+      },
+      {
+        "statement": "Tcpdump",
+        "istrue": false
+      }
+    ],
+    "explanation": "The `whois` command queries databases that store registered users or assignees of an Internet resource, often revealing contact info useful for phishing."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary function of 'Wireshark'?",
+    "options": [
+      {
+        "statement": "To crack passwords.",
+        "istrue": false
+      },
+      {
+        "statement": "To capture and analyze network packets (Sniffing).",
+        "istrue": true
+      },
+      {
+        "statement": "To send spam emails.",
+        "istrue": false
+      },
+      {
+        "statement": "To edit video files.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Wireshark  is the industry standard for network protocol analysis, allowing users to see what is happening on the network at a microscopic level."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Nmap' primarily used for?",
+    "options": [
+      {
+        "statement": "Editing photos.",
+        "istrue": false
+      },
+      {
+        "statement": "Network mapping and port scanning to discover open ports and services.",
+        "istrue": true
+      },
+      {
+        "statement": "Writing code.",
+        "istrue": false
+      },
+      {
+        "statement": "Browsing the dark web.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Nmap (Network Mapper)is used to discover hosts and services on a computer network by sending packets and analyzing the responses."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "When Nmap performs 'OS Fingerprinting', what is it trying to do?",
+    "options": [
+      {
+        "statement": "Find the physical fingerprint of the user.",
+        "istrue": false
+      },
+      {
+        "statement": "Guess the operating system (e.g., Windows, Linux) running on the target machine based on its responses.",
+        "istrue": true
+      },
+      {
+        "statement": "Clean the screen.",
+        "istrue": false
+      },
+      {
+        "statement": "Find the GPS location.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Different Operating Systems respond to network probes in slightly different ways. Nmap analyzes these nuances to guess the OS."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the movie 'The Matrix Reloaded', which real-world hacking tool was featured in the power plant hacking scene?",
+    "options": [
+      {
+        "statement": "Photoshop",
+        "istrue": false
+      },
+      {
+        "statement": "Nmap",
+        "istrue": true
+      },
+      {
+        "statement": "Microsoft Excel",
+        "istrue": false
+      },
+      {
+        "statement": "Norton Antivirus",
+        "istrue": false
+      }
+    ],
+    "explanation": "Nmap is famous for being one of the few realistic hacking tools depicted in Hollywood movies, including The Matrix Reloaded."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Visualizing' the network topology important for security administrators?",
+    "options": [
+      {
+        "statement": "To make pretty wallpapers.",
+        "istrue": false
+      },
+      {
+        "statement": "You cannot defend what you cannot see; you need to see the network as the hacker sees it.",
+        "istrue": true
+      },
+      {
+        "statement": "To use more ink when printing.",
+        "istrue": false
+      },
+      {
+        "statement": "To slow down the network.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Security admins must proactively scan their own networks to identify unauthorized devices or open ports before attackers do."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why should a hacker avoid scanning a target network too loudly or aggressively?",
+    "options": [
+      {
+        "statement": "It triggers alarms in Firewalls or IPS, leading to the attacker's IP being blocked.",
+        "istrue": true
+      },
+      {
+        "statement": "It uses too much internet bandwidth.",
+        "istrue": false
+      },
+      {
+        "statement": "It hurts the computer's feelings.",
+        "istrue": false
+      },
+      {
+        "statement": "Nmap charges money per scan.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Aggressive scanning is like knocking on every door in a neighborhood; it alerts the security guards (IPS/Firewall)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'Script Kiddie'?",
+    "options": [
+      {
+        "statement": "A child who writes movie scripts.",
+        "istrue": false
+      },
+      {
+        "statement": "An unskilled attacker who uses pre-made tools or scripts to launch attacks without understanding how they work.",
+        "istrue": true
+      },
+      {
+        "statement": "An expert programmer.",
+        "istrue": false
+      },
+      {
+        "statement": "A legitimate security researcher.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Script Kiddies lack deep technical knowledge and rely on downloading tools created by others to cause damage."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Once a hacker knows the specific version of software running on a port (e.g., Apache 2.4.1), what is their next likely step?",
+    "options": [
+      {
+        "statement": "Send an email to the admin.",
+        "istrue": false
+      },
+      {
+        "statement": "Search public vulnerability databases (like CVE) for known exploits associated with that specific version.",
+        "istrue": true
+      },
+      {
+        "statement": "Turn off their computer.",
+        "istrue": false
+      },
+      {
+        "statement": "Format the hard drive.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Recon leads to enumeration. Knowing the exact version allows the attacker to find specific 'Known Vulnerabilities' to exploit."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'IP Spoofing'?",
+    "options": [
+      {
+        "statement": "Stealing an IP address physically.",
+        "istrue": false
+      },
+      {
+        "statement": "Faking the source IP address in a packet header to make it look like it came from someone else.",
+        "istrue": true
+      },
+      {
+        "statement": "Hiding the IP address completely.",
+        "istrue": false
+      },
+      {
+        "statement": "Changing the DNS server.",
+        "istrue": false
+      }
+    ],
+    "explanation": "IP Spoofing involves forging the sender's address, similar to writing a fake return address on an envelope."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does a 'Reflected DDoS' attack utilize IP Spoofing?",
+    "options": [
+      {
+        "statement": "The attacker hacks the victim's computer directly.",
+        "istrue": false
+      },
+      {
+        "statement": "The attacker sends requests to many servers while spoofing the victim's IP, causing all servers to reply to the victim simultaneously.",
+        "istrue": true
+      },
+      {
+        "statement": "The attacker shuts down the internet.",
+        "istrue": false
+      },
+      {
+        "statement": "The attacker steals the victim's mouse.",
+        "istrue": false
+      }
+    ],
+    "explanation": "In a Reflected DDoS , the attacker pretends to be the victim. Servers worldwide reply to the victim, overwhelming their bandwidth."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why are early internet protocols like DNS and HTTP considered insecure by design?",
+    "options": [
+      {
+        "statement": "They were designed for functionality and connectivity, not security.",
+        "istrue": true
+      },
+      {
+        "statement": "They were designed by hackers.",
+        "istrue": false
+      },
+      {
+        "statement": "They are too new.",
+        "istrue": false
+      },
+      {
+        "statement": "They only work on dial-up.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The early internet was a trusted environment. Protocols focused on making things work (connectivity) rather than verifying identity or encrypting data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'DNS Poisoning'?",
+    "options": [
+      {
+        "statement": "Putting a virus in the computer fan.",
+        "istrue": false
+      },
+      {
+        "statement": "Corrupting the DNS cache/server so that a legitimate domain name (e.g., bank.com) resolves to a malicious IP address.",
+        "istrue": true
+      },
+      {
+        "statement": "Deleting domain names.",
+        "istrue": false
+      },
+      {
+        "statement": "Slowing down the internet speed.",
+        "istrue": false
+      }
+    ],
+    "explanation": "DNS Poisoning  tricks the system into mapping a correct URL to the attacker's fake website, facilitating Phishing."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the result of a successful DNS Poisoning attack from the user's perspective?",
+    "options": [
+      {
+        "statement": "The user types a correct URL but is unknowingly sent to a fake website.",
+        "istrue": true
+      },
+      {
+        "statement": "The browser closes immediately.",
+        "istrue": false
+      },
+      {
+        "statement": "The internet connection is lost.",
+        "istrue": false
+      },
+      {
+        "statement": "The keyboard stops working.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The user sees the correct address in the bar but sees the attacker's content, making it highly effective for credential theft."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does 'System Hardening' involve?",
+    "options": [
+      {
+        "statement": "Freezing the computer.",
+        "istrue": false
+      },
+      {
+        "statement": "Closing unused ports, disabling unnecessary services, and applying patches to reduce the attack surface.",
+        "istrue": true
+      },
+      {
+        "statement": "Buying a tougher case for the server.",
+        "istrue": false
+      },
+      {
+        "statement": "Installing more games.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hardening is the process of securing a system by reducing its vulnerability profile (closing doors/windows you don't use)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is Encryption important for Network Security?",
+    "options": [
+      {
+        "statement": "It prevents 'Sniffing' attacks by making intercepted data unreadable.",
+        "istrue": true
+      },
+      {
+        "statement": "It makes the network faster.",
+        "istrue": false
+      },
+      {
+        "statement": "It prevents physical theft.",
+        "istrue": false
+      },
+      {
+        "statement": "It scans for viruses.",
+        "istrue": false
+      }
+    ],
+    "explanation": "If data is encrypted (e.g., HTTPS), even if a hacker captures the packets with Wireshark, they cannot read the contents."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The phrase 'Hack it first, before others will' suggests what security philosophy?",
+    "options": [
+      {
+        "statement": "You should hack your neighbors.",
+        "istrue": false
+      },
+      {
+        "statement": "Proactive security testing (Penetration Testing) to find and fix your own vulnerabilities before malicious actors exploit them.",
+        "istrue": true
+      },
+      {
+        "statement": "Hacking is a fun hobby.",
+        "istrue": false
+      },
+      {
+        "statement": "You should never trust antivirus.",
+        "istrue": false
+      }
+    ],
+    "explanation": "This mindset emphasizes the importance of self-assessment and ethical hacking to secure an organization."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which tool would allow you to analyze the specific content of a TCP packet?",
+    "options": [
+      {
+        "statement": "Whois",
+        "istrue": false
+      },
+      {
+        "statement": "Wireshark",
+        "istrue": true
+      },
+      {
+        "statement": "Paint",
+        "istrue": false
+      },
+      {
+        "statement": "Calculator",
+        "istrue": false
+      }
+    ],
+    "explanation": "Wireshark captures and dissects packets, allowing detailed inspection of headers and payloads."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If you want to create a map of all computers connected to your local network, which tool is best?",
+    "options": [
+      {
+        "statement": "Microsoft Word",
+        "istrue": false
+      },
+      {
+        "statement": "Nmap",
+        "istrue": true
+      },
+      {
+        "statement": "Notepad",
+        "istrue": false
+      },
+      {
+        "statement": "Solitaire",
+        "istrue": false
+      }
+    ],
+    "explanation": "Nmap (Network Mapper) is specifically designed to discover hosts and create a topology of the network."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'CVE'?",
+    "options": [
+      {
+        "statement": "Computer Virus Edition",
+        "istrue": false
+      },
+      {
+        "statement": "Common Vulnerabilities and Exposures (a database of known security flaws).",
+        "istrue": true
+      },
+      {
+        "statement": "Central Video Encoder",
+        "istrue": false
+      },
+      {
+        "statement": "Cyber Virtual Environment",
+        "istrue": false
+      }
+    ],
+    "explanation": "CVE is the global standard for identifying and naming known cybersecurity vulnerabilities."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Awareness' (Person) considered a layer of Network Security prevention?",
+    "options": [
+      {
+        "statement": "Because computers have feelings.",
+        "istrue": false
+      },
+      {
+        "statement": "Because human error is a major vulnerability; users must be trained to recognize threats like Phishing.",
+        "istrue": true
+      },
+      {
+        "statement": "It isn't; only software matters.",
+        "istrue": false
+      },
+      {
+        "statement": "To make the office look busy.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Even the best firewall cannot stop a user from voluntarily handing over their password to a phishing site. Human awareness is critical."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If an attacker uses 'thnic.co.th' to look up a domain, what phase of hacking are they in?",
+    "options": [
+      {
+        "statement": "Information Gathering (Whois)",
+        "istrue": true
+      },
+      {
+        "statement": "Exploitation",
+        "istrue": false
+      },
+      {
+        "statement": "Covering Tracks",
+        "istrue": false
+      },
+      {
+        "statement": "System Hardening",
+        "istrue": false
+      }
+    ],
+    "explanation": "Searching domain registries is part of gathering social and administrative information about the target."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the relationship between 'Complexity' and 'Security'?",
+    "options": [
+      {
+        "statement": "Complexity improves security.",
+        "istrue": false
+      },
+      {
+        "statement": "They are unrelated.",
+        "istrue": false
+      },
+      {
+        "statement": "Complexity introduces more points of failure, making security harder to maintain.",
+        "istrue": true
+      },
+      {
+        "statement": "Complex systems are always auto-secured.",
+        "istrue": false
+      }
+    ],
+    "explanation": "As stated in the slides, 'So many things can go wrong' in a complex system like TCP/IP."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of these is NOT a method mentioned for Network Security prevention?",
+    "options": [
+      {
+        "statement": "System Hardening",
+        "istrue": false
+      },
+      {
+        "statement": "Encryption",
+        "istrue": false
+      },
+      {
+        "statement": "Ignoring the problem",
+        "istrue": true
+      },
+      {
+        "statement": "Secure Software Design",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ignoring the problem is not a strategy. Hardening, Encryption, and Secure Design are valid defenses."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is it dangerous to act like a 'Script Kiddie'?",
+    "options": [
+      {
+        "statement": "You might get grounded.",
+        "istrue": false
+      },
+      {
+        "statement": "Using tools without understanding them is noisy and easily detected by security systems.",
+        "istrue": true
+      },
+      {
+        "statement": "Scripts take too long to download.",
+        "istrue": false
+      },
+      {
+        "statement": "It requires a license.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Script kiddies lack subtlety. They often trigger alarms immediately because they don't know how to mask their activities."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "A 'Remote Exploit' occurs during which phase of hacking?",
+    "options": [
+      {
+        "statement": "Reconnaissance",
+        "istrue": false
+      },
+      {
+        "statement": "Scanning",
+        "istrue": false
+      },
+      {
+        "statement": "Exploitation",
+        "istrue": true
+      },
+      {
+        "statement": "Information Gathering",
+        "istrue": false
+      }
+    ],
+    "explanation": "This is the active phase where the vulnerability is leveraged to gain access to the system."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If Nmap reports that 'Port 80 is Open', what does this typically mean?",
+    "options": [
+      {
+        "statement": "The computer is turned off.",
+        "istrue": false
+      },
+      {
+        "statement": "A Web Server (HTTP) is running and accepting connections.",
+        "istrue": true
+      },
+      {
+        "statement": "The printer is out of paper.",
+        "istrue": false
+      },
+      {
+        "statement": "The system is secure.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Port 80 is the standard port for HTTP web traffic. An open port means a service is listening there."
+  }
+]

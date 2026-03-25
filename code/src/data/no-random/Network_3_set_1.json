@@ -1,0 +1,1102 @@
+[
+  {
+    "question": "1. What is the primary function of the 'match plus action' abstraction in generalized forwarding?",
+    "options": [
+      "It statically maps IP addresses to MAC addresses",
+      "It determines how a packet is handled based on specific header fields",
+      "It duplicates all incoming traffic for monitoring purposes",
+      "It removes the need for any forwarding tables in routers"
+    ],
+    "answer": 1,
+    "explanation": "The 'match plus action' abstraction in generalized forwarding allows a device to inspect certain fields in a packet header (match) and then execute a specific action (such as forward, drop, modify) based on the match result. It does not eliminate forwarding tables, nor does it duplicate all traffic by default."
+  },
+  {
+    "question": "2. In a flow table, what is the purpose of wildcard entries?",
+    "options": [
+      "They cause the router to ignore all incoming packets",
+      "They allow flexible matching of any value in certain header fields",
+      "They force all traffic to be sent to the controller",
+      "They are used only for IPv6 packets"
+    ],
+    "answer": 1,
+    "explanation": "A wildcard entry (denoted by an asterisk '*') means the switch or router can match packets irrespective of certain field values, allowing more flexible or catch-all forwarding rules. It does not force all packets to the controller or apply only to IPv6."
+  },
+  {
+    "question": "3. According to the OpenFlow specification, what does the 'priority' field in a flow table entry do?",
+    "options": [
+      "It changes the packet\u2019s IP header priority field",
+      "It determines which flow entry should be applied first if multiple entries match",
+      "It always drops packets if the priority is too high",
+      "It indicates whether the entry was added automatically or manually"
+    ],
+    "answer": 1,
+    "explanation": "The 'priority' field resolves conflicts when multiple flow table entries match the same packet. The entry with the highest priority is used. It does not automatically drop packets or alter a packet\u2019s IP header."
+  },
+  {
+    "question": "4. Which of the following is NOT typically an action that can be performed on a matched packet in an OpenFlow flow table?",
+    "options": [
+      "Forward the packet to a specific port",
+      "Drop the packet",
+      "Modify certain header fields of the packet",
+      "Allocate more buffer memory on the next hop"
+    ],
+    "answer": 3,
+    "explanation": "OpenFlow actions generally include forwarding, dropping, sending to the controller, or modifying packet headers. It does not provide an action to dynamically allocate buffer memory on the next hop."
+  },
+  {
+    "question": "5. Which layer\u2019s header fields can OpenFlow match in a standard switch implementation?",
+    "options": [
+      "Only the Ethernet (Layer 2) addresses",
+      "Only the IP (Layer 3) addresses",
+      "A range of header fields from Layer 2, Layer 3, and Layer 4",
+      "OpenFlow does not match on header fields at all"
+    ],
+    "answer": 2,
+    "explanation": "OpenFlow can match on multiple header fields across Layers 2 (Ethernet), 3 (IP), and 4 (TCP/UDP), making it flexible for various forwarding rules."
+  },
+  {
+    "question": "6. What best describes a middlebox in a network?",
+    "options": [
+      "A device that only routes packets based on the destination IP address",
+      "A simple switch that always broadcasts incoming frames",
+      "Any intermediary device that performs a function beyond normal IP forwarding",
+      "A hardware firewall that explicitly blocks all incoming traffic"
+    ],
+    "answer": 2,
+    "explanation": "Middleboxes are devices in the network that carry out functions beyond standard IP forwarding, such as firewalls, NATs, load balancers, or intrusion detection systems. They are not necessarily only hardware firewalls or purely layer-2 switches."
+  },
+  {
+    "question": "7. Why can NAT (Network Address Translation) be considered a middlebox?",
+    "options": [
+      "It performs only standard destination-based IP forwarding",
+      "It does not alter any packet headers",
+      "It modifies IP address/port information, going beyond normal routing",
+      "It never needs to track connection states"
+    ],
+    "answer": 2,
+    "explanation": "NAT modifies the source/destination IP address and/or port of packets, which is additional functionality beyond standard IP routing. This makes it a middlebox. It also typically tracks connection states to correctly translate addresses."
+  },
+  {
+    "question": "8. In an SDN context, what is the main benefit of implementing middlebox functionality via software rather than proprietary hardware?",
+    "options": [
+      "Software is always faster than specialized hardware",
+      "It ensures all traffic is dropped by default",
+      "It allows flexibility, easier updates, and a more open platform",
+      "It has no advantage; proprietary hardware is always required"
+    ],
+    "answer": 2,
+    "explanation": "Implementing middlebox functionality in software on open platforms allows for flexible updates, easier scaling, and vendor-agnostic solutions. Proprietary hardware is more rigid and expensive to update."
+  },
+  {
+    "question": "9. What is the significance of the \u201cthin waist\u201d in the IP hourglass design principle?",
+    "options": [
+      "It places all intelligence in the network core, making endpoints simple",
+      "It refers to having exactly one protocol at the network layer (IP), with many protocols above and below",
+      "It ensures guaranteed delivery of all packets at the link layer",
+      "It allows transport-layer functionality to be handled by routers"
+    ],
+    "answer": 1,
+    "explanation": "The IP hourglass concept indicates that IP is the single, universal protocol at the network layer, providing a narrow waist. Many link-layer technologies and many transport/application protocols converge around IP."
+  },
+  {
+    "question": "10. How do middleboxes contradict the traditional end-to-end argument of the Internet?",
+    "options": [
+      "They deploy intelligence inside the network rather than at the endpoints",
+      "They remove the IP layer entirely",
+      "They only handle local broadcast traffic",
+      "They guarantee zero data corruption"
+    ],
+    "answer": 0,
+    "explanation": "The end-to-end argument states that intelligence belongs primarily at the network\u2019s edge, but middleboxes place special functionality in the network itself, which contradicts the strict end-to-end philosophy."
+  },
+  {
+    "question": "11. In OpenFlow, what is the purpose of sending a packet to the controller via a \u2018packet-in\u2019 message?",
+    "options": [
+      "To remove the current forwarding rules",
+      "To notify the controller that the switch cannot find a matching flow entry and needs guidance",
+      "To acknowledge that the switch has no more buffer space",
+      "To broadcast the packet to all hosts in the network"
+    ],
+    "answer": 1,
+    "explanation": "A 'packet-in' message is sent to the controller when the switch does not have an applicable flow rule for a packet or when an explicit rule states that unknown or certain packets should be escalated to the controller for routing decisions or other processing."
+  },
+  {
+    "question": "12. Which of the following describes how \u201cpriority\u201d rules are applied in an OpenFlow switch with multiple overlapping entries?",
+    "options": [
+      "They are applied in random order",
+      "The lowest-priority rule always takes precedence",
+      "The switch merges all matching entries into a single action",
+      "The highest-priority rule is applied first"
+    ],
+    "answer": 3,
+    "explanation": "If multiple entries match a packet, the flow entry with the highest priority is chosen. The other options are incorrect: priorities are not chosen randomly, they do not merge into one action, and the highest priority is used."
+  },
+  {
+    "question": "13. In the context of SDN, how does generalized forwarding differ from traditional IP forwarding?",
+    "options": [
+      "Traditional IP forwarding does not use source addresses at all",
+      "Generalized forwarding can match on multiple fields (L2, L3, L4), not just destination IP",
+      "Generalized forwarding is slower in all respects",
+      "Traditional IP forwarding is always based on flow states"
+    ],
+    "answer": 1,
+    "explanation": "Generalized forwarding can inspect and act upon various header fields (Layer 2 through Layer 4), whereas traditional IP forwarding primarily looks at the destination IP address. It is not necessarily slower."
+  },
+  {
+    "question": "14. Which of the following is a valid reason for an SDN switch to send a packet to the controller?",
+    "options": [
+      "It has spare bandwidth on one of its interfaces",
+      "It matched a forwarding entry with an action to \u2018send to controller\u2019",
+      "The packet has a TTL of zero",
+      "It always sends every first packet of a flow to the controller by default"
+    ],
+    "answer": 1,
+    "explanation": "A flow entry can instruct the switch to forward certain packets to the controller. This is how new flow setup or packet analysis can be performed. Spare bandwidth or TTL=0 does not generally cause a packet-in event unless specifically configured."
+  },
+  {
+    "question": "15. Why might an operator deploy a firewall as a middlebox instead of at the network edge hosts?",
+    "options": [
+      "It guarantees that no malicious packets can pass if installed on a middlebox",
+      "It centralizes security policy enforcement within the network instead of relying on each host",
+      "Firewalls only work inside the core of the network",
+      "Users never need to configure host-based security policies"
+    ],
+    "answer": 1,
+    "explanation": "Deploying a firewall as a middlebox provides a centralized point for security policy enforcement. Hosts might not always have reliable or up-to-date host-based firewalls, so the network-based middlebox can enforce consistent policies."
+  },
+  {
+    "question": "16. In a typical enterprise network, why is it common to have multiple different middleboxes (like NAT, firewall, load balancer)?",
+    "options": [
+      "They each implement a different specialized function beyond basic routing",
+      "They are all required to ensure DNS resolution works",
+      "They always operate at the exact same layer for redundancy",
+      "They completely replace routers"
+    ],
+    "answer": 0,
+    "explanation": "Each middlebox, such as a NAT, firewall, or load balancer, provides a specialized function. NAT modifies addresses, a firewall enforces security policy, a load balancer distributes traffic. They do not simply replace routers or share identical layers for DNS."
+  },
+  {
+    "question": "17. What does \u201cwhitebox\u201d hardware imply in the context of middleboxes and SDN?",
+    "options": [
+      "It is a router that cannot be updated via software",
+      "It is an open, commodity hardware that can run vendor-agnostic software",
+      "It is a specially designed black box that hides its internal OS",
+      "It provides no data plane forwarding capability"
+    ],
+    "answer": 1,
+    "explanation": "Whitebox hardware refers to commodity equipment that can be programmed or configured with various open-source or third-party network software, providing flexibility beyond proprietary, closed solutions."
+  },
+  {
+    "question": "18. Which statement about the \u201cOpenFlow abstraction\u201d is TRUE?",
+    "options": [
+      "It is only designed for firewall applications",
+      "It unifies different device types under the same \u2018match plus action\u2019 model",
+      "It replaces TCP as a transport-layer protocol",
+      "It does not work with IP networks"
+    ],
+    "answer": 1,
+    "explanation": "OpenFlow\u2019s match-action abstraction supports a range of devices (routers, switches, firewalls, NATs, etc.) by providing a consistent mechanism for analyzing packet headers and performing actions."
+  },
+  {
+    "question": "19. In the OpenFlow context, what does the counter field in a flow table entry track?",
+    "options": [
+      "All the IP addresses that have passed through the flow",
+      "Whether or not the switch is currently under heavy load",
+      "The number of packets and/or bytes matched by that entry",
+      "The CPU usage of the switch"
+    ],
+    "answer": 2,
+    "explanation": "Each OpenFlow flow entry often includes counters for the number of packets and bytes that have matched that particular flow. This has nothing to do with CPU usage or IP address enumeration."
+  },
+  {
+    "question": "20. A network operator is using OpenFlow to send certain packets to an Intrusion Detection System (IDS). Which action in the flow table makes this possible?",
+    "options": [
+      "Drop packets with specific source IP addresses",
+      "Modify the TTL of the IP header",
+      "Encapsulate and send matched packets to a controller or a specified port connected to the IDS",
+      "Prioritize all inbound traffic"
+    ],
+    "answer": 2,
+    "explanation": "OpenFlow allows encapsulating and forwarding specific matched packets to a particular device or the controller. By sending them to the IDS port, suspicious traffic can be monitored. Dropping or TTL changes do not route packets to the IDS."
+  },
+  {
+    "question": "21. Which of the following statements about middleboxes is FALSE?",
+    "options": [
+      "Middleboxes can sometimes contradict the end-to-end principle by altering traffic in-flight",
+      "They may add complexity to network design and troubleshooting",
+      "All middleboxes only operate at the network layer (Layer 3)",
+      "They can be implemented as dedicated hardware or as software-based appliances"
+    ],
+    "answer": 2,
+    "explanation": "Middleboxes might operate at multiple layers (e.g., NAT at Layer 3/4, firewalls can inspect Layers 3-4 or deeper). They are not restricted to only the network layer."
+  },
+  {
+    "question": "22. Why are middleboxes said to have contributed to \u201cInternet love handles\u201d compared to the IP hourglass concept?",
+    "options": [
+      "They add extra functionality in the network, widening the \u2018waist\u2019 of the IP hourglass",
+      "They make the IP layer simpler than before",
+      "They only handle IPv6 traffic",
+      "They reduce the scope of application protocols"
+    ],
+    "answer": 0,
+    "explanation": "Middleboxes add new functions within the network, thus \u2018fattening\u2019 the IP hourglass model by inserting intelligence below or around the IP layer, which was originally intended to be minimal."
+  },
+  {
+    "question": "23. In an SDN-enabled environment, how can the network operator quickly deploy a new middlebox function (e.g., a parental control proxy)?",
+    "options": [
+      "By physically replacing all routers in the network",
+      "By installing specialized hardware that is vendor-specific",
+      "By programming the switches to redirect relevant traffic to a new software-based function",
+      "It is impossible to add new functions without rewriting the entire SDN controller code"
+    ],
+    "answer": 2,
+    "explanation": "SDN allows operators to program flow rules so that certain traffic is steered to the new middlebox function. This can be done without replacing network hardware. One can typically integrate such a service with minimal changes to the overall controller logic."
+  },
+  {
+    "question": "24. Which best describes how the 'flow table abstraction' unifies different network functions?",
+    "options": [
+      "It forces all devices to run the same OS",
+      "It provides a consistent 'match fields' and 'action' interface that can implement routing, switching, firewalls, NAT, etc.",
+      "It duplicates every network function across all switches for redundancy",
+      "It allows only single-field matching, so all functions must be simplified"
+    ],
+    "answer": 1,
+    "explanation": "Flow tables generalize forwarding decisions by matching on packet header fields and then applying actions, enabling a wide range of network functionalities in a uniform framework."
+  },
+  {
+    "question": "25. What is the difference between an OpenFlow \u2018switch\u2019 and a traditional router, conceptually?",
+    "options": [
+      "They are identical in every possible way",
+      "An OpenFlow switch relies on externally programmed flow tables, whereas a traditional router runs its own control-plane protocols internally",
+      "A traditional router only handles Ethernet frames",
+      "An OpenFlow switch cannot forward packets autonomously"
+    ],
+    "answer": 1,
+    "explanation": "OpenFlow switches do not compute routes themselves; instead, they rely on a controller to install flow rules. Traditional routers run routing protocols locally to construct their own forwarding tables."
+  },
+  {
+    "question": "26. Which statement is TRUE about the relationship between the control plane and data plane in an SDN architecture?",
+    "options": [
+      "They are tightly integrated on each router",
+      "They are logically separated, with the data plane in switches and control plane in a remote controller",
+      "Control and data planes no longer exist in SDN",
+      "Data-plane devices have full autonomy over routing decisions"
+    ],
+    "answer": 1,
+    "explanation": "SDN's defining feature is the logical separation of the control plane (running in a remote or centralized controller) from the data plane, which resides on the switches or routers."
+  },
+  {
+    "question": "27. Why are simple, commodity (whitebox) switches preferred in many SDN deployments?",
+    "options": [
+      "They can natively compute shortest paths without a controller",
+      "They generally cost less and can still be programmed for advanced functionalities via flow tables",
+      "They are the only devices that can do NAT translations",
+      "They are not actually used in SDN at all"
+    ],
+    "answer": 1,
+    "explanation": "SDN typically uses inexpensive commodity switches that handle forwarding tasks based on flow rules sent from a centralized controller, reducing hardware costs and increasing flexibility."
+  },
+  {
+    "question": "28. What is the advantage of \u201csending matched packet to controller\u201d in OpenFlow for certain flows?",
+    "options": [
+      "It allows the controller to handle complex or unknown traffic patterns that the switch does not have rules for",
+      "It breaks the network\u2019s functionality by stalling the packet",
+      "It frees the controller from having to process any traffic",
+      "The switch no longer needs to store flow entries"
+    ],
+    "answer": 0,
+    "explanation": "When a switch encounters a packet it cannot match (or is instructed to forward to the controller), sending it to the controller allows advanced logic or dynamic rule installation."
+  },
+  {
+    "question": "29. In the example of traffic engineering with generalized forwarding, why is it easier to split traffic along different paths than with traditional destination-based IP forwarding?",
+    "options": [
+      "Because generalized forwarding cannot forward packets without a destination IP",
+      "Because traffic splitting is done purely by link-layer broadcast",
+      "Because you can match on additional fields (e.g., source IP) and assign different actions or ports for each subset of traffic",
+      "Because it ignores all header fields"
+    ],
+    "answer": 2,
+    "explanation": "By matching on various header fields (not just destination IP), the SDN can differentiate flows and direct subsets of traffic along multiple paths, enabling more flexible load balancing."
+  },
+  {
+    "question": "30. Which statement about multi-table pipelines in OpenFlow is CORRECT?",
+    "options": [
+      "They are forbidden, as only one table can be used in each switch",
+      "They allow a packet to be processed in a sequence of flow tables for more complex forwarding logic",
+      "They guarantee each table modifies the packet\u2019s IP address",
+      "They prevent any packet from being dropped"
+    ],
+    "answer": 1,
+    "explanation": "Multi-table pipelines let a packet pass through a chain of flow tables, each potentially matching different header fields or taking different actions, enabling more sophisticated forwarding or processing."
+  },
+  {
+    "question": "31. Why is it difficult to do refined traffic engineering in traditional routing protocols like OSPF?",
+    "options": [
+      "OSPF uses a single link cost metric and destination-based forwarding, limiting how traffic can be balanced across multiple paths",
+      "OSPF is not used in real networks",
+      "OSPF requires each packet to be sent to a remote controller",
+      "OSPF does not forward IPv4 traffic"
+    ],
+    "answer": 0,
+    "explanation": "Traditional routing protocols rely on shortest-path metrics and destination-based routing, which does not provide granular flow-based control to engineer traffic distribution. OSPF is indeed used widely, just not for fine-grained traffic engineering."
+  },
+  {
+    "question": "32. Which of the following is NOT an example of a middlebox function mentioned in the text?",
+    "options": [
+      "Firewall",
+      "Intrusion Detection System (IDS)",
+      "SSH client",
+      "Load balancer"
+    ],
+    "answer": 2,
+    "explanation": "Firewalls, IDS, and load balancers are typical middlebox functions. An SSH client is typically a host application, not a network intermediate device."
+  },
+  {
+    "question": "33. How does the OpenFlow approach help unify router, switch, firewall, and NAT functionalities?",
+    "options": [
+      "It forces all devices to be replaced with a single device",
+      "It uses table-based match and actions, which can replicate the logic of each specialized function",
+      "It requires a separate CPU for each function",
+      "It bypasses packet forwarding"
+    ],
+    "answer": 1,
+    "explanation": "OpenFlow\u2019s match-action paradigm can emulate the behaviors of routers, switches, firewalls, and NAT devices, by using different sets of match fields and actions within the same framework."
+  },
+  {
+    "question": "34. Which statement about an SDN controller is TRUE?",
+    "options": [
+      "It runs only as a single, non-redundant process",
+      "It must reside physically on the same device as the switch",
+      "It can be a logically centralized platform that provides a global view of the network for management and control applications",
+      "It only supports routing protocols like OSPF or RIP"
+    ],
+    "answer": 2,
+    "explanation": "An SDN controller is typically logically centralized, providing a global view of the network. It is often replicated for fault tolerance and does not have to be physically co-located with the switch."
+  },
+  {
+    "question": "35. In an enterprise environment, which scenario might best illustrate the power of SDN-based policy enforcement?",
+    "options": [
+      "Forcing all traffic to exit the network with no inspection",
+      "Auto-configuring precise ACLs (Access Control Lists) for new hosts as soon as they connect, based on centralized policies",
+      "Using a peer-to-peer approach to replicate each device\u2019s configuration manually",
+      "Banning any form of encryption for all traffic"
+    ],
+    "answer": 1,
+    "explanation": "SDN allows centralized policy enforcement, so the controller can automatically push access control rules to the relevant switches as new endpoints connect. This is far more streamlined than manual or distributed approaches."
+  },
+  {
+    "question": "36. When a link fails in an SDN network, how does the rest of the network typically respond to re-route traffic?",
+    "options": [
+      "Each switch individually runs Dijkstra's algorithm",
+      "The controller detects the failure (e.g., via port status) and computes new flow rules for the affected switches",
+      "All traffic is immediately dropped until the link recovers",
+      "It triggers an ARP broadcast to all hosts"
+    ],
+    "answer": 1,
+    "explanation": "SDN uses a centralized approach: the switch reports the link failure to the controller, which updates the global view and recomputes new flow table entries for affected devices."
+  },
+  {
+    "question": "37. What is a potential drawback of middlebox deployments in terms of the end-to-end principle?",
+    "options": [
+      "They decrease reliability of all HTTP requests",
+      "They keep host logic extremely simple",
+      "They can modify or inspect traffic in ways not originally intended, possibly breaking application assumptions",
+      "They ensure lower latency for all encrypted connections"
+    ],
+    "answer": 2,
+    "explanation": "Middleboxes insert additional network-layer intelligence that can alter traffic, potentially violating or complicating end-to-end assumptions about data integrity or confidentiality."
+  },
+  {
+    "question": "38. In an SDN scenario, if a flow table entry instructs to 'MODIFY' the destination IP address, which type of middlebox functionality does this resemble?",
+    "options": [
+      "NAT (Network Address Translation)",
+      "Simple pass-through bridging",
+      "Firewall that drops all packets",
+      "Switching based on MAC address"
+    ],
+    "answer": 0,
+    "explanation": "Modifying the destination IP address resembles NAT-like behaviors. This is an example of how middlebox functionality can be realized via SDN."
+  },
+  {
+    "question": "39. When comparing 'OpenFlow' and 'traditional routing protocols' in the data plane, which statement is true?",
+    "options": [
+      "Traditional routing protocols can match on multiple fields just as OpenFlow does",
+      "OpenFlow can re-route certain flows differently without changing IP addresses or link costs, whereas traditional routing often depends on a single metric like the shortest path",
+      "They are identical in practice",
+      "OpenFlow does not allow packet dropping"
+    ],
+    "answer": 1,
+    "explanation": "OpenFlow provides flexible multi-field matching and dynamic per-flow actions, enabling custom routing beyond the standard next-hop approach of conventional IP routing."
+  },
+  {
+    "question": "40. How does the concept of 'flows' in OpenFlow differ from 'destination-based routes' in IP routing?",
+    "options": [
+      "Flows can match on any combination of header fields, not just the destination IP",
+      "Flows only work for IPv6",
+      "Flows force every node to run BGP",
+      "Flows do not carry traffic in the network"
+    ],
+    "answer": 0,
+    "explanation": "A flow can be defined by various header fields (Ethernet, IP, port, protocol). In contrast, legacy IP routing focuses primarily on matching destination addresses."
+  },
+  {
+    "question": "41. Which statement is true regarding the counters in an OpenFlow table?",
+    "options": [
+      "They count only TCP traffic",
+      "They allow the controller to gather traffic statistics for each flow, enabling dynamic changes or monitoring",
+      "They reset every time a new packet arrives",
+      "They are used to store VLAN tags"
+    ],
+    "answer": 1,
+    "explanation": "OpenFlow counters track bytes/packets, providing valuable data-plane visibility for traffic monitoring and dynamic controller-based adjustments."
+  },
+  {
+    "question": "42. A firewall middlebox typically needs to examine which aspects of a packet?",
+    "options": [
+      "Only the Ethernet destination address",
+      "Only the IP destination address",
+      "Potentially multiple header fields (source/dest IP, port, protocol)",
+      "It does not examine packets at all"
+    ],
+    "answer": 2,
+    "explanation": "Firewalls commonly inspect many fields in the packet headers (Layer 3 and Layer 4). They must see source/destination IP, ports, possibly protocol to enforce security policies."
+  },
+  {
+    "question": "43. Which statement about middlebox proliferation in modern networks is correct?",
+    "options": [
+      "They are becoming less common due to the end-to-end argument",
+      "They have grown in usage to perform NAT, intrusion detection, load balancing, and more within the network",
+      "They are only used in small home networks",
+      "They are explicitly forbidden in data center networks"
+    ],
+    "answer": 1,
+    "explanation": "Modern networks extensively use middleboxes for NAT, security, load balancing, and other specialized functions. They are especially prevalent in enterprise and data center scenarios."
+  },
+  {
+    "question": "44. In the 'OpenFlow example' provided, how could the controller direct packets from h5 to h3 along a specific path?",
+    "options": [
+      "By instructing all switches to drop h5\u2019s packets",
+      "By installing flow rules matching h5\u2019s source IP, forwarding them along specific switch ports en route to h3",
+      "By changing all TTL fields to zero in the data plane",
+      "It is impossible to do path control with OpenFlow"
+    ],
+    "answer": 1,
+    "explanation": "OpenFlow allows the controller to specify forwarding rules for packets with a particular source (or destination) IP to follow a designated path. Dropping traffic or forcing TTL=0 are not typical solutions for path control."
+  },
+  {
+    "question": "45. Which of the following is a direct advantage of the 'match plus action' approach in SDN for debugging network issues?",
+    "options": [
+      "All debugging must be done on the hardware switches themselves",
+      "It is impossible to log packet flows in an SDN",
+      "Matching specific packets and taking \u2018send to controller\u2019 or \u2018log\u2019 actions can help trace traffic paths in real time",
+      "The controller cannot gather any packet data"
+    ],
+    "answer": 2,
+    "explanation": "Because SDN rules can match particular packet headers and specify special actions such as logging or sending the packet to the controller, operators can debug by tracing the actual flow of selected traffic."
+  },
+  {
+    "question": "46. Which key reason drives interest in evolving traditional 'proprietary hardware solutions' toward 'whitebox hardware plus software' in modern networks?",
+    "options": [
+      "Proprietary hardware is usually open source",
+      "Whitebox hardware is slower and more expensive",
+      "Software-based solutions on commodity hardware promote faster innovation and cost-effectiveness",
+      "Regulations forbid using vendor-specific devices"
+    ],
+    "answer": 2,
+    "explanation": "Shifting to open, commodity hardware (whitebox) plus flexible software fosters easier upgrades, innovation, and reduced costs compared to closed proprietary solutions."
+  },
+  {
+    "question": "47. Why are centralized or \u201clogically centralized\u201d SDN controllers often replicated or distributed in practice?",
+    "options": [
+      "To prevent them from processing data-plane packets",
+      "Because a single device cannot physically fit the entire control logic in memory",
+      "For fault tolerance, scalability, and reliability",
+      "They must be replaced daily to keep up with traffic demands"
+    ],
+    "answer": 2,
+    "explanation": "While logically centralized, the controller is often distributed across multiple physical servers to handle large-scale networks reliably and survive failures."
+  },
+  {
+    "question": "48. Which of the following statements about the interactions between an SDN controller and a data-plane switch is INCORRECT?",
+    "options": [
+      "They communicate over a secure channel, often using TCP, potentially with encryption",
+      "The controller can install flow entries on the switch via protocols like OpenFlow",
+      "The switch sends \u2018packet-in\u2019 messages to the controller for packets not matching any table entry",
+      "The switch automatically modifies the flow table if CPU usage is high"
+    ],
+    "answer": 3,
+    "explanation": "A switch does not change its own flow table based on CPU usage. Flow table modifications are typically commanded by the SDN controller. The other statements correctly describe SDN controller-switch interactions."
+  },
+  {
+    "question": "49. What is the ultimate goal of the 'network programmability' approach offered by OpenFlow and SDN?",
+    "options": [
+      "To make all traffic routed over a single path",
+      "To allow flexible, software-driven control over how packets are handled in the network",
+      "To remove the IP layer from the Internet",
+      "To eliminate any need for hardware-based forwarding"
+    ],
+    "answer": 1,
+    "explanation": "SDN\u2019s primary aim is to provide software-driven, flexible control of network behavior, enabling dynamic changes to forwarding policies and advanced network services."
+  },
+  {
+    "question": "50. Which scenario best showcases the advantage of implementing a load balancer as a software-based middlebox under SDN control?",
+    "options": [
+      "It cannot be reconfigured once it is placed in the network",
+      "Traffic can be adaptively distributed across multiple servers based on real-time feedback from the SDN controller",
+      "It only supports IPv6 NAT",
+      "It locks each packet to a single server permanently"
+    ],
+    "answer": 1,
+    "explanation": "A software-based, SDN-managed load balancer can dynamically adjust traffic distribution in real time. Traditional hardware-based solutions may require manual, static configurations."
+  },
+  {
+    "question": "51. What is the primary purpose of a routing protocol in the network layer control plane?",
+    "options": [
+      "To define how to modify packet headers during forwarding",
+      "To determine routes or paths taken by packets from a source to a destination",
+      "To establish a physical layer connection between routers",
+      "To add VLAN tags to every Ethernet frame"
+    ],
+    "answer": 1,
+    "explanation": "Routing protocols compute the best path or route that a packet should take through the network, typically using cost metrics or policy constraints."
+  },
+  {
+    "question": "52. In a distance vector protocol, how does each router learn about the network topology?",
+    "options": [
+      "It receives a complete map of the entire network from a centralized controller",
+      "It only shares minimal cost information with its immediate neighbors, iterating to find global distances",
+      "It broadcasts its routing table to every device in the Internet",
+      "It uses DNS queries to find routes"
+    ],
+    "answer": 1,
+    "explanation": "Distance vector routers periodically exchange cost (distance) information with their neighbors, iterating this process until stable distances to all destinations converge."
+  },
+  {
+    "question": "53. Which of the following is an example of a Link-State (LS) routing protocol?",
+    "options": [
+      "RIP (Routing Information Protocol)",
+      "Open Shortest Path First (OSPF)",
+      "Distance Vector Multicast Routing Protocol",
+      "BGP (Border Gateway Protocol)"
+    ],
+    "answer": 1,
+    "explanation": "OSPF is a popular link-state intra-domain routing protocol. RIP uses distance vector, and BGP is used for inter-domain routing."
+  },
+  {
+    "question": "54. In link-state routing like Dijkstra\u2019s algorithm, what does each router need in order to compute paths to all destinations?",
+    "options": [
+      "Only the addresses of its immediate neighbors",
+      "A full map of the network topology and link costs",
+      "Distance vector announcements from a single neighbor",
+      "Nothing; it guesses routes randomly"
+    ],
+    "answer": 1,
+    "explanation": "Link-state routing requires each router to have a global view of the network (topology and link costs). Each router then runs Dijkstra\u2019s algorithm locally to compute shortest paths."
+  },
+  {
+    "question": "55. Which statement about distance vector algorithms is TRUE?",
+    "options": [
+      "They require a global broadcast of link-state advertisements",
+      "They update routes by exchanging local distance information with neighbors iteratively",
+      "They never suffer from routing loops",
+      "They cannot be used for routing inside an autonomous system"
+    ],
+    "answer": 1,
+    "explanation": "Distance vector algorithms share each router\u2019s current distances (to all destinations) with their neighbors. It is well-known that distance vector can be prone to routing loops, and it can be used inside an AS (e.g., RIP)."
+  },
+  {
+    "question": "56. What is the 'count-to-infinity' problem in distance vector routing?",
+    "options": [
+      "When the distance field is only 1 bit long, leading to overflow",
+      "When a routing loop causes routers to keep increasing route costs to a destination indefinitely",
+      "When link costs are negative",
+      "When the routing table is empty"
+    ],
+    "answer": 1,
+    "explanation": "Count-to-infinity occurs when routers form a routing loop that artificially increments the distance metric, preventing convergence. This arises due to incomplete or incorrect route information looping between nodes."
+  },
+  {
+    "question": "57. Why can link-state routing potentially converge faster than distance vector routing in large networks?",
+    "options": [
+      "It doesn't require any exchange of link information",
+      "It uses a distributed method that never converges",
+      "It requires only local updates in the presence of link cost changes",
+      "It broadcasts the entire network topology state to all routers, allowing them to rapidly compute new routes"
+    ],
+    "answer": 3,
+    "explanation": "When changes occur, link-state routers flood updated link-state advertisements quickly and each router recomputes routes using a known algorithm (Dijkstra). Distance vector updates must iterate among neighbors, which can be slower."
+  },
+  {
+    "question": "58. Which of the following best describes BGP (Border Gateway Protocol)?",
+    "options": [
+      "An intra-domain protocol for link-state routing in large enterprises",
+      "A distance-vector protocol that uses only hop count",
+      "The de facto inter-domain routing protocol that exchanges route information between different Autonomous Systems",
+      "A protocol that encapsulates IPv6 in IPv4"
+    ],
+    "answer": 2,
+    "explanation": "BGP is the standard inter-domain routing protocol used on the Internet to exchange reachability information between Autonomous Systems. It is neither purely link-state nor purely distance-vector and does not handle IPv6 encapsulation by default."
+  },
+  {
+    "question": "59. In BGP, what is an AS-PATH attribute?",
+    "options": [
+      "An indication of the reliability of the next hop",
+      "A list of IP addresses of intermediate routers inside an AS",
+      "A list of the Autonomous Systems a route advertisement has traversed",
+      "The exact link cost from source to destination"
+    ],
+    "answer": 2,
+    "explanation": "AS-PATH is a sequence of AS numbers that the route advertisement passed through, used for loop detection and route preference rules."
+  },
+  {
+    "question": "60. Which scenario would typically cause an AS not to advertise a learned BGP route to one of its neighbors?",
+    "options": [
+      "It wants to implement a policy that does not provide transit for other ASes that are not its customers",
+      "It forgot the IP address of the neighbor",
+      "There is a hardware error in the router",
+      "BGP requires that all routes be advertised to all neighbors without exception"
+    ],
+    "answer": 0,
+    "explanation": "Autonomous Systems often enforce policies: for instance, an ISP may not want to forward traffic for non-customers. They can withhold routes from certain neighbors to avoid carrying transit traffic that does not benefit them."
+  },
+  {
+    "question": "61. Why is routing among autonomous systems (ASes) more complex than routing within a single AS?",
+    "options": [
+      "Because there are no policies involved in inter-AS routing",
+      "Because each AS has its own administrative control and might implement different routing policies",
+      "Because inter-AS routing only uses NAT traversal",
+      "Because there are fewer routers in the global Internet than in a single AS"
+    ],
+    "answer": 1,
+    "explanation": "Each AS may have different economic relationships and policies, so inter-AS routing must handle potentially conflicting goals and selective route announcements."
+  },
+  {
+    "question": "62. Which of the following is NOT a valid state or message type in BGP?",
+    "options": [
+      "OPEN",
+      "UPDATE",
+      "KEEPALIVE",
+      "RTS/CTS"
+    ],
+    "answer": 3,
+    "explanation": "BGP message types include OPEN, UPDATE, KEEPALIVE, and NOTIFICATION. RTS/CTS (Request to Send / Clear to Send) is a mechanism used in 802.11 wireless, not BGP."
+  },
+  {
+    "question": "63. What is a typical function of a 'gateway router' in the context of intra- and inter-AS routing?",
+    "options": [
+      "It runs only the distance-vector routing protocol for external networks",
+      "It sits between multiple ASes, exchanging inter-domain routes, and also participates in the intra-AS routing protocol within its own AS",
+      "It duplicates packets across all router interfaces for broadcast",
+      "It always converts IPv4 to IPv6"
+    ],
+    "answer": 1,
+    "explanation": "A gateway router (border router) is connected to external ASes (running BGP) and also runs the intra-AS routing protocol to advertise external routes internally. Converting IPv4 to IPv6 is not its inherent role."
+  },
+  {
+    "question": "64. OSPF is best described as:",
+    "options": [
+      "A link-state protocol used for routing inside an AS",
+      "A distance-vector protocol used by default in home routers",
+      "An inter-domain protocol that competes with BGP",
+      "A protocol that modifies MAC addresses at the data link layer"
+    ],
+    "answer": 0,
+    "explanation": "OSPF is a link-state, intra-AS routing protocol widely used in enterprise and ISP networks. It does not replace BGP for inter-domain routing."
+  },
+  {
+    "question": "65. Which statement about RIP (Routing Information Protocol) is TRUE?",
+    "options": [
+      "It is a link-state protocol",
+      "It uses hop count (up to 15) as its metric in distance-vector exchanges",
+      "It is the standard for inter-domain routing in the Internet",
+      "It is a NAT protocol"
+    ],
+    "answer": 1,
+    "explanation": "RIP is a distance-vector protocol using hop count as its metric. It is limited to a max hop count of 15. It is not a link-state protocol nor an inter-domain protocol."
+  },
+  {
+    "question": "66. In hierarchical OSPF, how is flooding of link-state advertisements limited?",
+    "options": [
+      "They are sent only once per day",
+      "They are confined within an OSPF area, with area border routers summarizing information to the backbone",
+      "The link-state messages are replaced by distance vectors to reduce overhead",
+      "Hierarchical OSPF does not limit flooding in any way"
+    ],
+    "answer": 1,
+    "explanation": "Hierarchical OSPF divides the network into areas. Flooding of link-state advertisements is restricted within each area, while area border routers summarize or pass essential info to the backbone, reducing overall flood scope."
+  },
+  {
+    "question": "67. An AS might choose a longer AS-PATH route over a shorter one in BGP for which reason?",
+    "options": [
+      "It has a local policy, for instance to favor certain peering relationships or to avoid certain ASes",
+      "It always chooses random routes",
+      "BGP does not allow choosing a longer path",
+      "The shorter path has fewer bits in the IP addresses"
+    ],
+    "answer": 0,
+    "explanation": "BGP is policy-driven. An AS can prefer a route even if it is longer, for example to avoid a disliked transit provider or satisfy local business/policy constraints."
+  },
+  {
+    "question": "68. Which best describes the idea of 'hot potato routing' in BGP?",
+    "options": [
+      "Sending all traffic to the router with the highest temperature reading",
+      "Selecting the egress point that minimizes the intradomain distance, handing traffic off to another AS as soon as possible",
+      "Selecting the longest AS-PATH available",
+      "Forcing a single router to handle all inbound traffic"
+    ],
+    "answer": 1,
+    "explanation": "Hot potato routing chooses the egress gateway with the least intradomain cost, handing off traffic to the next AS quickly rather than carrying it across the AS\u2019s own backbone."
+  },
+  {
+    "question": "69. Which of the following is NOT a reason that BGP is more about policy than pure performance metrics?",
+    "options": [
+      "ISPs have business relationships that determine route announcements",
+      "Some routes are accepted or filtered based on political or economic reasons",
+      "BGP is purely a link-state algorithm focusing on minimal cost paths only",
+      "ISPs can prefer or avoid certain routes even if they are shorter or longer"
+    ],
+    "answer": 2,
+    "explanation": "BGP is not purely a link-state minimal cost approach; it\u2019s heavily driven by policy. The other statements indicate how business and political considerations can influence route advertisements."
+  },
+  {
+    "question": "70. In SDN, the control plane is logically centralized. In non-SDN, how is the control plane typically structured?",
+    "options": [
+      "There is no control plane at all",
+      "Distributed among routers, each computing its own forwarding table via routing protocols",
+      "Stored in the application layer",
+      "Managed by a single backup router"
+    ],
+    "answer": 1,
+    "explanation": "Traditionally, each router runs routing protocols that collectively form a distributed control plane, with each router computing its own forwarding table."
+  },
+  {
+    "question": "71. The Internet Control Message Protocol (ICMP) primarily serves which function?",
+    "options": [
+      "Transporting user data end-to-end reliably",
+      "Reporting errors and providing network diagnostic (e.g., ping, traceroute) functionality",
+      "Encrypting all IP packets at the network layer",
+      "Routing IP packets based on distance-vector algorithms"
+    ],
+    "answer": 1,
+    "explanation": "ICMP is used for error reporting (destination unreachable) and diagnostics (e.g., echo request/reply for ping) in the IP network layer. It does not provide reliable transport or encryption."
+  },
+  {
+    "question": "72. In ICMP, what is the meaning of an ICMP \u201cdestination unreachable\u201d message?",
+    "options": [
+      "The source IP is blocked from sending further packets",
+      "A router or the destination host indicates that the packet cannot be delivered to its intended destination",
+      "It signals that the TTL field is too large",
+      "ICMP does not have a destination unreachable message"
+    ],
+    "answer": 1,
+    "explanation": "An ICMP 'destination unreachable' is sent by a router or destination host to the source if it cannot deliver the packet to the final destination or next hop. It is a standard ICMP error message type."
+  },
+  {
+    "question": "73. How does the 'traceroute' tool use ICMP messages to discover the path to a destination?",
+    "options": [
+      "It sends UDP segments with incrementing TTL, each time eliciting an ICMP \u2018time exceeded\u2019 from intermediate routers",
+      "It sends a single ICMP echo request with a large TTL and infers all routers in between",
+      "It sends BGP messages to each router",
+      "It only measures the final RTT to the destination"
+    ],
+    "answer": 0,
+    "explanation": "Traceroute sends UDP packets with increasing TTL values, prompting each router to return an ICMP 'time exceeded' message. This reveals the path hop by hop."
+  },
+  {
+    "question": "74. Which statement about ICMP echo request and echo reply messages is TRUE?",
+    "options": [
+      "They are used by the ping utility to measure reachability and round-trip time",
+      "They force the router to drop all packets",
+      "They only work on TCP port 80",
+      "They cannot be used across the Internet"
+    ],
+    "answer": 0,
+    "explanation": "Ping relies on ICMP echo requests and replies to test connectivity and measure round-trip latency. It does not use TCP or port 80."
+  },
+  {
+    "question": "75. Why do routers generate an ICMP 'time exceeded' message?",
+    "options": [
+      "To indicate that the router has crashed",
+      "To inform the sender that the TTL of a packet has reached zero before it reached its destination",
+      "To confirm successful delivery of the packet",
+      "Because the router does not know the MAC address"
+    ],
+    "answer": 1,
+    "explanation": "When a packet\u2019s TTL hits zero, the router discards it and sends an ICMP 'time exceeded' message to the source. This is also how traceroute works hop by hop."
+  },
+  {
+    "question": "76. In network management, what role does SNMP (Simple Network Management Protocol) play?",
+    "options": [
+      "It encapsulates IP packets for tunneling",
+      "It provides a standardized framework for monitoring and managing network devices using MIBs",
+      "It replicates data across multiple servers for load balancing",
+      "It sets up VLAN tagging on Layer 2 switches"
+    ],
+    "answer": 1,
+    "explanation": "SNMP is used to monitor and manage network devices via a standardized approach. It uses MIBs for retrieving and setting device parameters."
+  },
+  {
+    "question": "77. Which of the following is NOT an SNMP message type?",
+    "options": [
+      "GetRequest",
+      "SetRequest",
+      "Trap",
+      "Syn/Ack"
+    ],
+    "answer": 3,
+    "explanation": "SNMP includes GetRequest, GetNextRequest, SetRequest, Trap, Response, etc. Syn/Ack is part of TCP\u2019s handshake, not SNMP."
+  },
+  {
+    "question": "78. In SNMP, what is a 'trap' message used for?",
+    "options": [
+      "The manager polls the device for status",
+      "The agent notifies the manager about an important event without waiting for a request",
+      "It modifies the device\u2019s configuration",
+      "It locks the device to prevent configuration changes"
+    ],
+    "answer": 1,
+    "explanation": "A trap is an unsolicited message from the agent to the managing server indicating an event or alarm, so the manager can react promptly."
+  },
+  {
+    "question": "79. What is the function of the Management Information Base (MIB) in SNMP?",
+    "options": [
+      "A database that stores web cookies",
+      "A set of variables representing managed objects on a device, which can be read or modified via SNMP",
+      "A replacement for routing tables",
+      "A cryptographic protocol for secure data transport"
+    ],
+    "answer": 1,
+    "explanation": "The MIB is a structured collection of managed objects (variables) on a network device, which an SNMP manager can query or set. It is not a routing table."
+  },
+  {
+    "question": "80. How does NETCONF differ from SNMP in network management?",
+    "options": [
+      "NETCONF uses a remote procedure call model and focuses on configuration changes, while SNMP primarily focuses on reading operational data and setting simple parameters",
+      "They are the same protocol with different port numbers",
+      "NETCONF does not allow changing any device configuration",
+      "SNMP can only configure devices, whereas NETCONF is read-only"
+    ],
+    "answer": 0,
+    "explanation": "NETCONF uses XML-based RPCs for configuration operations and data retrieval, often focusing on more complex, transaction-like changes, whereas SNMP is oriented toward simple get/set queries and monitoring."
+  },
+  {
+    "question": "81. Why do operators often prefer NETCONF/YANG over purely SNMP-based configuration?",
+    "options": [
+      "NETCONF/YANG provides structured, transaction-based configuration, reducing the risk of partial or inconsistent changes",
+      "SNMP is always insecure and NETCONF is fully unencrypted",
+      "They are identical so there is no preference",
+      "NETCONF does not require any authentication"
+    ],
+    "answer": 0,
+    "explanation": "NETCONF/YANG allows atomic commit of changes and a more robust transaction model. SNMP sets can be more limited and less structured, risking partial updates."
+  },
+  {
+    "question": "82. In the context of NETCONF, what is an <edit-config> operation?",
+    "options": [
+      "It retrieves the entire MIB from a device",
+      "It modifies a target configuration (running or candidate) on the managed device",
+      "It instructs the device to ignore SNMP entirely",
+      "It closes the connection to the device"
+    ],
+    "answer": 1,
+    "explanation": "<edit-config> is used to modify portions of the device\u2019s configuration in a structured, often transactional manner."
+  },
+  {
+    "question": "83. Which data modeling language is commonly used with NETCONF to describe device configuration and operational data?",
+    "options": [
+      "JSON",
+      "HTML",
+      "YANG",
+      "SQL"
+    ],
+    "answer": 2,
+    "explanation": "YANG is the standardized data modeling language used alongside NETCONF for specifying the structure and semantics of configuration data."
+  },
+  {
+    "question": "84. What advantage does 'locking' a configuration data store in NETCONF provide?",
+    "options": [
+      "It prevents any read or write operations for that device forever",
+      "It ensures multiple managers cannot make conflicting edits at the same time, preserving consistency",
+      "It automatically resets the device to factory defaults",
+      "It encrypts all data with no user input"
+    ],
+    "answer": 1,
+    "explanation": "NETCONF locking ensures exclusive write access to the configuration, preventing multiple concurrent changes that could conflict or cause partial commits."
+  },
+  {
+    "question": "85. How is hierarchical network management in OSPF beneficial for large organizations?",
+    "options": [
+      "It prohibits the creation of new areas",
+      "It reduces the overhead of link-state advertisement flooding by confining LSAs within areas",
+      "It forces the use of BGP within each OSPF area",
+      "It merges all routers into a single broadcast domain"
+    ],
+    "answer": 1,
+    "explanation": "By partitioning an OSPF network into multiple areas, the flooding of link-state information is contained, improving scalability and reducing overhead."
+  },
+  {
+    "question": "86. In BGP, what is the difference between eBGP and iBGP?",
+    "options": [
+      "eBGP is used by edge devices for exchanging routes between different ASes, while iBGP is used within the same AS among its routers",
+      "They are identical except eBGP uses encryption",
+      "iBGP only carries IPv6 routes, while eBGP handles IPv4",
+      "Only eBGP can carry next-hop attributes"
+    ],
+    "answer": 0,
+    "explanation": "External BGP (eBGP) exchanges routes between distinct ASes, whereas internal BGP (iBGP) shares routes among routers within the same AS."
+  },
+  {
+    "question": "87. When a router in a distance vector protocol detects a local link cost increase, which of the following actions does it take?",
+    "options": [
+      "It silently discards all packets",
+      "It recalculates its distance vector and sends the new vector to its neighbors",
+      "It changes the link cost back to the old value",
+      "It queries every router in the network for an updated route table"
+    ],
+    "answer": 1,
+    "explanation": "When link costs change, a router updates its local distance estimates and then propagates these changes by sending updated distance vectors to its neighbors."
+  },
+  {
+    "question": "88. Why do policy considerations typically override shortest-path considerations in BGP?",
+    "options": [
+      "Because BGP does not have any means to measure path length",
+      "Because each AS can choose to route traffic based on business relationships, prefer certain peers, or avoid certain paths, which may not be the strict shortest path",
+      "Because BGP can only count hops up to 15",
+      "Because BGP is older than OSPF"
+    ],
+    "answer": 1,
+    "explanation": "ISPs and organizations implement policies reflecting financial, contractual, or security considerations, so they often select routes that fit policy over purely minimal AS hop counts."
+  },
+  {
+    "question": "89. In the context of the Internet's hierarchical routing, how are addresses aggregated to reduce routing table size?",
+    "options": [
+      "Each IP address is kept individually in BGP",
+      "A single router tracks all host routes for the Internet",
+      "CIDR blocks allow multiple IP prefixes to be advertised as a single aggregated route",
+      "Aggregation does not occur, leading to infinite routing table growth"
+    ],
+    "answer": 2,
+    "explanation": "Classless Inter-Domain Routing (CIDR) aggregates IP ranges into a single advertisement, reducing the number of entries in global routing tables."
+  },
+  {
+    "question": "90. Which statement about the OSPF area border routers is TRUE?",
+    "options": [
+      "They do not store any link-state information",
+      "They connect an OSPF area to the backbone area and summarize the area\u2019s routes into the backbone",
+      "They only run BGP for external routes",
+      "They physically sit on the boundary between Ethernet and Wi-Fi segments"
+    ],
+    "answer": 1,
+    "explanation": "Area border routers connect their local area with the OSPF backbone, summarizing or translating local link-state data for the backbone and vice versa."
+  },
+  {
+    "question": "91. In BGP, how does a router detect that a received route might form a loop?",
+    "options": [
+      "It checks whether its own AS number is already present in the AS-PATH attribute",
+      "It examines the IP header\u2019s TTL field",
+      "It uses an OSPF LS age field",
+      "It sends the route to the controller for verification"
+    ],
+    "answer": 0,
+    "explanation": "If the router sees its own AS number in the AS-PATH, it can conclude that this route would form a loop and thus reject it."
+  },
+  {
+    "question": "92. Which of the following statements about BGP route selection is CORRECT?",
+    "options": [
+      "It always chooses the route with the fewest IP addresses",
+      "It only relies on OSPF link costs",
+      "It typically uses local preference, AS-PATH length, and hot potato routing in a priority-based manner",
+      "It prohibits using multiple next-hop routers"
+    ],
+    "answer": 2,
+    "explanation": "BGP has a well-defined preference sequence: local preference, then AS-PATH length, then other tie-breakers like MED or hot potato routing to pick the best route."
+  },
+  {
+    "question": "93. Which best describes the difference between a 'per-router control plane' and a 'logically centralized control plane'?",
+    "options": [
+      "Per-router control plane means a single device controls the entire network, logically centralized means each router is on its own",
+      "In a per-router control plane, each router runs routing protocols, whereas in a logically centralized control plane, a remote controller handles routing decisions",
+      "They are synonyms for the same architecture",
+      "Logically centralized control plane is slower and never used in practice"
+    ],
+    "answer": 1,
+    "explanation": "In the per-router approach, each router runs distributed protocols to compute routes. In SDN\u2019s logically centralized model, a controller decides routing and pushes rules to devices."
+  },
+  {
+    "question": "94. Which of the following is a valid advantage of a logically centralized routing solution (SDN) over a distributed protocol solution?",
+    "options": [
+      "It eliminates the need for data-plane hardware",
+      "It allows for simpler network-wide policy enforcement and consistent updates",
+      "It forbids the existence of multiple controllers",
+      "It has no advantage except for small networks"
+    ],
+    "answer": 1,
+    "explanation": "A logically centralized controller can compute a consistent, global configuration and push updates network-wide, simplifying policy enforcement and avoiding contradictory local decisions."
+  },
+  {
+    "question": "95. How can SNMP and NETCONF complement each other in network management?",
+    "options": [
+      "SNMP handles streaming telemetry only, while NETCONF uses atomic commits for device configuration",
+      "They are incompatible protocols",
+      "SNMP can gather operational stats (MIB), while NETCONF can make richer configuration changes with YANG models",
+      "They serve exactly the same function, so no complementarity"
+    ],
+    "answer": 2,
+    "explanation": "SNMP is widely used for basic operational data retrieval and simple sets, while NETCONF/YANG is a more structured, transaction-oriented approach for device configuration. They can be complementary."
+  },
+  {
+    "question": "96. In an SDN-based system, what is the role of the 'northbound API' in the SDN controller?",
+    "options": [
+      "It is used by the physical layer devices to talk to the controller",
+      "It is used by control applications (e.g., traffic engineering) to interact with the controller\u2019s services",
+      "It is used by the controller to install flow rules on the switches",
+      "It is used only in BGP eBGP peering sessions"
+    ],
+    "answer": 1,
+    "explanation": "The northbound API is used by higher-level applications to program the network or request services from the SDN controller. The southbound API is used to communicate with the data-plane switches."
+  },
+  {
+    "question": "97. Which statement best captures the meaning of 'distributed, self-stopping' in a distance vector routing algorithm?",
+    "options": [
+      "Routers keep changing distances without stopping",
+      "Each router only updates neighbors on changes, eventually leading to stable distances without a single controlling node",
+      "Routers must store all packets for analysis",
+      "It cannot converge unless the controller intervenes"
+    ],
+    "answer": 1,
+    "explanation": "Distance vector algorithms exchange route updates with neighbors, eventually converging. Once stable, no further updates are sent, making it self-stopping without needing a central coordinator."
+  },
+  {
+    "question": "98. In a link-state routing protocol, which statement about flooding is FALSE?",
+    "options": [
+      "Each router sends its link-state advertisements to its neighbors, who forward them further until all routers have them",
+      "Flooding ensures each router learns the entire network topology",
+      "It is repeated periodically, or when topological changes occur, to maintain updated views",
+      "Once a router sends a link-state advertisement, it never needs to do so again"
+    ],
+    "answer": 3,
+    "explanation": "Link-state advertisements are re-sent periodically or upon topology changes. They are not a one-time operation, so the statement about never needing to do so again is false."
+  },
+  {
+    "question": "99. Why do large ISPs require both an intra-domain routing protocol (like OSPF) and BGP?",
+    "options": [
+      "They don\u2019t actually use BGP, only OSPF",
+      "BGP only handles link failures, while OSPF handles normal traffic",
+      "OSPF is for internal routing within the ISP\u2019s network, while BGP manages routing between different ISPs or external networks",
+      "No single protocol can handle IPv4 and IPv6 simultaneously"
+    ],
+    "answer": 2,
+    "explanation": "ISPs use an intra-domain protocol internally (OSPF, IS-IS) for internal routes, while BGP is necessary for exchanging routes with other ISPs and external networks."
+  },
+  {
+    "question": "100. Which is an advantage of controlling routing via an SDN approach rather than relying entirely on traditional protocols like OSPF or BGP?",
+    "options": [
+      "SDN eliminates the need for any IP addresses",
+      "Operators can more directly implement custom routing policies, load balancing, or specialized services by programming the controller, rather than tweaking protocol parameters",
+      "SDN does not allow for network-wide policy changes",
+      "Traditional protocols can never compute shortest paths"
+    ],
+    "answer": 1,
+    "explanation": "With SDN, operators have direct, programmable control over forwarding decisions for custom policies and traffic engineering, as opposed to working indirectly through the metrics and constraints of traditional distributed protocols."
+  }
+]

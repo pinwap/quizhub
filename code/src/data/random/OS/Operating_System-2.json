@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรมคอมพิวเตอร์ ส่วนใดทำหน้าที่เป็นตัวกลางเชื่อมระหว่างโปรแกรมของผู้ใช้ (User Program) และฮาร์ดแวร์ (Hardware)?",
+    "options": [
+      {
+        "statement": "ระบบปฏิบัติการ (Operating System)",
+        "istrue": true
+      },
+      {
+        "statement": "หน่วยประมวลผลกลาง (CPU)",
+        "istrue": false
+      },
+      {
+        "statement": "โปรแกรมประยุกต์ (Application Software)",
+        "istrue": false
+      },
+      {
+        "statement": "ไดรเวอร์อุปกรณ์ (Device Driver)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ระบบปฏิบัติการ (OS) คือซอฟต์แวร์ระบบที่ทำหน้าที่เป็นตัวกลางในการจัดการทรัพยากรฮาร์ดแวร์และให้บริการแก่โปรแกรมของผู้ใช้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กระบวนการที่โปรแกรมของผู้ใช้ (User Program) ส่งสัญญาณร้องขอบริการจากระบบปฏิบัติการ ซึ่งทำให้ CPU ต้องสลับโหมดการทำงานจาก User Mode ไปเป็น Kernel Mode เรียกว่าอะไร?",
+    "options": [
+      {
+        "statement": "Interrupt",
+        "istrue": false
+      },
+      {
+        "statement": "Trap Routine",
+        "istrue": true
+      },
+      {
+        "statement": "System Boot",
+        "istrue": false
+      },
+      {
+        "statement": "API Call",
+        "istrue": false
+      }
+    ],
+    "explanation": "Trap Routine คือกลไกที่โปรแกรมใน User Mode ใช้เพื่อร้องขอบริการที่ต้องการสิทธิ์สูงจาก OS ซึ่งจะทำให้ CPU สลับไปทำงานใน Kernel Mode"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างที่สำคัญที่สุดระหว่าง Command-line interface (CLI) และ Graphical user interface (GUI)?",
+    "options": [
+      {
+        "statement": "CLI ใช้สำหรับระบบปฏิบัติการเก่าเท่านั้น ในขณะที่ GUI ใช้สำหรับระบบปฏิบัติการใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "CLI สั่งงานผ่านการพิมพ์ข้อความ ในขณะที่ GUI สั่งงานผ่านองค์ประกอบกราฟิก เช่น ไอคอนและเมนู",
+        "istrue": true
+      },
+      {
+        "statement": "CLI ทำงานได้เร็วกว่า GUI เสมอในทุกกรณี",
+        "istrue": false
+      },
+      {
+        "statement": "CLI ไม่ต้องการหน่วยความจำในการทำงาน ในขณะที่ GUI ต้องการหน่วยความจำสูง",
+        "istrue": false
+      }
+    ],
+    "explanation": "ลักษณะเด่นที่แบ่งแยกสองสิ่งนี้คือวิธีการปฏิสัมพันธ์กับผู้ใช้ โดย CLI ใช้การพิมพ์คำสั่งเป็นหลัก ส่วน GUI ใช้วัตถุบนหน้าจอและการคลิกเมาส์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามเนื้อหา 'Genuine OS is supposed to be responsive' หมายความว่าอย่างไร เมื่อมีโปรแกรมหนึ่งเกิดข้อผิดพลาด (แฮงค์)?",
+    "options": [
+      {
+        "statement": "OS ที่ดีควรจะรีสตาร์ทคอมพิวเตอร์โดยอัตโนมัติเพื่อแก้ไขปัญหา",
+        "istrue": false
+      },
+      {
+        "statement": "OS ที่ดีควรจะบังคับปิดทุกโปรแกรมเพื่อป้องกันความเสียหาย",
+        "istrue": false
+      },
+      {
+        "statement": "OS ที่ดีควรจะบังคับปิดเฉพาะโปรแกรมที่มีปัญหา แต่โปรแกรมอื่นยังคงทำงานต่อไปได้",
+        "istrue": true
+      },
+      {
+        "statement": "OS ที่ดีควรจะแจ้งเตือนผู้ใช้และรอให้ผู้ใช้แก้ไขปัญหาเอง",
+        "istrue": false
+      }
+    ],
+    "explanation": "OS ที่ตอบสนองได้ดีจะสามารถแยกแยะและจัดการกับโปรแกรมที่ผิดพลาดได้โดยไม่กระทบต่อการทำงานของทั้งระบบ ทำให้ผู้ใช้ยังคงทำงานกับโปรแกรมอื่นต่อไปได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุผลหลักที่ระบบปฏิบัติการต้องเข้ามาจัดการ I/O operations แทนที่จะให้โปรแกรมของผู้ใช้ควบคุมอุปกรณ์โดยตรงคืออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อเพิ่มความเร็วในการทำงานของโปรแกรมให้สูงสุด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อความสะดวกของผู้พัฒนาที่ไม่ต้องเขียนโค้ดไดรเวอร์เอง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อประสิทธิภาพ (Efficiency) และการป้องกัน (Protection)",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อลดการใช้พลังงานของคอมพิวเตอร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "การให้ OS เป็นตัวกลางช่วยให้การจัดการทรัพยากรมีประสิทธิภาพ (เช่น การจัดคิว) และป้องกันโปรแกรมไม่ให้สร้างความเสียหายแก่ฮาร์ดแวร์โดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การกระทำใดต่อไปนี้เป็นตัวอย่างของบริการ 'Communications' ของระบบปฏิบัติการ?",
+    "options": [
+      {
+        "statement": "การสร้างโฟลเดอร์ใหม่บนเดสก์ท็อป",
+        "istrue": false
+      },
+      {
+        "statement": "การบันทึกสถิติว่าโปรแกรมใดใช้ CPU ไปเท่าไหร่",
+        "istrue": false
+      },
+      {
+        "statement": "การคัดลอกข้อความจากเว็บเบราว์เซอร์ไปวางในโปรแกรมเอกสาร",
+        "istrue": true
+      },
+      {
+        "statement": "การแสดงข้อความแจ้งเตือนเมื่อกระดาษในเครื่องพิมพ์หมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "บริการด้าน Communication ช่วยให้โปรแกรมต่างๆ สามารถแลกเปลี่ยนข้อมูลกันได้ ซึ่งการคัดลอกและวาง (Copy & Paste) เป็นตัวอย่างที่ชัดเจนที่สุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบายความแตกต่างระหว่าง 'Protection' และ 'Security' ได้ถูกต้องที่สุดตามคำอุปมาเรื่องคอนโดมิเนียม?",
+    "options": [
+      {
+        "statement": "Protection คือ รปภ. หน้าตึก ส่วน Security คือกล้องวงจรปิด",
+        "istrue": false
+      },
+      {
+        "statement": "Protection คือกำแพงและประตูของแต่ละห้อง (ป้องกันภายใน) ส่วน Security คือ รปภ. และระบบคีย์การ์ดที่ทางเข้า (ป้องกันภายนอก)",
+        "istrue": true
+      },
+      {
+        "statement": "Protection คือการป้องกันไวรัส ส่วน Security คือการป้องกันแฮกเกอร์",
+        "istrue": false
+      },
+      {
+        "statement": "ทั้ง Protection และ Security มีความหมายเหมือนกัน คือการป้องกันข้อมูล",
+        "istrue": false
+      }
+    ],
+    "explanation": "Protection เน้นการควบคุมการเข้าถึงทรัพยากรภายในระบบ (โปรแกรมไม่ยุ่งกัน) เหมือนกำแพงห้อง ในขณะที่ Security เน้นการป้องกันภัยคุกคามจากภายนอก เหมือน รปภ. ที่ทางเข้า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากแผนภาพ System Call และ API ข้อใดสรุปได้ถูกต้องเกี่ยวกับความสัมพันธ์ระหว่าง Java API และ Win32 API?",
+    "options": [
+      {
+        "statement": "Java API ทำงานได้เร็วกว่า Win32 API เพราะเป็นเทคโนโลยีที่ใหม่กว่า",
+        "istrue": false
+      },
+      {
+        "statement": "Java API เป็นชั้นที่ทำงานอยู่เหนือ Win32 API เพื่อให้โปรแกรม Java สามารถทำงานข้ามแพลตฟอร์มได้",
+        "istrue": true
+      },
+      {
+        "statement": "โปรแกรมที่เขียนด้วย Win32 API สามารถนำไปรันบนระบบปฏิบัติการ Linux ได้",
+        "istrue": false
+      },
+      {
+        "statement": "Java API และ Win32 API คือสิ่งเดียวกัน แต่เรียกชื่อต่างกันในแต่ละภาษา",
+        "istrue": false
+      }
+    ],
+    "explanation": "Java Virtual Machine (JVM) ซึ่งรันโปรแกรม Java จะเรียกใช้ API ของระบบปฏิบัติการโฮสต์ (เช่น Win32 API บน Windows) อีกทอดหนึ่ง เพื่อให้เกิดความเป็นอิสระจากแพลตฟอร์ม (Portability)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การส่งพารามิเตอร์ไปยัง System Call โดยการเก็บค่าทั้งหมดไว้ในหน่วยความจำแล้วส่งเพียงแค่ 'Address' ของตำแหน่งนั้นผ่าน Register มีข้อดีและข้อเสียอย่างไร?",
+    "options": [
+      {
+        "statement": "ข้อดีคือเร็วที่สุด, ข้อเสียคือส่งข้อมูลได้จำกัด",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อดีคือมีความปลอดภัยสูง, ข้อเสียคือเขียนโปรแกรมยาก",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อดีคือส่งพารามิเตอร์ได้ไม่จำกัดจำนวน, ข้อเสียคือช้ากว่าการส่งผ่าน Register โดยตรง",
+        "istrue": true
+      },
+      {
+        "statement": "ข้อดีคือประหยัดหน่วยความจำ, ข้อเสียคือไม่ยืดหยุ่น",
+        "istrue": false
+      }
+    ],
+    "explanation": "วิธีนี้ยืดหยุ่นสูงเพราะส่งข้อมูลขนาดใหญ่ได้ แต่ช้ากว่าเพราะ OS ต้องเสียเวลาไปดึงข้อมูลจากหน่วยความจำอีกทอดหนึ่ง ซึ่งช้ากว่าการเข้าถึง Register ใน CPU"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเปรียบเทียบผลงานของ Linus Torvalds และ Richard Stallman ในการสร้างระบบปฏิบัติการ Linux ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "Linus สร้างเครื่องยนต์ (Kernel) และ Richard สร้างส่วนประกอบอื่นๆ ของรถ (GNU Tools)",
+        "istrue": true
+      },
+      {
+        "statement": "Linus สร้างส่วนติดต่อผู้ใช้แบบกราฟิก (GUI) และ Richard สร้างส่วนคำสั่ง (CLI)",
+        "istrue": false
+      },
+      {
+        "statement": "ทั้งสองคนร่วมกันเขียน Linux Kernel ตั้งแต่ต้นจนจบ",
+        "istrue": false
+      },
+      {
+        "statement": "Richard สร้าง Kernel ที่ชื่อว่า Hurd ส่วน Linus นำมาพัฒนาต่อเป็น Linux",
+        "istrue": false
+      }
+    ],
+    "explanation": "Linux ที่สมบูรณ์เกิดจากการรวมกันของ Linux Kernel ที่สร้างโดย Linus Torvalds และชุดเครื่องมือและซอฟต์แวร์เสรีจากโครงการ GNU ของ Richard Stallman"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อเสียที่สำคัญที่สุดของ Static Linking ที่ถูกกล่าวถึงในเนื้อหาคืออะไร?",
+    "options": [
+      {
+        "statement": "ทำให้โปรแกรมทำงานช้าลงเพราะต้องเรียกใช้ไลบรารีภายนอก",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้เกิด 'Multiple copies of standard library' ซึ่งสิ้นเปลืองพื้นที่และหน่วยความจำ",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้โปรแกรมไม่สามารถทำงานได้หากไม่มีการเชื่อมต่ออินเทอร์เน็ต",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้โค้ดมีความปลอดภัยน้อยลงและง่ายต่อการถูกโจมตี",
+        "istrue": false
+      }
+    ],
+    "explanation": "Static linking คัดลอกโค้ดไลบรารีทั้งหมดมาไว้ในโปรแกรม ทำให้หากมีหลายโปรแกรมใช้ไลบรารีเดียวกัน ก็จะมีสำเนาของโค้ดนั้นซ้ำซ้อนกันในหน่วยความจำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด Dynamic Linking จึงช่วยประหยัดหน่วยความจำ (RAM) ได้ดีกว่า Static Linking เมื่อรันหลายโปรแกรมพร้อมกัน?",
+    "options": [
+      {
+        "statement": "เพราะ Dynamic Linking จะบีบอัดขนาดของไลบรารีก่อนโหลดเข้าสู่หน่วยความจำ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ OS จะโหลดไลบรารีที่ใช้ร่วมกัน (Shared Library) เข้ามาในหน่วยความจำเพียงชุดเดียว ให้ทุกโปรแกรมเข้ามา 'ยืมใช้'",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะโปรแกรมที่ใช้ Dynamic Linking ไม่จำเป็นต้องโหลดไลบรารีทั้งหมด แต่จะโหลดเฉพาะฟังก์ชันที่ต้องการใช้งาน",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Dynamic Linking จะเก็บไลบรารีไว้บนฮาร์ดดิสก์และเรียกใช้โดยตรง ไม่ต้องโหลดลง RAM",
+        "istrue": false
+      }
+    ],
+    "explanation": "แนวคิดหลักของ Dynamic Linking คือ 'Single copy of standard library' โดยจะมีไลบรารีกลางในหน่วยความจำเพียงชุดเดียวที่ทุกโปรแกรมสามารถแชร์การใช้งานร่วมกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในระบบปฏิบัติการแบบ Unix เช่น FreeBSD กระบวนการสร้างโปรเซสใหม่เกิดขึ้นโดยใช้ System Call คู่ใดเป็นหลัก?",
+    "options": [
+      {
+        "statement": "open() และ close()",
+        "istrue": false
+      },
+      {
+        "statement": "create() และ delete()",
+        "istrue": false
+      },
+      {
+        "statement": "fork() และ exec()",
+        "istrue": true
+      },
+      {
+        "statement": "start() และ stop()",
+        "istrue": false
+      }
+    ],
+    "explanation": "โมเดล 'fork-then-exec' เป็นมาตรฐานของ Unix โดย fork() ใช้สำหรับ 'โคลนนิ่ง' โปรเซสเดิม และ exec() ใช้สำหรับ 'เปลี่ยนร่าง' โปรเซสลูกให้เป็นโปรแกรมใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หลักการออกแบบซอฟต์แวร์ที่ว่า 'Mechanism' ควรแยกออกจาก 'Policy' หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "ซอฟต์แวร์ควรมีกลไกการทำงานที่ตายตัวและนโยบายที่เปลี่ยนแปลงไม่ได้เพื่อความเสถียร",
+        "istrue": false
+      },
+      {
+        "statement": "ควรออกแบบ 'วิธีการ' (How) ให้ยืดหยุ่น เพื่อที่จะสามารถเปลี่ยน 'กฎเกณฑ์' (What) ได้ในอนาคตโดยไม่ต้องแก้โครงสร้างหลัก",
+        "istrue": true
+      },
+      {
+        "statement": "Mechanism คือส่วนของฮาร์ดแวร์ และ Policy คือส่วนของซอฟต์แวร์ ซึ่งต้องทำงานแยกจากกัน",
+        "istrue": false
+      },
+      {
+        "statement": "Policy ควรถูกกำหนดก่อน Mechanism เสมอในขั้นตอนการออกแบบ",
+        "istrue": false
+      }
+    ],
+    "explanation": "การแยกส่วน 'วิธีการทำงาน' (Mechanism) ออกจาก 'สิ่งที่ต้องการให้ทำ' (Policy) ทำให้ระบบมีความยืดหยุ่นสูง สามารถปรับเปลี่ยนพฤติกรรมได้โดยไม่ต้องออกแบบใหม่ทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อเสียหลักของโครงสร้างระบบปฏิบัติการแบบ Microkernel เมื่อเทียบกับแบบ Monolithic?",
+    "options": [
+      {
+        "statement": "มีความปลอดภัยต่ำกว่า เพราะบริการต่างๆ ทำงานนอก Kernel",
+        "istrue": false
+      },
+      {
+        "statement": "ประสิทธิภาพลดลง เพราะการสื่อสารระหว่างบริการต่างๆ ต้องผ่านการส่งข้อความ (Message Passing) ซึ่งช้า",
+        "istrue": true
+      },
+      {
+        "statement": "พัฒนายากกว่า เพราะต้องเขียนโค้ดทั้งหมดด้วยภาษา Assembly",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่สามารถเพิ่มไดรเวอร์สำหรับอุปกรณ์ใหม่ๆ ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "แม้จะเสถียรและปลอดภัยสูง แต่การที่ทุกการสื่อสารต้องวิ่งผ่าน Kernel กลางด้วยการส่งข้อความ ทำให้เกิดภาระงาน (Overhead) และทำงานได้ช้ากว่าแบบ Monolithic ที่เรียกใช้ฟังก์ชันกันโดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โครงสร้าง OS แบบใดที่ Linux, Windows และ macOS ในปัจจุบันนิยมใช้ ซึ่งเป็นการผสมผสานข้อดีของแบบ Monolithic และ Microkernel?",
+    "options": [
+      {
+        "statement": "Layered Structure",
+        "istrue": false
+      },
+      {
+        "statement": "Simple Structure",
+        "istrue": false
+      },
+      {
+        "statement": "Modules (Hybrid Structure)",
+        "istrue": true
+      },
+      {
+        "statement": "Pure Microkernel Structure",
+        "istrue": false
+      }
+    ],
+    "explanation": "โครงสร้างแบบโมดูล (หรือ Hybrid) มีแกนหลัก (Core Kernel) ที่ทำงานแบบ Monolithic เพื่อประสิทธิภาพ แต่สามารถโหลด/ถอด 'โมดูล' (เช่น ไดรเวอร์) ได้แบบไดนามิกเพื่อความยืดหยุ่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดสถาปัตยกรรมของ Apple (macOS/iOS) จึงไม่ถือว่าเป็น Layer approach ที่เคร่งครัด?",
+    "options": [
+      {
+        "statement": "เพราะแต่ละชั้นไม่สามารถสื่อสารกันได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะมีจำนวนชั้นน้อยเกินไปที่จะเรียกว่า Layer approach",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะแอปพลิเคชัน (ชั้นบนสุด) สามารถเรียกใช้บริการจากชั้นที่ต่ำกว่าได้โดยตรง ไม่จำเป็นต้องผ่านชั้นที่ติดกันเสมอไป",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะทุกชั้นทำงานอยู่ใน Kernel Mode ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "กฎของ Layer approach คือห้ามข้ามชั้น แต่ในสถาปัตยกรรมของ Apple แอปพลิเคชันสามารถ 'ข้าม' ไปเรียกใช้ Core Frameworks หรือ Kernel ได้โดยตรงเพื่อประสิทธิภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Darwin ซึ่งเป็นแกนหลักของ macOS และ iOS เป็น Hybrid Kernel ที่เกิดจากการผสมผสานของสองส่วนหลักคืออะไร?",
+    "options": [
+      {
+        "statement": "Linux Kernel และ GNU Tools",
+        "istrue": false
+      },
+      {
+        "statement": "Mach Microkernel และส่วนประกอบของ BSD Unix",
+        "istrue": true
+      },
+      {
+        "statement": "Windows NT Kernel และ POSIX standards",
+        "istrue": false
+      },
+      {
+        "statement": "Android Runtime (ART) และ Bionic library",
+        "istrue": false
+      }
+    ],
+    "explanation": "Darwin ใช้ Mach เป็นรากฐานระดับล่างสุด (จัดการโปรเซส, หน่วยความจำ) และนำความสามารถที่สมบูรณ์ของ BSD Unix (ระบบไฟล์, เน็ตเวิร์ก) มาทำงานร่วมกันในระดับ Kernel"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรมของ Android ส่วนที่เรียกว่า 'Hardware Abstraction Layer (HAL)' มีหน้าที่สำคัญอย่างไร?",
+    "options": [
+      {
+        "statement": "เป็น Virtual Machine ที่ใช้รันแอปพลิเคชัน Android ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นชุดไลบรารีกราฟิกสำหรับแสดงผลเกมและวิดีโอ",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง 'อินเทอร์เฟซมาตรฐาน' สำหรับฮาร์ดแวร์แต่ละชิ้น ทำให้เฟรมเวิร์กของ Android ไม่ต้องรู้จักฮาร์ดแวร์ทุกยี่ห้อ",
+        "istrue": true
+      },
+      {
+        "statement": "เป็น Linux Kernel ที่ถูกดัดแปลงให้ประหยัดพลังงานมากขึ้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "HAL เป็นชั้นที่ซ่อนความซับซ้อนและความแตกต่างของฮาร์ดแวร์จากผู้ผลิตหลายราย ทำให้ซอฟต์แวร์ Android ชั้นบนสามารถทำงานกับอุปกรณ์ที่หลากหลายได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Android RunTime (ART) ใช้เทคนิคการคอมไพล์แบบใด ซึ่งช่วยให้แอปพลิเคชันเปิดและทำงานได้เร็วขึ้น?",
+    "options": [
+      {
+        "statement": "Just-in-Time (JIT) compilation",
+        "istrue": false
+      },
+      {
+        "statement": "Ahead-of-Time (AOT) compilation",
+        "istrue": true
+      },
+      {
+        "statement": "Static compilation",
+        "istrue": false
+      },
+      {
+        "statement": "Dynamic compilation",
+        "istrue": false
+      }
+    ],
+    "explanation": "ART ใช้เทคนิค AOT คือการแปลโค้ดของแอปเป็นภาษาเครื่อง 'ล่วงหน้า' ตั้งแต่ตอนติดตั้ง ทำให้เมื่อเปิดแอปก็สามารถรันได้ทันทีโดยไม่ต้องแปลใหม่ทุกครั้ง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โปรแกรมแรกที่เริ่มทำงานทันทีหลังจากกดปุ่มเปิดเครื่องคอมพิวเตอร์ และถูกเก็บไว้ในหน่วยความจำแบบ ROM คืออะไร?",
+    "options": [
+      {
+        "statement": "Operating System Kernel",
+        "istrue": false
+      },
+      {
+        "statement": "Boot Loader",
+        "istrue": false
+      },
+      {
+        "statement": "Bootstrap Program (เช่น BIOS หรือ UEFI)",
+        "istrue": true
+      },
+      {
+        "statement": "Command Interpreter",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bootstrap Program หรือ Firmware (BIOS/UEFI) คือโปรแกรมแรกสุดที่ CPU เรียกใช้ มีหน้าที่ตรวจสอบฮาร์ดแวร์และเริ่มต้นกระบวนการโหลดระบบปฏิบัติการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ ข้อดีของ UEFI ที่เหนือกว่า BIOS แบบดั้งเดิม?",
+    "options": [
+      {
+        "statement": "รองรับฮาร์ดดิสก์ที่มีขนาดใหญ่กว่า 2.2 TB",
+        "istrue": false
+      },
+      {
+        "statement": "มีฟีเจอร์ Secure Boot เพื่อเพิ่มความปลอดภัย",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ทรัพยากร (RAM และ CPU) น้อยกว่า BIOS อย่างมีนัยสำคัญ",
+        "istrue": true
+      },
+      {
+        "statement": "บูตเครื่องได้เร็วกว่าและมีส่วนติดต่อผู้ใช้แบบกราฟิก",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในทางตรงกันข้าม UEFI เป็นเหมือน OS ขนาดเล็กจึงใช้ทรัพยากรมากกว่า BIOS แต่ข้อดีอื่นๆ เช่น ความเร็ว, ความปลอดภัย, และการรองรับฮาร์ดแวร์สมัยใหม่นั้นเหนือกว่ามาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปรากฏการณ์ 'Memory Bottleneck' เกิดจากสาเหตุหลักใด?",
+    "options": [
+      {
+        "statement": "CPU มีจำนวน Core มากเกินไป ทำให้ทำงานขัดแย้งกันเอง",
+        "istrue": false
+      },
+      {
+        "statement": "หน่วยความจำ (RAM) ทำงานได้ช้ากว่าความเร็วในการประมวลผลของ CPU มาก ทำให้ CPU ต้องเสียเวลารอข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "ฮาร์ดดิสก์มีความเร็วในการอ่าน/เขียนข้อมูลไม่เพียงพอ",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบปฏิบัติการไม่สามารถจัดสรรหน่วยความจำได้อย่างมีประสิทธิภาพ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ปัญหาคอขวดนี้เกิดจากความไม่สมดุลของความเร็วระหว่าง CPU ที่เร็วมากและ RAM ที่ช้ากว่า ทำให้ประสิทธิภาพโดยรวมของระบบถูกจำกัดโดยความเร็วของ RAM"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรมแบบ Non-Uniform Memory Access (NUMA) ถูกออกแบบมาเพื่อแก้ปัญหาในระบบคอมพิวเตอร์แบบใด?",
+    "options": [
+      {
+        "statement": "ระบบที่มี CPU เพียงตัวเดียวแต่มี RAM จำนวนมาก",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบที่มี CPU หลายตัว (Multi-processor) ซึ่งแต่ละตัวมีหน่วยความจำ 'ท้องถิ่น' (Local Memory) ของตัวเอง",
+        "istrue": true
+      },
+      {
+        "statement": "ระบบคอมพิวเตอร์แบบพกพาที่เน้นการประหยัดพลังงาน",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบคอมพิวเตอร์ที่ใช้ฮาร์ดดิสก์แบบ SSD",
+        "istrue": false
+      }
+    ],
+    "explanation": "NUMA จัดการกับปัญหาคอขวดในระบบที่มี CPU หลายตัว โดยทำให้ CPU แต่ละตัวเข้าถึง RAM ที่อยู่ใกล้ (Local) ได้เร็วกว่า RAM ที่อยู่ไกล (Remote)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากโปรแกรมหนึ่งพยายามคำนวณตัวเลขที่มีค่ามากเกินกว่าที่ตัวแปรจะเก็บได้ จนเกิดข้อผิดพลาด นี่คือตัวอย่างของปัญหาใดที่ OS ที่ดีควรตรวจจับได้?",
+    "options": [
+      {
+        "statement": "I/O error",
+        "istrue": false
+      },
+      {
+        "statement": "Dangling pointer",
+        "istrue": false
+      },
+      {
+        "statement": "Arithmetic overflow",
+        "istrue": true
+      },
+      {
+        "statement": "Hardware resource running low",
+        "istrue": false
+      }
+    ],
+    "explanation": "Arithmetic overflow คือข้อผิดพลาดทางการคำนวณที่เกิดขึ้นเมื่อผลลัพธ์มีค่าเกินขีดจำกัดสูงสุดที่ตัวแปรประเภทนั้นจะสามารถจัดเก็บได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ผู้ใช้คนหนึ่งกำลังพิมพ์รายงานในโปรแกรมเอกสาร และต้องการพิมพ์งานออกทางเครื่องพิมพ์ การกระทำนี้จะต้องอาศัยบริการใดของ OS มากที่สุดตามลำดับ?",
+    "options": [
+      {
+        "statement": "Program execution -> File-system manipulation -> Error detection",
+        "istrue": false
+      },
+      {
+        "statement": "User Interface -> I/O operations -> Resource allocation",
+        "istrue": true
+      },
+      {
+        "statement": "Communication -> Protection -> Security",
+        "istrue": false
+      },
+      {
+        "statement": "Accounting -> User Interface -> Program execution",
+        "istrue": false
+      }
+    ],
+    "explanation": "ผู้ใช้โต้ตอบผ่าน User Interface (GUI ของโปรแกรม) เพื่อสั่งพิมพ์ ซึ่งเป็นการร้องขอ I/O operations (สั่งงานเครื่องพิมพ์) และ OS จะต้องจัดสรร (Resource allocation) คิวการใช้งานเครื่องพิมพ์หากมีโปรแกรมอื่นสั่งพิมพ์พร้อมกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทแห่งหนึ่งต้องการสร้างโปรแกรมบัญชีขนาดเล็กสำหรับใช้ภายในองค์กรเท่านั้น และต้องการให้โปรแกรมทำงานได้ด้วยตัวเองโดยไม่ต้องติดตั้งไลบรารีเพิ่มเติม ควรเลือกใช้การเชื่อมโยง (Linking) แบบใด?",
+    "options": [
+      {
+        "statement": "Dynamic Linking เพราะจะทำให้ไฟล์มีขนาดเล็กและอัปเดตง่าย",
+        "istrue": false
+      },
+      {
+        "statement": "Static Linking เพราะจะรวมไลบรารีที่จำเป็นทั้งหมดไว้ในไฟล์เดียว ทำให้ง่ายต่อการแจกจ่ายและใช้งาน",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้งสองแบบให้ผลลัพธ์เหมือนกัน ไม่มีข้อแตกต่าง",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ต้องใช้การ Linking เพราะเป็นโปรแกรมขนาดเล็ก",
+        "istrue": false
+      }
+    ],
+    "explanation": "สำหรับโปรแกรมที่ต้องการความสมบูรณ์ในตัวเอง (self-contained) และไม่ต้องกังวลเรื่องการแชร์ไลบรารีกับโปรแกรมอื่น Static Linking จะเหมาะสมที่สุด แม้ไฟล์จะมีขนาดใหญ่กว่าก็ตาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ระบบปฏิบัติการที่ 'NUMA-aware' จะช่วยเพิ่มประสิทธิภาพของระบบได้อย่างไร?",
+    "options": [
+      {
+        "statement": "โดยการปิดการทำงานของ CPU ที่อยู่ห่างไกลจากหน่วยความจำ",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการคัดลอกข้อมูลทั้งหมดไปยังหน่วยความจำของ CPU ทุกตัว",
+        "istrue": false
+      },
+      {
+        "statement": "โดยพยายามจัดสรรให้โปรเซสและข้อมูลในหน่วยความจำของโปรเซสนั้นอยู่ใน Node (กลุ่ม CPU และ RAM) เดียวกัน",
+        "istrue": true
+      },
+      {
+        "statement": "โดยการบังคับให้ CPU ทุกตัวเข้าถึงหน่วยความจำกลางเพียงแห่งเดียวเพื่อความเป็นระเบียบ",
+        "istrue": false
+      }
+    ],
+    "explanation": "OS ที่เข้าใจ NUMA จะพยายามลดการเข้าถึงหน่วยความจำที่อยู่ไกล (Slow Path) โดยการจัดวางโปรเซสและข้อมูลของมันให้อยู่ในหน่วยความจำท้องถิ่น (Fast Path) ให้มากที่สุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการมีอยู่ของ 'Firmware' (เช่น BIOS/UEFI) ที่แก้ไขได้ยากจึงมีความสำคัญต่อความปลอดภัยของคอมพิวเตอร์?",
+    "options": [
+      {
+        "statement": "เพื่อป้องกันไม่ให้ผู้ใช้ทั่วไปเปลี่ยนแปลงการตั้งค่าและทำให้เครื่องเสียหาย",
+        "istrue": false
+      },
+      {
+        "statement": "หากไวรัสสามารถแก้ไข Firmware ได้ มันจะสามารถควบคุมเครื่องได้ตั้งแต่ก่อนที่ OS และโปรแกรมแอนตี้ไวรัสจะเริ่มทำงาน",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้มั่นใจว่าคอมพิวเตอร์จะสามารถบูตได้จากฮาร์ดดิสก์ที่ติดตั้งมาจากโรงงานเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเป็นการยืนยันสิทธิ์การเป็นเจ้าของเครื่องคอมพิวเตอร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "Firmware เป็นด่านแรกของการทำงาน หากถูกโจมตี มัลแวร์จะสามารถฝังตัวในระดับที่ลึกที่สุดและหลีกเลี่ยงการตรวจจับจากซอฟต์แวร์ความปลอดภัยระดับ OS ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากนักพัฒนากำลังเขียนโปรแกรมเกม 3 มิติบน Android และต้องการประสิทธิภาพสูงสุดสำหรับส่วนการเรนเดอร์กราฟิก พวกเขาควรใช้เทคนิคใด?",
+    "options": [
+      {
+        "statement": "เขียนโค้ดทั้งหมดด้วย Java และเรียกใช้ Android API มาตรฐาน",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ Hardware Abstraction Layer (HAL) เพื่อควบคุมการ์ดจอโดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "เขียนส่วนการเรนเดอร์กราฟิกเป็น Native Library (C/C++) และเรียกใช้ผ่าน JNI (Java Native Interface)",
+        "istrue": true
+      },
+      {
+        "statement": "ดัดแปลง Linux Kernel เพื่อเพิ่มไดรเวอร์กราฟิกของตัวเอง",
+        "istrue": false
+      }
+    ],
+    "explanation": "สำหรับงานที่ต้องการประสิทธิภาพสูง เช่น กราฟิก 3D การเขียนโค้ดเนทีฟ (C/C++) และใช้ JNI เป็นสะพานเชื่อมกับโค้ด Java จะสามารถรีดประสิทธิภาพจากฮาร์ดแวร์ได้ดีที่สุด"
+  }
+]

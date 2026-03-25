@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which notorious computer worm in 1988 was one of the first to exploit a Buffer Overflow vulnerability?",
+    "options": [
+      {
+        "statement": "Morris Worm",
+        "istrue": true
+      },
+      {
+        "statement": "Stuxnet",
+        "istrue": false
+      },
+      {
+        "statement": "WannaCry",
+        "istrue": false
+      },
+      {
+        "statement": "ILOVEYOU",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Morris Worm (1988) is historically significant as one of the first major internet worms to use a buffer overflow exploit (specifically in the fingerd daemon)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is Buffer Overflow still a relevant problem today, despite being known for decades?",
+    "options": [
+      {
+        "statement": "Programmers have stopped using the C language.",
+        "istrue": false
+      },
+      {
+        "statement": "Modern computers are slower.",
+        "istrue": false
+      },
+      {
+        "statement": "Legacy code remains, and even in 2020, hundreds of new buffer overflow vulnerabilities were discovered.",
+        "istrue": true
+      },
+      {
+        "statement": "It is no longer a problem; the slides say it was solved in 2003.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The problem persists because insecure legacy code exists, and developers continue to make memory management errors in languages like C/C++."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the context of the C programming language, why is the function `gets()` considered dangerous?",
+    "options": [
+      {
+        "statement": "It cannot read spaces.",
+        "istrue": false
+      },
+      {
+        "statement": "It does not perform 'Bounds Checking', allowing users to input more data than the buffer can hold.",
+        "istrue": true
+      },
+      {
+        "statement": "It is too slow.",
+        "istrue": false
+      },
+      {
+        "statement": "It automatically encrypts the input.",
+        "istrue": false
+      }
+    ],
+    "explanation": "`gets()` reads input until a newline without checking if the input fits in the destination array, leading to potential overflows."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What happens in memory during a Buffer Overflow attack?",
+    "options": [
+      {
+        "statement": "The computer runs out of RAM.",
+        "istrue": false
+      },
+      {
+        "statement": "The excess data spills over into adjacent memory locations, potentially overwriting other variables or control data.",
+        "istrue": true
+      },
+      {
+        "statement": "The hard drive gets formatted.",
+        "istrue": false
+      },
+      {
+        "statement": "The CPU overheats.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Like pouring too much water into a cup, the excess data doesn't disappear; it overwrites whatever is stored in the memory addresses next to the buffer ."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In a 'Stack Smashing' attack, what critical piece of data does the attacker aim to overwrite?",
+    "options": [
+      {
+        "statement": "The Return Address",
+        "istrue": true
+      },
+      {
+        "statement": "The filename",
+        "istrue": false
+      },
+      {
+        "statement": "The user's password",
+        "istrue": false
+      },
+      {
+        "statement": "The screen resolution",
+        "istrue": false
+      }
+    ],
+    "explanation": "By overwriting the Return Address , the attacker controls where the program execution jumps to after the function finishes."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What are the two necessary conditions (observations) for a successful Buffer Overflow exploit?",
+    "options": [
+      {
+        "statement": "Fast Internet and a good CPU.",
+        "istrue": false
+      },
+      {
+        "statement": "Code Injection (getting malicious code in) and Redirection (changing program flow to run that code).",
+        "istrue": true
+      },
+      {
+        "statement": "A mouse and a keyboard.",
+        "istrue": false
+      },
+      {
+        "statement": "Administrator rights and a USB drive.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The attacker must introduce their payload (Injection) and then trick the CPU into executing it (Redirection)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is considered a 'Static Analysis' solution?",
+    "options": [
+      {
+        "statement": "Analyzing the source code for bugs before the program is compiled or run.",
+        "istrue": true
+      },
+      {
+        "statement": "Monitoring the program while it is running.",
+        "istrue": false
+      },
+      {
+        "statement": "Using a firewall.",
+        "istrue": false
+      },
+      {
+        "statement": "Rebooting the computer.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Static analysis tools scan the codebase (source code) for unsafe patterns without executing the program."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a limitation of Static Analysis tools?",
+    "options": [
+      {
+        "statement": "They are too expensive.",
+        "istrue": false
+      },
+      {
+        "statement": "They may produce False Alarms and lack runtime information (what actually happens when the code runs).",
+        "istrue": true
+      },
+      {
+        "statement": "They require a supercomputer.",
+        "istrue": false
+      },
+      {
+        "statement": "They cannot read C code.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Since static analysis doesn't run the code, it can't know the values of variables at runtime, leading to potential inaccuracies."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ASLR (Address Space Layout Randomization) is an example of which type of protection?",
+    "options": [
+      {
+        "statement": "Static Analysis",
+        "istrue": false
+      },
+      {
+        "statement": "Dynamic Solution (Address Protection)",
+        "istrue": true
+      },
+      {
+        "statement": "Antivirus",
+        "istrue": false
+      },
+      {
+        "statement": "Physical Security",
+        "istrue": false
+      }
+    ],
+    "explanation": "ASLR works dynamically at runtime by randomizing memory locations, making it harder for attackers to predict where their code or the return address is."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the function of a 'Canary' (Stack Guard) in buffer overflow protection?",
+    "options": [
+      {
+        "statement": "It sings when the computer is hacked.",
+        "istrue": false
+      },
+      {
+        "statement": "It is a secret value placed on the stack; if it changes, the system knows a buffer overflow has occurred.",
+        "istrue": true
+      },
+      {
+        "statement": "It encrypts the hard drive.",
+        "istrue": false
+      },
+      {
+        "statement": "It cleans the memory.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Like a canary in a coal mine, this value sits before the return address. If a buffer overflow occurs, the canary gets overwritten first, alerting the system ."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why can Buffer Overflows still occur in 'safe' languages like Java or Perl?",
+    "options": [
+      {
+        "statement": "Because Java is a bad language.",
+        "istrue": false
+      },
+      {
+        "statement": "Because they often rely on underlying libraries written in unsafe languages like C or C++.",
+        "istrue": true
+      },
+      {
+        "statement": "Because they don't have memory.",
+        "istrue": false
+      },
+      {
+        "statement": "Because hackers prefer Java.",
+        "istrue": false
+      }
+    ],
+    "explanation": "High-level languages run on runtimes or use native libraries (JNI in Java) that may contain C code susceptible to overflows."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the 'Secure Bit' concept?",
+    "options": [
+      {
+        "statement": "A new cryptocurrency.",
+        "istrue": false
+      },
+      {
+        "statement": "A hardware-based protection that tags data in memory as either 'Trusted' or 'Untrusted'.",
+        "istrue": true
+      },
+      {
+        "statement": "A password manager.",
+        "istrue": false
+      },
+      {
+        "statement": "A type of antivirus software.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Secure Bit architecture proposes adding an extra bit to memory to track the provenance (origin) of data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Under the 'Secure Bit' architecture, what happens to data arriving from the network or keyboard (External Input)?",
+    "options": [
+      {
+        "statement": "It is deleted.",
+        "istrue": false
+      },
+      {
+        "statement": "It is tagged with the Secure Bit (set to 1), marking it as Untrusted.",
+        "istrue": true
+      },
+      {
+        "statement": "It is encrypted.",
+        "istrue": false
+      },
+      {
+        "statement": "It is sent to the recycle bin.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The protocol dictates that all input is evil; therefore, any data crossing the boundary from outside is marked as potentially dangerous."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the Secure Bit hardware enforcement prevent?",
+    "options": [
+      {
+        "statement": "It prevents the data from being read.",
+        "istrue": false
+      },
+      {
+        "statement": "It prevents untrusted data (Secure Bit = 1) from being used as a Jump Target or Return Address.",
+        "istrue": true
+      },
+      {
+        "statement": "It prevents the computer from turning on.",
+        "istrue": false
+      },
+      {
+        "statement": "It prevents saving files.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The system allows untrusted data to be processed as data (read/write) but blocks it from being executed as code (instructions), effectively stopping code injection attacks."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a type of buffer overflow protection mentioned?",
+    "options": [
+      {
+        "statement": "Static Analysis",
+        "istrue": false
+      },
+      {
+        "statement": "Dynamic Solutions",
+        "istrue": false
+      },
+      {
+        "statement": "Isolation",
+        "istrue": false
+      },
+      {
+        "statement": "Deleting the System32 folder",
+        "istrue": true
+      }
+    ],
+    "explanation": "The three main classifications are Static Analysis, Dynamic Solutions, and Isolation. Deleting System32 destroys the OS, not protects it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Code Red'?",
+    "options": [
+      {
+        "statement": "A soft drink.",
+        "istrue": false
+      },
+      {
+        "statement": "A famous computer worm from 2001 that exploited a buffer overflow in IIS web servers.",
+        "istrue": true
+      },
+      {
+        "statement": "A status when the server is down.",
+        "istrue": false
+      },
+      {
+        "statement": "A programming language.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Code Red was a widespread worm that targeted Microsoft IIS web servers using a buffer overflow vulnerability."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does 'Own3d' typically mean in hacker slang?",
+    "options": [
+      {
+        "statement": "The computer is broken.",
+        "istrue": false
+      },
+      {
+        "statement": "The attacker has gained full control (root/admin access) of the system.",
+        "istrue": true
+      },
+      {
+        "statement": "The software is purchased legally.",
+        "istrue": false
+      },
+      {
+        "statement": "The user is logged out.",
+        "istrue": false
+      }
+    ],
+    "explanation": "'Owned' (or Own3d) implies total compromise, where the attacker effectively 'owns' the machine."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does 'Obfuscation' help protect against Buffer Overflows?",
+    "options": [
+      {
+        "statement": "It makes the code unreadable and complex, making it harder for attackers to find vulnerability offsets.",
+        "istrue": true
+      },
+      {
+        "statement": "It fixes the bugs in the code.",
+        "istrue": false
+      },
+      {
+        "statement": "It speeds up the program.",
+        "istrue": false
+      },
+      {
+        "statement": "It deletes unused variables.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Obfuscation hides the logic and memory layout, increasing the difficulty/cost for an attacker to reverse engineer the exploit."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Format String Vulnerability' (printf) is similar to Buffer Overflow because:",
+    "options": [
+      {
+        "statement": "It involves memory corruption.",
+        "istrue": true
+      },
+      {
+        "statement": "It uses the mouse.",
+        "istrue": false
+      },
+      {
+        "statement": "It only happens in Python.",
+        "istrue": false
+      },
+      {
+        "statement": "It requires a printer.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Both vulnerabilities involve improper handling of user input that allows attackers to write to arbitrary memory locations."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "FlawFinder, RATS, and Splint are tools used for:",
+    "options": [
+      {
+        "statement": "Hacking neighbors.",
+        "istrue": false
+      },
+      {
+        "statement": "Static Analysis of source code.",
+        "istrue": true
+      },
+      {
+        "statement": "Playing music.",
+        "istrue": false
+      },
+      {
+        "statement": "Designing graphics.",
+        "istrue": false
+      }
+    ],
+    "explanation": "These are standard tools mentioned in the slides for scanning C/C++ code to find potential security flaws like buffer overflows."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In memory, if variable 'A' is stored next to variable 'B', and you write too much data into 'A', what happens to 'B'?",
+    "options": [
+      {
+        "statement": "B is moved to a safe location.",
+        "istrue": false
+      },
+      {
+        "statement": "B is overwritten (corrupted) by the excess data from A.",
+        "istrue": true
+      },
+      {
+        "statement": "B is encrypted.",
+        "istrue": false
+      },
+      {
+        "statement": "Nothing happens.",
+        "istrue": false
+      }
+    ],
+    "explanation": "This is the definition of a buffer overflow: data exceeding the buffer boundary overwrites adjacent memory."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The NX Bit (No-Execute) is a protection feature that:",
+    "options": [
+      {
+        "statement": "Stops the hard drive.",
+        "istrue": false
+      },
+      {
+        "statement": "Prevents code execution in certain memory areas like the Stack or Heap.",
+        "istrue": true
+      },
+      {
+        "statement": "Prevents users from executing programs.",
+        "istrue": false
+      },
+      {
+        "statement": "Speeds up execution.",
+        "istrue": false
+      }
+    ],
+    "explanation": "NX Bit marks memory segments (like the stack) as non-executable. Even if an attacker injects code there, the CPU refuses to run it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is rewriting all legacy code (BIOS, Kernel, Apps) to be secure considered an 'Impasse' (Dead End)?",
+    "options": [
+      {
+        "statement": "Because programmers are lazy.",
+        "istrue": false
+      },
+      {
+        "statement": "Because it is practically impossible due to the sheer volume and cost of existing code.",
+        "istrue": true
+      },
+      {
+        "statement": "Because computers would stop working.",
+        "istrue": false
+      },
+      {
+        "statement": "Because C++ is the only language.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The amount of existing software infrastructure is too vast to simply discard and rewrite, making hardware/OS-level mitigations necessary."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the Secure Bit model, 'Trustworthy' data typically originates from:",
+    "options": [
+      {
+        "statement": "The Internet.",
+        "istrue": false
+      },
+      {
+        "statement": "The Keyboard.",
+        "istrue": false
+      },
+      {
+        "statement": "Internal system processes (Results of internal operations).",
+        "istrue": true
+      },
+      {
+        "statement": "A USB stick.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Trustworthy data is generated internally by the system, whereas anything coming from outside interfaces is considered untrusted."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Shellcode'?",
+    "options": [
+      {
+        "statement": "Code used to protect the shell.",
+        "istrue": false
+      },
+      {
+        "statement": "A small piece of code used as the payload in an exploit (e.g., to spawn a command shell).",
+        "istrue": true
+      },
+      {
+        "statement": "Code written on a sea shell.",
+        "istrue": false
+      },
+      {
+        "statement": "Code for a graphical user interface.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Shellcode is the machine code injected by the attacker to perform their malicious task, typically opening a shell/command prompt."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Lexical Analysis in Static Analysis involves:",
+    "options": [
+      {
+        "statement": "Running the code.",
+        "istrue": false
+      },
+      {
+        "statement": "Searching for dangerous function names (tokens) like `strcpy` or `gets`.",
+        "istrue": true
+      },
+      {
+        "statement": "Asking the developer.",
+        "istrue": false
+      },
+      {
+        "statement": "Guessing.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Lexical analysis tokenizes the source code and looks for known risky patterns or function calls."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary goal of 'Redirection' in an exploit?",
+    "options": [
+      {
+        "statement": "To redirect the user to a phishing site.",
+        "istrue": false
+      },
+      {
+        "statement": "To change the Instruction Pointer (EIP/RIP) to point to the attacker's injected code.",
+        "istrue": true
+      },
+      {
+        "statement": "To restart the computer.",
+        "istrue": false
+      },
+      {
+        "statement": "To save the file to a different folder.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Redirection hijacks the control flow. The CPU's instruction pointer is forced to jump to the memory address where the shellcode is stored."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which programming language is most historically associated with Buffer Overflow vulnerabilities?",
+    "options": [
+      {
+        "statement": "Java",
+        "istrue": false
+      },
+      {
+        "statement": "Python",
+        "istrue": false
+      },
+      {
+        "statement": "C / C++",
+        "istrue": true
+      },
+      {
+        "statement": "HTML",
+        "istrue": false
+      }
+    ],
+    "explanation": "C and C++ provide direct memory manipulation without built-in safety checks, putting the burden of safety entirely on the programmer."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the Secure Bit architecture, can you perform mathematical calculations on 'Untrusted' data?",
+    "options": [
+      {
+        "statement": "No, it is blocked.",
+        "istrue": false
+      },
+      {
+        "statement": "Yes, it can be used as data, just not as an instruction pointer.",
+        "istrue": true
+      },
+      {
+        "statement": "Only if it is encrypted.",
+        "istrue": false
+      },
+      {
+        "statement": "Only on Tuesdays.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The architecture distinguishes between Data (safe to manipulate) and Instructions (dangerous to execute). Untrusted input stays as data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does 'Slammer' refer to in the context of this chapter?",
+    "options": [
+      {
+        "statement": "A wrestling move.",
+        "istrue": false
+      },
+      {
+        "statement": "A fast-spreading SQL Server worm from 2003.",
+        "istrue": true
+      },
+      {
+        "statement": "A type of hammer.",
+        "istrue": false
+      },
+      {
+        "statement": "A firewall brand.",
+        "istrue": false
+      }
+    ],
+    "explanation": "SQL Slammer was a worm that caused a massive denial of service by exploiting a buffer overflow in Microsoft SQL Server."
+  }
+]

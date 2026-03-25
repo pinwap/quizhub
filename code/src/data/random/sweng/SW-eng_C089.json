@@ -1,0 +1,167 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นข้อความที่เกี่ยวกับ integrity",
+    "options": [
+      { "statement": "สมหมายส่งข้อความไปหาสุนทรโดยใช้จดหมายปิดผนึกลงลายเซน", "istrue": false },
+      { "statement": "สมหมายส่งข้อความว่า “นัดบ่ายโมงนี้ที่เดิม” ไปหาสุนทร แต่สุนทรได้รับข้อความว่า “นัดบ่ายโมงนี้”", "istrue": true },
+      { "statement": "สมหมายส่งข้อความไปหาสุนทรแต่สุนทรนั้นไม่ได้รับข้อความใด ๆ เลย", "istrue": false },
+      { "statement": "สมหมายส่งข้อความไปหาสุนทรแต่กลับปฏิเสธว่าไม่ได้ส่งข้อความใด ๆ", "istrue": false }
+    ],
+    "explanation": "ความถูกต้องของข้อมูล (integrity) มุ่งป้องกันการแก้ไขหรือสูญหายของเนื้อหาระหว่างทาง กรณีข้อความถูกเปลี่ยนแปลงสะท้อนปัญหาด้าน integrity โดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "“วิฑูรย์ต้องการใช้ระบบสืบค้นข้อมูลของห้องสมุดแต่ระบบนั้นล่มเพราะถูกแฮก” ข้อความนี้เกี่ยวกับคุณสมบัติใดของการรักษาความปลอดภัย",
+    "options": [
+      { "statement": "Confidentiality", "istrue": false },
+      { "statement": "Reliability", "istrue": false },
+      { "statement": "Integrity", "istrue": false },
+      { "statement": "Availability", "istrue": true }
+    ],
+    "explanation": "ระบบล่มจนผู้ใช้ไม่สามารถเข้าถึงบริการสะท้อนประเด็นความพร้อมใช้งาน (availability)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "“การป้องกันมิให้ข้อมูลเปลี่ยนแปลงไปจากเดิมเมื่อเดินทางสู่ปลายทาง” เป็นการดำเนินการเพื่อคุณสมบัติใด",
+    "options": [
+      { "statement": "Integrity", "istrue": true },
+      { "statement": "Confidentiality", "istrue": false },
+      { "statement": "Authenticity", "istrue": false },
+      { "statement": "Repudiation", "istrue": false }
+    ],
+    "explanation": "การคงสภาพข้อมูลให้ตรงตามเดิมคือหัวใจของคุณสมบัติความถูกต้องครบถ้วน (integrity)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นการป้องกันด้าน physical security",
+    "options": [
+      { "statement": "การใช้  voice เพื่อยืนยันการทำงานของแอปพลิเคชัน", "istrue": false },
+      { "statement": "การใช้ fingerprint เพื่อเข้าใช้เครื่องคอมพิวเตอร์", "istrue": false },
+      { "statement": "การใช้ eye scan ก่อนเข้าใช้แอปพลิเคชัน", "istrue": false },
+      { "statement": "การติดตั้งกล้องวงจรปิด ณ ตู้ ATM ทุกเครื่องเพื่อบันทึกผู้เข้าใช้เครื่องในแต่ละช่วงเวลา", "istrue": true }
+    ],
+    "explanation": "การติดตั้งกล้องวงจรปิดเป็นมาตรการด้านกายภาพ (physical security) เพื่อเฝ้าระวังและยับยั้งเหตุ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่ความหมายของ cybersecurity",
+    "options": [
+      { "statement": "การรักษาความปลอดภัยของข้อมูลบนระบบเครือข่าย", "istrue": false },
+      { "statement": "การรักษาความปลอดภัยของอุปกรณ์บนระบบเครือข่าย", "istrue": false },
+      { "statement": "การรักษาความปลอดภัยของแอปพลิเคชันบนระบบเครือข่าย", "istrue": false },
+      { "statement": "การรักษาความปลอดภัยของการเข้าถึงสถานที่เก็บข้อมูล", "istrue": true }
+    ],
+    "explanation": "การควบคุมการเข้าถึงสถานที่เป็นมาตรการด้านกายภาพ ไม่ใช่ขอบข่ายตรงของความมั่นคงปลอดภัยไซเบอร์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การพิจารณาถึงความปลอดภัยของข้อมูลและระบบการทำงานของแอปพลิเคชันตั้งแต่การเริ่มออกแบบแอปพลิเคชัน เรียกว่าการพิจารณาบริหารจัดการความปลอดภัยแบบใด",
+    "options": [
+      { "statement": "Well plan security", "istrue": false },
+      { "statement": "Shift-left security", "istrue": true },
+      { "statement": "Shift-right security", "istrue": false },
+      { "statement": "Predesign security", "istrue": false }
+    ],
+    "explanation": "แนวคิด shift-left security คือบูรณาการความปลอดภัยตั้งแต่ช่วงต้นของวงจรพัฒนา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นประเภทหนึ่งของ Spyware",
+    "options": [
+      { "statement": "Red hat", "istrue": false },
+      { "statement": "Trojan", "istrue": false },
+      { "statement": "Cookies", "istrue": true },
+      { "statement": "Virus", "istrue": false }
+    ],
+    "explanation": "คุกกี้บางชนิดใช้ติดตามพฤติกรรมผู้ใช้และจัดเป็นสปายแวร์ในเชิงติดตามข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การโจมตีที่มีการเรียกค่าไถ่ของระบบที่ถูกโจมตีด้วยการเข้ารหัสข้อมูลโดยเจ้าของไม่สามารถใช้ระบบทำงานใด ๆ ได้เลยเรียกว่าอะไร",
+    "options": [
+      { "statement": "Phishing", "istrue": false },
+      { "statement": "Time Bomb", "istrue": false },
+      { "statement": "Ransomware", "istrue": true },
+      { "statement": "Botnet", "istrue": false }
+    ],
+    "explanation": "แรนซัมแวร์เข้ารหัสข้อมูลและเรียกค่าไถ่เพื่อปลดล็อกการใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้ามีการ download ซอฟต์แวร์ SPSS จากเว็บไซต์สาธารณะท่านมีโอกาสที่จะเจอกับการโจมตีแบบใดมากที่สุด",
+    "options": [
+      { "statement": "Trojan", "istrue": true },
+      { "statement": "Spyware", "istrue": false },
+      { "statement": "Worm", "istrue": false },
+      { "statement": "Ransomware", "istrue": false }
+    ],
+    "explanation": "ไฟล์ซอฟต์แวร์เถื่อนมักถูกสอดแทรกโทรจันที่ปลอมเป็นโปรแกรมปกติแต่แฝงโค้ดอันตราย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ความหมายของคำว่า FakeApp คืออะไร",
+    "options": [
+      { "statement": "มักเป็นซอฟต์แวร์เถื่อนเสแสร้งเป็นซอฟต์แวร์ลิขสิทธิ์หนึ่ง ๆ แล้วมีการแทรกมัลแวร์ในการทำลายระบบของผู้ใช้งาน", "istrue": true },
+      { "statement": "ซอฟต์แวร์ลิขสิทธิ์เวอร์ชันเก่าที่สามารถดาวน์โหลดได้ฟรี", "istrue": false },
+      { "statement": "ซอฟต์แวร์ปราศจากลิขสิทธิ์ที่สามารถดาวโหลดได้ฟรี", "istrue": false },
+      { "statement": "Source code ของซอฟต์แวร์ลิขสิทธิ์ที่หมดอายุการใช้งานแล้ว", "istrue": false }
+    ],
+    "explanation": "แอปปลอมมักสวมรอยเป็นซอฟต์แวร์จริงเพื่อหลอกให้ติดตั้งมัลแวร์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ความหมายของ Zero-day คืออะไรต่อไปนี้",
+    "options": [
+      { "statement": "การดูแลระบบรักษาความปลอดภัยโดยไม่รู้ว่ามีจุดบอดของระบบอย่างไร", "istrue": false },
+      { "statement": "การโจมตีระบบผ่านจุดอ่อนของระบบรักษาความปลอดภัยที่เรียกว่า security flaw", "istrue": true },
+      { "statement": "การซ่อมบำรุงระบบรักษาความปลอดภัยจนผู้บุกรุกไม่สามารถโจมตีได้", "istrue": false },
+      { "statement": "ระบบรักษาความปลอดภัยที่ทำงานล้มเหลวตลอดเวลาจนไม่สามารถทำงานได้จริง", "istrue": false }
+    ],
+    "explanation": "ช่องโหว่แบบศูนย์วันคือจุดอ่อนที่ยังไม่ถูกแก้และถูกโจมตีได้ก่อนมีแพตช์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "“สมหมายได้รับอีเมลแจ้งจากกูเกิลว่าได้รับการคัดเลือกให้เป็นผู้ใช้งานดีเด่น และมีรางวัลให้ โดยสมหมายต้องส่งเลขบัญชีเงินฝากเพื่อการโอนเงินรางวัลไปให้บริษัทกูเกิลทางอีเมลนี้ ผลปรากฏว่าเมื่อดำเนินการแล้วได้เกิดการถอนเงินจากบัญชีเงินฝากนั้นจนหมด” ลักษณะการโจมตีนี้เรียกว่าอะไร",
+    "options": [
+      { "statement": "Mail spoofing", "istrue": true },
+      { "statement": "Spear phishing", "istrue": false },
+      { "statement": "Whale phishing", "istrue": false },
+      { "statement": "Caller ID spoofing", "istrue": false }
+    ],
+    "explanation": "การปลอมแปลงอีเมล (mail spoofing) เป็นเทคนิคที่ใช้ในฟิชชิงเพื่อหลอกลวงผู้รับให้เชื่อว่าอีเมลนั้นมาจากแหล่งที่น่าเชื่อถือ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดถูกต้องที่สุด",
+    "options": [
+      { "statement": "การออกแบบหน้าจอที่มีหลาย ๆ สิ่งในหน้าจอเดียวสร้างความสับสนให้แก่ผู้ใช้งานได้", "istrue": true },
+      { "statement": "การออกแบบหน้าจอที่มีหลาย ๆ สิ่งในหน้าจอเดียวกันช่วยให้ผู้ใช้งานทำงานได้โดยง่าย", "istrue": false },
+      { "statement": "การออกแบบหน้าจอที่มีความหลากหลายในการนำเสนอถือเป็นศิลปะในการออกแบบที่สวยงาม", "istrue": false },
+      { "statement": "การออกแบบหน้าจอควรรวมทุกอย่างที่เกี่ยวข้องกันไว้ด้วยกันเพื่อสนับสนุนการทำงานที่ดีที่สุด", "istrue": false }
+    ],
+    "explanation": "การใส่องค์ประกอบมากเกินไปในหน้าจอเดียวเพิ่มภาระการรับรู้และสร้างความสับสนแก่ผู้ใช้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้อง",
+    "options": [
+      { "statement": "ควรมีการแสดงข้อความแสดงให้เห็นได้ว่าการประมวลผลที่เกิดใน background จะสิ้นสุดในระยะเวลาเท่าใด", "istrue": true },
+      { "statement": "งานใดที่เป็น background process ผู้ออกแบบระบบไม่ต้องให้ความสำคัญในการประมวลผล", "istrue": false },
+      { "statement": "งานประเภท background process มักเป็นงานที่ไม่สำคัญและไม่มีผลต่อความสำเร็จของงานหลัก", "istrue": false },
+      { "statement": "ระบบการทำงานทุกระบบไม่ควรมี background process", "istrue": false }
+    ],
+    "explanation": "การสื่อสารความคืบหน้าหรือเวลาที่คาดว่าจะเสร็จของงานเบื้องหลังช่วยจัดการความคาดหวังและประสบการณ์ผู้ใช้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากแอปพลิเคชัน Shopee ปรากฏหน้าแสดงผลสินค้าที่แตกต่างกันระหว่างสมาชิกปกติและสมาชิก premium แสดงว่าการออกแบบนี้ผิดหลักการข้อใด",
+    "options": [
+      { "statement": "Support Commensurate Difficulty", "istrue": false },
+      { "statement": "Do the Right Thing", "istrue": false },
+      { "statement": "Gather All Information at Once", "istrue": false },
+      { "statement": "Avoid state", "istrue": true }
+    ],
+    "explanation": "การพึ่งพาสถานะซ่อนเร้นของผู้ใช้จนให้ผลลัพธ์แตกต่างกันสะท้อนการละเมิดหลักหลีกเลี่ยงสถานะ (avoid state)"
+  }
+]

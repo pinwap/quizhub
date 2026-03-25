@@ -1,0 +1,1152 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือคำจำกัดความที่ถูกต้องที่สุดของ 'Software-Defined Systems' (SDS)?",
+    "options": [
+      {
+        "statement": "แนวทางการบริหารจัดการโครงสร้างพื้นฐาน (Infrastructure) โดยใช้ซอฟต์แวร์เป็นหลักในการควบคุมและทำงานอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "ระบบปฏิบัติการชนิดใหม่ที่ทำงานได้เร็วกว่า Linux และ Windows",
+        "istrue": false
+      },
+      {
+        "statement": "ชุดเครื่องมือสำหรับเขียนโปรแกรมที่ช่วยให้นักพัฒนาทำงานได้ง่ายขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ฮาร์ดแวร์คอมพิวเตอร์ที่ออกแบบมาเป็นพิเศษเพื่อให้สามารถเขียนโปรแกรมสั่งการได้โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "SDS คือแนวคิดหรือแนวทางในการใช้ซอฟต์แวร์เพื่อควบคุม จัดการ และทำให้โครงสร้างพื้นฐานทางไอทีเป็นอัตโนมัติ โดยแยกการควบคุมออกจากฮาร์ดแวร์จริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในระบบคอมพิวเตอร์แบบดั้งเดิม (Traditional) ส่วนประกอบใดที่เปรียบได้กับ 'อิฐ ปูน ทราย' ที่ใช้สร้างบ้าน?",
+    "options": [
+      {
+        "statement": "Networked applications",
+        "istrue": false
+      },
+      {
+        "statement": "Operating systems",
+        "istrue": false
+      },
+      {
+        "statement": "Physical resources (CPU, RAM, Hard disk)",
+        "istrue": true
+      },
+      {
+        "statement": "Networks",
+        "istrue": false
+      }
+    ],
+    "explanation": "ทรัพยากรทางกายภาพ (Physical resources) เช่น CPU, RAM, และ Hard disk เป็นส่วนประกอบพื้นฐานที่สุดที่จับต้องได้ เปรียบเสมือนวัสดุก่อสร้างของระบบคอมพิวเตอร์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "องค์ประกอบใดใน Software-Defined Systems ที่ทำหน้าที่เปรียบเสมือน 'วาทยกร' (Orchestra Conductor) ที่คอยสั่งการให้ส่วนต่างๆ ทำงานประสานกัน?",
+    "options": [
+      {
+        "statement": "Software-Defined Storage",
+        "istrue": false
+      },
+      {
+        "statement": "Software-Defined Networks",
+        "istrue": false
+      },
+      {
+        "statement": "Virtualization",
+        "istrue": false
+      },
+      {
+        "statement": "Orchestration",
+        "istrue": true
+      }
+    ],
+    "explanation": "Orchestration คือชั้นบนสุดที่ทำหน้าที่ควบคุมและสั่งการให้ส่วนประกอบ Software-Defined ต่างๆ (Storage, Servers, Networks) ทำงานร่วมกันอย่างเป็นระบบและอัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือประโยชน์หลักของการ 'แยกส่วนฮาร์ดแวร์ออกจากซอฟต์แวร์' (Decouple hardware and software) ในแนวคิด SDS?",
+    "options": [
+      {
+        "statement": "ทำให้ระบบมีความปลอดภัยสูงขึ้นจากการโจมตีทางไซเบอร์",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ไม่ต้องยึดติดกับฮาร์ดแวร์ยี่ห้อใดๆ และมีความยืดหยุ่นในการเลือกใช้อุปกรณ์",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้คอมพิวเตอร์ประมวลผลได้เร็วขึ้นเป็นสองเท่า",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ประหยัดค่าไฟฟ้าในการทำงานของฮาร์ดแวร์ได้มากขึ้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "การแยกส่วนซอฟต์แวร์ควบคุมออกจากฮาร์ดแวร์จริง ทำให้เราสามารถใช้ฮาร์ดแวร์พื้นฐาน (Commodity Hardware) จากผู้ผลิตรายใดก็ได้ โดยที่การจัดการยังคงทำผ่านซอฟต์แวร์ส่วนกลางได้เหมือนเดิม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "DevOps คืออะไร?",
+    "options": [
+      {
+        "statement": "ชื่อของซอฟต์แวร์ที่ใช้ในการติดตั้งโปรแกรมโดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "ตำแหน่งงานใหม่ในบริษัทไอทีที่ทำหน้าที่เขียนโค้ดและดูแลเซิร์ฟเวอร์",
+        "istrue": false
+      },
+      {
+        "statement": "วัฒนธรรมและหลักการทำงานที่เน้นให้ทีมพัฒนา (Dev) และทีมปฏิบัติการ (Ops) ทำงานร่วมกันอย่างใกล้ชิด",
+        "istrue": true
+      },
+      {
+        "statement": "มาตรฐานความปลอดภัยสำหรับศูนย์ข้อมูล (Data Center)",
+        "istrue": false
+      }
+    ],
+    "explanation": "DevOps ไม่ใช่เครื่องมือหรือตำแหน่งงาน แต่เป็นวัฒนธรรมการทำงานที่มุ่งเน้นการทลายกำแพงระหว่างทีม Dev และ Ops เพื่อเป้าหมายร่วมกันคือการส่งมอบซอฟต์แวร์ที่รวดเร็วและมีคุณภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หลักการ 'Infrastructure as Code' (IaC) หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "การเขียนโค้ดโปรแกรมทั้งหมดด้วยภาษา Assembly",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ไฟล์โค้ดหรือสคริปต์ในการกำหนดและจัดการโครงสร้างพื้นฐาน (เซิร์ฟเวอร์, เครือข่าย) แทนการทำด้วยมือ",
+        "istrue": true
+      },
+      {
+        "statement": "การฝังโค้ดคอมพิวเตอร์ลงในอุปกรณ์ฮาร์ดแวร์โดยตรงจากโรงงาน",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ AI ช่วยเขียนโค้ดแอปพลิเคชันให้โดยอัตโนมัติ",
+        "istrue": false
+      }
+    ],
+    "explanation": "IaC คือการปฏิบัติตามแนวทางของ DevOps โดยการจัดการและจัดเตรียมโครงสร้างพื้นฐานผ่านไฟล์โค้ดที่สามารถกำหนดเวอร์ชัน, ทำซ้ำ, และตรวจสอบได้ แทนการกำหนดค่าด้วยตนเอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในกระบวนการ CI/CD Pipeline หากขั้นตอน 'Test' ล้มเหลว (Failed) จะเกิดอะไรขึ้นต่อไป?",
+    "options": [
+      {
+        "statement": "ระบบจะข้ามการทดสอบนั้นไปและทำการ Deploy ต่อทันที",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบจะหยุดการทำงานของ Pipeline ทันทีและแจ้งเตือนให้นักพัฒนาทราบถึงปัญหา",
+        "istrue": true
+      },
+      {
+        "statement": "ระบบจะย้อนกลับไปขั้นตอน 'Build' ใหม่อีกครั้งโดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบจะรอการอนุมัติ (Approval) จากผู้จัดการเพื่อดำเนินการต่อ",
+        "istrue": false
+      }
+    ],
+    "explanation": "เป้าหมายหลักของ CI/CD Pipeline คือการตรวจจับข้อผิดพลาดให้เร็วที่สุด ดังนั้นเมื่อขั้นตอนใดล้มเหลว กระบวนการทั้งหมดจะหยุดลงเพื่อป้องกันไม่ให้โค้ดที่มีปัญหาถูกส่งต่อไปยังขั้นตอนถัดไปหรือถึงผู้ใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากภาพรวมกระบวนการ DevOps เครื่องมือใดทำหน้าที่เป็น 'ศูนย์กลาง' ของระบบอัตโนมัติ ที่คอยตรวจจับการเปลี่ยนแปลงของโค้ดและสั่งให้ขั้นตอนต่างๆ ทำงาน?",
+    "options": [
+      {
+        "statement": "GitHub",
+        "istrue": false
+      },
+      {
+        "statement": "Jenkins",
+        "istrue": true
+      },
+      {
+        "statement": "New Relic",
+        "istrue": false
+      },
+      {
+        "statement": "Chef",
+        "istrue": false
+      }
+    ],
+    "explanation": "Jenkins เป็นเครื่องมือ CI/CD Automation Server ที่ได้รับความนิยม ซึ่งทำหน้าที่เป็นตัวกลางคอยประสานงาน โดยจะตรวจจับการเปลี่ยนแปลงในระบบ Version Control (เช่น GitHub) แล้วสั่งให้กระบวนการ Build, Test, และ Deploy ทำงานตามลำดับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการทำงานแบบ DevOps จึงมี 'ต้นทุนในการแก้ไข' (Cost) ข้อผิดพลาดต่ำกว่าแบบ Waterfall?",
+    "options": [
+      {
+        "statement": "เพราะ DevOps ใช้โปรแกรมเมอร์น้อยกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ DevOps ไม่จำเป็นต้องมีขั้นตอนการทดสอบ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ DevOps ทำงานเป็นรอบสั้นๆ และปล่อยบ่อยๆ ทำให้เจอปัญหาได้เร็วและแก้ไขได้ง่ายตั้งแต่เนิ่นๆ",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ DevOps ใช้ฮาร์ดแวร์ราคาถูกกว่า",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในโมเดล Waterfall การทดสอบจะเกิดขึ้นท้ายกระบวนการ ทำให้การเจอปัญหาช้าและแก้ไขได้ยาก (อาจต้องรื้อใหม่) แต่ DevOps ที่ทำงานเป็นรอบสั้นๆ จะมีการทดสอบต่อเนื่อง ทำให้เจอปัญหาเร็วและแก้ไขได้ทันทีก่อนที่ปัญหานั้นจะซับซ้อนขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สภาพแวดล้อม (Environment) ใดใน CI/CD Pipeline ที่ถูกสร้างขึ้นให้ 'เหมือนกับของจริง (Production) ทุกประการ' เพื่อใช้ทดสอบครั้งสุดท้าย?",
+    "options": [
+      {
+        "statement": "DEV/TEST",
+        "istrue": false
+      },
+      {
+        "statement": "STAGING",
+        "istrue": true
+      },
+      {
+        "statement": "PRODUCTION",
+        "istrue": false
+      },
+      {
+        "statement": "LOCAL",
+        "istrue": false
+      }
+    ],
+    "explanation": "Staging Environment มีไว้เพื่อจำลองสภาพแวดล้อมของ Production ให้ใกล้เคียงที่สุด เพื่อทำการทดสอบขั้นสุดท้ายและตรวจสอบว่าแอปพลิเคชันสามารถทำงานร่วมกับส่วนประกอบอื่นๆ ได้อย่างถูกต้องก่อนนำขึ้นใช้งานจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เครื่องมืออย่าง Terraform, Ansible, และ Chef จัดอยู่ในกลุ่มใด?",
+    "options": [
+      {
+        "statement": "Monitoring Tools",
+        "istrue": false
+      },
+      {
+        "statement": "Containerization Tools",
+        "istrue": false
+      },
+      {
+        "statement": "Infrastructure as Code (IaC) Tools",
+        "istrue": true
+      },
+      {
+        "statement": "Version Control Systems",
+        "istrue": false
+      }
+    ],
+    "explanation": "Terraform, Ansible, และ Chef เป็นเครื่องมือที่ใช้สำหรับเขียนโค้ดเพื่อสร้างและกำหนดค่าโครงสร้างพื้นฐานโดยอัตโนมัติ ซึ่งเป็นหัวใจของหลักการ Infrastructure as Code (IaC)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือเหตุผลหลักที่ Cloud Computing เข้ามาแก้ปัญหาการลงทุนซื้อฮาร์ดแวร์เอง?",
+    "options": [
+      {
+        "statement": "เพราะ Cloud Computing ทำให้แอปพลิเคชันทำงานเร็วขึ้นเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Cloud Computing ให้บริการแบบ 'เช่าใช้' ทำให้สามารถเพิ่ม/ลดทรัพยากรได้ตามความต้องการจริง และจ่ายเท่าที่ใช้",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Cloud Computing มีความปลอดภัยสูงกว่าการเก็บเซิร์ฟเวอร์ไว้เอง",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Cloud Computing ใช้พลังงานน้อยกว่า",
+        "istrue": false
+      }
+    ],
+    "explanation": "ปัญหาหลักของการซื้อฮาร์ดแวร์เองคือขาดความยืดหยุ่น (Elasticity) Cloud Computing แก้ปัญหานี้โดยเปลี่ยนรูปแบบการลงทุนจาก Capital Expenditure (ซื้อ) เป็น Operational Expenditure (เช่า) ทำให้ธุรกิจปรับขนาดตามความต้องการได้ทันที"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากเปรียบเทียบการใช้ IT แบบดั้งเดิมกับการ 'สร้างโรงไฟฟ้าใช้เอง' การใช้ Cloud Computing จะเปรียบได้กับข้อใด?",
+    "options": [
+      {
+        "statement": "การซื้อเครื่องปั่นไฟขนาดเล็กมาใช้ที่บ้าน",
+        "istrue": false
+      },
+      {
+        "statement": "การติดตั้งแผงโซลาร์เซลล์บนหลังคา",
+        "istrue": false
+      },
+      {
+        "statement": "การเสียบปลั๊กเข้ากับเต้ารับของการไฟฟ้า",
+        "istrue": true
+      },
+      {
+        "statement": "การสร้างเขื่อนเพื่อผลิตไฟฟ้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้คลาวด์เปรียบเสมือนการใช้บริการสาธารณูปโภค (Utility) เราเพียงแค่ใช้งานและจ่ายค่าบริการตามจริง โดยไม่ต้องกังวลเรื่องการสร้างและดูแลรักษาโรงไฟฟ้า (Data Center) ด้วยตนเอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ซอฟต์แวร์ที่ทำหน้าที่สร้างและจัดการ 'เครื่องคอมพิวเตอร์เสมือน' (Virtual Machine) บนฮาร์ดแวร์จริงเรียกว่าอะไร?",
+    "options": [
+      {
+        "statement": "Operating System",
+        "istrue": false
+      },
+      {
+        "statement": "Cloud Manager",
+        "istrue": false
+      },
+      {
+        "statement": "Hypervisor",
+        "istrue": true
+      },
+      {
+        "statement": "Container Runtime",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hypervisor หรือ Virtual Machine Monitor (VMM) คือซอฟต์แวร์ที่สร้างและบริหารจัดการ Virtual Machines โดยทำหน้าที่จัดสรรและแบ่งปันทรัพยากรจากฮาร์ดแวร์จริงไปยัง VM แต่ละตัว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหาคลาสสิกที่ว่า 'It works on my machine!' เกิดจากสาเหตุใดเป็นหลัก?",
+    "options": [
+      {
+        "statement": "โปรแกรมเมอร์เขียนโค้ดผิดพลาด",
+        "istrue": false
+      },
+      {
+        "statement": "ความแตกต่างของสภาพแวดล้อม (เวอร์ชัน Library, OS) ระหว่างเครื่องของนักพัฒนาและเครื่องเซิร์ฟเวอร์",
+        "istrue": true
+      },
+      {
+        "statement": "ความเร็วของอินเทอร์เน็ตไม่เท่ากัน",
+        "istrue": false
+      },
+      {
+        "statement": "ฮาร์ดแวร์ของเซิร์ฟเวอร์มีประสิทธิภาพไม่เพียงพอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ปัญหานี้เกิดขึ้นเมื่อซอฟต์แวร์ต้องพึ่งพาส่วนประกอบภายนอก (Dependencies) และสภาพแวดล้อมเหล่านั้นไม่ตรงกันระหว่างเครื่องที่ใช้พัฒนา, ทดสอบ, และใช้งานจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคโนโลยีใดที่ถูกสร้างขึ้นมาเพื่อแก้ปัญหา 'It works on my machine!' โดยการ 'แพ็ก' ทุกอย่างที่โปรแกรมต้องการลงในกล่องเดียวกัน?",
+    "options": [
+      {
+        "statement": "Virtual Machines (VMs)",
+        "istrue": false
+      },
+      {
+        "statement": "Cloud Computing",
+        "istrue": false
+      },
+      {
+        "statement": "Containers",
+        "istrue": true
+      },
+      {
+        "statement": "Software-Defined Networking (SDN)",
+        "istrue": false
+      }
+    ],
+    "explanation": "Containers ถูกออกแบบมาเพื่อแก้ปัญหานี้โดยเฉพาะ โดยการห่อหุ้มโค้ดของแอปพลิเคชันและทุกสิ่งที่จำเป็น (Libraries, Dependencies) ไว้ด้วยกัน ทำให้สามารถยกไปรันที่ไหนก็ได้ที่มี Container Runtime โดยสภาพแวดล้อมจะเหมือนเดิมเสมอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างที่สำคัญที่สุดระหว่าง Virtual Machines (VMs) และ Containers?",
+    "options": [
+      {
+        "statement": "VMs ทำงานได้เร็วกว่า Containers",
+        "istrue": false
+      },
+      {
+        "statement": "Containers มีความปลอดภัยสูงกว่า VMs",
+        "istrue": false
+      },
+      {
+        "statement": "แต่ละ VM มี Operating System (OS) เป็นของตัวเองทั้งชุด แต่ Containers ทุกตัวจะใช้ OS ของเครื่องแม่ (Host OS) ร่วมกัน",
+        "istrue": true
+      },
+      {
+        "statement": "VMs ใช้พื้นที่เก็บข้อมูลน้อยกว่า Containers",
+        "istrue": false
+      }
+    ],
+    "explanation": "จุดแตกต่างหลักคือระดับของ Abstraction โดย VM จะจำลองฮาร์ดแวร์ทั้งหมด ทำให้ต้องมี Guest OS ของตัวเอง ในขณะที่ Container จะจำลองแค่ในระดับ OS ทำให้ใช้ทรัพยากรน้อยกว่าและเบากว่ามาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเปรียบเทียบ Software Container กับ 'ตู้คอนเทนเนอร์ขนส่งสินค้า' มีนัยสำคัญอย่างไร?",
+    "options": [
+      {
+        "statement": "เพื่อแสดงว่า Software Container มีขนาดใหญ่และหนัก",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแสดงว่า Software Container สามารถบรรจุซอฟต์แวร์ได้ทุกประเภท ไม่ว่าข้างในจะเป็นอะไร 'วิธีการจัดการภายนอก' จะเป็นมาตรฐานเดียวกันทั้งหมด",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อแสดงว่า Software Container ต้องใช้เรือในการขนส่งเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแสดงว่า Software Container มีราคาแพง",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวใจของการเปรียบเทียบคือ 'มาตรฐาน' ตู้คอนเทนเนอร์ทำให้การขนส่งสินค้าที่มีรูปร่างต่างกันทำได้ง่ายด้วยเครื่องมือมาตรฐาน เช่นเดียวกัน Software Container สร้างมาตรฐานในการจัดการแอปพลิเคชัน ทำให้ง่ายต่อการ Build, Ship, และ Run ด้วยเครื่องมืออัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในกระบวนการทำงานของ Docker, 'Dockerfile' ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "เป็นโปรแกรมที่ทำงานอยู่จริงๆ ซึ่งให้บริการแก่ผู้ใช้",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นไฟล์ 'สูตรอาหาร' หรือชุดคำสั่งที่บอกวิธีการสร้าง Docker Image",
+        "istrue": true
+      },
+      {
+        "statement": "เป็น 'แม่พิมพ์' หรือต้นแบบของแอปพลิเคชันที่ยังไม่ได้ทำงาน",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นไฟล์ที่ใช้กำหนดการตั้งค่าเครือข่ายสำหรับ Container",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dockerfile คือไฟล์ข้อความที่บรรจุคำสั่งตามลำดับขั้นตอนเพื่อสร้าง Docker Image เช่น การเลือก OS พื้นฐาน, การติดตั้ง Dependencies, และการคัดลอกโค้ด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความสัมพันธ์ที่ถูกต้องระหว่าง Dockerfile, Docker Image, และ Docker Container?",
+    "options": [
+      {
+        "statement": "Image ถูกใช้สร้าง Dockerfile ซึ่งจะถูกรันเป็น Container",
+        "istrue": false
+      },
+      {
+        "statement": "Container ถูกใช้สร้าง Image ซึ่งจะถูกแปลงเป็น Dockerfile",
+        "istrue": false
+      },
+      {
+        "statement": "Dockerfile ถูก build ให้กลายเป็น Image และ Image ถูก run ให้กลายเป็น Container",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้งสามอย่างคือสิ่งเดียวกัน แค่เรียกชื่อต่างกันในแต่ละขั้นตอน",
+        "istrue": false
+      }
+    ],
+    "explanation": "กระบวนการเริ่มต้นจาก Dockerfile (สูตร) ที่ถูกใช้สร้าง (build) Image (แม่พิมพ์) จากนั้น Image จะถูกนำไปรัน (run) เพื่อสร้าง Container (อินสแตนซ์ที่ทำงานได้)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ทำไมเราจึงต้องการ 'Deployment Orchestration' ในการจัดการแอปพลิเคชันสมัยใหม่?",
+    "options": [
+      {
+        "statement": "เพราะแอปพลิเคชันสมัยใหม่ถูกซอยย่อยเป็น Microservices จำนวนมาก ทำให้การจัดการด้วยมือมีความซับซ้อนและเสี่ยงต่อความผิดพลาด",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Orchestration ช่วยให้โค้ดโปรแกรมทำงานได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Orchestration เป็นเครื่องมือเดียวที่สามารถสร้าง Container ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะกฎหมายบังคับให้ต้องใช้ Orchestration ในการติดตั้งซอฟต์แวร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "แอปพลิเคชันสมัยใหม่ประกอบด้วยบริการย่อยๆ (Microservices) หลายสิบหรือหลายร้อยตัว การจัดการความสัมพันธ์, เวอร์ชัน, การตั้งค่า, และขั้นตอนการติดตั้งของบริการเหล่านี้ด้วยมือเป็นเรื่องที่แทบจะเป็นไปไม่ได้ Orchestration จึงเข้ามาเพื่อทำให้กระบวนการนี้เป็นอัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ไฟล์ `docker-compose.yml` มีบทบาทสำคัญอย่างไรในการทำ Deployment Orchestration?",
+    "options": [
+      {
+        "statement": "เป็นไฟล์ที่ใช้เขียนโค้ดของแอปพลิเคชันทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นไฟล์ 'ใบสั่ง' ที่ใช้กำหนดองค์ประกอบทั้งหมดของแอปพลิเคชัน (services, images, networks) ในรูปแบบที่ Orchestrator เข้าใจได้",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นไฟล์ที่ใช้เก็บข้อมูล Log การทำงานของ Container ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นไฟล์ที่ใช้ทดสอบความปลอดภัยของ Docker Image",
+        "istrue": false
+      }
+    ],
+    "explanation": "ไฟล์ `docker-compose.yml` (หรือไฟล์ลักษณะเดียวกันใน Kubernetes) ทำหน้าที่เป็นไฟล์ประกาศ (Declarative file) ที่อธิบาย 'สถานะที่ต้องการ' (Desired state) ของแอปพลิเคชันทั้งหมด ทำให้เราสามารถกำหนดแอปพลิเคชันที่ซับซ้อนได้ในไฟล์เดียว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ Orchestration ช่วยให้การ 'Rollback' กลับไปเวอร์ชันก่อนหน้าทำได้ง่ายขึ้นอย่างไร?",
+    "options": [
+      {
+        "statement": "โดยการลบ Container ทั้งหมดทิ้งแล้วให้นักพัฒนาติดตั้งใหม่ด้วยมือ",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการสั่งให้ Orchestrator ใช้ไฟล์ 'ใบสั่ง' (เช่น docker-compose.yml) เวอร์ชันเก่า ซึ่งจะทำการปรับเปลี่ยนระบบให้กลับไปเหมือนเดิมโดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "โดยการรีสตาร์ทเซิร์ฟเวอร์ทั้งหมดพร้อมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การ Rollback ไม่สามารถทำได้เมื่อใช้ Orchestration",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจากสถานะของแอปพลิเคชันถูกกำหนดไว้เป็นโค้ดในไฟล์ตั้งค่าและเก็บไว้ใน Version Control (เช่น Git) การย้อนกลับจึงทำได้ง่ายเพียงแค่สั่งให้ Orchestrator นำไฟล์ตั้งค่าของเวอร์ชันก่อนหน้ามาใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ภาพเปรียบเทียบ 'IP Hourglass' (นาฬิกาทราย IP) ใช้อธิบายแนวคิดใดเกี่ยวกับอินเทอร์เน็ต?",
+    "options": [
+      {
+        "statement": "อินเทอร์เน็ตกำลังจะหมดเวลาใช้งาน",
+        "istrue": false
+      },
+      {
+        "statement": "การมี Internet Protocol (IP) เป็นมาตรฐานกลางเพียงหนึ่งเดียวที่เชื่อมต่อเทคโนโลยีชั้นล่างและแอปพลิเคชันชั้นบนที่หลากหลายเข้าด้วยกัน",
+        "istrue": true
+      },
+      {
+        "statement": "ความเร็วของอินเทอร์เน็ตจะช้าลงเมื่อมีผู้ใช้งานเยอะ",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลในอินเทอร์เน็ตจะถูกบีบอัดเมื่อส่งผ่านสายเคเบิล",
+        "istrue": false
+      }
+    ],
+    "explanation": "นาฬิกาทรายแสดงให้เห็นว่าแม้เทคโนโลยีการเชื่อมต่อ (Physical layer) และแอปพลิเคชัน (Application layer) จะมีมากมาย แต่ทั้งหมดต้องสื่อสารผ่าน 'คอขวด' ที่เป็นมาตรฐานเดียวกันคือ Internet Protocol (IP)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหา 'นาฬิกาทรายเริ่มอ้วน' (love handles) ในระบบเครือข่ายเกิดจากการเพิ่มขึ้นของอะไร?",
+    "options": [
+      {
+        "statement": "จำนวนผู้ใช้งานอินเทอร์เน็ตที่มากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "อุปกรณ์พิเศษที่เรียกว่า 'Middleboxes' (เช่น Firewalls, NAT, Load Balancers) ที่คอขวดของเครือข่าย",
+        "istrue": true
+      },
+      {
+        "statement": "ขนาดของไฟล์วิดีโอและรูปภาพที่ส่งผ่านอินเทอร์เน็ต",
+        "istrue": false
+      },
+      {
+        "statement": "จำนวนของ Router ในเครือข่ายที่เพิ่มขึ้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Middleboxes คืออุปกรณ์ที่ทำหน้าที่มากกว่าแค่การส่งต่อแพ็กเก็ต การเพิ่มอุปกรณ์เหล่านี้เข้าไปในเครือข่ายแบบดั้งเดิมทำให้การจัดการเครือข่ายมีความซับซ้อน ไม่ยืดหยุ่น และเป็นอุปสรรคต่อนวัตกรรม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิดหลักของ Software-Defined Networking (SDN) คืออะไร?",
+    "options": [
+      {
+        "statement": "การใช้สายเคเบิลใยแก้วนำแสงแทนสายทองแดงทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "การเพิ่มความเร็วของเราเตอร์ให้มากขึ้นเป็นสองเท่า",
+        "istrue": false
+      },
+      {
+        "statement": "การ 'แยกสมอง (Control Plane) ออกจากร่างกาย (Data Plane)' ของอุปกรณ์เครือข่าย",
+        "istrue": true
+      },
+      {
+        "statement": "การรวม Firewall และ Load Balancer เข้าไว้ใน Router ตัวเดียว",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวใจของ SDN คือการปฏิวัติสถาปัตยกรรมเครือข่ายโดยการแยกส่วนควบคุม (การตัดสินใจว่าจะส่งข้อมูลไปทางไหน) ออกจากส่วนข้อมูล (การส่งต่อข้อมูลจริงๆ) แล้วนำส่วนควบคุมมารวมไว้ที่ศูนย์กลาง (SDN Controller)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Network Functions Virtualization (NFV) คืออะไร?",
+    "options": [
+      {
+        "statement": "การสร้างเครือข่ายเสมือนบนคอมพิวเตอร์เครื่องเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "การนำฟังก์ชันของ Middleboxes (เช่น Firewall, Load Balancer) มาทำให้อยู่ในรูปแบบของซอฟต์แวร์ที่รันบนเซิร์ฟเวอร์ทั่วไปได้",
+        "istrue": true
+      },
+      {
+        "statement": "เทคโนโลยีที่ช่วยให้ Wi-Fi มีความเร็วสูงขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "โปรโตคอลการเข้ารหัสข้อมูลเครือข่ายแบบใหม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "NFV คือการแปลงฟังก์ชันเครือข่ายที่เคยต้องทำงานบนฮาร์ดแวร์เฉพาะทางราคาแพง ให้อยู่ในรูปแบบซอฟต์แวร์ (Virtual Network Functions - VNFs) ทำให้มีความยืดหยุ่นและลดต้นทุนได้อย่างมาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปรัชญาดั้งเดิมของการออกแบบอินเทอร์เน็ตคือ 'the intelligence is end to end' หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "เครือข่ายควรจะ 'ฉลาด' และปลายทางควรจะ 'โง่'",
+        "istrue": false
+      },
+      {
+        "statement": "เครือข่ายควรจะ 'โง่' ทำหน้าที่แค่ส่งข้อมูล และความฉลาดทั้งหมดควรอยู่ที่ 'ปลายทาง' (คอมพิวเตอร์ของผู้ใช้)",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้งเครือข่ายและปลายทางควรจะมีความฉลาดเท่าๆ กัน",
+        "istrue": false
+      },
+      {
+        "statement": "ความฉลาดทั้งหมดควรอยู่ที่ Router ตัวกลางเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ปรัชญานี้เชื่อว่าเครือข่ายควรเรียบง่ายที่สุด ทำหน้าที่เพียงเชื่อมต่อและส่งต่อข้อมูล (Dumb network) เพื่อให้แอปพลิเคชันและนวัตกรรมใหม่ๆ สามารถเกิดขึ้นได้อย่างอิสระที่ปลายทาง (Smart hosts)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรมแบบ SDN, 'Remote Controller' ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "ทำหน้าที่ส่งต่อ Packet ข้อมูลด้วยความเร็วสูง",
+        "istrue": false
+      },
+      {
+        "statement": "ทำหน้าที่เป็น 'สมองส่วนกลาง' ที่คำนวณเส้นทางและส่งคำสั่งไปยัง Router ทั้งหมดในเครือข่าย",
+        "istrue": true
+      },
+      {
+        "statement": "ทำหน้าที่เป็น Firewall ป้องกันการโจมตีจากภายนอก",
+        "istrue": false
+      },
+      {
+        "statement": "ทำหน้าที่เก็บ Log การใช้งานเครือข่ายทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "Remote Controller คือศูนย์รวมของ Control Plane ในเครือข่าย SDN มันจะมองเห็นภาพรวมของเครือข่ายทั้งหมดและทำการตัดสินใจเชิงนโยบาย แล้วจึงส่งตารางการส่งต่อข้อมูล (forwarding tables) ไปให้อุปกรณ์ Data Plane ปฏิบัติตาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อได้เปรียบที่สำคัญของการมี 'สมองส่วนกลาง' (Logically centralized control plane) ใน SDN?",
+    "options": [
+      {
+        "statement": "ทำให้เครือข่ายมีความซับซ้อนในการจัดการมากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้การบริหารจัดการเครือข่ายง่ายขึ้น เพราะสามารถกำหนดนโยบายและโปรแกรมการทำงานได้จากจุดเดียว",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ Router แต่ละตัวต้องทำงานหนักขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้เครือข่ายทำงานได้โดยไม่ต้องมี Router",
+        "istrue": false
+      }
+    ],
+    "explanation": "การรวมศูนย์การควบคุมช่วยให้ผู้ดูแลเครือข่ายสามารถจัดการ, แก้ปัญหา, และสร้างนวัตกรรมใหม่ๆ ได้ง่ายขึ้นมาก เมื่อเทียบกับการต้องไปกำหนดค่าอุปกรณ์แต่ละตัวแยกกันในเครือข่ายแบบกระจายศูนย์ (Distributed control plane)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเปรียบเทียบวิวัฒนาการจาก Mainframe สู่ PC คล้ายคลึงกับการเปลี่ยนแปลงสู่ SDN อย่างไร?",
+    "options": [
+      {
+        "statement": "SDN ทำให้เครือข่ายมีขนาดใหญ่และราคาแพงเหมือน Mainframe",
+        "istrue": false
+      },
+      {
+        "statement": "SDN ทำให้เกิดระบบปิดที่บริษัทเดียวควบคุมทั้งหมดเหมือนยุค Mainframe",
+        "istrue": false
+      },
+      {
+        "statement": "SDN ทำการแยกส่วนประกอบ (ฮาร์ดแวร์, OS, แอปพลิเคชัน) ออกจากกันด้วยมาตรฐานเปิด ทำให้เกิดการแข่งขันและนวัตกรรม เช่นเดียวกับที่เกิดขึ้นในยุค PC",
+        "istrue": true
+      },
+      {
+        "statement": "SDN ทำให้เครือข่ายใช้งานยากขึ้นสำหรับผู้ใช้ทั่วไปเหมือน Mainframe",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเปลี่ยนจากระบบปิดที่ทุกอย่างรวมกัน (Vertically integrated) มาเป็นระบบเปิดที่แยกส่วนกัน (Horizontally layered) ทำให้เกิด Ecosystem ที่หลากหลาย, การแข่งขัน, และนวัตกรรมที่รวดเร็ว ซึ่งเป็นสิ่งที่เกิดขึ้นทั้งในวงการ PC และวงการเครือข่ายด้วย SDN"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความท้าทายหรือจุดอ่อนที่สำคัญที่สุดของสถาปัตยกรรม SDN?",
+    "options": [
+      {
+        "statement": "มีความเร็วในการส่งข้อมูลช้ากว่าเครือข่ายแบบดั้งเดิม",
+        "istrue": false
+      },
+      {
+        "statement": "Controller ที่เป็น 'สมองส่วนกลาง' อาจกลายเป็นจุดตาย (Single Point of Failure) ของทั้งระบบได้",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่สามารถทำงานร่วมกับอุปกรณ์เครือข่ายรุ่นเก่าได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้พลังงานไฟฟ้ามากกว่าเครือข่ายแบบดั้งเดิม",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจาก Controller เป็นศูนย์กลางการควบคุม หาก Controller ล่มหรือทำงานผิดพลาด อาจส่งผลกระทบต่อการทำงานของเครือข่ายทั้งหมดได้ ดังนั้นการออกแบบ Controller ให้มีความเสถียร, ปลอดภัย, และขยายตัวได้จึงมีความสำคัญอย่างยิ่ง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทแห่งหนึ่งต้องการลดระยะเวลาในการนำฟีเจอร์ใหม่ๆ ออกสู่ตลาด และลดข้อผิดพลาดที่เกิดจากการติดตั้งด้วยมือ พวกเขาควรนำแนวคิดใดมาปรับใช้เป็นอันดับแรก?",
+    "options": [
+      {
+        "statement": "การซื้อเซิร์ฟเวอร์ที่มีประสิทธิภาพสูงที่สุดในตลาด",
+        "istrue": false
+      },
+      {
+        "statement": "การนำวัฒนธรรม DevOps และสร้าง CI/CD Pipeline มาใช้",
+        "istrue": true
+      },
+      {
+        "statement": "การเปลี่ยนไปใช้เครือข่ายแบบ SDN ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "การจ้างนักพัฒนาเพิ่มขึ้นเป็นสองเท่า",
+        "istrue": false
+      }
+    ],
+    "explanation": "DevOps และ CI/CD Pipeline ถูกออกแบบมาเพื่อแก้ปัญหานี้โดยตรง โดยเน้นการทำงานร่วมกัน, ระบบอัตโนมัติ, และการทดสอบต่อเนื่อง เพื่อให้สามารถส่งมอบซอฟต์แวร์ได้อย่างรวดเร็วและมีคุณภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากแอปพลิเคชันของคุณมีความต้องการใช้งานที่ไม่แน่นอน บางวันมีผู้ใช้หลักร้อย บางวันมีผู้ใช้หลักล้าน การใช้สถาปัตยกรรมแบบใดจะคุ้มค่าและยืดหยุ่นที่สุด?",
+    "options": [
+      {
+        "statement": "การซื้อเซิร์ฟเวอร์จำนวนมากเผื่อวันที่ผู้ใช้เยอะที่สุด แล้วปล่อยให้ว่างในวันปกติ",
+        "istrue": false
+      },
+      {
+        "statement": "การเช่าใช้ทรัพยากรบน Cloud Computing ที่สามารถปรับขนาด (Scale) ได้ตามความต้องการจริง",
+        "istrue": true
+      },
+      {
+        "statement": "การติดตั้งแอปพลิเคชันบนคอมพิวเตอร์ส่วนบุคคล",
+        "istrue": false
+      },
+      {
+        "statement": "การจำกัดจำนวนผู้ใช้งานในวันที่ความต้องการสูง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cloud Computing มีคุณสมบัติเด่นคือความยืดหยุ่น (Elasticity) ซึ่งช่วยให้สามารถเพิ่มทรัพยากร (Scale-up) ในช่วงที่มีความต้องการสูง และลดทรัพยากร (Scale-down) ในช่วงเวลาปกติได้โดยอัตโนมัติ ทำให้จ่ายค่าใช้จ่ายตามจริงและไม่เกิดต้นทุนจม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ทีมพัฒนาพบว่าแอปพลิเคชันเวอร์ชันใหม่ทำงานผิดพลาดบนเซิร์ฟเวอร์ Production แต่ทำงานได้ปกติบนเครื่องของนักพัฒนาทุกคน สถานการณ์นี้ชี้ให้เห็นถึงความล้มเหลวในการจัดการเรื่องใด?",
+    "options": [
+      {
+        "statement": "ความเร็วในการประมวลผลของ CPU",
+        "istrue": false
+      },
+      {
+        "statement": "ความสม่ำเสมอของสภาพแวดล้อม (Environment Consistency)",
+        "istrue": true
+      },
+      {
+        "statement": "การออกแบบส่วนติดต่อผู้ใช้ (User Interface)",
+        "istrue": false
+      },
+      {
+        "statement": "ความปลอดภัยของเครือข่าย",
+        "istrue": false
+      }
+    ],
+    "explanation": "สถานการณ์ 'It works on my machine!' เป็นสัญญาณบ่งชี้ว่าสภาพแวดล้อมในการพัฒนา, ทดสอบ, และใช้งานจริงไม่เหมือนกัน ซึ่งเทคโนโลยีอย่าง Container ถูกสร้างขึ้นมาเพื่อแก้ปัญหานี้โดยการสร้างสภาพแวดล้อมที่สม่ำเสมอและพกพาได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทต้องการปรับปรุงระบบเครือข่ายเก่าที่มีอุปกรณ์จากหลายยี่ห้อและจัดการยาก ให้สามารถกำหนดนโยบายความปลอดภัยแบบรวมศูนย์และปรับเปลี่ยนเส้นทางการจราจรของข้อมูลได้แบบไดนามิก ควรพิจารณาใช้เทคโนโลยีใด?",
+    "options": [
+      {
+        "statement": "Container Orchestration เช่น Kubernetes",
+        "istrue": false
+      },
+      {
+        "statement": "Software-Defined Networking (SDN)",
+        "istrue": true
+      },
+      {
+        "statement": "Cloud Storage",
+        "istrue": false
+      },
+      {
+        "statement": "Virtual Machines (VMs)",
+        "istrue": false
+      }
+    ],
+    "explanation": "SDN ถูกออกแบบมาเพื่อแก้ปัญหาการจัดการเครือข่ายที่ซับซ้อนและไม่ยืดหยุ่น โดยการรวมศูนย์การควบคุม (Control Plane) ทำให้สามารถบริหารจัดการและโปรแกรมเครือข่ายทั้งหมดได้จากจุดเดียว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่หลักการพื้นฐาน 4 ข้อของ DevOps?",
+    "options": [
+      {
+        "statement": "Collaboration",
+        "istrue": false
+      },
+      {
+        "statement": "Automation",
+        "istrue": false
+      },
+      {
+        "statement": "Manual Deployment (การติดตั้งด้วยมือ)",
+        "istrue": true
+      },
+      {
+        "statement": "Infrastructure as Code",
+        "istrue": false
+      }
+    ],
+    "explanation": "หลักการของ DevOps เน้นการทำทุกอย่างให้เป็นอัตโนมัติ (Automation) เพื่อลดความผิดพลาดและเพิ่มความเร็ว ดังนั้นการติดตั้งด้วยมือ (Manual Deployment) จึงตรงกันข้ามกับหลักการของ DevOps โดยสิ้นเชิง (หลักการที่ 4 คือ Monitoring)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรมแบบ Layer ของระบบ Cloud Native สมัยใหม่, Kubernetes จัดอยู่ใน Layer ใด?",
+    "options": [
+      {
+        "statement": "Resource Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Container Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Orchestration Layer",
+        "istrue": true
+      },
+      {
+        "statement": "Connectivity Layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "Kubernetes เป็นเครื่องมือ Container Orchestration ที่ทำหน้าที่เป็น 'สมอง' หรือระบบบริหารจัดการในชั้น Orchestration Layer คอยควบคุมและสั่งการ Container ที่ทำงานอยู่ในชั้นล่าง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "องค์กร CNCF (Cloud Native Computing Foundation) มีบทบาทสำคัญอย่างไร?",
+    "options": [
+      {
+        "statement": "เป็นผู้ให้บริการคลาวด์รายใหญ่ที่สุดของโลก",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นองค์กรที่ไม่แสวงหาผลกำไรที่คอยดูแลและผลักดันโครงการโอเพนซอร์สในกลุ่ม Cloud Native เช่น Kubernetes และ Prometheus",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นบริษัทที่ผลิตฮาร์ดแวร์สำหรับ Data Center",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นหน่วยงานที่ออกมาตรฐานความปลอดภัยทางไซเบอร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "CNCF ทำหน้าที่เป็นบ้านกลางและผู้สนับสนุนโครงการโอเพนซอร์สที่สำคัญต่อ Ecosystem ของ Cloud Native เพื่อส่งเสริมการพัฒนาและความร่วมมือในวงการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามแผนที่นำทาง (Trail Map) ของ CNCF ขั้นตอนแรกที่แนะนำสำหรับบริษัทที่ต้องการเริ่มใช้เทคโนโลยี Cloud Native คืออะไร?",
+    "options": [
+      {
+        "statement": "การสร้างระบบ Orchestration ที่ซับซ้อน",
+        "istrue": false
+      },
+      {
+        "statement": "การนำแอปพลิเคชันไปใส่ใน Container (Containerization)",
+        "istrue": true
+      },
+      {
+        "statement": "การติดตั้งระบบ Monitoring",
+        "istrue": false
+      },
+      {
+        "statement": "การย้ายฐานข้อมูลทั้งหมดขึ้นคลาวด์",
+        "istrue": false
+      }
+    ],
+    "explanation": "ขั้นตอนที่ 1 ใน CNCF Trail Map คือ Containerization ซึ่งเป็นการเปลี่ยนแอปพลิเคชันให้อยู่ในรูปแบบมาตรฐาน (Container) เพื่อเป็นรากฐานสำหรับขั้นตอนต่อไปในเส้นทาง Cloud Native เช่น CI/CD และ Orchestration"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือเหตุผลที่ดีที่สุดในการเลือกใช้ Containers แทน Virtual Machines สำหรับการพัฒนาและทดสอบแอปพลิเคชัน?",
+    "options": [
+      {
+        "statement": "เพราะ Containers มีความปลอดภัยสูงกว่า VMs ในทุกกรณี",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Containers มีขนาดเล็กกว่า, ใช้ทรัพยากรน้อยกว่า, และสามารถเริ่มต้นทำงาน (Start up) ได้เร็วกว่า VMs มาก",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Containers สามารถรันได้เฉพาะบนระบบปฏิบัติการ Linux เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ VMs ไม่สามารถเชื่อมต่อกับเครือข่ายอินเทอร์เน็ตได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "สำหรับวงจรการพัฒนาที่ต้องการความรวดเร็ว คุณสมบัติเด่นของ Container ที่มีน้ำหนักเบาและสตาร์ทได้ในหลักวินาที (เทียบกับนาทีสำหรับ VM) ทำให้สามารถสร้างและทำลายสภาพแวดล้อมการทดสอบได้อย่างรวดเร็วและมีประสิทธิภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การมีเครื่องมือจำนวนมากใน DevOps Tools Ecosystem (จักรวาลเครื่องมือ DevOps) สะท้อนให้เห็นถึงอะไร?",
+    "options": [
+      {
+        "statement": "ความซับซ้อนและตัวเลือกที่หลากหลายในการสร้าง CI/CD Pipeline ซึ่งเน้นย้ำถึงความสำคัญของการเข้าใจ 'หลักการ' มากกว่าการจำชื่อเครื่องมือ",
+        "istrue": true
+      },
+      {
+        "statement": "การขาดมาตรฐานในวงการ DevOps ทำให้ไม่มีเครื่องมือใดที่ดีพอ",
+        "istrue": false
+      },
+      {
+        "statement": "DevOps เป็นแนวคิดที่กำลังจะล้าสมัยและถูกแทนที่ด้วยเทคโนโลยีใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "มีเพียงบริษัทขนาดใหญ่เท่านั้นที่สามารถใช้เครื่องมือเหล่านี้ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "ภาพ CNCF Landscape และ DevOps Tools Ecosystem แสดงให้เห็นว่ามีเครื่องมือให้เลือกใช้มากมายในแต่ละขั้นตอน ซึ่งเป็นทั้งข้อดี (มีตัวเลือก) และข้อเสีย (ซับซ้อน) ดังนั้นการยึดหลักการพื้นฐานของ DevOps จึงสำคัญกว่าการยึดติดกับเครื่องมือใดเครื่องมือหนึ่ง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "อะไรคือความเสี่ยงของการจัดการโครงสร้างพื้นฐานโดยไม่อยู่บนพื้นฐานของ 'Infrastructure as Code' (IaC)?",
+    "options": [
+      {
+        "statement": "ต้นทุนค่าฮาร์ดแวร์จะสูงขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบที่ได้จะมีความไม่สอดคล้องกัน (Inconsistency) และเกิดข้อผิดพลาดจากมนุษย์ (Human Error) ได้ง่าย",
+        "istrue": true
+      },
+      {
+        "statement": "จะไม่สามารถใช้งาน Cloud Computing ได้",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบจะทำงานช้าลงอย่างเห็นได้ชัด",
+        "istrue": false
+      }
+    ],
+    "explanation": "การกำหนดค่าด้วยมือ (Manual Configuration) เสี่ยงต่อการพิมพ์ผิด, การลืมขั้นตอน, และการสร้างสภาพแวดล้อมที่ไม่เหมือนกัน ซึ่งนำไปสู่ปัญหาที่ยากต่อการตรวจสอบและแก้ไข IaC แก้ปัญหานี้โดยทำให้กระบวนการเป็นอัตโนมัติ, ทำซ้ำได้, และตรวจสอบได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเปรียบเทียบ SDS ว่าเหมือนการใช้ 'ตัวต่อเลโก้' ที่สั่งด้วยโปรแกรม มีจุดประสงค์เพื่อเน้นย้ำคุณสมบัติใดของ SDS?",
+    "options": [
+      {
+        "statement": "ความเปราะบางและแตกหักง่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ความมีสีสันสวยงาม",
+        "istrue": false
+      },
+      {
+        "statement": "ความสามารถในการประกอบและปรับเปลี่ยนรูปแบบได้อย่างรวดเร็ว, ยืดหยุ่น, และเป็นอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "การเป็นของเล่นสำหรับเด็ก",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเปรียบเทียบกับเลโก้ที่สั่งด้วยโปรแกรมมุ่งเน้นไปที่คุณสมบัติด้านความยืดหยุ่น (Flexibility), ความสามารถในการประกอบใหม่ (Recomposability), และการทำงานอัตโนมัติ (Automation) ซึ่งตรงข้ามกับระบบดั้งเดิมที่เปรียบเหมือนการก่ออิฐซึ่งเปลี่ยนแปลงได้ยาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในกระบวนการทำงานของ Cloud เมื่อผู้ใช้ร้องขอ VM ใหม่ ใครคือผู้ที่ทำหน้าที่ค้นหาเซิร์ฟเวอร์กายภาพที่ว่างและสั่งให้ Hypervisor สร้าง VM?",
+    "options": [
+      {
+        "statement": "ผู้ใช้งาน (User)",
+        "istrue": false
+      },
+      {
+        "statement": "Cloud Manager",
+        "istrue": true
+      },
+      {
+        "statement": "Hypervisor",
+        "istrue": false
+      },
+      {
+        "statement": "Cloud image library",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cloud Manager เป็นซอฟต์แวร์ส่วนกลางที่ทำหน้าที่เป็น 'ผู้จัดการ' รับคำสั่งจากผู้ใช้, ตัดสินใจจัดสรรทรัพยากร, และสั่งการส่วนประกอบอื่นๆ เช่น Hypervisor ให้ทำงานตามที่ร้องขอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เครื่องมืออย่าง Prometheus และ Grafana มักถูกใช้ร่วมกันเพื่อวัตถุประสงค์ใดในวงจร DevOps?",
+    "options": [
+      {
+        "statement": "การเขียนโค้ดและคอมไพล์โปรแกรม",
+        "istrue": false
+      },
+      {
+        "statement": "การจัดเก็บและควบคุมเวอร์ชันของโค้ด",
+        "istrue": false
+      },
+      {
+        "statement": "การเฝ้าระวัง (Monitoring) และการแสดงผลข้อมูลประสิทธิภาพของระบบเป็นกราฟ (Visualization)",
+        "istrue": true
+      },
+      {
+        "statement": "การติดตั้ง (Deploy) แอปพลิเคชันลงบนเซิร์ฟเวอร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "Prometheus ทำหน้าที่เก็บข้อมูลตัวชี้วัด (Metrics) จากระบบในรูปแบบ Time-series ในขณะที่ Grafana ทำหน้าที่ดึงข้อมูลนั้นมาแสดงผลเป็น Dashboard และกราฟที่สวยงามและเข้าใจง่าย ซึ่งเป็นหัวใจของการทำ Monitoring และ Observability"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการสรุปความสัมพันธ์ระหว่าง SDS และ DevOps ที่ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "DevOps เป็นเทคโนโลยีที่ทำให้ SDS เป็นจริงขึ้นมาได้",
+        "istrue": false
+      },
+      {
+        "statement": "SDS เป็นเทคโนโลยีพื้นฐานที่ทำให้หลักการของ DevOps (เช่น IaC, Automation) สามารถนำมาปฏิบัติให้เกิดขึ้นจริงได้อย่างมีประสิทธิภาพ",
+        "istrue": true
+      },
+      {
+        "statement": "SDS และ DevOps เป็นคู่แข่งกันและไม่สามารถทำงานร่วมกันได้",
+        "istrue": false
+      },
+      {
+        "statement": "SDS และ DevOps คือสิ่งเดียวกัน แค่เรียกชื่อต่างกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "DevOps คือ 'วัฒนธรรมและหลักการ' ส่วน SDS คือ 'เทคโนโลยี' ที่ทำให้โครงสร้างพื้นฐานสามารถควบคุมและปรับเปลี่ยนได้ด้วยโค้ด ซึ่งเป็นเครื่องมือสำคัญที่ทำให้การทำ Automation และ IaC ในโลกของ DevOps เป็นไปได้อย่างราบรื่นและมีประสิทธิภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การติดตั้งแอปพลิเคชันที่ซับซ้อนตามขั้นตอนที่ยุ่งเหยิงด้วยมือมีความเสี่ยงหลักคืออะไร ตามที่เนื้อหาได้กล่าวไว้?",
+    "options": [
+      {
+        "statement": "การใช้เวลามากเกินไปจนไม่ทันกำหนด",
+        "istrue": false
+      },
+      {
+        "statement": "การพิมพ์คำสั่งผิด (Mistyping) ซึ่งอาจนำไปสู่ความเสียหายร้ายแรง",
+        "istrue": true
+      },
+      {
+        "statement": "การถูกขโมยรหัสผ่านระหว่างการติดตั้ง",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้แบนด์วิดท์เครือข่ายมากเกินความจำเป็น",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาเน้นย้ำว่าความผิดพลาดของมนุษย์ เช่น การพิมพ์ผิดเพียงตัวอักษรเดียวในคำสั่งที่ซับซ้อน อาจทำให้ระบบล่มหรือทำงานผิดพลาดได้ ซึ่งเป็นความเสี่ยงที่ Deployment Orchestration เข้ามาช่วยกำจัด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ไช่ประโยชน์โดยตรงที่ได้รับจากการทำ Deployment Orchestration?",
+    "options": [
+      {
+        "statement": "ลดความผิดพลาดจาก Dependencies และ Human Error",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้กระบวนการติดตั้งเร็วและมีประสิทธิภาพขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "สามารถ Rollback กลับไปเวอร์ชันก่อนหน้าได้ง่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้คุณภาพของโค้ดที่นักพัฒนาเขียนดีขึ้นโดยอัตโนมัติ",
+        "istrue": true
+      }
+    ],
+    "explanation": "Orchestration จัดการกระบวนการ 'หลัง' จากที่โค้ดถูกเขียนเสร็จแล้ว (การติดตั้ง, การจัดการ) มันไม่ได้มีผลโดยตรงต่อคุณภาพของตรรกะหรือการออกแบบของโค้ดที่นักพัฒนาเป็นผู้เขียน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่ Amazon สามารถปล่อยโค้ดใหม่ได้ทุกๆ 11.6 วินาที เป็นผลมาจากสิ่งใดมากที่สุด?",
+    "options": [
+      {
+        "statement": "การมีนักพัฒนาจำนวนมากที่สุดในโลก",
+        "istrue": false
+      },
+      {
+        "statement": "การมีระบบอัตโนมัติ (Automation) ที่สมบูรณ์แบบตลอดทั้งกระบวนการ ตั้งแต่การทดสอบไปจนถึงการติดตั้ง",
+        "istrue": true
+      },
+      {
+        "statement": "การใช้คอมพิวเตอร์ที่เร็วที่สุดในการคอมไพล์โค้ด",
+        "istrue": false
+      },
+      {
+        "statement": "การข้ามขั้นตอนการทดสอบเพื่อความรวดเร็ว",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความสามารถในการปล่อยการเปลี่ยนแปลงได้อย่างรวดเร็วและต่อเนื่อง (High frequency deployment) เป็นตัวชี้วัดความสำเร็จของการทำ DevOps ซึ่งเกิดขึ้นได้จากการมี CI/CD Pipeline ที่เป็นอัตโนมัติและเชื่อถือได้เท่านั้น"
+  }
+]

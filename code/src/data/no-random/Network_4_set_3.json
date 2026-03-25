@@ -1,0 +1,707 @@
+[
+  {
+    "question": "What is the primary responsibility of the link layer in a network?",
+    "options": [
+      "Routing packets across multiple networks",
+      "Transferring a datagram from one node to a physically adjacent node over a link",
+      "Establishing end-to-end connections",
+      "Encrypting data at the application layer"
+    ],
+    "answer": 1,
+    "explanation": "The link layer is responsible for transferring datagrams between nodes that are physically connected, not for long‐distance routing, end-to-end connection setup, or encryption at higher layers."
+  },
+  {
+    "question": "Which of the following is NOT a primary function of the link layer?",
+    "options": [
+      "Error detection and correction",
+      "Sharing a broadcast channel (multiple access)",
+      "Routing between different IP subnets",
+      "Link layer addressing"
+    ],
+    "answer": 2,
+    "explanation": "Routing between subnets is performed at the network layer, while error detection, multiple access, and link layer addressing are key functions of the link layer."
+  },
+  {
+    "question": "Which protocol does Ethernet use to manage collisions on a shared medium?",
+    "options": ["Token Passing", "ALOHA", "FDMA", "CSMA/CD"],
+    "answer": 3,
+    "explanation": "Ethernet uses Carrier Sense Multiple Access with Collision Detection (CSMA/CD) to detect and manage collisions. The other protocols are either used in different contexts or represent different types of access methods."
+  },
+  {
+    "question": "What is the primary role of a switch’s forwarding table in a LAN?",
+    "options": [
+      "To determine the outgoing interface for an Ethernet frame",
+      "To assign IP addresses to hosts",
+      "To detect collisions on the network",
+      "To encrypt frame payloads for security"
+    ],
+    "answer": 0,
+    "explanation": "A switch’s forwarding table maps MAC addresses to specific ports so that frames are forwarded only to the appropriate interface. It does not handle IP address assignment, collision detection, or encryption."
+  },
+  {
+    "question": "What does ARP stand for?",
+    "options": [
+      "Automatic Routing Protocol",
+      "Address Resolution Protocol",
+      "Advanced Routing Procedure",
+      "Address Rewriting Process"
+    ],
+    "answer": 1,
+    "explanation": "ARP stands for Address Resolution Protocol, which is used to map IP addresses to MAC addresses on a LAN. The other options are not correct definitions."
+  },
+  {
+    "question": "Which field in an Ethernet frame indicates the type of protocol being carried in the payload?",
+    "options": [
+      "CRC field",
+      "Preamble",
+      "Type field",
+      "Destination MAC address"
+    ],
+    "answer": 2,
+    "explanation": "The Type field in an Ethernet frame specifies which higher-level protocol (e.g., IP, ARP) is encapsulated in the payload. The CRC is for error checking, the preamble is for synchronization, and the destination MAC is used for addressing."
+  },
+  {
+    "question": "What distinguishes half-duplex from full-duplex operation in data link communication?",
+    "options": [
+      "Half-duplex uses error detection and full-duplex uses error correction",
+      "Half-duplex is used only in wireless networks, while full-duplex is used only in wired networks",
+      "Half-duplex requires a switch, while full-duplex requires a hub",
+      "In half-duplex, nodes cannot transmit and receive simultaneously, while full-duplex nodes can"
+    ],
+    "answer": 3,
+    "explanation": "Half-duplex operation means that a node cannot transmit and receive at the same time, whereas full-duplex allows simultaneous transmission and reception. The other options do not correctly describe the difference."
+  },
+  {
+    "question": "In the context of LANs, what does the acronym MAC stand for?",
+    "options": [
+      "Media Access Control",
+      "Multiple Access Code",
+      "Maximum Addressing Capacity",
+      "Managed Access Channel"
+    ],
+    "answer": 0,
+    "explanation": "MAC stands for Media Access Control. It is used to uniquely identify network interfaces at the data link layer. The other options are incorrect."
+  },
+  {
+    "question": "Which statement about MAC addresses in most LANs is correct?",
+    "options": [
+      "They are 32-bit addresses assigned by the operating system",
+      "They are 48-bit addresses typically burned into the NIC’s ROM",
+      "They are dynamically assigned every time the device connects to the network",
+      "They are used for routing packets across different subnets"
+    ],
+    "answer": 1,
+    "explanation": "MAC addresses are typically 48 bits long and are burned into the network interface card (NIC) by the manufacturer. They are not dynamically assigned for routing purposes."
+  },
+  {
+    "question": "In an ARP request frame, what destination MAC address is used?",
+    "options": [
+      "The sender’s MAC address",
+      "The router’s MAC address",
+      "FF-FF-FF-FF-FF-FF (broadcast address)",
+      "The intended recipient’s MAC address"
+    ],
+    "answer": 2,
+    "explanation": "ARP requests use the broadcast MAC address (FF-FF-FF-FF-FF-FF) so that all nodes on the LAN receive the query. The other options do not correctly represent an ARP request."
+  },
+  {
+    "question": "What is the primary purpose of the preamble in an Ethernet frame?",
+    "options": [
+      "To indicate the type of the payload",
+      "To carry the source MAC address",
+      "To perform error checking",
+      "To synchronize the receiver’s clock with the sender’s clock"
+    ],
+    "answer": 3,
+    "explanation": "The preamble consists of a sequence of bits that help synchronize the clocks of the sender and receiver. It does not indicate payload type, carry addressing information, or perform error checking."
+  },
+  {
+    "question": "What is the main function of the Cyclic Redundancy Check (CRC) in data transmission?",
+    "options": [
+      "Error detection in transmitted frames",
+      "Data encryption",
+      "Routing of frames",
+      "Establishing a virtual circuit"
+    ],
+    "answer": 0,
+    "explanation": "CRC is used primarily for error detection. It helps the receiver determine if any errors occurred during transmission. The other options do not correctly describe CRC's purpose."
+  },
+  {
+    "question": "In TDMA (Time Division Multiple Access), how is channel access organized?",
+    "options": [
+      "Nodes transmit whenever they have data without coordination",
+      "Each station is assigned fixed time slots in a repeating round",
+      "A token is passed among nodes to grant transmission rights",
+      "Frequency bands are dynamically allocated to each station"
+    ],
+    "answer": 1,
+    "explanation": "TDMA divides time into slots and assigns each station a fixed slot during which it may transmit. The other options describe different access methods."
+  },
+  {
+    "question": "Which protocol utilizes an exponential backoff algorithm after a collision is detected?",
+    "options": ["Slotted ALOHA", "Token Passing", "Ethernet CSMA/CD", "FDMA"],
+    "answer": 2,
+    "explanation": "Ethernet CSMA/CD uses an exponential backoff algorithm to determine how long a station must wait before attempting to retransmit after a collision. The other protocols do not use this method."
+  },
+  {
+    "question": "What does FDMA stand for?",
+    "options": [
+      "Fast Data Multiple Access",
+      "Frame Division Multiple Access",
+      "Frequency Dependent MAC Access",
+      "Frequency Division Multiple Access"
+    ],
+    "answer": 3,
+    "explanation": "FDMA stands for Frequency Division Multiple Access, where the channel is divided into different frequency bands that are allocated to different users. The other options are incorrect."
+  },
+  {
+    "question": "Which protocol is typically used for collision avoidance in wireless LANs?",
+    "options": ["CSMA/CA", "CSMA/CD", "TDMA", "Token Passing"],
+    "answer": 0,
+    "explanation": "CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) is used in wireless LANs because collision detection (as in CSMA/CD) is not practical in a wireless environment. The other options are less suited for wireless collision management."
+  },
+  {
+    "question": "What is the primary goal of the Internet checksum used in UDP segments?",
+    "options": [
+      "To encrypt the segment content",
+      "To detect bit errors in the transmitted segment",
+      "To determine the frame’s routing path",
+      "To manage the transmission rate"
+    ],
+    "answer": 1,
+    "explanation": "The Internet checksum is used to detect bit errors in the transmitted segment by computing a checksum over the segment’s contents. It does not encrypt data, determine routing paths, or control transmission rates."
+  },
+  {
+    "question": "How is a collision defined in a shared broadcast medium?",
+    "options": [
+      "A node transmits with low signal strength",
+      "A node transmits after a long delay",
+      "Two nodes transmit simultaneously causing interference",
+      "A node receives a frame with errors"
+    ],
+    "answer": 2,
+    "explanation": "A collision occurs when two or more nodes transmit at the same time on a shared medium, leading to interference. The other options do not define a collision."
+  },
+  {
+    "question": "What is the maximum channel utilization efficiency of slotted ALOHA as the number of nodes grows large?",
+    "options": [
+      "Approximately 50%",
+      "Approximately 100%",
+      "Approximately 18%",
+      "Approximately 37%"
+    ],
+    "answer": 3,
+    "explanation": "For slotted ALOHA, the maximum efficiency as the number of nodes increases is approximately 1/e, or about 37%. The other percentages are incorrect for this protocol."
+  },
+  {
+    "question": "In a CSMA/CD environment, what is the immediate action taken when a collision is detected?",
+    "options": [
+      "Abort the transmission and send a jam signal",
+      "Wait for an acknowledgment before retransmitting",
+      "Immediately retransmit the frame",
+      "Switch to full-duplex mode"
+    ],
+    "answer": 0,
+    "explanation": "When a collision is detected in CSMA/CD, the transmitting node aborts its current transmission and sends a jam signal to ensure all nodes are aware of the collision. It then waits (using an exponential backoff) before retransmitting."
+  },
+  {
+    "question": "What is a primary advantage of a switched Ethernet network over a bus topology?",
+    "options": [
+      "All nodes share the same bandwidth",
+      "Each link becomes its own collision domain, allowing simultaneous transmissions",
+      "It eliminates the need for MAC addressing",
+      "It simplifies the design of the physical cabling"
+    ],
+    "answer": 1,
+    "explanation": "Switched Ethernet segments each port into its own collision domain, which allows for simultaneous transmissions without collisions. The other options are not accurate advantages of a switched topology over a bus topology."
+  },
+  {
+    "question": "How does a self-learning switch acquire the necessary information to build its forwarding table?",
+    "options": [
+      "By sending ARP requests to all connected devices",
+      "By periodically broadcasting its own MAC address",
+      "By recording the source MAC address of incoming frames",
+      "By manual configuration by an administrator"
+    ],
+    "answer": 2,
+    "explanation": "A self-learning switch automatically builds its forwarding table by recording the source MAC addresses of the frames it receives, associating them with the port on which the frame arrived."
+  },
+  {
+    "question": "What is the purpose of trunk ports in a VLAN configuration spanning multiple switches?",
+    "options": [
+      "To filter out broadcast traffic between VLANs",
+      "To assign IP addresses to devices in different VLANs",
+      "To manage routing protocols between switches",
+      "To carry frames from multiple VLANs between switches"
+    ],
+    "answer": 3,
+    "explanation": "Trunk ports are configured to carry traffic for multiple VLANs between switches, ensuring that VLAN information is maintained across the physical links. The other options do not describe the function of trunk ports."
+  },
+  {
+    "question": "In the 802.1Q VLAN frame format, which field is used to indicate VLAN membership?",
+    "options": [
+      "The Tag Protocol Identifier (TPID)",
+      "The CRC field",
+      "The Type field",
+      "The Destination MAC address"
+    ],
+    "answer": 0,
+    "explanation": "The 802.1Q frame includes a Tag Protocol Identifier (TPID) and additional tag control information that specifies the VLAN ID, thereby indicating VLAN membership. The other fields serve different purposes."
+  },
+  {
+    "question": "What is the main purpose of Multiprotocol Label Switching (MPLS) in modern networks?",
+    "options": [
+      "Routing packets using longest prefix matching",
+      "High-speed IP forwarding using fixed-length labels",
+      "Error correction on wireless links",
+      "Dynamic allocation of IP addresses"
+    ],
+    "answer": 1,
+    "explanation": "MPLS uses fixed-length labels to make forwarding decisions, which allows for high-speed packet forwarding. It does not rely on traditional longest prefix matching or handle IP address allocation."
+  },
+  {
+    "question": "How does MPLS improve packet forwarding speed compared to traditional IP routing?",
+    "options": [
+      "By encrypting packet headers",
+      "By compressing the IP header",
+      "By using fixed-length labels for lookups instead of variable-length IP addresses",
+      "By precomputing all possible routing paths"
+    ],
+    "answer": 2,
+    "explanation": "MPLS improves forwarding speed by using fixed-length labels that simplify and speed up the lookup process compared to variable-length IP addresses. The other options are not how MPLS achieves its performance improvements."
+  },
+  {
+    "question": "What is one of the major challenges addressed by data center networks?",
+    "options": [
+      "Managing dynamic IP address allocation across the Internet",
+      "Reducing the physical size of server racks",
+      "Eliminating the need for error detection protocols",
+      "Handling massive numbers of hosts while balancing load and ensuring reliability"
+    ],
+    "answer": 3,
+    "explanation": "Data center networks must handle large numbers of hosts, balance loads, and ensure reliability, among other challenges. The other options do not accurately reflect the primary challenges in data center networking."
+  },
+  {
+    "question": "What is the primary role of a load balancer in a data center network?",
+    "options": [
+      "Distributing client requests among multiple servers",
+      "Encrypting data between servers",
+      "Assigning IP addresses to virtual machines",
+      "Performing error correction for data packets"
+    ],
+    "answer": 0,
+    "explanation": "A load balancer distributes incoming client requests among multiple servers to ensure efficient utilization and avoid overloading any single server. The other options are not functions of a load balancer."
+  },
+  {
+    "question": "Which protocol does a client typically use to obtain its IP address and other network configuration parameters?",
+    "options": ["ARP", "DHCP", "DNS", "MPLS"],
+    "answer": 1,
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) is used by clients to obtain an IP address, subnet mask, gateway, and other network configuration details. ARP and DNS serve different functions, and MPLS is not involved in configuration."
+  },
+  {
+    "question": "When a node does not have the destination's MAC address, what does it do according to the ARP protocol?",
+    "options": [
+      "Send a unicast ARP query",
+      "Perform a DNS lookup",
+      "Broadcast an ARP request",
+      "Drop the packet"
+    ],
+    "answer": 2,
+    "explanation": "If a node does not know the destination’s MAC address, it broadcasts an ARP request so that the appropriate device can reply with its MAC address. The other options do not follow the ARP protocol."
+  },
+  {
+    "question": "In Ethernet, what happens if a network interface card (NIC) receives a frame with a destination MAC address that does not match its own?",
+    "options": [
+      "The frame is forwarded to the CPU",
+      "The frame is broadcast to all devices",
+      "The frame is stored for later processing",
+      "The frame is discarded"
+    ],
+    "answer": 3,
+    "explanation": "NICs check the destination MAC address and discard frames that do not match their own or are not broadcast frames. This prevents unnecessary processing of irrelevant data."
+  },
+  {
+    "question": "In an Ethernet frame, how many bytes are typically used for the source and destination MAC addresses combined?",
+    "options": ["12 bytes", "6 bytes", "4 bytes", "8 bytes"],
+    "answer": 0,
+    "explanation": "Each MAC address is 6 bytes long, so the source and destination addresses combined use 12 bytes. The other options do not correctly account for both addresses."
+  },
+  {
+    "question": "Which mechanism helps Ethernet reduce the wasted bandwidth caused by collisions?",
+    "options": [
+      "Using full-duplex communication on all links",
+      "Aborting the transmission immediately upon collision detection",
+      "Implementing forward error correction codes",
+      "Switching to a different frequency band upon collision"
+    ],
+    "answer": 1,
+    "explanation": "In Ethernet, when a collision is detected, the transmission is aborted immediately to reduce wasted time and bandwidth. The other methods are not used for collision management in Ethernet."
+  },
+  {
+    "question": "In error detection methods such as CRC, what is the purpose of adding redundancy bits to the data?",
+    "options": [
+      "To increase the transmission speed",
+      "To determine the destination MAC address",
+      "To detect errors in the transmitted data",
+      "To encrypt the data payload"
+    ],
+    "answer": 2,
+    "explanation": "Redundancy bits (like those computed by the CRC algorithm) are added to detect errors that may occur during transmission. They are not intended to increase speed, determine addressing, or encrypt data."
+  },
+  {
+    "question": "Which of the following is a key characteristic of MAC addresses?",
+    "options": [
+      "They are arbitrarily assigned by the user each time the device connects",
+      "They are always dynamically changed to improve security",
+      "They are used for routing packets between different networks",
+      "They are globally unique and typically assigned by the manufacturer"
+    ],
+    "answer": 3,
+    "explanation": "MAC addresses are designed to be globally unique and are usually assigned by the manufacturer. They are not used for inter-network routing, which is handled by IP addresses."
+  },
+  {
+    "question": "What distinguishes a broadcast link from a point-to-point link?",
+    "options": [
+      "Broadcast links allow multiple nodes to share the medium, while point-to-point links connect only two nodes",
+      "Broadcast links have no collisions, whereas point-to-point links do",
+      "Broadcast links are used only in wired networks, and point-to-point links only in wireless networks",
+      "Broadcast links do not require error detection, unlike point-to-point links"
+    ],
+    "answer": 0,
+    "explanation": "A broadcast link is one in which multiple nodes share the same medium, making it possible for them to hear each other’s transmissions, while a point-to-point link connects only two nodes. The other options are inaccurate."
+  },
+  {
+    "question": "Which of the following is NOT considered a MAC protocol?",
+    "options": ["FDMA", "ARP", "TDMA", "CDMA"],
+    "answer": 1,
+    "explanation": "FDMA, TDMA, and CDMA are all methods of channel partitioning or access, while ARP is a protocol used for address resolution, not for medium access control."
+  },
+  {
+    "question": "What is the role of the jam signal in Ethernet CSMA/CD?",
+    "options": [
+      "It acknowledges the successful transmission of a frame",
+      "It indicates the end of a frame transmission",
+      "It is sent after collision detection to ensure that all nodes are aware of the collision",
+      "It initiates a new connection between nodes"
+    ],
+    "answer": 2,
+    "explanation": "The jam signal is used in Ethernet CSMA/CD to inform all nodes that a collision has occurred, prompting them to abort their transmissions. The other options do not correctly describe the jam signal’s function."
+  },
+  {
+    "question": "What determines the length of the backoff interval in Ethernet’s binary exponential backoff algorithm?",
+    "options": [
+      "The size of the transmitted frame",
+      "The destination MAC address",
+      "The current link speed",
+      "The number of consecutive collisions experienced"
+    ],
+    "answer": 3,
+    "explanation": "In Ethernet CSMA/CD, the backoff interval increases exponentially with each consecutive collision, meaning the number of collisions directly influences the wait time. The other factors are not used in this calculation."
+  },
+  {
+    "question": "How is traffic isolation achieved in a VLAN environment?",
+    "options": [
+      "By logically partitioning a single physical LAN into multiple virtual networks",
+      "By physically separating the cables for each group of users",
+      "By assigning completely different IP subnets to each user",
+      "By encrypting all data transmitted on the network"
+    ],
+    "answer": 0,
+    "explanation": "VLANs logically segment a physical LAN into multiple isolated virtual networks, which helps manage broadcast traffic and enhance security. The other options do not describe how VLANs function."
+  },
+  {
+    "question": "What is a key advantage of port-based VLANs?",
+    "options": [
+      "They automatically increase the physical link speed",
+      "They allow multiple virtual LANs to operate over the same physical infrastructure",
+      "They eliminate the need for MAC addressing",
+      "They assign IP addresses automatically to connected devices"
+    ],
+    "answer": 1,
+    "explanation": "Port-based VLANs enable network administrators to segment a single physical network into multiple virtual LANs, thereby improving traffic management and security. They do not affect link speed, MAC addressing, or IP assignment."
+  },
+  {
+    "question": "What is the primary difference between a router and a switch in terms of the protocol layer at which they operate?",
+    "options": [
+      "Switches operate at the network layer while routers operate at the link layer",
+      "Both operate at the same layer in the protocol stack",
+      "Routers are used only in LANs, while switches are used only in WANs",
+      "Routers operate at the network layer while switches operate at the link layer"
+    ],
+    "answer": 3,
+    "explanation": "Routers operate at the network layer (Layer 3) and make forwarding decisions based on IP addresses, while switches operate at the link layer (Layer 2) and use MAC addresses to forward frames."
+  },
+  {
+    "question": "Which protocol is primarily responsible for mapping IP addresses to MAC addresses?",
+    "options": ["DHCP", "DNS", "MPLS", "ARP"],
+    "answer": 3,
+    "explanation": "ARP (Address Resolution Protocol) is used to map an IP address to its corresponding MAC address on a LAN. The other protocols serve different purposes."
+  },
+  {
+    "question": "What does the TTL (Time To Live) field in an ARP table entry specify?",
+    "options": [
+      "How long the mapping is valid before it is discarded",
+      "The maximum number of hops a frame can travel",
+      "The error correction level of the frame",
+      "The size of the ARP message"
+    ],
+    "answer": 0,
+    "explanation": "In an ARP table, the TTL indicates the duration for which a mapping remains valid before it expires, ensuring that outdated information is removed. It does not determine hop count, error correction, or message size."
+  },
+  {
+    "question": "Why is error detection in link layer protocols not 100% reliable?",
+    "options": [
+      "Because the link layer does not implement any error detection mechanisms",
+      "Because some errors may go undetected if the error-detection code is not long enough",
+      "Because errors are always corrected by the network layer",
+      "Because the physical layer automatically corrects all errors"
+    ],
+    "answer": 1,
+    "explanation": "Error detection techniques such as CRC are not infallible; if the error-detection code is too short or if multiple errors occur in a specific pattern, some errors might go undetected. The link layer does implement error detection, and error correction is not always handled by the network or physical layers."
+  },
+  {
+    "question": "In an Ethernet frame, what is the function of the CRC field?",
+    "options": [
+      "To encrypt the frame content",
+      "To resolve MAC addresses",
+      "To provide error detection for the frame",
+      "To indicate the frame’s priority level"
+    ],
+    "answer": 2,
+    "explanation": "The CRC (Cyclic Redundancy Check) field is used to detect errors in the frame. It does not encrypt data, perform address resolution, or indicate priority."
+  },
+  {
+    "question": "What does the term 'self-learning' refer to in the context of an Ethernet switch?",
+    "options": [
+      "The switch automatically updates its firmware",
+      "The switch uses artificial intelligence to predict network traffic",
+      "The switch dynamically assigns IP addresses to hosts",
+      "The switch automatically learns which MAC addresses are reachable on which ports"
+    ],
+    "answer": 3,
+    "explanation": "A self-learning switch builds its forwarding table by recording the source MAC address of each frame and associating it with the port on which the frame was received. This process requires no manual configuration."
+  },
+  {
+    "question": "In CSMA (Carrier Sense Multiple Access), what does the 'carrier sense' mechanism do?",
+    "options": [
+      "It listens to the channel to detect if it is idle before transmitting",
+      "It encrypts data before transmission",
+      "It performs error detection on the transmitted frame",
+      "It manages the routing of frames between nodes"
+    ],
+    "answer": 0,
+    "explanation": "Carrier sense means that a node checks the medium for activity before attempting to transmit. This minimizes the chance of collisions. It does not handle encryption, error detection, or routing."
+  },
+  {
+    "question": "What is the primary purpose of using an exponential backoff algorithm in Ethernet?",
+    "options": [
+      "To speed up transmissions immediately after a collision",
+      "To reduce the likelihood of repeated collisions by increasing wait times after each collision",
+      "To determine the optimal frame size for transmission",
+      "To adjust the transmission power of the sender"
+    ],
+    "answer": 1,
+    "explanation": "The exponential backoff algorithm increases the waiting period after each successive collision, thereby reducing the chance of additional collisions. The other options do not describe the purpose of exponential backoff."
+  },
+  {
+    "question": "In slotted ALOHA, if each node transmits with probability p and there are N nodes, what is the probability that a given node transmits successfully in a slot?",
+    "options": ["p/(N-1)", "(1-p)^(N-1)", "p(1-p)^(N-1)", "p * (1-p)^N"],
+    "answer": 2,
+    "explanation": "For a node to successfully transmit in a slotted ALOHA system, it must transmit (probability p) and all other N-1 nodes must remain silent (each with probability (1-p)), resulting in p(1-p)^(N-1)."
+  },
+  {
+    "question": "Which of the following is NOT an example of a random access protocol?",
+    "options": ["ALOHA", "CSMA", "Slotted ALOHA", "Token Passing"],
+    "answer": 3,
+    "explanation": "Token Passing is a 'taking turns' protocol, not a random access protocol. ALOHA, CSMA, and Slotted ALOHA all allow nodes to transmit at random times, subject to collision risks."
+  },
+  {
+    "question": "In the Ethernet frame structure, what is the function of the preamble?",
+    "options": [
+      "To synchronize the clocks of the sender and receiver",
+      "To indicate the type of payload",
+      "To provide error correction",
+      "To store the MAC addresses"
+    ],
+    "answer": 0,
+    "explanation": "The preamble is used to synchronize the sender’s and receiver’s clocks prior to actual data transmission. It does not indicate payload type, perform error correction, or store addresses."
+  },
+  {
+    "question": "What does the term 'broadcast domain' refer to in a LAN?",
+    "options": [
+      "The physical boundary of the LAN",
+      "The set of all nodes that can receive a broadcast frame from any other node",
+      "A subset of IP addresses within the network",
+      "The range of signal frequencies used on the LAN"
+    ],
+    "answer": 1,
+    "explanation": "A broadcast domain is defined as all the nodes that receive broadcast frames from one another. The other options do not accurately describe a broadcast domain."
+  },
+  {
+    "question": "What problem do VLANs primarily address in large LANs?",
+    "options": [
+      "Inefficient CSMA/CD operation",
+      "Limited physical cable bandwidth",
+      "Scalability issues caused by excessive broadcast traffic",
+      "Excessively large collision domains"
+    ],
+    "answer": 2,
+    "explanation": "VLANs segment a large LAN into smaller broadcast domains, thereby reducing the amount of broadcast traffic that each node must process. The other options do not directly address the broadcast scalability issue."
+  },
+  {
+    "question": "Which of the following is a key benefit of using switches in a LAN?",
+    "options": [
+      "They reduce the overall power consumption of the network",
+      "They eliminate the need for IP addressing",
+      "They automatically assign MAC addresses to hosts",
+      "They allow simultaneous transmissions on different ports by eliminating collisions"
+    ],
+    "answer": 3,
+    "explanation": "Switches provide each port with its own collision domain, which allows simultaneous transmissions and increases network efficiency. They do not manage power consumption, IP addressing, or MAC address assignment."
+  },
+  {
+    "question": "Why is Ethernet considered an 'unreliable' protocol at the link layer?",
+    "options": [
+      "Because it does not provide acknowledgments or retransmissions",
+      "Because it frequently loses frames",
+      "Because it cannot support high-speed transmission",
+      "Because it uses outdated technology"
+    ],
+    "answer": 0,
+    "explanation": "Ethernet is considered unreliable because it is connectionless and does not provide mechanisms for acknowledgments or retransmissions at the link layer; error recovery must be handled by higher-layer protocols if needed."
+  },
+  {
+    "question": "Which multiple access protocol divides the channel based on time slots?",
+    "options": ["FDMA", "TDMA", "CSMA", "Token Passing"],
+    "answer": 1,
+    "explanation": "TDMA (Time Division Multiple Access) divides the channel into time slots and allocates a slot to each station. The other protocols use different methods for channel access."
+  },
+  {
+    "question": "In MPLS, what is used to label packets for forwarding decisions?",
+    "options": [
+      "IP addresses",
+      "MAC addresses",
+      "Fixed-length labels",
+      "Port numbers"
+    ],
+    "answer": 2,
+    "explanation": "MPLS uses fixed-length labels that are attached to packets for fast and efficient forwarding. IP addresses, MAC addresses, and port numbers are not used as the primary label in MPLS."
+  },
+  {
+    "question": "How do MPLS routers differ from traditional IP routers in their forwarding decisions?",
+    "options": [
+      "MPLS routers use IP addresses for forwarding just like traditional routers",
+      "MPLS routers rely solely on MAC addresses for making decisions",
+      "MPLS routers use port numbers to forward packets",
+      "MPLS routers use label values instead of IP destination addresses for forwarding"
+    ],
+    "answer": 3,
+    "explanation": "MPLS routers base their forwarding decisions on the fixed-length label attached to packets rather than performing a lookup based solely on the IP destination address."
+  },
+  {
+    "question": "In the MPLS header, what does the 'exp' field represent?",
+    "options": [
+      "An experimental field often used for Quality of Service (QoS) purposes",
+      "The expiration time of the label",
+      "An error detection code",
+      "The encryption level of the packet"
+    ],
+    "answer": 0,
+    "explanation": "The 'exp' field in the MPLS header is an experimental field that is typically used for QoS and similar purposes. It is not used for expiration, error detection, or encryption."
+  },
+  {
+    "question": "What is the role of RSVP-TE in MPLS networks?",
+    "options": [
+      "It performs error detection on MPLS packets",
+      "It is used for signaling to set up MPLS forwarding paths",
+      "It encrypts the labels in the MPLS header",
+      "It assigns IP addresses to MPLS-enabled routers"
+    ],
+    "answer": 1,
+    "explanation": "RSVP-TE (Resource Reservation Protocol-Traffic Engineering) is used to signal and establish label-switched paths in MPLS networks. It does not handle error detection, encryption, or IP address assignment."
+  },
+  {
+    "question": "In the 'day in the life' web request scenario, which protocol does a mobile client use to obtain its network configuration (such as an IP address)?",
+    "options": ["ARP", "DNS", "DHCP", "TCP"],
+    "answer": 2,
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) is used by a client to obtain its IP address and other network configuration parameters. ARP and DNS serve different functions, and TCP is a transport protocol."
+  },
+  {
+    "question": "During a web request, which protocol is used to map a domain name to an IP address?",
+    "options": ["DHCP", "ARP", "MPLS", "DNS"],
+    "answer": 3,
+    "explanation": "DNS (Domain Name System) is used to translate human-readable domain names (like www.google.com) into IP addresses. The other protocols do not perform this function."
+  },
+  {
+    "question": "During the ARP process in a web request scenario, what type of frame does the client initially send?",
+    "options": [
+      "A unicast frame",
+      "A multicast frame",
+      "Broadcast an ARP request",
+      "An anycast frame"
+    ],
+    "answer": 2,
+    "explanation": "When a client needs to resolve a MAC address via ARP, it sends out a broadcast frame so that all nodes on the LAN receive the request. Unicast, multicast, or anycast frames are not used for this purpose."
+  },
+  {
+    "question": "In the process of connecting to the Internet, what encapsulation is used to send a DHCP request from the client?",
+    "options": [
+      "An MPLS packet",
+      "An Ethernet frame",
+      "A VLAN-tagged frame",
+      "A CSMA/CD burst"
+    ],
+    "answer": 1,
+    "explanation": "A DHCP request is encapsulated in an Ethernet frame for transmission on the local area network. The other options do not describe the standard encapsulation for DHCP."
+  },
+  {
+    "question": "How does an Ethernet switch handle a frame when the destination MAC address is not found in its forwarding table?",
+    "options": [
+      "It drops the frame immediately",
+      "It forwards the frame only to the first port",
+      "It floods the frame out on all ports except the incoming port",
+      "It sends an ARP request to determine the destination"
+    ],
+    "answer": 2,
+    "explanation": "When a switch does not know the destination MAC address, it floods the frame to all ports (except the one on which it was received) to ensure the frame reaches its destination. It does not drop the frame or forward it to a single port."
+  },
+  {
+    "question": "In a self-learning switch, when a frame arrives on a given port from a host, what does the switch do with the source MAC address?",
+    "options": [
+      "It ignores the source MAC address entirely",
+      "It immediately broadcasts the source MAC address to all other ports",
+      "It replaces the source MAC address with its own",
+      "It records the source MAC address and associates it with the incoming port"
+    ],
+    "answer": 3,
+    "explanation": "A self-learning switch examines the source MAC address of incoming frames and records it along with the port on which it arrived, building a forwarding table over time. This process requires no manual configuration."
+  },
+  {
+    "question": "Which technology provides virtualized networks at the link layer by using labels?",
+    "options": ["MPLS", "CSMA/CD", "ARP", "DHCP"],
+    "answer": 0,
+    "explanation": "MPLS (Multiprotocol Label Switching) provides a mechanism to create virtualized networks at the link layer by using fixed-length labels for forwarding. The other options do not provide this functionality."
+  },
+  {
+    "question": "What is the significance of the network 'backbone' in data center environments?",
+    "options": [
+      "It handles ARP requests for the entire data center",
+      "It connects multiple tiers of switches and provides high throughput between racks",
+      "It encrypts data between individual servers",
+      "It manages the assignment of IP addresses"
+    ],
+    "answer": 1,
+    "explanation": "In data center networks, the backbone refers to the high-speed interconnection between various tiers of switches, enabling high throughput and efficient communication among server racks. The other options are not accurate descriptions of the backbone’s role."
+  },
+  {
+    "question": "What is the overall purpose of the link layer as described in Chapter 6?",
+    "options": [
+      "To manage end-to-end reliability across networks",
+      "To perform routing across different subnets",
+      "To provide services such as error detection, multiple access, and link-layer addressing",
+      "To provide encryption and secure communication at the application layer"
+    ],
+    "answer": 2,
+    "explanation": "The link layer is responsible for local delivery of frames between adjacent nodes, including error detection, access control, and addressing at the link level. Routing, end-to-end reliability, and application-layer encryption are handled by higher layers."
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้อง",
+    "options": [
+      {
+        "statement": "การออกแบบ high-level design ช่วยให้ทีมผู้พัฒนาสามารถกำหนดทิศทางการพัฒนาได้อย่างถูกต้อง",
+        "istrue": false
+      },
+      {
+        "statement": "การออกแบบ high-level design สนับสนุนให้การพัฒนาให้เกิดขึ้นได้อย่างรวดเร็ว",
+        "istrue": true
+      },
+      {
+        "statement": "การออกแบบ low-level design ช่วยในการกำหนดภาษาเพื่อการพัฒนาได้อย่างเหมาะสม",
+        "istrue": false
+      },
+      {
+        "statement": "การออกแบบ high-level design ช่วยให้ทีมผู้พัฒนาสามารถมองเห็นความสัมพันธ์ของมอดูลต่าง ๆ ได้อย่างชัดเจน",
+        "istrue": false
+      }
+    ],
+    "explanation": "High-level design มุ่งเน้นการกำหนดภาพรวมของระบบ ไม่ได้มีจุดประสงค์เพื่อเร่งความเร็วในการพัฒนา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้อง",
+    "options": [
+      {
+        "statement": "หากการพัฒนามีความล่าช้าวิธีการแก้ไขคือการเพิ่มทีมงานเข้ามาใหม่",
+        "istrue": true
+      },
+      {
+        "statement": "การพัฒนาจำเป็นต้องมีการออกแบบในระดับ low-level design อย่างสมบูรณ์ก่อน",
+        "istrue": false
+      },
+      {
+        "statement": "การกำหนดภาษาที่ใช้ในการพัฒนาซอฟต์แวร์อยู่ใน low-level design",
+        "istrue": false
+      },
+      {
+        "statement": "การกำหนดตัวแปรและการออกแบบฐานข้อมูลจะกระทำใน low-level design",
+        "istrue": false
+      }
+    ],
+    "explanation": "การแก้ปัญหาความล่าช้าโดยการเพิ่มคนใหม่เข้าโครงการไม่ใช่วิธีแก้ที่ถูกต้องเพราะจะเพิ่มความซับซ้อนและภาระในการประสานงาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดถูกต้องที่สุด",
+    "options": [
+      {
+        "statement": "ข้อมูลจาก data-centric จะรับมาจากส่วนสถาปัตยกรรมของ client-server เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "การทำงานของ IaaS นั้นจะทำเฉพาะ application, storage, servers, data เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลจาก data-centric จะรับมาจากส่วนสถาปัตยกรรมของ application-centric เสมอ",
+        "istrue": true
+      },
+      {
+        "statement": "การทำงานของ data-centric มีความเกี่ยวข้องกับ event-driven architecture เสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อมูลจาก data-centric architecture มักจะมาจาก application-centric architecture ซึ่งเน้นการจัดการข้อมูลเป็นหลัก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นการดำเนินการที่อยู่ใน low-level design",
+    "options": [
+      {
+        "statement": "การรักษาความปลอดภัยของซอฟต์แวร์ต้องใช้ระบบ fingerprint ของเจ้าของเครื่องสมาร์ทโฟนเท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "Hardware ที่ใช้ในการทำงานต้องเป็นเครื่องสมาร์ทโฟน และเป็น web application เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "การรักษาความปลอดภัยของซอฟต์แวร์ต้องใช้ระบบ biometrics",
+        "istrue": false
+      },
+      {
+        "statement": "ฐานข้อมูลที่ใช้จะต้องเป็นฐานข้อมูล NoSQL",
+        "istrue": false
+      }
+    ],
+    "explanation": "low-level design ระบุรายละเอียดทางเทคนิค เช่น การใช้ fingerprint authentication"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การกำหนดโครงสร้างของส่วนต่อประสานผู้ใช้งานจะดำเนินการในขั้นตอนใด",
+    "options": [
+      {
+        "statement": "Low-level design",
+        "istrue": false
+      },
+      {
+        "statement": "High-level design",
+        "istrue": true
+      },
+      {
+        "statement": "Implementation",
+        "istrue": false
+      },
+      {
+        "statement": "Deployment",
+        "istrue": false
+      }
+    ],
+    "explanation": "การออกแบบโครงสร้างส่วนต่อประสานผู้ใช้งาน (UI) อยู่ใน high-level design ซึ่งเป็นการกำหนดภาพรวมการใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรมแบบ event-driven architecture มีความเหมาะสมกับการทำงานในระบบใดต่อไปนี้",
+    "options": [
+      {
+        "statement": "ระบบรักษาความปลอดภัยของข้อมูลในองค์กรต่าง ๆ",
+        "istrue": true
+      },
+      {
+        "statement": "ระบบการเงินการบัญชีของธนาคาร",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบการจำหน่ายสินค้าของ Shopee",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบลูกค้าสัมพันธ์ของบริษัทเอกชน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Event-driven architecture เหมาะสมกับระบบที่ต้องตอบสนองต่อเหตุการณ์ต่าง ๆ อย่างรวดเร็ว เช่น ระบบรักษาความปลอดภัย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Rule-based architecture เหมาะกับระบบแบบใดมากที่สุด",
+    "options": [
+      {
+        "statement": "ระบบการลงทะเบียนรายวิชา",
+        "istrue": true
+      },
+      {
+        "statement": "ระบบประวัติการศึกษาของนิสิต",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบประชาสัมพันธ์หลักสูตรต่าง ๆ",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบการเงินการบัญชีของพนักงาน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Rule-based architecture เหมาะสมกับระบบที่มีกฎเกณฑ์ชัดเจน เช่น การลงทะเบียนรายวิชา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องที่สุด",
+    "options": [
+      {
+        "statement": "การพัฒนาซอฟต์แวร์ขนาดใหญ่ที่มีการใช้ข้อมูลควรใช้สถาปัตยกรรมแบบ data-centric architecture เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "การพัฒนาซอฟต์แวร์ขนาดใหญ่มักมีรูปแบบการบริการที่หลากหลายจึงควรใช้สถาปัตยกรรมแบบ service-oriented เป็นหลัก",
+        "istrue": false
+      },
+      {
+        "statement": "การพัฒนาซอฟต์แวร์ขนาดใหญ่มักมีการแบ่งเป็นระบบการทำงานย่อย แต่ละระบบสามารถใช้สถาปัตยกรรมที่แตกต่างกันได้",
+        "istrue": true
+      },
+      {
+        "statement": "การพัฒนาซอฟต์แวร์ที่มีความซับซ้อนมากจะแก้ไขได้ด้วยการใช้สถาปัตยกรรมแบบ component-based เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ระบบขนาดใหญ่สามารถแบ่งเป็นระบบย่อย และแต่ละระบบสามารถเลือกใช้สถาปัตยกรรมที่แตกต่างได้ตามความเหมาะสม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบายคำว่า database audit trail ได้ดีที่สุด",
+    "options": [
+      {
+        "statement": "ข้อมูลที่พนักงานทั่วไปเรียกใช้งานในฐานข้อมูลนี้",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลการเข้าโจมตีระบบฐานข้อมูลในช่วงเวลาที่พิจารณา เช่น ทุก 3 เดือน",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลการใช้งานและการเปลี่ยนแปลงที่เกิดขึ้นกับข้อมูลบนระบบฐานข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "ข้อมูลการใช้งานและการเปลี่ยนแปลงบนฐานข้อมูลที่ดำเนินการโดยผู้บริหาร",
+        "istrue": false
+      }
+    ],
+    "explanation": "audit trail คือข้อมูลการใช้งานและการเปลี่ยนแปลงที่เกิดขึ้นบนฐานข้อมูลเพื่อติดตามและตรวจสอบย้อนหลัง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นวัตถุประสงค์ของการเขียน use case diagram",
+    "options": [
+      {
+        "statement": "แสดงกิจกรรมหลักที่เกิดขึ้นในระบบและคลาสหลักที่เกี่ยวข้อง",
+        "istrue": true
+      },
+      {
+        "statement": "แสดงองค์ประกอบของฟังก์ชันต่าง ๆ โดยละเอียดของระบบการทำงานทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "แสดงให้เห็นกิจกรรมที่เกี่ยวข้องกับการเก็บข้อมูลของระบบ",
+        "istrue": false
+      },
+      {
+        "statement": "แสดงความสัมพันธ์ระหว่างคลาสต่าง ๆ ที่เกี่ยวข้องในระบบ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Use case diagram ใช้เพื่อแสดงกิจกรรมหลักและผู้ใช้งานที่เกี่ยวข้องกับระบบ"
+  }
+]

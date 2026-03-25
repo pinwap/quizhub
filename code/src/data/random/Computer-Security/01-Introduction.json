@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which analogy best describes a 'Trojan Horse' in the context of computer security?",
+    "options": [
+      {
+        "statement": "A biological virus that spreads from person to person causing illness.",
+        "istrue": false
+      },
+      {
+        "statement": "A seemingly harmless or attractive gift that conceals a malicious intruder inside.",
+        "istrue": true
+      },
+      {
+        "statement": "A thief who holds your personal data hostage for a ransom.",
+        "istrue": false
+      },
+      {
+        "statement": "A robot that follows commands from a central server.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A Trojan Horse is defined as malware that disguises itself as legitimate or desirable software to trick the user into installing it, similar to the Greek myth."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Regarding modern cyber warfare involving infrastructure, which statement is true based on the provided examples?",
+    "options": [
+      {
+        "statement": "Cyber attacks are limited to stealing personal data and do not affect physical systems.",
+        "istrue": false
+      },
+      {
+        "statement": "Modern attacks can physically disrupt essential services, such as causing nationwide blackouts.",
+        "istrue": true
+      },
+      {
+        "statement": "Infrastructure attacks are strictly theoretical and have never occurred in reality.",
+        "istrue": false
+      },
+      {
+        "statement": "Governments are the only entities capable of launching cyber attacks on infrastructure.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The content cites examples like the power outage in Venezuela and attacks on nuclear power plants, illustrating that cyber attacks can disrupt physical infrastructure."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "According to the content, why do banks often choose not to publicize or investigate security breaches?",
+    "options": [
+      {
+        "statement": "The financial losses are usually too small to matter.",
+        "istrue": false
+      },
+      {
+        "statement": "They fear the loss of reputation and customer trust more than the direct financial loss.",
+        "istrue": true
+      },
+      {
+        "statement": "Banking laws prohibit them from reporting cyber crimes.",
+        "istrue": false
+      },
+      {
+        "statement": "Their security systems are actually impenetrable, so the breaches are false alarms.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The material notes that banks prioritize reputation over recovering stolen funds, as loss of public trust can be more damaging than the immediate monetary loss."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How has the legal handling of 'Cyber Stalking' evolved from 1985 to 2004?",
+    "options": [
+      {
+        "statement": "It has become less severe, treated mostly as a prank.",
+        "istrue": false
+      },
+      {
+        "statement": "The laws have remained unchanged, relying on self-regulation.",
+        "istrue": false
+      },
+      {
+        "statement": "Laws have adapted to recognize digital threats, leading to actual prison sentences for online harassment.",
+        "istrue": true
+      },
+      {
+        "statement": "Cyber stalking is now handled exclusively by internet service providers, not courts.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The comparison between the 1985 case (dismissed due to lack of laws) and the 2004 case (conviction) illustrates the evolution of legal systems to penalize online harassment."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In a Phishing attack, what is the primary indicator that a website might be fake, even if it looks identical to the original?",
+    "options": [
+      {
+        "statement": "The website loads faster than usual.",
+        "istrue": false
+      },
+      {
+        "statement": "The URL (web address) is incorrect or slightly misspelled.",
+        "istrue": true
+      },
+      {
+        "statement": "The images on the site are black and white.",
+        "istrue": false
+      },
+      {
+        "statement": "The browser automatically closes upon opening the page.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Phishing relies on visual deception, but the URL remains a key differentiator. A fake Yahoo site might look perfect but will be hosted on a different domain."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'AOL Hack' example demonstrates which security concept?",
+    "options": [
+      {
+        "statement": "Advanced encryption cracking using supercomputers.",
+        "istrue": false
+      },
+      {
+        "statement": "Social Engineering, where human manipulation bypasses technical security.",
+        "istrue": true
+      },
+      {
+        "statement": "A DDoS attack that overwhelmed AOL's servers.",
+        "istrue": false
+      },
+      {
+        "statement": "A hardware failure in the firewall system.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The AOL hack succeeded because the attacker manipulated a tech support employee into accepting a file, bypassing technical defenses through human interaction."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Dumpster Diving' in the context of information security?",
+    "options": [
+      {
+        "statement": "Searching through digital trash bins (Recycle Bin) on a desktop.",
+        "istrue": false
+      },
+      {
+        "statement": "Physically searching through trash to find manuals, passwords, or sensitive documents.",
+        "istrue": true
+      },
+      {
+        "statement": "Recovering deleted files from a formatted hard drive.",
+        "istrue": false
+      },
+      {
+        "statement": "A slang term for using outdated software.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dumpster Diving refers to the physical act of sifting through refuse to find discarded information that can be used for social engineering or system access."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Under the Thai Computer Crime Act, why is it risky to lend your personal device or account to a friend?",
+    "options": [
+      {
+        "statement": "The device might run out of battery faster.",
+        "istrue": false
+      },
+      {
+        "statement": "The owner is legally responsible for any illegal actions committed using their device/account.",
+        "istrue": true
+      },
+      {
+        "statement": "The friend might install games that take up too much space.",
+        "istrue": false
+      },
+      {
+        "statement": "The internet speed will be throttled by the ISP.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The law holds the owner of the device or account accountable for its use. If a friend posts illegal content, the owner is liable."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Nigerian Scam' primarily exploits which human characteristic?",
+    "options": [
+      {
+        "statement": "Fear of authority.",
+        "istrue": false
+      },
+      {
+        "statement": "Greed and the desire for easy money.",
+        "istrue": true
+      },
+      {
+        "statement": "The desire to be famous.",
+        "istrue": false
+      },
+      {
+        "statement": "Technical incompetence.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Scams promising large sums of money in exchange for a small advance fee target the victim's greed."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'BotNet' composed of?",
+    "options": [
+      {
+        "statement": "A network of high-security servers used by the military.",
+        "istrue": false
+      },
+      {
+        "statement": "A collection of compromised computers (zombies) controlled by a remote attacker.",
+        "istrue": true
+      },
+      {
+        "statement": "A software program that automatically fixes bugs.",
+        "istrue": false
+      },
+      {
+        "statement": "A new type of internet cable that increases speed.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A BotNet consists of infected computers (bots/zombies) that a 'Bot Herder' controls to perform tasks like DDoS attacks or spamming."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which scenario best describes a DDoS (Distributed Denial of Service) attack?",
+    "options": [
+      {
+        "statement": "A hacker guesses a password to enter a bank account.",
+        "istrue": false
+      },
+      {
+        "statement": "A virus deletes all files on a hard drive.",
+        "istrue": false
+      },
+      {
+        "statement": "Thousands of infected computers simultaneously access a website to crash the server.",
+        "istrue": true
+      },
+      {
+        "statement": "A user is tricked into revealing their credit card number.",
+        "istrue": false
+      }
+    ],
+    "explanation": "DDoS attacks involve overwhelming a target system with traffic from multiple sources (often a BotNet) to make it unavailable to legitimate users."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Man-in-the-Middle' attack is most similar to which real-world analogy?",
+    "options": [
+      {
+        "statement": "A mailman opening your letter, changing the content, and resealing it before delivery.",
+        "istrue": true
+      },
+      {
+        "statement": "A burglar breaking a window to enter a house.",
+        "istrue": false
+      },
+      {
+        "statement": "A con artist selling a fake painting.",
+        "istrue": false
+      },
+      {
+        "statement": "A security guard checking IDs at the door.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MitM involves an attacker intercepting communication between two parties, relaying or altering messages without the parties knowing, similar to the mailman analogy."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "A valet parking attendant is given a key that only opens the car door and starts the ignition, but cannot open the trunk or glove box. Which security principle does this illustrate?",
+    "options": [
+      {
+        "statement": "Defense in Depth",
+        "istrue": false
+      },
+      {
+        "statement": "Least Privilege",
+        "istrue": true
+      },
+      {
+        "statement": "Security by Obscurity",
+        "istrue": false
+      },
+      {
+        "statement": "Fail Safe",
+        "istrue": false
+      }
+    ],
+    "explanation": "Least Privilege dictates that a user or process should only have the minimum access rights necessary to perform their specific task."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Defense in Depth' (using multiple layers of security) recommended over a single strong defense?",
+    "options": [
+      {
+        "statement": "It is cheaper to implement.",
+        "istrue": false
+      },
+      {
+        "statement": "If one layer fails or is bypassed, other layers still provide protection.",
+        "istrue": true
+      },
+      {
+        "statement": "It allows the system to run faster.",
+        "istrue": false
+      },
+      {
+        "statement": "It makes the system open source.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Defense in Depth relies on redundancy. Like a castle with a moat, walls, and guards, if an attacker breaches one layer, the system remains secure."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If a security system crashes or encounters an error, the principle of 'Secure Failure' suggests it should:",
+    "options": [
+      {
+        "statement": "Open all access points to allow debugging.",
+        "istrue": false
+      },
+      {
+        "statement": "Default to a 'closed' or 'deny all' state to maintain security.",
+        "istrue": true
+      },
+      {
+        "statement": "Automatically reboot and restore factory settings.",
+        "istrue": false
+      },
+      {
+        "statement": "Display sensitive error logs to the public.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Secure Failure (or Fail Safe/Fail Closed) ensures that when a system fails, it does not default to an insecure state (e.g., unlocking doors or granting admin access)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The principle 'Secure the weakest link' highlights that attackers often target:",
+    "options": [
+      {
+        "statement": "The most expensive firewall in the network.",
+        "istrue": false
+      },
+      {
+        "statement": "The central database server.",
+        "istrue": false
+      },
+      {
+        "statement": "Neglected devices like networked printers or IoT devices with default passwords.",
+        "istrue": true
+      },
+      {
+        "statement": "The strongest encryption algorithms.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Security is only as strong as its weakest point. Attackers look for overlooked, low-security entry points like printers or personal devices to gain initial access."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which implementation best demonstrates the principle of 'Compartmentalization'?",
+    "options": [
+      {
+        "statement": "Storing all data and the web server on the same machine for efficiency.",
+        "istrue": false
+      },
+      {
+        "statement": "Separating the Web Server from the Database Server with a firewall in between.",
+        "istrue": true
+      },
+      {
+        "statement": "Using a single master password for all accounts.",
+        "istrue": false
+      },
+      {
+        "statement": "Allowing all employees access to all files.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Compartmentalization involves isolating system components (like separating web and database servers) to limit the damage if one part is compromised."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "According to the principle of 'Simplicity', why are complex systems generally less secure?",
+    "options": [
+      {
+        "statement": "Complexity increases the likelihood of bugs and makes the system harder to understand and secure.",
+        "istrue": true
+      },
+      {
+        "statement": "Complex systems are too expensive for hackers to buy.",
+        "istrue": false
+      },
+      {
+        "statement": "Complex systems use too much electricity.",
+        "istrue": false
+      },
+      {
+        "statement": "Complexity automatically enables better encryption.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The more complex a system is, the more lines of code and interactions exist, increasing the surface area for errors (bugs) and vulnerabilities."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Applying the principle 'Promote Privacy', what should a company do regarding customer data?",
+    "options": [
+      {
+        "statement": "Collect as much data as possible for future use.",
+        "istrue": false
+      },
+      {
+        "statement": "Only collect and store information that is absolutely necessary for the transaction.",
+        "istrue": true
+      },
+      {
+        "statement": "Sell customer data to third parties to cover security costs.",
+        "istrue": false
+      },
+      {
+        "statement": "Publish customer data to prove transparency.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Minimizing data collection reduces the impact of a potential breach. If you don't store unnecessary sensitive data, it cannot be stolen."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Security by Obscurity' (hiding how the system works) considered a bad practice?",
+    "options": [
+      {
+        "statement": "Because it is illegal.",
+        "istrue": false
+      },
+      {
+        "statement": "Because secrets are hard to keep; once the method is discovered, the security is worthless.",
+        "istrue": true
+      },
+      {
+        "statement": "Because it makes the system too slow.",
+        "istrue": false
+      },
+      {
+        "statement": "Because hackers prefer open-source software.",
+        "istrue": false
+      }
+    ],
+    "explanation": "This principle states that security should rely on robust keys and proven algorithms, not on hiding the design. Insider leaks or reverse engineering can easily expose hidden methods."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Slammer Worm' incident at a nuclear power plant illustrates the danger of violating which principle?",
+    "options": [
+      {
+        "statement": "Don't extend trust easily (Trusting a contractor's laptop connection).",
+        "istrue": true
+      },
+      {
+        "statement": "Security by Obscurity.",
+        "istrue": false
+      },
+      {
+        "statement": "Least Privilege.",
+        "istrue": false
+      },
+      {
+        "statement": "Fail Safe.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The plant was infected because they trusted a contractor's laptop to connect to their internal network, bypassing the firewall. This shows that trust should not be extended blindly."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The principle 'Trust the community' suggests that when implementing encryption, you should:",
+    "options": [
+      {
+        "statement": "Invent your own secret encryption algorithm.",
+        "istrue": false
+      },
+      {
+        "statement": "Use standard, public algorithms (like AES) that have been vetted by experts.",
+        "istrue": true
+      },
+      {
+        "statement": "Avoid using encryption altogether.",
+        "istrue": false
+      },
+      {
+        "statement": "Use simple passwords instead of math.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Proprietary or 'home-grown' cryptography often contains flaws. It is safer to use community-verified standards that have withstood public scrutiny."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is the most comprehensive definition of Computer Security provided in the course?",
+    "options": [
+      {
+        "statement": "Installing an antivirus program.",
+        "istrue": false
+      },
+      {
+        "statement": "Creating a system that never crashes.",
+        "istrue": false
+      },
+      {
+        "statement": "Controlling who can do what to which resources and when.",
+        "istrue": true
+      },
+      {
+        "statement": "Stopping all internet traffic.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The course defines security essentially as Access Control: regulating users, actions, resources, and time ('Who can do what when?')."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the ultimate 'Mindset' goal for a student completing this security course?",
+    "options": [
+      {
+        "statement": "To memorize every virus name.",
+        "istrue": false
+      },
+      {
+        "statement": "To become a 'Skeptic' who questions inputs, sources, and system behaviors.",
+        "istrue": true
+      },
+      {
+        "statement": "To trust that technology will solve all problems.",
+        "istrue": false
+      },
+      {
+        "statement": "To become a hacker and destroy systems.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The course emphasizes changing the student's worldview to be skeptical—always asking 'what if?' and not trusting systems or inputs blindly."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "You receive an email from 'IT Support' asking for your password to update the system. The email contains a link. What is the most secure response?",
+    "options": [
+      {
+        "statement": "Click the link and enter the password immediately.",
+        "istrue": false
+      },
+      {
+        "statement": "Reply to the email with your password.",
+        "istrue": false
+      },
+      {
+        "statement": "Be skeptical, do not click the link, and verify the request by calling IT Support directly.",
+        "istrue": true
+      },
+      {
+        "statement": "Forward the email to your friend to ask their opinion.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Applying the 'Be Skeptical' mindset and awareness of Social Engineering, one should verify the source through a separate channel before acting."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If a developer hard-codes a secret administrative password into the application code to make debugging easier, which principle are they violating?",
+    "options": [
+      {
+        "statement": "Compartmentalization.",
+        "istrue": false
+      },
+      {
+        "statement": "It's hard to hide secrets (and Security by Obscurity).",
+        "istrue": true
+      },
+      {
+        "statement": "Defense in Depth.",
+        "istrue": false
+      },
+      {
+        "statement": "Least Privilege.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hard-coding secrets assumes no one will see the code. Once the code is analyzed or leaked, the secret is out, violating the principle that secrets are hard to hide."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ransomware is effectively a modern version of which traditional crime?",
+    "options": [
+      {
+        "statement": "Pickpocketing.",
+        "istrue": false
+      },
+      {
+        "statement": "Kidnapping / Hostage-taking.",
+        "istrue": true
+      },
+      {
+        "statement": "Trespassing.",
+        "istrue": false
+      },
+      {
+        "statement": "Vandalism.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ransomware holds digital assets (files) hostage by encrypting them and demanding payment for their release, mirroring physical kidnapping."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which action best strengthens the 'Human Factor' in security?",
+    "options": [
+      {
+        "statement": "Buying faster computers.",
+        "istrue": false
+      },
+      {
+        "statement": "Security awareness training to recognize scams and phishing.",
+        "istrue": true
+      },
+      {
+        "statement": "Disabling passwords to make logging in easier.",
+        "istrue": false
+      },
+      {
+        "statement": "Restricting all internet access.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Since humans are often the weakest link, educating them to recognize threats like Phishing and Social Engineering is a critical defense measure."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is using a 'Standard User' account instead of an 'Administrator' account for daily tasks recommended?",
+    "options": [
+      {
+        "statement": "It prevents the user from accessing the internet.",
+        "istrue": false
+      },
+      {
+        "statement": "If malware infects the machine, it is limited to the user's rights and cannot take over the whole system.",
+        "istrue": true
+      },
+      {
+        "statement": "Administrator accounts are slower.",
+        "istrue": false
+      },
+      {
+        "statement": "It saves hard drive space.",
+        "istrue": false
+      }
+    ],
+    "explanation": "This is a practical application of 'Least Privilege'. Limiting daily privileges prevents malware from easily gaining root/admin access."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "When analyzing the concept of 'Resources' in computer security, which of the following is NOT just a file but also a resource that needs protection?",
+    "options": [
+      {
+        "statement": "CPU Processing Power.",
+        "istrue": false
+      },
+      {
+        "statement": "Network Bandwidth.",
+        "istrue": false
+      },
+      {
+        "statement": "System Memory (RAM).",
+        "istrue": false
+      },
+      {
+        "statement": "All of the above.",
+        "istrue": true
+      }
+    ],
+    "explanation": "Security protects resources from unauthorized use. Botnets, for example, steal CPU and Bandwidth, not just data files."
+  }
+]

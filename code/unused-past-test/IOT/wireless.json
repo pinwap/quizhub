@@ -1,0 +1,1106 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความท้าทายที่แตกต่างกัน 2 ประการที่ระบุไว้ในบทนำของเครือข่ายไร้สายและอุปกรณ์เคลื่อนที่?",
+    "options": [
+      {
+        "statement": "ความท้าทายด้าน 'wireless' (การสื่อสารผ่านลิงก์ไร้สาย) และ 'mobility' (การจัดการผู้ใช้ที่เปลี่ยนจุดเชื่อมต่อ)",
+        "istrue": true
+      },
+      {
+        "statement": "ความท้าทายด้าน '4G' (ความเร็ว) และ '5G' (ความหน่วงต่ำ)",
+        "istrue": false
+      },
+      {
+        "statement": "ความท้าทายด้าน 'WiFi' (ระยะทางสั้น) และ 'Cellular' (ระยะทางไกล)",
+        "istrue": false
+      },
+      {
+        "statement": "ความท้าทายด้าน 'SDN' (การควบคุม) และ 'IP' (การกำหนดแอดเดรส)",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุว่ามีความท้าทายที่สำคัญ 2 ประการที่แตกต่างกัน: 'wireless' ซึ่งเกี่ยวข้องกับการสื่อสารผ่านตัวกลางไร้สาย และ 'mobility' ซึ่งเกี่ยวข้องกับการจัดการผู้ใช้ที่กำลังเคลื่อนที่และเปลี่ยนจุดเชื่อมต่อเครือข่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามคำนิยาม 'wireless hosts' ข้อใดกล่าวถูกต้องเกี่ยวกับความสัมพันธ์ระหว่าง 'wireless' และ 'mobility'?",
+    "options": [
+      {
+        "statement": "อุปกรณ์ wireless จะต้องเป็น mobile เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "อุปกรณ์ mobile จะต้องเป็น wireless เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "คำว่า 'wireless' ไม่ได้หมายความว่าต้องมี 'mobility' เสมอไป",
+        "istrue": true
+      },
+      {
+        "statement": "อุปกรณ์ wireless hosts ไม่สามารถเป็นอุปกรณ์ IoT ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาเน้นย้ำว่า 'wireless hosts' (เช่น แล็ปท็อป, สมาร์ทโฟน, IoT) อาจเป็นแบบ 'stationary (non-mobile)' หรือ 'mobile' ก็ได้ และระบุชัดเจนว่า 'wireless does not always mean mobility!'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในเครือข่ายไร้สายแบบ 'infrastructure mode' หน้าที่หลักของ 'base station' (เช่น AP หรือ Cell Tower) คืออะไร?",
+    "options": [
+      {
+        "statement": "ทำหน้าที่เป็น 'wireless host' เพื่อรันแอปพลิเคชัน",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น 'relay' ส่งแพ็กเก็ตระหว่างเครือข่ายแบบมีสาย (wired network) และ wireless host(s)",
+        "istrue": true
+      },
+      {
+        "statement": "สร้างเครือข่าย 'ad hoc' สำหรับการสื่อสารระหว่างโฮสต์เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "จัดการการกำหนดเส้นทาง (routing) ระหว่างประเทศ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Base station (เช่น 802.11 access points หรือ cell towers) ทำหน้าที่เป็นจุดเชื่อมต่อหลัก โดยเชื่อมต่อกับเครือข่ายแบบมีสายและทำหน้าที่เป็นตัวกลาง (relay) ในการส่งข้อมูลไปยังอุปกรณ์ไร้สายในพื้นที่บริการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือลักษณะสำคัญของเครือข่ายไร้สายแบบ 'ad hoc mode'?",
+    "options": [
+      {
+        "statement": "ต้องมี base station (AP) อย่างน้อยหนึ่งตัวเพื่อเชื่อมต่ออินเทอร์เน็ต",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดต่างๆ (nodes) สามารถสื่อสารกันเองได้โดยตรงหากอยู่ในระยะลิงก์ และต้องจัดระเบียบเครือข่ายกันเอง",
+        "istrue": true
+      },
+      {
+        "statement": "ทุกโหนดต้องเชื่อมต่อกับ 'wired network infrastructure' โดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่จำเป็นต้องใช้ 'multiple access protocol'",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน 'ad hoc mode' ไม่มี base stations หรือโครงสร้างพื้นฐานกลาง โหนดต่างๆ จะสื่อสารกันเอง (route among themselves) หากอยู่ในระยะครอบคลุม (link coverage) ของกันและกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามตาราง 'Wireless network taxonomy' เครือข่าย WiFi สาธารณะที่ผู้ใช้เชื่อมต่อแล็ปท็อปกับ AP เพื่อเข้าอินเทอร์เน็ต จัดอยู่ในประเภทใด?",
+    "options": [
+      {
+        "statement": "Single hop, no infrastructure",
+        "istrue": false
+      },
+      {
+        "statement": "Single hop, infrastructure",
+        "istrue": true
+      },
+      {
+        "statement": "Multiple hops, no infrastructure (MANET)",
+        "istrue": false
+      },
+      {
+        "statement": "Multiple hops, infrastructure (Mesh net)",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเชื่อมต่อ WiFi กับ AP เป็นการเชื่อมต่อแบบ 'single hop' (จากโฮสต์ไปยัง AP) และเนื่องจากมี AP (base station) ที่เชื่อมต่อกับอินเทอร์เน็ต จึงจัดเป็นประเภท 'infrastructure'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เครือข่าย 'MANET' (Mobile Ad hoc NETwork) ที่โหนดต่างๆ ต้องส่งข้อมูลต่อกันเป็นทอดๆ เพื่อไปให้ถึงโหนดปลายทาง จัดอยู่ในประเภทใดตามตาราง 'Wireless network taxonomy'?",
+    "options": [
+      {
+        "statement": "Single hop, infrastructure",
+        "istrue": false
+      },
+      {
+        "statement": "Single hop, no infrastructure",
+        "istrue": false
+      },
+      {
+        "statement": "Multiple hops, no infrastructure",
+        "istrue": true
+      },
+      {
+        "statement": "Multiple hops, infrastructure",
+        "istrue": false
+      }
+    ],
+    "explanation": "MANET โดยคำนิยามคือ 'ad hoc' (no infrastructure) และการที่โหนดต้อง 'relay' หรือส่งต่อข้อมูลกันเป็นทอดๆ หมายความว่าเป็น 'multiple hops'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากกราฟ 'Characteristics of selected wireless links' เทคโนโลยีใดถูกออกแบบมาให้มี 'Range' (ระยะทาง) ที่ไกลที่สุด (Long range outdoor)?",
+    "options": [
+      {
+        "statement": "802.11ax (WiFi 6)",
+        "istrue": false
+      },
+      {
+        "statement": "802.11ac (WiFi 5)",
+        "istrue": false
+      },
+      {
+        "statement": "4G LTE และ 5G",
+        "istrue": true
+      },
+      {
+        "statement": "Bluetooth",
+        "istrue": false
+      }
+    ],
+    "explanation": "กราฟแท่งแสดงให้เห็นว่า 4G LTE และ 5G มีระยะครอบคลุมที่ยาวที่สุด โดยขยายไปถึง 'Long range outdoor' (4Km-15Km) ในขณะที่ WiFi ส่วนใหญ่จำกัดอยู่ที่ 'Indoor' หรือ 'Outdoor' (50-200m)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กราฟ 'Characteristics of selected wireless links' แสดงให้เห็นถึงความสัมพันธ์ (Trade-off) โดยทั่วไประหว่าง 802.11ax (WiFi 6) และ 4G/5G อย่างไร?",
+    "options": [
+      {
+        "statement": "WiFi 6 มี Data Rate สูงสุด แต่มี Range ที่สั้นกว่า 4G/5G",
+        "istrue": true
+      },
+      {
+        "statement": "WiFi 6 มี Range ไกลที่สุด แต่มี Data Rate ต่ำสุด",
+        "istrue": false
+      },
+      {
+        "statement": "4G/5G มี Data Rate สูงกว่า WiFi 6 และ Range ก็ไกลกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "Bluetooth มี Data Rate สูงกว่า 4G LTE",
+        "istrue": false
+      }
+    ],
+    "explanation": "กราฟแสดง 802.11ax (WiFi 6) ที่อัตราข้อมูลสูงสุด (14 Gbps) แต่มีระยะจำกัด (Indoor/Outdoor 50-200m) ในขณะที่ 5G มีอัตราข้อมูลสูง (10 Gbps) แต่มีระยะที่ไกลกว่ามาก (Long range outdoor)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือมาตรฐาน 802.11 ที่ถูกออกแบบมาสำหรับ 'Midrange outdoor' (200m-4Km) โดยเฉพาะ ซึ่งแตกต่างจาก WiFi ทั่วไป?",
+    "options": [
+      {
+        "statement": "802.11n และ 802.11ac",
+        "istrue": false
+      },
+      {
+        "statement": "802.11b และ 802.11g",
+        "istrue": false
+      },
+      {
+        "statement": "802.11af และ 802.11ah",
+        "istrue": true
+      },
+      {
+        "statement": "802.11ax (WiFi 6)",
+        "istrue": false
+      }
+    ],
+    "explanation": "กราฟแท่งแสดงให้เห็นว่า 802.11af และ 802.11ah ขยายระยะครอบคลุมไปถึง 'Midrange outdoor' ซึ่งแตกต่างจากมาตรฐาน WiFi อื่นๆ ที่เน้น Indoor/Short-range"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "อะไรคือ 'Hidden terminal problem' (ปัญหาโหนดที่ซ่อนอยู่) ในเครือข่ายไร้สาย?",
+    "options": [
+      {
+        "statement": "โหนด A และ C สามารถได้ยินกันและกัน แต่ไม่สามารถได้ยิน B",
+        "istrue": false
+      },
+      {
+        "statement": "โหนด A, B, และ C สามารถได้ยินกันและกันทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "โหนด A และ C ไม่สามารถได้ยินกันและกัน (เนื่องจากสิ่งกีดขวางหรือ attenuation) แต่ทั้งคู่สามารถได้ยิน B",
+        "istrue": true
+      },
+      {
+        "statement": "โหนด B ถูกซ่อนจากเครือข่ายและไม่สามารถสื่อสารได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "ปัญหา 'hidden terminal' เกิดขึ้นเมื่อ A และ C อยู่ไกลกันหรือมีสิ่งกีดขวาง ทำให้ไม่รู้ว่าอีกฝ่ายกำลังส่งสัญญาณ แต่ทั้งคู่ส่งสัญญาณไปที่ B พร้อมกัน ทำให้เกิดการชนกัน (interference) ที่ B โดยที่ A และ C ไม่รู้ตัว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เนื้อหาระบุว่า 'Attenuation' (การลดทอนของสัญญาณ) สามารถก่อให้เกิด 'hidden terminal problem' ได้อย่างไร?",
+    "options": [
+      {
+        "statement": "โดยการขยายสัญญาณของ A และ C ให้แรงขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการทำให้สัญญาณของ A และ C อ่อนแอลงตามระยะทาง จนไม่สามารถได้ยินกันและกัน แต่ยังแรงพอที่จะไปถึง B ที่อยู่ตรงกลาง",
+        "istrue": true
+      },
+      {
+        "statement": "โดยการย้ายตำแหน่งของ B ไปอยู่หลังสิ่งกีดขวาง",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการเปลี่ยนย่านความถี่ของ A และ C",
+        "istrue": false
+      }
+    ],
+    "explanation": "Attenuation คือการที่สัญญาณอ่อนลงตามระยะทาง แม้ไม่มีสิ่งกีดขวาง A และ C อาจอยู่ไกลกันจนสัญญาณอ่อนเกินกว่าจะตรวจจับกันได้ แต่ทั้งคู่อาจอยู่ใกล้ B พอที่ B จะรับสัญญาณได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หลักการสำคัญของ 'Code Division Multiple Access (CDMA)' คืออะไร?",
+    "options": [
+      {
+        "statement": "ผู้ใช้แต่ละคนจะได้รับช่องความถี่ (frequency) ที่แตกต่างกัน",
+        "istrue": false
+      },
+      {
+        "statement": "ผู้ใช้แต่ละคนจะได้รับช่วงเวลา (time slot) ที่แตกต่างกัน",
+        "istrue": false
+      },
+      {
+        "statement": "ผู้ใช้ทุกคนใช้ความถี่เดียวกัน แต่ผู้ใช้แต่ละคนมี 'code' (chipping sequence) ที่ไม่ซ้ำกันเพื่อเข้ารหัสข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "ผู้ใช้ที่ต้องการส่งต้องรอให้ช่องสัญญาณว่างก่อน",
+        "istrue": false
+      }
+    ],
+    "explanation": "CDMA อนุญาตให้ผู้ใช้หลายคนส่งข้อมูลพร้อมกันบนความถี่เดียวกัน โดยใช้ 'code' ที่มีคุณสมบัติ 'orthogonal' (ตั้งฉากกัน) เพื่อแยกแยะสัญญาณของผู้ใช้แต่ละคน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามตารางสรุปมาตรฐาน IEEE 802.11 ข้อใดคือการเปลี่ยนแปลงที่สำคัญที่สุดจาก 802.11g ไป 802.11n (WiFi 4)?",
+    "options": [
+      {
+        "statement": "เปลี่ยนไปใช้ความถี่ 5 GHz เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพิ่ม Data Rate อย่างก้าวกระโดด (54 Mbps เป็น 600 Mbps) และรองรับทั้ง 2.4 และ 5 GHz",
+        "istrue": true
+      },
+      {
+        "statement": "ลดระยะทาง (Range) ลงเหลือ 30m",
+        "istrue": false
+      },
+      {
+        "statement": "เปลี่ยนไปใช้มาตรฐาน 802.11af",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตารางแสดงให้เห็นว่า 802.11n (WiFi 4) มี Max data rate 600 Mbps (เทียบกับ 54 Mbps ของ 802.11g) และเป็นมาตรฐานแรกในรายการที่รองรับทั้งย่านความถี่ 2.4 และ 5 GHz"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "มาตรฐาน 802.11 ใดที่ถูกออกแบบมาเพื่อใช้ย่านความถี่ 'unused TV bands (54-790 MHz)' และ 900 MHz เพื่อให้ได้ระยะทาง 1 Km?",
+    "options": [
+      {
+        "statement": "802.11ac (WiFi 5) และ 802.11ax (WiFi 6)",
+        "istrue": false
+      },
+      {
+        "statement": "802.11b และ 802.11g",
+        "istrue": false
+      },
+      {
+        "statement": "802.11af และ 802.11ah",
+        "istrue": true
+      },
+      {
+        "statement": "802.11n (WiFi 4)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตารางระบุว่า 802.11af ใช้ 'unused TV bands' และ 802.11ah ใช้ '900 Mhz' ซึ่งทั้งคู่มีระยะทาง 1 Km ซึ่งแตกต่างจากมาตรฐาน WiFi ทั่วไปที่ใช้ 2.4/5 GHz"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม 802.11 LAN แบบ 'infrastructure mode' กลุ่มของ wireless hosts และ Access Point (AP) หนึ่งตัว เรียกว่าอะไร?",
+    "options": [
+      {
+        "statement": "Wired Network Infrastructure",
+        "istrue": false
+      },
+      {
+        "statement": "Basic Service Set (BSS) (หรือ 'cell')",
+        "istrue": true
+      },
+      {
+        "statement": "Ad hoc mode",
+        "istrue": false
+      },
+      {
+        "statement": "Router",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาและแผนภาพ 802.11 LAN architecture นิยาม BSS (Basic Service Set) หรือ 'cell' ว่าประกอบด้วย wireless hosts และ access point (AP) หนึ่งตัวใน infrastructure mode"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดผู้ดูแลระบบเครือข่าย 2.4 GHz จึงควรเลือกใช้ช่องสัญญาณ (channels) 1, 6, และ 11 ในบริเวณที่มี AP หนาแน่น?",
+    "options": [
+      {
+        "statement": "เพราะเป็น 3 ช่องสัญญาณเดียวที่ใช้ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะช่องสัญญาณเหล่านี้มี Data Rate สูงที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะช่องสัญญาณ 1, 6, และ 11 เป็นช่องที่ 'non-overlapping' (ไม่ทับซ้อนกัน) ซึ่งช่วยลดการรบกวน (interference) ระหว่าง APs",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะช่องสัญญาณ 1, 6, และ 11 มีระยะทางไกลที่สุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ 'Example: 2.4 GHz' แสดงให้เห็นว่าช่องสัญญาณ WiFi 2.4 GHz ส่วนใหญ่ (เช่น 2, 3, 4) ทับซ้อนกัน มีเพียงช่อง 1, 6, และ 11 ที่เป็นอิสระจากกันอย่างสมบูรณ์ในย่านความถี่นี้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในกระบวนการ 'association' ของ 802.11 แบบ 'passive scanning' host (H1) ค้นหา AP ได้อย่างไร?",
+    "options": [
+      {
+        "statement": "H1 ส่ง 'Probe Request' ไปยังทุกช่องสัญญาณ",
+        "istrue": false
+      },
+      {
+        "statement": "H1 'สแกน' ช่องสัญญาณต่างๆ เพื่อ 'ฟัง' (listening) 'beacon frames' ที่ APs ส่งออกมา",
+        "istrue": true
+      },
+      {
+        "statement": "H1 ต้องรู้ MAC address ของ AP ล่วงหน้า",
+        "istrue": false
+      },
+      {
+        "statement": "H1 เชื่อมต่อกับ AP ที่สัญญาณแรงที่สุดโดยอัตโนมัติโดยไม่สแกน",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน 'passive scanning' host จะไม่ส่งสัญญาณใดๆ ออกไป แต่จะเปลี่ยนช่องสัญญาณไปเรื่อยๆ เพื่อรอรับ 'beacon frames' (ขั้นตอนที่ 1) ที่ APs ส่งออกมาเป็นประจำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือขั้นตอนที่ถูกต้องของ 'active scanning' ใน 802.11?",
+    "options": [
+      {
+        "statement": "AP ส่ง Probe Request, H1 ส่ง Probe Response",
+        "istrue": false
+      },
+      {
+        "statement": "H1 ส่ง Probe Request, APs ส่ง Probe Response, H1 เลือก AP และส่ง Association Request",
+        "istrue": true
+      },
+      {
+        "statement": "H1 ส่ง Association Request ทันที",
+        "istrue": false
+      },
+      {
+        "statement": "H1 รอฟัง Beacon frames เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน 'active scanning' host (H1) จะเป็นฝ่ายเริ่มต้นโดยการ 'broadcast Probe Request' (ขั้นตอนที่ 1) จากนั้น APs ที่ได้ยินจะส่ง 'Probe Response' กลับมา (ขั้นตอนที่ 2) H1 จึงเลือก AP ที่ต้องการและส่ง 'Association Request' (ขั้นตอนที่ 3)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด IEEE 802.11 (WiFi) จึงใช้ CSMA/CA (Collision Avoidance) แทนที่จะเป็น CSMA/CD (Collision Detection) ที่ใช้ใน Ethernet แบบมีสาย?",
+    "options": [
+      {
+        "statement": "เพราะ CSMA/CA เร็วกว่า CSMA/CD",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ CSMA/CD ซับซ้อนเกินไปสำหรับอุปกรณ์ไร้สาย",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะสำหรับโหนดไร้สาย มันเป็นเรื่องยากที่จะ 'ตรวจจับ' (sense) การชนกันของสัญญาณ ในขณะที่ตัวเองกำลัง 'ส่ง' (transmitting) สัญญาณที่แรงกว่ามาก",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ 802.11 ไม่เคยมีการชนกันของสัญญาณ",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุว่า 802.11 'no collision detection!' เพราะ 'difficult to sense collisions' เนื่องจากสัญญาณที่กำลังส่ง (high transmitting signal) จะกลบสัญญาณที่รับเข้ามา (weak received signal)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในโปรโตคอล 802.11 MAC หาก 'sender' ตรวจสอบช่องสัญญาณ (sense channel) และพบว่า 'busy' จะเกิดอะไรขึ้นต่อไป?",
+    "options": [
+      {
+        "statement": "Sender จะส่งข้อมูลทันทีเพื่อแย่งช่องสัญญาณ",
+        "istrue": false
+      },
+      {
+        "statement": "Sender จะเริ่ม 'random backoff time' และจะส่งเมื่อตัวนับเวลานี้หมดลงและช่องสัญญาณว่าง",
+        "istrue": true
+      },
+      {
+        "statement": "Sender จะปิดการเชื่อมต่อและลองใหม่ในภายหลัง",
+        "istrue": false
+      },
+      {
+        "statement": "Sender จะส่ง 'RTS' (Request-to-Send) ทันที",
+        "istrue": false
+      }
+    ],
+    "explanation": "กฎข้อที่ 2 ของ '802.11 sender' ระบุว่า 'if sense channel busy then start random backoff time' ซึ่งเป็นกลไกหลักของ Collision Avoidance เพื่อป้องกันไม่ให้ทุกโหนดชนกันทันทีที่ช่องสัญญาณว่าง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด 'receiver' ใน 802.11 จึงต้องส่ง 'ACK' (Acknowledgment) กลับไปหลังจากได้รับ 'data frame'?",
+    "options": [
+      {
+        "statement": "เพื่อขอข้อมูลเพิ่มเติม",
+        "istrue": false
+      },
+      {
+        "statement": "ACK เป็นสิ่งจำเป็นเนื่องจากปัญหา 'hidden terminal' ซึ่ง sender ไม่สามารถรู้ได้เองว่าข้อมูลไปถึงหรือเกิดการชนกันที่ปลายทางหรือไม่",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อบอก sender ให้หยุดส่งข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "ACK เป็นทางเลือก (optional) ใน 802.11",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหา '802.11 receiver' ระบุชัดเจนว่า 'ACK needed due to hidden terminal problem' เพราะ sender ไม่สามารถ 'detect collision' ได้ จึงต้องอาศัย ACK เพื่อยืนยันว่าข้อมูลถึง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างหลักระหว่าง 'DIFS' (Distributed Interframe Space) และ 'SIFS' (Short Interframe Space)?",
+    "options": [
+      {
+        "statement": "DIFS เป็นเวลารอสำหรับ sender ก่อนส่ง 'data' ใหม่, SIFS เป็นเวลารอสำหรับ receiver ก่อนส่ง 'ACK' (และ SIFS สั้นกว่า DIFS)",
+        "istrue": true
+      },
+      {
+        "statement": "SIFS เป็นเวลารอสำหรับ sender, DIFS เป็นเวลารอสำหรับ receiver",
+        "istrue": false
+      },
+      {
+        "statement": "DIFS และ SIFS มีความยาวเท่ากัน",
+        "istrue": false
+      },
+      {
+        "statement": "DIFS ใช้ใน CSMA/CD แต่ SIFS ใช้ใน CSMA/CA",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดงให้เห็นว่า 'sender' รอ 'DIFS' (นานกว่า) ก่อนเริ่มส่ง 'data' ในขณะที่ 'receiver' รอ 'SIFS' (สั้นกว่า) ก่อนตอบกลับด้วย 'ACK' การที่ SIFS สั้นกว่าทำให้ ACK มีลำดับความสำคัญสูงกว่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กลไก 'RTS-CTS exchange' (Request-to-Send / Clear-to-Send) ถูกนำมาใช้เพื่อแก้ปัญหาใดเป็นหลัก?",
+    "options": [
+      {
+        "statement": "เพื่อเพิ่ม data rate ของเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแก้ปัญหา 'hidden terminal' โดยการ 'จอง' (reserves) ช่องสัญญาณก่อนส่ง 'data frame' ยาวๆ",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อเข้ารหัสข้อมูลที่ส่ง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อค้นหา AP ที่อยู่ใกล้ที่สุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "RTS/CTS เป็นกลไก Collision Avoidance (หลีกเลี่ยงการชนกัน) โดย sender (A) ส่ง RTS (แพ็กเก็ตสั้น) ไปยัง AP (B) และ AP (B) ตอบกลับด้วย CTS (แพ็กเก็ตสั้น) ซึ่ง CTS นี้จะถูกได้ยินโดยโหนดอื่นๆ (รวมถึง C ที่เป็น hidden terminal) ทำให้โหนดเหล่านั้น 'defer' (หยุด) ไม่ส่งข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถานการณ์ที่ 'reservation collision' เกิดขึ้น (ดังแสดงในแผนภาพ RTS/CTS) หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "DATA (A) ชนกับ ACK(A)",
+        "istrue": false
+      },
+      {
+        "statement": "RTS(A) และ RTS(B) (จาก 2 โหนดที่ต่างกัน) ถูกส่งในเวลาเดียวกันและชนกัน ทำให้ไม่มีใครได้รับ CTS",
+        "istrue": true
+      },
+      {
+        "statement": "CTS(A) ชนกับ DATA(A)",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดที่ 'defer' ส่งข้อมูลออกมา",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดง 'reservation collision' ที่จุดซึ่ง 'RTS(A)' และ 'RTS(B)' ทับซ้อนกัน หมายความว่าความพยายาม 'จอง' ช่องสัญญาณล้มเหลวเนื่องจากการชนกันของแพ็กเก็ต RTS"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในโครงสร้าง 802.11 frame เหตุใดจึงอาจต้องมี MAC address ถึง 4 ช่อง (address 1, 2, 3, 4)?",
+    "options": [
+      {
+        "statement": "เพื่อส่งข้อมูลไปยัง 4 ผู้รับพร้อมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อระบุ MAC address ของ AP (ผู้รับทันที), H1 (ผู้ส่งดั้งเดิม), และ R1 (ปลายทางสุดท้ายใน subnet) และ address 4 สำหรับโหมด ad hoc",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นข้อผิดพลาดในมาตรฐาน 802.11 ควรมีเพียง 2",
+        "istrue": false
+      },
+      {
+        "statement": "Address 1-2 สำหรับ IPv4 และ Address 3-4 สำหรับ IPv6",
+        "istrue": false
+      }
+    ],
+    "explanation": "เครือข่ายไร้สายมีความซับซ้อนกว่า Ethernet จึงต้องใช้ address หลายช่อง: Address 2 (Transmitter/Source H1), Address 1 (Receiver/AP), และ Address 3 (Destination/Router R1) ส่วน Address 4 ใช้ในโหมดพิเศษเช่น WDS หรือ ad hoc"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อ wireless host (H1) ส่งข้อมูลไปยัง router (R1) ผ่านทาง Access Point (AP), 'Address 1' และ 'Address 3' ใน 802.11 frame คืออะไรตามลำดับ?",
+    "options": [
+      {
+        "statement": "Address 1: R1 MAC, Address 3: AP MAC",
+        "istrue": false
+      },
+      {
+        "statement": "Address 1: AP MAC, Address 3: R1 MAC",
+        "istrue": true
+      },
+      {
+        "statement": "Address 1: H1 MAC, Address 3: AP MAC",
+        "istrue": false
+      },
+      {
+        "statement": "Address 1: R1 MAC, Address 3: H1 MAC",
+        "istrue": false
+      }
+    ],
+    "explanation": "Address 1 คือผู้รับทางกายภาพ (wireless hop) ถัดไป ซึ่งก็คือ AP MAC Address 2 คือผู้ส่งดั้งเดิม (H1 MAC) Address 3 คือปลายทางตรรกะสุดท้ายใน subnet (R1 MAC)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากแผนภาพ '802.11 frame: addressing' (H1 -> AP -> R1) จะเกิดอะไรขึ้นกับ frame เมื่อไปถึง AP?",
+    "options": [
+      {
+        "statement": "AP จะส่งต่อ 802.11 frame ทั้งหมดไปยัง R1 โดยไม่เปลี่ยนแปลง",
+        "istrue": false
+      },
+      {
+        "statement": "AP จะแกะ (un-encapsulate) 802.11 frame, นำ payload (IP datagram) ออกมา, และสร้าง 802.3 Ethernet frame ใหม่เพื่อส่งไปยัง R1",
+        "istrue": true
+      },
+      {
+        "statement": "AP จะแปลง 802.11 frame เป็น 802.3 frame โดยใช้แค่ Address 4",
+        "istrue": false
+      },
+      {
+        "statement": "AP จะทิ้ง frame นั้นหาก Address 3 ไม่ใช่ AP MAC",
+        "istrue": false
+      }
+    ],
+    "explanation": "AP ทำหน้าที่เป็น 'bridge' ระหว่างเครือข่ายไร้สาย (802.11) และเครือข่ายมีสาย (802.3) มันจะรับ 802.11 frame, แกะ IP datagram (payload) ออกมา, แล้วห่อหุ้มใหม่ (re-encapsulate) ใน 802.3 Ethernet frame เพื่อส่งต่อไปยัง router R1"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อมูลใด 'ไม่' อยู่ใน 'frame control' field (ขนาด 2 bytes) ของ 802.11 frame?",
+    "options": [
+      {
+        "statement": "Type และ Subtype (เช่น RTS, CTS, ACK, data)",
+        "istrue": false
+      },
+      {
+        "statement": "To AP / From AP flags",
+        "istrue": false
+      },
+      {
+        "statement": "Sequence control (หมายเลขลำดับ frame)",
+        "istrue": true
+      },
+      {
+        "statement": "WEP (flag การเข้ารหัส)",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ '802.11 frame: addressing' (ที่มีรายละเอียด frame control) แสดงให้เห็นว่า 'seq control' (Sequence control) เป็น field แยกต่างหาก (ขนาด 2 bytes) ไม่ได้เป็นส่วนหนึ่งของ 'frame control' field"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถานการณ์ 'mobility within same subnet' (เช่น H1 ย้ายจาก AP1 ไป AP2 ในตึกเดียวกัน) ข้อใดถูกต้อง?",
+    "options": [
+      {
+        "statement": "H1 ต้องเปลี่ยน IP address ใหม่ทุกครั้งที่ย้าย AP",
+        "istrue": false
+      },
+      {
+        "statement": "H1 สามารถใช้ IP address เดิมได้, และ switch จะ 'เรียนรู้' (self-learning) ตำแหน่งใหม่ของ H1 (ว่าตอนนี้อยู่ port ไหน) เมื่อ H1 ส่ง frame แรก",
+        "istrue": true
+      },
+      {
+        "statement": "H1 ต้องทำการ 'direct routing' กับ router",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อ TCP จะต้องตัดและเริ่มใหม่เสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตราบใดที่ H1 ยังอยู่ใน IP subnet เดิม (เช่น AP1 และ AP2 เชื่อมต่อกับ switch ตัวเดียวกัน) H1 ไม่จำเป็นต้องเปลี่ยน IP address กระบวนการนี้เรียกว่า 'handoff' ใน Layer 2 และ switch ที่เชื่อมต่อ APs จะใช้ 'self-learning' เพื่ออัปเดตตาราง MAC address"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามคำนิยาม 'Bluetooth' ถูกออกแบบมาเพื่อวัตถุประสงค์หลักใด?",
+    "options": [
+      {
+        "statement": "ให้บริการอินเทอร์เน็ตความเร็วสูงทั่วเมือง (WAN)",
+        "istrue": false
+      },
+      {
+        "statement": "สร้างเครือข่าย 'ad hoc' ระยะสั้น (Personal Area Network, <10m) เพื่อ 'ทดแทนสายเคเบิล' (เช่น เมาส์, หูฟัง)",
+        "istrue": true
+      },
+      {
+        "statement": "แข่งขันกับ WiFi 6 (802.11ax) ในด้าน data rate",
+        "istrue": false
+      },
+      {
+        "statement": "จัดการการเชื่อมต่อ 5G",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bluetooth เป็นเทคโนโลยี Personal Area Network (PAN) ที่มีรัศมีน้อยกว่า 10 เมตร และถูกออกแบบมาเพื่อทดแทนสายเคเบิลสำหรับอุปกรณ์ต่อพ่วง เช่น เมาส์ คีย์บอร์ด และหูฟัง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในเครือข่าย Bluetooth Piconet ข้อใดคือบทบาทของ 'Master controller' (M)?",
+    "options": [
+      {
+        "statement": "เป็นอุปกรณ์ที่ 'Parked' (P) หรือ inactive",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นผู้ 'polling' (สอบถาม) client devices (C) และ 'grants requests' (อนุญาต) ให้ client ส่งข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "เป็น Client device (C) ที่ร้องขอการส่งข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น AP ที่เชื่อมต่อกับ wired network",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bluetooth ทำงานในโหมด master-client โดย 'Master controller' (M) จะควบคุมการสื่อสารทั้งหมด โดยการ 'poll' (ถาม) client (C) และอนุญาตให้ส่งข้อมูลเมื่อได้รับการร้องขอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แอปพลิเคชัน 'Pandemic + Bluetooth' (Contact Tracing) ทำงานอย่างไร?",
+    "options": [
+      {
+        "statement": "โทรศัพท์จะอัปโหลดตำแหน่ง GPS ของผู้ใช้ไปยัง cloud ตลอดเวลา",
+        "istrue": false
+      },
+      {
+        "statement": "โทรศัพท์จะแลกเปลี่ยน 'anonymous identifier beacons' (ที่เปลี่ยนบ่อย) กับโทรศัพท์เครื่องอื่นที่อยู่ใกล้, และอัปโหลด 'keys' ของตนเองเมื่อได้รับการวินิจฉัย (Positive)",
+        "istrue": true
+      },
+      {
+        "statement": "โทรศัพท์จะส่ง SMS แจ้งเตือนทุกคนที่อยู่ในรัศมี 10 เมตร",
+        "istrue": false
+      },
+      {
+        "statement": "ต้องให้ Bob (ผู้ติดเชื้อ) กรอกหมายเลขโทรศัพท์ของ Alice (ผู้สัมผัส) ด้วยตนเอง",
+        "istrue": false
+      }
+    ],
+    "explanation": "กระบวนการนี้อาศัย Bluetooth Low Energy เพื่อแลกเปลี่ยน 'anonymous identifier beacons' เมื่อ Bob ได้รับการวินิจฉัยและยินยอม, เขาจะอัปโหลด 'keys' ที่ใช้สร้าง beacons ของเขาใน 14 วันที่ผ่านมา เพื่อให้ Alice สามารถตรวจสอบย้อนหลังได้ว่าเคยสัมผัส keys เหล่านั้นหรือไม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือ 'ความแตกต่าง' (differences) ที่สำคัญระหว่าง 4G/5G Cellular และ Wired Internet?",
+    "options": [
+      {
+        "statement": "Cellular ใช้ IP, Wired Internet ไม่ใช้ IP",
+        "istrue": false
+      },
+      {
+        "statement": "Cellular มี 'mobility as a 1st class service', มี 'user identity (via SIM card)', และมี 'strong notion of 'home network''",
+        "istrue": true
+      },
+      {
+        "statement": "Cellular ไม่มี core network, Wired Internet มี core network",
+        "istrue": false
+      },
+      {
+        "statement": "Cellular ไม่รองรับ TCP/UDP",
+        "istrue": false
+      }
+    ],
+    "explanation": "แม้ว่าทั้งคู่จะใช้โปรโตคอล IP stack แต่ Cellular ถูกออกแบบมาโดยมี 'mobility' เป็นบริการหลัก, มีการยืนยันตัวตนผู้ใช้ที่ชัดเจน (SIM card) และแนวคิดเรื่อง 'home network' (ผู้ให้บริการ) เทียบกับ 'visited network' (roaming)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรมเครือข่าย Cellular, 'Home Subscriber Server (HSS)' ใน 'home network' ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "เป็น base station ที่ mobile device เชื่อมต่อ",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น gateway (P-GW) ที่เชื่อมต่อกับ public Internet",
+        "istrue": false
+      },
+      {
+        "statement": "เก็บข้อมูล 'identity & services info' ของผู้ใช้, และทำงานทั้งเมื่อผู้ใช้อยู่ใน 'home network' และ 'roaming'",
+        "istrue": true
+      },
+      {
+        "statement": "เป็น 'visited network' ที่ผู้ใช้กำลังเชื่อมต่อชั่วคราว",
+        "istrue": false
+      }
+    ],
+    "explanation": "HSS คือฐานข้อมูลกลางใน 'home network' ของผู้ใช้ มันเก็บข้อมูลโปรไฟล์, การยืนยันตัวตน, และบริการที่ผู้ใช้สมัครไว้ และจะถูกอ้างอิงเสมอไม่ว่าผู้ใช้จะอยู่ที่ไหน (home หรือ roaming)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด 'ไม่ใช่' หนึ่งในสามสถานการณ์การใช้งานหลัก (usage scenarios) ของ 'Future IMT' (เช่น 5G)?",
+    "options": [
+      {
+        "statement": "Enhanced mobile broadband (eMBB) (เช่น 3D video, UHD screens)",
+        "istrue": false
+      },
+      {
+        "statement": "Massive machine type communications (mMTC) (เช่น Smart home/city, IoT)",
+        "istrue": false
+      },
+      {
+        "statement": "Ultra-reliable and low latency communications (URLLC) (เช่น Self-driving car, Industry automation)",
+        "istrue": false
+      },
+      {
+        "statement": "Legacy 2G/3G communications (การรองรับระบบเก่า)",
+        "istrue": true
+      }
+    ],
+    "explanation": "แผนภาพรูปสามเหลี่ยมของ ITU-R M.2083-0 (2015) ระบุ 3 สถานการณ์หลักของ 5G คือ eMBB (เน้นเร็ว), mMTC (เน้นเยอะ), และ URLLC (เน้นเสถียร/ไม่ดีเลย์) การรองรับระบบเก่าไม่ใช่สถานการณ์การใช้งานใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แอปพลิเคชัน 'Self-driving car' (รถยนต์ไร้คนขับ) ที่ต้องการการตอบสนองที่เชื่อถือได้และรวดเร็วมาก จัดอยู่ในสถานการณ์การใช้งาน 5G ประเภทใด?",
+    "options": [
+      {
+        "statement": "Enhanced mobile broadband (eMBB)",
+        "istrue": false
+      },
+      {
+        "statement": "Massive machine type communications (mMTC)",
+        "istrue": false
+      },
+      {
+        "statement": "Ultra-reliable and low latency communications (URLLC)",
+        "istrue": true
+      },
+      {
+        "statement": "Bluetooth",
+        "istrue": false
+      }
+    ],
+    "explanation": "รถยนต์ไร้คนขับต้องการการสื่อสารที่ 'ultra-reliable' (เชื่อถือได้สูงสุด) และ 'low latency' (ความหน่วงต่ำมาก) เพื่อความปลอดภัย จึงจัดอยู่ในกลุ่ม URLLC"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดเนื้อหาจึงกล่าวว่า '6G' อาจไม่ใช่ชื่อเรียกถัดไป แต่ 'NextG' หรือ 'Beyond 5G' อาจเหมาะสมกว่า?",
+    "options": [
+      {
+        "statement": "เพราะ 5G เป็นเทคโนโลยีสุดท้ายแล้ว",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 5G อยู่บน 'evolutionary path' (เส้นทางวิวัฒนาการ) และเทคโนโลยี cloud/SDN ทำให้สามารถ 'deployed continuously' (เพิ่มฟีเจอร์ใหม่ได้ต่อเนื่อง) โดยไม่ต้องรอมาตรฐานใหม่ทั้งหมด",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ '6G' เป็นชื่อที่จดลิขสิทธิ์แล้ว",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 6G จะไม่ใช้ IP protocol",
+        "istrue": false
+      }
+    ],
+    "explanation": "แนวคิดคือ 5G มี 'agility' (ความคล่องตัว) สูงเนื่องจาก cloud/SDN ทำให้สามารถเพิ่มฟีเจอร์ใหม่ๆ ได้ตลอด (continuous deployment) แทนที่จะเป็นการเปลี่ยนแปลงครั้งใหญ่ (revolution) ทุก 10 ปี (เหมือน 3G -> 4G -> 5G) จึงอาจเป็น 'Beyond 5G' (ต่อยอดจาก 5G)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความท้าทายหลักของ 'Mobility' ที่เครือข่ายต้องแก้ไข เมื่ออุปกรณ์เคลื่อนที่จากเครือข่ายหนึ่งไปยังอีกเครือข่ายหนึ่ง?",
+    "options": [
+      {
+        "statement": "ทำอย่างไรให้อุปกรณ์มีแบตเตอรี่ใช้งานได้นานขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำอย่างไร 'network' (เครือข่าย) จะรู้ว่าต้อง 'forward packets' (ส่งต่อแพ็กเก็ต) ไปยังเครือข่ายใหม่ที่อุปกรณ์ย้ายไป",
+        "istrue": true
+      },
+      {
+        "statement": "ทำอย่างไรให้ SIM card ทำงานได้ในทุกประเทศ",
+        "istrue": false
+      },
+      {
+        "statement": "ทำอย่างไรให้ Data Rate สูงขึ้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความท้าทายหลักของ mobility คือ 'routing' (การกำหนดเส้นทาง) เครือข่ายจะหาอุปกรณ์เจอได้อย่างไรเมื่อมันย้ายที่อยู่ (จุดเชื่อมต่อ) ไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในบริบทของ 'Mobility' ข้อใดคือแนวคิดของ 'letting end-systems handle it' (ให้ระบบปลายทางจัดการ)?",
+    "options": [
+      {
+        "statement": "Routers ทั้งหมดใน Internet ต้องอัปเดต routing table ทุกครั้งที่มีคนย้ายที่",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ 'indirect routing' (ผ่าน home network) หรือ 'direct routing' ( correspondent ติดต่อ home network เพื่อหาที่อยู่ใหม่)",
+        "istrue": true
+      },
+      {
+        "statement": "ปิดเครื่องและเปิดใหม่เมื่อย้ายเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ Bluetooth เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "แทนที่จะให้ 'routers' (network core) จัดการ mobility ซึ่ง 'not scalable' แนวทางที่ใช้คือให้ 'end-systems' (หรือ 'edge') จัดการ โดยใช้แนวคิดเช่น 'home network' เป็นจุดอ้างอิง (indirect/direct routing)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างพื้นฐานระหว่างการจัดการ mobility ของ 4G/5G และ WiFi/ISP?",
+    "options": [
+      {
+        "statement": "WiFi ไม่รองรับ mobility เลย, 4G/5G รองรับ",
+        "istrue": false
+      },
+      {
+        "statement": "4G/5G มี 'global 'home'' (HSS) ที่เก็บ 'global identify info' (SIM) ทำให้ roaming ได้ทั่วโลก, แต่ WiFi/ISP 'no notion of global 'home'' (แต่ละ network ใช้ credentials ของตัวเอง)",
+        "istrue": true
+      },
+      {
+        "statement": "WiFi ใช้ 'authentication access server', 4G/5G ไม่มี",
+        "istrue": false
+      },
+      {
+        "statement": "4G/5G ไม่ใช้ IP, WiFi ใช้ IP",
+        "istrue": false
+      }
+    ],
+    "explanation": "4G/5G ถูกออกแบบมาให้มี 'home network' สากล (ผ่าน SIM และ HSS) ทำให้ผู้ใช้สามารถ 'roaming' ใน 'visited network' ได้ แต่สำหรับ WiFi (ยกเว้น eduroam) การย้ายไป ISP อื่นหรือเครือข่าย WiFi อื่นมักจะต้องใช้ 'different credentials' (username/password) ใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม 'generic mobility' เมื่อ mobile device ไปอยู่ใน 'Visited Network' มันจะได้รับ IP address ประเภทใด (ตามแผนภาพ)?",
+    "options": [
+      {
+        "statement": "ได้รับ 'Permanent IP' เดิม (เช่น 128.119.40.186)",
+        "istrue": false
+      },
+      {
+        "statement": "ได้รับ 'NAT IP' (เช่น 10.0.0.99) ซึ่งเป็น IP address ภายใน 'Visited Network'",
+        "istrue": true
+      },
+      {
+        "statement": "ใช้ 'IMSI' เป็น IP address",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ได้รับ IP address",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดงว่า mobile device มี 'Permanent IP' ที่ 'Home Network' แต่เมื่อย้ายไป 'Visited Network' มันจะได้รับ IP address ใหม่ที่ใช้ภายในเครือข่ายนั้น (ในตัวอย่างคือ 'NAT IP: 10.0.0.99') แต่ยังคงใช้ 'IMSI' เดิมเพื่อระบุตัวตน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กระบวนการ 'Registration' (การลงทะเบียน) เมื่อ mobile device ย้ายไป 'Visited Network' คืออะไร?",
+    "options": [
+      {
+        "statement": "Mobile device ติดต่อ 'Home HSS' โดยตรงเพื่อขอ IP ใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "Mobile device ติดต่อ 'Visited mobility manager', ซึ่ง 'Visited manager' จะไป 'registers' (ลงทะเบียน) ตำแหน่งใหม่ของ mobile กับ 'Home HSS'",
+        "istrue": true
+      },
+      {
+        "statement": "Correspondent เป็นผู้แจ้ง 'Home HSS' ว่า mobile ย้ายที่แล้ว",
+        "istrue": false
+      },
+      {
+        "statement": "Mobile device ต้องส่ง SIM card กลับไป 'Home Network'",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ 'Registration' แสดงขั้นตอนที่ 1: Mobile ติดต่อ 'Visited mobility manager' และขั้นตอนที่ 2: 'Visited mobility manager' ติดต่อ 'Home HSS' เพื่อแจ้งว่า IMSI นี้ อยู่ที่นี่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบาย 'Mobility with indirect routing' (หรือ 'triangle routing') ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "Correspondent ส่ง datagram ตรงไปยัง 'Visited Network'",
+        "istrue": false
+      },
+      {
+        "statement": "Correspondent ส่ง datagram ไปยัง 'Permanent IP' ของ mobile, datagram นี้จะไปที่ 'Home network gateway' ก่อน, ซึ่ง 'Home gateway' จะ 'tunnel' (ส่งต่อในอุโมงค์) datagram ไปยัง 'Visited network gateway'",
+        "istrue": true
+      },
+      {
+        "statement": "Mobile device ส่ง datagram ไปยัง 'Home Network' ก่อนเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "Visited network gateway' จะปฏิเสธ datagram ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน 'indirect routing' (การกำหนดเส้นทางโดยอ้อม), 'Home network' ทำหน้าที่เป็น 'anchor point' (จุดยึด) เสมอ Correspondent ส่งไปที่ 'Home' (ขั้นตอนที่ 1), Home ส่งต่อไป 'Visited' (ขั้นตอนที่ 2), Visited ส่งให้ mobile (ขั้นตอนที่ 3) นี่คือที่มาของชื่อ 'triangle routing'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อเสียเปรียบหลักของ 'indirect routing' (triangle routing) คืออะไร?",
+    "options": [
+      {
+        "statement": "ไม่โปร่งใส (non-transparent) ต่อ correspondent",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่สามารถรักษา (maintain) on-going TCP connections ได้",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ปลอดภัย",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่มีประสิทธิภาพ (inefficient) โดยเฉพาะเมื่อ correspondent และ mobile อยู่ในเครือข่าย 'visited network' เดียวกัน (แต่ต้องส่งข้อมูลอ้อมไป 'home network' ก่อน)",
+        "istrue": true
+      }
+    ],
+    "explanation": "เนื้อหาระบุว่าข้อเสียคือ 'inefficient when correspondent and mobile are in same network' เพราะแทนที่จะส่งหากันโดยตรงในเครือข่ายนั้น กลับต้องส่งอ้อมไป 'home network' ที่อาจอยู่ไกลคนละทวีป แล้วค่อยย้อนกลับมา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อดีของ 'indirect routing' คืออะไร แม้ว่ามันจะ 'inefficient' ก็ตาม?",
+    "options": [
+      {
+        "statement": "มัน 'transparent' (โปร่งใส) ต่อ 'correspondent' (ผู้ติดต่อ) ซึ่งไม่จำเป็นต้องรู้ว่า mobile ย้ายไปไหน",
+        "istrue": true
+      },
+      {
+        "statement": "มันเร็วกว่า 'direct routing' เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "มันใช้ได้กับ WiFi เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "มันไม่ต้องการ HSS",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อดีคือ 'transparent to correspondent' ผู้ติดต่อ (correspondent) ยังคงส่งข้อมูลไปยัง 'Permanent IP' (home address) ของ mobile ได้ตามปกติ โดยไม่จำเป็นต้องรู้ว่า mobile กำลัง roaming อยู่ที่ไหน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน 'Mobility with direct routing' (การกำหนดเส้นทางโดยตรง) 'correspondent' (ผู้ติดต่อ) ทำอย่างไรเพื่อส่ง datagram ไปยัง mobile device?",
+    "options": [
+      {
+        "statement": "ส่งไปยัง 'Home network gateway' เสมอ (เหมือน indirect routing)",
+        "istrue": false
+      },
+      {
+        "statement": "ติดต่อ 'Home HSS' ก่อน (ขั้นตอนที่ 1) เพื่อ 'gets mobile's visited network' (รับที่อยู่ของ visited network) จากนั้นส่ง datagram ตรงไปยัง 'Visited network gateway' (ขั้นตอนที่ 3)",
+        "istrue": true
+      },
+      {
+        "statement": "Broadcast datagram ไปทั่ว Internet จนกว่าจะเจอ",
+        "istrue": false
+      },
+      {
+        "statement": "รอให้ mobile device ติดต่อมาก่อน",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ 'direct routing' แสดงให้เห็นว่า correspondent ต้องทำงานมากขึ้น: ขั้นที่ 1 คือ 'contacts home HSS' เพื่อถามที่อยู่, และขั้นที่ 3 คือ 'addresses datagram to visited network address' (ส่งตรง)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อเสียเปรียบของ 'direct routing' เมื่อเทียบกับ 'indirect routing'?",
+    "options": [
+      {
+        "statement": "ยังคงมีปัญหา 'triangle routing'",
+        "istrue": false
+      },
+      {
+        "statement": "ช้ากว่า indirect routing เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ 'transparent' (โปร่งใส) ต่อ 'correspondent' ซึ่งต้องมีกลไกเพิ่มเติมเพื่อค้นหา 'care-ofaddress' (ที่อยู่ปัจจุบัน) และมีความซับซ้อนเพิ่มขึ้นหาก mobile ย้าย network บ่อยๆ",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่สามารถใช้งานกับ 4G/5G ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุข้อเสียว่า 'non-transparent to correspondent' (correspondent ต้องทำงานเพิ่ม) และ 'what if mobile changes visited network?' (มีความซับซ้อนเพิ่มเติม)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่ TCP ทำงานได้ไม่ดีบนเครือข่ายไร้สาย (wireless) หรือเครือข่ายมือถือ (mobile) มีสาเหตุหลักมาจากอะไร?",
+    "options": [
+      {
+        "statement": "TCP ไม่รองรับ IP address",
+        "istrue": false
+      },
+      {
+        "statement": "TCP 'interprets loss' (ตีความว่า) 'packet loss' (ที่เกิดจาก bit-errors หรือ handover) ว่าเป็น 'congestion' (ความแออัดของเครือข่าย) และจะลด 'congestion window' ลงโดยไม่จำเป็น",
+        "istrue": true
+      },
+      {
+        "statement": "เครือข่ายไร้สายมี 'bandwidth' มากเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "UDP ทำงานได้ดีกว่า TCP ในทุกกรณี",
+        "istrue": false
+      }
+    ],
+    "explanation": "TCP ถูกออกแบบมาสำหรับเครือข่ายมีสายที่ 'packet loss' มักเกิดจาก 'congestion' แต่ในเครือข่ายไร้สาย loss อาจเกิดจากสัญญาณรบกวน (bit-errors) หรือการ 'handover' ซึ่ง TCP เข้าใจผิดว่าเครือข่ายติดขัด จึงลดความเร็วในการส่งลง"
+  }
+]

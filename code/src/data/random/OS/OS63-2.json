@@ -1,0 +1,321 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which is the command interpreter in Linux?",
+    "options": [
+      { "statement": "Shell", "istrue": true },
+      { "statement": "Cmd", "istrue": false },
+      { "statement": "Terminal", "istrue": false },
+      { "statement": "Console", "istrue": false }
+    ],
+    "explanation": "The shell is the command interpreter in Linux that reads and executes user commands."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Where was the first use of GUI?",
+    "options": [
+      { "statement": "Xerox Alto", "istrue": true },
+      { "statement": "Apple Macintosh", "istrue": false },
+      { "statement": "IBM Mainframe", "istrue": false },
+      { "statement": "Microsoft Windows", "istrue": false }
+    ],
+    "explanation": "The first graphical user interface was introduced on the Xerox Alto computer."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What makes programmers not need to know system calls directly?",
+    "options": [
+      { "statement": "API", "istrue": true },
+      { "statement": "Compiler", "istrue": false },
+      { "statement": "Interpreter", "istrue": false },
+      { "statement": "Virtual machine", "istrue": false }
+    ],
+    "explanation": "Application Programming Interfaces (APIs) abstract system calls, so programmers need not interact with them directly."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the open-source GUI interface on UNIX or Linux?",
+    "options": [
+      { "statement": "X-window", "istrue": false },
+      { "statement": "KDE", "istrue": true },
+      { "statement": "GNOME", "istrue": false },
+      { "statement": "Both KDE and GNOME", "istrue": false }
+    ],
+    "explanation": "KDE is an open-source GUI interface for UNIX/Linux systems."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is a text editor in Linux?",
+    "options": [
+      { "statement": "mico", "istrue": false },
+      { "statement": "nano", "istrue": true },
+      { "statement": "vivo", "istrue": false },
+      { "statement": "notepad", "istrue": false }
+    ],
+    "explanation": "Nano is a commonly used simple text editor in Linux systems."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is a C compiler in Linux?",
+    "options": [
+      { "statement": "mcs", "istrue": false },
+      { "statement": "csc", "istrue": false },
+      { "statement": "gcc", "istrue": true },
+      { "statement": "java", "istrue": false }
+    ],
+    "explanation": "The GNU Compiler Collection (gcc) is the standard C compiler on Linux."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is the interaction with a multi-touch screen?",
+    "options": [
+      { "statement": "Gesture", "istrue": true },
+      { "statement": "Speech", "istrue": false },
+      { "statement": "Drag-drop", "istrue": false },
+      { "statement": "Click", "istrue": false }
+    ],
+    "explanation": "Gestures, such as pinch or swipe, are the form of interaction with multi-touch screens."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Who is suitable for command line interpreter (CLI) and batch interface?",
+    "options": [
+      { "statement": "Users", "istrue": false },
+      { "statement": "Developers", "istrue": false },
+      { "statement": "Administrators", "istrue": true },
+      { "statement": "Beginners", "istrue": false }
+    ],
+    "explanation": "System administrators typically prefer CLI and batch interfaces for flexibility and control."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a shell script?",
+    "options": [
+      { "statement": "A set of system calls", "istrue": false },
+      { "statement": "A set of command lines", "istrue": true },
+      { "statement": "A set of jobs", "istrue": false },
+      { "statement": "All of the above", "istrue": false }
+    ],
+    "explanation": "A shell script is a collection of command lines written in a script file to automate tasks."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the following C program do: syscall(SYS_chmod, \"/etc/passwd\", 0444)?",
+    "options": [
+      { "statement": "System call", "istrue": true },
+      { "statement": "Command line", "istrue": false },
+      { "statement": "Script", "istrue": false },
+      { "statement": "Application programming interface (API)", "istrue": false }
+    ],
+    "explanation": "The code invokes a system call to change file permissions of /etc/passwd."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the category of MacOS and iOS?",
+    "options": [
+      { "statement": "Monolithic", "istrue": false },
+      { "statement": "Microkernel", "istrue": false },
+      { "statement": "Hybrid", "istrue": true },
+      { "statement": "Layered", "istrue": false }
+    ],
+    "explanation": "MacOS and iOS are hybrid operating systems that combine multiple design approaches."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is not a system call in the process control category?",
+    "options": [
+      { "statement": "fork", "istrue": false },
+      { "statement": "exec", "istrue": false },
+      { "statement": "chmod", "istrue": true },
+      { "statement": "exit", "istrue": false }
+    ],
+    "explanation": "chmod is a system call for file permissions, not process control."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the category of SetFileSecurity?",
+    "options": [
+      { "statement": "File management", "istrue": false },
+      { "statement": "Process control", "istrue": false },
+      { "statement": "Protection", "istrue": true },
+      { "statement": "I/O control", "istrue": false }
+    ],
+    "explanation": "SetFileSecurity belongs to the protection category since it sets file access permissions."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What will happen after typing 'ls' in a Linux terminal?",
+    "options": [
+      { "statement": "Only fork", "istrue": false },
+      { "statement": "Only exec", "istrue": false },
+      { "statement": "Fork then exec", "istrue": true },
+      { "statement": "Direct kernel execution", "istrue": false }
+    ],
+    "explanation": "The shell forks a new process, then uses exec to run the 'ls' program."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which program is running on the server side?",
+    "options": [
+      { "statement": "Shared memory", "istrue": false },
+      { "statement": "Mailbox", "istrue": false },
+      { "statement": "Daemon", "istrue": true },
+      { "statement": "Client", "istrue": false }
+    ],
+    "explanation": "Daemons are background processes that provide services on the server side."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the major difficulty with the layered approach?",
+    "options": [
+      { "statement": "Performance", "istrue": false },
+      { "statement": "Defining the layers", "istrue": true },
+      { "statement": "Security", "istrue": false },
+      { "statement": "Portability", "istrue": false }
+    ],
+    "explanation": "The challenge in the layered approach is deciding how to divide system functions into layers."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the drawback of the microkernel approach?",
+    "options": [
+      { "statement": "Security", "istrue": false },
+      { "statement": "Portability", "istrue": false },
+      { "statement": "Performance overhead", "istrue": true },
+      { "statement": "Extensibility", "istrue": false }
+    ],
+    "explanation": "Microkernels often have performance overhead due to increased inter-process communication."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is correct about modules?",
+    "options": [
+      { "statement": "Windows/Linux are examples", "istrue": false },
+      { "statement": "Reduce hard recompilation", "istrue": false },
+      { "statement": "Reduce message passing", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "Modules are used in Windows and Linux, reduce recompilation, and lower message-passing overhead."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is good design of an OS?",
+    "options": [
+      { "statement": "Changing policy affects mechanism", "istrue": false },
+      { "statement": "Changing policy does not affect mechanism", "istrue": true },
+      { "statement": "Mechanism and policy are fixed together", "istrue": false },
+      { "statement": "No distinction between policy and mechanism", "istrue": false }
+    ],
+    "explanation": "Good design separates policy from mechanism so changes in one do not affect the other."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why did MS-DOS leave the base hardware accessible?",
+    "options": [
+      { "statement": "It used layered design", "istrue": false },
+      { "statement": "It had no kernel/user mode", "istrue": true },
+      { "statement": "It used microkernel", "istrue": false },
+      { "statement": "It required security", "istrue": false }
+    ],
+    "explanation": "MS-DOS allowed direct hardware access because it lacked hardware-enforced user/kernel mode."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is Cocoa in Mac OS?",
+    "options": [
+      { "statement": "API", "istrue": true },
+      { "statement": "Kernel", "istrue": false },
+      { "statement": "File system", "istrue": false },
+      { "statement": "Driver", "istrue": false }
+    ],
+    "explanation": "Cocoa is the application programming interface for Mac OS."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is Android runtime development?",
+    "options": [
+      { "statement": "Dalvik VM", "istrue": true },
+      { "statement": "JVM", "istrue": false },
+      { "statement": "CLR", "istrue": false },
+      { "statement": "POSIX", "istrue": false }
+    ],
+    "explanation": "Android originally used the Dalvik Virtual Machine as its runtime environment."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Where is process information stored in case of failure?",
+    "options": [
+      { "statement": "Kernel", "istrue": false },
+      { "statement": "Core dump", "istrue": true },
+      { "statement": "Swap space", "istrue": false },
+      { "statement": "Log file", "istrue": false }
+    ],
+    "explanation": "A core dump contains process information when a process terminates abnormally."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which tool improves performance?",
+    "options": [
+      { "statement": "Top", "istrue": false },
+      { "statement": "Windows Task Manager", "istrue": false },
+      { "statement": "DTrace", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "Performance analysis tools include top, Windows Task Manager, and DTrace."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What loads binary object files into memory?",
+    "options": [
+      { "statement": "Loader", "istrue": true },
+      { "statement": "Linker", "istrue": false },
+      { "statement": "Compiler", "istrue": false },
+      { "statement": "Assembler", "istrue": false }
+    ],
+    "explanation": "The loader loads compiled binary programs into memory for execution."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What links binary object files with standard libraries?",
+    "options": [
+      { "statement": "Loader", "istrue": false },
+      { "statement": "Linker", "istrue": true },
+      { "statement": "Compiler", "istrue": false },
+      { "statement": "Shell", "istrue": false }
+    ],
+    "explanation": "The linker combines object files with standard libraries to produce an executable."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the standard library of dynamic linker in Linux?",
+    "options": [
+      { "statement": "libc.so", "istrue": true },
+      { "statement": "libc.dll", "istrue": false },
+      { "statement": "libkernel", "istrue": false },
+      { "statement": "libsys", "istrue": false }
+    ],
+    "explanation": "Linux uses libc.so as the standard C library for dynamic linking."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the standard library of dynamic linker in Windows?",
+    "options": [
+      { "statement": "libc.so", "istrue": false },
+      { "statement": "libc.dll", "istrue": true },
+      { "statement": "mslib.so", "istrue": false },
+      { "statement": "libsys", "istrue": false }
+    ],
+    "explanation": "Windows uses libc.dll as the standard dynamic link library for C functions."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which hardware acceleration supports running VirtualBox?",
+    "options": [
+      { "statement": "VT-x", "istrue": false },
+      { "statement": "AMD-V", "istrue": false },
+      { "statement": "Hyper-threading", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "VirtualBox uses hardware acceleration technologies like Intel VT-x, AMD-V, and benefits from hyper-threading."
+  }
+]

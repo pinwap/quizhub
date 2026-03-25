@@ -1,0 +1,1129 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือผลกระทบหรือนัยสำคัญที่สุดของการที่ผู้ให้บริการคลาวด์รายใหญ่ (AWS, Google, Microsoft) ต่างประกาศเปิดตัว Data Center Region ใหม่ในประเทศไทย?",
+    "options": [
+      {
+        "statement": "เป็นการบ่งชี้ถึงการแข่งขันที่ลดลงในตลาดคลาวด์",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการส่งสัญญาณถึงความต้องการ (Demand) การประมวลผลแบบคลาวด์และการทำ Digital Transformation ที่เพิ่มขึ้นอย่างก้าวกระโดดในประเทศไทย",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นการย้ายฐานข้อมูลทั้งหมดออกจากสิงคโปร์มายังประเทศไทย",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการลดการลงทุนในโครงสร้างพื้นฐาน AI",
+        "istrue": false
+      }
+    ],
+    "explanation": "การลงทุนขนาดใหญ่พร้อมกันจากผู้ให้บริการหลัก สะท้อนถึงการคาดการณ์การเติบโตของตลาดและความต้องการใช้บริการคลาวด์ที่สูงมากในภูมิภาค"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทในไทยที่ต้องปฏิบัติตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล (PDPA) อย่างเคร่งครัด จะได้รับประโยชน์ใดมากที่สุดจากการเปิด AWS Region ในประเทศไทย?",
+    "options": [
+      {
+        "statement": "อัตราแลกเปลี่ยนเงินตราต่างประเทศที่ดีขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ความสามารถในการจัดเก็บและประมวลผลข้อมูลภายในประเทศ (Data Sovereignty) และลดความหน่วง (Low Latency)",
+        "istrue": true
+      },
+      {
+        "statement": "การเข้าถึงบริการ AI จากต่างประเทศได้ง่ายขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "การลดจำนวนพนักงาน IT ภายในองค์กร",
+        "istrue": false
+      }
+    ],
+    "explanation": "การมี Data Center ในประเทศช่วยให้องค์กรสามารถปฏิบัติตามข้อกำหนดด้าน Data Sovereignty (ข้อมูลต้องอยู่ในประเทศ) ได้ง่ายขึ้น และยังช่วยลด Latency ในการเข้าถึงบริการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างพื้นฐานที่สุดระหว่าง 'Traditional Network' และ 'Software-Defined Network (SDN)'?",
+    "options": [
+      {
+        "statement": "SDN ใช้สายเคเบิลที่เร็วกว่า Traditional Network",
+        "istrue": false
+      },
+      {
+        "statement": "SDN แยก 'Control Plane' (ส่วนควบคุม) ออกจาก 'Data Plane' (ส่วนส่งข้อมูล) และรวมศูนย์การควบคุมไว้ที่ Controller",
+        "istrue": true
+      },
+      {
+        "statement": "Traditional Network ไม่สามารถใช้ Firewall ได้",
+        "istrue": false
+      },
+      {
+        "statement": "SDN ใช้งานได้เฉพาะกับ Data Center ขนาดใหญ่เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "แนวคิดหลักของ SDN คือการแยก Control Plane (สมอง) ออกจาก Data Plane (ฮาร์ดแวร์) ทำให้สามารถควบคุมเครือข่ายทั้งหมดจากส่วนกลางได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน 'Traditional Network' หากผู้ดูแลระบบต้องการเปลี่ยนนโยบายความปลอดภัยที่ส่งผลกระทบต่อสวิตช์ 100 ตัว เขาต้องทำอย่างไร?",
+    "options": [
+      {
+        "statement": "ตั้งโปรแกรมที่ SDN Controller เพียงครั้งเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "รีสตาร์ทเครือข่ายทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "กำหนดค่านโยบายใหม่บนสวิตช์แต่ละตัว (distributed control) ทีละตัวหรือผ่านสคริปต์",
+        "istrue": true
+      },
+      {
+        "statement": "ย้ายสวิตช์ทั้งหมดไปไว้ที่ Data Center",
+        "istrue": false
+      }
+    ],
+    "explanation": "เครือข่ายแบบดั้งเดิมมีการควบคุมแบบกระจาย (distributed control) ซึ่งหมายความว่าตรรกะการตัดสินใจถูกฝังอยู่ในอุปกรณ์แต่ละตัว ทำให้การเปลี่ยนแปลงนโยบายทั้งเครือข่ายทำได้ยาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อได้เปรียบหลักที่เกิดจากการ 'decoupling' (แยกส่วน) Control Plane ในสถาปัตยกรรม SDN?",
+    "options": [
+      {
+        "statement": "ลดความเร็วของเครือข่ายลง แต่เพิ่มความปลอดภัย",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ฮาร์ดแวร์สวิตช์ (Data Plane) ราคาแพงขึ้นเพราะต้องฉลาดขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้เกิดความยืดหยุ่น (Flexibility) และความสามารถในการโปรแกรม (Programmability) เครือข่ายจากส่วนกลาง",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่จำเป็นต้องใช้ Middlebox (เช่น Firewall) อีกต่อไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "การแยกสมอง (Control Plane) ออกมาไว้ที่ซอฟต์แวร์ส่วนกลาง ทำให้ผู้ดูแลสามารถเขียนโปรแกรมเพื่อกำหนดพฤติกรรมเครือข่ายได้ตามต้องการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม OpenFlow Switch 'Flow Table' ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "เก็บข้อมูลสถิติการใช้งานของผู้ใช้ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นชุดของคำสั่ง (Instructions) ที่กำหนดว่า 'RULE' (เงื่อนไข) ใด จะต้องถูก 'ACTION' (กระทำ) อย่างไร",
+        "istrue": true
+      },
+      {
+        "statement": "ทำหน้าที่สื่อสารกับ Controller เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นที่เก็บ MAC Address ของอุปกรณ์ทั้งหมดในเครือข่าย",
+        "istrue": false
+      }
+    ],
+    "explanation": "Flow Table คือหัวใจของ OpenFlow switch ประกอบด้วย Rule (เงื่อนไขการจับคู่แพ็กเก็ต), Actions (สิ่งที่ต้องทำ), และ Statistics (ตัวนับ)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากแพ็กเก็ตใหม่มาถึง OpenFlow Switch และ 'ไม่ตรงกับ RULE ใดๆ' ใน Flow Table เลย สวิตช์มักจะถูกกำหนดค่าให้ทำ 'ACTION' ใด?",
+    "options": [
+      {
+        "statement": "ทิ้ง (Drop) แพ็กเก็ตนั้นทันที",
+        "istrue": false
+      },
+      {
+        "statement": "ส่ง (Forward) แพ็กเก็ตนั้นไปยังทุกพอร์ต (Flood)",
+        "istrue": false
+      },
+      {
+        "statement": "ส่งแพ็กเก็ตนั้นไปยัง 'Controller' เพื่อขอคำตัดสินใจ",
+        "istrue": true
+      },
+      {
+        "statement": "เก็บแพ็กเก็ตนั้นไว้ใน 'STATISTICS'",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือพฤติกรรมพื้นฐานของ SDN แบบ 'reactive' เมื่อสวิตช์ (Data Plane) ไม่รู้ว่าจะทำอย่างไรกับแพ็กเก็ต (no match) มันจะส่งแพ็กเก็ตนั้น (Packet-In) ไปถาม 'สมอง' (Controller)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือตัวอย่างของการใช้ 'ACTION: Modify Fields' ใน Flow Table?",
+    "options": [
+      {
+        "statement": "การนับจำนวนแพ็กเก็ตที่ผ่านไป",
+        "istrue": false
+      },
+      {
+        "statement": "การทำ Network Address Translation (NAT) โดยการเปลี่ยน IP Dst หรือ L4 dport",
+        "istrue": true
+      },
+      {
+        "statement": "การส่งแพ็กเก็ตไปยัง Controller",
+        "istrue": false
+      },
+      {
+        "statement": "การจับคู่ (Match) กับ MAC src",
+        "istrue": false
+      }
+    ],
+    "explanation": "การ 'Modify Fields' (แก้ไขฟิลด์ในเฮดเดอร์) ช่วยให้สามารถสร้างฟังก์ชันเครือข่ายที่ซับซ้อนได้ เช่น NAT (เปลี่ยน IP/Port) หรือ Load Balancing (เปลี่ยน MAC/IP ปลายทาง)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด 'RULE' ของ OpenFlow จึงต้องรวมฟิลด์จากหลาย Layer (เช่น L2-MAC, L3-IP, L4-Port)?",
+    "options": [
+      {
+        "statement": "เพื่อทำให้ Flow Table มีขนาดใหญ่ขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อรองรับการทำงานของ P4 เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้สามารถกำหนดนโยบาย (Policy) ที่ละเอียดและเจาะจง (fine-grained) ข้าม Layer ได้",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อแทนที่การทำงานของ Controller",
+        "istrue": false
+      }
+    ],
+    "explanation": "การที่สามารถจับคู่ (match) ได้หลายฟิลด์ ทำให้นโยบายมีความละเอียดสูง เช่น 'อนุญาตให้ Web Server (IP) พูดคุยกับ DB Server (IP) ผ่าน Port 3306 (L4) เท่านั้น'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการประยุกต์ใช้ Flow Table Entry (ดังตัวอย่าง) เพื่อทำหน้าที่เป็น 'Firewall'?",
+    "options": [
+      {
+        "statement": "RULE: IP Dst = 5.6.7.8, ACTION: port6",
+        "istrue": false
+      },
+      {
+        "statement": "RULE: MAC dst = 00:1f.., VLAN=vlan1, ACTION: port6, port7, port9",
+        "istrue": false
+      },
+      {
+        "statement": "RULE: TCP dport = 22, ACTION: drop",
+        "istrue": true
+      },
+      {
+        "statement": "RULE: *, ACTION: Forward to controller",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตัวอย่าง 'Firewall service' ในตารางแสดงการจับคู่ (Match) กับ TCP dport = 22 (ซึ่งคือ SSH) และกำหนด ACTION เป็น 'drop' (ทิ้ง) ซึ่งเป็นกฎ Firewall ทั่วไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการประยุกต์ใช้ Flow Table Entry (ดังตัวอย่าง) เพื่อทำหน้าที่เป็น 'IP Routing'?",
+    "options": [
+      {
+        "statement": "RULE: IP Dst = 5.6.7.8, ACTION: port6",
+        "istrue": true
+      },
+      {
+        "statement": "RULE: MAC dst = 00:1f.., VLAN=vlan1, ACTION: port6, port7, port9",
+        "istrue": false
+      },
+      {
+        "statement": "RULE: TCP dport = 22, ACTION: drop",
+        "istrue": false
+      },
+      {
+        "statement": "RULE: *, ACTION: *",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตัวอย่าง 'IP Routing service' ในตารางแสดงการจับคู่ (Match) กับ IP ปลายทาง (IP Dst = 5.6.7.8) และกำหนด ACTION เป็น 'port6' (ส่งออกพอร์ต 6) ซึ่งคือการ Routing"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการประยุกต์ใช้ Flow Table Entry (ดังตัวอย่าง) เพื่อทำหน้าที่เป็น 'VLAN multicast'?",
+    "options": [
+      {
+        "statement": "RULE: IP Dst = 5.6.7.8, ACTION: port6",
+        "istrue": false
+      },
+      {
+        "statement": "RULE: MAC dst = 00:1f.. (Multicast MAC), VLAN=vlan1, ACTION: port6, port7, port9 (ส่งออกหลายพอร์ต)",
+        "istrue": true
+      },
+      {
+        "statement": "RULE: TCP dport = 22, ACTION: drop",
+        "istrue": false
+      },
+      {
+        "statement": "RULE: *, ACTION: Forward to controller",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตัวอย่าง 'VLAN multicast service' แสดงการจับคู่ (Match) กับ MAC ปลายทางที่เป็น multicast (00:1f..) และ VLAN ที่เจาะจง และกำหนด ACTION เป็นการส่งออก 'หลายพอร์ต' (port6, port7, port9)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม SDN 'Southbound API' (เช่น OpenFlow, OVSDB) ทำหน้าที่เชื่อมต่อระหว่างอะไร?",
+    "options": [
+      {
+        "statement": "Application Layer และ Control Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Control Layer และ Infrastructure Layer (Data Plane)",
+        "istrue": true
+      },
+      {
+        "statement": "SDN Controller สองตัวที่ทำงานร่วมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "ผู้ใช้งาน และ Application Layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "Southbound API (API ด้านใต้) คือช่องทางการสื่อสารที่ Control Layer (เช่น ONOS) ใช้เพื่อ 'สั่งการ' หรือ 'โปรแกรม' อุปกรณ์ใน Infrastructure Layer (เช่น Open vSwitch)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม SDN 'Northbound API' (เช่น REST API) ทำหน้าที่เชื่อมต่อระหว่างอะไร?",
+    "options": [
+      {
+        "statement": "Application Layer และ Control Layer",
+        "istrue": true
+      },
+      {
+        "statement": "Control Layer และ Infrastructure Layer (Data Plane)",
+        "istrue": false
+      },
+      {
+        "statement": "SDN Controller สองตัวที่ทำงานร่วมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "Infrastructure Layer และผู้ใช้งาน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Northbound API (API ด้านเหนือ) คือช่องทางที่แอปพลิเคชัน (เช่น Security Application, Load Balancing) ใช้เพื่อ 'ร้องขอ' บริการหรือ 'บอกนโยบาย' แก่ Control Layer (Controller)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดสถาปัตยกรรม SDN จึงต้องมี 'East-West bound API' (เช่น Zookeeper, Raft)?",
+    "options": [
+      {
+        "statement": "เพื่อเชื่อมต่อแอปพลิเคชันกับ Controller",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเชื่อมต่อ Controller กับ สวิตช์",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้ SDN Controller หลายตัว (ใน distributed control plane) สามารถ 'ซิงค์' สถานะ (state) และทำงานร่วมกันได้ (HA/Scalability)",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อเชื่อมต่อกับเครือข่ายของผู้ให้บริการอื่น",
+        "istrue": false
+      }
+    ],
+    "explanation": "East-West API ใช้สำหรับการสื่อสาร 'ระหว่าง' Controller ด้วยกันเอง เพื่อให้แน่ใจว่า Controller ทุกตัวมีข้อมูลเครือข่าย (เช่น Topology) ที่ตรงกัน และสามารถทำงานทดแทนกันได้ (High Availability)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ryu และ ONOS ถูกจัดอยู่ใน Layer ใดของสถาปัตยกรรม SDN?",
+    "options": [
+      {
+        "statement": "Application Layer (Management Plane)",
+        "istrue": false
+      },
+      {
+        "statement": "Control Layer (Control Plane)",
+        "istrue": true
+      },
+      {
+        "statement": "Infrastructure Layer (Data Plane)",
+        "istrue": false
+      },
+      {
+        "statement": "Southbound API",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ryu และ ONOS (รวมถึง POX, Floodlight) คือตัวอย่างของซอฟต์แวร์ 'SDN Controller' ซึ่งทำหน้าที่เป็น 'สมอง' หรือ 'ระบบปฏิบัติการเครือข่าย' ใน Control Layer"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรมของ Ryu SDN Framework แสดงให้เห็นว่ามันสามารถควบคุมอุปกรณ์ใดได้บ้าง?",
+    "options": [
+      {
+        "statement": "ควบคุมได้เฉพาะ OpenFlow Switch เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมได้เฉพาะ Existing IP Networks (ผ่าน NETCONF) เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมได้ทั้ง OpenFlow Switch (ผ่าน OpenFlow) และ Existing IP Networks (ผ่าน Non-OF protocols เช่น NETCONF)",
+        "istrue": true
+      },
+      {
+        "statement": "ควบคุมได้เฉพาะ User Apps ผ่าน REST API เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ Ryu แสดงให้เห็นว่ามี Protocol Parser สองส่วน: 'OF PROTOCOLS' (สำหรับ OpenFlow Switch) และ 'NON-OF PROTOCOLS' (เช่น NETCONF, VRRP) สำหรับ Existing IP Networks"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ryu สามารถทำงานร่วมกับ OpenStack (Cloud Orchestration) ได้อย่างไร?",
+    "options": [
+      {
+        "statement": "ผ่านทาง 'REST API for Quantum' (Neutron) ซึ่งเป็น Northbound API",
+        "istrue": true
+      },
+      {
+        "statement": "ผ่านทาง OpenFlow ซึ่งเป็น Southbound API",
+        "istrue": false
+      },
+      {
+        "statement": "Ryu ไม่สามารถทำงานร่วมกับ OpenStack ได้",
+        "istrue": false
+      },
+      {
+        "statement": "ผ่านทาง Built-in L2 Switch โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ Ryu แสดงการเชื่อมต่อกับ 'OPENSTACK CLOUD ORCHESTRATION' ผ่าน 'REST API for Quantum' (Quantum คือชื่อเดิมของ OpenStack Neutron ซึ่งเป็นบริการเครือข่าย)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างหลักระหว่าง 'REST API' และ 'Intent Framework' ใน Northbound Abstractions ของ ONOS?",
+    "options": [
+      {
+        "statement": "REST API ใช้สำหรับอ่านข้อมูลเท่านั้น, Intent ใช้สำหรับเขียนข้อมูลเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "REST API เป็นการสั่งงานระดับล่าง (เช่น 'เพิ่ม flow rule นี้'), ในขณะที่ Intent เป็นการสั่งงานระดับสูง (เช่น 'ฉันต้องการเชื่อมต่อ Host A กับ Host B')",
+        "istrue": true
+      },
+      {
+        "statement": "REST API ใช้สำหรับ OpenFlow, Intent ใช้สำหรับ NETCONF",
+        "istrue": false
+      },
+      {
+        "statement": "REST API เร็วกว่า Intent Framework",
+        "istrue": false
+      }
+    ],
+    "explanation": "Intent Framework เป็น 'high-level specification' ที่บอกว่า 'what' (ต้องการอะไร) แทนที่จะบอกว่า 'how' (ทำอย่างไร) ส่วน REST API มักใช้สั่งการที่เจาะจงกว่า (คล้าย 'how')"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "'ONOS distributed core' ที่เก็บข้อมูล 'topology', 'devices', 'links', 'flow rules' ทำหน้าที่คล้ายกับสิ่งใดใน Google's Orion?",
+    "options": [
+      {
+        "statement": "OpenFlow Agent (OFA)",
+        "istrue": false
+      },
+      {
+        "statement": "Network Information Base (NIB)",
+        "istrue": true
+      },
+      {
+        "statement": "Routing Engine",
+        "istrue": false
+      },
+      {
+        "statement": "Espresso",
+        "istrue": false
+      }
+    ],
+    "explanation": "ONOS distributed core ทำหน้าที่เป็นฐานข้อมูลกลางที่เก็บ 'state' (สถานะ) ทั้งหมดของเครือข่าย ซึ่งเทียบเท่ากับแนวคิด 'Network Information Base (NIB)' ในสถาปัตยกรรม Orion ของ Google"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือเป้าหมายหลักของภาษา 'P4' (Programming Protocol-independent Packet Processors)?",
+    "options": [
+      {
+        "statement": "เพื่อเขียนแอปพลิเคชันบน Northbound API",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อตั้งโปรแกรม 'Control Plane' (เช่น เขียน SDN Controller)",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อกำหนด (specify) ว่า 'Data Plane' (เช่น สวิตช์) ควรจะประมวลผลแพ็กเก็ตอย่างไร",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อแทนที่ภาษา Python และ Java",
+        "istrue": false
+      }
+    ],
+    "explanation": "P4 เป็นภาษา domain-specific ที่ใช้ในการ 'กำหนด' (specify) พฤติกรรมการประมวลผลแพ็กเก็ตของ Data Plane ทำให้ Data Plane สามารถโปรแกรมได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างที่สำคัญที่สุดระหว่าง 'P4' และ 'OpenFlow'?",
+    "options": [
+      {
+        "statement": "OpenFlow ใช้กำหนด 'Control Plane', P4 ใช้กำหนด 'Data Plane'",
+        "istrue": false
+      },
+      {
+        "statement": "OpenFlow เป็นโปรโตคอลสำหรับ 'กำหนดค่า' (configure) pipeline ที่ 'ตายตัว' (fixed-function) ในสวิตช์, P4 เป็นภาษาสำหรับ 'นิยาม' (define) pipeline นั้นขึ้นมาใหม่",
+        "istrue": true
+      },
+      {
+        "statement": "P4 เก่ากว่า OpenFlow",
+        "istrue": false
+      },
+      {
+        "statement": "OpenFlow รองรับ 'Protocol Independence' แต่ P4 ไม่รองรับ",
+        "istrue": false
+      }
+    ],
+    "explanation": "OpenFlow (เช่น v1.0) มีชุดฟิลด์ 12-tuple ที่ตายตัว แต่ P4 อนุญาตให้โปรแกรมเมอร์ 'นิยาม' เฮดเดอร์และตารางการจับคู่ใหม่ทั้งหมด (Protocol Independence)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เป้าหมาย 'Target Independence' ของ P4 หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "โปรแกรม P4 หนึ่งโปรแกรมสามารถรันได้บนทุกสวิตช์โดยไม่ต้องคอมไพล์",
+        "istrue": false
+      },
+      {
+        "statement": "โปรแกรม P4 หนึ่งโปรแกรมสามารถ 'คอมไพล์' (compile) ให้ทำงานได้บนฮาร์ดแวร์ (Target) ที่แตกต่างกัน (เช่น ASIC, FPGA, CPU) ผ่าน 'Target-specific compiler backend'",
+        "istrue": true
+      },
+      {
+        "statement": "P4 ไม่จำเป็นต้องมีฮาร์ดแวร์เป้าหมาย",
+        "istrue": false
+      },
+      {
+        "statement": "P4 สามารถกำหนดเป้าหมาย (Target) IP address ใดก็ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "P4 มีเป้าหมายให้โปรแกรมเมอร์เขียนตรรกะ Data Plane (prog.P4) เพียงครั้งเดียว จากนั้น P4 Compiler จะมี backend ที่แตกต่างกันเพื่อแปลตรรกะนั้นเป็นไบนารีสำหรับฮาร์ดแวร์เป้าหมาย (target_demo.bin) แต่ละชนิด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม P4, 'Control Plane' (เช่น P4Runtime client) ใช้ไฟล์ใดในการสื่อสารกับ 'Data Plane'?",
+    "options": [
+      {
+        "statement": "ใช้ `prog.P4` (ซอร์สโค้ด) โดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ `target_demo.bin` (ไบนารีของ data plane)",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ `prog.p4info` (ไฟล์ 'สัญญา' ที่ P4 Compiler สร้างขึ้น) และ `p4runtime.proto` (API)",
+        "istrue": true
+      },
+      {
+        "statement": "ใช้ OpenFlow",
+        "istrue": false
+      }
+    ],
+    "explanation": "P4 Compiler จะสร้าง `prog.p4info` ซึ่งทำหน้าที่เป็น 'สัญญา' (contract) บอก Control Plane ว่ามีตาราง (tables) และแอกชัน (actions) อะไรบ้างที่สามารถจัดการได้ผ่าน P4Runtime API"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากตัวอย่างโค้ด P4, `key = { hdr.ipv4.dstAddr : lpm; }` หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "ตารางนี้ใช้ 'IPv4 source address' เป็นคีย์ และต้องตรงกันทั้งหมด (exact match)",
+        "istrue": false
+      },
+      {
+        "statement": "ตารางนี้ใช้ 'IPv4 destination address' เป็นคีย์ และใช้วิธีจับคู่แบบ 'Longest Prefix Match (lpm)'",
+        "istrue": true
+      },
+      {
+        "statement": "ตารางนี้ใช้ 'MAC address' เป็นคีย์",
+        "istrue": false
+      },
+      {
+        "statement": "ตารางนี้มีขนาด 2048 entries",
+        "istrue": false
+      }
+    ],
+    "explanation": "`hdr.ipv4.dstAddr` คือฟิลด์ IPv4 destination address และ `lpm` คืออัลกอริทึมการจับคู่แบบ Longest Prefix Match ซึ่งจำเป็นสำหรับการทำ IP routing"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Google's B4 Network ถูกออกแบบมาเพื่อแก้ปัญหาใดเป็นหลัก?",
+    "options": [
+      {
+        "statement": "เชื่อมต่อผู้ใช้งาน (end-users) เข้ากับ ISP",
+        "istrue": false
+      },
+      {
+        "statement": "ให้บริการเครือข่ายมือถือ 5G",
+        "istrue": false
+      },
+      {
+        "statement": "ทำ 'Global Traffic Engineering' (การจัดการทราฟฟิกทั่วโลก) เพื่อเพิ่มประสิทธิภาพการใช้งานแบนด์วิดท์ระหว่าง Data Center ของ Google",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นเครือข่ายสำหรับทดสอบ P4",
+        "istrue": false
+      }
+    ],
+    "explanation": "B4 คือ SDN WAN ส่วนตัวของ Google ที่ใช้เชื่อมต่อ Data Center ทั่วโลก โดยมี SDN controller กลางทำ Traffic Engineering เพื่อให้ใช้แบนด์วิดท์ได้เกือบ 100%"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เครือข่าย 'Espresso' ของ Google ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "เป็นเครือข่ายหลักที่เชื่อม Data Center (เหมือน B4)",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น SDN infrastructure ที่ 'edge' (ขอบ) ของเครือข่าย B2 เพื่อเชื่อมต่อกับ ISP และผู้ใช้งาน",
+        "istrue": true
+      },
+      {
+        "statement": "เป็น Control Plane (เหมือน Orion)",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นเครือข่าย Data Center ภายใน (Jupiter)",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุว่า Espresso 'deployed at the edge of B2' (เครือข่ายที่เชื่อมต่อกับ ISP) เพื่อจัดการทราฟฟิกที่เข้ามาจากผู้ใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรม 'Orion' ของ Google คืออะไร?",
+    "options": [
+      {
+        "statement": "Data Plane hardware (SDN Switch)",
+        "istrue": false
+      },
+      {
+        "statement": "SDN Control Plane (ซอฟต์แวร์ควบคุม) ที่ใช้ OpenFlow เพื่อจัดการ Data Plane",
+        "istrue": true
+      },
+      {
+        "statement": "Northbound Application",
+        "istrue": false
+      },
+      {
+        "statement": "โปรโตคอล Southbound API ที่มาแทน OpenFlow",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาและแผนภาพระบุว่า Orion คือ 'SDN control plane' (รุ่นที่ 2) ของ Google ซึ่งประกอบด้วย Orion Core (NIB, Flow Manager ฯลฯ) และใช้ OpenFlow (OFE/OFA) สื่อสารกับสวิตช์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม Orion, 'Network Information Base (NIB)' ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "เป็นแอปพลิเคชัน Northbound",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นฮาร์ดแวร์ Data Plane",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น 'OpenFlow Agent (OFA)' ที่อยู่ในสวิตช์",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น 'ฐานข้อมูลกลาง' (centralized database) ที่เก็บสถานะ (state) และการกำหนดค่า (config) ของเครือข่ายทั้งหมด",
+        "istrue": true
+      }
+    ],
+    "explanation": "NIB คือหัวใจของ Orion Core ทำหน้าที่เป็น 'single source of truth' โดยเก็บข้อมูล Topology, Flows, และ Configs ทั้งหมดของเครือข่ายที่ Controller บริหาร"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โครงการ 'OF@TEIN+' และ 'GENI' มีวัตถุประสงค์ร่วมกันอย่างไร?",
+    "options": [
+      {
+        "statement": "เพื่อแข่งขันกับ Google B4",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อสร้างเครือข่ายทดสอบ (Testbed) ขนาดใหญ่สำหรับสถาบันวิจัยและการศึกษา เพื่อทดลองนวัตกรรมเครือข่ายใหม่ๆ (เช่น SDN/OpenFlow)",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้บริการอินเทอร์เน็ตเชิงพาณิชย์",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อพัฒนาภาษา P4",
+        "istrue": false
+      }
+    ],
+    "explanation": "ทั้ง OF@TEIN+ (เอเชียแปซิฟิก) และ GENI (สหรัฐฯ) เป็นเครือข่ายวิจัย (Research and Education Networks - RENs) ที่สร้าง 'Playground' หรือ 'Environment for Networking Innovation' เพื่อให้นักวิจัยทดสอบแนวคิดใหม่ๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แผนภาพ 'OF@TEIN+' แสดงให้เห็น 'Playground Tower' (ใน GIST) ซึ่งรวม 'SDN Controllers' และ 'Orchestration Center' ไว้ด้วยกัน สิ่งนี้สะท้อนแนวคิดใด?",
+    "options": [
+      {
+        "statement": "การที่ Control Plane และ Management Plane ทำงานร่วมกันเพื่อบริหารจัดการทรัพยากรเครือข่าย",
+        "istrue": true
+      },
+      {
+        "statement": "การที่ Data Plane ถูกรวมไว้ที่ GIST ที่เดียว",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ OpenFlow เพื่อเชื่อมต่อกับยุโรป",
+        "istrue": false
+      },
+      {
+        "statement": "การที่เกาหลี (GIST) ควบคุมเครือข่ายทั้งหมดในเอเชีย",
+        "istrue": false
+      }
+    ],
+    "explanation": "Playground Tower ที่ GIST เป็นตัวอย่างของสถาปัตยกรรม SDN/Cloud ที่ซับซ้อน โดยมี SDN Controllers (Control Plane) และ Orchestration/Provisioning Centers (Management Plane) ทำงานร่วมกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "'PlanetLab' ถูกเรียกว่าเป็น 'Overlay Network' เพราะเหตุใด?",
+    "options": [
+      {
+        "statement": "เพราะเป็นเครือข่ายที่เร็วกว่าอินเทอร์เน็ต",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะเป็นเครือข่าย 'เสมือน' (logical) ที่สร้างขึ้น 'ทับซ้อน' (overlay) อยู่บนเครือข่าย 'กายภาพ' (physical) ที่มีอยู่เดิม (คือ 'The Internet')",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะถูกควบคุมโดย 'PlanetLab Central (PLC)' ที่ Princeton เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะใช้เฉพาะทรัพยากร (Resources) ที่ Stanford และ MIT",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ PlanetLab แสดงให้เห็น Nodes (เช่น U.Tokyo, Stanford) ที่กระจายตัวอยู่ทั่วโลกและเชื่อมต่อกันผ่าน 'The Internet' แต่มี 'Overlay Network' (เส้นประสีน้ำเงิน) ที่สร้างการเชื่อมต่อแบบ logical ทับไปอีกชั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แผนที่เครือข่าย 'EU GEANT' แสดงความจุแบนด์วิดท์ที่แตกต่างกัน (เช่น 1 Gbps, 10 Gbps, 100 Gbps) การออกแบบนี้สะท้อนหลักการใด?",
+    "options": [
+      {
+        "statement": "ทุกประเทศควรมีแบนด์วิดท์เท่ากัน",
+        "istrue": false
+      },
+      {
+        "statement": "การจัดสรรทรัพยากร (แบนด์วิดท์) ตามความต้องการใช้งานจริง (Traffic Demand) และความสำคัญของเส้นทาง (Core vs. Edge)",
+        "istrue": true
+      },
+      {
+        "statement": "ยุโรปตะวันตกมีความสำคัญน้อยกว่ายุโรปตะวันออก",
+        "istrue": false
+      },
+      {
+        "statement": "Fibre (สีแดง) เร็วกว่า Spectrum (สีน้ำเงิน) เสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนที่ทั้งสองของ GEANT แสดงให้เห็นว่าเส้นทางหลัก (Core) ที่เชื่อมต่อฮับใหญ่ๆ (เช่น FR, DE, UK) มีแบนด์วิดท์สูงมาก (multiples of 100 Gbps) ในขณะที่เส้นทางไปยังพื้นที่รอบนอก (peripheral) มีแบนด์วิดท์ต่ำกว่า (1-9 Gbps) ซึ่งเป็นการออกแบบตามต้นทุนและปริมาณการใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรม SDN ช่วยให้การจัดการ 'Middlebox' (เช่น Firewall, Load Balancer) แตกต่างจากเครือข่ายดั้งเดิมอย่างไร?",
+    "options": [
+      {
+        "statement": "SDN ทำให้ไม่จำเป็นต้องใช้ Middlebox อีกต่อไป",
+        "istrue": false
+      },
+      {
+        "statement": "ใน SDN, Controller สามารถ 'กำหนดเส้นทาง' (steer) ทราฟฟิกให้วิ่งผ่าน Middlebox (หรือฟังก์ชันเสมือน - VNF) ได้ตามนโยบาย แทนที่จะต้องติดตั้ง Middlebox แบบ physical ขวางทุกเส้นทาง",
+        "istrue": true
+      },
+      {
+        "statement": "ในเครือข่ายดั้งเดิม Middlebox ถูกควบคุมโดย Controller",
+        "istrue": false
+      },
+      {
+        "statement": "SDN ทำให้ Middlebox ทำงานช้าลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในเครือข่ายดั้งเดิม (แผนภาพ Traditional) Middlebox มักเป็นอุปกรณ์ physical ที่ทราฟฟิกต้องวิ่งผ่าน แต่ใน SDN Controller สามารถกำหนด Flow Rules เพื่อ 'บังคับ' ให้ทราฟฟิกที่ต้องการเท่านั้นวิ่งไปประมวลผลที่ Middlebox (Service Chaining)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด 'ไม่ใช่' หนึ่งในเป้าหมายหลัก 3 ประการของภาษา P4?",
+    "options": [
+      {
+        "statement": "Reconfigurability (ความสามารถในการกำหนดค่าใหม่)",
+        "istrue": false
+      },
+      {
+        "statement": "Protocol Independence (ความเป็นอิสระจากโปรโตคอล)",
+        "istrue": false
+      },
+      {
+        "statement": "OpenFlow Compatibility (ความเข้ากันได้กับ OpenFlow)",
+        "istrue": true
+      },
+      {
+        "statement": "Target Independence (ความเป็นอิสระจากฮาร์ดแวร์เป้าหมาย)",
+        "istrue": false
+      }
+    ],
+    "explanation": "เป้าหมาย 3 ประการที่ระบุไว้คือ Reconfigurability, Protocol Independence, และ Target Independence แม้ P4 จะทำงานในระบบนิเวศ SDN แต่การเข้ากันได้กับ OpenFlow ไม่ใช่เป้าหมายหลัก (P4 ใช้ P4Runtime)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สวิตช์เชิงพาณิชย์ (Commercial Switches) ที่แสดงในสไลด์ (เช่น HP ProCurve, Brocade, NoviSwitch) สะท้อนให้เห็นแนวโน้มใดในอุตสาหกรรม?",
+    "options": [
+      {
+        "statement": "การลดจำนวนพอร์ตในสวิตช์ลง",
+        "istrue": false
+      },
+      {
+        "statement": "การที่ผู้ผลิตฮาร์ดแวร์ (Vendors) เริ่มนำเสนอสวิตช์ที่รองรับ SDN และ OpenFlow เพื่อตอบสนองความต้องการของตลาด",
+        "istrue": true
+      },
+      {
+        "statement": "การที่สวิตช์ทั้งหมดเปลี่ยนไปใช้ P4",
+        "istrue": false
+      },
+      {
+        "statement": "การที่สวิตช์ไม่จำเป็นต้องมี Control Plane อีกต่อไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "การที่สไลด์แสดงตัวอย่างสวิตช์จากหลายยี่ห้อ (HP, Brocade, NEC, Centec, NoviFlow) ที่รองรับ OpenFlow/SDN แสดงให้เห็นว่าแนวคิด SDN ไม่ได้อยู่แค่ในงานวิจัย แต่ถูกนำมาใช้ในผลิตภัณฑ์เชิงพาณิชย์แล้ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือฟังก์ชันของ 'Statistics' (สถิติ) ใน OpenFlow Flow Entry?",
+    "options": [
+      {
+        "statement": "เพื่อกำหนดว่าแพ็กเก็ตใดควรถูก Drop",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเก็บ 'Packet + byte counters' (ตัวนับแพ็กเก็ตและไบต์) สำหรับ Rule นั้นๆ เพื่อใช้ในการตรวจสอบ (Monitoring) หรือการคิดค่าบริการ",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อกำหนด Priority (ลำดับความสำคัญ) ของ Rule",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อส่งแพ็กเก็ตไปยัง Controller",
+        "istrue": false
+      }
+    ],
+    "explanation": "Flow Entry ประกอบด้วย Rule (จับคู่), Action (กระทำ), และ Stats (สถิติ) โดย Stats ทำหน้าที่นับจำนวนแพ็กเก็ตและไบต์ที่ตรงกับ Rule นั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "OpenFlow Protocol ถูกจัดอยู่ใน API ประเภทใด?",
+    "options": [
+      {
+        "statement": "Northbound API",
+        "istrue": false
+      },
+      {
+        "statement": "Southbound API",
+        "istrue": true
+      },
+      {
+        "statement": "East-West bound API",
+        "istrue": false
+      },
+      {
+        "statement": "REST API",
+        "istrue": false
+      }
+    ],
+    "explanation": "OpenFlow คือโปรโตคอลมาตรฐานที่ใช้ใน Southbound API เพื่อให้ SDN Controller (Control Plane) สื่อสารและกำหนดค่า Flow Table ให้กับสวิตช์ (Data Plane)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากแอปพลิเคชัน 'Firewall' (ใน Application Layer) ต้องการบล็อก IP 1.2.3.4 ทั่วทั้งเครือข่าย SDN มันจะสื่อสารกับ 'Ryu Controller' (Control Layer) ผ่าน API ใด?",
+    "options": [
+      {
+        "statement": "OpenFlow (Southbound API)",
+        "istrue": false
+      },
+      {
+        "statement": "NETCONF (Southbound API)",
+        "istrue": false
+      },
+      {
+        "statement": "REST API (Northbound API)",
+        "istrue": true
+      },
+      {
+        "statement": "Zookeeper (East-West bound API)",
+        "istrue": false
+      }
+    ],
+    "explanation": "แอปพลิเคชัน (เช่น Firewall) สื่อสารกับ Controller (เช่น Ryu) ผ่าน Northbound API ซึ่งมักจะเป็น REST API เพื่อส่งนโยบาย (เช่น 'บล็อก IP นี้')"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หลังจาก Ryu Controller ได้รับคำสั่งบล็อก IP 1.2.3.4 จากแอปพลิเคชัน Firewall แล้ว Ryu จะทำอย่างไรต่อไป?",
+    "options": [
+      {
+        "statement": "ส่งคำสั่งนั้นกลับไปให้แอปพลิเคชันผ่าน Northbound API",
+        "istrue": false
+      },
+      {
+        "statement": "ส่งคำสั่ง 'Flow Entry' (Rule: IP src = 1.2.3.4, Action: drop) ไปยังสวิตช์ทุกตัวในเครือข่ายผ่าน OpenFlow (Southbound API)",
+        "istrue": true
+      },
+      {
+        "statement": "เก็บคำสั่งไว้ใน 'Topology viewer'",
+        "istrue": false
+      },
+      {
+        "statement": "ร้องขอ OpenStack ให้ลบ IP นั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือกระบวนการทำงานของ SDN: App (Northbound) -> Controller -> Controller (Southbound) -> Switch Controller (Ryu) จะแปลนโยบายระดับสูง (บล็อก IP) ให้เป็น Flow Rules ที่เจาะจง และส่งไปยังสวิตช์ผ่าน Southbound API (OpenFlow)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความท้าทายในการใช้ 'timeout' (idle/hard) สำหรับ Flow Entry?",
+    "options": [
+      {
+        "statement": "หาก 'timeout' สั้นเกินไป: สวิตช์อาจต้องติดต่อ Controller บ่อยครั้ง (เพิ่มภาระ Controller) แม้จะเป็น flow ปกติ",
+        "istrue": true
+      },
+      {
+        "statement": "หาก 'timeout' ยาวเกินไป: สวิตช์จะทำงานเร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "หาก 'timeout' สั้นเกินไป: Flow Table จะเต็มเร็วยิ่งขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "หาก 'timeout' ยาวเกินไป: Controller จะทำงานหนักขึ้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Idle timeout ที่สั้นเกินไปจะทำให้ flow ที่ใช้งานเป็นระยะๆ (เช่น ping) ถูกลบ และเมื่อมีแพ็กเก็ตใหม่มา สวิตช์ต้องส่ง Packet-In ไปยัง Controller อีกครั้ง ทำให้ Controller ทำงานหนัก (overhead)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความท้าทายในการใช้ 'timeout' (idle/hard) สำหรับ Flow Entry?",
+    "options": [
+      {
+        "statement": "หาก 'timeout' สั้นเกินไป: สวิตช์จะทำงานได้โดยไม่ต้องพึ่ง Controller",
+        "istrue": false
+      },
+      {
+        "statement": "หาก 'timeout' ยาวเกินไป (หรือไม่มี timeout): Flow Table ของสวิตช์อาจ 'เต็ม' (memory exhausted) ด้วย flow ที่ไม่ได้ใช้งานแล้ว",
+        "istrue": true
+      },
+      {
+        "statement": "หาก 'timeout' ยาวเกินไป: เครือข่ายจะตอบสนองเร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "หาก 'timeout' สั้นเกินไป: Controller จะทำงานน้อยลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hard timeout (หรือ idle timeout ที่นานมาก) อาจทำให้ flow ที่เลิกใช้งานไปแล้ว (เช่น TCP connection ที่ปิดไปแล้ว) ยังคงค้างอยู่ใน Flow Table ซึ่งเป็นทรัพยากรที่มีจำกัด (T-CAM) ของสวิตช์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน P4, `apply { routing.apply(); }` หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "เป็นการลบตาราง 'routing' ทิ้ง",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการสั่งให้ 'Control Plane' เพิ่ม rule เข้าไปในตาราง 'routing'",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการสั่งให้ 'Data Plane' (เมื่อประมวลผลแพ็กเก็ต) นำแพ็กเก็ตนี้ไป 'ค้นหา' (lookup) ในตาราง 'routing'",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นการคอมไพล์ตาราง 'routing'",
+        "istrue": false
+      }
+    ],
+    "explanation": "บล็อก `apply` ใน P4 คือส่วนที่ Data Plane ทำงานจริง (runtime) คำสั่ง `routing.apply()` คือการสั่งให้ pipeline นำแพ็กเก็ตปัจจุบันไปเทียบกับตาราง 'routing' เพื่อหา Action ที่เหมาะสม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด Google จึงเลือกใช้ SDN (B4) สำหรับเครือข่าย WAN ระหว่าง Data Center?",
+    "options": [
+      {
+        "statement": "เพราะเป็นกฎหมายบังคับ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Google ต้องการควบคุมเส้นทางการรับส่งข้อมูล (Traffic Engineering) ทั่วโลกด้วยตนเอง เพื่อเพิ่มประสิทธิภาพการใช้ลิงก์ (Utilization) ให้สูงสุด แทนที่จะพึ่งพาโปรโตคอล Routing แบบดั้งเดิม (เช่น BGP)",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ SDN ใช้แบนด์วิดท์น้อยกว่าเครือข่ายแบบดั้งเดิมเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ OpenFlow ไม่สามารถทำงานใน Data Center ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "Google B4 คือกรณีศึกษาที่สำคัญที่สุดของ SDN โดย Google ใช้ Controller กลางเพื่อคำนวณเส้นทางที่ดีที่สุดสำหรับทราฟฟิกมหาศาลระหว่าง DC ทำให้ใช้งานลิงก์ราคาแพงได้เกือบ 100% ตลอดเวลา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด 'ไม่ใช่' หนึ่งใน 3 ระนาบ (Planes) ของสถาปัตยกรรมเครือข่าย?",
+    "options": [
+      {
+        "statement": "Management Plane (ระนาบการจัดการ)",
+        "istrue": false
+      },
+      {
+        "statement": "Control Plane (ระนาบควบคุม)",
+        "istrue": false
+      },
+      {
+        "statement": "Protocol Plane (ระนาบโปรโตคอล)",
+        "istrue": true
+      },
+      {
+        "statement": "Data Plane (ระนาบข้อมูล)",
+        "istrue": false
+      }
+    ],
+    "explanation": "สถาปัตยกรรมเครือข่ายโดยทั่วไปประกอบด้วย 3 ระนาบ: Data Plane (การส่งต่อแพ็กเก็ต), Control Plane (การตัดสินใจเส้นทาง), และ Management Plane (การกำหนดค่าและตรวจสอบ)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรม SDN ทำให้ฮาร์ดแวร์สวิตช์ (Data Plane) เปลี่ยนแปลงไปอย่างไร?",
+    "options": [
+      {
+        "statement": "ฉลาดขึ้นและซับซ้อนขึ้น เพราะต้องรัน Control Plane ของตัวเอง",
+        "istrue": false
+      },
+      {
+        "statement": "ง่ายขึ้นและ 'โง่' ลง (เป็น 'Simple Packet Forwarding Hardware') เพราะ 'สมอง' (Control Plane) ถูกย้ายไปอยู่ที่ Controller",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่เปลี่ยนแปลงเลย",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกแทนที่ด้วย P4 ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน SDN (โดยเฉพาะที่ใช้ OpenFlow), สวิตช์ไม่จำเป็นต้องมี CPU ราคาแพงเพื่อรันโปรโตคอล Routing ที่ซับซ้อนอีกต่อไป หน้าที่ของมันคือการจับคู่แพ็กเก็ตกับ Flow Table ที่ Controller ส่งมาให้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในเครือข่าย GEANT, การเชื่อมต่อระหว่าง Paris (FR) และ London (UK) มีแบนด์วิดท์ 'multiples of 100 Gbps' ในขณะที่ Iceland (IS) เชื่อมต่อกับ UK ด้วย '1-9 Gbps' สะท้อนถึงอะไร?",
+    "options": [
+      {
+        "statement": "ไอซ์แลนด์มีเทคโนโลยีที่ดีกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "การออกแบบเครือข่ายหลัก (Core) ที่ต้องใช้แบนด์วิดท์สูงมากระหว่างฮับหลัก เทียบกับลิงก์เชื่อมต่อขอบ (Edge) ที่มีทราฟฟิกน้อยกว่า",
+        "istrue": true
+      },
+      {
+        "statement": "เส้นทาง 1-9 Gbps มีความหน่วงต่ำกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "ลอนดอนไม่สามารถรองรับ 100 Gbps ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "เครือข่ายขนาดใหญ่จะลงทุนแบนด์วิดท์สูงสุด (100G) ในเส้นทางที่เป็น 'Core' หรือ 'Backbone' (เช่น Paris-London) และใช้แบนด์วิดท์ที่ต่ำกว่า (1G/10G) สำหรับลิงก์ไปยังพื้นที่ที่มีทราฟฟิกน้อยกว่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความท้าทายหลักของ PlanetLab ที่มี Nodes กระจายตัวทั่วโลก (เช่น U.Tokyo, Stanford, Cambridge)?",
+    "options": [
+      {
+        "statement": "การจัดการทรัพยากร (Resource Management) และการรับมือกับความหน่วง (Latency) ที่สูงและไม่คงที่ระหว่าง Nodes",
+        "istrue": true
+      },
+      {
+        "statement": "การขาดแคลน Controller",
+        "istrue": false
+      },
+      {
+        "statement": "การที่ทุก Node ต้องรัน P4",
+        "istrue": false
+      },
+      {
+        "statement": "การที่ต้องเชื่อมต่อผ่าน GEANT เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "PlanetLab เป็น Overlay Network บน 'The Internet' จริง ซึ่งหมายความว่ามันต้องเผชิญกับความท้าทายของอินเทอร์เน็ตจริง เช่น Latency สูง, Packet Loss และความหลากหลายของโหนด ที่ PLC (Central) ต้องจัดการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือตัวอย่างของ 'Management Plane' ในสถาปัตยกรรม Google Orion?",
+    "options": [
+      {
+        "statement": "SDN Switch ที่กำลังส่งต่อ Data Plane",
+        "istrue": false
+      },
+      {
+        "statement": "Orion Core ที่กำลังคำนวณ Flow",
+        "istrue": false
+      },
+      {
+        "statement": "ผู้ดูแลระบบที่กำลัง 'Provision, Configure, Monitor' เครือข่าย หรือกำหนด 'SLAs' และ 'Policy'",
+        "istrue": true
+      },
+      {
+        "statement": "ผู้ใช้งานที่กำลังดู YouTube",
+        "istrue": false
+      }
+    ],
+    "explanation": "Management Plane (ระนาบการจัดการ) คือระนาบที่มนุษย์ (ผู้ดูแลระบบ) หรือระบบอัตโนมัติ (Orchestrator) ใช้ในการ 'กำหนดค่า' (Configure) และ 'ตรวจสอบ' (Monitor) เครือข่าย ซึ่งตรงกับกล่อง Management Plane ในแผนภาพ"
+  }
+]

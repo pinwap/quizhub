@@ -1,0 +1,112 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้อง",
+    "options": [
+      { "statement": "การพัฒนาซอฟต์แวร์ให้เกิดความรวดเร็วคือการนำเครื่องมือที่เหมาะสมมาช่วยในการพัฒนา", "istrue": false },
+      { "statement": "การพัฒนาซอฟต์แวร์อาจเขียน comment ประกอบ source code เพื่อให้เกิดความเข้าใจที่ตรงกันหากซอฟต์แวร์มีความซับซ้อนมาก", "istrue": true },
+      { "statement": "การพัฒนาซอฟต์แวร์ที่เหมาะสมควรพิจารณาถึงชนิดของฮาร์ดแวร์ที่ใช้ในการทำงาน", "istrue": false },
+      { "statement": "การพัฒนาซอฟต์แวร์ที่มีประสิทธิภาพคือซอฟต์แวร์ที่สามารถดูแลรักษาได้ตลอดเวลา", "istrue": false }
+    ],
+    "explanation": "ประสิทธิภาพของซอฟต์แวร์ไม่ได้หมายถึงการดูแลรักษาได้ตลอดเวลา แต่เน้นที่ความเร็ว ความถูกต้อง และความคุ้มค่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ระบบ historical data ของการเปลี่ยนแปลง source code ในแต่ละครั้งเรียกว่าอะไร",
+    "options": [
+      { "statement": "Programming control record", "istrue": false },
+      { "statement": "Source code control", "istrue": true },
+      { "statement": "Programming control database", "istrue": false },
+      { "statement": "Software coding database", "istrue": false }
+    ],
+    "explanation": "ระบบเก็บประวัติการเปลี่ยนแปลงของ source code เรียกว่า source code control"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Top-down design มีประโยชน์อย่างไร",
+    "options": [
+      { "statement": "ช่วยให้การทำงานของซอฟต์แวร์ปราศจากความผิดพลาด", "istrue": false },
+      { "statement": "ช่วยกำจัดความซับซ้อนของระบบการทำงานได้ง่าย", "istrue": true },
+      { "statement": "ช่วยให้กำจัดความผิดพลาดในการพัฒนาซอฟต์แวร์", "istrue": false },
+      { "statement": "ช่วยให้การทำงานของซอฟต์แวร์มีประสิทธิภาพมากยิ่งชึ้น", "istrue": false }
+    ],
+    "explanation": "Top-down design เน้นการแตกโครงสร้างเพื่อลดความซับซ้อนของระบบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การพัฒนาแบบ Top-down design หากพิจารณาเป็นการวาดแผนภาพใน UML จะเทียบได้กับการวาดภาพใดต่อไปนี้",
+    "options": [
+      { "statement": "Sequence diagram", "istrue": false },
+      { "statement": "Class diagram", "istrue": false },
+      { "statement": "Use Case", "istrue": false },
+      { "statement": "Composite diagram", "istrue": true }
+    ],
+    "explanation": "Top-down design เน้นการระบุหน้าที่ของระบบและผู้ใช้ที่สอดคล้องกับ use case diagram"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นตัวแปรที่ไม่สอดคล้องกับหลักการในการตั้งชื่อตัวแปร",
+    "options": [
+      { "statement": "Address", "istrue": false },
+      { "statement": "AG11", "istrue": true },
+      { "statement": "Studentname", "istrue": false },
+      { "statement": "CheckBox", "istrue": false }
+    ],
+    "explanation": "การตั้งชื่อตัวแปรควรสื่อความหมายชัดเจน ไม่ควรใช้ตัวอักษรรวมตัวเลขแบบ AG11 ที่ไม่สื่อความหมาย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเขียนแผนผัง package diagram หรือ composite diagram ช่วยในข้อใดต่อไปนี้",
+    "options": [
+      { "statement": "ช่วยให้เกิดความง่ายและรวดเร็วในการเลือกภาษาที่จะใช้พัฒนาซอฟต์แวร์ได้", "istrue": false },
+      { "statement": "สร้างความเข้าใจในการทำงานของซอฟต์แวร์ที่จะเกิดขึ้นได้", "istrue": false },
+      { "statement": "ป้องกันความผิดพลาดที่จะเกิดหลังจากการ fixed bug แล้ว", "istrue": true },
+      { "statement": "ป้องกันการพัฒนาซอฟต์แวร์โดยใช้วิธีการและภาษาที่ผิดพลาด", "istrue": false }
+    ],
+    "explanation": "package diagram และ composite diagram ช่วยให้เข้าใจการทำงานและความสัมพันธ์ของระบบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดถูกต้อง self-documenting code จำเป็นต้องมีข้อใดต่อไปนี้",
+    "options": [
+      { "statement": "หลีกเลี่ยงการทำงานอย่างต่อเนื่องพร้อม ๆ กันด้วยการใช้คำสั่ง break", "istrue": false },
+      { "statement": "การเขียน comments ในทุก command line", "istrue": false },
+      { "statement": "การพิจารณาจัดระเบียบการตั้งชื่อตัวแปรให้รู้ว่าเป็นของมอดูลใด เช่น Computing111 เป็นต้น", "istrue": false },
+      { "statement": "การพิจารณาว่า syntax ของคำสั่งต่าง ๆ มีความถูกต้องหรือไม่", "istrue": true }
+    ],
+    "explanation": "self-documenting code เน้นการตั้งชื่อที่ชัดเจนเพื่อให้โค้ดเข้าใจได้โดยไม่ต้องอาศัยคอมเมนต์มาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องที่สุด",
+    "options": [
+      { "statement": "Validate code เป็น automatic code ที่เกิดจากการใช้ Testing software", "istrue": false },
+      { "statement": "Validate code เป็นสิ่งที่จะดำเนินการหรือไม่ก็ได้ เนื่องจากซอฟต์แวร์จะมีความซับซ้อนมากขึ้น", "istrue": false },
+      { "statement": "Validate code ใช้เฉพาะตรวจสอบการทำงานของการรับข้อมูลเข้าสู่ระบบเท่านั้น", "istrue": false },
+      { "statement": "Validate code ช่วยให้การค้นหาจุดบกพร่องของการทำงานเป็นไปได้โดยง่าย", "istrue": true }
+    ],
+    "explanation": "การ validate code มีเป้าหมายเพื่อช่วยหาข้อผิดพลาดและตรวจสอบความถูกต้องของซอฟต์แวร์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ภาษาในยุค 1G มีลักษณะเด่นอย่างไร",
+    "options": [
+      { "statement": "เป็นการเขียนภาษาโดยใช้ภาษาธรรมชาติ คือคำพูดภาษาอังกฤษแทนการสั่งงานให้เกิดการประมวลผลขึ้น", "istrue": false },
+      { "statement": "เป็นการเขียนภาษาด้วยการใช้คำสั่งที่มีลักษณะเป็นคำสั่งภาษาอังกฤษที่สามารถเข้าใจได้โดยง่าย", "istrue": false },
+      { "statement": "เป็นการเขียนภาษาด้วยการใช้คำสั่งสั้น ๆ ที่มีความหมายอย่างใดอย่างหนึ่ง", "istrue": false },
+      { "statement": "เป็นการเขียนภาษาด้วยหมายเลข 0, 1 ที่แปลงมาจากคำสั่งต่าง ๆ เพื่อให้เครื่องคำนวณสามารถเข้าใจได้ทันที", "istrue": true }
+    ],
+    "explanation": "ภาษา 1G คือภาษาเครื่อง (machine language) ที่ใช้ตัวเลขฐานสอง 0 และ 1 ในการสั่งงาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การย้ายค่า 1234 เข้าสู่ตัวแปร account เมื่อเขียนด้วยภาษา assembly จะได้ว่าเป็นคำสั่งใด",
+    "options": [
+      { "statement": "MOV 1234, account", "istrue": false },
+      { "statement": "MOV account, 1234", "istrue": true },
+      { "statement": "account = 1234", "istrue": false },
+      { "statement": "set account = 1234", "istrue": false }
+    ],
+    "explanation": "รูปแบบคำสั่ง assembly ใช้ MOV ตามด้วยปลายทาง (account) แล้วตามด้วยค่า (1234)"
+  }
+]

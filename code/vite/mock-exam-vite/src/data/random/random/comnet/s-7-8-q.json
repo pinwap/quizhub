@@ -1,0 +1,496 @@
+[
+  {
+    "question": "4. Checksum ที่อยู่ส่วน header ในระดับ network layer หาจากค่าใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ผลรวมของค่าบิตทั้งหมดในส่วนหัว",
+        "istrue": true
+      },
+      {
+        "statement": "ผลรวมของค่าบิตทั้งหมดในส่วน payload",
+        "istrue": false
+      },
+      {
+        "statement": "ผลรวมของค่าบิตทั้งหมดในส่วนหัวรวมกับ payload",
+        "istrue": false
+      }
+    ],
+    "explanation": "Checksum ใน Network Layer (เช่นใน IP header) คำนวณจากค่าบิตในส่วนหัว (header) เท่านั้น"
+  },
+  {
+    "question": "5. หน้าที่ของ Checksum ใน header นั้น?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ตรวจสอบว่าข้อมูลส่วนหัวของ packet ที่ได้รับมามีความผิดพลาดหรือไม่",
+        "istrue": true
+      },
+      {
+        "statement": "ตรวจสอบว่าข้อมูลส่วน payload ที่ได้รับมามีความผิดพลาดหรือไม่",
+        "istrue": false
+      },
+      {
+        "statement": "ตรวจสอบว่าข้อมูลทั้ง packet ที่ได้รับมามีความผิดพลาดหรือไม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "Checksum ใน IP header มีหน้าที่ตรวจสอบความถูกต้องเฉพาะส่วนหัว (header) ของ IP packet"
+  },
+  {
+    "question": "6. เพราะเหตุใดจึงต้องทำ Flow Control?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "เพื่อควบคุมการส่งข้อมูลจากแหล่งส่งข้อมูลไปยังอุปกรณ์รับข้อมูล (ไม่จำเป็นต้องเป็นปลายทางที่ต้องการ) ไม่ให้เกิดสภาวะล้น",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อควบคุมการส่งข้อมูลจากต้นทางไปยังปลายทางไม่ให้เกิดสภาวะล้น ณ บัฟเฟอร์ปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อควบคุมการส่งข้อมูลจากต้นทางไปยังอุปกรณ์เชื่อมต่อทั้งหมดไม่ให้บัฟเฟอร์ปลายทางล้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Flow Control ป้องกันการส่งข้อมูลเกินกว่าที่ปลายทางจะรับได้ทัน (Buffer Overflow)"
+  },
+  {
+    "question": "7. การควบคุมการคั่ง (Congestion Control) มีความจำเป็นเพราะเหตุใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ป้องกันการเกิดความหน่วงในระยะยาว",
+        "istrue": false
+      },
+      {
+        "statement": "ป้องกันการเกิดความเสียหายกับข้อมูลในช่องทางสื่อสาร",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "Congestion Control ต้องป้องกันทั้งความหน่วงที่เกิดจากปริมาณการส่งสูงเกิน และความเสียหายของข้อมูลที่อาจเกิดขึ้น"
+  },
+  {
+    "question": "8. การเกิด Congestion จะเกิดการสูญหายของข้อมูล ณ อุปกรณ์ใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Switch",
+        "istrue": false
+      },
+      {
+        "statement": "Router",
+        "istrue": true
+      },
+      {
+        "statement": "Hub",
+        "istrue": false
+      }
+    ],
+    "explanation": "การคั่ง (congestion) โดยมากจะเกิดที่ router หากบัฟเฟอร์ของ router เต็มจะเกิดการทิ้งแพ็กเก็ต"
+  },
+  {
+    "question": "9. การส่งข้อมูลในระดับ Network Layer เป็นการสื่อสารลักษณะใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Packet switching",
+        "istrue": true
+      },
+      {
+        "statement": "Circuit switching",
+        "istrue": false
+      },
+      {
+        "statement": "Message switching",
+        "istrue": false
+      }
+    ],
+    "explanation": "IP Network ทำงานแบบ Packet Switching โดยไม่ต้องจองเส้นทางล่วงหน้าเหมือน Circuit Switching"
+  },
+  {
+    "question": "10. ข้อใดกล่าวถูกต้องเกี่ยวกับการส่งข้อมูลแบบ Packet Switching?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "packet วิ่งจากต้นทางไปปลายทางอย่างอิสระและไปเก็บที่บัฟเฟอร์ Network Layer จนครบทุก packet ก่อนส่งต่อ",
+        "istrue": true
+      },
+      {
+        "statement": "packet วิ่งจากต้นทางไปปลายทางอย่างเรียงลำดับเสมอและไปเก็บที่บัฟเฟอร์ Network Layer ก่อนส่งต่อ",
+        "istrue": false
+      },
+      {
+        "statement": "packet วิ่งจากต้นทางไปปลายทางอย่างอิสระ และส่งข้อมูลไปยัง Transport Layer ทันทีที่ packet มาถึง",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน packet switching แต่ละ packet เดินทางอิสระและสามารถส่งขึ้น Transport Layer ได้ทันที (store-and-forward เป็นราย packet)"
+  },
+  {
+    "question": "11. การบริการเพื่อเชื่อมต่อในระดับ Network Layer เป็นการเชื่อมต่อแบบใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Connectionless",
+        "istrue": true
+      },
+      {
+        "statement": "Connection Oriented",
+        "istrue": false
+      },
+      {
+        "statement": "Virtual Circuit Switch",
+        "istrue": false
+      }
+    ],
+    "explanation": "IP เป็นโพรโทคอลแบบ Connectionless — ไม่ต้องสร้าง session ล่วงหน้าก่อนส่งข้อมูล"
+  },
+  {
+    "question": "12. การทำงานแบบ Virtual Circuit Approach มีลักษณะเช่นไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "กำหนดการเชื่อมต่อสำหรับการส่ง datagram ก่อนการส่ง",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งทุก packet ต้องมีป้าย (flow label) เพื่อส่งข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "Virtual Circuit จะจองเส้นทาง (setup) ล่วงหน้า + ใช้ label/identifier ในแต่ละแพ็กเก็ต"
+  },
+  {
+    "question": "13. ข้อใดเป็น Auxiliary Protocol ในระดับ Network Layer?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "SNMP",
+        "istrue": false
+      },
+      {
+        "statement": "IP",
+        "istrue": false
+      },
+      {
+        "statement": "ICMP",
+        "istrue": true
+      }
+    ],
+    "explanation": "ICMP (Internet Control Message Protocol) คือโปรโตคอลเสริม (auxiliary) ในชั้น Network"
+  },
+  {
+    "question": "14. การทำงานของ IP จะเกิด Reliability ได้เพราะเหตุใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ใช้การบริการของโพรโทคอลระดับ Transport Layer มาช่วย",
+        "istrue": true
+      },
+      {
+        "statement": "เขียนโปรแกรมเพื่อควบคุมการทำงานด้วยตนเอง",
+        "istrue": false
+      },
+      {
+        "statement": "การทำงานของ IP มี reliability อยู่แล้ว",
+        "istrue": false
+      }
+    ],
+    "explanation": "IP เป็น Best-effort (ไม่การันตี) ต้องอาศัย Transport Layer (เช่น TCP) เพื่อสร้าง Reliability"
+  },
+  {
+    "question": "16. การตัดข้อมูลในระดับ Network Layer ให้สามารถส่งไปในเครือข่ายต่าง ๆ ได้เรียกว่าอะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Fragmentation",
+        "istrue": true
+      },
+      {
+        "statement": "Segmentation",
+        "istrue": false
+      },
+      {
+        "statement": "Encapsulation",
+        "istrue": false
+      }
+    ],
+    "explanation": "IP อาจต้องทำ Fragmentation หากแพ็กเก็ตใหญ่เกิน MTU ของเครือข่าย"
+  },
+  {
+    "question": "17. ปัญหาด้านความปลอดภัยที่เกิดขึ้นในชั้น Network Layer คืออะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Packet sniffing",
+        "istrue": true
+      },
+      {
+        "statement": "Distributed Denied of Services (DDoS)",
+        "istrue": false
+      },
+      {
+        "statement": "Malware attack",
+        "istrue": false
+      }
+    ],
+    "explanation": "Packet sniffing สามารถดักจับข้อมูลได้ในระดับ Network Layer"
+  },
+  {
+    "question": "18. Protocol ในระดับ Network Layer ที่ใช้ในการรักษาความปลอดภัยของข้อมูลที่ส่งในช่องทางการสื่อสารคืออะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "IPSecurity",
+        "istrue": false
+      },
+      {
+        "statement": "IPSec",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่มี",
+        "istrue": false
+      }
+    ],
+    "explanation": "IPSec เป็นชุดโปรโตคอลที่ให้การเข้ารหัสและตรวจสอบความถูกต้องของข้อมูลในระดับ IP"
+  },
+  {
+    "question": "19. ICMPv4 มีหน้าที่อะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "รายงานความผิดปกติในการส่งข้อมูลที่เกิดขึ้น ณ router กลับไปให้ sender",
+        "istrue": true
+      },
+      {
+        "statement": "แก้ไขความผิดปกติในการส่งข้อมูล ณ router แล้วแจ้งกลับไปให้ sender",
+        "istrue": false
+      },
+      {
+        "statement": "ตรวจสอบสภาวะการสื่อสาร ณ router ว่ามีความผิดปกติหรือไม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "ICMP แจ้งข้อผิดพลาดไปยังต้นทางเมื่อการส่งข้อมูลมีปัญหา แต่ไม่ได้แก้ปัญหาเอง"
+  },
+  {
+    "question": "20. Mobile IP หมายถึงอะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "การสร้างเครือข่าย IP network ที่ host สามารถเคลื่อนที่ได้",
+        "istrue": true
+      },
+      {
+        "statement": "การสร้างเครือข่าย IP network ที่ไม่มีโครงสร้างหรือสถาปัตยกรรมรองรับ",
+        "istrue": false
+      },
+      {
+        "statement": "การสร้างเครือข่าย IP network ที่เชื่อมต่อเฉพาะอุปกรณ์ที่เคลื่อนที่ได้เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Mobile IP อนุญาตให้โฮสต์เปลี่ยนจุดเชื่อมต่อเครือข่ายได้โดยยังคง IP address เดิม"
+  },
+  {
+    "question": "21. ข้อใดกล่าวถูกต้อง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ที่ destination host จำเป็นต้องใช้ forwarding table ของ final router",
+        "istrue": false
+      },
+      {
+        "statement": "ที่ source host ไม่จำเป็นต้องใช้ forwarding table เพราะรู้ว่าจะส่งไปที่ router ตัวใด",
+        "istrue": true
+      },
+      {
+        "statement": "ที่ source host จำเป็นต้องใช้ forwarding table เพราะไม่รู้ว่าจะส่งไปที่ router ตัวใดแน่นอน",
+        "istrue": false
+      }
+    ],
+    "explanation": "โฮสต์ต้นทางจะมี routing table (หรือ default gateway) เพื่อตัดสินใจว่าจะส่งแพ็กเก็ตออกพอร์ตใด"
+  },
+  {
+    "question": "22. วัตถุประสงค์ของการใช้ Distance Vector ในการหาเส้นทางคืออะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "หาเส้นทางที่สามารถส่งข้อมูลไปถึงปลายทางได้",
+        "istrue": false
+      },
+      {
+        "statement": "หาเส้นทางหลาย ๆ เส้นเป็นทางเลือกในการส่ง datagram",
+        "istrue": false
+      },
+      {
+        "statement": "หาเส้นทางที่มี cost ต่ำสุด",
+        "istrue": true
+      }
+    ],
+    "explanation": "Distance Vector Routing พยายามค้นหาเส้นทางที่มีต้นทุนรวมต่ำที่สุด"
+  },
+  {
+    "question": "23. วิธีการของ Bellman-Ford Equation เป็นวิธีที่ใช้ในการหาเส้นทางแบบใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Link State",
+        "istrue": false
+      },
+      {
+        "statement": "Distance Vector",
+        "istrue": true
+      },
+      {
+        "statement": "Hybrid Routing",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bellman-Ford Algorithm เป็นรากฐานของ Distance Vector Routing"
+  },
+  {
+    "question": "24. ความหมายของ Autonomous System (AS) คืออะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "เครือข่ายของ ISP ที่บริหารจัดการเอง มีหมายเลขประจำขนาด 16 บิต",
+        "istrue": true
+      },
+      {
+        "statement": "เครือข่ายของ ISP ที่บริหารจัดการเอง มีหมายเลขประจำขนาด 32 บิต",
+        "istrue": false
+      },
+      {
+        "statement": "เครือข่ายของ ISP ที่บริหารจัดการเอง มีหมายเลขประจำขนาด 64 บิต",
+        "istrue": false
+      }
+    ],
+    "explanation": "AS (เดิม) ใช้หมายเลข 16 บิต (ภายหลังขยายเป็น 32 บิตได้) เป็นขอบเขตการบริหารเดียวกัน"
+  },
+  {
+    "question": "25. ข้อใดต่อไปนี้จัดเป็น Stub AS?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Shopee",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบจัดการตั๋วเครื่องบินอิเล็กทรอนิกส์",
+        "istrue": false
+      },
+      {
+        "statement": "ระบบบริหารจัดการบุคลากรในองค์กร",
+        "istrue": true
+      }
+    ],
+    "explanation": "Stub AS คือ AS ที่เชื่อมต่อขาออกเพียงทางเดียว ใช้สำหรับบริการหรือระบบใดระบบหนึ่งเท่านั้น"
+  },
+  {
+    "question": "26. web booking.com จัดเป็น AS แบบใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Stub AS",
+        "istrue": false
+      },
+      {
+        "statement": "Multihomed AS",
+        "istrue": false
+      },
+      {
+        "statement": "Transient AS",
+        "istrue": true
+      }
+    ],
+    "explanation": "Transient AS เชื่อมต่อได้หลายทางและอนุญาตให้ข้อมูลจาก AS อื่นวิ่งผ่านได้—เช่นผู้ให้บริการขนาดใหญ่"
+  },
+  {
+    "question": "27. eBGP คืออะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "external border gateway protocol",
+        "istrue": true
+      },
+      {
+        "statement": "exterior boundary gateway protocol",
+        "istrue": false
+      },
+      {
+        "statement": "extended border gateway protocol",
+        "istrue": false
+      }
+    ],
+    "explanation": "eBGP = External Border Gateway Protocol คือการแลกเปลี่ยนเส้นทางระหว่างต่าง AS"
+  },
+  {
+    "question": "28. iBGP ทำหน้าที่อะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "update ข้อมูลเพื่อการ routing เฉพาะ router ที่เชื่อมต่อกับ AS อื่น",
+        "istrue": false
+      },
+      {
+        "statement": "update ข้อมูลเพื่อการ routing ในทุก router ของ AS",
+        "istrue": true
+      },
+      {
+        "statement": "update ข้อมูลเพื่อการ routing ภายใน AS (เฉพาะ subnet เดียว)",
+        "istrue": false
+      }
+    ],
+    "explanation": "iBGP = Internal BGP สำหรับเผยแพร่เส้นทางภายใน AS ให้ router ทุกตัวใน AS รับรู้"
+  },
+  {
+    "question": "29. Border Gateway Protocol (BGP) ใช้อัลกอริทึมแบบใดเพื่อหาเส้นทาง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Bellman-Ford algorithm",
+        "istrue": false
+      },
+      {
+        "statement": "Best path algorithm (Path Vector)",
+        "istrue": true
+      },
+      {
+        "statement": "Dijkstra's algorithm",
+        "istrue": false
+      }
+    ],
+    "explanation": "BGP ใช้แนวคิด Path Vector ซึ่งค้นหาเส้นทางที่ดีที่สุดตามนโยบาย (sometimes เรียกว่า 'Best Path Algorithm')"
+  },
+  {
+    "question": "30. IGMP ใช้เพื่ออะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ใช้เพื่อดำเนินการจัดทำ multicast บนระบบเครือข่ายที่ใช้ IPv4",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อจัดกลุ่มของอุปกรณ์ที่ต้องการทำ multicast",
+        "istrue": false
+      },
+      {
+        "statement": "ถูกทุกข้อ",
+        "istrue": true
+      }
+    ],
+    "explanation": "IGMP (Internet Group Management Protocol) ใช้บริหารจัดการ group membership ใน multicast IPv4 ซึ่งครอบคลุมทั้งการสร้างและจัดกลุ่มอุปกรณ์ที่ต้องการรับสตรีมเดียวกัน"
+  }
+]

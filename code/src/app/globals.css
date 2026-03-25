@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  :root {
+    /* ── App brand tokens ────────────────────────────── */
+    --gradient-start: #3b82f6;
+    --gradient-end: #8b5cf6;
+
+    /* ── Shadcn / Radix expected tokens (light) ─────── */
+    --background: 248 250 252;        /* #f8fafc  */
+    --foreground: 15 23 42;           /* #0f172a  */
+    --card: 255 255 255;              /* #ffffff  */
+    --card-foreground: 15 23 42;
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+    --primary: 59 130 246;            /* blue-500 */
+    --primary-foreground: 255 255 255;
+    --secondary: 241 245 249;         /* slate-100 */
+    --secondary-foreground: 15 23 42;
+    --muted: 241 245 249;             /* slate-100 */
+    --muted-foreground: 100 116 139;  /* slate-500 */
+    --accent: 241 245 249;
+    --accent-foreground: 15 23 42;
+    --destructive: 220 38 38;         /* red-600   */
+    --destructive-foreground: 255 255 255;
+    --border: 226 232 240;            /* slate-200 */
+    --input: 226 232 240;
+    --ring: 59 130 246;
+    --radius: 0.5rem;
+
+    /* ── Legacy alias tokens (used via Tailwind config) ─ */
+    --app-accent: #3b82f6;
+    --app-accent-hover: #2563eb;
+    --app-muted: #64748b;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --warning: #d97706;
+  }
+
+  .dark {
+    --gradient-start: #1d4ed8;
+    --gradient-end: #7e22ce;
+
+    --background: 15 23 42;           /* #0f172a  */
+    --foreground: 241 245 249;        /* #f1f5f9  */
+    --card: 22 34 54;                 /* #162236  */
+    --card-foreground: 241 245 249;
+    --popover: 22 34 54;
+    --popover-foreground: 241 245 249;
+    --primary: 96 165 250;            /* blue-400 */
+    --primary-foreground: 15 23 42;
+    --secondary: 30 41 59;            /* slate-800 */
+    --secondary-foreground: 241 245 249;
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;  /* slate-400 */
+    --accent: 30 41 59;
+    --accent-foreground: 241 245 249;
+    --destructive: 220 38 38;
+    --destructive-foreground: 255 255 255;
+    --border: 26 38 60;               /* near-invisible border, just above card */
+    --input: 26 38 60;
+    --ring: 96 165 250;
+
+    --app-accent: #60a5fa;
+    --app-accent-hover: #3b82f6;
+    --app-muted: #94a3b8;
+  }
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar (Webkit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--gradient-start), var(--gradient-end));
+  border-radius: 9999px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Quiz answer button states (complement shadcn Button) */
+.answer-correct {
+  @apply border-green-500 bg-green-500/10 text-green-700 dark:text-green-400 font-medium;
+}
+.answer-wrong {
+  @apply border-red-500 bg-red-500/10 text-red-700 dark:text-red-400;
+}
+.answer-idle {
+  @apply border-border bg-card hover:border-primary hover:bg-primary/5;
+}
+.answer-dimmed {
+  @apply border-border bg-background/60 text-muted-foreground;
+}

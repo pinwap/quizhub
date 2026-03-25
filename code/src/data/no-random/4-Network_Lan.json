@@ -1,0 +1,519 @@
+[
+  {
+    "question": "ข้อใดอธิบายลักษณะการให้บริการของ Standard Ethernet (10 Mbps) ได้ถูกต้อง?",
+    "options": [
+      "มีการสร้างการเชื่อมต่อ (connection-oriented) ก่อนส่งเฟรม",
+      "ไม่ต้องตรวจสอบข้อผิดพลาดในการส่ง (error detection)",
+      "ไม่ต้องมีขั้นตอนเชื่อมต่อก่อนส่งเฟรม (connectionless) และไม่มีการรับประกันว่าผู้รับพร้อมเสมอ",
+      "ต้องมีการจับมือ (handshake) ระหว่างผู้ส่งและผู้รับทุกครั้งก่อนส่งข้อมูล"
+    ],
+    "answer": 2,
+    "explanation": "Standard Ethernet ให้บริการแบบ connectionless และ unreliable คือไม่มีการสร้างหรือยกเลิกการเชื่อมต่อ และผู้รับอาจไม่พร้อมรับข้อมูลตลอดเวลา หากเฟรมสูญหายจะไม่ทราบจนกว่าชั้นโปรโตคอลที่สูงกว่าจะตรวจพบ"
+  },
+  {
+    "question": "ข้อใดคือความยาวขั้นต่ำของเฟรม Ethernet (ไม่รวม preamble และ SFD)?",
+    "options": [
+      "64 ไบต์",
+      "46 ไบต์",
+      "1518 ไบต์",
+      "18 ไบต์"
+    ],
+    "answer": 0,
+    "explanation": "ความยาวขั้นต่ำของเฟรม Ethernet คือ 64 ไบต์ (512 บิต) ซึ่งรวมส่วนหัวและท้ายเฟรมแล้ว แต่ไม่รวม preamble กับ SFD"
+  },
+  {
+    "question": "เหตุใด Ethernet จึงต้องมีการเติม (padding) หากข้อมูลจากชั้นบนมีขนาดน้อยกว่า 46 ไบต์?",
+    "options": [
+      "เพื่อให้ขนาดเฟรมเป็นไปตามขั้นต่ำ 64 ไบต์",
+      "เพื่อให้จับคู่กับสถาปัตยกรรมของ IP",
+      "เพื่อทำให้ความเร็วในการส่งสม่ำเสมอ",
+      "เพื่อเข้ารหัสข้อมูลเป็น Manchester code ได้"
+    ],
+    "answer": 0,
+    "explanation": "หากข้อมูลชั้นบนมีน้อยกว่า 46 ไบต์ Ethernet จะเติม 0 (padding) เพื่อให้ความยาวของเฟรมถึง 64 ไบต์ตามมาตรฐาน"
+  },
+  {
+    "question": "ที่อยู่ (address) แบบใดใน Ethernet ที่ส่งไปยังทุกสถานีในเครือข่าย?",
+    "options": [
+      "Unicast Address",
+      "Multicast Address",
+      "Anycast Address",
+      "Broadcast Address"
+    ],
+    "answer": 3,
+    "explanation": "Broadcast Address ใน Ethernet คือ FF:FF:FF:FF:FF:FF ซึ่งจะส่งแพ็กเก็ตไปยังทุกสถานีที่อยู่ในเครือข่าย"
+  },
+  {
+    "question": "Standard Ethernet มีอัตราการส่งข้อมูลเท่าไร?",
+    "options": [
+      "10 Mbps",
+      "100 Mbps",
+      "1 Gbps",
+      "10 Gbps"
+    ],
+    "answer": 0,
+    "explanation": "Standard Ethernet หมายถึง Ethernet ดั้งเดิมที่มีอัตราการส่งข้อมูล 10 Mbps"
+  },
+  {
+    "question": "Preamble ใน Ethernet frame มีหน้าที่อะไร?",
+    "options": [
+      "เก็บข้อมูลตัวรับและตัวส่ง",
+      "ซิงโครไนซ์สัญญาณนาฬิกา (clock) ของผู้รับก่อนถึงเฟรมจริง",
+      "ระบุประเภทของข้อมูล (type) ที่ตามมา",
+      "ใช้ตรวจสอบข้อผิดพลาด (CRC)"
+    ],
+    "answer": 1,
+    "explanation": "Preamble (7 ไบต์) เป็นการส่งสัญญาณ alternating 0s และ 1s เพื่อให้ผู้รับปรับจังหวะสัญญาณ (clock synchronization) ก่อนอ่านข้อมูลในเฟรมถัดไป"
+  },
+  {
+    "question": "Fast Ethernet (100 Mbps) ถูกออกแบบขึ้นโดยมีเป้าหมายใดสำคัญที่สุด?",
+    "options": [
+      "ใช้ที่อยู่ MAC แบบ 64 บิต",
+      "ขยายขนาดเฟรมให้มากกว่า 1518 ไบต์",
+      "เพิ่มอัตราการส่งข้อมูลเป็น 100 Mbps และยังคงโครงสร้างเฟรมเหมือนเดิม",
+      "ใช้ Manchester encoding สำหรับความเร็ว 100 Mbps"
+    ],
+    "answer": 2,
+    "explanation": "Fast Ethernet ถูกออกแบบเพื่อเพิ่มความเร็วเป็น 100 Mbps ในขณะที่ยังคงขนาดที่อยู่ (48 บิต) และรูปแบบเฟรมเดียวกับ Ethernet เดิม"
+  },
+  {
+    "question": "ข้อใดคือลักษณะสำคัญของการใช้ Switch ใน Fast Ethernet แบบ full-duplex?",
+    "options": [
+      "ยังต้องใช้ CSMA/CD เต็มรูปแบบ",
+      "ทุกโหนดแบ่งกันใช้สื่อร่วมกันในสายสัญญาณเดียว",
+      "แต่ละโหนดจะได้รับช่องสื่อสารส่วนตัว ไม่ต้องแข่งขัน",
+      "ต้องใช้ bus topology เหมือน 10 Mbps"
+    ],
+    "answer": 2,
+    "explanation": "เมื่อใช้ Switch ในโหมด full-duplex แต่ละโหนดจะมีสื่อสารแบบ point-to-point กับสวิตช์ จึงไม่ต้องแข่งขันหรือใช้ CSMA/CD"
+  },
+  {
+    "question": "Auto-negotiation ใน Fast Ethernet มีจุดประสงค์หลักเพื่ออะไร?",
+    "options": [
+      "เลือกใช้ MAC address ที่สั้นที่สุด",
+      "เจรจาอัตราเร็วที่รองรับร่วมกันได้ระหว่างอุปกรณ์",
+      "บังคับให้ทุกอุปกรณ์ใช้ความเร็วสูงสุดเท่านั้น",
+      "ป้องกันการชนกันของสัญญาณ (collision detection)"
+    ],
+    "answer": 1,
+    "explanation": "Auto-negotiation ช่วยให้สองอุปกรณ์ตกลงความเร็วและโหมดที่ทั้งคู่รองรับ เพื่อการทำงานร่วมกันได้ แม้อุปกรณ์จะมีความสามารถต่างกัน"
+  },
+  {
+    "question": "Gigabit Ethernet (1 Gbps) ไม่สามารถใช้ Manchester encoding ได้เนื่องจากเหตุใด?",
+    "options": [
+      "Manchester encoding ใช้สำหรับสื่อไร้สายเท่านั้น",
+      "Manchester encoding ต้องใช้ความถี่สูงเกินไป (2 Gbaud) ทำให้ไม่เหมาะสมกับสายสื่อ",
+      "Manchester encoding ไม่รองรับการทำงานแบบ full-duplex",
+      "Manchester encoding ถูกยกเลิกโดยมาตรฐาน IEEE"
+    ],
+    "answer": 1,
+    "explanation": "Manchester encoding ที่ 1 Gbps จะต้องใช้ 2 Gbaud ซึ่งกินแบนด์วิดธ์มากเกินไป จึงต้องใช้ encoding อื่น เช่น 8B/10B แทน"
+  },
+  {
+    "question": "Gigabit Ethernet แบบ half-duplex ยังคงใช้ CSMA/CD แต่มีเทคนิคใดเพื่อลดปัญหาเฟรมสั้นเกินไป?",
+    "options": [
+      "Frame Bursting และ Carrier Extension",
+      "Auto-negotiation และ Preamble Extension",
+      "Stop-and-Wait ARQ",
+      "Adaptive Amplification"
+    ],
+    "answer": 0,
+    "explanation": "ใน Gigabit Ethernet half-duplex มีเทคนิค Carrier Extension เพื่อขยายขนาดเฟรมขั้นต่ำ และ Frame Bursting เพื่อส่งเฟรมสั้นหลายเฟรมติดกันเหมือนเฟรมยาว เพื่อลดปัญหาการชน"
+  },
+  {
+    "question": "ข้อใดถูกต้องเกี่ยวกับการเชื่อมต่อ Gigabit Ethernet แบบ full-duplex?",
+    "options": [
+      "ใช้ bus topology เหมือน Standard Ethernet",
+      "ต้องใช้ CSMA/CA เพื่อหลีกเลี่ยงสัญญาณชนกัน",
+      "ไม่ต้องใช้ CSMA/CD และการส่งข้อมูลทั้งสองทางพร้อมกันได้",
+      "ต้องใช้ coaxial cable อย่างเดียว"
+    ],
+    "answer": 2,
+    "explanation": "ในโหมด full-duplex ของ Gigabit Ethernet จะใช้การเชื่อมต่อผ่าน switch แบบ point-to-point จึงไม่ต้องใช้ CSMA/CD"
+  },
+  {
+    "question": "10 Gigabit Ethernet มีคุณสมบัติเด่นอย่างไร?",
+    "options": [
+      "ใช้สายทองแดงเก่า (coax) ได้เหมือนเดิม",
+      "ต้องการใช้เฉพาะสื่อใยแก้วนำแสง (fiber-optic) เท่านั้นในช่วงมาตรฐานปัจจุบัน",
+      "ลดขนาดเฟรมเหลือ 32 ไบต์",
+      "กำหนดให้ใช้ half-duplex เท่านั้น"
+    ],
+    "answer": 1,
+    "explanation": "10 Gigabit Ethernet ตามมาตรฐาน 802.3ae ช่วงแรกออกแบบให้ใช้งานกับ fiber-optic เป็นหลัก เพราะต้องการความเร็วสูงมาก (10 Gbps)"
+  },
+  {
+    "question": "Type/Length field ใน Ethernet frame ใช้ระบุอะไร?",
+    "options": [
+      "ขนาดของ MAC address ที่ใช้",
+      "ประเภทของ upper-layer protocol หรือขนาด payload",
+      "รูปแบบของการเข้ารหัส (encoding) ที่ใช้",
+      "ความยาวของ preamble ที่ใช้"
+    ],
+    "answer": 1,
+    "explanation": "Type/Length field ใช้เพื่อบอกว่าเฟรมนี้บรรจุโปรโตคอลอะไร (เช่น IP, ARP) หรืออาจระบุเป็นขนาดของ payload แทนได้"
+  },
+  {
+    "question": "เมื่อเฟรม Ethernet มีขนาดข้อมูล (payload) ต่ำกว่า 46 ไบต์ จะเกิดอะไรขึ้น?",
+    "options": [
+      "ต้องสั่งยกเลิกการส่งข้อมูล",
+      "ทำให้อุปกรณ์ทำงานเฉพาะโหมด half-duplex",
+      "ต้องเพิ่ม padding เพื่อให้เฟรมถึงขนาดขั้นต่ำ 64 ไบต์",
+      "เปลี่ยนไปใช้โหมด full-duplex อัตโนมัติ"
+    ],
+    "answer": 2,
+    "explanation": "หาก payload น้อยกว่า 46 ไบต์ Ethernet จะต้องเติม 0 (padding) ให้ถึงขนาดขั้นต่ำ 64 ไบต์"
+  },
+  {
+    "question": "เหตุใดจึงมีการใช้ 8B/10B encoding ใน Gigabit Ethernet?",
+    "options": [
+      "เพื่อช่วยในการซิงโครไนซ์สัญญาณและตรวจจับข้อผิดพลาด",
+      "ใช้เพื่อเพิ่มขนาด MAC address",
+      "เพื่อรองรับ half-duplex เท่านั้น",
+      "ลดขนาดของเฟรมได้มากกว่า 46 ไบต์"
+    ],
+    "answer": 0,
+    "explanation": "8B/10B encoding ช่วยปรับโครงสร้างบิตเพื่อให้มี transition มากพอสำหรับ clock recovery และช่วยตรวจจับข้อผิดพลาดพื้นฐานในความเร็วสูง"
+  },
+  {
+    "question": "ในระบบ Ethernet การเกิด collision คืออะไร?",
+    "options": [
+      "การที่สองสถานีรับข้อมูลซ้ำซ้อน",
+      "การที่สองสถานีส่งข้อมูลพร้อมกันทำให้สัญญาณชนกันในสื่อกลาง",
+      "การที่สถานีหนึ่งไม่ได้รับ ACK จากอีกสถานี",
+      "การส่งเฟรมที่มีข้อมูลผิดพลาด"
+    ],
+    "answer": 1,
+    "explanation": "Collision ใน Ethernet เกิดเมื่อสองสถานีพยายามส่งข้อมูลพร้อมกันในสื่อกลางร่วมกัน ทำให้สัญญาณชน (overlap) และข้อมูลเสียหาย"
+  },
+  {
+    "question": "Field ใดใน Ethernet frame ที่ใช้ตรวจสอบความถูกต้องของข้อมูล?",
+    "options": [
+      "CRC (Frame Check Sequence)",
+      "SFD",
+      "Type/Length",
+      "Preamble"
+    ],
+    "answer": 0,
+    "explanation": "FCS หรือ CRC ใน Ethernet frame ใช้เพื่อตรวจสอบความถูกต้องของข้อมูล หากมีความเสียหายจะทิ้งเฟรมนั้น"
+  },
+  {
+    "question": "ขนาดสูงสุดของ Ethernet frame (ไม่รวม preamble และ SFD) คือเท่าไร?",
+    "options": [
+      "64 ไบต์",
+      "46 ไบต์",
+      "1518 ไบต์",
+      "2000 ไบต์"
+    ],
+    "answer": 2,
+    "explanation": "ขนาดสูงสุดของ Ethernet frame คือ 1518 ไบต์ (ประกอบด้วย header, payload สูงสุด 1500 ไบต์ และ CRC 4 ไบต์)"
+  },
+  {
+    "question": "ข้อใดคือมาตรฐาน IEEE ที่ใช้สำหรับ WiFi?",
+    "options": [
+      "IEEE 802.3",
+      "IEEE 802.11",
+      "IEEE 802.15",
+      "IEEE 802.5"
+    ],
+    "answer": 1,
+    "explanation": "WiFi เป็นชื่อที่ใช้อ้างถึงเทคโนโลยีที่อยู่ในมาตรฐาน IEEE 802.11"
+  },
+  {
+    "question": "ในโครงสร้าง Basic Service Set (BSS) ของ IEEE 802.11 ส่วนใหญ่ประกอบด้วยอะไร?",
+    "options": [
+      "สถานีเคลื่อนที่ (mobile station) และ Access Point (AP)",
+      "เฉพาะสถานีเคลื่อนที่เท่านั้น",
+      "เครือข่าย LAN แบบใช้สายทั้งหมด",
+      "Router และ Switch"
+    ],
+    "answer": 0,
+    "explanation": "BSS ตามมาตรฐาน 802.11 ส่วนใหญ่จะมี Access Point เป็นตัวกลาง และมีสถานีเคลื่อนที่เชื่อมต่ออยู่ในขอบเขตของ AP"
+  },
+  {
+    "question": "Extended Service Set (ESS) ในระบบ WiFi คืออะไร?",
+    "options": [
+      "การรวมหลาย BSS เข้าด้วยกันผ่าน distribution system",
+      "รูปแบบหนึ่งของการเข้ารหัสสัญญาณไร้สาย",
+      "การเชื่อมต่อระหว่าง WiFi และ Ethernet",
+      "การเชื่อมต่อ Bluetooth และ WiFi เข้าด้วยกัน"
+    ],
+    "answer": 0,
+    "explanation": "ESS คือการเชื่อมต่อ BSS หลาย ๆ อันเข้าด้วยกันผ่าน distribution system (เช่น เครือข่ายแบบใช้สาย) เพื่อขยายขอบเขตการให้บริการ"
+  },
+  {
+    "question": "ปัญหา Hidden Station เกิดขึ้นใน WiFi เมื่อใด?",
+    "options": [
+      "เมื่อสถานีทั้งหมดสามารถเห็นกันครบ",
+      "เมื่อมีสถานีอย่างน้อยสองแห่งมองไม่เห็นกัน แต่ส่งข้อมูลชนกันที่ AP",
+      "เมื่อสถานีเลือกช่องสัญญาณ (channel) ไม่ตรงกัน",
+      "เมื่อมีการประมวลผลแบบ full-duplex"
+    ],
+    "answer": 1,
+    "explanation": "Hidden Station Problem เกิดเมื่อมีสถานีที่ไม่สามารถเห็นสัญญาณกันและกัน ทำให้ส่งข้อมูลชนกันที่ AP แม้ต่างสถานีจะไม่ทราบว่ามีการส่งพร้อมกัน"
+  },
+  {
+    "question": "Exposed Station Problem คืออะไรในเครือข่ายไร้สาย?",
+    "options": [
+      "สถานีไม่สามารถส่งเฟรมเพราะเห็น RTS จากสถานีอื่น และเข้าใจผิดว่าช่องสัญญาณไม่ว่าง",
+      "สถานีไม่ทราบว่ามี AP ที่อยู่ไกลเกินระยะ",
+      "สถานีสูญเสียการเชื่อมต่อเพราะสัญญาณอ่อน",
+      "สถานีชนกันตลอดเวลาเพราะมีการใช้ความถี่เท่ากัน"
+    ],
+    "answer": 0,
+    "explanation": "Exposed Station Problem คือสถานีหนึ่งเห็น RTS ของสถานีอื่นแล้วรอ ทั้งที่การส่งข้อมูลไปยังปลายทางของตนอาจไม่ทับซ้อนกัน จึงสูญเสียโอกาสในการส่ง"
+  },
+  {
+    "question": "Distributed Coordination Function (DCF) และ Point Coordination Function (PCF) ใน IEEE 802.11 คืออะไร?",
+    "options": [
+      "เป็นมาตรฐานสำหรับการเข้ารหัสเท่านั้น",
+      "เป็นสถาปัตยกรรมเครือข่าย LAN แบบใช้สาย",
+      "เป็นสองวิธีการทำงานใน MAC Sublayer ของ 802.11",
+      "เป็นรูปแบบการกำหนดที่อยู่ IP"
+    ],
+    "answer": 2,
+    "explanation": "DCF และ PCF เป็นสองโหมดการทำงานในระดับ MAC Sublayer ของมาตรฐาน IEEE 802.11 โดย DCF ใช้ CSMA/CA ส่วน PCF เป็นโหมดเน้นการกำหนดสิทธิ์ส่ง (polling)"
+  },
+  {
+    "question": "WiFi ใช้กลไกใดเพื่อหลีกเลี่ยงการชนของเฟรมระหว่างสถานี (Collision Avoidance)?",
+    "options": [
+      "CSMA/CD",
+      "CSMA/CA พร้อม RTS/CTS",
+      "Token Ring Access",
+      "Bus Topology หมดปัญหา collision"
+    ],
+    "answer": 1,
+    "explanation": "WiFi (802.11) ใช้ CSMA/CA และกระบวนการ RTS/CTS เพื่อช่วยหลีกเลี่ยงการชน และแก้ปัญหา Hidden Station"
+  },
+  {
+    "question": "ในขั้นตอนก่อนส่งเฟรมของ DCF ใน WiFi สถานีต้องรอช่วงเวลาชื่ออะไรหลังพบว่าช่องสัญญาณว่าง?",
+    "options": [
+      "RTS Interval",
+      "CTS Interval",
+      "DIFS (Distributed Interframe Space)",
+      "SIFS (Short Interframe Space)"
+    ],
+    "answer": 2,
+    "explanation": "ใน DCF ของ IEEE 802.11 หากช่องสัญญาณว่าง สถานีต้องรอ DIFS ก่อนจะส่ง RTS หรือข้อมูลตามกระบวนการของ CSMA/CA"
+  },
+  {
+    "question": "เพราะเหตุใดมาตรฐาน 802.11 จึงแนะนำให้มีการทำ Fragmentation ของเฟรมในสภาพแวดล้อมไร้สาย?",
+    "options": [
+      "เพื่อให้อัตราข้อมูลสูงขึ้น",
+      "เพื่อลดผลกระทบของการสูญเสียหรือความผิดพลาดของเฟรมขนาดใหญ่",
+      "เพื่อประหยัดพลังงานแบตเตอรี่",
+      "เพื่อให้สามารถใช้ร่วมกับ Bluetooth ได้"
+    ],
+    "answer": 1,
+    "explanation": "เนื่องจากเครือข่ายไร้สายมีโอกาสสัญญาณรบกวนสูง การแบ่งเฟรมใหญ่เป็นเฟรมย่อย (fragment) ช่วยลดโอกาสเฟรมสูญหายทั้งเฟรมและลดเวลาสูญเปล่า"
+  },
+  {
+    "question": "Address Field ใน WiFi มีสูงสุดกี่ช่องในหนึ่งเฟรมตามมาตรฐาน 802.11?",
+    "options": [
+      "2 ช่อง",
+      "3 ช่อง",
+      "4 ช่อง",
+      "5 ช่อง"
+    ],
+    "answer": 2,
+    "explanation": "WiFi (802.11) อาจมีถึง 4 Address Field (แต่จะใช้จริงกี่ช่องขึ้นกับ To DS และ From DS) เพื่อรองรับโหมดต่าง ๆ"
+  },
+  {
+    "question": "มาตรฐาน 802.11a ใช้ความถี่ใดและให้ความเร็วสูงสุดเท่าใด?",
+    "options": [
+      "ย่าน 2.4 GHz, สูงสุด 11 Mbps",
+      "ย่าน 5 GHz, สูงสุด 54 Mbps",
+      "ย่าน 900 MHz, สูงสุด 1 Mbps",
+      "ย่าน 5 GHz, สูงสุด 11 Mbps"
+    ],
+    "answer": 1,
+    "explanation": "802.11a ใช้ OFDM ในย่าน 5 GHz และรองรับความเร็วสูงสุด 54 Mbps"
+  },
+  {
+    "question": "WiFi ส่วนใหญ่ทำงานในย่านคลื่น ISM (Industrial, Scientific and Medical) ซึ่งอยู่ที่ช่วงความถี่ใด?",
+    "options": [
+      "2.400–2.4835 GHz และ/หรือ 5.725–5.850 GHz",
+      "1.8–1.9 GHz",
+      "100–200 MHz",
+      "10–11 GHz"
+    ],
+    "answer": 0,
+    "explanation": "ย่าน ISM ของ WiFi มักใช้ 2.400–2.4835 GHz หรือ 5.725–5.850 GHz ตามมาตรฐาน 802.11 รุ่นต่าง ๆ"
+  },
+  {
+    "question": "มาตรฐาน 802.11b ใช้วิธีการเข้ารหัสแบบใดเพื่อให้ได้อัตราข้อมูลสูงขึ้นกว่ามาตรฐานดั้งเดิม?",
+    "options": [
+      "CCK (Complementary Code Keying)",
+      "DSSS Infrared",
+      "FHSS",
+      "BPSK"
+    ],
+    "answer": 0,
+    "explanation": "802.11b ใช้ HR-DSSS ร่วมกับ CCK เพื่อเพิ่มอัตราข้อมูลจาก 1-2 Mbps เป็น 5.5 หรือ 11 Mbps"
+  },
+  {
+    "question": "มาตรฐาน 802.11n เน้นวิธีใดในการเพิ่มอัตราข้อมูลและลด overhead?",
+    "options": [
+      "MIMO (Multiple-Input Multiple-Output)",
+      "CSMA/CD",
+      "Token Passing",
+      "การใช้สาย UTP เกรดสูงขึ้น"
+    ],
+    "answer": 0,
+    "explanation": "802.11n ใช้เทคโนโลยี MIMO เพื่อเพิ่ม Throughput และลดผลกระทบจากสัญญาณรบกวน ทำให้ได้ความเร็วสูงขึ้น"
+  },
+  {
+    "question": "802.11g มีความสามารถใดที่ทำให้ใช้งานแพร่หลายในช่วงหนึ่ง?",
+    "options": [
+      "มีค่าใช้จ่ายสูงแต่ความเร็วต่ำ",
+      "เข้ากันไม่ได้กับอุปกรณ์ 802.11b",
+      "รองรับความเร็วสูงสุด 54 Mbps และ backward compatible กับ 802.11b",
+      "ใช้ย่านความถี่ใหม่ 10 GHz"
+    ],
+    "answer": 2,
+    "explanation": "802.11g รองรับความเร็วสูงสุด 54 Mbps และทำงานในย่าน 2.4 GHz จึงยังใช้งานร่วมกับ 802.11b ได้"
+  },
+  {
+    "question": "WiFi ใช้ CSMA/CA แทน CSMA/CD เพราะเหตุใด?",
+    "options": [
+      "เพราะวิทยุไร้สายไม่สามารถฟังสัญญาณขณะส่งได้ (No collision detection)",
+      "เพราะอัตราการส่งสูงกว่าจึงไม่ต้องตรวจจับการชน",
+      "เพราะมีสายสัญญาณเดียวกัน",
+      "เพราะต้องการลดความเร็วในการส่ง"
+    ],
+    "answer": 0,
+    "explanation": "ในเครือข่ายไร้สาย สถานีไม่สามารถรับและส่งพร้อมกันเพื่อฟังการชนได้ จึงใช้การหลีกเลี่ยงการชน (CA) แทนการตรวจจับ (CD)"
+  },
+  {
+    "question": "Bluetooth เป็นมาตรฐานตาม IEEE ใด?",
+    "options": [
+      "IEEE 802.11",
+      "IEEE 802.15.1",
+      "IEEE 802.3",
+      "IEEE 802.16"
+    ],
+    "answer": 1,
+    "explanation": "Bluetooth ถูกกำหนดอยู่ในมาตรฐาน IEEE 802.15.1 ซึ่งเป็นมาตรฐาน PAN (Personal Area Network)"
+  },
+  {
+    "question": "Bluetooth มักใช้งานในลักษณะใด?",
+    "options": [
+      "เชื่อมต่อระยะไกลหลายกิโลเมตร",
+      "เชื่อมต่อแบบใช้สายกับ Ethernet",
+      "เชื่อมต่ออุปกรณ์ระยะสั้น เช่น หูฟัง ไมโครโฟน มือถือ",
+      "เชื่อมเครือข่าย LAN ที่มีอัตราข้อมูลสูง"
+    ],
+    "answer": 2,
+    "explanation": "Bluetooth เหมาะสำหรับการเชื่อมต่อระยะสั้น (ประมาณ 10 เมตร) เช่น หูฟัง โทรศัพท์ มือถือ คอมพิวเตอร์ เป็นต้น"
+  },
+  {
+    "question": "โครงสร้างเครือข่าย Bluetooth ที่เรียกว่า piconet มีลักษณะอย่างไร?",
+    "options": [
+      "มี Access Point เป็นตัวกลาง",
+      "ใช้ระบบสายสัญญาณรวมคล้าย Ethernet",
+      "ประกอบด้วย 1 master และอุปกรณ์ slave อีกหลายตัว",
+      "เป็นโครงข่ายแบบดาว (star) ที่ทุกโหนดเป็น master ได้เท่ากัน"
+    ],
+    "answer": 2,
+    "explanation": "piconet ของ Bluetooth ประกอบด้วยอุปกรณ์อย่างน้อย 1 master และ slave สูงสุด 7 ตัวในระยะสื่อสาร"
+  },
+  {
+    "question": "scatternet ใน Bluetooth คืออะไร?",
+    "options": [
+      "การเชื่อม piconet หลายตัวเข้าด้วยกัน",
+      "ชื่อเรียกเครือข่าย WiFi อีกชื่อ",
+      "ระบบการกระจายคลื่นแบบ OFDM",
+      "การเข้ารหัสสัญญาณ 8B/10B"
+    ],
+    "answer": 0,
+    "explanation": "scatternet คือการเชื่อม piconet หลายอันเข้าด้วยกัน โดยอุปกรณ์หนึ่งอาจเป็น slave ใน piconet หนึ่ง และเป็น master ในอีก piconet หนึ่งได้"
+  },
+  {
+    "question": "Bluetooth ใช้วิธีการแบ่งช่วงเวลา (Time Slot) ในลักษณะใด?",
+    "options": [
+      "TDMA แบบ full-duplex",
+      "TDD-TDMA (Time-Division Duplex TDMA)",
+      "CSMA/CA",
+      "CSMA/CD"
+    ],
+    "answer": 1,
+    "explanation": "Bluetooth ใช้ TDD-TDMA แบ่งช่องเวลาด้วย TDMA และสลับทิศทางส่ง (duplex) ตามเวลาช่อง (time slot)"
+  },
+  {
+    "question": "ลิงก์แบบ SCO (Synchronous Connection-Oriented) ใน Bluetooth มีจุดเด่นใด?",
+    "options": [
+      "เน้นการส่งข้อมูลที่ตรวจสอบความถูกต้องเต็มที่",
+      "เน้นส่งข้อมูลเสียงแบบไม่ต้องการความหน่วง (latency) สูง",
+      "รองรับการส่งไฟล์ขนาดใหญ่",
+      "ต้องมีการบีบอัดทุกครั้งก่อนส่ง"
+    ],
+    "answer": 1,
+    "explanation": "SCO link ใน Bluetooth มีไว้สำหรับการส่งข้อมูลเสียงแบบ real-time ซึ่งต้องการหลีกเลี่ยงความหน่วงสูง จึงไม่ retransmit เมื่อเฟรมเสีย"
+  },
+  {
+    "question": "ACL (Asynchronous Connectionless) link ใน Bluetooth เหมาะกับงานใด?",
+    "options": [
+      "การส่งเสียงแบบ real-time",
+      "การส่งข้อมูลทั่วไปที่เน้นความถูกต้อง (มีการ retransmit เมื่อผิดพลาด)",
+      "การ broadcast สัญญาณวีดีโอ",
+      "การเชื่อมต่อ LAN ระยะไกล"
+    ],
+    "answer": 1,
+    "explanation": "ACL link จะ retransmit เมื่อเฟรมเสีย จึงเหมาะกับงานส่งข้อมูลที่ต้องการความถูกต้อง เช่น การส่งไฟล์หรือแพ็กเก็ตข้อมูล"
+  },
+  {
+    "question": "Bluetooth ในชั้น Baseband ใช้การกระจายสเปกตรัมแบบใด?",
+    "options": [
+      "OFDM",
+      "FHSS (Frequency-Hopping Spread Spectrum)",
+      "DSSS (Direct Sequence Spread Spectrum)",
+      "CDMA"
+    ],
+    "answer": 1,
+    "explanation": "Bluetooth ใช้ FHSS ด้วยการเปลี่ยนความถี่อย่างรวดเร็ว (1600 ครั้งต่อวินาที) เพื่อหลีกเลี่ยงการรบกวน"
+  },
+  {
+    "question": "GFSK (Gaussian Frequency Shift Keying) ใน Bluetooth มีหลักการอย่างไร?",
+    "options": [
+      "ปรับความกว้างของพัลส์ตามข้อมูล",
+      "เป็นการเข้ารหัสข้อมูลด้วย QPSK",
+      "เลื่อนความถี่ carrier ขึ้นและลงตามบิตข้อมูล พร้อม Gaussian filter",
+      "ใช้การเข้ารหัส block code ก่อนส่ง"
+    ],
+    "answer": 2,
+    "explanation": "GFSK คือ FSK ที่ผ่าน Gaussian filter เพื่อให้สัญญาณลักษณะเรียบขึ้น โดยบิต 1 จะเลื่อนความถี่หนึ่ง และบิต 0 เลื่อนอีกความถี่หนึ่ง"
+  },
+  {
+    "question": "Bluetooth มักมีระยะการเชื่อมต่อมาตรฐานประมาณกี่เมตร (Class 2)?",
+    "options": [
+      "1 เมตร",
+      "10 เมตร",
+      "100 เมตร",
+      "1000 เมตร"
+    ],
+    "answer": 1,
+    "explanation": "Bluetooth Class 2 เป็นประเภทพลังงานกลางที่แพร่หลายมากที่สุด มีระยะทำงานราว 10 เมตร"
+  },
+  {
+    "question": "Bluetooth frame มีรูปแบบใดบ้างตามความยาว time slot?",
+    "options": [
+      "1-slot, 3-slot และ 5-slot",
+      "2-slot และ 4-slot เท่านั้น",
+      "8-bit และ 16-bit frames",
+      "รองรับเฉพาะ 1-slot เท่านั้น"
+    ],
+    "answer": 0,
+    "explanation": "Bluetooth frame แบ่งตามความยาว time slot ได้ 3 แบบ คือ 1-slot (366 บิต) 3-slot (1616 บิต) และ 5-slot (2866 บิต)"
+  },
+  {
+    "question": "Bluetooth ถูกออกแบบมาสำหรับงานใดเป็นหลัก?",
+    "options": [
+      "เชื่อมต่ออุปกรณ์คอมพิวเตอร์ส่วนบุคคลและโทรศัพท์มือถือระยะสั้น",
+      "สร้างเครือข่าย WAN ความเร็วสูง",
+      "เชื่อมต่ออินเทอร์เน็ตผ่านสายใยแก้วนำแสง",
+      "เชื่อมต่อ LAN สำหรับองค์กรขนาดใหญ่"
+    ],
+    "answer": 0,
+    "explanation": "Bluetooth ออกแบบมาสำหรับการเชื่อมต่อระยะสั้น ความเร็วปานกลาง เช่น หูฟัง โทรศัพท์ เมาส์ คีย์บอร์ด หรือส่งข้อมูลระหว่างอุปกรณ์เคลื่อนที่"
+  }
+]

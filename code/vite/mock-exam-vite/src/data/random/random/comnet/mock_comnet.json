@@ -1,0 +1,1242 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "สถานการณ์ที่ video packet เกิดมีความหน่วงในขณะที่มีการสื่อสารมา ณ จุดปลายทาง ส่งผลให้ packet มาถึงปลายทางในเวลาที่ช้ากว่ากำหนด สถานการณ์นี้มีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Jitter", "istrue": true },
+      { "statement": "Packet delay", "istrue": false },
+      { "statement": "Latency", "istrue": false },
+      { "statement": "Time relationship", "istrue": false }
+    ],
+    "explanation": "Jitter คือความแปรปรวนของเวลามาถึงของแพ็กเก็ต เมื่อ packet มาถึงช้าหรือเร็วเกินกำหนดสลับกัน จึงตรงกับคำอธิบาย ส่วน packet delay และ latency เป็นระยะเวลาโดยรวม ไม่ใช่ความแปรปรวน ส่วน time relationship ไม่ใช้คำทางเครือข่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Web application ถือว่าเป็น application ประเภทใด",
+    "options": [
+      {
+        "statement": "Nonstandard application-layer protocol",
+        "istrue": false
+      },
+      { "statement": "Standard application-layer protocol", "istrue": true },
+      {
+        "statement": "Semi standard application-layer protocol",
+        "istrue": false
+      },
+      { "statement": "Special application-layer protocol", "istrue": false }
+    ],
+    "explanation": "Web application ใช้ HTTP ซึ่งเป็นโพรโทคอลมาตรฐาน (standard) ของ IETF จึงจัดอยู่ในกลุ่ม Standard application-layer protocol ส่วนคำอื่นไม่ใช่ชื่อทางการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer จะเป็นผู้รับบริการจากระดับการทำงานระดับใดต่อไปนี้",
+    "options": [
+      { "statement": "Application layer", "istrue": false },
+      { "statement": "Network layer", "istrue": true },
+      { "statement": "Data link layer", "istrue": false },
+      { "statement": "Physical layer", "istrue": false }
+    ],
+    "explanation": "Transport layer ทำงานอยู่เหนือ Network layer (IP) จึงรับบริการจาก Network layer ก่อนส่งต่อให้ Application layer"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นหน้าที่ของ RTP",
+    "options": [
+      {
+        "statement": "ควบคุมการจราจรในช่องสัญญาณการสื่อสารแบบ real-time บนเครือข่ายอินเทอร์เน็ต",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมการเล่นวีดีโอให้มีความราบรื่น เมื่อมีการสื่อสารแบบ real-time",
+        "istrue": true
+      },
+      {
+        "statement": "ควบคุมการสื่อสารแบบ multicast ด้วยการใช้โพรโทคอล UDP",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมการสื่อสารให้มีความน่าเชื่อถือและมีค่าความหน่วงต่ำ",
+        "istrue": false
+      }
+    ],
+    "explanation": "RTP (Real-time Transport Protocol) ทำหน้าที่ใส่หมายเลขลำดับ (sequence number) และ timestamp ในแต่ละแพ็กเก็ตข้อมูลเสียงหรือวิดีโอ เพื่อให้ผู้รับสามารถจัดเรียงและปรับช่วงเวลาการเล่น (jitter buffer and playout) ได้ถูกต้อง ซึ่งช่วยให้การเล่นวิดีโอหรือเสียงแบบ real-time ราบรื่น แม้จะมีความแปรปรวนของเครือข่ายเกิดขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เพราะเหตุใดจึงจำเป็นต้องมีการบริหารจัดการบัญชีของผู้ใช้งาน (user account)",
+    "options": [
+      {
+        "statement": "เพื่อควบคุมการใช้งานและเป็นการกำหนดสิทธิในการเข้าใช้ทรัพยากรบนเครือข่ายของผู้ใช้แต่ละรายไม่ให้เกิดการผูกขาด",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อป้องกันมิให้ผู้ไม่มีสิทธิเข้ามาใช้งานระบบเครือข่ายขององค์กรได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อศึกษาพฤติกรรมการใช้งานของผู้ใช้แต่ละกลุ่มว่ามีความเหมาะสมหรือไม่",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อพิจารณาปรับเปลี่ยนรูปแบบการให้บริการที่เหมาะสมแก่ผู้ใช้งานเมื่อผู้ใช้ต้องการ",
+        "istrue": false
+      }
+    ],
+    "explanation": "จุดประสงค์หลักของ user account management คือควบคุมสิทธิ์และป้องกันการผูกขาดทรัพยากรในเครือข่าย จึงตรงกับตัวเลือกแรก ส่วนการป้องกันผู้ไม่มีสิทธิ์จัดอยู่ใน security management แต่ไม่ใช่เหตุผลหลักของ user account"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อเกิดความผิดพลาดขึ้นในการทำงานของเครือข่าย ส่วนใดของ SNMP จะรายงานความผิดพลาดนั้นให้ระบบบริหารจัดการเครือข่ายรับรู้",
+    "options": [
+      { "statement": "Server program", "istrue": true },
+      { "statement": "Client program", "istrue": false },
+      { "statement": "SNMP packet", "istrue": false },
+      { "statement": "Application program", "istrue": false }
+    ],
+    "explanation": "ใน SNMP ตัว Agent (Server program) ทำหน้าที่แจ้งเตือน (Trap) เมื่อเกิดเหตุการณ์ผิดปกติไปยัง Manager จึงตรงกับ Server program"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นเหตุการณ์ของการเกิด snooping",
+    "options": [
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเพื่อนำไปทำรายงานสรุปผล แต่นิยมสามารถแอบสำเนาข้อมูลเหล่านั้นไปในช่วงการสื่อสารของยุคลกับเครื่องให้บริการ",
+        "istrue": true
+      },
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการเว็บขององค์กรแต่ไม่สามารถเรียกใช้ได้เนื่องจากเว็บล่ม",
+        "istrue": false
+      },
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเพื่อนำไปทำรายงานสรุปผล แต่นิยมแอบเปลี่ยนข้อมูลนั้นก่อนที่ยุคลจะได้รับข้อมูลที่ถูกต้อง",
+        "istrue": false
+      },
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเว็บขององค์กรแต่ยุคลปฏิเสธการเรียกใช้งานนั้นเมื่อข้อมูลเกิดการรั่วไหลสู่คู่แข่งทางการค้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "Snooping คือการดักฟังหรือสำเนาข้อมูลระหว่างทางโดยไม่เปลี่ยนแปลงคำสั่ง จึงตรงกับตัวเลือกแรก ส่วนการเปลี่ยนข้อมูลเป็น modification และกรณีอื่นไม่ใช่ snooping"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Metafile ของวีดีโอถูกเรียกใช้จากเครื่องให้บริการด้วยโพรโทคอลใด",
+    "options": [
+      { "statement": "FTP", "istrue": false },
+      { "statement": "HTTP", "istrue": true },
+      { "statement": "SMTP", "istrue": false },
+      { "statement": "SNMP", "istrue": false }
+    ],
+    "explanation": "Metafile ของวิดีโอทั่วไปจะถูกเรียกผ่าน HTTP เนื่องจากเป็นโปรโตคอลมาตรฐานสำหรับเว็บ ส่วน FTP/SMTP/SNMP ไม่ใช้ในการให้บริการไฟล์มีเดียเชิง stream"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในการแปลงภาพ (transformation) และการแปลงภาพกลับ (inverse transformation) ของภาพ JPEG มีการแบ่งภาพเป็น block จำนวนเท่าไร",
+    "options": [
+      { "statement": "2 x 2 blocks", "istrue": false },
+      { "statement": "4 x 4 blocks", "istrue": false },
+      { "statement": "8 x 8 blocks", "istrue": true },
+      { "statement": "16 x 16 blocks", "istrue": false }
+    ],
+    "explanation": "มาตรฐาน JPEG แบ่งภาพออกเป็นบล็อกขนาด 8×8 พิกเซล ก่อนประมวลผล DCT และ quantization"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้โพรโทคอล HTTP จะทำงานผ่าน Port number เท่าไรเสมอ",
+    "options": [
+      { "statement": "23", "istrue": false },
+      { "statement": "25", "istrue": false },
+      { "statement": "53", "istrue": false },
+      { "statement": "80", "istrue": true }
+    ],
+    "explanation": "HTTP ใช้พอร์ตมาตรฐาน 80 สำหรับการสื่อสารระหว่างเว็บเบราว์เซอร์และเซิร์ฟเวอร์ ส่วนพอร์ตอื่นเป็นของ Telnet, SMTP, DNS ตามลำดับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องที่สุด",
+    "options": [
+      {
+        "statement": "RTP ทำงานร่วมกับ RTCP และ UDP เพื่อการสื่อสารแบบ real-time",
+        "istrue": false
+      },
+      {
+        "statement": "RTP ใช้ในการควบคุมการสื่อสารแบบ multicast บนเครือข่ายอินเทอร์เน็ต",
+        "istrue": false
+      },
+      {
+        "statement": "RTCP มีการสื่อสารแบบ out-of-band control stream เพื่อให้เกิดการสื่อสารแบบสองทางที่มีประสิทธิภาพ",
+        "istrue": true
+      },
+      {
+        "statement": "RTP มีการสื่อสารแบบ in-band control system เพื่อให้เกิดการสื่อสารแบบ multimedia ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "RTCP (Real-Time Control Protocol) ทำงานขนานกับ RTP และใช้ช่องทางควบคุมนอกแบนด์ (out-of-band control stream) เพื่อแลกเปลี่ยนข้อมูลสถิติคุณภาพ (QoS) และข้อมูลควบคุมระหว่างผู้ส่งและผู้รับ ทำให้สามารถปรับตั้ง jitter buffer และตอบสนองกลับ (feedback) ในการสื่อสารสองทางได้อย่างมีประสิทธิภาพ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดแตกต่างจากข้ออื่น",
+    "options": [
+      { "statement": "IPTV", "istrue": true },
+      { "statement": "Video conference", "istrue": false },
+      { "statement": "VoIP", "istrue": false },
+      { "statement": "Internet phone", "istrue": false }
+    ],
+    "explanation": "IPTV เป็นบริการส่งวิดีโอแบบ broadcast หนึ่งต่อหลาย ส่วน Video conference, VoIP, Internet phone เป็นสื่อสารสองทางจึงต่างกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นความหมายของ bit depth",
+    "options": [
+      {
+        "statement": "จำนวนช่อง bit ที่แสดงให้เห็นถึงจำนวน pixels ของภาพ",
+        "istrue": true
+      },
+      { "statement": "จำนวนของ bit ที่แสดงให้เห็นภาพสามมิติ", "istrue": false },
+      { "statement": "จำนวนของ bit ที่ใช้แทนขนาดของภาพ", "istrue": false },
+      { "statement": "จำนวนของ bit ที่แสดงให้เห็นภาพสองมิติ", "istrue": false }
+    ],
+    "explanation": "Bit depth คือจำนวนบิตที่ใช้แทนค่าสีหรือความเข้มของแต่ละพิกเซลในภาพ จึงสามารถมองได้ว่าเป็นจำนวนช่องบิตที่บอกถึงตัวแทนของพิกเซลแต่ละตำแหน่ง จำนวนบิตยิ่งมาก ยิ่งแสดงระดับสีหรือละเอียดของพิกเซลได้มากขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นการแก้ปัญหา jitter ในการเล่นวีดีโอแบบ real-time interactive audio/video",
+    "options": [
+      { "statement": "Timestamp + Playback Buffer", "istrue": true },
+      { "statement": "Playback Buffer + Multicast", "istrue": false },
+      { "statement": "Time relationship + Timestamp", "istrue": false },
+      { "statement": "Translation + Timestamp", "istrue": false }
+    ],
+    "explanation": "การใช้ timestamp ร่วมกับ playback buffer ช่วยให้วิดีโอเล่นต่อเนื่องแม้มี jitter จึงเป็นวิธีมาตรฐาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเก็บข้อมูลการใช้งานเครือข่ายโดย SNMP เป็นส่วนหนึ่งของการบริหารจัดการเครือข่ายในลักษณะใด",
+    "options": [
+      { "statement": "Security management", "istrue": false },
+      { "statement": "Account management", "istrue": false },
+      { "statement": "Performance management", "istrue": true },
+      { "statement": "Fault management", "istrue": false }
+    ],
+    "explanation": "SNMP เก็บค่าทราฟฟิก ประสิทธิภาพ และสถานะเครือข่ายเพื่อวิเคราะห์ performance จึงเป็น Performance management"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นปรากฏการณ์ของการโจมตีแบบ modification",
+    "options": [
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเพื่อนำไปทำรายงานสรุปผลแต่นิยมสามารถแอบสำเนาข้อมูลเหล่านั้นไปในช่วงการสื่อสารของยุคลกับเครื่องให้บริการ",
+        "istrue": false
+      },
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการเว็บขององค์กรแต่ไม่สามารถเรียกใช้ได้เนื่องจากเว็บล่ม",
+        "istrue": false
+      },
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเพื่อนำไปทำรายงานสรุปผลแต่นิยมแอบเปลี่ยนข้อมูลนั้นก่อนที่ยุคลจะได้รับข้อมูลที่ถูกต้อง",
+        "istrue": true
+      },
+      {
+        "statement": "ยุคลเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเว็บขององค์กรแต่ยุคลปฏิเสธการเรียกใช้งานนั้นเมื่อข้อมูลเกิดการรั่วไหลสู่คู่แข่งทางการค้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "Modification คือการดักจับและแก้ไขข้อมูลระหว่างทาง จึงตรงกับตัวเลือกที่สาม ส่วนการสำเนาเป็น snooping และการปฏิเสธเป็น repudiation"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้ไม่ใช่ character-oriented cipher",
+    "options": [
+      { "statement": "Transposition cipher", "istrue": false },
+      { "statement": "DES", "istrue": true },
+      { "statement": "Block cipher", "istrue": false },
+      { "statement": "Stream cipher", "istrue": false }
+    ],
+    "explanation": "Character-oriented cipher คือการเข้ารหัสทีละตัวอักษร (character) เช่น Transposition cipher และ Stream cipher ส่วน DES เป็น block cipher ที่เข้ารหัสทีละบล็อกข้อมูลขนาด 64 บิต ไม่ได้ประมวลผลทีละอักขระ จึงไม่จัดเป็น character-oriented cipher"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นสิ่งที่ไม่ใช่คุณสมบัติของ Huffman tree",
+    "options": [
+      {
+        "statement": "ตัวอักษรที่ต้องการบีบอัดจะอยู่ในตำแหน่ง leave ของ tree เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "ตัวอักษรที่พิจารณาเข้าสู่ tree ก่อนคือตัวอักษรที่มีความถี่ในการเกิดต่ำสุด",
+        "istrue": false
+      },
+      {
+        "statement": "ตัวอักษรที่พิจารณาเข้าสู่ tree หลังสุดคือตัวอักษรที่มีความถี่ในการเกิดสูงสุด",
+        "istrue": false
+      },
+      {
+        "statement": "ทุกตัวอักษรที่เกิดการบีบอัดจะเป็นตัวอักษรที่มีความยาวของรหัสเท่ากันทุกตัวอักษร",
+        "istrue": true
+      }
+    ],
+    "explanation": "Huffman tree ให้รหัสยาว/สั้นแตกต่างกันตามความถี่ การที่รหัสเท่ากันหมดจึงไม่ใช่คุณสมบัติของ Huffman"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นปรากฏการณ์ของการเกิด repudiation",
+    "options": [
+      {
+        "statement": "สมพรแอบใช้ username และ password ของสมหญิงเมื่อสมหญิงป่วย",
+        "istrue": false
+      },
+      {
+        "statement": "สมพรแอบดักจับข้อมูลที่สมหญิงส่งไปให้ยุคลแล้วดำเนินการเปลี่ยนแปลงข้อความนั้นให้ยุคลเสียหาย",
+        "istrue": false
+      },
+      {
+        "statement": "สมรแอบดูจดหมายของสมหญิงที่ส่งไปให้ยุคล แล้วเอาไปกระจายให้คนในองค์กรรับทราบ",
+        "istrue": false
+      },
+      {
+        "statement": "ยุคลได้รับจดหมายเวียนของผู้จัดการแต่กลับอ้างว่าไม่ได้รับข้อมูลใด ๆ เลย",
+        "istrue": true
+      }
+    ],
+    "explanation": "Repudiation คือการปฏิเสธการทำหรือรับข้อมูล เช่น เมื่อได้รับแล้วยันว่าไม่ได้รับ จึงตรงกับตัวเลือกสุดท้าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โพรโทคอลในระดับ application layer นี้จะรับบริการจากโพรโทคอลในระดับใด",
+    "options": [
+      { "statement": "Transport layer", "istrue": true },
+      { "statement": "Network layer", "istrue": false },
+      { "statement": "Data link layer", "istrue": false },
+      { "statement": "Physical layer", "istrue": false }
+    ],
+    "explanation": "Application layer ใช้บริการจาก Transport layer (TCP/UDP) เพื่อส่งข้อมูลที่เชื่อถือได้หรือไม่มีการเชื่อมต่อ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นคุณสมบัติของ lossless compression",
+    "options": [
+      {
+        "statement": "การบีบอัดข้อมูลมีโอกาสสูญเสียบิตข้อมูลบางส่วนแต่เป็นจำนวนน้อย",
+        "istrue": false
+      },
+      {
+        "statement": "การบีบอัดข้อมูลมีโอกาสสูญเสียบิตข้อมูลจำนวนมาก",
+        "istrue": false
+      },
+      {
+        "statement": "การบีบอัดข้อมูลไม่มีโอกาสสูญเสียบิตข้อมูลเลยแม้แต่ส่วนเดียว",
+        "istrue": true
+      },
+      {
+        "statement": "การบีบอัดข้อมูลมีโอกาสสูญเสียบิตข้อมูลบางส่วนแต่จะทดแทนด้วยข้อมูลอื่นที่ใกล้เคียงกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Lossless compression ต้องคืนข้อมูลต้นฉบับได้ครบ จึงไม่มีการสูญเสียบิตเลย ส่วนการสูญเสียบางส่วนหรือมากเป็นคุณสมบัติของ lossy"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กำหนดข้อมูลที่ต้องการบีบอัดคือ AAAPPPPXXXXXYY หากบีบอัดด้วยวิธี run-length coding จะได้ข้อมูลในรูปแบบใด",
+    "options": [
+      { "statement": "3A4P5X2Y", "istrue": true },
+      { "statement": "A3P4X5Y2", "istrue": false },
+      { "statement": "A:P:X:Y", "istrue": false },
+      { "statement": "3A:4P:5X:2Y", "istrue": false }
+    ],
+    "explanation": "Run-length coding นับจำนวนซ้ำของแต่ละตัวอักษร จึงได้ 3A,4P,5X,2Y รวมกันเป็น 3A4P5X2Y"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "อุปกรณ์ใดที่เหมาะในการวัด throughput ของเครือข่าย",
+    "options": [
+      { "statement": "Hub", "istrue": false },
+      { "statement": "Bridge", "istrue": false },
+      { "statement": "Router", "istrue": true },
+      { "statement": "Network interface card", "istrue": false }
+    ],
+    "explanation": "Router สามารถวัดปริมาณทราฟฟิกขาเข้าและขาออกได้ในระดับ network layer จึงเหมาะกับการวัด throughput"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้อง",
+    "options": [
+      {
+        "statement": "B-frame ไม่มีความเกี่ยวข้องกับ B-frame ใด ๆ",
+        "istrue": true
+      },
+      {
+        "statement": "P-frame มีความสัมพันธ์กับ I-frame หรือ P-frame ที่ตามมา",
+        "istrue": false
+      },
+      {
+        "statement": "B-frame มีข้อมูลที่น้อยที่สุดเมื่อเทียบเฟรมอื่น ๆ",
+        "istrue": false
+      },
+      {
+        "statement": "I-frame จะปรากฏเพียงครั้งเดียวคือเฟรมแรกของวีดีโอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "B-frame พยากรณ์โดยอ้างอิงจาก I-frame หรือ P-frame ก่อนหน้าและหลังหน้าเท่านั้น และไม่เคยอ้างอิง B-frame อื่น จึงไม่มีความเกี่ยวข้องกับ B-frame ใด ๆ ขณะที่ P-frame พยากรณ์จากเฟรมก่อนหน้าเท่านั้น, ขนาดข้อมูลของแต่ละเฟรมขึ้นกับการบีบอัดไม่ใช่ลำดับ และ I-frame สามารถถูกแทรกหลายจุด ไม่จำกัดเพียงเฟรมแรก"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "กำหนดให้ UDP header มีค่าเท่ากับ “001E000B001C0014” แสดงว่า data มีความยาวเท่าไร",
+    "options": [
+      { "statement": "10", "istrue": false },
+      { "statement": "20", "istrue": true },
+      { "statement": "30", "istrue": false },
+      { "statement": "40", "istrue": false }
+    ],
+    "explanation": "ฟิลด์ Length = 0x001C = 28 ไบต์ หัก header 8 ไบต์ เหลือ data 20 ไบต์ จึงตอบ 20"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การส่งข้อมูลด้วย UDP นั้นมีข้อดีอย่างไร",
+    "options": [
+      { "statement": "ส่งข้อมูลได้ด้วยความเร็วสูง", "istrue": true },
+      { "statement": "ส่งข้อมูลได้อย่างสมบูรณ์", "istrue": false },
+      { "statement": "ส่งข้อมูลได้อย่างปลอดภัย", "istrue": false },
+      {
+        "statement": "ส่งข้อมูลได้ถูกต้องตรงตามปลายทางที่ต้องการ",
+        "istrue": false
+      }
+    ],
+    "explanation": "UDP ไม่มีการตรวจสอบความสมบูรณ์หรือความปลอดภัยใด ๆ แต่เป็นโปรโตคอลไร้การเชื่อมต่อ จึงส่งข้อมูลได้รวดเร็วที่สุด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Message authentication code ช่วยสนับสนุนการสื่อสารให้มีคุณสมบัติใดต่อไปนี้",
+    "options": [
+      {
+        "statement": "Message integrity และ Message authentication",
+        "istrue": true
+      },
+      {
+        "statement": "Message integrity และ Message confidentiality",
+        "istrue": false
+      },
+      {
+        "statement": "Message confidentiality และ Message authentication",
+        "istrue": false
+      },
+      {
+        "statement": "Message privacy และ Message confidentiality",
+        "istrue": false
+      }
+    ],
+    "explanation": "MAC ใช้ตรวจสอบความถูกต้องของข้อความและยืนยันผู้ส่ง จึงรองรับ integrity และ authentication แต่ไม่เข้ารหัสความลับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่เป็นส่วนหนึ่งของคำว่า network management",
+    "options": [
+      {
+        "statement": "เครือข่ายได้รับการตรวจติดตามการใช้งาน และทดสอบประสิทธิภาพการทำงานเป็นระยะ ๆ",
+        "istrue": false
+      },
+      {
+        "statement": "เครือข่ายได้รับการตรวจติดตามประสิทธิภาพการใช้งานและมีการปรับค่าพารามิเตอร์เพื่อการบริหารเครือข่ายอย่างเหมาะสมเป็นช่วง ๆ",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อเครือข่ายเกิดความผิดพลาดผู้ดูแลจะต้องทำหน้าที่ในการแก้ไขความผิดพลาดนั้นอย่างทันท่วงที",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อเกิดการคั่งในช่องสัญญาณมาก router จะเปลี่ยน routing algorithm ให้เกิดสภาพคล่องของเครือข่าย",
+        "istrue": true
+      }
+    ],
+    "explanation": "การเปลี่ยน routing algorithm เป็นหน้าที่ของ routing protocol ไม่ใช่ network management ซึ่งผู้ดูแลระบบต้องดำเนินการแก้ไขและปรับพารามิเตอร์เอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ถูกต้องเกี่ยวกับการกำหนดขอบเขตการใช้งานเครือข่ายให้แก่ผู้ใช้งานแต่ละกลุ่มเป็นส่วนหนึ่งของ security management",
+    "options": [
+      {
+        "statement": "การกำหนดขอบเขตการใช้งานเครือข่ายให้แก่ผู้ใช้งานแต่ละกลุ่มเป็นส่วนหนึ่งของการบริหารจัดการความปลอดภัยของเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "การตรวจสอบประวัติความผิดพลาดของระบบเครือข่ายเป็นส่วนหนึ่งของการรักษาความปลอดภัยของเครือข่าย",
+        "istrue": true
+      },
+      {
+        "statement": "การเข้ารหัสข้อมูลบนระบบเครือข่ายเป็นส่วนหนึ่งของการบริหารจัดการความปลอดภัยของเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "การกำหนดนโยบายการเข้าใช้เครือข่ายเป็นส่วนหนึ่งของการบริหารจัดการความปลอดภัยของเครือข่าย",
+        "istrue": false
+      }
+    ],
+    "explanation": "การตรวจสอบประวัติความผิดพลาดเป็น fault management ไม่ใช่ security management จึงไม่ถูกต้อง ส่วนการกำหนดขอบเขต, เข้ารหัส และกำหนดนโยบายเป็นงานด้าน security"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นข้อที่ถูกต้องที่สุดของบันทึกการแก้ไขความผิดพลาดไว้เป็นหลักฐานในการจัดการความผิดพลาดแบบ reactive",
+    "options": [
+      {
+        "statement": "เพื่อใช้ในการประเมินประสิทธิภาพของการบริหารจัดการดูแลระบบของผู้ดูแลระบบ",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อใช้เป็นแนวทางในการแก้ไขปัญหาที่จะเกิดขึ้นในภายภาคหน้าได้โดยง่ายและใช้ในการกำหนดนโยบายการบริหารจัดการเครือข่ายในภายหลัง",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อใช้เป็นหลักฐานว่ามีความผิดพลาดเกิดขึ้นและความผิดพลาดนั้นใครเป็นผู้รับผิดชอบ",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อใช้เป็นหลักฐานว่าความผิดพลาดที่เกิดขึ้นสามารถสร้างความเสียหายมากน้อยเพียงใด",
+        "istrue": false
+      }
+    ],
+    "explanation": "การจัดการความผิดพลาดแบบ reactive มุ่งเน้นการแก้ไขทันทีและบันทึกวิธีแก้ไขไว้เป็นหลักฐาน เพื่อให้เมื่อต้องเผชิญปัญหาเดียวกันในอนาคต สามารถนำแนวทางเดิมมาใช้ได้อย่างรวดเร็ว และช่วยกำหนดนโยบายหรือแนวทางป้องกันในระยะยาวได้อย่างมีประสิทธิภาพ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "สมมติให้ภาพสี (color) ที่ต้องการส่งไปบนระบบเครือข่ายมีขนาด 1600 x 900 pixels ใช้เครือข่ายความเร็ว 10 Kbps จะใช้เวลาในการส่งภาพเท่าไร",
+    "options": [
+      { "statement": "34.56 นาที", "istrue": false },
+      { "statement": "5.76 นาที", "istrue": false },
+      { "statement": "57.6 นาที", "istrue": true },
+      { "statement": "3456 นาที", "istrue": false }
+    ],
+    "explanation": "ภาพสี 24 bit: 1600×900×24 = 34,560,000 bits ÷ 10,000 bps = 3,456 s ≈ 57.6 นาที จึงตอบ 57.6 นาที"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารใดเป็นแบบ connection-oriented",
+    "options": [
+      {
+        "statement": "การสั่ง scan เอกสารด้วยเครื่อง scanner สู่เครื่องคอมพิวเตอร์",
+        "istrue": false
+      },
+      { "statement": "นิยมส่งข้อความจาก Line ไปหาเพื่อน", "istrue": false },
+      {
+        "statement": "นิยมใช้ Line โทรไปหาเพื่อนเพื่อคุยเรื่องงาน",
+        "istrue": true
+      },
+      { "statement": "นิยมส่งอีเมลไปหาเพื่อนที่อเมริกา", "istrue": false }
+    ],
+    "explanation": "การโทรผ่าน Line ต้องสร้างสาย (connection) ก่อนสนทนา แล้ววางสาย จึงเป็น connection-oriented ส่วนข้อความและอีเมลไม่ต้องเชื่อมต่อก่อน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การพิจารณาค่า throughput นั้นเป็นส่วนหนึ่งของการดำเนินการใดในการบริหารจัดการเครือข่าย",
+    "options": [
+      { "statement": "Troubleshooting", "istrue": false },
+      { "statement": "Configuring", "istrue": false },
+      { "statement": "Testing", "istrue": false },
+      { "statement": "Monitoring", "istrue": true }
+    ],
+    "explanation": "Monitoring ครอบคลุมการตรวจวัด throughput อย่างต่อเนื่อง เพื่อประเมินสภาพเครือข่ายและแจ้งเตือนปัญหา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Port number ช่วงใดที่สามารถนำไปใช้พัฒนาโปรแกรมทั่วไปได้",
+    "options": [
+      { "statement": "Dynamic ports", "istrue": true },
+      { "statement": "Registered ports", "istrue": false },
+      { "statement": "Well-known ports", "istrue": false },
+      { "statement": "Standard ports", "istrue": false }
+    ],
+    "explanation": "Dynamic (49152–65535) หรือ private ports สามารถใช้สร้างบริการชั่วคราวสำหรับโปรแกรมทั่วไปได้ ส่วน well-known และ registered ควบคุมโดย IANA"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "“การบีบอัดภาพ JPEG มีการใช้กลไก quantization โดยมีการใช้ Quantization matrix” ข้อใดกล่าวไม่ถูกต้อง",
+    "options": [
+      {
+        "statement": "จำนวน quantization matrix ของ JPEG มีให้เลือกได้ 100 รูปแบบ",
+        "istrue": false
+      },
+      {
+        "statement": "จำนวน quantization matrix ของ JPEG ที่บีบอัดได้มากที่สุด คือ Q1",
+        "istrue": false
+      },
+      {
+        "statement": "จำนวน quantization matrix ของ JPEG ที่บีบอัดได้น้อยที่สุด คือ Q100",
+        "istrue": false
+      },
+      {
+        "statement": "ทุก quantization matrix จะไม่มีสมาชิกที่มีค่าเป็นศูนย์",
+        "istrue": true
+      }
+    ],
+    "explanation": "ตามมาตรฐาน JPEG ใน DQT segment แต่ละค่าใน Quantization matrix สามารถเป็น 0–255 ซึ่งเลข 0 หมายถึงไม่ลดทอนค่าสัมประสิทธิ์นั้น จึงเป็นไปได้ที่จะมีสมาชิกของ matrix เป็น 0 ข้อความที่กล่าวว่า “ทุก quantization matrix จะไม่มีสมาชิกที่มีค่าเป็นศูนย์” จึงไม่ถูกต้อง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับการเข้ารหัสแบบ DES",
+    "options": [
+      { "statement": "เป็น symmetric key cipher", "istrue": false },
+      { "statement": "เป็น character-oriented cipher", "istrue": true },
+      {
+        "statement": "เป็นการเข้ารหัสที่ใช้จำนวนข้อมูล 64-bit",
+        "istrue": false
+      },
+      { "statement": "ใช้กุญแจขนาด 56-bit cipher key", "istrue": false }
+    ],
+    "explanation": "DES เป็น block cipher ไม่ใช่ character-oriented cipher ส่วนบล็อกข้อมูลขนาด 64-bit และคีย์ 56-bit เป็นข้อเท็จจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การโจมตีที่มีการส่งคำร้องขอการบริการจาก DNS ในปริมาณมาก ๆ ไปที่ DNS ในช่วงเวลาเดียวกัน เรียกการโจมตีนี้ว่าอะไร",
+    "options": [
+      { "statement": "DoS", "istrue": true },
+      { "statement": "Spam", "istrue": false },
+      { "statement": "Spy", "istrue": false },
+      { "statement": "Malware", "istrue": false }
+    ],
+    "explanation": "DoS (Denial of Service) คือการโจมตีที่ส่งคำขอจำนวนมากให้ระบบล่ม Spam/Spy/Malware ไม่ใช่ลักษณะการโจมตีแบบนี้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "HTTP ใช้บริการของโพรโทคอลใดต่อไปนี้",
+    "options": [
+      { "statement": "UDP", "istrue": false },
+      { "statement": "SCTP", "istrue": false },
+      { "statement": "TCP", "istrue": true },
+      { "statement": "IP", "istrue": false }
+    ],
+    "explanation": "HTTP ทำงานอยู่บน TCP เพื่อให้ได้การขนส่งที่เชื่อถือได้เรียงลำดับถูกต้อง ส่วน UDP/SCTP/IP ไม่ใช่โพรโทคอลหลักที่ HTTP ใช้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เพราะเหตุใดการแก้ไขความผิดพลาดแบบ reactive จำเป็นต้องแยกความผิดพลาดนั้นออกจากการทำงานส่วนอื่น ๆ ก่อนการแก้ไข",
+    "options": [
+      {
+        "statement": "เพื่อช่วยให้ปัญหาต่าง ๆ มีความซับซ้อนที่น้อยลง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อป้องกันผลกระทบกับส่วนการทำงานอื่น ๆ ในขณะแก้ไขความผิดพลาดนั้น",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อแสดงให้เห็นชัดว่าส่วนใดเกิดการทำงานที่ผิดพลาด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแสดงให้ผู้ดูแลระบบทราบว่าจุดใดเป็นจุดอ่อนของการทำงานบนเครือข่าย",
+        "istrue": false
+      }
+    ],
+    "explanation": "การแยกข้อผิดพลาดออกช่วยป้องกันไม่ให้กระทบระบบส่วนอื่นในระหว่างแก้ไข จึงตรงกับตัวเลือกที่สอง ส่วนข้ออื่นเป็นผลพลอยได้หรือจุดประสงค์อื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่การสตรีมวีดีโอหรือออดิโอที่มีการเก็บไว้ในเครื่องให้บริการ",
+    "options": [
+      {
+        "statement": "วีดีโอหรือออดิโอมีการบีบอัดและเก็บบนเครื่องให้บริการก่อนการเรียกใช้งาน",
+        "istrue": false
+      },
+      {
+        "statement": "วีดีโอหรือออดิโอไม่มีการบีบอัดและเก็บบนเครื่องให้บริการก่อนการเรียกใช้งาน",
+        "istrue": true
+      },
+      {
+        "statement": "ผู้เรียกใช้ไฟล์มัลติมีเดียเรียกใช้จากเครือข่ายอินเทอร์เน็ตผ่านเบาว์เซอร์",
+        "istrue": false
+      },
+      {
+        "statement": "ไฟล์มัลติมีเดียจำเป็นต้องมีการเก็บไว้ ณ เครื่องเว็บที่ให้บริการ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Streaming มักใช้ไฟล์บีบอัดเก็บบนเซิร์ฟเวอร์ก่อน หากไม่มีการบีบอัดจะใช้แบนด์วิดท์สูงและไม่เหมาะกับการสตรีม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ลักษณะการทำงานของ connectionless คือข้อใด",
+    "options": [
+      {
+        "statement": "นิยมโทร Line ไปหาเพื่อนเพื่อแจ้งว่าได้รับทุน เมื่อเพื่อนรับการโทรทาง Line เรียบร้อยจึงวางสายไป",
+        "istrue": false
+      },
+      {
+        "statement": "นิยมได้ข่าวว่าเพื่อนได้รับทุนการศึกษาจึงเขียน Line แจ้งให้เพื่อนทราบ",
+        "istrue": true
+      },
+      {
+        "statement": "นิยมโทรศัพท์ไปหาเพื่อนทาง Messenger เพื่อแจ้งให้เพื่อนทราบว่าได้รับทุนการศึกษาแล้ว",
+        "istrue": false
+      },
+      {
+        "statement": "นิยมเชื่อมต่อโทรศัพท์มือถือกับเครื่องคอมพิวเตอร์เพื่อถ่ายโอนวีดีโอเมื่อสิ้นสุดการถ่ายโอนแล้วจึงตัดการเชื่อมต่อนั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อความใน Line ส่งแบบไม่ต้องสร้างสายล่วงหน้า (connectionless) ขณะที่การโทรและการเชื่อมต่อถ่ายโอนเป็น connection-oriented"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Congestion control กระทำในระดับใด",
+    "options": [
+      { "statement": "Data link layer", "istrue": false },
+      { "statement": "Network layer", "istrue": false },
+      { "statement": "Transport layer", "istrue": true },
+      { "statement": "Application layer", "istrue": false }
+    ],
+    "explanation": "TCP ที่เป็น Transport layer มีหน้าที่ควบคุม congestion control ผ่านกลไกเช่น slow start และ congestion avoidance"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่หน้าที่หรือลักษณะของ SNMP",
+    "options": [
+      {
+        "statement": "ตรวจติดตามการทำงานของอุปกรณ์ต่าง ๆ ว่าทำงานได้อย่างถูกต้องหรือไม่",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมการใช้งานของบัญชีผู้ใช้งานแต่ละราย",
+        "istrue": true
+      },
+      {
+        "statement": "บริหารจัดการเครือข่ายแบบ manager และ agent",
+        "istrue": false
+      },
+      { "statement": "บริหารจัดการการทำงานของ router", "istrue": false }
+    ],
+    "explanation": "SNMP ใช้ตรวจสอบและตั้งค่าระบบเครือข่าย แต่ไม่เกี่ยวข้องกับการควบคุม user accounts ซึ่งเป็นงานของ security/account management"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดมีโอกาสที่จะเป็นปรากฏการณ์ของ denial of service",
+    "options": [
+      {
+        "statement": "ยุคลต้องการเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเพื่อนำไปทำรายงานสรุปผลแต่นิยมสามารถแอบสำเนาข้อมูลเหล่านั้นไปในช่วงการสื่อสารของยุคลกับเครื่องให้บริการ",
+        "istrue": false
+      },
+      {
+        "statement": "ยุคลต้องการเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการเว็บขององค์กรแต่ไม่สามารถเรียกใช้ได้เนื่องจากเว็บล่ม",
+        "istrue": true
+      },
+      {
+        "statement": "ยุคลต้องการเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเพื่อนำไปทำรายงานสรุปผลแต่นิยมแอบเปลี่ยนข้อมูลนั้นก่อนที่ยุคลจะได้รับข้อมูลที่ถูกต้อง",
+        "istrue": false
+      },
+      {
+        "statement": "ยุคลต้องการเรียกใช้ข้อมูลการเงินจากเครื่องให้บริการขององค์กรเว็บขององค์กรแต่ยุคลปฏิเสธการเรียกใช้งานนั้นเมื่อข้อมูลเกิดการรั่วไหลสู่คู่แข่งทางการค้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อเว็บล่มไม่ตอบสนองเป็นลักษณะของ DoS (service cannot be accessed) ส่วนการสำเนา/เปลี่ยนข้อมูลเป็น snooping/modification"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิดพื้นฐานของการเข้ารหัสแบบ asymmetric key cipher คือข้อใด",
+    "options": [
+      {
+        "statement": "การใช้ public key ของผู้ส่งในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้ส่งในการถอดรหัสข้อมูลปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ public key ของผู้ส่งในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้รับในการถอดรหัสข้อมูลปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ public key ของผู้รับในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้ส่งในการถอดรหัสข้อมูลปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ public key ของผู้รับในการเข้ารหัสข้อมูลก่อนการส่ง และใช้ private key ของผู้รับในการถอดรหัสข้อมูลปลายทาง",
+        "istrue": true
+      }
+    ],
+    "explanation": "Asymmetric cipher ใช้ public key ของผู้รับเข้ารหัส เพื่อให้เฉพาะผู้รับใช้ private key ของตนถอดรหัสได้ จึงตรงกับตัวเลือกที่สี่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer ณ แหล่งรับข้อมูลปลายทางที่มีหน้าที่เป็น producer จะทำหน้าที่อย่างไร",
+    "options": [
+      {
+        "statement": "หุ้มห่อข้อมูล (encapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ network layer ทำงานต่อไป",
+        "istrue": false
+      },
+      {
+        "statement": "ถอดการหุ้มห่อข้อมูล (decapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ application layer",
+        "istrue": true
+      },
+      {
+        "statement": "รับข้อมูลจาก network layer เพื่อส่งต่อไปสู่การ decapsulate",
+        "istrue": false
+      },
+      {
+        "statement": "รับข้อมูลจาก application layer เพื่อส่งต่อไปหุ้มห่อ (encapsulate) ในระดับ Transport layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "ที่ฝั่งรับ Transport layer ต้อง decapsulate หัวข้อมูลก่อนส่งขึ้น Application layer จึงเลือกตัวเลือกที่สอง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นความจำเป็นที่จะต้องดำเนินการเมื่อใช้คำสั่งเพื่อถ่ายโอนไฟล์ด้วย FTP",
+    "options": [
+      {
+        "statement": "ระบุความเป็นเจ้าของไฟล์และขนาดของไฟล์ที่ต้องการ",
+        "istrue": false
+      },
+      {
+        "statement": "ระบุขนาดของไฟล์และโครงสร้างของไฟล์ที่ต้องการ",
+        "istrue": false
+      },
+      {
+        "statement": "ระบุโครงสร้างของไฟล์และชนิดของไฟล์ที่ต้องการ",
+        "istrue": true
+      },
+      {
+        "statement": "ระบุสิทธิในการเข้าใช้ไฟล์และชนิดของไฟล์ที่ต้องการ",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำสั่ง FTP เช่น TYPE (ASCII/BINARY) และ STRUCT (file structure) ต้องระบุโครงสร้างและชนิดไฟล์ก่อนการส่ง จึงเลือกตัวเลือกที่สาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Hash function ในการรักษาความปลอดภัยจะช่วยสนับสนุนคุณสมบัติใดต่อไปนี้",
+    "options": [
+      {
+        "statement": "Message integrity และ Message authentication",
+        "istrue": true
+      },
+      {
+        "statement": "Message integrity และ Message confidentiality",
+        "istrue": false
+      },
+      {
+        "statement": "Message confidentiality และ Message authentication",
+        "istrue": false
+      },
+      {
+        "statement": "Message privacy และ Message confidentiality",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hash function ใช้ตรวจสอบความถูกต้องของข้อความและรับรองตัวตนผ่านการเทียบค่า hash จึงรองรับ integrity และ authentication"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคโนโลยีใดที่ใช้ในการพรางข้อมูลเอกสารเพื่อป้องกันการคัดลอกเอกสารนั้น ๆ",
+    "options": [
+      { "statement": "Digest", "istrue": false },
+      { "statement": "Cryptography", "istrue": false },
+      { "statement": "Enciphering", "istrue": false },
+      { "statement": "Steganography", "istrue": true }
+    ],
+    "explanation": "Steganography คือการซ่อนข้อมูลไว้ในสื่อเอกสารเพื่อป้องกันการตรวจพบ ส่วน cryptography/enciphering เป็นการเข้ารหัส ไม่ใช่การพราง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer ณ แหล่งส่งข้อมูลต้นทางที่มีหน้าที่เป็น producer จะทำหน้าที่อย่างไร",
+    "options": [
+      {
+        "statement": "หุ้มห่อข้อมูล (encapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ network layer ทำงานต่อไป",
+        "istrue": true
+      },
+      {
+        "statement": "ถอดการหุ้มห่อข้อมูล (decapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ application layer",
+        "istrue": false
+      },
+      {
+        "statement": "รับข้อมูลจาก network layer เพื่อส่งต่อไปสู่การ decapsulate",
+        "istrue": false
+      },
+      {
+        "statement": "รับข้อมูลจาก application layer เพื่อส่งต่อไปหุ้มห่อ (encapsulate) ในระดับ Transport layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "ที่ฝั่งส่ง Transport layer ต้องรับข้อมูลจาก Application layer แล้วหุ้มห่อด้วย header เพื่อส่งลง Network layer จึงตรงกับตัวเลือกแรก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จงให้ความหมายของ peak-hour response time",
+    "options": [
+      {
+        "statement": "ค่า response time ที่สูงที่สุดที่สามารถวัดได้",
+        "istrue": false
+      },
+      {
+        "statement": "ค่าเฉลี่ยของ response time ที่สูงที่สุดที่สามารถวัดได้",
+        "istrue": false
+      },
+      {
+        "statement": "ค่าเฉลี่ยของ response time ในช่วงเวลาที่มีการใช้งานเครือข่ายสูงที่สุด",
+        "istrue": true
+      },
+      {
+        "statement": "ค่า response time ที่วัดในช่วงเวลาที่มีการใช้งานเครือข่ายสูงที่สุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "Peak-hour response time คือค่าเฉลี่ยของ response time ในช่วงที่โหลดสูงสุด เพื่อสะท้อนประสิทธิภาพภายใต้ภาระงานสูง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โพรโทคอลใดต่อไปนี้มีการเชื่อมต่อแบบ connection-oriented",
+    "options": [
+      { "statement": "HTTP", "istrue": true },
+      { "statement": "UDP", "istrue": false },
+      { "statement": "IP", "istrue": false },
+      { "statement": "ICMP", "istrue": false }
+    ],
+    "explanation": "HTTP ทำงานบน TCP ซึ่งเป็น connection-oriented ส่วน UDP/IP/ICMP เป็น connectionless"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "“สมพรเป็นผู้ส่งจดหมายเวียนในบริษัทเพื่อร้องเรียนการทำงานของพนักงานผู้หนึ่ง แต่สมพรปฏิเสธการส่งข้อความนั้น” เป็นลักษณะของการโจมตีที่มีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Modification", "istrue": false },
+      { "statement": "Snooping", "istrue": false },
+      { "statement": "Replaying", "istrue": false },
+      { "statement": "Repudiation", "istrue": true }
+    ],
+    "explanation": "Repudiation คือการปฏิเสธว่าไม่ได้ส่งหรือไม่เคยรับข้อความ ถึงแม้จริง ๆ จะมีการส่ง จึงตรงกับตัวเลือกสุดท้าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับการทำงานของ SCTP",
+    "options": [
+      {
+        "statement": "เป็นการเชื่อมต่อแบบ connection-oriented",
+        "istrue": false
+      },
+      { "statement": "การส่งข้อมูลเป็นแบบ multistream", "istrue": false },
+      {
+        "statement": "การส่งข้อมูลมีขอบเขตในการแลกเปลี่ยนข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งข้อมูลเป็นแบบ byte-stream oriented",
+        "istrue": true
+      }
+    ],
+    "explanation": "SCTP เป็น message-oriented มีขอบเขตของแต่ละ message และรองรับ multistream จึงไม่ใช่ byte-stream oriented"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อมูลต้นฉบับภายหลังการเข้ารหัสมีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Ciphertext", "istrue": true },
+      { "statement": "Plaintext", "istrue": false },
+      { "statement": "Digest", "istrue": false },
+      { "statement": "Message", "istrue": false }
+    ],
+    "explanation": "Ciphertext คือข้อมูลที่ถูกเข้ารหัสแล้ว ส่วน Plaintext คือข้อมูลต้นฉบับก่อนเข้ารหัส"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Socket address หมายถึงค่าใดต่อไปนี้",
+    "options": [
+      { "statement": "IP address และ Port number", "istrue": true },
+      { "statement": "IP address และ MAC address", "istrue": false },
+      { "statement": "MAC address และ Port number", "istrue": false },
+      {
+        "statement": "MAC address, IP address และ Port number",
+        "istrue": false
+      }
+    ],
+    "explanation": "Socket address ระบุปลายทาง process-to-process โดยประกอบด้วย IP address และ port number"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "“นิยมส่งจดหมายไปหาอุบลแต่ปรากฏว่าจดหมายเกิดการกระจายไปในกลุ่มของผู้ทำงานในบริษัทด้วย” แสดงให้เห็นว่าคุณสมบัติด้านความปลอดภัยข้อใดที่ถูกละเมิด",
+    "options": [
+      { "statement": "Integrity", "istrue": false },
+      { "statement": "Availability", "istrue": false },
+      { "statement": "Confidentiality", "istrue": true },
+      { "statement": "Authenticity", "istrue": false }
+    ],
+    "explanation": "การที่จดหมายถูกเผยแพร่ไปยังผู้ที่ไม่ควรเข้าถึงแสดงถึงการเปิดเผยความลับ จึงเป็นการละเมิด Confidentiality ส่วน Integrity เกี่ยวกับการแก้ไขข้อมูล, Availability เกี่ยวกับความพร้อมใช้, Authenticity เกี่ยวกับการยืนยันตัวตน ไม่เกี่ยวกับการเปิดเผยข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่โหมดในการส่งข้อมูลด้วย FTP",
+    "options": [
+      { "statement": "Stream mode", "istrue": false },
+      { "statement": "Byte mode", "istrue": true },
+      { "statement": "Block mode", "istrue": false },
+      { "statement": "Compressed mode", "istrue": false }
+    ],
+    "explanation": "FTP กำหนดโหมดการส่งข้อมูล 3 แบบ ได้แก่ Stream mode, Block mode และ Compressed mode ส่วน Byte mode ไม่ใช่โหมดในมาตรฐาน FTP"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Connectionless service มีการส่งข้อมูลที่มีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Socket", "istrue": false },
+      { "statement": "Frame", "istrue": false },
+      { "statement": "Datagram", "istrue": true },
+      { "statement": "Packet", "istrue": false }
+    ],
+    "explanation": "Connectionless service มักเรียกว่า datagram service เพราะแต่ละ datagram ถูกส่งโดยไม่ต้องสร้างการเชื่อมต่อก่อน ส่วน packet เป็นหน่วยทั่วไป, socket คือ endpoint, frame อยู่ระดับ Data Link"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นโพรโทคอลเพื่อการบริหารจัดการระบบเครือข่าย",
+    "options": [
+      { "statement": "SCTP", "istrue": false },
+      { "statement": "SMTP", "istrue": false },
+      { "statement": "SNMP", "istrue": true },
+      { "statement": "DHCP", "istrue": false }
+    ],
+    "explanation": "SNMP (Simple Network Management Protocol) ถูกออกแบบมาสำหรับบริหารจัดการเครือข่าย ส่วน SCTP เป็นโพรโทคอล transport, SMTP ส่งอีเมล, DHCP จัดการ IP address"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Real-Time Streaming Protocol (RTSP) มีหน้าที่ใดที่สำคัญที่สุด",
+    "options": [
+      {
+        "statement": "ควบคุมการเล่นวีดีโอให้มีความราบรื่นไม่กระตุก",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมให้การส่งข้อมูลภาพมีความน่าเชื่อถือสูง",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมความปลอดภัยเมื่อมีการส่งข้อมูลภาพแบบ stream",
+        "istrue": false
+      },
+      {
+        "statement": "ควบคุมการส่งและเล่นวีดีโอข้อมูลภาพแบบ stream ให้มีคุณภาพ",
+        "istrue": true
+      }
+    ],
+    "explanation": "RTSP ถูกออกแบบเพื่อควบคุมการส่งและสั่งเล่นสตรีมมิงมัลติมีเดีย ทำให้สามารถควบคุม play, pause, teardown เพื่อให้การเล่นมีคุณภาพ ส่วนความราบรื่นและความน่าเชื่อถือเป็นหน้าที่ร่วมกับ RTP/RTCP"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การบีบอัดภาพ JPEG จะใช้กลไกใดในการ transform ข้อมูล",
+    "options": [
+      { "statement": "discrete cosine transform", "istrue": true },
+      { "statement": "direct cosine transform", "istrue": false },
+      { "statement": "direct coordinate transform", "istrue": false },
+      { "statement": "delta cosine transform", "istrue": false }
+    ],
+    "explanation": "มาตรฐาน JPEG ใช้ Discrete Cosine Transform (DCT) ในการแปลงบล็อกภาพ 8×8 เพื่อลดพลังงานความถี่สูง ทำให้บีบอัดได้มีประสิทธิภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Temporal compression หมายถึงการบีบอัดในลักษณะใด",
+    "options": [
+      { "statement": "เฟรมที่มีความซ้ำซ้อนจะถูกตัดทิ้ง", "istrue": true },
+      { "statement": "เฟรมแต่ละเฟรมมีการบีบอัดแยกเฟรมกัน", "istrue": false },
+      { "statement": "เฟรมหลาย ๆ เฟรมมีการบีบอัดรวมเฟรมกัน", "istrue": false },
+      {
+        "statement": "เฟรมจะถูกตัดตามการสุ่มเฟรมต่าง ๆ อย่างอิสระ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Temporal compression มุ่งลดข้อมูลซ้ำซ้อนระหว่างเฟรมต่อเนื่องกัน โดยจะตัดหรือไม่บันทึกเฟรมที่มีเนื้อหาเหมือนกันออก แล้วบันทึกเฉพาะเฟรมหลักและส่วนต่าง (differences) ทำให้ขนาดไฟล์วิดีโอลดลงโดยไม่บันทึกภาพซ้ำหลายครั้ง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นองค์ประกอบของ p-box ในการทำงานของ modern block ciphers",
+    "options": [
+      { "statement": "Shifting P-boxes", "istrue": true },
+      { "statement": "straight P-boxes", "istrue": false },
+      { "statement": "expansion P-boxes", "istrue": false },
+      { "statement": "compression P-boxes", "istrue": false }
+    ],
+    "explanation": "ใน modern SP-network P-box นอกจากแบบ straight, expansion และ compression ในบางออกแบบยังใช้ Shifting P-boxes ที่ทำหน้าที่เลื่อนบิตภายในบล็อกเพื่อกระจาย (diffuse) ค่าแบบหมุนเวียน การเลื่อนนี้ช่วยเพิ่ม diffusion ระหว่างรอบ ทำให้ Shifting P-boxes เป็นส่วนสำคัญของการออกแบบ block cipher รุ่นใหม่"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "“เมื่อสมพรส่งอีเมลไปหาสิตา ยุวกูลต้องการทราบข้อความนี้จึงแอบอ่านด้วยการดักจับจดหมายของสมพร” เป็นลักษณะการโจมตีที่มีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Modification", "istrue": false },
+      { "statement": "Snooping", "istrue": true },
+      { "statement": "Replaying", "istrue": false },
+      { "statement": "Repudiation", "istrue": false }
+    ],
+    "explanation": "Snooping คือการดักฟังหรือดักจับข้อมูลโดยไม่ได้รับอนุญาตเพื่ออ่านข้อความ แต่ไม่ได้แก้ไขหรือส่งซ้ำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่ความสำคัญของการพิจารณา Internal traffic",
+    "options": [
+      {
+        "statement": "เพื่อใช้ในการพิจารณาปริมาณการใช้งานภายในเครือข่ายว่าเกินกว่าประสิทธิภาพของเครือข่ายดังเดิมที่กำหนดไว้หรือไม่",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อพิจารณาขยายประสิทธิภาพเครือข่ายให้ครอบคลุมความต้องการของผู้ใช้งานอย่างแท้จริง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อพิจารณากำหนดนโยบายการเข้าใช้เครือข่ายภายในองค์กรให้ตอบสนองต่อความต้องการของผู้ใช้งานภายใน",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อใช้ในการกำหนดขอบเขตการใช้งานของบุคลากรแต่ละคนได้อย่างมีประสิทธิภาพ",
+        "istrue": true
+      }
+    ],
+    "explanation": "การวิเคราะห์ Internal traffic เน้นที่ประสิทธิภาพและความจุ ไม่ได้ใช้เพื่อตั้งโควต้าหรือขอบเขตการใช้งานรายบุคคล ซึ่งเป็นงานด้านนโยบายบัญชีผู้ใช้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Socket address ที่สร้างโดย client ให้แก่ server มีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Remote socket address", "istrue": true },
+      { "statement": "Local socket address", "istrue": false },
+      { "statement": "Fixed IP address", "istrue": false },
+      { "statement": "Remote address", "istrue": false }
+    ],
+    "explanation": "จากมุมมอง server ที่รับการเชื่อมต่อ socket address ของ client จะถูกเรียกว่า Remote socket address ประกอบด้วย IP และ port ของฝั่ง client"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่สามารถระบุตัวตนของผู้ส่งข้อมูลและผู้รับข้อมูลได้อย่างถูกต้องนั้นเป็นการดำเนินการในขั้นตอนใด",
+    "options": [
+      { "statement": "Integrity", "istrue": false },
+      { "statement": "Availability", "istrue": false },
+      { "statement": "Confidentiality", "istrue": false },
+      { "statement": "Authenticity", "istrue": true }
+    ],
+    "explanation": "Authenticity คือการยืนยันตัวตนของผู้ส่งและผู้รับให้ถูกต้อง ส่วน Integrity เกี่ยวกับความสมบูรณ์ของข้อมูล, Confidentiality เกี่ยวกับความลับ, Availability เกี่ยวกับความพร้อมใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "I-frame ของไฟล์วีดีโอไม่มีลักษณะอย่างไร",
+    "options": [
+      { "statement": "มีความเป็นอิสระจากเฟรมอื่น", "istrue": false },
+      {
+        "statement": "การปรากฏของเฟรมจะปรากฏเป็นช่วง ๆ ที่มีระยะเวลาการปรากฏที่แน่นอน",
+        "istrue": false
+      },
+      {
+        "statement": "การปรากฏของเฟรมจะขึ้นกับ P-frame ก่อนหน้าเท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "การปรากฏของเฟรมจะปรากฏเป็นช่วงเวลาเพื่อแสดงให้เห็นถึงการเปลี่ยนแปลงที่เกิดขึ้นในเฟรมอย่างทันที",
+        "istrue": false
+      }
+    ],
+    "explanation": "I-frame ไม่ขึ้นกับเฟรมอื่นใด สามารถถูกวางในจุดใดก็ได้เพื่อนำมาเป็น reference จึงขัดกับตัวเลือกที่สาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้กล่าวถูกต้อง",
+    "options": [
+      {
+        "statement": "หากมีการทำงานหลาย ๆ application ที่มีการส่งข้อมูลในเวลาเดียวกัน จำเป็นจะต้องมี multiplexer เพื่อรวมสัญญาณข้อมูลทุกแหล่งก่อนการส่งสู่ช่องทางการสื่อสาร",
+        "istrue": true
+      },
+      {
+        "statement": "หากมีการทำงานหลาย ๆ application ที่มีการส่งข้อมูลในเวลาเดียวกัน จำเป็นต้องใช้ช่องส่งสัญญาณหลาย ๆ ช่องเพื่อส่งข้อมูลพร้อมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "กลไกการ push ข้อมูลในระดับ Transport layer จะกระทำเมื่อปลายทางพร้อมรับข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "กลไกการ pulling ข้อมูลในระดับ Transport layer เกิดเมื่ออุปกรณ์ต้นทางมีข้อมูลเพื่อกระจาย",
+        "istrue": false
+      }
+    ],
+    "explanation": "Transport layer ใช้ multiplexing เพื่อผสานกระแสข้อมูลจากหลายแอปพลิเคชันให้ส่งผ่านช่องทางเดียว จึงต้องมี multiplexer ไม่ใช่สร้างช่องทางหลายช่อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ช่องทางที่ใช้แสดงภาพพื้นหลังมีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Alpha channel", "istrue": true },
+      { "statement": "Beta channel", "istrue": false },
+      { "statement": "Gamma channel", "istrue": false },
+      { "statement": "Sigma channel", "istrue": false }
+    ],
+    "explanation": "Alpha channel คือช่องสัญญาณสำหรับเก็บข้อมูลความโปร่งใส (transparency) ใช้กำหนดว่าพื้นหลังจุดใดซ่อนหรือโชว์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเกิด congestion สามารถเกิด ณ ตำแหน่งใดต่อไปนี้",
+    "options": [
+      { "statement": "Sender", "istrue": false },
+      { "statement": "Receiver", "istrue": false },
+      { "statement": "Router buffer", "istrue": false },
+      { "statement": "เกิดได้ทุกตำแหน่งที่มีการสื่อสาร", "istrue": true }
+    ],
+    "explanation": "Congestion เกิดได้ทุกส่วนของเครือข่ายเมื่อปริมาณทราฟิกมากกว่าความสามารถประมวลผล ไม่จำกัดแค่ router"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้กล่าวถูกต้องเกี่ยวกับการบริหารจัดการความผิดพลาดแบบ proactive/reactive",
+    "options": [
+      {
+        "statement": "การบริหารจัดการความผิดพลาดแบบ proactive ไม่สามารถเกิดขึ้นได้ในความเป็นจริง",
+        "istrue": false
+      },
+      {
+        "statement": "การบริหารจัดการความผิดพลาดแบบ proactive สามารถทำได้แต่ไม่สามารถป้องกันได้อย่างสมบูรณ์",
+        "istrue": true
+      },
+      {
+        "statement": "การบริหารจัดการความผิดพลาดแบบ reactive เป็นปรากฏการณ์ที่เกิดอย่างสมำเสมอและไม่สามารถนำรายงานที่จดไว้มาใช้ประโยชน์ได้",
+        "istrue": false
+      },
+      {
+        "statement": "การบริหารจัดการความผิดพลาดแบบ reactive มักสร้างค่าใช้จ่ายมหาศาลให้แก่องค์กรเสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Proactive management เน้นป้องกันล่วงหน้าได้จริง แต่ไม่สามารถครอบคลุมทุกกรณี จึงตรงกับตัวเลือกที่สอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องเกี่ยวกับการเข้ารหัสแบบ DES",
+    "options": [
+      {
+        "statement": "การเข้ารหัสใช้ plaintext 56-bit ได้ ciphertext 56 bit",
+        "istrue": false
+      },
+      {
+        "statement": "การเข้ารหัสใช้ plaintext 64-bit ได้ ciphertext 56-bit",
+        "istrue": false
+      },
+      {
+        "statement": "การเข้ารหัสใช้ plaintext 56-bit ได้ ciphertext 64-bit",
+        "istrue": false
+      },
+      {
+        "statement": "การเข้ารหัสใช้ plaintext 64-bit ได้ ciphertext 64-bit",
+        "istrue": true
+      }
+    ],
+    "explanation": "DES ประมวลผลบล็อกข้อมูลขนาด 64-bit และสร้าง ciphertext 64-bit โดยใช้คีย์ภายใน 56-bit"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารในระดับ application layer จะเป็นการใช้ข้อมูลใดต่อไปนี้",
+    "options": [
+      { "statement": "Remote socket address", "istrue": false },
+      { "statement": "Local socket address", "istrue": false },
+      {
+        "statement": "Fixed IP address และ remote IP address",
+        "istrue": false
+      },
+      {
+        "statement": "Local socket address และ Remote socket address",
+        "istrue": true
+      }
+    ],
+    "explanation": "Application layer ระบุ endpoint ด้วย socket address ทั้งฝั่งต้นทาง (local) และปลายทาง (remote) เพื่อสื่อสารระหว่าง process-to-process"
+  }
+]

@@ -1,0 +1,301 @@
+[
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L และ complement L อยู่ใน RE แล้ว L จะอยู่ในเซตใดได้อีก",
+      "options": [
+        { "statement": "R", "istrue": true },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "complement RE", "istrue": false },
+        { "statement": "ไม่สามารถสรุปได้", "istrue": false }
+      ],
+      "explanation": "ถ้า L และ complement L อยู่ใน RE พร้อมกัน แปลว่าทั้งสองมี recognizer ⇒ สามารถรันคู่ขนานแบบ dovetailing ⇒ ตัดสินได้เสมอ ⇒ L ∈ R"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "HALT = {<M,w> | M halts on w} อยู่ในเซตใด",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "RE – R", "istrue": true },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "complement RE", "istrue": false }
+      ],
+      "explanation": "HALT recognizable โดย simulate M(w) ถ้าหยุดให้ยอมรับ แต่ไม่มีวิธีตรวจว่าหลุดลูป ⇒ อยู่ใน RE–R"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "SAT = {ϕ | ϕ is satisfiable} อยู่ในเซตที่เล็กที่สุดเซตใด",
+      "options": [
+        { "statement": "P", "istrue": false },
+        { "statement": "NP-Complete", "istrue": true },
+        { "statement": "NP-Hard", "istrue": false },
+        { "statement": "NP", "istrue": false }
+      ],
+      "explanation": "SAT ∈ NP และ NP-hard ⇒ อยู่ใน NP-Complete"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L อยู่ใน P สามารถสรุปได้ว่า complement L จะอยู่ใน",
+      "options": [
+        { "statement": "P", "istrue": true },
+        { "statement": "NP-Hard", "istrue": false },
+        { "statement": "NP", "istrue": false },
+        { "statement": "NP-Complete", "istrue": false }
+      ],
+      "explanation": "ภาษาใน P ปิดภายใต้ complement ⇒ complement L ∈ P"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "EMPTYTM = {<M> | L(M) = ∅} อยู่ในเซตใดถูกต้องที่สุด",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "coRE – R", "istrue": true },
+        { "statement": "RE – R", "istrue": false },
+        { "statement": "complement RE", "istrue": false }
+      ],
+      "explanation": "EMPTYTM มี recognizer สำหรับ no-answer (หาว่า M ยอมรับบาง string) แต่ไม่มี decider ⇒ อยู่ใน coRE–R"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า A is polynomial time reducible to B และ B is polynomial time reducible to Palindrome แล้ว A จะอยู่ในเซตใด",
+      "options": [
+        { "statement": "P", "istrue": true },
+        { "statement": "NP", "istrue": false },
+        { "statement": "NP-Complete", "istrue": false },
+        { "statement": "NP-Hard", "istrue": false }
+      ],
+      "explanation": "Palindrome ∈ P ⇒ B ∈ P ⇒ A ∈ P เพราะ P ปิดภายใต้ polynomial-time reduction"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L is polynomial time reducable to HALT และ HALT is polynomial time reducable to L ข้อใดเป็นจริง",
+      "options": [
+        { "statement": "L อยู่ใน R", "istrue": false },
+        { "statement": "L อยู่ใน RE", "istrue": false },
+        { "statement": "L อยู่ใน RE – R", "istrue": true },
+        { "statement": "L ไม่อยู่ใน RE", "istrue": false }
+      ],
+      "explanation": "L ↔ HALT ด้วย poly reduction ⇒ L และ HALT มีความยากเท่ากัน ⇒ HALT ∈ RE–R ⇒ L ก็ ∈ RE–R"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "A ≤m B และ B อยู่ใน R สามารถสรุปได้ว่า A อยู่ใน",
+      "options": [
+        { "statement": "R", "istrue": true },
+        { "statement": "RE", "istrue": false },
+        { "statement": "coRE", "istrue": false },
+        { "statement": "complement RE", "istrue": false }
+      ],
+      "explanation": "ถ้า B decidable และ A reduce ไปหา B ⇒ ใช้ decider ของ B เพื่อสร้าง decider ของ A ⇒ A ∈ R"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L is decidable จะมี TM ที่ halts เสมอและ",
+      "options": [
+        { "statement": "ยอมรับทุก input", "istrue": false },
+        { "statement": "ตัดสินได้ว่า input อยู่ใน L หรือไม่", "istrue": true },
+        { "statement": "ปฏิเสธทุก input", "istrue": false },
+        { "statement": "รันไม่สิ้นสุด", "istrue": false }
+      ],
+      "explanation": "Decidable แปลว่ามี TM ที่ halt ทุก input และเลือก accept/reject ถูกต้อง"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L1 อยู่ใน RE – R และ L1 ≤m L2 สามารถสรุปได้ว่า L2 สามารถอยู่ในเซตใดได้บ้าง",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "RE – R", "istrue": false },
+        { "statement": "complement RE", "istrue": false },
+        { "statement": "มีข้อถูกมากว่า 1 ข้อ : RE – R, complement RE", "istrue": true }
+      ],
+      "explanation": "ภาษาเป้าหมายอาจยากพอ ๆ กัน (RE–R) หรือหนักกว่า (อาจไม่อยู่ใน RE) ⇒ มีมากกว่า 1 ข้อที่เป็นไปได้"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "TAUT = {ϕ | ϕ is tautology} อยู่ในเซตใด",
+      "options": [
+        { "statement": "NP", "istrue": false },
+        { "statement": "coNP (หรือ complement TAUT อยู่ใน NP)", "istrue": true },
+        { "statement": "NP-Complete", "istrue": false },
+        { "statement": "NP-Hard", "istrue": false }
+      ],
+      "explanation": "TAUT เป็น complement ของ SAT ⇒ SAT ∈ NP ⇒ TAUT ∈ coNP"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "L = {<M> | L(M) = Σ*} อยู่ในเซตใด",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "RE", "istrue": false },
+        { "statement": "coRE", "istrue": false },
+        { "statement": "complement RE", "istrue": true }
+      ],
+      "explanation": "L = Σ* คือ complement ของ EMPTYTM ⇒ EMPTYTM ∈ coRE ⇒ L ∈ complement RE"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L เป็น NP-Complete และ L อยู่ใน P สามารถสรุปได้ว่า",
+      "options": [
+        { "statement": "P = NP", "istrue": true },
+        { "statement": "NP ไม่อยู่ใน P", "istrue": false },
+        { "statement": "L เป็น undeciable", "istrue": false },
+        { "statement": "L อยู่ใน complement RE", "istrue": false }
+      ],
+      "explanation": "ถ้าปัญหา NP-Complete อยู่ใน P ⇒ ทุกปัญหา NP reduce มาได้ ⇒ P = NP"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "A ≤m B และ A is undecidable สามารถสรุปได้ว่า B จะ",
+      "options": [
+        { "statement": "Undecidable", "istrue": true },
+        { "statement": "Decidable", "istrue": false },
+        { "statement": "Recognizable", "istrue": false },
+        { "statement": "ไม่สามารถสรุปได้", "istrue": false }
+      ],
+      "explanation": "ถ้า A undecidable แต่ reducible ไป B ⇒ ถ้า B decidable จะขัดแย้ง ⇒ B ต้อง undecidable เช่นกัน"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L1 และ L2 อยู่ใน RE แล้ว L1 union L2 จะอยู่ในเซตใด",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "RE", "istrue": true },
+        { "statement": "complement RE", "istrue": false }
+      ],
+      "explanation": "RE ปิดภายใต้ union ⇒ ถ้า L1, L2 ∈ RE ⇒ L1 ∪ L2 ∈ RE"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L1 และ L2 อยู่ใน R แล้ว L1 ∩ L2 จะอยู่ในเซตใด",
+      "options": [
+        { "statement": "R", "istrue": true },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "RE", "istrue": false },
+        { "statement": "complement RE", "istrue": false }
+      ],
+      "explanation": "R ปิดภายใต้ intersection ⇒ L1 ∩ L2 ∈ R"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "LACCEPT = {<M,w> | M accepts w} อยู่ในเซตใด",
+      "options": [
+        { "statement": "RE – R", "istrue": true },
+        { "statement": "R", "istrue": false },
+        { "statement": "complement RE", "istrue": false },
+        { "statement": "complement R", "istrue": false }
+      ],
+      "explanation": "LACCEPT คือ ATM ⇒ อยู่ใน RE–R"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L อยู่ใน RE – R แล้ว complement L จะอยู่ในเซตใด",
+      "options": [
+        { "statement": "RE", "istrue": false },
+        { "statement": "R", "istrue": false },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "complement RE", "istrue": true }
+      ],
+      "explanation": "RE–R ⇒ ไม่มี recognizer สำหรับ complement ⇒ complement L ∉ RE ⇒ อยู่ใน complement RE"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ภาษาใน R ทุกภาษาอยู่ใน",
+      "options": [
+        { "statement": "RE", "istrue": false },
+        { "statement": "coRE", "istrue": false },
+        { "statement": "complement RE", "istrue": false },
+        { "statement": "ทั้ง RE และ coRE", "istrue": true }
+      ],
+      "explanation": "R ⊆ RE ∩ coRE ⇒ ภาษา decidable อยู่ทั้งฝั่ง yes-recognizer และ no-recognizer"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า HALT ≤m L แล้ว ข้อใดจะเป็นสมบัติของ L",
+      "options": [
+        { "statement": "L is undecidable.", "istrue": true },
+        { "statement": "L is decidable.", "istrue": false },
+        { "statement": "L อยู่ใน R", "istrue": false },
+        { "statement": "L อยู่ใน RE – R", "istrue": false }
+      ],
+      "explanation": "ถ้า HALT ลดได้ไป L ถ้า L decidable จะขัดกับที่ HALT undecidable ⇒ L undecidable"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า A อยู่ใน RE และ B อยู่ใน R แล้ว A ∩ B จะอยู่ในเซตใด",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "RE", "istrue": true },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "complement RE", "istrue": false }
+      ],
+      "explanation": "RE ปิดภายใต้ intersection กับ R ⇒ A ∩ B อยู่ใน RE"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "EQTM = {<M1,M2> | L(M1) = L(M2)} อยู่ในเซตใด",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "RE", "istrue": false },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "complement RE", "istrue": true }
+      ],
+      "explanation": "EQTM ไม่อยู่ใน RE หรือ coRE ⇒ อยู่ใน complement RE"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า L ≤m HALT แล้ว L จะอยู่ในเซตใด",
+      "options": [
+        { "statement": "R", "istrue": false },
+        { "statement": "RE", "istrue": true },
+        { "statement": "complement R", "istrue": false },
+        { "statement": "complement RE", "istrue": false }
+      ],
+      "explanation": "HALT ∈ RE ⇒ ถ้า L ≤m HALT ⇒ L ∈ RE"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า A อยู่ใน P และ A is polynomial time reducable to B ข้อใดสรุปได้ถูกต้องที่สุด",
+      "options": [
+        { "statement": "B อยู่ใน P", "istrue": false },
+        { "statement": "B อาจยากกว่า A", "istrue": true },
+        { "statement": "B อยู่ใน NP", "istrue": false },
+        { "statement": "B ไม่อยู่ใน NP", "istrue": false }
+      ],
+      "explanation": "A ≤p B เพียงบอกว่าปัญหา A ไม่ยากกว่า B แต่ไม่ได้บอกว่า B ต้องอยู่ใน P ⇒ B อาจยากกว่าได้"
+    },
+
+    {
+      "type": "multiple-choice",
+      "question": "ถ้า A is polynomial time reducible to B และ B is polynomial time reducible to C ข้อใดไม่เป็นจริง",
+      "options": [
+        { "statement": "ถ้า A ไม่อยู่ใน NP แล้ว C จะไม่อยู่ใน NP", "istrue": false },
+        { "statement": "C อาจจะยากกว่า A", "istrue": false },
+        { "statement": "ถ้า C อยู่ใน NP-Complete แล้ว A อยู่ใน NP", "istrue": false },
+        { "statement": "ถ้า A อยู่ใน NP แล้ว C อยู่ใน NP-Hard", "istrue": true }
+      ],
+      "explanation": "ถ้า A ≤p B และ B ≤p C ⇒ A ≤p C ⇒ ถ้า A ∈ NP ⇒ C ∈ NP-Hard"
+    }
+]

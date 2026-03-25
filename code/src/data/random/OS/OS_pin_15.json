@@ -1,0 +1,297 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which statement best describes the primary goal of protection in an operating system?",
+    "options": [
+      {
+        "statement": "To ensure each process accesses objects correctly and only within its authorized privileges.",
+        "istrue": true
+      },
+      {
+        "statement": "To maximize performance by removing all access restrictions between processes.",
+        "istrue": false
+      },
+      {
+        "statement": "To allow all users to freely share system objects without limitations.",
+        "istrue": false
+      },
+      {
+        "statement": "To prevent the OS kernel from interacting with hardware devices.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The protection goal is to ensure correct and authorized access to system objects by processes."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which concept refers to providing the minimum set of privileges necessary for an entity to perform its task?",
+    "options": [
+      { "statement": "Domain Switching", "istrue": false },
+      { "statement": "Compartmentalization", "istrue": false },
+      { "statement": "Principle of Least Privilege", "istrue": true },
+      { "statement": "Access Matrix", "istrue": false }
+    ],
+    "explanation": "Least privilege restricts entities to only the permissions needed to reduce damage potential."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the context of TrustZone, which statement is correct?",
+    "options": [
+      {
+        "statement": "Normal world can directly access secure world assets.",
+        "istrue": false
+      },
+      {
+        "statement": "Secure Monitor Call (SMC) is used to switch between worlds.",
+        "istrue": true
+      },
+      {
+        "statement": "TrustZone replaces kernel mode entirely.",
+        "istrue": false
+      },
+      {
+        "statement": "TrustZone provides hypervisor-level isolation only.",
+        "istrue": false
+      }
+    ],
+    "explanation": "SMC triggers transitions between Normal and Secure worlds in TrustZone."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which ring in Intel architecture traditionally contains the OS kernel?",
+    "options": [
+      { "statement": "Ring 3", "istrue": false },
+      { "statement": "Ring 1", "istrue": false },
+      { "statement": "Ring 0", "istrue": true },
+      { "statement": "Ring -1", "istrue": false }
+    ],
+    "explanation": "Ring 0 provides the highest privilege and hosts the OS kernel."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the main purpose of compartmentalization in system protection?",
+    "options": [
+      { "statement": "To increase process execution speed.", "istrue": false },
+      {
+        "statement": "To isolate components so failures do not propagate across systems.",
+        "istrue": true
+      },
+      {
+        "statement": "To allow more privileges for all processes by default.",
+        "istrue": false
+      },
+      { "statement": "To share all system objects globally.", "istrue": false }
+    ],
+    "explanation": "Compartmentalization ensures components are isolated to reduce attack impact."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following best describes a protection domain?",
+    "options": [
+      {
+        "statement": "A set of objects grouped by their file types.",
+        "istrue": false
+      },
+      {
+        "statement": "A set of access rights associated with a process or user.",
+        "istrue": true
+      },
+      {
+        "statement": "A hardware component that manages device drivers.",
+        "istrue": false
+      },
+      {
+        "statement": "A security system used only in network firewalls.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A domain defines which access rights a process has on objects."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In UNIX, domain switching can occur through which mechanism?",
+    "options": [
+      { "statement": "Changing CPU scheduling priority.", "istrue": false },
+      { "statement": "setuid execution of a file.", "istrue": true },
+      {
+        "statement": "Assigning more RAM to a running process.",
+        "istrue": false
+      },
+      { "statement": "Switching to VM kernel mode.", "istrue": false }
+    ],
+    "explanation": "setuid allows a process to execute with the owner's privileges temporarily."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which component represents a row in the Access Matrix?",
+    "options": [
+      { "statement": "Objects", "istrue": false },
+      { "statement": "Domains", "istrue": true },
+      { "statement": "Privileges only", "istrue": false },
+      { "statement": "Access lists", "istrue": false }
+    ],
+    "explanation": "Rows correspond to domains (entities performing actions)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the 'copy' right in the Access Matrix allow?",
+    "options": [
+      { "statement": "Copying the contents of an object.", "istrue": false },
+      {
+        "statement": "Granting the same access right to another domain.",
+        "istrue": true
+      },
+      { "statement": "Duplicating user accounts.", "istrue": false },
+      {
+        "statement": "Overwriting objects without permission.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The copy right enables transferring a specific permission to another domain."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is the Access Matrix rarely implemented as a full matrix?",
+    "options": [
+      { "statement": "Because it is conceptually complex.", "istrue": false },
+      {
+        "statement": "Most entries are empty, making it sparse.",
+        "istrue": true
+      },
+      {
+        "statement": "It is not compatible with UNIX-like systems.",
+        "istrue": false
+      },
+      { "statement": "It requires GPU acceleration.", "istrue": false }
+    ],
+    "explanation": "The matrix is sparse, making a full implementation inefficient."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which Access Matrix implementation stores permissions per object?",
+    "options": [
+      { "statement": "Capability list", "istrue": false },
+      { "statement": "Global table", "istrue": false },
+      { "statement": "Access Control List (ACL)", "istrue": true },
+      { "statement": "Lock-key model", "istrue": false }
+    ],
+    "explanation": "ACLs store rights per object, listing which domains can access them."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which Access Matrix implementation stores permissions per domain?",
+    "options": [
+      { "statement": "Capability list", "istrue": true },
+      { "statement": "ACL", "istrue": false },
+      { "statement": "Global policy model", "istrue": false },
+      { "statement": "Role list", "istrue": false }
+    ],
+    "explanation": "Capability lists associate objects and rights with each domain."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which protection method is a hybrid between ACL and capability lists?",
+    "options": [
+      { "statement": "Global rights table", "istrue": false },
+      { "statement": "Lock-key method", "istrue": true },
+      { "statement": "Role-based access control", "istrue": false },
+      { "statement": "Domain switching", "istrue": false }
+    ],
+    "explanation": "Lock-key represents objects with locks and domains with keys."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which revocation method involves deleting and reacquiring capabilities periodically?",
+    "options": [
+      { "statement": "Indirection", "istrue": false },
+      { "statement": "Back-pointers", "istrue": false },
+      { "statement": "Reacquisition", "istrue": true },
+      { "statement": "Internal hashing", "istrue": false }
+    ],
+    "explanation": "Reacquisition forces processes to re-request capabilities, enabling revocation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a key concept of Role-Based Access Control (RBAC)?",
+    "options": [
+      { "statement": "Users directly hold all privileges.", "istrue": false },
+      {
+        "statement": "Roles group privileges and users assume roles.",
+        "istrue": true
+      },
+      {
+        "statement": "Privileges automatically escalate over time.",
+        "istrue": false
+      },
+      { "statement": "Processes share execution domains.", "istrue": false }
+    ],
+    "explanation": "RBAC assigns privileges to roles, and users activate roles as needed."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which statement about Mandatory Access Control (MAC) is correct?",
+    "options": [
+      {
+        "statement": "Users are free to modify access rights of objects.",
+        "istrue": false
+      },
+      {
+        "statement": "Root users can bypass MAC restrictions.",
+        "istrue": false
+      },
+      {
+        "statement": "Access decisions are made based on object and subject labels.",
+        "istrue": true
+      },
+      { "statement": "MAC is weaker than DAC.", "istrue": false }
+    ],
+    "explanation": "MAC relies on labels and cannot be overridden by users."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which example represents capability-based security?",
+    "options": [
+      {
+        "statement": "POSIX capabilities (e.g., CAP_NET_ADMIN).",
+        "istrue": true
+      },
+      { "statement": "NTFS file permissions.", "istrue": false },
+      { "statement": "UNIX group ownership.", "istrue": false },
+      { "statement": "Linux open() system call.", "istrue": false }
+    ],
+    "explanation": "POSIX capabilities split root privilege into fine-grained bits."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which technique prevents even root from modifying certain system files (as seen in macOS SIP)?",
+    "options": [
+      { "statement": "Domain switching", "istrue": false },
+      { "statement": "System Integrity Protection", "istrue": true },
+      { "statement": "Stack inspection", "istrue": false },
+      { "statement": "ACL inheritance", "istrue": false }
+    ],
+    "explanation": "SIP protects critical system resources from all modification."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "System call filtering (e.g., SECCOMP-BPF) is conceptually similar to:",
+    "options": [
+      { "statement": "A firewall for network packets.", "istrue": true },
+      { "statement": "A compiler optimizer.", "istrue": false },
+      { "statement": "A process scheduler.", "istrue": false },
+      { "statement": "A memory compactor.", "istrue": false }
+    ],
+    "explanation": "System call filtering selectively permits or denies syscalls much like a firewall filters traffic."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which protection method inspects the call stack to determine whether an operation is allowed?",
+    "options": [
+      { "statement": "Role-based control", "istrue": false },
+      { "statement": "Java stack inspection", "istrue": true },
+      { "statement": "TrustZone switching", "istrue": false },
+      { "statement": "Capability revocation", "istrue": false }
+    ],
+    "explanation": "Java uses stack inspection to verify whether privileged code should be allowed."
+  }
+]

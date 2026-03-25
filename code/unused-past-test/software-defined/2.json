@@ -1,0 +1,1129 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหาคลาสสิกที่เทคโนโลยี Container ถูกสร้างขึ้นมาเพื่อแก้ไขโดยตรงคืออะไร?",
+    "options": [
+      {
+        "statement": "คอมพิวเตอร์ทำงานช้าเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "ปัญหา \"It works on my machine!\" ที่เกิดจากความแตกต่างของสภาพแวดล้อม",
+        "istrue": true
+      },
+      {
+        "statement": "การขาดแคลนโปรแกรมเมอร์ที่มีทักษะ",
+        "istrue": false
+      },
+      {
+        "statement": "ค่าใช้จ่ายในการซื้อลิขสิทธิ์ซอฟต์แวร์ที่สูงเกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "Container แก้ปัญหา \"It works on my machine!\" โดยการแพ็กแอปพลิเคชันพร้อมกับ Dependencies ทั้งหมดไว้ในหน่วยเดียวกัน ทำให้มั่นใจได้ว่าสภาพแวดล้อมจะเหมือนกันทุกที่ที่นำไปรัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิด 'Machine Abstraction' ในคอมพิวเตอร์มีเป้าหมายหลักเพื่ออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อให้โปรแกรมทำงานได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อลดการใช้หน่วยความจำของโปรแกรม",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้เกิด Portability หรือความสามารถในการพกพาโปรแกรมไปรันบนฮาร์ดแวร์ที่แตกต่างกันได้",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้โปรแกรมหลายตัวทำงานพร้อมกันได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "Machine Abstraction เช่น Operating System (OS) สร้าง \"มาตรฐานกลาง\" ขึ้นมาครอบฮาร์ดแวร์ ทำให้โปรแกรมที่เขียนสำหรับ OS นั้นสามารถทำงานบนฮาร์ดแวร์ที่หลากหลายได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อเสียที่สำคัญที่สุดของ Virtual Machine (VM) เมื่อเทียบกับ Container?",
+    "options": [
+      {
+        "statement": "มีความปลอดภัยน้อยกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "มีขนาดใหญ่, เริ่มทำงานช้า, และสิ้นเปลืองทรัพยากรสูง",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่สามารถทำงานแยกขาดจากกันได้ (Not isolated)",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่สามารถพกพาไปรันที่เครื่องอื่นได้ (Not portable)",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจาก VM จำลองฮาร์ดแวร์ทั้งเครื่องและมี Guest OS เต็มรูปแบบ ทำให้มี Overhead สูง ส่งผลให้ Image มีขนาดใหญ่และใช้ทรัพยากรมากกว่า Container"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Container เกิดขึ้นจากการนำข้อดีของแนวคิดใดมารวมกัน?",
+    "options": [
+      {
+        "statement": "ความเร็วของ Network และความจุของ Hard disk",
+        "istrue": false
+      },
+      {
+        "statement": "การออกแบบ UI และการจัดการฐานข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "ความสามารถในการแยกส่วน (Isolation) ของ VM และความเบาเร็ว (Lightweight) ของ Process",
+        "istrue": true
+      },
+      {
+        "statement": "ความปลอดภัยของ Firewall และความยืดหยุ่นของ Cloud",
+        "istrue": false
+      }
+    ],
+    "explanation": "Container คือการนำ Process ที่เบาและเร็วมาเพิ่มความสามารถด้าน Isolation และ Portability เข้าไป ทำให้ได้คุณสมบัติที่ดีที่สุดของทั้งสองแนวคิด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคโนโลยีใดใน Linux Kernel ที่ Container ใช้เพื่อสร้าง 'โลกส่วนตัว' และทำให้ Process ถูกแยกขาดจากกัน (Isolation)?",
+    "options": [
+      {
+        "statement": "Namespaces",
+        "istrue": true
+      },
+      {
+        "statement": "Control Groups (cgroups)",
+        "istrue": false
+      },
+      {
+        "statement": "Union File System",
+        "istrue": false
+      },
+      {
+        "statement": "System Calls",
+        "istrue": false
+      }
+    ],
+    "explanation": "Namespaces เป็นฟีเจอร์หลักที่ใช้ในการแบ่งทรัพยากรของระบบ ทำให้ Process ที่อยู่ใน Namespace หนึ่งๆ มองเห็นแค่ทรัพยากรในโลกของตัวเองเท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Control Groups (cgroups) มีหน้าที่หลักคืออะไร?",
+    "options": [
+      {
+        "statement": "สร้างระบบไฟล์แบบเลเยอร์",
+        "istrue": false
+      },
+      {
+        "statement": "กำหนดชื่อ Hostname ให้กับ Container",
+        "istrue": false
+      },
+      {
+        "statement": "จำกัดและจัดสรรโควต้าการใช้ทรัพยากร (CPU, Memory) ให้กับ Container",
+        "istrue": true
+      },
+      {
+        "statement": "สร้าง IP Address ส่วนตัวให้กับ Container",
+        "istrue": false
+      }
+    ],
+    "explanation": "cgroups เป็นกลไกที่ช่วยให้สามารถควบคุมและจำกัดการใช้ทรัพยากรของกลุ่ม Process ได้ เพื่อป้องกันไม่ให้ Container ใดใช้ทรัพยากรของเครื่อง Host มากเกินไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด Image ของ Container จึงมีขนาดเล็กและจัดการได้รวดเร็วกว่า Image ของ VM?",
+    "options": [
+      {
+        "statement": "เพราะใช้เทคโนโลยี Union File System ที่จัดเก็บไฟล์แบบเลเยอร์และแชร์เลเยอร์ร่วมกันได้",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Image ของ Container ถูกบีบอัดได้ดีกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Container ไม่จำเป็นต้องมี Library ใดๆ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Image ของ Container ถูกเก็บไว้ใน Memory แทน Hard disk",
+        "istrue": false
+      }
+    ],
+    "explanation": "Union File System ทำให้เลเยอร์พื้นฐาน (เช่น Base OS) สามารถถูกแชร์กันระหว่างหลายๆ Image ได้ ช่วยประหยัดพื้นที่ได้อย่างมหาศาล และกลไก Copy-on-Write ทำให้การเปลี่ยนแปลงมีประสิทธิภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Network Namespace ช่วยแก้ปัญหาใดที่เกิดขึ้นได้ง่ายในระดับ Process?",
+    "options": [
+      {
+        "statement": "ปัญหา Process ใช้ CPU มากเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "ปัญหาโปรแกรม 2 ตัวแย่งกันใช้ Network Port เดียวกัน (เช่น Port 80)",
+        "istrue": true
+      },
+      {
+        "statement": "ปัญหา Process ไม่สามารถเข้าถึงไฟล์ที่ต้องการได้",
+        "istrue": false
+      },
+      {
+        "statement": "ปัญหาหน่วยความจำไม่เพียงพอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Network Namespace สร้างระบบเครือข่ายส่วนตัว (IP Address, Routing Table, Network Ports) ให้กับแต่ละ Container ทำให้ Web Server หลายตัวสามารถรันบน Port 80 ใน Container ของตัวเองได้โดยไม่ขัดแย้งกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กลไก 'Copy-on-Write' ใน Union File System ทำงานอย่างไร?",
+    "options": [
+      {
+        "statement": "จะคัดลอกไฟล์ทั้งหมดใน Image ใหม่ทุกครั้งที่มีการแก้ไข",
+        "istrue": false
+      },
+      {
+        "statement": "จะลบไฟล์ต้นฉบับทิ้งทันทีเมื่อมีการแก้ไข",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อ Container ต้องการแก้ไขไฟล์ในเลเยอร์ Read-only มันจะคัดลอกไฟล์นั้นขึ้นมาที่ Writable Layer ก่อนแล้วจึงแก้ไข",
+        "istrue": true
+      },
+      {
+        "statement": "จะป้องกันไม่ให้มีการแก้ไขไฟล์ใดๆ ใน Container เลย",
+        "istrue": false
+      }
+    ],
+    "explanation": "Copy-on-Write เป็นวิธีที่มีประสิทธิภาพที่ช่วยให้ไฟล์ต้นฉบับในเลเยอร์ที่แชร์กันยังคงเดิม แต่ Container ก็ยังสามารถมีไฟล์เวอร์ชันที่แก้ไขแล้วเป็นของตัวเองได้ใน Writable Layer"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างที่สำคัญที่สุดระหว่าง Docker Image และ Docker Container?",
+    "options": [
+      {
+        "statement": "Image คือโปรแกรมที่กำลังทำงาน ส่วน Container คือแม่พิมพ์",
+        "istrue": false
+      },
+      {
+        "statement": "Image คือแม่พิมพ์ (Read-only) ส่วน Container คืออินสแตนซ์ที่กำลังทำงานจาก Image นั้น (มี Writable Layer)",
+        "istrue": true
+      },
+      {
+        "statement": "Image มีขนาดใหญ่กว่า Container เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "Image และ Container คือสิ่งเดียวกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความสัมพันธ์นี้เปรียบได้กับ Program (ต้นฉบับที่ยังไม่ทำงาน) และ Process (โปรแกรมที่กำลังทำงานอยู่ในหน่วยความจำ) โดย Container คือการนำ Image มาทำให้มีชีวิต"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อรัน Docker บน Windows หรือ Mac, เบื้องหลังการทำงานจริงๆ แล้ว Container รันอยู่ที่ไหน?",
+    "options": [
+      {
+        "statement": "รันบน Windows/Mac Kernel โดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "รันอยู่ภายใน Virtual Machine ขนาดเล็กของ Linux ที่ Docker สร้างขึ้น",
+        "istrue": true
+      },
+      {
+        "statement": "รันอยู่บน Cloud ของ Docker",
+        "istrue": false
+      },
+      {
+        "statement": "รันผ่าน Web Browser",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจากเทคโนโลยี Container (Namespaces, cgroups) เป็นฟีเจอร์ของ Linux Kernel ดังนั้น Docker Desktop สำหรับ Windows/Mac จึงต้องสร้าง VM ของ Linux ขึ้นมาเพื่อเป็นสภาพแวดล้อมในการรัน Container"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อคุณรันคำสั่ง `docker run hello-world` เป็นครั้งแรก และในเครื่องของคุณยังไม่มี Image นี้ Docker จะทำอะไรเป็นลำดับถัดไป?",
+    "options": [
+      {
+        "statement": "แสดงข้อความผิดพลาดและหยุดทำงานทันที",
+        "istrue": false
+      },
+      {
+        "statement": "ค้นหาและดาวน์โหลด (pull) Image 'hello-world' จาก Docker Hub ให้โดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "ขอให้คุณระบุ Path ของ Image บนเครื่อง",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง Image 'hello-world' ขึ้นมาใหม่จากไฟล์เปล่า",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำสั่ง `docker run` มีความสามารถในการตรวจสอบว่ามี Image ในเครื่องหรือไม่ หากไม่มี มันจะพยายามดึง Image นั้นมาจาก Registry ปริยาย (Docker Hub) ให้เอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Option `--rm` ในคำสั่ง `docker run` มีประโยชน์อย่างไร?",
+    "options": [
+      {
+        "statement": "ใช้สำหรับรัน Container ในเบื้องหลัง (Detached mode)",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้สำหรับตั้งชื่อให้กับ Container",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้สำหรับลบ Container โดยอัตโนมัติหลังจากที่มันทำงานเสร็จและหยุดลงแล้ว",
+        "istrue": true
+      },
+      {
+        "statement": "ใช้สำหรับเชื่อมต่อ Port ของ Host กับ Container",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้ `--rm` เป็นสุขอนามัยที่ดี ช่วยป้องกันไม่ให้มี Container ที่หยุดทำงานแล้วสะสมอยู่ในระบบโดยไม่จำเป็น โดยเฉพาะ Container ที่ทำงานสั้นๆ แล้วจบไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่งใดใช้สำหรับดูรายการ Container ที่ 'กำลังทำงานอยู่' เท่านั้น?",
+    "options": [
+      {
+        "statement": "docker image ls",
+        "istrue": false
+      },
+      {
+        "statement": "docker container ls (หรือ docker ps)",
+        "istrue": true
+      },
+      {
+        "statement": "docker container ls -a (หรือ docker ps -a)",
+        "istrue": false
+      },
+      {
+        "statement": "docker container prune",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำสั่ง `docker ps` หรือ `docker container ls` โดยปริยายจะแสดงเฉพาะ Container ที่มีสถานะเป็น Running หากต้องการดูทั้งหมด (รวมที่หยุดแล้ว) ต้องใช้ option `-a`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างระหว่างการรัน Container ด้วย `docker run -it` และ `docker exec -it`?",
+    "options": [
+      {
+        "statement": "ไม่มีความแตกต่าง ทั้งสองคำสั่งทำงานเหมือนกัน",
+        "istrue": false
+      },
+      {
+        "statement": "`run` ใช้สร้างและเริ่ม Container ใหม่ ส่วน `exec` ใช้รันคำสั่งเพิ่มเติมใน Container ที่กำลังทำงานอยู่แล้ว",
+        "istrue": true
+      },
+      {
+        "statement": "`run` ใช้สำหรับรันในเบื้องหลัง ส่วน `exec` ใช้สำหรับรันแบบโต้ตอบ",
+        "istrue": false
+      },
+      {
+        "statement": "`exec` เร็วกว่า `run`",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker run` คือการสร้างอินสแตนซ์ใหม่จาก Image ในขณะที่ `docker exec` คือการเข้าไป \"รบกวน\" หรือสั่งงาน Container ที่มีอยู่แล้ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อคุณใช้คำสั่ง `docker stop my-container` จะเกิดอะไรขึ้นกับ Container?",
+    "options": [
+      {
+        "statement": "Container จะถูกลบออกจากระบบอย่างถาวร",
+        "istrue": false
+      },
+      {
+        "statement": "Container จะหยุดทำงาน (สถานะเป็น Exited) แต่ข้อมูลและการเปลี่ยนแปลงภายในยังคงอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "Container จะรีสตาร์ทตัวเองใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "Image ที่ใช้สร้าง Container นี้จะถูกลบไปด้วย",
+        "istrue": false
+      }
+    ],
+    "explanation": "การ `stop` เป็นเพียงการหยุดการทำงานของ Process ภายใน Container เท่านั้น ไม่ใช่การลบ ทำให้เราสามารถ `start` มันขึ้นมาใหม่ได้ในภายหลัง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `docker commit` มีไว้เพื่อวัตถุประสงค์ใด?",
+    "options": [
+      {
+        "statement": "เพื่อส่งโค้ดขึ้นไปยัง GitHub",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อบันทึกการเปลี่ยนแปลงที่เกิดขึ้นภายใน Container ที่กำลังทำงานอยู่ให้กลายเป็น Image ใหม่",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อลบ Container ที่ไม่ใช้งานแล้ว",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อยืนยันการติดตั้ง Docker",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker commit` ใช้สำหรับสร้าง \"Snapshot\" ของสถานะปัจจุบันของ Container เก็บไว้เป็น Image ใหม่ ทำให้สามารถนำไปสร้าง Container อื่นที่มีสภาพเหมือนกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ก่อนที่จะ 'push' Image ไปยัง Registry เช่น Docker Hub เราต้องทำอะไรกับ Image ก่อนเป็นอันดับแรก?",
+    "options": [
+      {
+        "statement": "ต้องหยุดการทำงานของ Container ทั้งหมดก่อน",
+        "istrue": false
+      },
+      {
+        "statement": "ต้องลบ Image เก่าทิ้งทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "ต้อง 'tag' Image ด้วยชื่อผู้ใช้และที่อยู่ของ Registry นั้นๆ",
+        "istrue": true
+      },
+      {
+        "statement": "ต้องบีบอัด Image ให้มีขนาดเล็กลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "การ Tag เป็นการตั้งชื่อ Image ให้มีรูปแบบที่ถูกต้อง (เช่น `username/imagename:tag`) เพื่อให้ Docker รู้ว่าจะต้องส่ง Image นี้ไปที่ Repository ใดบน Registry"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Dangling Image คืออะไร?",
+    "options": [
+      {
+        "statement": "Image ที่ถูกดาวน์โหลดมาจาก Docker Hub",
+        "istrue": false
+      },
+      {
+        "statement": "Image ที่ไม่มีชื่อและไม่มีแท็ก (`<none>:<none>`) ซึ่งมักเป็นขยะที่เกิดขึ้นหลังจากการ build ซ้ำ",
+        "istrue": true
+      },
+      {
+        "statement": "Image ที่มีขนาดใหญ่เกิน 1 GB",
+        "istrue": false
+      },
+      {
+        "statement": "Image ที่กำลังถูกใช้งานโดย Container ที่ทำงานอยู่",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dangling images คือเลเยอร์ที่ไม่มีแท็กอ้างอิงถึงแล้ว และมักเกิดขึ้นเมื่อเรา build image ใหม่ด้วยแท็กเดิม ทำให้แท็กนั้นย้ายไปชี้ที่ image ใหม่และ image เก่าก็กลายเป็น dangling"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Dockerfile คืออะไร?",
+    "options": [
+      {
+        "statement": "โปรแกรมสำหรับรัน Container",
+        "istrue": false
+      },
+      {
+        "statement": "ไฟล์ Text ที่บรรจุชุดคำสั่งหรือ 'สูตรอาหาร' สำหรับสร้าง Docker Image โดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "ไฟล์ Log การทำงานของ Docker Engine",
+        "istrue": false
+      },
+      {
+        "statement": "โฟลเดอร์ที่ใช้เก็บ Docker Image ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dockerfile คือพิมพ์เขียวที่กำหนดขั้นตอนทั้งหมดในการสร้าง Image ทำให้กระบวนการนี้สามารถทำซ้ำได้และได้ผลลัพธ์เหมือนเดิมทุกครั้ง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่งใดใน Dockerfile ที่ต้องปรากฏเป็นคำสั่งแรกสุดเสมอ?",
+    "options": [
+      {
+        "statement": "RUN",
+        "istrue": false
+      },
+      {
+        "statement": "CMD",
+        "istrue": false
+      },
+      {
+        "statement": "FROM",
+        "istrue": true
+      },
+      {
+        "statement": "COPY",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำสั่ง `FROM` ใช้สำหรับระบุ Base Image หรือ Image พื้นฐานที่จะใช้เป็นรากฐานในการสร้าง Image ใหม่ และต้องเป็นคำสั่งแรกใน Dockerfile เสมอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างหลักระหว่างคำสั่ง `RUN` และ `CMD` ใน Dockerfile?",
+    "options": [
+      {
+        "statement": "ทั้งสองคำสั่งทำงานเหมือนกันทุกประการ",
+        "istrue": false
+      },
+      {
+        "statement": "`RUN` ทำงานตอนกำลัง 'build' Image เพื่อสร้างเลเยอร์ใหม่ ส่วน `CMD` กำหนดคำสั่งที่จะทำงานเมื่อ 'run' Container",
+        "istrue": true
+      },
+      {
+        "statement": "`CMD` ทำงานตอน build Image ส่วน `RUN` ทำงานตอน run Container",
+        "istrue": false
+      },
+      {
+        "statement": "`RUN` ใช้สำหรับติดตั้งโปรแกรม ส่วน `CMD` ใช้สำหรับลบโปรแกรม",
+        "istrue": false
+      }
+    ],
+    "explanation": "`RUN` จะถูก execute ในระหว่างกระบวนการสร้าง image และผลลัพธ์ของมันจะถูก commit เป็นเลเยอร์ใหม่ ในขณะที่ `CMD` เป็นเพียง metadata ที่บอกว่า container ควรจะรันคำสั่งอะไรเป็น default เมื่อเริ่มต้นทำงาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในคำสั่ง `docker build -t my-app:1.0 .` จุด (`.`) ที่อยู่ท้ายสุดหมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "ให้สร้าง Image ที่มีขนาดเล็กที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "ให้ใช้ Dockerfile เวอร์ชันล่าสุด",
+        "istrue": false
+      },
+      {
+        "statement": "ตำแหน่งของ Build Context หรือโฟลเดอร์ที่มี Dockerfile และไฟล์ที่เกี่ยวข้องอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "ให้หยุดการทำงานหลังจาก build เสร็จ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Build Context คือไดเรกทอรีที่ Docker daemon จะใช้ในการเข้าถึงไฟล์ต่างๆ ที่อ้างอิงใน Dockerfile (เช่น คำสั่ง `COPY`) การระบุ `.` หมายถึงให้ใช้ไดเรกทอรีปัจจุบันเป็น context"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการรวมคำสั่งหลายๆ คำสั่งไว้ใน `RUN` เดียวโดยใช้ `&&` จึงเป็นแนวปฏิบัติที่ดี?",
+    "options": [
+      {
+        "statement": "เพื่อให้ Dockerfile อ่านง่ายขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อลดจำนวนเลเยอร์ที่ไม่จำเป็นและทำให้ขนาดของ Image สุดท้ายเล็กลง",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้ Docker build Image ได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อหลีกเลี่ยงข้อผิดพลาดในการติดตั้งโปรแกรม",
+        "istrue": false
+      }
+    ],
+    "explanation": "ทุกคำสั่ง `RUN` จะสร้างเลเยอร์ใหม่ การรวมคำสั่งที่เกี่ยวข้องกัน (เช่น `apt-get update`, `install`, และ `clean`) ไว้ด้วยกัน จะสร้างเพียงเลเยอร์เดียว ทำให้ Image มีขนาดเล็กและมีประสิทธิภาพมากขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `EXPOSE 8080` ใน Dockerfile ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "เปิดและเชื่อมต่อ Port 8080 ของ Host กับ Container โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นเพียงการ 'ประกาศ' หรือให้ข้อมูลแก่ผู้ใช้ว่าแอปพลิเคชันภายใน Container ทำงานที่ Port 8080",
+        "istrue": true
+      },
+      {
+        "statement": "บังคับให้แอปพลิเคชันภายใน Container ต้องทำงานที่ Port 8080 เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "ตรวจสอบว่า Port 8080 บนเครื่อง Host ว่างหรือไม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "`EXPOSE` เป็นเหมือนเอกสารประกอบ ไม่ได้มีผลต่อการทำงานของเครือข่ายจริงๆ การจะเปิด Port ให้เข้าถึงจากภายนอกได้ยังคงต้องใช้ option `-p` ตอนรัน `docker run`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ประโยชน์หลักของเทคนิค Multi-stage Builds คืออะไร?",
+    "options": [
+      {
+        "statement": "ทำให้สามารถ build Image ได้โดยไม่ต้องมี Dockerfile",
+        "istrue": false
+      },
+      {
+        "statement": "ช่วยให้สามารถสร้าง Image สุดท้ายที่มีขนาดเล็กและปลอดภัย โดยคัดลอกเฉพาะผลลัพธ์ที่จำเป็น (เช่น binary file) จาก Build Stage มาเท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้สามารถ build Image สำหรับหลายๆ สถาปัตยกรรม (เช่น ARM, x86) ได้ในครั้งเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้กระบวนการ build โดยรวมเร็วขึ้นเป็นสองเท่า",
+        "istrue": false
+      }
+    ],
+    "explanation": "Multi-stage builds ช่วยแยกสภาพแวดล้อมตอน build (ซึ่งอาจมีเครื่องมือและ dependencies ขนาดใหญ่) ออกจากสภาพแวดล้อมตอน run ทำให้ image สุดท้ายมีเพียงสิ่งที่จำเป็นสำหรับการรันแอปพลิเคชันเท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Multi-stage build, คำสั่งใดที่ใช้สำหรับคัดลอกไฟล์จากสเตจก่อนหน้ามายังสเตจปัจจุบัน?",
+    "options": [
+      {
+        "statement": "RUN cp /from/stage1 /to/stage2",
+        "istrue": false
+      },
+      {
+        "statement": "COPY --from=[ชื่อสเตจแรก] [ไฟล์ต้นทาง] [ไฟล์ปลายทาง]",
+        "istrue": true
+      },
+      {
+        "statement": "ADD [ชื่อสเตจแรก]:[ไฟล์ต้นทาง] [ไฟล์ปลายทาง]",
+        "istrue": false
+      },
+      {
+        "statement": "EXPORT --from=[ชื่อสเตจแรก] [ไฟล์ต้นทาง]",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำสั่ง `COPY` ที่มี flag `--from` เป็นกลไกพิเศษที่ทำให้สามารถดึงไฟล์ผลลัพธ์จากสเตจก่อนหน้าเข้ามาในสเตจปัจจุบันได้ ซึ่งเป็นหัวใจของ Multi-stage builds"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหาหลักที่ Persistent Storage (เช่น Volumes, Bind Mounts) เข้ามาแก้ไขคืออะไร?",
+    "options": [
+      {
+        "statement": "Container มีขนาดใหญ่เกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลที่ถูกสร้างภายใน Container จะหายไปทั้งหมดเมื่อ Container ถูกลบ (Ephemeral nature)",
+        "istrue": true
+      },
+      {
+        "statement": "Container ไม่สามารถสื่อสารกันผ่านเครือข่ายได้",
+        "istrue": false
+      },
+      {
+        "statement": "Container เริ่มทำงานช้าเกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "โดยธรรมชาติ Container filesystem เป็นแบบชั่วคราว Persistent Storage จึงเป็นกลไกที่ใช้จัดเก็บข้อมูลสำคัญไว้นอกวงจรชีวิตของ Container ทำให้ข้อมูลยังคงอยู่แม้ Container จะถูกลบไปแล้ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างที่สำคัญระหว่าง Bind Mount และ Volume?",
+    "options": [
+      {
+        "statement": "Bind Mount เร็วกว่า Volume",
+        "istrue": false
+      },
+      {
+        "statement": "Bind Mount คือการเชื่อมไดเรกทอรีบน Host โดยตรง ส่วน Volume คือพื้นที่ที่ถูกจัดการโดย Docker เอง",
+        "istrue": true
+      },
+      {
+        "statement": "Volume ใช้ได้กับฐานข้อมูลเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "Bind Mount ปลอดภัยกว่า Volume",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bind Mount ผูกติดกับโครงสร้างไฟล์ของเครื่อง Host ซึ่งอาจมีปัญหาเรื่อง permission และ portability ในขณะที่ Volume ถูกสร้างและจัดการโดย Docker ทำให้เป็นอิสระจากเครื่อง Host และเป็นวิธีที่แนะนำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณต้องการพัฒนาแอปพลิเคชันบนเครื่องของคุณและต้องการให้การเปลี่ยนแปลงโค้ดบนเครื่อง Host สะท้อนเข้าไปใน Container ทันที ควรเลือกใช้ Persistent Storage แบบใด?",
+    "options": [
+      {
+        "statement": "Volume",
+        "istrue": false
+      },
+      {
+        "statement": "Bind Mount",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่ควรใช้ Persistent Storage",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ทั้ง Volume และ Bind Mount พร้อมกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bind Mount เหมาะสำหรับ use case การพัฒนา เพราะมันเชื่อมโยงไดเรกทอรีของโปรเจกต์บนเครื่อง Host เข้ากับ Container โดยตรง ทำให้เมื่อแก้ไขโค้ดบน Host การเปลี่ยนแปลงนั้นจะปรากฏใน Container ทันทีโดยไม่ต้อง build image ใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โดยปกติแล้ว Container ที่อยู่ใน Docker Network เดียวกันสามารถสื่อสารกันได้อย่างไร?",
+    "options": [
+      {
+        "statement": "ผ่านชื่อ Container Name เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "ผ่าน IP Address ส่วนตัวที่ Docker กำหนดให้",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่สามารถสื่อสารกันได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "ผ่านการใช้ Bind Mount",
+        "istrue": false
+      }
+    ],
+    "explanation": "Docker จะสร้าง Virtual Ethernet interface และกำหนด IP address ส่วนตัวให้กับแต่ละ container ที่อยู่ใน network เดียวกัน ทำให้สามารถสื่อสารกันได้โดยตรงผ่าน IP address นั้นๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `docker run -p 8080:80 nginx` หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "ให้รัน nginx บน Port 8080 ภายใน Container",
+        "istrue": false
+      },
+      {
+        "statement": "ให้เปลี่ยน Port ของ nginx จาก 80 เป็น 8080",
+        "istrue": false
+      },
+      {
+        "statement": "ให้ส่งต่อ (Forward) การเชื่อมต่อที่เข้ามายัง Port 8080 ของเครื่อง Host ไปยัง Port 80 ของ Container",
+        "istrue": true
+      },
+      {
+        "statement": "ให้เปิด Port 80 และ 8080 บนเครื่อง Host",
+        "istrue": false
+      }
+    ],
+    "explanation": "Option `-p` หรือ `--publish` ใช้สำหรับแมปพอร์ตในรูปแบบ `[Host Port]:[Container Port]` เพื่อทำให้เซอร์วิสภายใน container สามารถเข้าถึงได้จากภายนอกผ่าน port ของเครื่อง host"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อจำกัดที่สำคัญของเครือข่าย 'bridge' ปริยายของ Docker คืออะไร?",
+    "options": [
+      {
+        "statement": "มีความเร็วช้ามาก",
+        "istrue": false
+      },
+      {
+        "statement": "Container ไม่สามารถสื่อสารกันผ่าน 'ชื่อ' ได้ (ไม่มี DNS อัตโนมัติ)",
+        "istrue": true
+      },
+      {
+        "statement": "จำกัดจำนวน Container ได้แค่ 2 ตัว",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่สามารถเชื่อมต่อกับอินเทอร์เน็ตได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน default bridge network, Docker ไม่ได้ให้บริการ service discovery ผ่าน DNS ทำให้ container ต้องอ้างอิงถึงกันด้วย IP address ที่อาจเปลี่ยนแปลงได้ ซึ่งไม่เหมาะกับงาน production"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณต้องการสร้างสถาปัตยกรรมที่มี Frontend, Backend และ Database โดยให้เฉพาะ Frontend เท่านั้นที่เข้าถึงจากภายนอกได้ ควรทำอย่างไร?",
+    "options": [
+      {
+        "statement": "นำ Container ทั้งหมดไปไว้ในเครือข่ายเดียวกันและเปิด Port ของทุก Container",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง User-defined bridge network สองวง (เช่น frontend-net, internal-net) และเชื่อมต่อ Container ตามหน้าที่ของมัน",
+        "istrue": true
+      },
+      {
+        "statement": "ใช้ Bind Mount ในการเชื่อมต่อ Container ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "ติดตั้ง Firewall บนเครื่อง Host",
+        "istrue": false
+      }
+    ],
+    "explanation": "การสร้างเครือข่ายแยกกัน (Network Segmentation) เป็นแนวปฏิบัติที่ดีด้านความปลอดภัย ทำให้สามารถควบคุมการสื่อสารระหว่างส่วนต่างๆ ของแอปพลิเคชันได้ และจำกัดพื้นผิวการโจมตี (Attack Surface)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "User ID Namespace มีความสำคัญต่อความปลอดภัยของ Container อย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้ผู้ใช้สามารถล็อกอินเข้า Container ได้ง่ายขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ผู้ใช้ 'root' ภายใน Container ไม่ใช่คนเดียวกันกับผู้ใช้ 'root' ของเครื่อง Host",
+        "istrue": true
+      },
+      {
+        "statement": "จำกัดจำนวนผู้ใช้ที่สามารถเข้าถึง Container ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เข้ารหัสข้อมูลผู้ใช้ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "User ID Namespace ช่วยป้องกันช่องโหว่ประเภท Container Escape โดยการแมป User ID ภายใน Container ไปยัง User ID ที่ไม่มีสิทธิ์บนเครื่อง Host แม้ว่าใน Container จะเป็น 'root' ก็ตาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าคุณต้องการรัน Container ที่ทำงานเสร็จแล้วจบไป (เช่น รันสคริปต์) และไม่อยากให้มีขยะเหลือในระบบ ควรใช้ `docker run` พร้อมกับ option ใด?",
+    "options": [
+      {
+        "statement": "-d",
+        "istrue": false
+      },
+      {
+        "statement": "--rm",
+        "istrue": true
+      },
+      {
+        "statement": "-it",
+        "istrue": false
+      },
+      {
+        "statement": "--name",
+        "istrue": false
+      }
+    ],
+    "explanation": "Option `--rm` จะสั่งให้ Docker daemon ทำการลบ container โดยอัตโนมัติหลังจากที่ process หลักภายใน container นั้น exit ไปแล้ว เหมาะสำหรับงานที่เป็น task-based"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือ Image แบบ Official บน Docker Hub?",
+    "options": [
+      {
+        "statement": "grafana/grafana",
+        "istrue": false
+      },
+      {
+        "statement": "ubuntu",
+        "istrue": true
+      },
+      {
+        "statement": "my-user/my-app",
+        "istrue": false
+      },
+      {
+        "statement": "docker.io/library/ubuntu:latest",
+        "istrue": false
+      }
+    ],
+    "explanation": "Official Images จะมีชื่อสั้นๆ เพียงชื่อเดียว (เช่น `ubuntu`, `redis`, `nginx`) และถือเป็น namespace พิเศษบน Docker Hub ที่ถูกดูแลและรับรองโดยทีมงาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `WORKDIR /app` ใน Dockerfile มีผลอย่างไร?",
+    "options": [
+      {
+        "statement": "สร้างโฟลเดอร์ชื่อ `/app` บนเครื่อง Host",
+        "istrue": false
+      },
+      {
+        "statement": "คัดลอกไฟล์ทั้งหมดจากโฟลเดอร์ `/app` บน Host เข้าไปใน Image",
+        "istrue": false
+      },
+      {
+        "statement": "กำหนดให้ไดเรกทอรีทำงาน (Working Directory) สำหรับคำสั่งต่อๆ ไป (เช่น RUN, COPY, CMD) เป็น `/app` ภายใน Image",
+        "istrue": true
+      },
+      {
+        "statement": "รันแอปพลิเคชันที่อยู่ใน `/app` ทันที",
+        "istrue": false
+      }
+    ],
+    "explanation": "`WORKDIR` เปรียบเสมือนการรันคำสั่ง `cd /app` ภายใน image ซึ่งทำให้คำสั่งต่อๆมาทำงานโดยอ้างอิงจาก path นี้เป็นหลัก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณต้องการเก็บข้อมูลถาวรของฐานข้อมูลที่รันใน Container และต้องการให้ข้อมูลนั้นสามารถย้ายไปทำงานบนเครื่องอื่นได้ง่าย ควรเลือกใช้วิธีใด?",
+    "options": [
+      {
+        "statement": "Bind Mount",
+        "istrue": false
+      },
+      {
+        "statement": "Volume Mapping",
+        "istrue": true
+      },
+      {
+        "statement": "docker commit",
+        "istrue": false
+      },
+      {
+        "statement": "เก็บข้อมูลไว้ใน Writable Layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "Volume เป็นวิธีที่แนะนำสำหรับข้อมูลของแอปพลิเคชัน (เช่น ฐานข้อมูล) เพราะมันถูกจัดการโดย Docker ทำให้เป็นอิสระจาก filesystem ของเครื่อง host และมีความ portable สูงกว่า Bind Mount"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "PID Namespace ทำงานอย่างไร?",
+    "options": [
+      {
+        "statement": "สร้าง Process ID (PID) ให้กับ Container เพียงอันเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Process หลักที่รันใน Container มี PID เป็น 1 เสมอ ในมุมมองของ Container เอง",
+        "istrue": true
+      },
+      {
+        "statement": "จำกัดจำนวน Process ที่สามารถรันใน Container ได้",
+        "istrue": false
+      },
+      {
+        "statement": "แชร์ PID ระหว่าง Container ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "PID Namespace สร้างลำดับชั้นของ process เป็นของตัวเอง ทำให้ process แรกที่เริ่มต้นใน container นั้นได้รับ PID 1 ซึ่งเป็น PID พิเศษสำหรับ init process ในระบบปฏิบัติการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุผลหลักที่ไม่ควรใช้ `docker commit` เป็นวิธีหลักในการสร้าง Image สำหรับ Production คืออะไร?",
+    "options": [
+      {
+        "statement": "เพราะ `docker commit` ทำงานช้าเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะกระบวนการไม่เป็นอัตโนมัติ, ไม่สามารถทำซ้ำได้ และไม่สามารถตรวจสอบที่มาของการเปลี่ยนแปลงได้ (Opaque)",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Image ที่ได้จะมีขนาดใหญ่กว่าการใช้ Dockerfile เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ `docker commit` ไม่สามารถแชร์ Image ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้ Dockerfile ทำให้กระบวนการสร้าง image เป็นโค้ด (Infrastructure as Code) ซึ่งสามารถตรวจสอบ, กำหนดเวอร์ชัน, และทำซ้ำได้อย่างสม่ำเสมอ ในขณะที่ `docker commit` เป็นกระบวนการที่ทำด้วยมือและไม่โปร่งใส"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า Dockerfile ของคุณมีทั้งคำสั่ง `ENTRYPOINT` และ `CMD` ข้อความที่คุณพิมพ์ต่อท้าย `docker run` จะถูกนำไปใช้อย่างไร?",
+    "options": [
+      {
+        "statement": "จะถูกนำไปแทนที่ `ENTRYPOINT`",
+        "istrue": false
+      },
+      {
+        "statement": "จะถูกนำไปต่อท้ายเป็นอาร์กิวเมนต์ (Arguments) ให้กับ `ENTRYPOINT`",
+        "istrue": true
+      },
+      {
+        "statement": "จะถูกนำไปแทนที่ `CMD`",
+        "istrue": false
+      },
+      {
+        "statement": "จะเกิดข้อผิดพลาด เพราะไม่สามารถใช้พร้อมกันได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อใช้ร่วมกัน `ENTRYPOINT` จะกำหนดคำสั่งหลักที่ทำงานเสมอ และ `CMD` จะให้ค่า default arguments ซึ่งสามารถถูก override ได้โดยข้อความที่ใส่ตอน `docker run`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `docker system prune` ทำอะไร?",
+    "options": [
+      {
+        "statement": "ลบ Container ที่กำลังทำงานอยู่ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "ล้างข้อมูลขยะในระบบ Docker ทั้งหมด เช่น stopped containers, dangling images, และ unused networks",
+        "istrue": true
+      },
+      {
+        "statement": "อัปเดต Docker Engine เป็นเวอร์ชันล่าสุด",
+        "istrue": false
+      },
+      {
+        "statement": "รีสตาร์ท Docker daemon",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker system prune` เป็นคำสั่งที่สะดวกสำหรับทำความสะอาดระบบ Docker เพื่อคืนพื้นที่ดิสก์ โดยจะลบอ็อบเจกต์ที่ไม่ได้ใช้งานแล้วทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นตัวอย่างของ 'Running Program Abstraction'?",
+    "options": [
+      {
+        "statement": "Virtual Machine",
+        "istrue": false
+      },
+      {
+        "statement": "Operating System",
+        "istrue": false
+      },
+      {
+        "statement": "Process และ Thread",
+        "istrue": true
+      },
+      {
+        "statement": "CPU",
+        "istrue": false
+      }
+    ],
+    "explanation": "Running Program Abstraction คือวิธีที่ OS ใช้จัดการโปรแกรมที่กำลังทำงานอยู่พร้อมๆ กัน โดย Process และ Thread คือหน่วยพื้นฐานที่ OS ใช้ในการจัดสรรและแบ่งปันทรัพยากร"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ `FROM scratch` ในสเตจสุดท้ายของ Multi-stage build มีข้อดีอย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้ Image มี Library พื้นฐานครบครัน",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ได้ Image ที่มีขนาดเล็กที่สุดเท่าที่จะเป็นไปได้ เพราะเป็น Image เปล่าที่ไม่มีอะไรเลย",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ Image สามารถทำงานได้บนทุก OS",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Image มีความปลอดภัยน้อยลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "`scratch` เป็น image พิเศษที่มีขนาดเป็น 0 และไม่มีไฟล์ใดๆ อยู่เลย เหมาะสำหรับโปรแกรมที่คอมไพล์แบบ statically linked ซึ่งไม่ต้องการ dependencies ภายนอก ทำให้ได้ image สุดท้ายที่เล็กและปลอดภัยมาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าเราลบ Image ที่มี Container (ที่หยุดทำงานแล้ว) ถูกสร้างมาจากมัน จะเกิดอะไรขึ้น?",
+    "options": [
+      {
+        "statement": "Docker จะลบ Image ให้ทันที",
+        "istrue": false
+      },
+      {
+        "statement": "Docker จะลบ cả Image และ Container ที่เกี่ยวข้องให้โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "Docker จะแสดงข้อผิดพลาดและไม่อนุญาตให้ลบ Image จนกว่าจะลบ Container ที่เกี่ยวข้องออกไปก่อน",
+        "istrue": true
+      },
+      {
+        "statement": "Docker จะถามเพื่อยืนยันการลบ",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่เป็นกลไกป้องกันของ Docker เพื่อไม่ให้ image ที่ยังถูกอ้างอิงโดย container (แม้จะหยุดทำงานแล้ว) ถูกลบไป ซึ่งอาจทำให้ไม่สามารถ start container นั้นขึ้นมาใหม่ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คุณต้องการสร้าง Container สำหรับฐานข้อมูล MySQL และต้องการให้ข้อมูลถูกเก็บอย่างถาวรและปลอดภัย ควรใช้คำสั่ง `docker run` ในรูปแบบใด?",
+    "options": [
+      {
+        "statement": "docker run --rm mysql",
+        "istrue": false
+      },
+      {
+        "statement": "docker run -v my-sql-data:/var/lib/mysql mysql",
+        "istrue": true
+      },
+      {
+        "statement": "docker run -it mysql",
+        "istrue": false
+      },
+      {
+        "statement": "docker run -p 3306:3306 mysql",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้ Volume (`-v my-sql-data:/var/lib/mysql`) เพื่อแมปไดเรกทอรีข้อมูลของ MySQL ไปยัง Volume ที่จัดการโดย Docker เป็นวิธีที่ถูกต้องในการทำให้ข้อมูลคงอยู่ถาวร"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า Container รันคำสั่ง `CMD [\"/bin/sh\", \"-c\", \"echo hello\"]` และผู้ใช้รันด้วยคำสั่ง `docker run <image> echo world` ผลลัพธ์ที่ได้คืออะไร?",
+    "options": [
+      {
+        "statement": "hello world",
+        "istrue": false
+      },
+      {
+        "statement": "hello",
+        "istrue": false
+      },
+      {
+        "statement": "world",
+        "istrue": true
+      },
+      {
+        "statement": "เกิดข้อผิดพลาด",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อความที่ใส่ต่อท้าย `docker run` (`echo world`) จะทำการ override คำสั่ง default ที่กำหนดไว้ใน `CMD` ของ Dockerfile ทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นคำอธิบายที่ถูกต้องที่สุดเกี่ยวกับ Docker?",
+    "options": [
+      {
+        "statement": "Docker คือระบบปฏิบัติการชนิดหนึ่ง",
+        "istrue": false
+      },
+      {
+        "statement": "Docker คือ Virtual Machine ที่มีขนาดเล็ก",
+        "istrue": false
+      },
+      {
+        "statement": "Docker คือแพลตฟอร์มสำหรับสร้าง, ส่งมอบ, และใช้งานแอปพลิเคชันโดยใช้เทคโนโลยี Container",
+        "istrue": true
+      },
+      {
+        "statement": "Docker คือภาษาโปรแกรมสำหรับเขียนเว็บแอปพลิเคชัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Docker ไม่ใช่ตัวเทคโนโลยี Container เอง แต่เป็นแพลตฟอร์มที่ทำให้การใช้งาน Linux Container เป็นเรื่องง่ายและมีประสิทธิภาพสำหรับนักพัฒนา"
+  }
+]

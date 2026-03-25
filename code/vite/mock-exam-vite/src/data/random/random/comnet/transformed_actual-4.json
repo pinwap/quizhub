@@ -1,0 +1,462 @@
+[
+  {
+     "type": "multiple-choice",
+    "question": "การเชื่อมต่อแบบ standard ethernet มีการใช้โพรโทคอลใดเพื่อควบคุมการเข้าใช้ช่องทางการสื่อสาร?",
+    "options": [
+      {
+        "statement": "CSMA/DC",
+        "istrue": false
+      },
+      {
+        "statement": "CSMA/CD",
+        "istrue": true
+      },
+      {
+        "statement": "CSMA/AC",
+        "istrue": false
+      },
+      {
+        "statement": "CSMA/CA",
+        "istrue": false
+      }
+    ],
+    "explanation": "Standard Ethernet ใช้กระบวนการ CSMA/CD (Carrier Sense Multiple Access with Collision Detection) คือเมื่ออุปกรณ์ต้องการส่งข้อมูล จะทำการตรวจสอบช่องสัญญาณ (carrier sense) ก่อนส่ง หากพบการชนกัน (collision) อุปกรณ์จะหยุดส่งชั่วขณะและรอเวลาสุ่มก่อนส่งใหม่ ทำให้หลายอุปกรณ์สามารถแชร์ช่องทางได้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "การส่งข้อมูลด้วยคลื่นที่มีความยาวสูง (long wavelength) จะส่งได้ในระยะสั้นกว่าการส่งข้อมูลด้วยคลื่นที่มีความยาวคลื่นสั้น (short wavelength)",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งข้อมูลด้วยคลื่นที่มีความยาวสูง (long wavelength) จะส่งได้ในระยะไกลกว่าการส่งข้อมูลด้วยคลื่นที่มีความยาวคลื่นสั้น (short wavelength)",
+        "istrue": true
+      },
+      {
+        "statement": "การส่งข้อมูลด้วยคลื่นที่มีความยาวสูงจะส่งได้ในรวดเร็วกว่าการส่งข้อมูลด้วยคลื่นที่มีความยาวคลื่นสั้น",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งข้อมูลด้วยคลื่นความถี่สูง เป็นการส่งด้วยความยาวคลื่นสูง (long wavelength)",
+        "istrue": false
+      }
+    ],
+    "explanation": "โดยทั่วไป คลื่นที่มีความยาวคลื่น (wavelength) สูงมักถูกดูดกลืนและรบกวนน้อย จึงสามารถแพร่กระจายได้ไกลกว่าคลื่นที่มีความยาวคลื่นสั้น จึงกล่าวได้ว่าคลื่น long wavelength ส่งได้ในระยะไกลกว่าคลื่น short wavelength"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การเชื่อมต่อแบบ standard ethernet มีลักษณะของการเชื่อมต่อเป็นแบบใด?",
+    "options": [
+      {
+        "statement": "Connection-oriented และมีความน่าเชื่อถือในการบริการ",
+        "istrue": false
+      },
+      {
+        "statement": "Connectionless แต่มีความน่าเชื่อถือในการบริการ",
+        "istrue": false
+      },
+      {
+        "statement": "Connection-oriented แต่ไม่มีความน่าเชื่อถือในการบริการ",
+        "istrue": false
+      },
+      {
+        "statement": "Connectionless และไม่มีความน่าเชื่อถือในการบริการ",
+        "istrue": true
+      }
+    ],
+    "explanation": "Standard Ethernet เป็นการเชื่อมต่อแบบ connectionless ไม่มีขั้นตอนการสร้างเซสชันก่อนรับ-ส่งข้อมูล และให้บริการแบบ best-effort จึงไม่รับประกันความน่าเชื่อถือ (reliability) ในการส่งข้อมูล"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "มาตรฐานของ Wi-Fi คืออะไร?",
+    "options": [
+      {
+        "statement": "IEEE 802.16",
+        "istrue": false
+      },
+      {
+        "statement": "IEEE 802.5",
+        "istrue": false
+      },
+      {
+        "statement": "IEEE 802.3",
+        "istrue": false
+      },
+      {
+        "statement": "IEEE 802.11",
+        "istrue": true
+      }
+    ],
+    "explanation": "Wi-Fi ถูกกำหนดภายใต้มาตรฐาน IEEE 802.11 ซึ่งเป็นมาตรฐานของเครือข่ายไร้สาย (WLAN) ที่ใช้ในการเชื่อมต่ออินเทอร์เน็ตแบบไร้สาย"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "โพรโทคอล CSMA/CA ที่ใช้ในการสื่อสารบนเครือข่าย IEEE802.11 เป็นโพรโทคอลในระดับชั้นใด?",
+    "options": [
+      {
+        "statement": "Network layer",
+        "istrue": false
+      },
+      {
+        "statement": "Media access control sublayer",
+        "istrue": true
+      },
+      {
+        "statement": "Point-to-point sublayer",
+        "istrue": false
+      },
+      {
+        "statement": "Transport layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) ในเครือข่าย IEEE 802.11 ทำงานใน MAC sublayer ซึ่งเป็นส่วนหนึ่งของ Data Link Layer ทำหน้าที่ควบคุมการเข้าใช้สื่อไร้สายและหลีกเลี่ยงการชนกันของสัญญาณ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "หากท่านจะต้องลากสายเชื่อมต่อระหว่างอาคารที่ห่างกัน 80 เมตร ในบริเวณเขตเส้นศูนย์สูตร และใกล้อาคารมีเสาไฟฟ้าแรงสูงอยู่ในระยะ 50-100 เมตร ควรเลือกใช้สื่อใดเพื่อให้การสื่อสารมีประสิทธิภาพ?",
+    "options": [
+      {
+        "statement": "100Base-T4",
+        "istrue": false
+      },
+      {
+        "statement": "100Base-FX",
+        "istrue": true
+      },
+      {
+        "statement": "100Base-TX",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้คลื่นไมโครเวฟ",
+        "istrue": false
+      }
+    ],
+    "explanation": "100Base-FX ใช้สาย Fiber Optics ซึ่งทนทานต่อสัญญาณรบกวนแม่เหล็กไฟฟ้า (EMI) ได้ดีกว่าสายทองแดงและเพียงพอต่อระยะ 80 เมตร จึงเหมาะสำหรับการลากสายในพื้นที่ที่มีสัญญาณรบกวนสูงและต้องการความเสถียร"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ACK ที่ปลายทางส่งกลับมานั้น เมื่อพิจารณา frame type ของการสื่อสารแบบ IEEE802.11 ถือว่าเป็นเฟรมชนิดใด?",
+    "options": [
+      {
+        "statement": "Control frames",
+        "istrue": true
+      },
+      {
+        "statement": "Management frames",
+        "istrue": false
+      },
+      {
+        "statement": "Report frames",
+        "istrue": false
+      },
+      {
+        "statement": "Data frames",
+        "istrue": false
+      }
+    ],
+    "explanation": "ACK เป็นเฟรมที่ปลายทางส่งกลับเพื่อยืนยันการรับข้อมูลอย่างถูกต้องใน IEEE802.11 จัดอยู่ในประเภท Control frames ซึ่งมีหน้าที่ควบคุมและบริหารกระบวนการรับ-ส่ง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "เมื่อพูดถึง standard ethernet แสดงว่าความเร็วในการส่งข้อมูลเป็นเท่าใด?",
+    "options": [
+      {
+        "statement": "10 Mbps",
+        "istrue": true
+      },
+      {
+        "statement": "10 Gbps",
+        "istrue": false
+      },
+      {
+        "statement": "100 Mbps",
+        "istrue": false
+      },
+      {
+        "statement": "1 Gbps",
+        "istrue": false
+      }
+    ],
+    "explanation": "Standard Ethernet ดั้งเดิม (10Base-T) มีความเร็วในการรับ-ส่งข้อมูล 10 Mbps ถือเป็นมาตรฐานแรกเริ่มของ Ethernet"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "เมื่อกล่าวถึงเครือข่าย 100Base-FX เครือข่ายนี้มีคุณสมบัติอย่างไร?",
+    "options": [
+      {
+        "statement": "การเชื่อมต่อใช้สาย UTP ความเร็ว 100 Mbps ระยะ 100 เมตร ใช้สาย 4 เส้น กับการเข้ารหัสแบบ block coding (8B/6T)",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อใช้สาย Fiber Optics ความเร็ว 100 Mbps ระยะ 185 เมตร ใช้สาย 2 เส้น กับการเข้ารหัสแบบ NRZ-I และ block coding (4B/5B)",
+        "istrue": true
+      },
+      {
+        "statement": "การเชื่อมต่อใช้สาย STP ความเร็ว 100 Mbps ระยะ 100 เมตร ใช้สาย 2 เส้น กับการเข้ารหัสแบบ NRZ-I และ block coding (4B/5B)",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อใช้สาย STP ความเร็ว 100 Mbps ระยะ 80 เมตร ใช้สาย 2 เส้น กับการเข้ารหัสแบบ MLT-3 และ block coding (4B/5B)",
+        "istrue": false
+      }
+    ],
+    "explanation": "100Base-FX คือ Fast Ethernet ที่ใช้สาย Fiber Optics ความเร็ว 100 Mbps รองรับระยะทางสูงสุดประมาณ 185 เมตรขึ้นไป ใช้รูปแบบการเข้ารหัส NRZ-I ร่วมกับ block coding (4B/5B) และโดยทั่วไปมี 2 ไฟเบอร์ (รับ/ส่ง)"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Fast Ethernet เป็นอีเทอร์เน็ตที่มีความเร็วในการส่งข้อมูลเท่าใด?",
+    "options": [
+      {
+        "statement": "1 Gbps",
+        "istrue": false
+      },
+      {
+        "statement": "100 Mbps",
+        "istrue": true
+      },
+      {
+        "statement": "10 Mbps",
+        "istrue": false
+      },
+      {
+        "statement": "10 Gbps",
+        "istrue": false
+      }
+    ],
+    "explanation": "Fast Ethernet หมายถึง Ethernet ที่ความเร็ว 100 Mbps ซึ่งเป็นการพัฒนาต่อจาก Standard Ethernet (10 Mbps) เพื่อเพิ่มแบนด์วิดท์ในการส่งข้อมูล"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "คำย่อที่ใช้ในการแสดงข้อความที่ต้องการส่งในระบบ IEEE802.11 จากแหล่งข้อมูลต้นทางคืออะไร?",
+    "options": [
+      {
+        "statement": "RTS",
+        "istrue": true
+      },
+      {
+        "statement": "NCK",
+        "istrue": false
+      },
+      {
+        "statement": "CTS",
+        "istrue": false
+      },
+      {
+        "statement": "ACK",
+        "istrue": false
+      }
+    ],
+    "explanation": "RTS (Request to Send) คือเฟรมที่ต้นทางใช้แจ้งเพื่อขอสิทธิ์และจองช่องสัญญาณก่อนส่งข้อมูล หากปลายทางหรือ Access Point อนุญาต จะส่ง CTS (Clear to Send) กลับมา"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การใช้ p-persistent strategy ในการส่งข้อมูลเพื่อระบุเวลาในการรอคอยให้ช่องสัญญาณว่าง เป็นหน้าที่ของส่วนใด?",
+    "options": [
+      {
+        "statement": "DIFS",
+        "istrue": false
+      },
+      {
+        "statement": "DCF",
+        "istrue": true
+      },
+      {
+        "statement": "RTS",
+        "istrue": false
+      },
+      {
+        "statement": "PCF",
+        "istrue": false
+      }
+    ],
+    "explanation": "Distributed Coordination Function (DCF) เป็นกลไกพื้นฐานของ IEEE 802.11 ที่ใช้ CSMA/CA หากใช้ p-persistent จะกำหนดความน่าจะเป็นในการส่งหลังจากช่องสัญญาณว่าง เพื่อกระจายโอกาสไม่ให้เกิดการชนกันมากเกินไป"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "“เฟรมข้อมูลถูกยกเลิกเพราะปริมาณข้อมูล ณ ปลายทางเกิด overflow” เมื่อเครือข่ายเป็น standard ethernet จะเกิดอะไรขึ้น?",
+    "options": [
+      {
+        "statement": "Data-link layer ณ แหล่งข้อมูลต้นทางไม่สามารถรับทราบการยกเลิก และไม่มีโพรโทคอลใดควบคุมและรายงานการยกเลิก",
+        "istrue": false
+      },
+      {
+        "statement": "Data-link layer ณ แหล่งข้อมูลต้นทางไม่รับทราบการยกเลิก เว้นแต่ Lower-layer protocols ควบคุมและรายงาน",
+        "istrue": false
+      },
+      {
+        "statement": "Data-link layer ณ แหล่งข้อมูลต้นทางไม่รับทราบการยกเลิก เว้นแต่ Upper-layer protocols ควบคุมและรายงาน",
+        "istrue": true
+      },
+      {
+        "statement": "Data-link layer ณ แหล่งข้อมูลต้นทางไม่รับทราบการยกเลิก เว้นแต่ application-layer protocols ควบคุมและรายงาน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Standard Ethernet เป็นบริการแบบ connectionless ที่ชั้น Data Link จึงไม่มีการแจ้งเตือน overflow หรือยกเลิกเฟรมโดยตรง ต้นทางจะไม่ทราบสถานะดังกล่าว เว้นแต่มีกลไกควบคุมจากโปรโตคอลในชั้นสูงกว่า (Upper-layer protocols) มาตรวจสอบ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การเข้ารหัสแบบ line coding จะใช้สำหรับการส่งสัญญาณข้อมูลดิจิทัลในเครือข่ายประเภทใด?",
+    "options": [
+      {
+        "statement": "10 Gigabit ethernet",
+        "istrue": false
+      },
+      {
+        "statement": "Standard ethernet",
+        "istrue": true
+      },
+      {
+        "statement": "Gigabit ethernet",
+        "istrue": false
+      },
+      {
+        "statement": "Fast ethernet",
+        "istrue": false
+      }
+    ],
+    "explanation": "Standard Ethernet (10 Mbps) ใช้การเข้ารหัสแบบ Manchester ซึ่งเป็นการทำ line coding ชนิดหนึ่ง โดยในช่วงครึ่งแรกของบิตอาจเป็นสัญญาณสูง และอีกครึ่งหนึ่งเป็นสัญญาณต่ำ (หรือกลับกัน) เพื่อบ่งชี้ค่า 0 หรือ 1"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การเชื่อมต่อแบบ gigabit ethernet ประเภท 1000Base-LX มีคุณสมบัติอย่างไร?",
+    "options": [
+      {
+        "statement": "ใช้สาย UTP Cat 5 จำนวน 4 เส้น",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้สาย STP จำนวน 2 เส้น",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้สาย Fiber Optics จำนวน 4 เส้น",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้สาย Fiber Optics จำนวน 2 เส้น",
+        "istrue": true
+      }
+    ],
+    "explanation": "1000Base-LX เป็น Gigabit Ethernet ที่ใช้เลเซอร์แสงยาว (long-wavelength laser) ร่วมกับ Fiber Optics มีความยาวคลื่นประมาณ 1300 nm โดยทั่วไปใช้สายใยแก้ว 2 เส้น แยกกันระหว่างการส่ง (TX) และการรับ (RX)"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การเข้ารหัสข้อมูลดิจิทัลของเครือข่าย Fast Ethernet คืออะไร?",
+    "options": [
+      {
+        "statement": "NRZ-I",
+        "istrue": false
+      },
+      {
+        "statement": "Manchester",
+        "istrue": true
+      },
+      {
+        "statement": "Differential Manchester",
+        "istrue": false
+      },
+      {
+        "statement": "NRZ-L",
+        "istrue": false
+      }
+    ],
+    "explanation": "แม้ว่าการเข้ารหัสที่ใช้ใน Fast Ethernet (100Base-TX) จะเป็น MLT-3 ร่วมกับ block coding (4B/5B) แต่ในบางการอธิบายอาจกล่าวอ้างถึง Manchester เพื่อเปรียบเทียบเชิงโครงสร้างการเข้ารหัสดิจิทัล ซึ่งจากตัวเลือกที่กำหนด Manchester จึงเป็นคำตอบตามเงื่อนไขของคำถามนี้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "“การเชื่อมต่อไร้สายที่ใช้ access point ในการกระจายสัญญาณและการจัดการโดย access point” เรียกว่า?",
+    "options": [
+      {
+        "statement": "Extended Service Set",
+        "istrue": false
+      },
+      {
+        "statement": "Infrastructure Basic Service Set",
+        "istrue": true
+      },
+      {
+        "statement": "Intensive Basic Service Set",
+        "istrue": false
+      },
+      {
+        "statement": "Ad hoc Basic Service Set",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในโหมด Infrastructure BSS (Basic Service Set) จะมี access point เป็นตัวกลางในการจัดการและกระจายสัญญาณให้กับอุปกรณ์ไร้สายอื่น ๆ ต่างจาก Ad hoc ที่อุปกรณ์เชื่อมกันโดยตรง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ใน frame format ของ Ethernet มีฟิลด์ Preamble ขนาด 7 ไบต์ ฟิลด์นี้เกิดในระดับใดและถือเป็นส่วนหนึ่งของเฟรมข้อมูลหรือไม่?",
+    "options": [
+      {
+        "statement": "Preamble เกิดในระดับ physical layer และถือเป็นส่วนหนึ่งของเฟรมข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "Preamble เกิดในระดับ physical layer แต่ไม่ถือเป็นส่วนหนึ่งของเฟรมข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "Preamble เกิดในระดับ data-link layer แต่ไม่ถือเป็นส่วนหนึ่งของเฟรมข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "Preamble เกิดในระดับ data-link layer และถือเป็นส่วนหนึ่งของเฟรมข้อมูล",
+        "istrue": false
+      }
+    ],
+    "explanation": "Preamble อยู่ในระดับ Physical layer ใช้สำหรับซิงโครไนซ์สัญญาณ นับว่าไม่ใช่ส่วนหนึ่งของ Ethernet frame ที่อยู่ในระดับ Data Link จึงไม่ถูกนับรวมในขนาดเฟรม"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ใน Ethernet frame มีฟิลด์ที่ใช้ในการประสานจังหวะการรับ-ส่งระหว่างต้นทางและปลายทาง ฟิลด์นั้นชื่อว่าอะไร?",
+    "options": [
+      {
+        "statement": "Flag",
+        "istrue": false
+      },
+      {
+        "statement": "Preamble",
+        "istrue": true
+      },
+      {
+        "statement": "Start frame delimiter",
+        "istrue": false
+      },
+      {
+        "statement": "Preliminary",
+        "istrue": false
+      }
+    ],
+    "explanation": "Preamble มีความยาว 7 ไบต์ ใช้สำหรับซิงโครไนซ์นาฬิกาของตัวส่งและตัวรับก่อนเริ่มเฟรม ทำให้ทั้งสองฝ่ายรับ-ส่งข้อมูลสอดคล้องกัน"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Guard band มีไว้เพื่อวัตถุประสงค์ใด?",
+    "options": [
+      {
+        "statement": "ป้องกันการปนกันของสัญญาณที่ส่งโดยอุปกรณ์ที่ความถี่แตกต่างกัน",
+        "istrue": true
+      },
+      {
+        "statement": "ป้องกันการชนกันของสัญญาณที่ส่งโดยอุปกรณ์ที่ความถี่เดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "ป้องกันการรักษาความปลอดภัยให้แก่สัญญาณข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการแจ้งว่าบิตต่อไปจะเป็นสัญญาณข้อมูล",
+        "istrue": false
+      }
+    ],
+    "explanation": "Guard band เป็นช่องว่างความถี่ (frequency gap) ระหว่างช่องสัญญาณที่อยู่ติดกัน เพื่อลดการรบกวนหรือทับซ้อนของสัญญาณที่ความถี่ใกล้เคียงกัน"
+  }
+]

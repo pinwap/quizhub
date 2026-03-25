@@ -1,0 +1,462 @@
+[
+  {
+     "type": "multiple-choice",
+    "question": "เมื่อกล่าวถึง router จะสามารถกล่าวได้ว่าการทำงานอยู่ในระดับใดบ้าง?",
+    "options": [
+      {
+        "statement": "Transport layer, network layer",
+        "istrue": false
+      },
+      {
+        "statement": "Physical layer, data link layer",
+        "istrue": false
+      },
+      {
+        "statement": "Data link layer, network layer",
+        "istrue": false
+      },
+      {
+        "statement": "Network layer, data link layer, Physical layer",
+        "istrue": true
+      }
+    ],
+    "explanation": "เราเตอร์ (Router) ทำงานหลักในระดับ Network layer (ชั้นที่ 3) เพื่อกำหนดเส้นทางส่งต่อแพ็กเก็ตระหว่างเครือข่าย แต่ในทางปฏิบัติจะเกี่ยวข้องกับ Data link layer (ชั้นที่ 2) เพื่อแก้ไขหรือเปลี่ยน MAC address ตามพอร์ตที่ส่งออก และในระดับ Physical layer (ชั้นที่ 1) เพื่อแปลงสัญญาณไฟฟ้าตามมาตรฐานสื่อที่เชื่อมต่อ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "เมื่อเฟรมข้อมูลถูกส่งมาจาก switch เพื่อไปสู่ router A เพื่อส่งต่อไปยัง router B ที่เชื่อมต่อกับเครื่องปลายทาง ท่านจงระบุหน้าที่ของ router ในการสื่อสารนี้",
+    "options": [
+      {
+        "statement": "สําเนา MAC destination address แล้วค้นหาเส้นทางใน forwarding table",
+        "istrue": false
+      },
+      {
+        "statement": "เปลี่ยน IP destination address ในช่องของ destination address ให้เป็น MAC address ของ router B ของเครื่องปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "สําเนา IP destination address แล้วค้นหาเส้นทางใน forwarding table",
+        "istrue": false
+      },
+      {
+        "statement": "เปลี่ยน MAC destination address ในช่องของ destination address ให้เป็น MAC address ของ router B ของเครื่องปลายทาง",
+        "istrue": true
+      }
+    ],
+    "explanation": "หลังจากเราเตอร์ A ได้รับเฟรม ก็จะตรวจสอบ IP destination address เพื่อเลือกเส้นทาง (next hop) ใน routing table แต่บนชั้น Data link layer เราเตอร์จะเปลี่ยน MAC destination address ในเฟรมให้อ้างอิงเป็น MAC ของ router B (ซึ่งเป็น next hop หรือปลายทาง) แล้วจึงส่งต่อออกไปยังเครือข่ายข้างเคียง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ลักษณะของ VLAN คืออะไร?",
+    "options": [
+      {
+        "statement": "การเชื่อมต่อ host ในเครือข่ายบางเครื่องที่แตกต่างกัน (different physical connecting) ให้เป็นเสมือนเครือข่ายเดียวกันโดยไม่มีการปรับเปลี่ยนสายเชื่อมต่อ",
+        "istrue": true
+      },
+      {
+        "statement": "ความยืดหยุ่นของการเชื่อมต่อที่สามารถปรับเปลี่ยนรูปแบบการเชื่อมต่อ (physical connecting) ให้เปลี่ยนเป็นหลายทอพอโลยี",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ switch เชื่อมต่อเครือข่ายที่แตกต่างกัน (different physical connecting) ให้เป็นเครือข่ายเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อ switch ที่สามารถเปลี่ยนจาก star-bus เป็น star-ring ได้โดยไม่ต้องปรับเปลี่ยนรูปแบบการเชื่อมต่อ",
+        "istrue": false
+      }
+    ],
+    "explanation": "VLAN (Virtual LAN) คือการจัดกลุ่มอุปกรณ์คอมพิวเตอร์ที่อาจเชื่อมต่อทางกายภาพต่างกัน ให้เป็นเครือข่ายเสมือนเดียวกัน (logical grouping) โดยไม่ต้องเปลี่ยนสายสัญญาณจริง ช่วยให้บริหารจัดการเครือข่ายได้ยืดหยุ่น"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Port ใดที่ใช้ในการโทรทางไกลด้วย application program จากเครื่องคอมพิวเตอร์?",
+    "options": [
+      {
+        "statement": "MTP",
+        "istrue": false
+      },
+      {
+        "statement": "TCAP",
+        "istrue": true
+      },
+      {
+        "statement": "TUP",
+        "istrue": false
+      },
+      {
+        "statement": "SCCP",
+        "istrue": false
+      }
+    ],
+    "explanation": "TCAP (Transaction Capabilities Application Part) เป็นส่วนหนึ่งของโปรโตคอล SS7 ในเครือข่ายโทรศัพท์ ซึ่งรองรับการส่งข้อมูลควบคุม (signaling) และฟังก์ชันเสริมสำหรับการโทร ทำให้ใช้ในการให้บริการโทรระยะไกลผ่านแอปพลิเคชันได้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การเชื่อมต่อเครือข่ายอินเทอร์เน็ตจากบ้านไปสู่เครือข่ายอินเทอร์เน็ตด้วยระบบดั้งเดิม (Dial-up service) มีอุปกรณ์ที่สำคัญคืออะไร?",
+    "options": [
+      {
+        "statement": "Modem",
+        "istrue": true
+      },
+      {
+        "statement": "Server",
+        "istrue": false
+      },
+      {
+        "statement": "DSLAM",
+        "istrue": false
+      },
+      {
+        "statement": "Converter",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dial-up service ใช้โมเด็ม (Modem) เป็นอุปกรณ์แปลงสัญญาณดิจิทัลจากคอมพิวเตอร์ให้กลายเป็นสัญญาณแอนะล็อกเพื่อส่งผ่านสายโทรศัพท์พื้นฐาน และแปลงกลับเป็นสัญญาณดิจิทัลเมื่อรับ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การส่งคลื่นเสียง (Voice transmission) ในระบบโทรศัพท์แบบดั้งเดิมมีช่วงความถี่เท่าใด?",
+    "options": [
+      {
+        "statement": "คลื่นความถี่ระหว่าง 300 Hz – 3300 Hz",
+        "istrue": true
+      },
+      {
+        "statement": "คลื่นความถี่ระหว่าง 3000 Hz – 6000 Hz",
+        "istrue": false
+      },
+      {
+        "statement": "คลื่นความถี่ระหว่าง 1200 Hz – 4200 Hz",
+        "istrue": false
+      },
+      {
+        "statement": "คลื่นความถี่ระหว่าง 300 Hz – 6300 Hz",
+        "istrue": false
+      }
+    ],
+    "explanation": "ระบบโทรศัพท์แบบดั้งเดิม (PSTN) กำหนดย่านความถี่เสียงในการส่งผ่านที่ประมาณ 300 Hz ถึง 3300 Hz ซึ่งเพียงพอสำหรับการสื่อสารเสียงให้มนุษย์เข้าใจ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "หากมีการติดตั้งและเชื่อมต่อ transparent switch 2 ตัว เชื่อมต่อวง LAN สองวง สิ่งใดจะเกิดขึ้น?",
+    "options": [
+      {
+        "statement": "จะเกิดการวนลูปเพราะแต่ละ switch จะส่งข้อมูลไปมาระหว่างกันจนเกิดการวนลูปในเครือข่ายทั้งสอง",
+        "istrue": true
+      },
+      {
+        "statement": "จะไม่เกิดการส่งข้อมูลใด ๆ เนื่องจากเฟรมข้อมูลไม่รู้ว่าควรจะส่งไปยัง Switch ตัวใด",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่เกิดอะไรขึ้นเพราะการหาเส้นทางสามารถดำเนินการได้ด้วย switch ตัวใดตัวหนึ่งที่แบ่งหน้าที่เรียบร้อย",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่เกิดอะไรขึ้นเพราะการหาเส้นทางสามารถทำได้จากทั้งสอง switch พร้อม ๆ กัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "transparent switch ไม่ได้มีการกันลูปโดยตัวเอง หากเชื่อมต่อ 2 สวิตช์เข้าด้วยกันแบบไม่มีมาตรการป้องกัน (เช่น Spanning Tree Protocol) จะเกิดปัญหาเฟรมวนซ้ำไปมาระหว่างกัน ทำให้เครือข่ายล่ม"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องของการใช้ระบบ DSL?",
+    "options": [
+      {
+        "statement": "ความปลอดภัยต่ำเพราะมีการใช้งานร่วมกับระบบโทรทัศน์",
+        "istrue": false
+      },
+      {
+        "statement": "ความปลอดภัยสูงเพราะมีระบบป้องกันการดักจับข้อมูลในระบบเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ความปลอดภัยสูงเพราะไม่ใช้สายสื่อสารร่วมกับผู้อื่น",
+        "istrue": true
+      },
+      {
+        "statement": "ความปลอดภัยต่ำเพราะมีการใช้งานร่วมกับระบบโทรศัพท์",
+        "istrue": false
+      }
+    ],
+    "explanation": "DSL (Digital Subscriber Line) ให้บริการบนสายโทรศัพท์ของผู้ใช้รายนั้นโดยเฉพาะ (dedicated line) ไม่ได้แชร์สายร่วมกับผู้อื่น ทำให้มีความปลอดภัยในแง่ช่องทางสื่อสารที่ไม่ปะปนกับผู้ใช้อื่น"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การสร้างเส้นทางใน switching table ที่มีการใช้ spanning tree algorithm จะช่วยแก้ปัญหาการสื่อสารในด้านใด?",
+    "options": [
+      {
+        "statement": "ป้องกันการโจมตีจากผู้ไม่ประสงค์ดี",
+        "istrue": false
+      },
+      {
+        "statement": "ป้องกันการเกิด collision ในเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ป้องกันการติดลูปของการใช้ switch",
+        "istrue": true
+      },
+      {
+        "statement": "ป้องกันการเกิด congestion ในเครือข่าย",
+        "istrue": false
+      }
+    ],
+    "explanation": "Spanning Tree Algorithm (STA) ถูกออกแบบมาเพื่อป้องกันปัญหาการเกิดลูปในเครือข่ายสวิตช์ โดยเลือกเส้นทางที่เป็นโครงข่ายต้นไม้ (tree) ซึ่งไม่มีวงวน"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การส่งข้อมูลแบบ out-of-band มีช่องทางการสื่อสารจำนวนเท่าไร?",
+    "options": [
+      {
+        "statement": "4 ช่องทาง มี voice bandwidth, data bandwidth, control bandwidth, management bandwidth",
+        "istrue": false
+      },
+      {
+        "statement": "2 ช่องทาง voice bandwidth เป็นคนละช่องกับ data bandwidth",
+        "istrue": true
+      },
+      {
+        "statement": "1 ช่องทาง voice bandwidth เป็นอันเดียวกับ data bandwidth",
+        "istrue": false
+      },
+      {
+        "statement": "3 ช่องทาง มี voice bandwidth, data bandwidth, control bandwidth",
+        "istrue": false
+      }
+    ],
+    "explanation": "การสื่อสาร out-of-band หมายถึงการใช้งานช่องสัญญาณสองชุดแยกจากกัน โดยปกติคือ 1) voice bandwidth และ 2) data bandwidth ทำให้ข้อมูลกับเสียงไม่ปะปนกันในช่องสัญญาณเดียวกัน"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดเป็นลักษณะการทำงานของ circuit switched network?",
+    "options": [
+      {
+        "statement": "ไม่มีการจองเส้นทางการสื่อสารเมื่อมีข้อมูลจะส่งข้อมูลลงในช่องสัญญาณทันที",
+        "istrue": false
+      },
+      {
+        "statement": "มีการสลับ slot เพื่อส่งข้อมูลเป็นระยะ ๆ",
+        "istrue": false
+      },
+      {
+        "statement": "มีการจองเส้นทางการสื่อสารเมื่อต้องการส่งข้อมูลและปลดปล่อยเมื่อเสร็จสิ้น",
+        "istrue": true
+      },
+      {
+        "statement": "มีการจองเส้นทางการสื่อสารตลอดเวลาแม้จะไม่มีข้อมูลส่ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน circuit switched network (เช่น ระบบโทรศัพท์ดั้งเดิม) เมื่อมีการโทรหรือเชื่อมต่อ จะมีการจองวงจร (เส้นทาง) ตลอดจนการสื่อสารสิ้นสุด จึงปลดปล่อย"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การทำงานของ hub จะสามารถกล่าวได้ว่าการทำงานอยู่ในระดับใด?",
+    "options": [
+      {
+        "statement": "Physical layer",
+        "istrue": true
+      },
+      {
+        "statement": "Network layer",
+        "istrue": false
+      },
+      {
+        "statement": "Data link layer",
+        "istrue": false
+      },
+      {
+        "statement": "Transport layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hub ทำงานในระดับ Physical layer เท่านั้น เนื่องจากจะกระจายสัญญาณไฟฟ้าไปยังทุกพอร์ตที่เชื่อมต่อโดยไม่คำนึงถึงที่อยู่ MAC"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ระบบการเชื่อมต่อแบบ digital subscriber line (DSL) เป็นการให้บริการอินเทอร์เน็ตโดยมีการใช้งานการสื่อสารข้อมูลคู่กับการบริการใด?",
+    "options": [
+      {
+        "statement": "โทรศัพท์",
+        "istrue": true
+      },
+      {
+        "statement": "โทรทัศน์สาธารณะ",
+        "istrue": false
+      },
+      {
+        "statement": "โทรทัศน์วงจรปิด",
+        "istrue": false
+      },
+      {
+        "statement": "เครือข่ายท้องถิ่น",
+        "istrue": false
+      }
+    ],
+    "explanation": "DSL ใช้สายโทรศัพท์ภายในบ้าน (local loop) เดิมที่สามารถสื่อสารเสียงไปพร้อมกับข้อมูล โดยแยกย่านความถี่เสียงและย่านความถี่สำหรับข้อมูล"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ปัจจุบันการให้บริการแบบ digital data service (DDS) มีลักษณะการบริการอย่างไร?",
+    "options": [
+      {
+        "statement": "ส่งข้อมูลด้วยสัญญาณดิจิทัลบนระบบ analog switched line ที่ความเร็ว 56 kbps",
+        "istrue": false
+      },
+      {
+        "statement": "ส่งข้อมูลด้วยสัญญาณดิจิทัลบนระบบ digital leased line ที่ความเร็ว 64 kbps",
+        "istrue": true
+      },
+      {
+        "statement": "ส่งข้อมูลด้วยสัญญาณแอนะล็อกบนระบบ digital leased line ที่ความเร็ว 64 kbps",
+        "istrue": false
+      },
+      {
+        "statement": "ส่งข้อมูลด้วยสัญญาณแอนะล็อกบนระบบ analog switched line ที่ความเร็ว 56 kbps",
+        "istrue": false
+      }
+    ],
+    "explanation": "Digital Data Service (DDS) คือการให้บริการส่งข้อมูลแบบดิจิทัลบนสายเช่า (leased line) ที่ความเร็วโดยทั่วไป 64 kbps เชื่อมต่อแบบ point-to-point"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การบริการใดที่ใช้ LEO?",
+    "options": [
+      {
+        "statement": "GPS",
+        "istrue": false
+      },
+      {
+        "statement": "ISM",
+        "istrue": false
+      },
+      {
+        "statement": "Mobile",
+        "istrue": true
+      },
+      {
+        "statement": "Government",
+        "istrue": false
+      }
+    ],
+    "explanation": "LEO (Low Earth Orbit) มักใช้ในระบบสื่อสารผ่านดาวเทียมสำหรับเครือข่ายโทรศัพท์เคลื่อนที่ (Mobile) และบริการอินเทอร์เน็ตดาวเทียมความหน่วงต่ำ เนื่องจากระยะโคจรอยู่ใกล้ผิวโลก"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การทำงานของ router ในระดับ physical layer เกิดขึ้นได้หรือไม่?",
+    "options": [
+      {
+        "statement": "เกิดขึ้นไม่ได้เพราะ router สามารถทำงานเหมือน switch คือการหาเส้นทางเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เกิดขึ้นได้เพราะ router สามารถตรวจสอบลักษณะข้อมูลที่ต้องการส่งไปยังปลายทางได้",
+        "istrue": false
+      },
+      {
+        "statement": "เกิดขึ้นไม่ได้เพราะ router ทำงานเฉพาะในระดับ Network layer เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เกิดขึ้นได้เพราะ router ทำหน้าที่เป็น repeater ในระดับ physical layer ได้",
+        "istrue": true
+      }
+    ],
+    "explanation": "แม้ Router จะทำงานหลักในระดับ Network layer แต่ต้องผ่านชั้น Physical layer ในการรับและส่งสัญญาณ ดังนั้นจึงทำหน้าที่คล้าย repeater ได้ในแง่การรับสัญญาณและส่งต่อสัญญาณทางกายภาพ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดเป็นลักษณะการสื่อสารที่เกิดในระบบ cable networks?",
+    "options": [
+      {
+        "statement": "Contention-based",
+        "istrue": true
+      },
+      {
+        "statement": "Contention-free",
+        "istrue": false
+      },
+      {
+        "statement": "Congestion-based",
+        "istrue": false
+      },
+      {
+        "statement": "Congestion-free",
+        "istrue": false
+      }
+    ],
+    "explanation": "Cable networks มีลักษณะเป็น shared medium ซึ่งผู้ใช้หลายรายแบ่งปันช่องสัญญาณเดียวกัน ทำให้ต้องใช้วิธีแบบ contention-based เพื่อส่งข้อมูล"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การบริการใดที่ใช้ MEO?",
+    "options": [
+      {
+        "statement": "Government",
+        "istrue": false
+      },
+      {
+        "statement": "Mobile",
+        "istrue": false
+      },
+      {
+        "statement": "GPS",
+        "istrue": true
+      },
+      {
+        "statement": "ISM",
+        "istrue": false
+      }
+    ],
+    "explanation": "GPS (Global Positioning System) ใช้ดาวเทียมในวงโคจร MEO (Medium Earth Orbit) ที่ความสูงประมาณ 20,200 กิโลเมตรจากพื้นโลกเพื่อให้ครอบคลุมการระบุตำแหน่ง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การท่า virtual LAN หรือ VLAN นั้นจะใช้อุปกรณ์ใดในการเชื่อมต่อ?",
+    "options": [
+      {
+        "statement": "Repeater",
+        "istrue": false
+      },
+      {
+        "statement": "Router",
+        "istrue": false
+      },
+      {
+        "statement": "Switch",
+        "istrue": true
+      },
+      {
+        "statement": "Hub",
+        "istrue": false
+      }
+    ],
+    "explanation": "VLAN มักถูกกำหนดค่าบน Switch โดยใช้การตั้งค่า VLAN ID ให้พอร์ตต่าง ๆ สามารถเป็นเครือข่ายเสมือนแยกจากกันได้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "เมื่อ base station ทั้งสองมีการ overlap ขอบเขตการเชื่อมต่อร่วมกันและจำเป็นต้องเกิดการเปลี่ยน base station เรียกการเปลี่ยนแบบนี้ว่าอะไร?",
+    "options": [
+      {
+        "statement": "Soft handoff",
+        "istrue": true
+      },
+      {
+        "statement": "Hard handoff",
+        "istrue": false
+      },
+      {
+        "statement": "Weak handoff",
+        "istrue": false
+      },
+      {
+        "statement": "Strong handoff",
+        "istrue": false
+      }
+    ],
+    "explanation": "Soft handoff คือการเปลี่ยนสัญญาณจาก base station หนึ่งไปอีกตัวหนึ่งในขณะที่ยังคงเชื่อมต่อกับตัวเดิมอยู่ชั่วขณะ จึงทำให้การสื่อสารต่อเนื่องและลดการสูญเสียสัญญาณ"
+  }
+]

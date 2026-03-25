@@ -1,0 +1,376 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "คอมพิวเตอร์วิชันทำหน้าที่อะไรในการประมวลผลข้อมูล",
+    "options": [
+      { "statement": "การอ่านและเข้าใจเสียง", "istrue": false },
+      { "statement": "การวิเคราะห์และตีความภาพหรือวิดีโอ", "istrue": true },
+      { "statement": "การสร้างข้อมูลจากตัวอักษร", "istrue": false },
+      { "statement": "การควบคุมอุปกรณ์ไฟฟ้า", "istrue": false }
+    ],
+    "explanation": "คอมพิวเตอร์วิชันทำหน้าที่วิเคราะห์และตีความข้อมูลด้านภาพหรือวิดีโอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ได้ใช้เทคโนโลยีคอมพิวเตอร์วิชัน",
+    "options": [
+      { "statement": "รถขับเคลื่อนอัตโนมัติ", "istrue": false },
+      { "statement": "โปรแกรมตรวจจับ Spam mail อัตโนมัติ", "istrue": true },
+      { "statement": "เครื่องสแกนใบหน้า", "istrue": false },
+      { "statement": "กล้องอ่านป้านทะเบียนรถยนต์", "istrue": false }
+    ],
+    "explanation": "ระบบตรวจจับสแปมเป็นการประมวลผลข้อความ ไม่ใช่ภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นแอปพลิเคชันของคอมพิวเตอร์วิชัน",
+    "options": [
+      { "statement": "การแปลภาษา", "istrue": false },
+      { "statement": "การประมวลผลเสียง", "istrue": false },
+      { "statement": "การขับรถอัตโนมัติ", "istrue": true },
+      { "statement": "Chatbot", "istrue": false }
+    ],
+    "explanation": "รถขับเคลื่อนอัตโนมัติใช้คอมพิวเตอร์วิชันตรวจจับสภาพแวดล้อม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากเราใช้ 5 บิตในการแทนค่าจุดภาพของภาพเฉดเทา (grayscale image) แต่ละจุดภาพจะมีเฉดได้กี่เฉด",
+    "options": [
+      { "statement": "32 เฉด", "istrue": true },
+      { "statement": "64 เฉด", "istrue": false },
+      { "statement": "128 เฉด", "istrue": false },
+      { "statement": "256 เฉด", "istrue": false }
+    ],
+    "explanation": "5 บิตให้ค่า 2^5 = 32 ระดับ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จุดภาพ (0,0) อยู่ตำแหน่งใดในภาพ",
+    "options": [
+      { "statement": "มุมขวาบนของภาพ", "istrue": false },
+      { "statement": "มุมซ้ายล่างของภาพ", "istrue": false },
+      { "statement": "ตรงกลางของภาพ", "istrue": false },
+      { "statement": "มุมซ้ายบนของภาพ", "istrue": true }
+    ],
+    "explanation": "(0,0) คือจุดมุมซ้ายบนของภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน OpenCV คำสั่งใดที่ใช้เปิดภาพและบันทึกภาพ",
+    "options": [
+      { "statement": "cv2.imread() และ cv2.imwrite()", "istrue": true },
+      { "statement": "cv2.open() และ cv2.save()", "istrue": false },
+      { "statement": "cv2.load() และ cv2.saveimage()", "istrue": false },
+      { "statement": "cv2.readimage() และ cv2.writeimage()", "istrue": false }
+    ],
+    "explanation": "OpenCV ใช้ cv2.imread() และ cv2.imwrite() สำหรับเปิดและบันทึกภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากใช้ข้อมูลขนาด 2 Byte เก็บค่าความสว่างของจุดภาพ จุดภาพที่มีค่าต่อไปนี้ 0,126,255 ,uu.f",
+    "options": [
+      { "statement": "ดำ เทา ขาว", "istrue": false },
+      { "statement": "ขาว เทา ดำ", "istrue": false },
+      { "statement": "ดำ เทาเข้ม เทาอ่อน", "istrue": false },
+      { "statement": "ขาว เทาอ่อน เทาเข้ม", "istrue": true }
+    ],
+    "explanation": "0=ดำ 126=เทา 255=ขาว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากต้องการวาดวงกลมสีเขียวบนภาพ รัศมี 200 และมีจุดศูนย์กลางอยู่ที่ (300,300) ควรใช้คำสั่งใด",
+    "options": [
+      { "statement": "cv2.circle(image, (300, 300), 200, (0, 255, 0), -1)", "istrue": true },
+      { "statement": "cv2.drawCircle(image, (300, 300), 200, (255, 0, 0), 2)", "istrue": false },
+      { "statement": "cv2.circle(image, (300, 300), 200, (0, 0, 255), 5)", "istrue": false },
+      { "statement": "cv2.drawCircle(image, (300, 300), 200, (0, 255, 0), 0)", "istrue": false }
+    ],
+    "explanation": "cv2.circle ใช้ในการวาดวงกลม และสีเขียวคือ (0,255,0)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากเราสั่ง np.shape แล้วได้ผลัพธ์เป็น (5,4,3) ข้อใดถูกต้อง",
+    "options": [
+      { "statement": "ภาพมีขนาด 3x4 พิกเซล และมี 5 ช่องสี", "istrue": false },
+      { "statement": "ภาพมีขนาด 4x3 พิกเซล และมี 5 ช่องสี", "istrue": false },
+      { "statement": "ภาพมีขนาด 5x3 พิกเซล และมี 4 ช่องสี", "istrue": false },
+      { "statement": "ภาพมีขนาด 5x4 พิกเซล และมี 3 ช่องสี", "istrue": true }
+    ],
+    "explanation": "shape = (สูง, กว้าง, channels) = 5x4 และมี 3 ช่องสี"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำ image blur ช่วยอะไร",
+    "options": [
+      { "statement": "ลดความคมชัดของภาพเพื่อลด noise หรือเพื่อเน้นบางส่วนของภาพ", "istrue": true },
+      { "statement": "เพิ่มความละเอียดของภาพ", "istrue": false },
+      { "statement": "ทำให้ภาพมีสีสันสดใสขึ้น", "istrue": false },
+      { "statement": "ปรับขนาดของภาพให้ใหญ่ขึ้น", "istrue": false }
+    ],
+    "explanation": "blur ลดความคมชัดและช่วยลด noise"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สัญญาณรบกวนทั่วไปในชีวิตประจำวันมักเป็นชนิดใด",
+    "options": [
+      { "statement": "Gaussian noise", "istrue": true },
+      { "statement": "salt and pepper noise", "istrue": false },
+      { "statement": "Poisson", "istrue": false },
+      { "statement": "Speckle", "istrue": false }
+    ],
+    "explanation": "Gaussian noise พบได้บ่อยในสภาพแวดล้อมจริง"
+  },
+    {
+    "type": "multiple-choice",
+    "question": "Erode กับ Dilate ต่างกันอย่างไร",
+    "options": [
+      { "statement": "Erode ทำให้วัตถุในภาพเล็กลง ส่วน Dilate ทำให้วัตถุในภาพขยายออก", "istrue": true },
+      { "statement": "Erode ทำให้วัตถุในภาพขยายออก และ Dilate ทำให้วัตถุในภาพเล็กลง", "istrue": false },
+      { "statement": "Erode เพิ่มความคมชัดของภาพ และ Dilate ลดความคมชัดของภาพ", "istrue": false },
+      { "statement": "Erode ทำให้สีของภาพเข้มขึ้น และ Dilate ทำให้สีของภาพจางลง", "istrue": false }
+    ],
+    "explanation": "Erode ลดขนาดวัตถุ และ Dilate เพิ่มขนาดวัตถุ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำ Histogram Equalization มีประโยชน์อย่างไร",
+    "options": [
+      { "statement": "ลดความคมชัดของภาพเพื่อให้ดูนุ่มนวลขึ้น", "istrue": false },
+      { "statement": "ปรับขนาดของภาพให้ใหญ่ขึ้น", "istrue": false },
+      { "statement": "ช่วยเพิ่มความคมชัดของภาพโดยการกระจายค่า pixel ให้ครอบคลุมช่วงสีทั้งหมด", "istrue": true },
+      { "statement": "เพิ่มความสว่างของภาพโดยการเพิ่มความคมชัด", "istrue": false }
+    ],
+    "explanation": "Histogram Equalization กระจายระดับความเข้มเพื่อเพิ่ม contrast"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากต้องการทำ threshoding ด้วยค่าความเข้ม = 120 ต้องใช้คำสั่งใด",
+    "options": [
+      { "statement": "cv2.threshold(image, 120, 255, cv2.THRESH_BINARY)", "istrue": true },
+      { "statement": "cv2.threshold(image, 120, 255, cv2.THRESH_BINARY_INV)", "istrue": false },
+      { "statement": "cv2.threshold(image, 120, 0, cv2.THRESH_TOZERO)", "istrue": false },
+      { "statement": "cv2.threshold(image, 120, 255, cv2.THRESH_TRUNC)", "istrue": false }
+    ],
+    "explanation": "THRESH_BINARY แยกข้อมูลด้วยค่า threshold"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คุณลักษณะสำคัญ (Features) ของวัตถุในภาพ มักจะถูกใช้เพื่ออะไร",
+    "options": [
+      { "statement": "การปรับสีของภาพ", "istrue": false },
+      { "statement": "การสร้างโมเดล 3D จากภาพ", "istrue": false },
+      { "statement": "การแยกแยะและการติดตามวัตถุในภาพ", "istrue": true },
+      { "statement": "การปรับความละเอียดของภาพ", "istrue": false }
+    ],
+    "explanation": "Features ใช้ในการระบุ ติดตาม และแยกวัตถุ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถานการณ์ใดควรใช้ HSI color space",
+    "options": [
+      { "statement": "เมื่อเราต้องการแยกสีและความสว่างของภาพ", "istrue": true },
+      { "statement": "เมื่อเราต้องการเพิ่มความคมชัดของภาพ", "istrue": false },
+      { "statement": "เมื่อเราต้องการทำการบีบอัดภาพ", "istrue": false },
+      { "statement": "เมื่อเราต้องการเปลี่ยนขนาดของภาพ", "istrue": false }
+    ],
+    "explanation": "HSI แยก Hue, Saturation, Intensity ช่วยวิเคราะห์สี"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคนิคใดที่ใช้สำหรับการตรวจจับขอบในภาพโดยการคำนวณการเปลี่ยนแปลงความเข้มของพิกเซล",
+    "options": [
+      { "statement": "ฟิลเตอร์ Gaussian", "istrue": false },
+      { "statement": "ฟิลเตอร์ Sobel", "istrue": true },
+      { "statement": "ฟิลเตอร์ Median", "istrue": false },
+      { "statement": "ฟิลเตอร์ Laplacian", "istrue": false }
+    ],
+    "explanation": "Sobel กำหนด gradient เพื่อตรวจจับขอบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การตรวจจับขอบโดยใช้ Laplacian Kernet นั้นมีหลักการทำงานอย่างไร",
+    "options": [
+      { "statement": "วิเคราะห์ความเข้มของพิกเซลในแนวขวาง", "istrue": false },
+      { "statement": "หาการเปลี่ยนแปลงความเข้มของจุดภาพในแนวขวางและแนวนอน", "istrue": true },
+      { "statement": "ใช้ฟิลเตอร์ Gaussian เพื่อเบลอภาพ", "istrue": false },
+      { "statement": "ใช้ฟิลเตอร์ที่เน้นการเปลี่ยนแปลงในระดับสี", "istrue": false }
+    ],
+    "explanation": "Laplacian ตรวจความเปลี่ยนแปลงความเข้มทั้งสองทิศทาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่คำสั่งในการทำ edge detection ใน OpenCV",
+    "options": [
+      { "statement": "cv2.Canny()", "istrue": false },
+      { "statement": "cv2.Sobel()", "istrue": false },
+      { "statement": "cv2.Laplacian()", "istrue": false },
+      { "statement": "cv2.dilate()", "istrue": true }
+    ],
+    "explanation": "cv2.dilate ใช้ขยายวัตถุ ไม่ใช่หา edge"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในเทคนิคการลบฉากหลัง ข้อมูลใดถูกใช้เป็นพื้นฐานในการตรวจจับการเคลื่อนที่",
+    "options": [
+      { "statement": "โมเดลพื้นหลัง (background model)", "istrue": true },
+      { "statement": "ขอบเขตของวัตถุ", "istrue": false },
+      { "statement": "ค่าเฉลี่ยของสี", "istrue": false },
+      { "statement": "การเปลี่ยนแปลงของความสว่าง", "istrue": false }
+    ],
+    "explanation": "background model ใช้เปรียบเทียบกับเฟรมปัจจุบัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในการคำนวณออปติคอลโฟร์ มีการตั้งสมมติฐานเกี่ยวกับการเคลื่อนที่ของจุดภาพเพื่อนบ้านอย่างไร",
+    "options": [
+      { "statement": "มีเวกเตอร์การเคลื่อนที่ที่แตกต่าง", "istrue": false },
+      { "statement": "มีเวกเตอร์การเคลื่อนที่ที่เหมือนกัน", "istrue": true },
+      { "statement": "มีการเปลื่ยนแปลงของสี", "istrue": false },
+      { "statement": "ไม่มีการเปลี่ยนแปลงของความสว่าง", "istrue": false }
+    ],
+    "explanation": "Optical flow สมมติว่า pixel ใกล้กันเคลื่อนเหมือนกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Background subtraction กับ Optical flow ต่างกันอย่างไร",
+    "options": [
+      { "statement": "Background subtraction ใช้ในการแยกวัตถุจากพื้นหลัง โดยการเปรียบเทียบภาพปัจจุบันกับภาพพื้นหลัง, ขณะที่ Optical flow ใช้ในการติดตามการเคลื่อนไหวของพิกเซลในภาพ", "istrue": true },
+      { "statement": "Background subtraction ใช้ในการติดตามการเคลื่อนไหวของพิกเซลในภาพ ขณะที่ Optical flow ใช้ในการแยกวัตถุจากพื้นหลัง", "istrue": false },
+      { "statement": "Background subtraction ใช้ในการลด noise ในภาพ ขณะที่ Optical flow ใช้ในการเพิ่มความคมชัดของภาพ", "istrue": false },
+      { "statement": "Background subtraction ใช้ในการเปลี่ยนสีของภาพ ขณะที่ Optical flow ใช้ในการปรับขนาดของภาพ", "istrue": false }
+    ],
+    "explanation": "Background subtraction แยก foreground ส่วน Optical Flow ติดตามการเคลื่อนที่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน OpenCV คำสั่งใดไม่เกี่ยวกับการทำออปติคอลโฟร์",
+    "options": [
+      { "statement": "cv2.calcOpticalFlowFarneback()", "istrue": false },
+      { "statement": "cv2.calcOpticalFlowPyrLK()", "istrue": false },
+      { "statement": "cv2.GaussianBlur()", "istrue": true },
+      { "statement": "cv2.calcOpticalFlowSparseToDense()", "istrue": false }
+    ],
+    "explanation": "GaussianBlur ไม่ใช่คำสั่ง Optical flow"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในการคำนวณออปติคอลโฟร์ สมมุติฐานใดที่เกี่ยวข้องกับการรักษาค่าความสว่างระหว่างเฟรม",
+    "options": [
+      { "statement": "ค่าความสว่างคงตัว (Brightness constancy)", "istrue": true },
+      { "statement": "เคลื่อนที่เพียงเล็กน้อย (Small motion)", "istrue": false },
+      { "statement": "จุดภาพเพื่อนบ้านไปด้วยกัน (Spatial coherence)", "istrue": false },
+      { "statement": "ความคมชัดของภาพ (Image sharpness)", "istrue": false }
+    ],
+    "explanation": "Optical flow สมมติ pixel intensity คงที่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เราวัดความแม่นยำ (Accuracy) ในการจำแนกประเภทวัตถุในภาพ (Image Classification) ได้อย่างไร",
+    "options": [
+      { "statement": "อัตราส่วนของจำนวนพิกเซลที่ถูกต้องต่อจำนวนพิกเซลทั้งหมด", "istrue": false },
+      { "statement": "อัตราส่วนของจำนวนการทำนายที่ถูกต้องต่อจำนวนการทำนายทั้งหมด", "istrue": true },
+      { "statement": "อัตราส่วนของจำนวนการคาดการณ์ที่ผิดพลาดต่อจำนวนการคาดการณ์ทั้งหมด", "istrue": false },
+      { "statement": "จำนวนของฟีเจอร์ที่ใช้ในการฝึกโมเดล", "istrue": false }
+    ],
+    "explanation": "Accuracy คือสัดส่วน prediction ถูกต้องทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่ Image classification model",
+    "options": [
+      { "statement": "VGG", "istrue": false },
+      { "statement": "ResNet", "istrue": false },
+      { "statement": "YOLO", "istrue": true },
+      { "statement": "Inception", "istrue": false }
+    ],
+    "explanation": "YOLO เป็น Object Detection ไม่ใช่ image classifier ปกติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Precision กับ Recall ต่างกันอย่างไร",
+    "options": [
+      { "statement": "Precision คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นบวกอย่างถูกต้องจากทั้งหมดที่จำแนกเป็นบวก ขณะที่ Recall คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นบวกอย่างถูกต้องจากทั้งหมดที่เป็นบวกจริง", "istrue": true },
+      { "statement": "Precision คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นบวกอย่างถูกต้องจากทั้งหมดที่เป็นบวกจริง ขณะที่ Recall คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นบวกอย่างถูกต้องจากทั้งหมดที่จำแนกเป็นบวก", "istrue": false },
+      { "statement": "Precision คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นลบอย่างถูกต้องจากทั้งหมดที่จำแนกเป็นลบ ขณะที่ Recall คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นลบอย่างถูกต้องจากทั้งหมดที่เป็นลบจริง", "istrue": false },
+      { "statement": "Precision คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นบวกอย่างถูกต้องจากทั้งหมดที่เป็นลบจริง ขณะที่ Recall คือสัดส่วนของตัวอย่างที่ถูกจำแนกเป็นบวกอย่างถูกต้องจากทั้งหมดที่จำแนกเป็นบวก", "istrue": false }
+    ],
+    "explanation": "Precision = TP/(TP+FP), Recall = TP/(TP+FN)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าโมเดลมีค่า Accuracy สูง แต่ค่า Precision และ Recall ต่ำ อาจหมายความว่าอะไร",
+    "options": [
+      { "statement": "โมเดลมีความสามารถในการจำแนกประเภทต่ำ", "istrue": false },
+      { "statement": "โมเดลมีการทำงานดีในทุกประเภท", "istrue": false },
+      { "statement": "ข้อมูลที่ใช้ในการฝึกมีความไม่สมดุล (Imbalanced Data)", "istrue": true },
+      { "statement": "โมเดลมีการตรวจจับวัตถุที่ไม่ต้องการ", "istrue": false }
+    ],
+    "explanation": "Accuracy สูงแต่ Precision/Recall ต่ำมักเกิดจาก class imbalance"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "พิจารณา Confusion Matrix ด้านล่างนี้และคำนวณค่า Percision สำหรับคลาส Positive\npredicted Positive Predicted Negaive\nActual Positive 80 20\nActual Negative15 85",
+    "options": [
+      { "statement": "0.84", "istrue": true },
+      { "statement": "0.80", "istrue": false },
+      { "statement": "0.75", "istrue": false },
+      { "statement": "0.87", "istrue": false }
+    ],
+    "explanation": "Precision = 80/(80+15) ≈ 0.842"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "mIoU แตกต่างจาก IoU อย่างไร?",
+    "options": [
+      { "statement": "mIoU ใช้วัดความแม่นยำเฉพาะตำแหน่งเท่านั้น", "istrue": false },
+      { "statement": "mIoU ไม่สามารถใช้เปรียบเทียบโมเดลได้", "istrue": false },
+      { "statement": "mIoU เป็นค่าเฉลี่ยของ IoU จากทุกคลาส", "istrue": true },
+      { "statement": "IoU ใช้วัดความแม่นยำเฉพาะตำแหน่งเท่านั้น", "istrue": false }
+    ],
+    "explanation": "mIoU คือค่าเฉลี่ย IoU ทุก class"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ ข้อดีของการใช้ Library เพื่อเทรน Object Detection?",
+    "options": [
+      { "statement": "มีโมเดลที่ผ่านการฝึกมาแล้วให้ใช้", "istrue": false },
+      { "statement": "ทำให้ได้โมเดลที่มีความแม่นยำที่ดีเสมอ", "istrue": true },
+      { "statement": "รองรับการทำงานร่วมกับ GPU", "istrue": false },
+      { "statement": "มีเครื่องมือช่วยวิเคราะห์ผลลัพธ์", "istrue": false }
+    ],
+    "explanation": "Library ไม่ได้รับประกันความแม่นยำเสมอ ขึ้นกับข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ลักษณะของ Dataset ในรูปแบบ YOLO เป็นอย่างไร?",
+    "options": [
+      { "statement": "ไฟล์ภาพจะต้องเป็นไฟล์ .jpg เท่านั้น และข้อมูล annotation จะถูกเก็บในไฟล์ .csv", "istrue": false },
+      { "statement": "ไฟล์ annotation จะเก็บข้อมูลในรูปแบบ JSON โดยใช้คีย์ \"coordinates\" และ \"class_id\"", "istrue": false },
+      { "statement": "ข้อมูลในไฟล์ annotation จะเก็บในรูปแบบค่าพิกัดของจุดมุมของ bounding box ในพิกเซล", "istrue": false },
+      { "statement": "ไฟล์ภาพและไฟล์ annotation จะต้องมีชื่อเดียวกัน แต่ต่างนามสกุล (เช่น image1.jpg และ image1.txt)", "istrue": true }
+    ],
+    "explanation": "YOLO ใช้ .txt ตรงชื่อภาพในรูป normalized coords"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ทำไม YOLO จึงเป็นที่นิยมในการทำ Object Detection?",
+    "options": [
+      { "statement": "YOLO ใช้หลายโมเดลในการตรวจจับตำแหน่งและประเภทของวัตถุ", "istrue": false },
+      { "statement": "YOLO สามารถตรวจจับวัตถุหลายๆ ชนิดในภาพเดียวได้ด้วยโมเดลเดียว", "istrue": true },
+      { "statement": "YOLO มีความแม่นยำสูงกว่ารูปแบบ Object Detection อื่นๆ", "istrue": false },
+      { "statement": "YOLO ต้องใช้เวลาประมวลผลหลายครั้งเพื่อให้ได้ผลลัพธ์ที่แม่นยำ", "istrue": false }
+    ],
+    "explanation": "YOLO ตรวจจับหลายวัตถุในภาพเดียวแบบ single-shot"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากโมเดลสามารถเรียนรู้ได้ดีในชุดข้อมูล validation แต่มีความแม่นยำต่ำในชุดข้อมูล test ควรใช้เทคนิคใดเพื่อปรับปรุงประสิทธิภาพของโมเดล?",
+    "options": [
+      { "statement": "การใช้เทคนิค Early Stopping", "istrue": false },
+      { "statement": "การลดจำนวน Epoch", "istrue": false },
+      { "statement": "การใช้ Regularization เช่น L2 หรือ Dropout", "istrue": true },
+      { "statement": "การใช้เทคนิค Cross-Validation", "istrue": false }
+    ],
+    "explanation": "Regularization แก้ overfitting เมื่อ test accuracy ต่ำแต่ validation สูง"
+  }
+]

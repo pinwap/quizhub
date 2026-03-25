@@ -1,0 +1,101 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "The user may want to erase the contents of a file but keep its attributes. What should the user do?",
+    "options": [
+      { "statement": "Creating a file", "istrue": false },
+      { "statement": "Writing a file", "istrue": false },
+      { "statement": "Repositioning within a file", "istrue": false },
+      { "statement": "Truncating a file", "istrue": true }
+    ],
+    "explanation": "Truncating a file clears its contents while preserving attributes such as name, permissions, and timestamps."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If you want to add a file system or a volume, what is the Linux command?",
+    "options": [
+      { "statement": "mkde", "istrue": false },
+      { "statement": "mkfs", "istrue": true },
+      { "statement": "mount", "istrue": false },
+      { "statement": "tsck", "istrue": false }
+    ],
+    "explanation": "The mkfs command creates a new file system on a disk partition or volume."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the extension of files that store commands to the command interpreter?",
+    "options": [
+      { "statement": ".bat", "istrue": false },
+      { "statement": ".sh", "istrue": false },
+      { "statement": ".com", "istrue": false },
+      { "statement": "Both .bat and .sh", "istrue": true }
+    ],
+    "explanation": "Batch files (.bat) are used in Windows and shell scripts (.sh) in UNIX/Linux to store interpreter commands."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does Linux identify file types?",
+    "options": [
+      { "statement": "File extension", "istrue": false },
+      { "statement": "Magic number", "istrue": true },
+      { "statement": "Filename prefix", "istrue": false },
+      { "statement": "Directory location", "istrue": false }
+    ],
+    "explanation": "Linux relies on magic numbers embedded in files rather than file extensions to identify file types."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the condition for using direct access method?",
+    "options": [
+      { "statement": "Variable-length record", "istrue": false },
+      { "statement": "Fixed-length record", "istrue": true },
+      { "statement": "Fragmented record", "istrue": false },
+      { "statement": "Encrypted record", "istrue": false }
+    ],
+    "explanation": "Direct access requires fixed-length records so the system can calculate byte offsets accurately."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is NOT correct?",
+    "options": [
+      { "statement": "One partition may have multiple file systems", "istrue": true },
+      { "statement": "One disk may have multiple partitions", "istrue": false },
+      { "statement": "A partition may contain one file system", "istrue": false },
+      { "statement": "Logical volumes may span multiple disks", "istrue": false }
+    ],
+    "explanation": "A partition cannot contain multiple file systems; each partition stores exactly one file system."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In Windows, what is similar to / in Linux?",
+    "options": [
+      { "statement": "\\", "istrue": false },
+      { "statement": "Drive letter A", "istrue": false },
+      { "statement": "Drive letter C", "istrue": false },
+      { "statement": "All drive letters A–Z", "istrue": true }
+    ],
+    "explanation": "While Linux has a single root (/), Windows mounts each device at a separate root such as C:, D:, etc."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If you want two different names for the same file, what is the Linux command?",
+    "options": [
+      { "statement": "cp", "istrue": false },
+      { "statement": "mv", "istrue": false },
+      { "statement": "ln", "istrue": true },
+      { "statement": "chmod", "istrue": false }
+    ],
+    "explanation": "The ln command creates a hard link, giving a file multiple directory entries (names)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If you want to add a file system or mount a volume, what is the Linux command?",
+    "options": [
+      { "statement": "mkfs", "istrue": false },
+      { "statement": "mount", "istrue": true },
+      { "statement": "fsck", "istrue": false },
+      { "statement": "blkid", "istrue": false }
+    ],
+    "explanation": "The mount command attaches a file system to the directory tree so it becomes accessible."
+  }
+]

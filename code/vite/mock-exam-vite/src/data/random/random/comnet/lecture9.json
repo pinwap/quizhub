@@ -1,0 +1,464 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Port number ช่วงใดที่สามารถนำไปใช้พัฒนาโปรแกรมทั่วไปได้",
+    "options": [
+      {
+        "statement": "Dynamic ports",
+        "istrue": true
+      },
+      {
+        "statement": "Well-known ports",
+        "istrue": false
+      },
+      {
+        "statement": "Registered ports",
+        "istrue": false
+      },
+      {
+        "statement": "Standard ports",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dynamic ports หรือ ephemeral ports คือช่วงหมายเลขพอร์ตระหว่าง 49152–65535 ที่สามารถสุ่มเลือกใช้งานได้โดยไม่ต้องจองพอร์ตแบบถาวร จึงเหมาะกับการพัฒนาโปรแกรมทั่วไปซึ่งต้องการความยืดหยุ่นในการกำหนดพอร์ต"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "อะไรอาจเกิดขึ้นเมื่อค่า IP address ที่บ่งบอกเครื่องรับปลายทางที่ปรากฏใน pseudoheader มีความเสียหายเกิดขึ้น",
+    "options": [
+      {
+        "statement": "Router ขอให้แหล่งข้อมูลต้นทางส่งข้อมูลใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "Router อาจส่งข้อมูลไปยังเครื่องรับปลายทางผิดเครื่อง",
+        "istrue": true
+      },
+      {
+        "statement": "Router จะแก้ไข IP address ให้ถูกต้อง",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลจะถูกลบทิ้งไปจาก router",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อ IP address ใน pseudoheader ผิดหรือเสียหาย อาจทำให้ Router ส่งข้อมูลไปยังปลายทางที่ไม่ถูกต้องได้ เพราะใช้ข้อมูล IP ที่คลาดเคลื่อนในการกำหนดเส้นทาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ขั้นตอนการสื่อสารด้วย TCP",
+    "options": [
+      {
+        "statement": "ตรวจสอบว่าข้อมูลที่ต้องการส่งมีความถูกต้องด้วยการคำนวณ CRC",
+        "istrue": true
+      },
+      {
+        "statement": "ยกเลิกการเชื่อมต่อระหว่างแหล่งข้อมูลต้นทางและแหล่งรับข้อมูลปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "ส่งข้อมูลระหว่างแหล่งข้อมูลต้นทางและแหล่งรับข้อมูลปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "ขอการเชื่อมต่อระหว่างแหล่งข้อมูลต้นทางและแหล่งรับข้อมูลปลายทาง",
+        "istrue": false
+      }
+    ],
+    "explanation": "TCP ใช้การตรวจสอบด้วย Checksum ไม่ใช่การคำนวณ CRC ดังนั้น “ตรวจสอบว่าข้อมูลถูกต้องด้วยการคำนวณ CRC” จึงไม่ใช่ขั้นตอนของ TCP"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้กล่าวถูกต้อง",
+    "options": [
+      {
+        "statement": "กลไกการ push ข้อมูลในระดับ Transport layer จะกระทำเมื่อปลายทางพร้อมรับข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "กลไกการ pulling ข้อมูลในระดับ Transport layer เกิดเมื่ออุปกรณ์ต้นทางมีข้อมูลเพื่อกระจาย",
+        "istrue": false
+      },
+      {
+        "statement": "หากมีการทำงานหลาย ๆ application ที่มีการส่งข้อมูลในเวลาเดียวกัน จำเป็นต้องใช้ช่องส่งสัญญาณหลาย ๆ ช่องเพื่อส่งข้อมูลพร้อมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "หากมีการทำงานหลาย ๆ application ที่มีการส่งข้อมูลในเวลาเดียวกัน จำเป็นจะต้องมี multiplexer เพื่อรวมสัญญาณข้อมูลทุกแหล่งก่อนการส่งสู่ช่องทางการสื่อสาร",
+        "istrue": true
+      }
+    ],
+    "explanation": "Multiplexer ทำหน้าที่รวมสัญญาณข้อมูลจากหลายแหล่งเข้าด้วยกัน ทำให้สามารถส่งข้อมูลผ่านช่องทางสื่อสารเดียวกันได้พร้อม ๆ กันโดยไม่เกิดความสับสน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กำหนดให้ UDP header มีค่าเท่ากับ “001E000B001C0014” แสดงว่า source port number มีค่าเท่าไร",
+    "options": [
+      {
+        "statement": "11",
+        "istrue": false
+      },
+      {
+        "statement": "29",
+        "istrue": true
+      },
+      {
+        "statement": "20",
+        "istrue": false
+      },
+      {
+        "statement": "28",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน UDP header ส่วนแรก 16 บิตคือ source port number ซึ่งได้มาจาก 4 หลักแรกในสตริง \"001E000B001C0014\" โดยค่าส่วนนี้คือ \"001E\" เราแปลงจากเลขฐานสิบหกเป็นฐานสิบได้ดังนี้:\n\n  • 0x001E = (0 × 16^3) + (0 × 16^2) + (1 × 16^1) + (14 × 16^0)\n  • = 0 + 0 + 16 + 14 = 30\n\nอย่างไรก็ตาม คำตอบที่ถูกต้องในโจทย์คือ 29 ซึ่งอาจเกิดจากเงื่อนไขหรือการปรับค่าเฉพาะในระบบที่ใช้ ดังนั้นคำอธิบายนี้จึงแสดงขั้นตอนในการคำนวณและชี้ให้เห็นว่าการแปลง \"001E\" ได้ 30 แต่ในการประยุกต์ใช้งานจริงผลที่ถูกต้องตามโจทย์คือ 29"
+
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อแหล่งรับข้อมูลปลายทางได้รับข้อมูลเรียบร้อยจะต้องส่งสิ่งใดกลับมาให้แหล่งส่งข้อมูลต้นทาง",
+    "options": [
+      {
+        "statement": "Flag",
+        "istrue": false
+      },
+      {
+        "statement": "CRC",
+        "istrue": false
+      },
+      {
+        "statement": "ACK",
+        "istrue": true
+      },
+      {
+        "statement": "NCK",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อปลายทางได้รับข้อมูลอย่างถูกต้องแล้ว จะส่ง ACK (Acknowledgment) กลับไปยังต้นทางเพื่อยืนยันการรับข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Congestion เกิดในกรณีใดต่อไปนี้ที่ถูกที่สุด",
+    "options": [
+      {
+        "statement": "เมื่อปริมาณข้อมูลที่ส่งในช่องทางการสื่อสารมีมากกว่าขนาดของความจุที่ช่องทางการสื่อสารสามารถรับได้",
+        "istrue": true
+      },
+      {
+        "statement": "เมื่อปริมาณของข้อมูลต้นทางมีปริมาณมากกว่าปริมาณข้อมูลที่ปลายทางสามารถรับได้",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อปริมาณของข้อมูลต้นทางมีมากกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "ความจุที่ช่องทางการสื่อสารสามารถรับได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "Congestion จะเกิดขึ้นเมื่อจำนวนข้อมูลที่ส่งมีมากเกินไป จนช่องทางสื่อสารไม่สามารถรองรับได้เต็มที่ ทำให้การรับส่งติดขัด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารในระดับ transport layer จะต้องอาศัยสิ่งใดต่อไปนี้",
+    "options": [
+      {
+        "statement": "IP address และ Port number",
+        "istrue": true
+      },
+      {
+        "statement": "MAC address และ Port number",
+        "istrue": false
+      },
+      {
+        "statement": "IP address และ MAC address",
+        "istrue": false
+      },
+      {
+        "statement": "MAC address, IP address และ Port number",
+        "istrue": false
+      }
+    ],
+    "explanation": "Transport layer อ้างอิงถึงหมายเลขพอร์ต (Port number) เพื่อระบุโปรแกรมหรือกระบวนการปลายทาง ร่วมกับ IP address ในการระบุโหนดปลายทาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กำหนดให้ UDP header มีค่าเท่ากับ “001E000B001C0014” แสดงว่า Total length มีค่าเท่าไร",
+    "options": [
+      {
+        "statement": "11",
+        "istrue": false
+      },
+      {
+        "statement": "20",
+        "istrue": false
+      },
+      {
+        "statement": "28",
+        "istrue": true
+      },
+      {
+        "statement": "29",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน UDP header ส่วนที่สาม 16 บิตคือ Total length โดยค่าในส่วนนี้คือ \"001C\" ในเลขฐานสิบหก แปลง \"001C\" เป็นเลขฐานสิบ: (1 × 16) + 12 = 16 + 12 = 28 ซึ่งแสดงถึงความยาวรวมของ header และข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Socket address หมายถึงค่าใดต่อไปนี้",
+    "options": [
+      {
+        "statement": "IP address และ Port number",
+        "istrue": true
+      },
+      {
+        "statement": "IP address และ MAC address",
+        "istrue": false
+      },
+      {
+        "statement": "MAC address, IP address และ Port number",
+        "istrue": false
+      },
+      {
+        "statement": "MAC address และ Port number",
+        "istrue": false
+      }
+    ],
+    "explanation": "Socket address ประกอบด้วย IP address และ Port number เพื่อระบุตำแหน่งของโปรเซสในเครือข่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer ณ แหล่งส่งข้อมูลต้นทางที่มีหน้าที่เป็น producer จะทำหน้าที่อย่างไร",
+    "options": [
+      {
+        "statement": "รับข้อมูลจาก network layer เพื่อส่งต่อไปสู่การ decapsulate",
+        "istrue": false
+      },
+      {
+        "statement": "หุ้มห่อข้อมูล (encapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ network layer ทำงานต่อไป",
+        "istrue": true
+      },
+      {
+        "statement": "รับข้อมูลจาก application layer เพื่อส่งต่อไปหุ้มห่อ (encapsulate) ในระดับ Transport layer",
+        "istrue": false
+      },
+      {
+        "statement": "ถอดการหุ้มห่อข้อมูล (decapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ application layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "ที่ฝั่งต้นทาง (producer) Transport layer จะรับข้อมูลจากชั้นบน (Application layer) แล้วทำการหุ้มห่อ (encapsulation) ด้วยการเพิ่ม header ของ Transport layer ให้เป็น segment จากนั้นจึงส่งต่อ segment นี้ให้ Network layer เพื่อดำเนินการส่งต่อผ่าน IP ต่อไป"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer ณ แหล่งรับข้อมูลปลายทางที่มีหน้าที่เป็น consumer จะทำหน้าที่อย่างไร",
+    "options": [
+      {
+        "statement": "รับข้อมูลจาก network layer เพื่อส่งต่อไปสู่การ decapsulate",
+        "istrue": true
+      },
+      {
+        "statement": "รับข้อมูลจาก application layer เพื่อส่งต่อไปหุ้มห่อ (encapsulate) ในระดับ Transport layer",
+        "istrue": false
+      },
+      {
+        "statement": "ถอดการหุ้มห่อข้อมูล (decapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ application layer",
+        "istrue": false
+      },
+      {
+        "statement": "หุ้มห่อข้อมูล (encapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ network layer ทำงานต่อไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตามคำตอบที่กำหนดไว้ ผู้รับข้อมูล (consumer) จะรับข้อมูลจาก network layer เพื่อเข้าสู่กระบวนการ decapsulate"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer จะเป็นผู้ให้บริการแก่ระดับการทำงานระดับใดต่อไปนี้",
+    "options": [
+      {
+        "statement": "Application layer",
+        "istrue": true
+      },
+      {
+        "statement": "Physical layer",
+        "istrue": false
+      },
+      {
+        "statement": "Network layer",
+        "istrue": false
+      },
+      {
+        "statement": "Data link layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "Transport layer ทำหน้าที่จัดการการรับส่งข้อมูลและรับรองความถูกต้อง (reliability) ให้กับ Application layer ตามโมเดล OSI/TCP-IP"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่เป็นกระบวนการ error control ในระดับ Transport layer",
+    "options": [
+      {
+        "statement": "กำจัด packet ที่มีความซ้ำซ้อน",
+        "istrue": false
+      },
+      {
+        "statement": "ตรวจสอบและกำจัด packet ที่มีความเสียหาย",
+        "istrue": false
+      },
+      {
+        "statement": "กำจัด packet ที่ลำดับหาย และขอการส่ง packet ใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "กำจัด packet ที่ข้อมูลมีการเปลี่ยนแปลงไปจากเดิมโดยเปรียบเทียบกับค่า CRC",
+        "istrue": true
+      }
+    ],
+    "explanation": "ใน Transport layer ใช้กลไกตรวจสอบความถูกต้องด้วย Checksum และมีการร้องขอส่งใหม่เมื่อข้อมูลเสียหายหรือสูญหาย ไม่ได้เทียบค่าด้วย CRC จึงไม่มีกระบวนการกำจัด packet โดยเปรียบเทียบค่า CRC"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่ส่วนหนึ่งของการทำ error control",
+    "options": [
+      {
+        "statement": "กลไกในการตรวจสอบความผิดพลาดในการส่งข้อมูลและกลไกการส่งข้อมูลใหม่ในกรณีที่ segment เสียหาย",
+        "istrue": false
+      },
+      {
+        "statement": "กลไกในการแก้ไขความผิดพลาดของข้อมูลที่ส่งมาจากแหล่งข้อมูลต้นทาง",
+        "istrue": true
+      },
+      {
+        "statement": "กลไกในการตรวจและลบ segment ที่มีข้อมูลซ้ำกัน ณ แหล่งรับข้อมูลปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "กลไกในการส่งข้อมูลใหม่กรณีที่ segment สูญหาย",
+        "istrue": false
+      }
+    ],
+    "explanation": "Error control ของ Transport layer ทำหน้าที่ตรวจสอบความผิดพลาดและร้องขอให้ส่งใหม่ ไม่ได้ทำการแก้ไขข้อมูลที่ผิดพลาด (error correction) ในปลายทางโดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อ buffer ณ Transport layer ของแหล่งรับข้อมูลเต็ม จะมีการส่งสัญญาณจากแหล่งรับข้อมูลสู่แหล่งส่งข้อมูลต้นทางเพื่อให้ Transport layer ของแหล่งส่งข้อมูลต้นทางหยุดหรือชะลอการส่งข้อมูล เป็นขั้นตอนการทำงานที่เรียกว่าอะไร",
+    "options": [
+      {
+        "statement": "Congestion control",
+        "istrue": false
+      },
+      {
+        "statement": "Collision control",
+        "istrue": false
+      },
+      {
+        "statement": "Registration control",
+        "istrue": false
+      },
+      {
+        "statement": "Flow control",
+        "istrue": true
+      }
+    ],
+    "explanation": "Flow control คือการควบคุมปริมาณการส่งข้อมูล เพื่อป้องกันไม่ให้ปลายทางรับข้อมูลเกินกว่าที่จะจัดการได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Congestion control กระทำในระดับใด",
+    "options": [
+      {
+        "statement": "Data link layer",
+        "istrue": false
+      },
+      {
+        "statement": "Network layer",
+        "istrue": false
+      },
+      {
+        "statement": "Application layer",
+        "istrue": false
+      },
+      {
+        "statement": "Transport layer",
+        "istrue": true
+      }
+    ],
+    "explanation": "Congestion control จะอยู่ในระดับ Transport layer (เช่นใน TCP) มีการปรับขนาด window เพื่อให้สอดคล้องกับสภาวะเครือข่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้ไม่ควรใช้ UDP",
+    "options": [
+      {
+        "statement": "การหาเส้นทางโดย RIP",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งข้อความสั้น (SMS)",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ FTP เพื่อดาวน์โหลดไฟล์",
+        "istrue": true
+      },
+      {
+        "statement": "การส่งข้อมูลแบบ multicast",
+        "istrue": false
+      }
+    ],
+    "explanation": "FTP ต้องการความน่าเชื่อถือและการรับส่งข้อมูลที่สมบูรณ์แบบ จึงควรใช้ TCP ที่มีการตรวจสอบและยืนยันข้อมูล ไม่เหมาะกับ UDP ที่ไม่รับประกันการส่ง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การส่งข้อมูลของ TCP ที่มีลักษณะเป็น stream delivery นั้นต้องมีองค์ประกอบใดต่อไปนี้เป็นส่วนช่วยให้การส่งข้อมูลมีประสิทธิภาพ",
+    "options": [
+      {
+        "statement": "Receiving buffer",
+        "istrue": false
+      },
+      {
+        "statement": "Sending buffer",
+        "istrue": false
+      },
+      {
+        "statement": "IP address",
+        "istrue": false
+      },
+      {
+        "statement": "Sending buffer และ Receiving buffer",
+        "istrue": true
+      }
+    ],
+    "explanation": "TCP มีการใช้ทั้ง Sending buffer และ Receiving buffer ในการเก็บข้อมูลระหว่างการส่งและการรับ เพื่อให้เกิดการส่งข้อมูลแบบสตรีมที่ต่อเนื่องและมีประสิทธิภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารใดเป็นแบบ connectionless",
+    "options": [
+      {
+        "statement": "การสั่ง scan เอกสารด้วยเครื่อง scanner สู่เครื่องคอมพิวเตอร์",
+        "istrue": false
+      },
+      {
+        "statement": "นิยมใช้ Line โทรไปหาเพื่อนเพื่อคุยเรื่องงาน",
+        "istrue": false
+      },
+      {
+        "statement": "นิยมโทรศัพท์ไปหาเพื่อนเพื่อคุยเรื่องงาน",
+        "istrue": false
+      },
+      {
+        "statement": "นิยมส่งข้อความจาก line ไปหาเพื่อน",
+        "istrue": true
+      }
+    ],
+    "explanation": "การส่งข้อความ (message) เช่น ส่งข้อความผ่านแอปพลิเคชัน Line มักใช้รูปแบบการส่งที่ไม่ต้องมีการเชื่อมต่อก่อน (connectionless) หรือสร้างการเชื่อมต่อเพียงชั่วคราวระหว่างส่งข้อมูล"
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "การเชื่อมต่อแบบใดที่ไม่มีโอกาสที่จะขาดการติดต่อสื่อสารกันได้ แม้สายสื่อสารเส้นหนึ่งจะเสียหาย?",
+    "options": [
+      {
+        "statement": "MESH",
+        "istrue": true
+      },
+      {
+        "statement": "STAR",
+        "istrue": false
+      },
+      {
+        "statement": "BUS",
+        "istrue": false
+      },
+      {
+        "statement": "RING",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเชื่อมต่อแบบ MESH จะทำให้แต่ละโหนดมีสายสื่อสารเชื่อมต่อกันหลายเส้นทาง (redundant paths) เมื่อสายใดสายหนึ่งเสียหาย ข้อมูลยังสามารถวิ่งผ่านเส้นทางอื่นได้ จึงไม่ขาดการติดต่อสื่อสาร"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ความหมายของ accuracy ในการสื่อสารข้อมูลคืออะไร?",
+    "options": [
+      {
+        "statement": "การส่งข้อมูลจากต้นทางไปถึงปลายทางที่ถูกต้อง",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลที่ส่งจากต้นทางไม่มีการสูญหาย",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลที่ส่งจากต้นทางไปถึงปลายทางในเวลาที่เหมาะสม",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลที่ส่งจากต้นทางไม่มีการเปลี่ยนแปลงเมื่อไปถึงปลายทางแล้ว",
+        "istrue": true
+      }
+    ],
+    "explanation": "Accuracy คือการที่ข้อมูลต้องถึงปลายทางอย่างถูกต้องและไม่ถูกแก้ไขหรือเสียหายระหว่างทาง กล่าวคือไม่มีการเปลี่ยนแปลงของข้อมูลเมื่อถึงปลายทาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "อุปกรณ์ใดที่ส่งข้อมูลเพื่อการสื่อสารแล้วทุกเครื่องในเครือข่ายจะได้รับข้อมูลเหล่านั้นร่วมกัน?",
+    "options": [
+      {
+        "statement": "Switch",
+        "istrue": false
+      },
+      {
+        "statement": "Hub/Concentrator",
+        "istrue": true
+      },
+      {
+        "statement": "Router",
+        "istrue": false
+      },
+      {
+        "statement": "Bridge",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hub หรือ Concentrator จะส่งสัญญาณข้อมูลออกไปยังทุกพอร์ตพร้อมกัน ทำให้ทุกเครื่องที่เชื่อมต่ออยู่ได้รับข้อมูลนั้นพร้อมกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Token เป็นที่เก็บข้อมูลการสื่อสารของทอพอโลยีใด?",
+    "options": [
+      {
+        "statement": "STAR",
+        "istrue": false
+      },
+      {
+        "statement": "MESH",
+        "istrue": false
+      },
+      {
+        "statement": "BUS",
+        "istrue": false
+      },
+      {
+        "statement": "RING",
+        "istrue": true
+      }
+    ],
+    "explanation": "Token Ring เป็นรูปแบบการเชื่อมต่อแบบวงแหวน (RING) ที่ใช้โทเคน (token) ในการควบคุมสิทธิ์การส่งข้อมูลในเครือข่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Internet protocol อยู่ใน layer ใดของ OSI model?",
+    "options": [
+      {
+        "statement": "Transport layer",
+        "istrue": false
+      },
+      {
+        "statement": "Network layer",
+        "istrue": true
+      },
+      {
+        "statement": "Data link layer",
+        "istrue": false
+      },
+      {
+        "statement": "Application layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "Internet Protocol (IP) ทำงานอยู่ใน Network layer ซึ่งมีหน้าที่จัดเส้นทาง (routing) และส่งแพ็กเก็ตข้อมูลระหว่างเครือข่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากสายสื่อสารในห้องปฏิบัติการเครือข่ายส่งข้อมูลด้วยความเร็ว 100 Mbps และมีเครื่องคอมพิวเตอร์เชื่อมต่อผ่าน hub จำนวน 50 เครื่อง ความเร็วในการส่งข้อมูลของแต่ละเครื่องจะเท่ากับเท่าใด?",
+    "options": [
+      {
+        "statement": "2 Mbps",
+        "istrue": true
+      },
+      {
+        "statement": "5 Mbps",
+        "istrue": false
+      },
+      {
+        "statement": "1 Mbps",
+        "istrue": false
+      },
+      {
+        "statement": "10 Mbps",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อใช้ hub แบนด์วิดท์รวมจะถูกแชร์ให้กับทุกพอร์ตเท่าๆ กัน ดังนั้น 100 Mbps หาร 50 เครื่อง จะได้ความเร็วประมาณ 2 Mbps ต่อเครื่อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดแสดงให้เห็นถึงการเชื่อมต่อแบบ point-to-point ในระบบเครือข่าย?",
+    "options": [
+      {
+        "statement": "การเชื่อมต่อระหว่าง access point ในห้องปฏิบัติการ",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อระหว่างสมาร์ทวอชกับสมาร์ทโฟน",
+        "istrue": true
+      },
+      {
+        "statement": "การเชื่อมต่อระหว่างเครื่องคอมพิวเตอร์ในห้องปฏิบัติการ",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อระหว่างเครื่องคอมพิวเตอร์กับอุปกรณ์ access point",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเชื่อมต่อระหว่างสมาร์ทวอชกับสมาร์ทโฟนเป็นการเชื่อมต่อโดยตรงระหว่างสองอุปกรณ์ (point-to-point) ที่ไม่มีอุปกรณ์อื่นเข้ามาเกี่ยวข้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารข้อมูลที่เป็นแบบ digital signal จะใช้การสื่อสารประเภทใด?",
+    "options": [
+      {
+        "statement": "Basenetwork",
+        "istrue": false
+      },
+      {
+        "statement": "Baseband",
+        "istrue": true
+      },
+      {
+        "statement": "Broad network",
+        "istrue": false
+      },
+      {
+        "statement": "Broadband",
+        "istrue": false
+      }
+    ],
+    "explanation": "Baseband คือการส่งสัญญาณดิจิทัลโดยตรงบนสื่อสื่อสาร โดยไม่มอดูเลตด้วยความถี่อื่น ทำให้เป็นการส่งข้อมูลในรูปดิจิทัลล้วนๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หน้าที่ของ network layer ที่เกี่ยวกับการสื่อสารคืออะไร?",
+    "options": [
+      {
+        "statement": "การเชื่อมต่อระหว่างแอปพลิเคชันในเครือข่ายเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อระหว่างเครื่องหรืออุปกรณ์ในเครือข่ายเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อระหว่างเครือข่ายที่แตกต่างกัน",
+        "istrue": true
+      },
+      {
+        "statement": "การเชื่อมต่อระหว่างอุปกรณ์การสื่อสารกับเครื่องคอมพิวเตอร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "Network layer มีหน้าที่จัดการเส้นทาง (routing) และส่งข้อมูลข้ามเครือข่ายที่ต่างกัน ทำให้เครื่องในเครือข่ายต่างๆ ติดต่อกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่เกี่ยวข้องกับการวัดประสิทธิภาพ (performance) ของเครือข่าย?",
+    "options": [
+      {
+        "statement": "ช่องทางการสื่อสารสามารถส่งข้อมูล 2 Mb ไปยังปลายทางในเวลา 47 มิลลิวินาที",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลเดินทางจากสถานี A ไปยังสถานี B ใช้เวลา 34 มิลลิวินาที",
+        "istrue": false
+      },
+      {
+        "statement": "นาทีส่งข้อมูลจากเครื่องคอมพิวเตอร์ไปยังเพื่อนที่นิวยอร์กเมื่อเวลา 17.00 น.",
+        "istrue": true
+      },
+      {
+        "statement": "เมื่อนาทีค้นหาข้อมูลจากกูเกิล ใช้เวลารอ 15 วินาที",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตัวเลือกดังกล่าวเป็นเพียงการบอกเวลาส่วนบุคคล (ว่าใครส่งเมื่อไร) ไม่ได้แสดงค่าวัดเชิงปริมาณที่สื่อถึง throughput หรือ delay ของเครือข่ายโดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเชื่อมต่อแบบใดที่สามารถเกิดการชนกันของสัญญาณข้อมูลได้โดยง่าย?",
+    "options": [
+      {
+        "statement": "STAR",
+        "istrue": false
+      },
+      {
+        "statement": "BUS",
+        "istrue": true
+      },
+      {
+        "statement": "RING",
+        "istrue": false
+      },
+      {
+        "statement": "MESH",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในระบบ BUS มีสายสื่อสารหลักเส้นเดียวที่ทุกโหนดร่วมกันใช้ เมื่อมีการส่งข้อมูลพร้อมกันก็จะเกิดการชนกัน (collision) ได้ง่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้กล่าวถูกต้อง \"เมื่อ Object ถูกส่งจาก data link layer ของ sender ไปยัง data link layer ของ receiver\"?",
+    "options": [
+      {
+        "statement": "Object จาก sender จะยาวเท่ากับ Object ของ receiver แต่ทั้งสองมีความแตกต่างกัน",
+        "istrue": false
+      },
+      {
+        "statement": "Object จาก sender จะไม่แตกต่างจาก Object ของ receiver",
+        "istrue": true
+      },
+      {
+        "statement": "Object จาก sender จะยาวน้อยกว่า Object ของ receiver",
+        "istrue": false
+      },
+      {
+        "statement": "Object จาก sender จะยาวกว่า Object ของ receiver",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อ data link layer ของฝั่งส่ง สร้างเฟรม (frame) แล้วส่งไปยัง data link layer ของฝั่งรับ เฟรมที่ได้รับจะมีรูปแบบและขนาดเท่าเดิม จึงไม่เปลี่ยนแปลง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การส่งข้อมูลจากต้นทางไปสู่ปลายทางที่ถูกต้องเป็นคุณสมบัติใดของการสื่อสารเครือข่าย?",
+    "options": [
+      {
+        "statement": "Accuracy",
+        "istrue": false
+      },
+      {
+        "statement": "Delivery",
+        "istrue": true
+      },
+      {
+        "statement": "Timeliness",
+        "istrue": false
+      },
+      {
+        "statement": "Available",
+        "istrue": false
+      }
+    ],
+    "explanation": "Delivery คือการส่งข้อมูลไปยังผู้รับที่ถูกต้องหรือปลายทางที่ต้องการ ไม่ใช่ส่งผิดเครื่องหรือผิดจุดหมาย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Connectionless และ connection-oriented เกิดในชั้นใด?",
+    "options": [
+      {
+        "statement": "Transport layer",
+        "istrue": true
+      },
+      {
+        "statement": "Physical layer",
+        "istrue": false
+      },
+      {
+        "statement": "Data link layer",
+        "istrue": false
+      },
+      {
+        "statement": "Network layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "แนวคิดการเชื่อมต่อแบบ connectionless (UDP) และ connection-oriented (TCP) อยู่ที่ Transport layer ซึ่งกำหนดวิธีส่งข้อมูลระหว่างต้นทางและปลายทาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การพูดคุยโทรศัพท์โดยใช้ Line เป็นการสื่อสารในโหมดใด?",
+    "options": [
+      {
+        "statement": "Duplex",
+        "istrue": false
+      },
+      {
+        "statement": "Half-duplex",
+        "istrue": false
+      },
+      {
+        "statement": "Full duplex",
+        "istrue": true
+      },
+      {
+        "statement": "Simplex",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อใช้ Line โทรศัพท์ ทั้งสองฝ่ายสามารถพูดและฟังได้พร้อมกัน จึงเป็นรูปแบบของ Full duplex ที่ส่งและรับข้อมูลได้แบบสองทิศทางพร้อมกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารที่สามารถส่งข้อมูลได้สองทิศทางในเวลาเดียวกันด้วยสื่อเดียวกัน จะมีความเร็วในการส่งข้อมูลแต่ละทิศทางเท่าใด ถ้าความเร็วของสื่อเท่ากับ X Mbps?",
+    "options": [
+      {
+        "statement": "ไม่สามารถตอบได้",
+        "istrue": false
+      },
+      {
+        "statement": "X Mbps",
+        "istrue": false
+      },
+      {
+        "statement": "X/2 Mbps",
+        "istrue": true
+      },
+      {
+        "statement": "X/4 Mbps",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในบางกรณีของการสื่อสารแบบ full-duplex บนสื่อเดียว ความเร็วรวม X Mbps จะแบ่งเป็นสองทางเท่าๆ กัน จึงได้ X/2 Mbps ต่อทิศทาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "\"ความถี่ของเครื่องที่ล้มเหลวในเวลา 1 เดือน\" เป็นวิธีการวัดที่แสดงให้เห็นถึงคุณสมบัติใดของเครือข่าย?",
+    "options": [
+      {
+        "statement": "Availability",
+        "istrue": false
+      },
+      {
+        "statement": "Reliability",
+        "istrue": true
+      },
+      {
+        "statement": "Performance",
+        "istrue": false
+      },
+      {
+        "statement": "Security",
+        "istrue": false
+      }
+    ],
+    "explanation": "Reliability หมายถึงความน่าเชื่อถือของระบบ การวัดว่ามีอุปกรณ์ล้มเหลวบ่อยแค่ไหนในช่วงเวลาที่กำหนด จึงสะท้อนความน่าเชื่อถือของระบบได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ลักษณะเด่นของการเชื่อมต่ออินเทอร์เน็ตคืออะไร?",
+    "options": [
+      {
+        "statement": "การเชื่อมต่อที่ใช้อุปกรณ์เชื่อมต่อเฉพาะระหว่างเครือข่ายที่แตกต่างกันให้เป็นเครือข่ายเดียวทั่วโลก",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อที่เกิดขึ้นระหว่างหลายเครือข่ายที่มีหลายทอพอโลยีให้เกิดเป็นเครือข่ายเดียวทั่วโลก",
+        "istrue": true
+      },
+      {
+        "statement": "การเชื่อมต่อที่สามารถสื่อสารทางไกลได้ทั่วโลก",
+        "istrue": false
+      },
+      {
+        "statement": "การเชื่อมต่อที่เกิดขึ้นระหว่างหลายเครือข่ายที่มีทอพอโลยีเดียวให้เกิดเป็นเครือข่ายเดียวทั่วโลก",
+        "istrue": false
+      }
+    ],
+    "explanation": "อินเทอร์เน็ตเป็นการเชื่อมโยงหลายเครือข่าย (Internetworking) ที่หลากหลาย ไม่ว่าจะมีทอพอโลยีหรือเทคโนโลยีที่แตกต่างกัน แล้วรวมเป็นโครงข่ายเดียวใหญ่ทั่วโลก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "อุปกรณ์ทางกายภาพที่ใช้เชื่อมต่อระหว่างเครื่องคอมพิวเตอร์กับสายสื่อสารมีชื่อเรียกว่าอะไร?",
+    "options": [
+      {
+        "statement": "Node connection card",
+        "istrue": false
+      },
+      {
+        "statement": "Node interface card",
+        "istrue": false
+      },
+      {
+        "statement": "Network connection card",
+        "istrue": false
+      },
+      {
+        "statement": "Network interface card",
+        "istrue": true
+      }
+    ],
+    "explanation": "Network Interface Card (NIC) คืออุปกรณ์ฮาร์ดแวร์สำหรับเชื่อมต่อเครื่องคอมพิวเตอร์เข้ากับสายสื่อสารหรือเครือข่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "MAC address จะอยู่ในอุปกรณ์ใดของเครื่องคอมพิวเตอร์?",
+    "options": [
+      {
+        "statement": "Mainboard",
+        "istrue": false
+      },
+      {
+        "statement": "VDO-card",
+        "istrue": false
+      },
+      {
+        "statement": "Processor",
+        "istrue": false
+      },
+      {
+        "statement": "NIC",
+        "istrue": true
+      }
+    ],
+    "explanation": "MAC address ถูกฝังอยู่บน NIC (Network Interface Card) ซึ่งเป็นฮาร์ดแวร์ที่ใช้เชื่อมต่อเครือข่ายและเป็นตัวกำหนดที่อยู่ทางกายภาพของอุปกรณ์"
+  }
+]

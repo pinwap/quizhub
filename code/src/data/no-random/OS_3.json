@@ -1,0 +1,542 @@
+[
+  {
+    "question": "1. In a single-processor system, why is CPU scheduling necessary for multiprogramming?",
+    "options": [
+      "Because all processes need to finish at the same time",
+      "Because only one process can run at a time while others wait",
+      "Because processes require identical CPU burst times",
+      "Because I/O devices can handle only one process at a time"
+    ],
+    "answer": 1,
+    "explanation": "Only one process can use the CPU at any given moment in a single-processor system, so the operating system must schedule processes to share the CPU. The other options either do not correctly address CPU scheduling (e.g., processes having identical bursts or finishing simultaneously is not a general rule), or incorrectly focus on I/O devices."
+  },
+  {
+    "question": "2. In the CPU\u2013I/O burst cycle, what generally characterizes an I/O-bound process?",
+    "options": [
+      "It has long CPU bursts and short I/O bursts",
+      "It rarely performs I/O operations",
+      "It has many short CPU bursts with frequent I/O operations",
+      "It only performs background tasks without using the CPU"
+    ],
+    "answer": 2,
+    "explanation": "I/O-bound processes typically perform frequent I/O, resulting in many short CPU bursts. The other options describe different or incorrect characteristics (e.g., long CPU bursts indicate CPU-bound behavior)."
+  },
+  {
+    "question": "3. Which of the following scheduling events does NOT require preemptive scheduling by definition?",
+    "options": [
+      "A process switches from running to waiting state",
+      "A process is moved to the ready queue after an I/O completion",
+      "A running process terminates",
+      "A running process experiences a timer interrupt"
+    ],
+    "answer": 0,
+    "explanation": "Switching from running to waiting (like doing I/O) causes the process to voluntarily relinquish the CPU, which is nonpreemptive in nature. Timer interrupts, for instance, cause preemptive scheduling. Termination also ends the process without forced preemption."
+  },
+  {
+    "question": "4. In First-Come, First-Served (FCFS) scheduling, what is one major disadvantage often observed?",
+    "options": [
+      "No process ever waits in the ready queue",
+      "The system requires special hardware for implementation",
+      "Long processes can force many short processes to wait (convoy effect)",
+      "It is guaranteed to produce the minimum average waiting time"
+    ],
+    "answer": 2,
+    "explanation": "FCFS can cause the convoy effect, where short jobs get stuck waiting behind longer jobs. The other options are incorrect: processes do wait in the queue, no special hardware is required, and FCFS does not minimize average waiting time."
+  },
+  {
+    "question": "5. What is the key feature of Shortest Job First (SJF) scheduling that makes it theoretically optimal for average waiting time?",
+    "options": [
+      "It always executes processes in the order they arrive",
+      "It minimizes waiting time by choosing the process with the shortest next CPU burst",
+      "It uses a fixed, equal time slice for each process",
+      "It assigns the highest priority to the process with the lowest PID"
+    ],
+    "answer": 1,
+    "explanation": "SJF chooses the process with the shortest next CPU burst, which mathematically minimizes the average waiting time. Other scheduling methods like FCFS or round robin do not inherently achieve the same minimal average waiting time."
+  },
+  {
+    "question": "6. In preemptive Shortest-Remaining-Time-First (SRTF) scheduling, a context switch may occur if:",
+    "options": [
+      "A new process arrives with a longer remaining burst",
+      "The currently running process terminates",
+      "A new process arrives with a shorter remaining burst",
+      "The currently running process completes half of its CPU burst"
+    ],
+    "answer": 2,
+    "explanation": "SRTF preempts if a newly arrived process has a shorter remaining CPU burst than the currently running process. Simply completing half a burst or having a longer remaining burst does not trigger preemption in SRTF."
+  },
+  {
+    "question": "7. Priority scheduling typically allocates the CPU to the process with:",
+    "options": [
+      "The largest integer priority value",
+      "The smallest integer priority value (highest priority)",
+      "The largest estimated CPU burst",
+      "The earliest arrival time"
+    ],
+    "answer": 1,
+    "explanation": "By convention in many systems, the smallest integer value indicates the highest priority. Therefore, the scheduler picks the process with the smallest integer priority first. The other options do not reflect standard priority scheduling behavior."
+  },
+  {
+    "question": "8. What common problem can occur in priority scheduling when a low-priority process never gets the CPU?",
+    "options": ["Deadlock", "Starvation", "Convoy effect", "Aging"],
+    "answer": 1,
+    "explanation": "In priority scheduling, a low-priority process may be blocked indefinitely by higher-priority processes, leading to starvation. Convoy effect is typically associated with FCFS, not priority scheduling. Aging is a solution to starvation, not the name of the problem itself."
+  },
+  {
+    "question": "9. What is the main idea behind Round Robin (RR) scheduling?",
+    "options": [
+      "Each process runs to completion before the next one starts",
+      "Each process gets a fixed time quantum in a cyclic order",
+      "The process with the shortest CPU burst is served next",
+      "Only I/O-bound processes are scheduled"
+    ],
+    "answer": 1,
+    "explanation": "Round Robin gives each ready process a small time slice (time quantum) in a cyclic order, ensuring more responsive time-sharing. The other statements describe other algorithms or incorrect behaviors."
+  },
+  {
+    "question": "10. If the time quantum in Round Robin scheduling is too large, the algorithm will resemble:",
+    "options": [
+      "Priority scheduling",
+      "Shortest Job First",
+      "First-Come, First-Served",
+      "Shortest-Remaining-Time-First"
+    ],
+    "answer": 2,
+    "explanation": "With a very large time quantum, Round Robin effectively becomes FCFS, where processes run to completion once they are scheduled without frequent context switches."
+  },
+  {
+    "question": "11. Which scheduling criterion focuses on maximizing the number of processes completed per time unit?",
+    "options": [
+      "CPU utilization",
+      "Throughput",
+      "Waiting time",
+      "Turnaround time"
+    ],
+    "answer": 1,
+    "explanation": "Throughput measures the number of processes that complete execution per unit time. CPU utilization measures how busy the CPU is, while waiting time and turnaround time are measures of delay."
+  },
+  {
+    "question": "12. What best describes turnaround time for a process?",
+    "options": [
+      "Time spent waiting in the ready queue",
+      "Time from process creation until the process terminates",
+      "Time between CPU bursts",
+      "Time from CPU allocation until I/O completes"
+    ],
+    "answer": 1,
+    "explanation": "Turnaround time is the total time from the moment the process is submitted (created) to the moment it completes. Waiting time is just a component of turnaround time."
+  },
+  {
+    "question": "13. Which of the following statements is TRUE regarding nonpreemptive scheduling?",
+    "options": [
+      "A process can be forcibly removed from the CPU at any time",
+      "It gives the CPU to a process and lets that process run until it releases the CPU",
+      "It requires complex hardware support for timer interrupts",
+      "It reduces overall waiting time compared to SJF preemptive scheduling"
+    ],
+    "answer": 1,
+    "explanation": "Nonpreemptive scheduling lets a process keep the CPU until it either terminates or switches to the waiting state. The other options do not accurately describe nonpreemptive scheduling."
+  },
+  {
+    "question": "14. The time it takes for the dispatcher to stop one process and start another running is called:",
+    "options": [
+      "Context switch time",
+      "Wait time",
+      "Dispatch latency",
+      "Turnaround time"
+    ],
+    "answer": 2,
+    "explanation": "Dispatch latency specifically refers to the overhead of switching from one process to another, including the context switch. Waiting time is the time a process spends in the ready queue, and turnaround time is the total time from submission to completion."
+  },
+  {
+    "question": "15. The convoy effect often occurs in FCFS scheduling when:",
+    "options": [
+      "Short I/O-bound jobs are stuck behind a long CPU-bound job",
+      "Multiple CPU-bound jobs arrive at the same time",
+      "Time slices are too small, causing frequent context switches",
+      "A high-priority job ages into a higher priority"
+    ],
+    "answer": 0,
+    "explanation": "In FCFS, a long CPU-bound job can delay many short I/O-bound jobs behind it, causing the convoy effect. The other options describe different scheduling issues."
+  },
+  {
+    "question": "16. In a multilevel queue scheduling scheme, which statement is TRUE?",
+    "options": [
+      "All processes share a single queue managed by FCFS only",
+      "Processes can move freely between any queue at any time",
+      "Each queue can have its own scheduling algorithm",
+      "It only works for single-processor systems"
+    ],
+    "answer": 2,
+    "explanation": "In multilevel queue scheduling, the ready queue is partitioned into separate queues, each with its own scheduling policy (e.g., foreground with RR, background with FCFS)."
+  },
+  {
+    "question": "17. In a multilevel queue scheduling approach, which method can prevent background processes from starvation?",
+    "options": [
+      "Using a separate CPU for background processes",
+      "Never scheduling foreground processes",
+      "Allocating a fixed portion of CPU time to lower-priority queues",
+      "Running background processes only at system startup"
+    ],
+    "answer": 2,
+    "explanation": "To prevent starvation, the scheduler might allocate a certain CPU time slice to background queues, ensuring they are not perpetually ignored by higher-priority queues."
+  },
+  {
+    "question": "18. In multiple-processor scheduling, the main purpose of load balancing is to:",
+    "options": [
+      "Help processors with lower clock speeds finish tasks first",
+      "Keep the workload evenly distributed across all processors",
+      "Increase the time quantum for selected processes",
+      "Eliminate the need for preemptive scheduling"
+    ],
+    "answer": 1,
+    "explanation": "Load balancing aims to distribute tasks so no processor is significantly more loaded than others. This helps maximize overall CPU utilization and throughput."
+  },
+  {
+    "question": "19. Processor affinity in multiple-processor scheduling is used primarily to:",
+    "options": [
+      "Stop processes from switching processors for the lifetime of the system",
+      "Improve cache performance by minimizing process migration",
+      "Ensure that low-priority processes always migrate to idle CPUs",
+      "Guarantee equal timeslices for all processes"
+    ],
+    "answer": 1,
+    "explanation": "Processor affinity keeps processes on the same CPU if possible to benefit from cached data. It does not mandate that processes never move CPUs, nor does it focus on equal timeslices."
+  },
+  {
+    "question": "20. The Completely Fair Scheduler (CFS) in Linux primarily uses which concept to decide which process to run next?",
+    "options": [
+      "Largest priority value",
+      "Shortest actual runtime",
+      "Virtual runtime (vruntime) in a red-black tree",
+      "Number of I/O requests completed"
+    ],
+    "answer": 2,
+    "explanation": "CFS maintains a balanced tree keyed by each task\u2019s vruntime (which grows more slowly for higher priority tasks) and selects the process with the smallest vruntime to run next."
+  },
+  {
+    "question": "21. In Round Robin scheduling with time quantum q, how often is a process preempted if it doesn\u2019t release the CPU on its own?",
+    "options": [
+      "When its quantum expires",
+      "When a higher-priority process arrives",
+      "Only when the process performs I/O",
+      "Never, because RR is nonpreemptive"
+    ],
+    "answer": 0,
+    "explanation": "Round Robin scheduling always preempts a process after its time quantum expires if it has not already voluntarily released the CPU."
+  },
+  {
+    "question": "22. Which of the following is typically NOT a direct CPU scheduling criterion?",
+    "options": [
+      "CPU utilization",
+      "Memory fragmentation",
+      "Throughput",
+      "Waiting time"
+    ],
+    "answer": 1,
+    "explanation": "Memory fragmentation is a memory management concern, not usually a direct CPU scheduling criterion. CPU utilization, throughput, and waiting time are common metrics for evaluating scheduling algorithms."
+  },
+  {
+    "question": "23. In priority scheduling, which technique can be used to remedy starvation of low-priority processes?",
+    "options": ["Convoy effect", "Aging", "SRTF", "Context switching"],
+    "answer": 1,
+    "explanation": "Aging gradually increases a process\u2019s priority the longer it waits, helping it eventually receive CPU time. The other options either refer to different phenomena or do not inherently fix starvation."
+  },
+  {
+    "question": "24. When the time quantum is smaller than most CPU bursts in Round Robin scheduling, which outcome is likely?",
+    "options": [
+      "Reduced overhead from context switching",
+      "Longer average turnaround time due to high overhead",
+      "All processes will complete simultaneously",
+      "No process ever waits"
+    ],
+    "answer": 1,
+    "explanation": "A very small time quantum means frequent context switches, increasing overhead, which can lead to worse turnaround time."
+  },
+  {
+    "question": "25. When comparing CPU-bound and I/O-bound processes, why is scheduling critical for high CPU utilization?",
+    "options": [
+      "Because CPU-bound processes must execute only after all I/O-bound processes complete",
+      "Because while one process waits for I/O, the CPU can run another process",
+      "Because the CPU must frequently wait for user input",
+      "Because scheduling is only needed if all processes are CPU-bound"
+    ],
+    "answer": 1,
+    "explanation": "Scheduling allows the CPU to switch to another process while the current process is waiting for I/O, thus maximizing CPU utilization. The other answers either misrepresent CPU-bound/I/O-bound relationships or scheduling roles."
+  },
+  {
+    "question": "26. In process synchronization, what is the primary reason why concurrent access to shared data can lead to inconsistency?",
+    "options": [
+      "Processes always finish their tasks before accessing shared data",
+      "Concurrent processes can partially update shared data in an interleaved manner",
+      "Only one process can ever access data in memory",
+      "Processes are not allowed to communicate with each other"
+    ],
+    "answer": 1,
+    "explanation": "Data inconsistency arises when operations on shared data overlap in time, allowing for partial or interleaved updates. The other statements are incorrect or irrelevant to data inconsistency."
+  },
+  {
+    "question": "27. A race condition occurs when:",
+    "options": [
+      "Threads communicate without using shared data",
+      "A process is starved of CPU time",
+      "Multiple processes access and manipulate shared data, and the result depends on the order of execution",
+      "Hardware interrupts are disabled"
+    ],
+    "answer": 2,
+    "explanation": "A race condition is when multiple entities can affect shared data, and the final outcome depends on the order in which their operations occur. Starvation and disabled interrupts relate to other issues."
+  },
+  {
+    "question": "28. What is the critical-section problem?",
+    "options": [
+      "Ensuring only I/O-bound processes run in parallel",
+      "Guaranteeing that no two processes execute their critical sections simultaneously",
+      "Determining the largest size of a process\u2019s memory footprint",
+      "Measuring how quickly the CPU can switch between processes"
+    ],
+    "answer": 1,
+    "explanation": "The critical-section problem focuses on ensuring that when one process is operating in its critical section (accessing shared data), no other process is allowed to enter its own critical section that shares the same data simultaneously."
+  },
+  {
+    "question": "29. Which of the following must a valid solution to the critical-section problem satisfy?",
+    "options": [
+      "Safe state, security, portability",
+      "Mutual exclusion, progress, bounded waiting",
+      "Free memory, bounded CPU time, parallelism",
+      "Dual-core hardware, user-level interrupt routines"
+    ],
+    "answer": 1,
+    "explanation": "The three requirements for a correct solution to the critical-section problem are mutual exclusion, progress, and bounded waiting. The other sets of conditions are unrelated."
+  },
+  {
+    "question": "30. Which of the following hardware instructions can be used to implement locking for synchronization?",
+    "options": [
+      "Test-and-set",
+      "Move",
+      "Nop (no operation)",
+      "Jump-to-subroutine"
+    ],
+    "answer": 0,
+    "explanation": "Test-and-set is an atomic hardware instruction often used in concurrency control to implement locks. The other instructions do not inherently provide atomic locking."
+  },
+  {
+    "question": "31. What is a spinlock?",
+    "options": [
+      "A lock that forces a thread to sleep when the lock is not available",
+      "A lock that uses busy waiting until it becomes available",
+      "A lock that can only be used on multiprocessor systems",
+      "A lock that automatically preempts the CPU when a process requests it"
+    ],
+    "answer": 1,
+    "explanation": "A spinlock is a lock where a process or thread loops (busy waits) while checking if the lock is available. It does not put the thread to sleep and does not preempt the CPU automatically."
+  },
+  {
+    "question": "32. Which of the following is TRUE about mutex locks?",
+    "options": [
+      "They rely on busy waiting to protect critical sections by definition",
+      "They allow multiple processes to hold the same lock simultaneously",
+      "They cannot be implemented using atomic hardware instructions",
+      "They are used only for CPU scheduling"
+    ],
+    "answer": 0,
+    "explanation": "A basic mutex lock, when implemented with simple atomic operations, typically involves busy waiting (spinlock) in the acquire() function. Mutexes do not allow multiple holders, can be implemented with hardware support, and are used for synchronization, not CPU scheduling."
+  },
+  {
+    "question": "33. How do semaphores differ from simple binary locks?",
+    "options": [
+      "Semaphores are only available on real-time operating systems",
+      "Semaphores can allow counting (more than one resource unit) and can block waiting processes without busy waiting",
+      "Semaphores do not support blocking; they only offer busy waiting",
+      "Semaphores are used only for memory allocation"
+    ],
+    "answer": 1,
+    "explanation": "Semaphores can be counting or binary, and they provide a mechanism to block and wake processes without the need for continuous busy waiting. The other statements are incorrect or too narrow."
+  },
+  {
+    "question": "34. Consider a semaphore S initialized to 1. A wait(S) operation followed by a signal(S) operation ensures:",
+    "options": [
+      "Multiple processes can concurrently modify shared data",
+      "Mutual exclusion for the critical section between them",
+      "That the queue of processes for the semaphore remains empty",
+      "Deadlock is guaranteed"
+    ],
+    "answer": 1,
+    "explanation": "Because S=1 enforces only one process at a time (a binary semaphore), wait(S) followed by signal(S) can protect a critical section. This does not automatically guarantee an empty queue or cause deadlock."
+  },
+  {
+    "question": "35. A key difference between a semaphore and a mutex lock is that:",
+    "options": [
+      "A semaphore must always be initialized to 0",
+      "A mutex can have more than one owner at the same time",
+      "A semaphore can allow multiple resource instances, while a mutex is strictly for mutual exclusion of a single resource",
+      "Mutex locks are never implemented in hardware"
+    ],
+    "answer": 2,
+    "explanation": "Counting semaphores can manage multiple resources concurrently, whereas a mutex lock is binary and only allows one owner (process/thread) at a time. Semaphores are not required to start at 0, and mutexes can be implemented via hardware instructions."
+  },
+  {
+    "question": "36. Deadlock can occur with semaphores if:",
+    "options": [
+      "A process performs wait() calls in different orders on shared semaphores",
+      "A process releases a semaphore immediately after acquiring it",
+      "All semaphores are initialized to 1",
+      "There is only one semaphore in the system"
+    ],
+    "answer": 0,
+    "explanation": "Deadlock can arise if multiple processes acquire shared semaphores in an inconsistent order (e.g., wait(S); wait(Q); vs. wait(Q); wait(S);). The other situations do not inherently lead to deadlock."
+  },
+  {
+    "question": "37. Starvation in synchronization refers to:",
+    "options": [
+      "A process that obtains exclusive access to a resource indefinitely",
+      "A process that can never access the resource it needs and thus waits indefinitely",
+      "A short-term phenomenon that always resolves in a few cycles",
+      "A guaranteed outcome of any priority-based system"
+    ],
+    "answer": 1,
+    "explanation": "Starvation (also called indefinite blocking) occurs when a process never gains access to a resource it needs to proceed. It is not inevitable in all systems, nor does it always resolve quickly."
+  },
+  {
+    "question": "38. Which of the following solutions addresses starvation in priority scheduling?",
+    "options": [
+      "Deadlock detection",
+      "Convoy effect",
+      "Priority inversion",
+      "Aging"
+    ],
+    "answer": 3,
+    "explanation": "Aging raises the priority of a process the longer it waits, eventually giving it the CPU. Priority inversion and convoy effect relate to different problems, and deadlock detection does not specifically address starvation from low priority."
+  },
+  {
+    "question": "39. The Readers-Writers problem is concerned with:",
+    "options": [
+      "Scheduling CPU-bound processes ahead of I/O-bound processes",
+      "Coordinating multiple threads accessing shared data in read or write modes",
+      "Minimizing context switches in a multi-core system",
+      "Implementing real-time constraints on single-processor systems"
+    ],
+    "answer": 1,
+    "explanation": "The Readers-Writers problem ensures multiple readers can access shared data simultaneously, but writers require exclusive access. The other items do not describe the Readers-Writers problem."
+  },
+  {
+    "question": "40. The Dining-Philosophers problem illustrates synchronization issues when:",
+    "options": [
+      "All processes share only one single resource",
+      "There are multiple shared resources that each process needs multiple of to proceed",
+      "Priorities are not assigned to any process",
+      "There is no concept of concurrency"
+    ],
+    "answer": 1,
+    "explanation": "Each philosopher needs two chopsticks (shared resources) to eat, and the problem focuses on how to avoid deadlock and ensure fairness. The problem clearly involves concurrency and multiple resources."
+  },
+  {
+    "question": "41. In the standard (na\u00efve) solution to Dining-Philosophers, why can deadlock occur?",
+    "options": [
+      "Each philosopher sleeps instead of picking up chopsticks",
+      "All chopsticks are made available only to one philosopher",
+      "All philosophers pick up one chopstick and wait for the other indefinitely",
+      "One philosopher is assigned a higher priority"
+    ],
+    "answer": 2,
+    "explanation": "If each philosopher picks up one chopstick and waits for the other, no one can proceed, causing deadlock. Higher priorities or single chopsticks for all do not describe the na\u00efve scenario accurately."
+  },
+  {
+    "question": "42. Which technique can be used to break the deadlock in Dining-Philosophers?",
+    "options": [
+      "Allow all philosophers to pick up left chopstick first",
+      "Order the chopsticks and ensure each philosopher picks them up in a consistent order",
+      "Prohibit philosophers from eating more than once",
+      "Assign the same priority to all philosophers"
+    ],
+    "answer": 1,
+    "explanation": "One well-known technique is to impose an ordering on the chopsticks (resources) and require philosophers to pick them up in that order (e.g., always pick up the lower-numbered chopstick first). This prevents circular wait."
+  },
+  {
+    "question": "43. A scenario in which two or more processes wait indefinitely for an event that only one of them can cause is called:",
+    "options": [
+      "Starvation",
+      "Deadlock",
+      "Critical section",
+      "Scheduling anomaly"
+    ],
+    "answer": 1,
+    "explanation": "Deadlock arises when each process is waiting for the other to do something, and none can proceed. Starvation is similar but not necessarily mutual, while the others are unrelated definitions."
+  },
+  {
+    "question": "44. Priority Inversion happens when:",
+    "options": [
+      "A high-priority process is indirectly preempted by a lower-priority process holding a needed resource",
+      "The OS artificially lowers the priority of all processes to reduce CPU usage",
+      "A real-time task finishes before a lower-priority batch task",
+      "CPU-bound tasks become I/O-bound tasks"
+    ],
+    "answer": 0,
+    "explanation": "Priority Inversion occurs if a lower-priority process holds a lock or resource that a higher-priority process needs, causing the higher-priority process to wait and effectively inversing the priorities. The other statements do not describe priority inversion."
+  },
+  {
+    "question": "45. One way to address Priority Inversion is to use:",
+    "options": [
+      "Aging",
+      "Priority Inheritance",
+      "Round Robin scheduling",
+      "Deadlock detection"
+    ],
+    "answer": 1,
+    "explanation": "Priority Inheritance temporarily raises the priority of the lower-priority process holding the resource so it can finish and release the resource needed by the higher-priority process. Aging handles starvation, not priority inversion specifically."
+  },
+  {
+    "question": "46. What is a key advantage of using semaphores instead of simple busy-wait locks?",
+    "options": [
+      "Semaphores cannot block processes",
+      "Semaphores eliminate the possibility of deadlock",
+      "Processes can sleep while waiting for a semaphore, reducing CPU usage",
+      "They do not require atomic operations"
+    ],
+    "answer": 2,
+    "explanation": "Semaphore operations can put a process to sleep if the semaphore is not available, saving CPU time. The other statements are incorrect, as deadlocks are still possible with semaphores and they rely on atomic operations."
+  },
+  {
+    "question": "47. In a scenario where multiple threads attempt to update a shared counter variable, which synchronization mechanism can be used to avoid race conditions without busy waiting?",
+    "options": [
+      "A simple flag variable",
+      "A counting semaphore or mutex lock (with blocking)",
+      "A do-while loop with frequent yield calls",
+      "No mechanism is needed if threads are short-lived"
+    ],
+    "answer": 1,
+    "explanation": "Using a semaphore or mutex lock that allows blocking (instead of spinning) prevents race conditions without busy waiting. The other options don\u2019t guarantee mutual exclusion or are insufficient."
+  },
+  {
+    "question": "48. In the bounded-buffer (producer-consumer) problem, what is the purpose of the \u201ccounter\u201d variable or semaphore controlling the number of full buffers?",
+    "options": [
+      "To allow multiple producers to overwrite the same buffer",
+      "To ensure that consumers do not read from an empty buffer",
+      "To prevent more than one process from writing to disk at a time",
+      "To accelerate context switches"
+    ],
+    "answer": 1,
+    "explanation": "Tracking how many items are in the buffer ensures that the consumer does not access an empty slot. It also prevents the producer from overfilling the buffer if there is a complementary semaphore for empty slots."
+  },
+  {
+    "question": "49. Why can using semaphores incorrectly lead to a situation where two processes are stuck waiting indefinitely?",
+    "options": [
+      "Because semaphores must be initialized to 0 for all processes",
+      "Because processes can call wait() on the same semaphores in different orders, leading to deadlock",
+      "Because processes are forced to yield the CPU after each wait()",
+      "Because semaphores allow processes to bypass the ready queue"
+    ],
+    "answer": 1,
+    "explanation": "If processes acquire semaphores in conflicting orders (e.g., wait(S); wait(Q); in one process and wait(Q); wait(S); in another), they can deadlock. Semaphores do not enforce a particular ordering by default."
+  },
+  {
+    "question": "50. From the text perspective, what is the fundamental function of synchronization mechanisms (locks, semaphores) in an operating system?",
+    "options": [
+      "To enable processes to share CPUs without context switching",
+      "To guarantee every process runs at the same speed",
+      "To coordinate concurrent access to shared data and prevent race conditions",
+      "To simplify memory fragmentation issues"
+    ],
+    "answer": 2,
+    "explanation": "Synchronization mechanisms allow safe coordination of processes and threads accessing shared resources, preventing data inconsistencies and race conditions. They do not guarantee identical speeds, nor do they address memory fragmentation specifically."
+  }
+]

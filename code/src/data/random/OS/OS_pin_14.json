@@ -1,0 +1,357 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบายเหตุผลที่ HTTPS จำเป็นเมื่อผู้ใช้ส่งข้อมูลสำคัญ เช่น password หรือ credit card number?",
+    "options": [
+      {
+        "statement": "HTTP ส่งข้อมูลแบบ plaintext จึงถูกดักฟังได้ง่าย",
+        "istrue": true
+      },
+      { "statement": "HTTPS ใช้ TLS ที่เข้ารหัสข้อมูลก่อนส่ง", "istrue": true },
+      {
+        "statement": "HTTPS ช่วยเพิ่มความเร็วของการเชื่อมต่อ",
+        "istrue": false
+      },
+      {
+        "statement": "HTTP มีการเข้ารหัสข้อมูลแบบ symmetric key โดยค่าเริ่มต้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "HTTP ไม่มีการเข้ารหัส ทำให้ข้อมูลสำคัญถูกดักฟังได้ แต่ HTTPS ใช้ TLS เพื่อเข้ารหัสทันที"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน RSA เหตุใด public key จึงสามารถเผยแพร่ให้ใครก็ได้?",
+    "options": [
+      {
+        "statement": "เพราะ public key ใช้ถอดรหัสข้อมูลที่เข้ารหัสด้วย public key",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะการย้อนกลับจาก public key ไปหา private key ทำได้ยากมาก",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ public key ไม่มีส่วนเกี่ยวข้องกับกระบวนการเข้ารหัส",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ public key ใช้เพียงในการสร้างคู่กุญแจเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "RSA ถูกออกแบบให้ derive private key จาก public key ทำได้แทบเป็นไปไม่ได้ จึงแจก public key ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ให้พิจารณา RSA ตัวอย่าง: p = 7, q = 13, และ public key = (5, 91). ถ้าต้องการถอดรหัส ciphertext = 62 จะใช้กุญแจใด?",
+    "options": [
+      { "statement": "ใช้ public key 5, 91", "istrue": false },
+      { "statement": "ใช้ private key 29, 91", "istrue": true },
+      { "statement": "ใช้คู่กุญแจแบบ symmetric key", "istrue": false },
+      { "statement": "ใช้ hash function", "istrue": false }
+    ],
+    "explanation": "ใน RSA การถอดรหัสต้องใช้ private key ซึ่งในตัวอย่างคือ (29, 91)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือคุณสมบัติสำคัญของ 'seed' ใน Stream Cipher?",
+    "options": [
+      {
+        "statement": "ใช้สร้าง keystream ซึ่งต้องเหมือนกันทั้งฝั่งเข้ารหัสและถอดรหัส",
+        "istrue": true
+      },
+      {
+        "statement": "seed สามารถใช้ซ้ำได้หลายครั้งโดยไม่มีปัญหา",
+        "istrue": false
+      },
+      { "statement": "seed เป็นข้อมูลที่ถูกเปิดเผยได้", "istrue": false },
+      { "statement": "seed ใช้แทน signature ของข้อมูล", "istrue": false }
+    ],
+    "explanation": "stream cipher ใช้ seed เป็นค่าตั้งต้นเพื่อสร้าง keystream ดังนั้นทั้งสองฝั่งต้องใช้ seed เดียวกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ทำไม Block Cipher แบบ ECB (เข้ารหัสทีละ Block โดยไม่ใช้ IV) จึงไม่ปลอดภัย?",
+    "options": [
+      {
+        "statement": "เพราะ plaintext เหมือนกันจะให้ ciphertext ซ้ำกัน",
+        "istrue": true
+      },
+      { "statement": "เพราะ ECB ไม่มีการเข้ารหัสจริง ๆ", "istrue": false },
+      { "statement": "เพราะ ECB ใช้ public key แบบอัตโนมัติ", "istrue": false },
+      {
+        "statement": "เพราะ ECB ทำงานได้เฉพาะกับข้อมูลตัวเลขเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ECB ทำให้ pattern ของ plaintext ปรากฏใน ciphertext จึงไม่ปลอดภัย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ทำไมจึงไม่ควรเขียนโค้ด Encryption algorithm เอง แต่ควรใช้ library มาตรฐาน?",
+    "options": [
+      {
+        "statement": "เพราะ encryption algorithm ซับซ้อนและมักผิดพลาดง่าย",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ library ไม่สามารถเข้าถึงได้ทั่วไป",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะการเขียนเองทำให้ประสิทธิภาพสูงกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ encryption ไม่ต้องการการตรวจสอบความปลอดภัย",
+        "istrue": false
+      }
+    ],
+    "explanation": "encryption มีรายละเอียดทางคณิตศาสตร์และความปลอดภัยมาก การเขียนเองเสี่ยงต่อ bug และช่องโหว่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการ reuse seed ใน stream cipher จึงเป็นอันตราย?",
+    "options": [
+      {
+        "statement": "เพราะ attacker สามารถ XOR ciphertext สองอันเข้าด้วยกันเพื่อหา plaintext",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะทำให้ต้องใช้ private key ใหม่ทุกครั้ง",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะทำให้ hash function เกิด collision",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะทำให้ ciphertext ไม่สามารถถอดรหัสได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "การ reuse keystream ทำให้สามารถวิเคราะห์ plaintext ได้ง่ายมาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน JWT ข้อความสีแดงบอกว่า 'ข้อมูลนี้ไม่ได้เข้ารหัส (encrypted)' หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "payload สามารถอ่านได้โดยใครก็ได้เพราะเป็น base64 ไม่ใช่ encryption",
+        "istrue": true
+      },
+      {
+        "statement": "JWT ทุกตัวถูกเข้ารหัสด้วย RSA โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "signature ของ JWT คือข้อมูลลับที่เก็บใน payload",
+        "istrue": false
+      },
+      {
+        "statement": "payload จะอ่านไม่ได้เว้นแต่มี private key",
+        "istrue": false
+      }
+    ],
+    "explanation": "JWT payload แค่ถูก encode ด้วย base64 ไม่ได้ถูกเข้ารหัส"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "JWT มี 3 ส่วน คั่นด้วย fullstop ข้อใดเรียงส่วนได้ถูกต้อง?",
+    "options": [
+      { "statement": "header.payload.signature", "istrue": true },
+      { "statement": "payload.signature.header", "istrue": false },
+      { "statement": "signature.header.payload", "istrue": false },
+      { "statement": "header.signature.payload", "istrue": false }
+    ],
+    "explanation": "รูปแบบมาตรฐานคือ header.payload.signature"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นหน้าที่ของ signature ใน JWT?",
+    "options": [
+      {
+        "statement": "พิสูจน์ว่า token ถูกแก้ไขหรือปลอมแปลงหรือไม่",
+        "istrue": true
+      },
+      { "statement": "เข้ารหัส payload ให้ไม่สามารถอ่านได้", "istrue": false },
+      { "statement": "ใช้เป็น key สำหรับเข้ารหัสข้อมูลสำคัญ", "istrue": false },
+      {
+        "statement": "ใช้เป็น salt เพื่อป้องกัน rainbow table",
+        "istrue": false
+      }
+    ],
+    "explanation": "signature ใช้ตรวจสอบความถูกต้องของ token ไม่ใช่เข้ารหัสข้อมูล"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบายความแตกต่างระหว่าง HS256 และ RS256 ได้ถูกต้อง?",
+    "options": [
+      {
+        "statement": "HS256 ใช้ secret key เดียวกันทั้ง sign และ verify",
+        "istrue": true
+      },
+      {
+        "statement": "RS256 ใช้ private key sign และ public key verify",
+        "istrue": true
+      },
+      { "statement": "HS256 ปลอดภัยกว่าเพราะใช้กุญแจเดียว", "istrue": false },
+      { "statement": "RS256 ไม่เหมาะกับระบบที่มีหลาย service", "istrue": false }
+    ],
+    "explanation": "HS256 = symmetric / RS256 = asymmetric ทำให้ RS256 ปลอดภัยกว่าและเหมาะกับระบบใหญ่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุผลใดที่ควร 'วาง public key ไว้บนอินเทอร์เน็ต' ในระบบ RS256?",
+    "options": [
+      {
+        "statement": "เพื่อให้ client ตรวจสอบ signature ของ JWT ได้โดยไม่ต้องมี private key",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้ client สามารถ sign token แทน server ได้",
+        "istrue": false
+      },
+      { "statement": "เพื่อให้ JWT เข้ารหัสด้วย public key", "istrue": false },
+      { "statement": "เพื่อเพิ่มความเร็วในการ sign", "istrue": false }
+    ],
+    "explanation": "public key ใช้ verify เท่านั้น จึงเผยแพร่ได้ โดยไม่ทำให้ token ถูกปลอม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการเก็บ JWT token ฝั่ง client จำเป็นต้องลบทิ้งเมื่อ Sign Out?",
+    "options": [
+      {
+        "statement": "เพราะ token สามารถถูกใช้ซ้ำเพื่อเข้าถึงระบบได้โดยไม่ต้องล็อกอินใหม่",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ token มีการเก็บ password อยู่ภายใน",
+        "istrue": false
+      },
+      { "statement": "เพราะ token มีขนาดใหญ่เกินไป", "istrue": false },
+      {
+        "statement": "เพราะ server ไม่สามารถ revoke token ได้เลย",
+        "istrue": false
+      }
+    ],
+    "explanation": "JWT เป็น stateless จึงควรลบ token ที่ฝั่ง client เมื่อเลิกใช้งานเพื่อป้องกันการนำไปใช้ต่อ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ภาพตราประทับราชวงศ์ชิงถูกใช้เปรียบเทียบกับอะไรในระบบ authentication?",
+    "options": [
+      {
+        "statement": "การพิสูจน์ว่าเอกสารเป็นของจริงโดยตรวจสอบลักษณะเฉพาะ",
+        "istrue": true
+      },
+      { "statement": "การเข้ารหัสข้อมูลด้วย public key", "istrue": false },
+      { "statement": "การทำ hashing เพื่อตรวจสอบ collision", "istrue": false },
+      { "statement": "การทำ symmetric encryption", "istrue": false }
+    ],
+    "explanation": "ตราประทับโบราณ = การพิสูจน์ความแท้ (authentication) เหมือน digital signature"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด payload ใน JWT จึงไม่ควรถูกใช้ส่งข้อมูลลับ?",
+    "options": [
+      {
+        "statement": "เพราะ payload ถูก encode ด้วย base64 ซึ่งถอดอ่านง่าย",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ payload ถูกลบอัตโนมัติหลัง verify",
+        "istrue": false
+      },
+      { "statement": "เพราะ payload ถูก random ใหม่ทุกครั้ง", "istrue": false },
+      { "statement": "เพราะ payload ถูกใช้เฉพาะฝั่ง server", "istrue": false }
+    ],
+    "explanation": "base64 ไม่ใช่ encryption ใครก็ decode ดูข้อมูลได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือเหตุผลสำคัญที่ต้องใช้ TLS ก่อนส่งข้อมูลสำคัญ?",
+    "options": [
+      {
+        "statement": "TLS ป้องกัน MITM และ Sniffing ได้เพราะเข้ารหัสข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "TLS ทำให้ server ไม่ต้องใช้ private key",
+        "istrue": false
+      },
+      { "statement": "TLS เข้ารหัสเฉพาะฝั่ง client", "istrue": false },
+      { "statement": "TLS ใช้ HS256 ในทุกกรณี", "istrue": false }
+    ],
+    "explanation": "TLS ใช้ asymmetric + symmetric encryption ป้องกันการถูกดักฟัง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นจุดสำคัญของ signature verification ใน RS256?",
+    "options": [
+      { "statement": "ผู้ตรวจสอบต้องมี public key เท่านั้น", "istrue": true },
+      {
+        "statement": "ถ้าผู้ตรวจสอบมี private key จะปลอม token ได้",
+        "istrue": false
+      },
+      { "statement": "signature ทำให้ payload ถูกเข้ารหัส", "istrue": false },
+      { "statement": "public key ต้องถูกเก็บเป็นความลับ", "istrue": false }
+    ],
+    "explanation": "verify ต้องใช้ public key เท่านั้น ซึ่งปลอดภัยที่จะเผยแพร่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในการออกแบบระบบ login แบบ JWT flow ใดทำงานถูกต้อง?",
+    "options": [
+      {
+        "statement": "client ส่ง username/password → server ตรวจสอบ → server สร้าง token → client เก็บ token",
+        "istrue": true
+      },
+      {
+        "statement": "client สร้าง token เองแล้วส่งให้ server verify",
+        "istrue": false
+      },
+      { "statement": "server เก็บ token ทั้งหมดในฐานข้อมูล", "istrue": false },
+      {
+        "statement": "client และ server แบ่งปัน secret key เดียวกันเสมอใน RS256",
+        "istrue": false
+      }
+    ],
+    "explanation": "flow ถูกต้องคือ server เท่านั้นที่สร้าง token"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน symmetric authentication algorithm ฟังก์ชัน S(k,m) หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "ฟังก์ชันสร้าง authenticator จาก message โดยใช้ key",
+        "istrue": true
+      },
+      {
+        "statement": "ฟังก์ชันถอดรหัส message เป็น ciphertext",
+        "istrue": false
+      },
+      { "statement": "ฟังก์ชันสุ่ม public key ใหม่", "istrue": false },
+      { "statement": "ฟังก์ชันเข้ารหัส payload", "istrue": false }
+    ],
+    "explanation": "S(k,m) คือการสร้างค่าตรวจสอบความถูกต้องของ message (authenticator)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความหมายของคำว่า insecure channel ในภาพการส่งข้อความ 69?",
+    "options": [
+      {
+        "statement": "ช่องทางที่ข้อมูล plaintext อาจถูกดักฟังหรือแก้ไขได้",
+        "istrue": true
+      },
+      { "statement": "ช่องทางที่เข้ารหัสด้วย AES แล้ว", "istrue": false },
+      { "statement": "ช่องทางที่มี firewall ป้องกันอย่างดี", "istrue": false },
+      {
+        "statement": "ช่องทางที่สามารถส่งได้เฉพาะ ciphertext เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "insecure channel คือช่องทางที่ attacker สามารถดักฟังหรือแก้ไขข้อมูลได้"
+  }
+]

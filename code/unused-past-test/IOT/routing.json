@@ -1,0 +1,1037 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างหลักระหว่าง 'Proactive Routing Protocols' และ 'Reactive Routing Protocols'?",
+    "options": [
+      {
+        "statement": "Proactive protocols ใช้พลังงานน้อยกว่า Reactive protocols",
+        "istrue": false
+      },
+      {
+        "statement": "Proactive protocols (เช่น DSDV) จะ 'บำรุงรักษา' (Maintain) เส้นทางไปยังทุกโหนดตลอดเวลา, ในขณะที่ Reactive protocols (เช่น DSR, AODV) จะ 'ค้นหา' (Establish) เส้นทางเฉพาะเมื่อมีการร้องขอ",
+        "istrue": true
+      },
+      {
+        "statement": "Reactive protocols ไม่สามารถใช้งานในเครือข่ายขนาดใหญ่ได้, Proactive protocols ทำได้",
+        "istrue": false
+      },
+      {
+        "statement": "Proactive protocols ใช้ตำแหน่ง GPS, Reactive protocols ไม่ใช้",
+        "istrue": false
+      }
+    ],
+    "explanation": "Proactive protocols จะมีการอัปเดตตารางเส้นทาง (routing table) อย่างสม่ำเสมอ ทำให้มีข้อมูลเส้นทางพร้อมใช้ตลอดเวลา (มี overhead ต่อเนื่อง) ส่วน Reactive protocols จะเริ่มกระบวนการค้นหาเส้นทาง (route discovery) ก็ต่อเมื่อมีข้อมูลที่ต้องส่ง (มี delay เริ่มต้น)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในเครือข่ายเซ็นเซอร์ที่อุปกรณ์ส่วนใหญ่ 'sleep' และส่งข้อมูลน้อยครั้งมาก (infrequently) ควรเลือกใช้โปรโตคอลประเภทใดเพื่อประหยัดพลังงาน?",
+    "options": [
+      {
+        "statement": "Proactive Routing Protocols",
+        "istrue": false
+      },
+      {
+        "statement": "Reactive Routing Protocols",
+        "istrue": true
+      },
+      {
+        "statement": "Flooding for Data Delivery",
+        "istrue": false
+      },
+      {
+        "statement": "Hierarchical Routing Protocols",
+        "istrue": false
+      }
+    ],
+    "explanation": "Reactive protocols (On-Demand) เหมาะสมที่สุด เพราะจะไม่สร้าง overhead ในการบำรุงรักษาเส้นทางที่ไม่ได้ใช้งาน ซึ่งช่วยประหยัดพลังงานในโหนดที่ปกติจะ 'sleep'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โปรโตคอลที่ใช้ 'ตำแหน่งของโหนด' (node position) (เช่น จาก GPS) เพื่อช่วยในการตัดสินใจส่งต่อข้อมูล (data forwarding) จัดอยู่ในประเภทใด?",
+    "options": [
+      {
+        "statement": "Energy-aware Routing Protocols",
+        "istrue": false
+      },
+      {
+        "statement": "Hybrid Routing Protocols",
+        "istrue": false
+      },
+      {
+        "statement": "Location-aware Routing Protocols",
+        "istrue": true
+      },
+      {
+        "statement": "Hierarchical Routing Protocols",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตามคำนิยาม Location-aware Routing Protocols (หรือ Georouting) ใช้ข้อมูลตำแหน่งทางกายภาพของโหนดในการตัดสินใจเลือกเส้นทาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กลไก 'Flooding for Data Delivery' ทำงานอย่างไร?",
+    "options": [
+      {
+        "statement": "Sender S ส่งข้อมูลไปยังโหนด D โดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "Sender S ส่งข้อมูลไปยังโหนดกลาง (Central Node) ซึ่งจะกระจายข้อมูลไปยังโหนดอื่น",
+        "istrue": false
+      },
+      {
+        "statement": "Sender S 'broadcasts' (แพร่กระจาย) แพ็กเก็ต, และทุกโหนดที่ได้รับจะ 'forwards' (ส่งต่อ) แพ็กเก็ตนั้นไปยังเพื่อนบ้านของตน",
+        "istrue": true
+      },
+      {
+        "statement": "Sender S ส่งข้อมูลไปยังโหนดที่มีพลังงานเหลือมากที่สุดเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Flooding คือการที่ผู้ส่งแพร่กระจายข้อมูล และผู้รับทุกคน (ยกเว้นปลายทาง) ทำการแพร่กระจายข้อมูลนั้นต่อไปยังเพื่อนบ้านของตน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดกลไก Flooding จึงต้องใช้ 'Sequence Numbers' (หมายเลขลำดับ)?",
+    "options": [
+      {
+        "statement": "เพื่อบอกลำดับความสำคัญของแพ็กเก็ต",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเข้ารหัสข้อมูลในแพ็กเก็ต",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อระบุโหนดปลายทาง (Destination)",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อหลีกเลี่ยงการส่งต่อ (forwarding) แพ็กเก็ตเดิมซ้ำๆ ไม่รู้จบ (looping)",
+        "istrue": true
+      }
+    ],
+    "explanation": "Sequence numbers ช่วยให้โหนดรู้ว่าแพ็กเก็ตที่ได้รับมานั้น เป็นแพ็กเก็ตที่ตนเองเคยได้รับและส่งต่อ (forward) ไปแล้วหรือไม่ ถ้าเคยแล้ว ก็จะไม่ส่งซ้ำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากแผนภาพ Flooding (ที่ S ส่งไปยัง B, C, E) จะเกิดอะไรขึ้นเมื่อ H ได้รับแพ็กเก็ตจาก B และ C เกือบพร้อมกัน?",
+    "options": [
+      {
+        "statement": "H จะส่งต่อแพ็กเก็ตทั้งสองไปยัง A และ I",
+        "istrue": false
+      },
+      {
+        "statement": "H จะส่งต่อแพ็กเก็ตที่มาจาก B เท่านั้น เพราะ B ใกล้ S มากกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "H จะส่งต่อแพ็กเก็ตแรกที่มาถึง (จาก B หรือ C) และ 'ทิ้ง' (drop) แพ็กเก็ตที่สอง (เพราะมี sequence number เดียวกัน)",
+        "istrue": true
+      },
+      {
+        "statement": "H จะลบแพ็กเก็ตทั้งสองทิ้งเพราะเกิด collision",
+        "istrue": false
+      }
+    ],
+    "explanation": "H จะประมวลผลและส่งต่อแพ็กเก็ตแรกที่ได้รับ (สมมติว่าจาก B) เมื่อ H ได้รับแพ็กเก็ตเดียวกันจาก C (ที่มี sequence number เดิม) H จะรู้ว่าเคยส่งแพ็กเก็ตนี้แล้วและจะทิ้งไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อเสียเปรียบ (Disadvantage) ที่สำคัญที่สุดของ 'Flooding for Data Delivery' คืออะไร?",
+    "options": [
+      {
+        "statement": "มีความซับซ้อน (Simplicity คือข้อดี)",
+        "istrue": false
+      },
+      {
+        "statement": "Overhead (ภาระ) สูงมาก เพราะแพ็กเก็ตถูกส่งไปยังหลายโหนดที่ไม่ใช่ปลายทาง",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่สามารถส่งข้อมูลได้ไกล (สามารถส่งได้ตราบใดที่เชื่อมต่อถึงกัน)",
+        "istrue": false
+      },
+      {
+        "statement": "ต้องใช้ Proactive protocol ร่วมด้วย",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อเสียหลักคือ 'very high overhead' หรือที่เรียกว่า 'broadcast storm' เนื่องจากทุกโหนดในเครือข่าย (ที่เชื่อมต่อถึง) จะได้รับและส่งต่อแพ็กเก็ต"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถานการณ์ 'hidden terminal' (เช่น J และ K ส่งข้อมูลไป D) ส่งผลเสียต่อ Flooding อย่างไร?",
+    "options": [
+      {
+        "statement": "J และ K จะส่งข้อมูลเร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "J และ K ไม่สามารถได้ยินกันและกัน แต่อาจส่งข้อมูลไปยัง D 'พร้อมกัน' ทำให้เกิด 'collision' (การชนกัน) ที่ D",
+        "istrue": true
+      },
+      {
+        "statement": "D จะได้รับแพ็กเก็ตซ้ำซ้อนกัน 2 ครั้ง",
+        "istrue": false
+      },
+      {
+        "statement": "D จะต้องส่ง RERR กลับไปหา J และ K",
+        "istrue": false
+      }
+    ],
+    "explanation": "Flooding ใช้การ broadcast ซึ่งใน IEEE 802.11 ไม่มี ACK และเสี่ยงต่อ 'hidden terminal' หาก J และ K (ซึ่งซ่อนจากกัน) ส่ง broadcast ไปยัง D พร้อมกัน สัญญาณจะชนกันที่ D ทำให้ D ไม่ได้รับแพ็กเก็ตเลย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แม้ว่า Flooding จะไม่เหมาะกับการส่ง 'Data' แต่โปรโตคอล Reactive (เช่น DSR, AODV) ยังคงใช้ Flooding เพื่อวัตถุประสงค์ใด?",
+    "options": [
+      {
+        "statement": "เพื่อส่ง 'Control Packets' (เช่น Route Request) สำหรับการค้นหาเส้นทาง",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่ออัปเดตตารางเส้นทางแบบ Proactive",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อส่งข้อความ Hello",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อส่ง Route Error (RERR)",
+        "istrue": false
+      }
+    ],
+    "explanation": "โปรโตคอล Reactive ใช้ Flooding (แบบจำกัด) สำหรับ 'control packets' (เช่น RREQ) เพื่อค้นหาเส้นทาง จากนั้นจึงส่ง 'data packets' ไปตามเส้นทางที่ค้นพบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน 'Dynamic Source Routing (DSR)' เมื่อโหนด S ต้องการส่งข้อมูลไป D แต่ไม่มีเส้นทาง S จะเริ่มต้นทำสิ่งใด?",
+    "options": [
+      {
+        "statement": "ส่งข้อมูลไปยังโหนดเพื่อนบ้านทั้งหมด (Flooding)",
+        "istrue": false
+      },
+      {
+        "statement": "รอให้ D ส่ง Route Reply (RREP) มาให้",
+        "istrue": false
+      },
+      {
+        "statement": "ส่ง 'Route Request (RREQ)' แบบ Flooding ไปยังเพื่อนบ้าน",
+        "istrue": true
+      },
+      {
+        "statement": "ส่ง 'Route Error (RERR)' ไปยัง D",
+        "istrue": false
+      }
+    ],
+    "explanation": "DSR เป็นโปรโตคอลแบบ Reactive (On-Demand) เมื่อ S ต้องการเส้นทาง มันจะเริ่ม 'Route Discovery' โดยการ Flooding 'Route Request (RREQ)'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือลักษณะเฉพาะที่สำคัญที่สุดของ RREQ ใน DSR เมื่อถูกส่งต่อ (forward) โดยโหนดกลาง?",
+    "options": [
+      {
+        "statement": "โหนดกลางจะลบ ID ของผู้ส่งเดิมทิ้ง",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดกลางจะ 'appends' (เพิ่ม) ID ของตัวเองต่อท้ายเข้าไปใน RREQ",
+        "istrue": true
+      },
+      {
+        "statement": "โหนดกลางจะส่ง RREQ กลับไปยังผู้ส่ง (S)",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดกลางจะสร้างตาราง 'reverse path'",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน DSR ทุกโหนดที่ส่งต่อ RREQ จะ 'ผนวก' (appends) ID ของตนเองเข้าไปใน RREQ เพื่อสร้าง 'บันทึกเส้นทาง' (path record) ที่แพ็กเก็ตนั้นเดินทางผ่านมา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน DSR, หากโหนด S ส่ง RREQ และโหนด K ได้รับ RREQ ที่มีเส้นทาง [S, C, G] จากโหนด G, โหนด K จะทำอย่างไรต่อไป?",
+    "options": [
+      {
+        "statement": "K จะส่งต่อ RREQ ที่มีเส้นทาง [S, C, G, K] ไปยังเพื่อนบ้าน (เช่น D)",
+        "istrue": true
+      },
+      {
+        "statement": "K จะส่ง RREQ กลับไปหา G",
+        "istrue": false
+      },
+      {
+        "statement": "K จะส่ง RREP กลับไปหา S ทันที",
+        "istrue": false
+      },
+      {
+        "statement": "K จะลบเส้นทาง [S, C, G] ทิ้ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "K (โหนดกลาง) จะเพิ่ม ID ของตัวเอง ([K]) ต่อท้ายเส้นทางที่ได้รับมา ([S, C, G]) กลายเป็น [S, C, G, K] และส่งต่อ RREQ นี้ไปยังเพื่อนบ้านของ K (ยกเว้น G ที่เพิ่งส่งมา)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดโหนดกลาง (เช่น C) ใน DSR จึงไม่ควรส่งต่อ RREQ ที่เคยเห็น (forwarded) มาแล้ว?",
+    "options": [
+      {
+        "statement": "เพื่อประหยัดพลังงานของโหนด C",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อป้องกัน 'broadcast storm' และการวนลูป (looping) ของ RREQ",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อรอรับ RREP ก่อน",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะโหนด C เป็นโหนดปลายทาง",
+        "istrue": false
+      }
+    ],
+    "explanation": "หากโหนดส่งต่อ RREQ (ที่มี ID การค้นหาเดียวกัน) ที่เคยส่งไปแล้วซ้ำๆ จะทำให้เกิดการ Flooding วนลูปไม่รู้จบ โหนดจึงต้องเก็บ ID ของ RREQ ที่เคยส่งต่อแล้ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน DSR, เมื่อโหนดปลายทาง D ได้รับ RREQ ที่มีเส้นทาง [S, E, F, J], D จะทำอย่างไรเพื่อส่ง 'Route Reply (RREP)' กลับไปหา S?",
+    "options": [
+      {
+        "statement": "D จะเริ่ม RREQ ใหม่เพื่อค้นหา S",
+        "istrue": false
+      },
+      {
+        "statement": "D จะส่ง RREP ที่มีเส้นทาง [S, E, F, J] กลับไปทาง [J, F, E, S] (โดยการย้อนกลับเส้นทาง)",
+        "istrue": true
+      },
+      {
+        "statement": "D จะส่ง RREP แบบ Flooding",
+        "istrue": false
+      },
+      {
+        "statement": "D จะส่ง RREP ไปยังโหนด J เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "D (ปลายทาง) จะนำเส้นทางที่บันทึกใน RREQ ([S, E, F, J]) มา 'ย้อนกลับ' (reverse) เพื่อใช้เป็นเส้นทางในการส่ง RREP กลับไปหา S (คือ D->J->F->E->S)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่ RREP ใน DSR ใช้วิธี 'reversing the route' ของ RREQ ตั้งอยู่บนข้อสมมติฐานที่สำคัญข้อใด?",
+    "options": [
+      {
+        "statement": "ทุกโหนดต้องมีพลังงานแบตเตอรี่เท่ากัน",
+        "istrue": false
+      },
+      {
+        "statement": "ลิงก์ (links) ทั้งหมดในเครือข่ายต้องเป็นแบบ 'bi-directional' (สื่อสารได้สองทิศทาง)",
+        "istrue": true
+      },
+      {
+        "statement": "เครือข่ายต้องไม่มีโหนด K หรือ J",
+        "istrue": false
+      },
+      {
+        "statement": "RREQ จะต้องเดินทางผ่านเส้นทางที่สั้นที่สุดเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "การย้อนกลับเส้นทาง (เช่น S->E->F) เพื่อใช้เป็นเส้นทางกลับ (F->E->S) จะใช้ได้ก็ต่อเมื่อลิงก์เหล่านั้นเป็นแบบสองทิศทาง (Symmetric/Bi-directional) ถ้า S->E ได้ แต่ E->S ไม่ได้ การย้อนกลับจะล้มเหลว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดโปรโตคอล 'Dynamic Source Routing (DSR)' จึงได้ชื่อว่า 'Source Routing'?",
+    "options": [
+      {
+        "statement": "เพราะเฉพาะ 'Source' (ผู้ส่ง) เท่านั้นที่สามารถค้นหาเส้นทางได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 'Source' (ผู้ส่ง) จะต้อง 'รวม' (include) 'เส้นทางทั้งหมด' (entire route) ไว้ใน 'ส่วนหัว' (header) ของ 'data packet'",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ 'Source' (ผู้ส่ง) เป็นผู้กำหนด sequence number",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 'Source' (ผู้ส่ง) เป็นผู้สร้างตารางเส้นทางให้โหนดอื่น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ชื่อ 'Source Routing' มาจากการที่ผู้ส่ง (Source) เป็นผู้กำหนดเส้นทางทั้งหมด และใส่ข้อมูลเส้นทางนั้น (เช่น [S, E, F, J, D]) เข้าไปใน header ของ data packet เพื่อให้โหนดกลาง (E, F, J) รู้ว่าต้องส่งต่อไปที่ไหน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อเสียเปรียบ (Disadvantage) ที่สำคัญที่สุดของ DSR ที่เกิดจากการใส่เส้นทางทั้งหมดไว้ใน header คืออะไร?",
+    "options": [
+      {
+        "statement": "ทำให้เกิดการ Flooding",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้เส้นทางไม่ปลอดภัย",
+        "istrue": false
+      },
+      {
+        "statement": "ขนาดของ packet header 'เติบโต' (grows) ตามความยาวของเส้นทาง",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้โหนดกลางทำงานหนักเกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "หากเส้นทางยาว (เช่น 10 hops) header ของ data packet ก็จะใหญ่มาก ทำให้มี overhead สูง โดยเฉพาะเมื่อข้อมูลที่ส่ง (payload) มีขนาดเล็ก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กลไก 'Route Caching' ใน DSR ทำงานอย่างไร?",
+    "options": [
+      {
+        "statement": "เฉพาะโหนด S และ D เท่านั้นที่สามารถเก็บ cache เส้นทางได้",
+        "istrue": false
+      },
+      {
+        "statement": "ทุกโหนดที่ 'ได้ยิน' (overhears) หรือ 'ส่งต่อ' (forwards) RREQ, RREP, หรือ Data Packet ที่มีข้อมูลเส้นทาง จะสามารถ 'เรียนรู้' (learn) และ 'เก็บ' (cache) เส้นทางนั้นไว้ใช้เองได้",
+        "istrue": true
+      },
+      {
+        "statement": "โหนดจะเก็บ cache เฉพาะเส้นทางที่ตัวเองเป็นผู้ค้นพบเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดจะลบ cache ทิ้งทันทีหลังจากส่งข้อมูลเสร็จ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Route Caching คือการที่โหนดเรียนรู้เส้นทางจากแพ็กเก็ตใดๆ ที่วิ่งผ่าน เช่น เมื่อ E ส่งต่อ Data [S, E, F, J, D] มันจะเรียนรู้เส้นทาง [E, F, J, D] ไปยัง D ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "'Route Caching' ใน DSR ช่วย 'เร่ง' (speed up) การค้นหาเส้นทางได้อย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้ RREQ เดินทางเร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อโหนด Z ส่ง RREQ เพื่อค้นหา C, โหนด K (โหนดกลาง) ที่มี 'cached route' [K, G, C] สามารถส่ง 'RREP' กลับไปหา Z ได้ทันที โดย RREQ ไม่ต้องเดินทางไปถึง C",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ RREQ ไม่เกิดการชนกัน",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Data packet มีขนาดเล็กลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "การที่โหนดกลาง (intermediate node) สามารถตอบ RREP จาก cache ของตนเองได้ ช่วยลดการ Flooding ของ RREQ ไม่ให้กระจายไปทั่วเครือข่าย และทำให้ผู้ส่งได้เส้นทางเร็วขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อเสีย (Disadvantage) ของการที่โหนดกลาง (intermediate node) ตอบ RREP จาก 'Route Caching' คืออะไร?",
+    "options": [
+      {
+        "statement": "ทำให้ RREQ หยุดการค้นหาเร็วเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดกลางอาจตอบโดยใช้ 'stale cached route' (เส้นทางที่เก่า/ขาดไปแล้ว) ซึ่งทำให้ S ได้รับเส้นทางที่ใช้งานไม่ได้",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้โหนดปลายทาง (D) ไม่ได้รับ RREQ",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้เกิด 'Route Reply Storm' เสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความท้าทายหลักของ DSR cache คือ 'Stale caches' ถ้า K ตอบกลับด้วยเส้นทาง [K, G, C] แต่ลิงก์ G-C ขาดไปแล้ว S ก็จะได้เส้นทางที่ผิดไปใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหา 'Route Reply Storm' ใน DSR คืออะไร?",
+    "options": [
+      {
+        "statement": "การที่ RREQ เกิดการชนกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การที่ S ส่ง RREP หลายครั้งเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "การที่โหนดกลาง 'หลายตัว' (เช่น F, G, H) ที่มี cache ไปยัง D ต่างก็ส่ง RREP กลับมาหา S พร้อมๆ กัน ทำให้เกิดการชนกันของ RREP",
+        "istrue": true
+      },
+      {
+        "statement": "การที่ RERR (Route Error) ถูกส่งออกมามากเกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "หาก RREQ เดียวไปถึงโหนดกลางหลายตัวที่มี cache เส้นทางไปยัง D โหนดเหล่านั้นอาจพยายามตอบ RREP พร้อมกัน (Increased contention) ทำให้เกิด 'พายุ RREP'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน DSR, หากลิงก์ J-D ขาด (link failure) และ S กำลังใช้เส้นทาง [S, E, F, J, D], จะเกิดอะไรขึ้น?",
+    "options": [
+      {
+        "statement": "D จะส่ง RERR ไปยัง J",
+        "istrue": false
+      },
+      {
+        "statement": "J (โหนดก่อนถึงลิงก์ที่ขาด) จะส่ง 'Route Error (RERR)' [J-D] กลับไปหา S ตามเส้นทางย้อนกลับ (J->F->E->S)",
+        "istrue": true
+      },
+      {
+        "statement": "S จะรู้ได้เองว่าลิงก์ J-D ขาด",
+        "istrue": false
+      },
+      {
+        "statement": "แพ็กเก็ตจะถูกทิ้งเงียบๆ โดยไม่มีการแจ้งเตือน",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อ J พยายามส่ง Data ไปยัง D แต่ไม่สำเร็จ (เช่น ไม่ได้รับ MAC-level ACK) J จะเป็นผู้สร้าง RERR ที่ระบุลิงก์ที่ขาด (J-D) และส่งย้อนกลับไปยัง S"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อโหนด S ได้รับ RERR [J-D], S ควรทำอย่างไร?",
+    "options": [
+      {
+        "statement": "ส่งข้อมูลซ้ำในเส้นทาง [S, E, F, J, D] ต่อไป",
+        "istrue": false
+      },
+      {
+        "statement": "ลบเส้นทางที่มีลิงก์ J-D ออกจาก 'cache' และ 'ลองใช้เส้นทางอื่น' (ถ้ามีใน cache) หรือ 'เริ่ม RREQ ใหม่'",
+        "istrue": true
+      },
+      {
+        "statement": "ส่ง RERR ต่อไปยังเพื่อนบ้านทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "รอให้ J ค้นหาเส้นทางใหม่ให้",
+        "istrue": false
+      }
+    ],
+    "explanation": "S (ผู้ส่ง) เมื่อได้รับ RERR ต้องลบเส้นทางที่เสีย (stale) ออกจาก cache และพยายามหาเส้นทางใหม่ ไม่ว่าจะจาก cache ที่เหลือ หรือเริ่ม Route Discovery ใหม่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือแรงจูงใจหลักที่ทำให้เกิด 'Ad Hoc On-Demand Distance Vector Routing (AODV)'?",
+    "options": [
+      {
+        "statement": "เพื่อทำให้การค้นหาเส้นทาง (RREQ) เร็วขึ้นกว่า DSR",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อลดปัญหา 'packet header size' (ขนาด header) ที่ใหญ่ของ DSR โดยการไม่ใส่เส้นทางทั้งหมดลงใน data packet",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อยกเลิกการใช้ RREQ และ RREP",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อรองรับลิงก์แบบ 'uni-directional' (ทิศทางเดียว) เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "AODV ถูกพัฒนาเพื่อแก้ปัญหาหลักของ DSR คือ 'large headers' AODV จึงใช้ 'routing tables' ที่โหนดกลางแทน (แบบ Distance Vector) ทำให้ data packets มี header ขนาดเล็ก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "AODV แตกต่างจาก DSR ในการจัดการ 'Route Discovery (RREQ)' อย่างไร?",
+    "options": [
+      {
+        "statement": "AODV ไม่ใช้การ Flooding RREQ",
+        "istrue": false
+      },
+      {
+        "statement": "AODV 'appends' (ผนวก) ID ของโหนดกลางเข้าไปใน RREQ เหมือน DSR",
+        "istrue": false
+      },
+      {
+        "statement": "AODV 'ไม่ผนวก' ID โหนดกลาง, แต่จะ 'สร้าง' (sets up) 'reverse path' (เส้นทางย้อนกลับ) ใน routing table ของโหนดกลางชี้กลับไปยัง Source",
+        "istrue": true
+      },
+      {
+        "statement": "AODV ส่ง RREQ ไปยัง Destination โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือความแตกต่างสำคัญ: DSR บันทึกเส้นทางใน RREQ, แต่ AODV บันทึกเส้นทางย้อนกลับ (reverse path) ไว้ใน routing table ของโหนดกลาง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน AODV, หากโหนด G ได้รับ RREQ (สำหรับ D) จากโหนด C, G จะทำอะไร (ตามแผนภาพ 'Reverse Path Setup')?",
+    "options": [
+      {
+        "statement": "G จะสร้าง entry ในตารางว่า: 'To S (Source), Next Hop is C'",
+        "istrue": true
+      },
+      {
+        "statement": "G จะเพิ่ม [G] ลงใน RREQ เป็น [S, C, G]",
+        "istrue": false
+      },
+      {
+        "statement": "G จะส่ง RREP กลับไปหา C ทันที",
+        "istrue": false
+      },
+      {
+        "statement": "G จะลบ RREQ ทิ้ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อ G ได้รับ RREQ จาก C, มันจะสร้าง 'reverse path' ชี้กลับไปยัง S โดยมี C เป็น next-hop (ดังแสดงด้วยลูกศรย้อนกลับในแผนภาพ)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน AODV, 'Route Reply (RREP)' เดินทางกลับไปยัง Source S ได้อย่างไร?",
+    "options": [
+      {
+        "statement": "โดยการ Flooding RREP",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการเดินทาง 'ย้อนกลับ' (travels along) ตาม 'reverse path' ที่ RREQ ได้สร้างไว้",
+        "istrue": true
+      },
+      {
+        "statement": "โดยการใช้เส้นทางที่อยู่ใน RREQ header (เหมือน DSR)",
+        "istrue": false
+      },
+      {
+        "statement": "โดยการเริ่ม RREQ ใหม่เพื่อค้นหา S",
+        "istrue": false
+      }
+    ],
+    "explanation": "RREP (ที่ D สร้างขึ้น) จะถูกส่งกลับแบบ hop-by-hop โดยใช้ 'reverse path' (เส้นทางย้อนกลับ) ที่โหนดกลาง (J, F, E) ได้สร้างไว้ตอนที่ RREQ วิ่งผ่าน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน AODV, เมื่อโหนดกลาง (เช่น F) ได้รับ RREP (สำหรับ D) จากโหนด J (ระหว่างทางกลับไป S), F จะทำอะไร?",
+    "options": [
+      {
+        "statement": "F จะลบ 'reverse path' ไปยัง S ทิ้ง",
+        "istrue": false
+      },
+      {
+        "statement": "F จะส่ง RERR ไปยัง J",
+        "istrue": false
+      },
+      {
+        "statement": "F จะ 'สร้าง' (setup) 'forward path' (เส้นทางไปข้างหน้า) ในตารางว่า: 'To D (Destination), Next Hop is J'",
+        "istrue": true
+      },
+      {
+        "statement": "F จะเพิ่ม [F] ลงใน RREP",
+        "istrue": false
+      }
+    ],
+    "explanation": "ขณะที่ RREP เดินทางกลับ S (D->J->F->E->S), มันจะทำหน้าที่ 'สร้าง' 'forward path' (เส้นทางไป D) ในตารางของโหนดกลางแต่ละตัวที่มันผ่าน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การส่ง 'Data' ใน AODV แตกต่างจาก DSR อย่างไร?",
+    "options": [
+      {
+        "statement": "Data packet ใน AODV 'มี' เส้นทางทั้งหมดใน header, DSR 'ไม่มี'",
+        "istrue": false
+      },
+      {
+        "statement": "Data packet ใน AODV 'ไม่มี' เส้นทางทั้งหมดใน header, DSR 'มี'",
+        "istrue": true
+      },
+      {
+        "statement": "AODV ส่ง Data ผ่าน RREP",
+        "istrue": false
+      },
+      {
+        "statement": "DSR ส่ง Data ผ่าน RREQ",
+        "istrue": false
+      }
+    ],
+    "explanation": "AODV แก้ปัญหา header ใหญ่ของ DSR โดยการเก็บเส้นทางไว้ใน 'routing table' ของโหนดกลาง Data packet ของ AODV จึงมี header ขนาดเล็ก (เหมือน IP packet ทั่วไป)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน AODV, S ส่ง Data packet [S -> E -> F -> J -> D] อย่างไร?",
+    "options": [
+      {
+        "statement": "S ส่ง packet ที่มี header [S, E, F, J, D] ไปยัง E",
+        "istrue": false
+      },
+      {
+        "statement": "S ส่ง packet ที่มีปลายทาง D (S ตรวจตารางพบ next hop E) -> E (ตรวจตารางพบ next hop F) -> F (ตรวจตารางพบ next hop J) -> J (ตรวจตารางพบ next hop D)",
+        "istrue": true
+      },
+      {
+        "statement": "S ส่ง packet ไปยัง E, F, J, D พร้อมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "S ส่ง packet ไปยัง D โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือการทำงานแบบ hop-by-hop S รู้แค่ว่าต้องส่งไป E, E รู้แค่ว่าต้องส่งไป F, F รู้แค่ว่าต้องส่งไป J และ J รู้แค่ว่าต้องส่งไป D"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "วัตถุประสงค์หลักของ 'Destination Sequence Numbers' ใน AODV คืออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อนับจำนวน hop ไปยังปลายทาง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อป้องกันการใช้ 'old/broken routes' (เส้นทางที่เก่า/ขาด) และ 'prevent loops' (ป้องกันการวนลูป)",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อระบุลำดับของ data packet",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเข้ารหัส RREP",
+        "istrue": false
+      }
+    ],
+    "explanation": "Sequence numbers ใช้เพื่อรับประกัน 'ความสดใหม่' (freshness) ของข้อมูลเส้นทาง โหนดจะยอมรับเส้นทางใหม่ก็ต่อเมื่อมี sequence number ที่สูงกว่าของเดิม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน AODV, หาก S ส่ง RREQ (สำหรับ D) และโหนดกลาง K มีเส้นทางไปยัง D ใน cache, K จะสามารถส่ง RREP ได้ในกรณีใด?",
+    "options": [
+      {
+        "statement": "K ส่ง RREP ได้เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "K ส่ง RREP ได้ก็ต่อเมื่อ 'sequence number' ของเส้นทางใน cache 'สูงกว่าหรือเท่ากับ' sequence number ใน RREQ",
+        "istrue": true
+      },
+      {
+        "statement": "K ห้ามส่ง RREP (เฉพาะ D เท่านั้นที่ส่งได้)",
+        "istrue": false
+      },
+      {
+        "statement": "K ส่ง RREP ได้ก็ต่อเมื่อ 'sequence number' ของเส้นทางใน cache 'ต่ำกว่า' sequence number ใน RREQ",
+        "istrue": false
+      }
+    ],
+    "explanation": "AODV เข้มงวดกว่า DSR เพื่อป้องกัน stale cache โหนดกลาง (K) จะตอบ RREP ได้เฉพาะเมื่อมันมีเส้นทางที่ 'สดใหม่' (มี sequence number สูงกว่าหรือเท่ากับ) ที่ S ร้องขอเท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน AODV, หากโหนด A รู้เส้นทาง [A-B-C] ไปยัง D แต่ลิงก์ C-D ขาด และต่อมา C เริ่ม RREQ ใหม่เพื่อค้นหา D ซึ่งเดินทางมาถึง A (ผ่าน C-E-A), เหตุใด AODV จึงเสี่ยงต่อการเกิด 'loop'?",
+    "options": [
+      {
+        "statement": "A ไม่สามารถรับ RREQ จาก C ได้",
+        "istrue": false
+      },
+      {
+        "statement": "C จะส่ง RERR ไปยัง A",
+        "istrue": false
+      },
+      {
+        "statement": "หาก A ไม่รู้ว่าลิงก์ C-D ขาด (เช่น RERR หาย), A อาจตอบ RREP (C-E-A) กลับไป C ว่า 'ฉันมีทางไป D (คือ A-B-C)' ทำให้เกิด loop (C->E->A->B->C)",
+        "istrue": true
+      },
+      {
+        "statement": "D จะส่ง RREP ไปยัง A โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือสถานการณ์ที่ 'Destination Sequence Numbers' ช่วยป้องกัน หาก RERR จาก C หาย, A ยังคงมีเส้นทางเก่า [A-B-C] เมื่อ A ได้รับ RREQ ใหม่จาก C, A อาจตอบกลับด้วยเส้นทางเก่านี้ ทำให้ C คิดว่าไป D ผ่าน E-A-B-C ได้ ซึ่งจะวนกลับมาที่ C"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อได้เปรียบ (Advantage) หลักของ DSR?",
+    "options": [
+      {
+        "statement": "Packet header มีขนาดเล็กคงที่",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่มีปัญหา Stale Cache",
+        "istrue": false
+      },
+      {
+        "statement": "Route caching 'สามารถ' (can) ลด overhead ของ route discovery ได้อย่างมาก (หาก cache ถูกต้อง)",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่มีการ Flooding RREQ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อดีที่ชัดเจนของ DSR คือกลไก Route Caching ที่ทรงพลัง ซึ่งช่วยให้โหนดกลางตอบ RREQ ได้, ลดการ Flooding และอาจให้เส้นทางที่หลากหลาย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อได้เปรียบ (Advantage) หลักของ AODV?",
+    "options": [
+      {
+        "statement": "Data packets 'ไม่' ต้องมีเส้นทางทั้งหมดใน header (header ขนาดเล็ก)",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่จำเป็นต้องใช้ RREQ หรือ RREP",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่จำเป็นต้องใช้ sequence numbers",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดกลางสามารถตอบ RREP ได้อย่างอิสระโดยไม่ต้องกังวลเรื่อง stale cache",
+        "istrue": false
+      }
+    ],
+    "explanation": "AODV ถูกสร้างมาเพื่อแก้ปัญหา header ใหญ่ของ DSR โดยการใช้ตารางเส้นทางแบบ hop-by-hop ทำให้ Data packet header มีขนาดเล็กและคงที่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อเสียเปรียบ (Disadvantage) หลักของ AODV?",
+    "options": [
+      {
+        "statement": "Data packet header มีขนาดใหญ่ตามเส้นทาง",
+        "istrue": false
+      },
+      {
+        "statement": "กลไก Sequence Number ทำให้ 'ซับซ้อน' และ 'เข้มงวด' กว่า, และอาจทำให้โหนดกลาง (intermediate node) ตอบ RREP ได้น้อยกว่า DSR",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่รองรับการส่ง RERR",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น Proactive protocol",
+        "istrue": false
+      }
+    ],
+    "explanation": "AODV ต้องจัดการกับ sequence numbers ซึ่งเพิ่มความซับซ้อน และการที่โหนดกลางตอบ RREP ได้ยากขึ้น (ต้องมี sequence number สดใหม่) อาจทำให้ RREQ ต้อง Flooding ไปไกลกว่า DSR (ในบางกรณี)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากโหนด S ต้องการส่งข้อมูลไปยังโหนด N ซึ่งเชื่อมต่อกับ D เท่านั้น (D-N) และ S ไม่มีเส้นทาง, จะเกิดอะไรขึ้นใน AODV?",
+    "options": [
+      {
+        "statement": "S ส่ง RREQ, โหนดกลาง (เช่น K, J) ส่ง RREP กลับทันที",
+        "istrue": false
+      },
+      {
+        "statement": "S ส่ง RREQ, D (ซึ่งเป็นเกตเวย์ไปยัง N) จะเป็นผู้ส่ง RREP กลับไป",
+        "istrue": false
+      },
+      {
+        "statement": "S ส่ง RREQ, RREQ จะไปถึง D, D ส่งต่อไปยัง N, และ N (ปลายทาง) จะเป็นผู้ส่ง RREP กลับมา",
+        "istrue": true
+      },
+      {
+        "statement": "S ไม่สามารถส่งข้อมูลไปยัง N ได้เพราะ N เป็นสีเหลือง",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน AODV, โดยทั่วไป RREQ จะถูก Flooding ไปจนถึง 'ปลายทาง' (Destination) ซึ่งในที่นี้คือ N (แม้ว่า N จะเชื่อมต่อผ่าน D) N จะเป็นผู้เริ่มส่ง RREP กลับมา (เว้นแต่ D จะมีเส้นทางที่ 'สดใหม่' ไปยัง N อยู่แล้ว)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากโหนด S ต้องการส่งข้อมูลไปยังโหนด Z ซึ่ง 'ตัดขาด' (disconnected) จากเครือข่าย, จะเกิดอะไรขึ้นเมื่อ S ส่ง RREQ?",
+    "options": [
+      {
+        "statement": "RREQ จะวนลูปในเครือข่าย (A-N) ไปเรื่อยๆ",
+        "istrue": false
+      },
+      {
+        "statement": "RREQ จะถูก Flooding ไปทั่วเครือข่าย (A-N) แต่จะ 'ไม่ถึง' Z และ S จะ 'ไม่ได้รับ' RREP ใดๆ (จนกว่าจะ timeout)",
+        "istrue": true
+      },
+      {
+        "statement": "โหนด Y จะเป็นผู้ตอบ RREP",
+        "istrue": false
+      },
+      {
+        "statement": "โหนด S จะได้รับ RERR ทันที",
+        "istrue": false
+      }
+    ],
+    "explanation": "RREQ จะแพร่กระจายไปทั่ว 'connected component' ที่ S อยู่ (A ถึง N) แต่เนื่องจาก Z (และ Y) อยู่ใน 'disconnected component' จึงไม่ได้รับ RREQ ทำให้ D (หรือ Z) ไม่สามารถส่ง RREP กลับมาได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดสรุปข้อดีของ Flooding (สำหรับ Data) ได้ถูกต้อง?",
+    "options": [
+      {
+        "statement": "Overhead ต่ำ และ reliability สูง",
+        "istrue": false
+      },
+      {
+        "statement": "Simplicity (ง่าย) และ Potentially higher reliability (อาจเชื่อถือได้สูง) เนื่องจากมีหลายเส้นทาง",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่เกิด collision และ overhead ต่ำ",
+        "istrue": false
+      },
+      {
+        "statement": "เหมาะสำหรับเครือข่ายที่มีการส่งข้อมูลบ่อย (high rate)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อดีที่ระบุไว้คือ 'Simplicity' (ความเรียบง่าย) และ 'Potentially higher reliability' (ความน่าเชื่อถือที่อาจสูงกว่า) เพราะแพ็กเก็ตสามารถไปถึงปลายทางได้หลายเส้นทาง (แม้บางเส้นทางจะล่ม)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดสรุปข้อเสียของ Flooding (สำหรับ Data) ได้ถูกต้อง?",
+    "options": [
+      {
+        "statement": "Simplicity และ High reliability",
+        "istrue": false
+      },
+      {
+        "statement": "ซับซ้อน และ Low overhead",
+        "istrue": false
+      },
+      {
+        "statement": "High overhead (ส่งไปโหนดที่ไม่จำเป็น) และ Potentially lower reliability (เนื่องจาก collision/broadcast ไม่น่าเชื่อถือ)",
+        "istrue": true
+      },
+      {
+        "statement": "ต้องใช้ DSR ร่วมด้วย",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อเสียคือ 'very high overhead' (ส่งทิ้งขว้าง) และ 'Potentially lower reliability' (ความน่าเชื่อถืออาจต่ำ) เพราะการ broadcast (เช่นใน 802.11) ไม่มีการ ACK และเสี่ยงต่อ collision"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "AODV แตกต่างจาก Proactive Protocol (เช่น DSDV) อย่างไร?",
+    "options": [
+      {
+        "statement": "AODV 'ไม่มี' routing table, Proactive 'มี'",
+        "istrue": false
+      },
+      {
+        "statement": "AODV 'สร้าง' routing table entries 'เฉพาะ' สำหรับเส้นทางที่ 'active use' (ใช้งานจริง), Proactive 'บำรุงรักษา' (maintain) เส้นทางไปยัง 'ทุกโหนด' ตลอดเวลา",
+        "istrue": true
+      },
+      {
+        "statement": "AODV ใช้ Source Routing, Proactive ไม่ใช้",
+        "istrue": false
+      },
+      {
+        "statement": "AODV ไม่ใช้ RREQ",
+        "istrue": false
+      }
+    ],
+    "explanation": "AODV เป็น on-demand (reactive) จึงเก็บเฉพาะเส้นทางที่กำลังใช้งาน (active use) และเส้นทางที่ไม่ได้ใช้จะ 'expire' (หมดอายุ) ไปเอง แต่ Proactive protocol จะพยายามอัปเดตเส้นทางไปยังทุกโหนด แม้จะไม่ได้ใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน AODV, หาก S ส่ง RREQ (สำหรับ D) และโหนด C ได้รับ RREQ นี้จาก 2 แหล่ง (เช่น จาก S และจาก E), C จะทำอย่างไร?",
+    "options": [
+      {
+        "statement": "C จะส่งต่อ RREQ ทั้งสอง",
+        "istrue": false
+      },
+      {
+        "statement": "C จะส่งต่อ RREQ ที่มี hop count น้อยที่สุด (หรือมาถึงก่อน) และ 'ทิ้ง' (discard) RREQ ที่ซ้ำซ้อน",
+        "istrue": true
+      },
+      {
+        "statement": "C จะสร้าง loop โดยส่งกลับไปหา S และ E",
+        "istrue": false
+      },
+      {
+        "statement": "C จะส่ง RERR ทันที",
+        "istrue": false
+      }
+    ],
+    "explanation": "เพื่อป้องกัน Flooding, โหนด AODV (เช่น C) จะส่งต่อ RREQ (สำหรับ S/D คู่เดียวกัน) เพียงครั้งเดียว (ครั้งแรกที่ได้รับ หรือครั้งที่ hop count ดีที่สุด) และจะทิ้ง RREQ ที่ซ้ำซ้อน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "DSR และ AODV จัดเป็นโปรโตคอลประเภทใด?",
+    "options": [
+      {
+        "statement": "Proactive Routing Protocols",
+        "istrue": false
+      },
+      {
+        "statement": "Reactive (On-Demand) Routing Protocols",
+        "istrue": true
+      },
+      {
+        "statement": "Location-aware Routing Protocols",
+        "istrue": false
+      },
+      {
+        "statement": "Energy-aware Routing Protocols",
+        "istrue": false
+      }
+    ],
+    "explanation": "ทั้ง DSR และ AODV เป็นโปรโตคอลแบบ Reactive (On-Demand) เพราะพวกมันจะเริ่มกระบวนการ 'Route Discovery' (RREQ/RREP) ก็ต่อเมื่อ 'requested' (มีการร้องขอ) เท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน DSR, หากโหนด S ส่ง Data [S,C,G,K,D] ไปยัง D, โหนด I ซึ่งอยู่ใกล้ G จะสามารถ 'เรียนรู้' เส้นทางใดได้บ้างจากการ 'overhearing' (ดักฟัง)?",
+    "options": [
+      {
+        "statement": "I ไม่สามารถเรียนรู้อะไรได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "I สามารถเรียนรู้เส้นทาง [I, G, K, D] ไปยัง D (หาก G ส่งต่อแพ็กเก็ต)",
+        "istrue": true
+      },
+      {
+        "statement": "I เรียนรู้เส้นทางไปยัง S เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "I จะส่ง RERR ทันที",
+        "istrue": false
+      }
+    ],
+    "explanation": "DSR Route Caching อนุญาตให้โหนดที่ 'overhear' (ดักฟัง) แพ็กเก็ตที่มี source route สามารถเรียนรู้ 'ส่วนที่เหลือ' ของเส้นทางได้ หาก I ดักฟัง G ส่ง Data [S,C,G,K,D] I จะรู้ว่า 'จาก G' ไป D ต้องผ่าน K"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างในการจัดเก็บเส้นทางระหว่าง AODV และ DSR?",
+    "options": [
+      {
+        "statement": "AODV เก็บ 'หลายเส้นทาง' (several routes) ไปยัง D, DSR เก็บ 'เส้นทางเดียว' (one next-hop) ไปยัง D",
+        "istrue": false
+      },
+      {
+        "statement": "DSR 'อาจ' เก็บ 'หลายเส้นทาง' (several routes) ไปยัง D (จาก cache), AODV เก็บ 'เส้นทางเดียว' (at most one next-hop) ไปยัง D",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้งคู่เก็บเส้นทางเดียวเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "ทั้งคู่เก็บหลายเส้นทางเสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อสรุป AODV ระบุว่า 'At most one next-hop per destination maintained at each node' (เก็บ next-hop เดียว) ในขณะที่ DSR (เนื่องจาก cache) อาจเก็บ 'many routes to the destination'"
+  }
+]

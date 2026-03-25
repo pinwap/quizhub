@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary definition of 'Digital Forensics'?",
+    "options": [
+      {
+        "statement": "Repairing broken computers.",
+        "istrue": false
+      },
+      {
+        "statement": "A branch of forensic science focused on recovering and investigating material found in digital devices.",
+        "istrue": true
+      },
+      {
+        "statement": "Writing secure code.",
+        "istrue": false
+      },
+      {
+        "statement": "Installing antivirus software.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Digital forensics applies scientific methods to recover data from digital devices to be used as legal evidence."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the 'Golden Rule' of Digital Forensics?",
+    "options": [
+      {
+        "statement": "Always reboot the computer first.",
+        "istrue": false
+      },
+      {
+        "statement": "Don't tamper with the original evidence.",
+        "istrue": true
+      },
+      {
+        "statement": "Copy files using Windows Explorer.",
+        "istrue": false
+      },
+      {
+        "statement": "Guess the password.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Altering the original evidence (even changing a timestamp) compromises its integrity and admissibility in court."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why should you NOT turn on a seized computer that is currently powered off?",
+    "options": [
+      {
+        "statement": "It might explode.",
+        "istrue": false
+      },
+      {
+        "statement": "Booting the OS modifies system files (timestamps, logs), altering the evidence.",
+        "istrue": true
+      },
+      {
+        "statement": "It uses too much electricity.",
+        "istrue": false
+      },
+      {
+        "statement": "The password might expire.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The boot process involves thousands of write operations to the disk, which changes the state of the evidence."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The process of creating an exact bit-by-bit copy of a storage device is called:",
+    "options": [
+      {
+        "statement": "File Copying",
+        "istrue": false
+      },
+      {
+        "statement": "Imaging / Acquisition",
+        "istrue": true
+      },
+      {
+        "statement": "Defragmentation",
+        "istrue": false
+      },
+      {
+        "statement": "Formatting",
+        "istrue": false
+      }
+    ],
+    "explanation": "Forensic imaging captures the entire drive, including deleted files and unallocated space, unlike a standard file copy."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What happens when you delete a file on a standard file system?",
+    "options": [
+      {
+        "statement": "The file content is immediately erased with zeros.",
+        "istrue": false
+      },
+      {
+        "statement": "The entry is removed from the file table, marking the space as available, but the data remains until overwritten.",
+        "istrue": true
+      },
+      {
+        "statement": "The hard drive shrinks.",
+        "istrue": false
+      },
+      {
+        "statement": "The file is encrypted.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Deleting a file typically only removes the pointer to the data. The actual bits remain on the disk, allowing recovery tools to find them."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which tool is specifically mentioned for recovering lost partitions and making non-booting disks bootable again?",
+    "options": [
+      {
+        "statement": "Photoshop",
+        "istrue": false
+      },
+      {
+        "statement": "TestDisk",
+        "istrue": true
+      },
+      {
+        "statement": "Microsoft Word",
+        "istrue": false
+      },
+      {
+        "statement": "Calculator",
+        "istrue": false
+      }
+    ],
+    "explanation": "TestDisk  is a powerful open-source tool used to recover lost partitions and repair filesystem structures."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'File Carving'?",
+    "options": [
+      {
+        "statement": "Physically cutting a hard drive.",
+        "istrue": false
+      },
+      {
+        "statement": "Recovering files based on their headers/footers from raw disk data, without relying on the file system table.",
+        "istrue": true
+      },
+      {
+        "statement": "Organizing files into folders.",
+        "istrue": false
+      },
+      {
+        "statement": "Compressing files.",
+        "istrue": false
+      }
+    ],
+    "explanation": "File carving searches the raw data stream for known file signatures (like the start of a JPEG) to reconstruct deleted files."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Metadata' in the context of a digital file?",
+    "options": [
+      {
+        "statement": "The filename only.",
+        "istrue": false
+      },
+      {
+        "statement": "Data about data (e.g., author, creation date, GPS location).",
+        "istrue": true
+      },
+      {
+        "statement": "A type of computer virus.",
+        "istrue": false
+      },
+      {
+        "statement": "The binary code of the program.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Metadata provides context. For example, a Word document contains hidden metadata about who created it and when."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How did metadata lead to the arrest of the BTK Killer?",
+    "options": [
+      {
+        "statement": "He posted his photo on Facebook.",
+        "istrue": false
+      },
+      {
+        "statement": "The Word document he sent contained metadata revealing his name ('Dennis') and the location (Church computer).",
+        "istrue": true
+      },
+      {
+        "statement": "He forgot to delete the file.",
+        "istrue": false
+      },
+      {
+        "statement": "He called the police.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dennis Rader thought deleting the file was enough, but he didn't realize the restored file contained metadata pointing directly to him."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Safe Delete' or 'Wiping'?",
+    "options": [
+      {
+        "statement": "Moving a file to the Recycle Bin.",
+        "istrue": false
+      },
+      {
+        "statement": "Overwriting the file's data with random patterns multiple times to prevent recovery.",
+        "istrue": true
+      },
+      {
+        "statement": "Hiding the file in a secure folder.",
+        "istrue": false
+      },
+      {
+        "statement": "Deleting the file while offline.",
+        "istrue": false
+      }
+    ],
+    "explanation": "To permanently destroy data, you must overwrite the magnetic or flash storage locations so that no trace of the original pattern remains."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the Wireless Hacking case study, why was the SD card considered the most critical evidence?",
+    "options": [
+      {
+        "statement": "It was the most expensive part.",
+        "istrue": false
+      },
+      {
+        "statement": "It acted as the 'brain' of the device, containing the OS, scripts, and logs.",
+        "istrue": true
+      },
+      {
+        "statement": "It was the easiest part to remove.",
+        "istrue": false
+      },
+      {
+        "statement": "The battery was dead.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The OrangePi board runs its OS and software from the SD card. Analyzing it reveals exactly what the device was programmed to do."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which Linux command is commonly used for forensic imaging (bit-by-bit copy)?",
+    "options": [
+      {
+        "statement": "cp",
+        "istrue": false
+      },
+      {
+        "statement": "dd",
+        "istrue": true
+      },
+      {
+        "statement": "ls",
+        "istrue": false
+      },
+      {
+        "statement": "mv",
+        "istrue": false
+      }
+    ],
+    "explanation": "`dd` is a low-level utility that copies raw data from one device to another (or to a file), preserving the exact bit structure."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why did the investigator mount the evidence image as 'Read-only'?",
+    "options": [
+      {
+        "statement": "To make it faster.",
+        "istrue": false
+      },
+      {
+        "statement": "To ensure the evidence is not accidentally modified during analysis.",
+        "istrue": true
+      },
+      {
+        "statement": "Because the file was locked.",
+        "istrue": false
+      },
+      {
+        "statement": "To save disk space.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Preserving the integrity of the evidence is paramount. Read-only mounting prevents any writes to the image file."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Reverse Engineering' in the context of the case study?",
+    "options": [
+      {
+        "statement": "Driving a car backwards.",
+        "istrue": false
+      },
+      {
+        "statement": "Decompiling the binary executable to understand its logic and source code.",
+        "istrue": true
+      },
+      {
+        "statement": "Deleting the software.",
+        "istrue": false
+      },
+      {
+        "statement": "Updating the software.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The investigator had only the compiled program (`mobile`). Reverse engineering allowed them to see the C code and understand its function."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What did the command `strings` reveal about the malicious binary?",
+    "options": [
+      {
+        "statement": "It showed the hacker's photo.",
+        "istrue": false
+      },
+      {
+        "statement": "It revealed human-readable text inside the file, such as 'gsm48' and 'mncc', indicating mobile network functionality.",
+        "istrue": true
+      },
+      {
+        "statement": "It showed nothing useful.",
+        "istrue": false
+      },
+      {
+        "statement": "It played a sound file.",
+        "istrue": false
+      }
+    ],
+    "explanation": "`strings` extracts printable characters from a binary file, often giving quick clues about what the program does or what libraries it uses."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'GHIDRA'?",
+    "options": [
+      {
+        "statement": "A three-headed monster.",
+        "istrue": false
+      },
+      {
+        "statement": "A free software reverse engineering suite developed by the NSA.",
+        "istrue": true
+      },
+      {
+        "statement": "A type of malware.",
+        "istrue": false
+      },
+      {
+        "statement": "A Linux distribution.",
+        "istrue": false
+      }
+    ],
+    "explanation": "GHIDRA  is a powerful tool used to decompile and analyze binary code, similar to IDA Pro."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What was the purpose of the 'Fake Base Station' discovered in the case?",
+    "options": [
+      {
+        "statement": "To improve signal quality for neighbors.",
+        "istrue": false
+      },
+      {
+        "statement": "To trick phones into connecting via 2G, steal their IMSI, and make fraudulent purchases.",
+        "istrue": true
+      },
+      {
+        "statement": "To provide free Wi-Fi.",
+        "istrue": false
+      },
+      {
+        "statement": "To jam police radios.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The device forced phones to downgrade to the insecure 2G protocol, captured their unique ID (IMSI), and used it to bill charges to the victim's account."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is an 'IMSI'?",
+    "options": [
+      {
+        "statement": "International Mobile Subscriber Identity (a unique ID for a SIM card).",
+        "istrue": true
+      },
+      {
+        "statement": "Internal Memory System Interface.",
+        "istrue": false
+      },
+      {
+        "statement": "Internet Message Service Index.",
+        "istrue": false
+      },
+      {
+        "statement": "A brand of phone.",
+        "istrue": false
+      }
+    ],
+    "explanation": "IMSI is the unique number stored inside a SIM card that identifies the subscriber to the mobile network."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How did the investigator confirm the 'fraudulent purchase' theory?",
+    "options": [
+      {
+        "statement": "By calling the hacker.",
+        "istrue": false
+      },
+      {
+        "statement": "By finding logs of SMS messages sent to Chinese numbers (+86) confirming transactions.",
+        "istrue": true
+      },
+      {
+        "statement": "By guessing.",
+        "istrue": false
+      },
+      {
+        "statement": "By buying the device online.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The logs provided the 'smoking gun' evidence: records of the device silently sending verification SMS messages to payment gateways."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Anti-Forensics'?",
+    "options": [
+      {
+        "statement": "A study against science.",
+        "istrue": false
+      },
+      {
+        "statement": "Techniques used to hamper investigation, such as covering circuits with epoxy or wiping logs.",
+        "istrue": true
+      },
+      {
+        "statement": "Recovering data quickly.",
+        "istrue": false
+      },
+      {
+        "statement": "Using a magnifying glass.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The criminals used epoxy resin to hide the hardware components, making it difficult for investigators to identify or reverse-engineer the device physically."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Broad Knowledge' (knowing a little of everything) important for a security professional?",
+    "options": [
+      {
+        "statement": "So you can talk to everyone.",
+        "istrue": false
+      },
+      {
+        "statement": "Because security issues can occur at any layer (Hardware, OS, Network, Web), so you need to understand the big picture.",
+        "istrue": true
+      },
+      {
+        "statement": "It isn't; specialization is better.",
+        "istrue": false
+      },
+      {
+        "statement": "To get a promotion.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Security is holistic. Solving the case required knowledge of electronics (hardware), Linux (OS), networking (protocols), and coding (software)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does 'EXIF' data in a photograph potentially reveal?",
+    "options": [
+      {
+        "statement": "The person's name.",
+        "istrue": false
+      },
+      {
+        "statement": "GPS coordinates (Geotags) of where the photo was taken.",
+        "istrue": true
+      },
+      {
+        "statement": "The camera's battery level.",
+        "istrue": false
+      },
+      {
+        "statement": "The price of the camera.",
+        "istrue": false
+      }
+    ],
+    "explanation": "EXIF tags often store location data, which can compromise privacy if not stripped before sharing."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which tool is used for recovering deleted files on Linux Ext3/4 filesystems specifically?",
+    "options": [
+      {
+        "statement": "Notepad",
+        "istrue": false
+      },
+      {
+        "statement": "debugfs",
+        "istrue": true
+      },
+      {
+        "statement": "Paint",
+        "istrue": false
+      },
+      {
+        "statement": "Excel",
+        "istrue": false
+      }
+    ],
+    "explanation": "debugfs is an interactive file system debugger for ext2/3/4 filesystems, allowing manual recovery of deleted inodes."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Osmocom'?",
+    "options": [
+      {
+        "statement": "A brand of soap.",
+        "istrue": false
+      },
+      {
+        "statement": "Open Source Mobile Communications (software for implementing mobile network protocols).",
+        "istrue": true
+      },
+      {
+        "statement": "A computer virus.",
+        "istrue": false
+      },
+      {
+        "statement": "A type of coffee.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The investigation revealed the device was running Osmocom software to simulate a GSM base station."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The case study mentions 'Carrier Billing'. What is this?",
+    "options": [
+      {
+        "statement": "Billing for shipping packages.",
+        "istrue": false
+      },
+      {
+        "statement": "Charging purchases (like apps or game items) directly to the mobile phone bill.",
+        "istrue": true
+      },
+      {
+        "statement": "A fee for carrying the phone.",
+        "istrue": false
+      },
+      {
+        "statement": "A discount for students.",
+        "istrue": false
+      }
+    ],
+    "explanation": "This was the monetization method. The criminals bought digital goods using the victim's phone number, and the cost appeared on the victim's monthly bill."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What did the file `rc.local` tell the investigator?",
+    "options": [
+      {
+        "statement": "The time zone of the device.",
+        "istrue": false
+      },
+      {
+        "statement": "Which scripts or programs are set to run automatically when the system boots up.",
+        "istrue": true
+      },
+      {
+        "statement": "The password for the Wi-Fi.",
+        "istrue": false
+      },
+      {
+        "statement": "The battery percentage.",
+        "istrue": false
+      }
+    ],
+    "explanation": "`rc.local` is a traditional script file in Linux used to execute commands at the end of the boot process, showing the investigator the device's startup routine."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Patience' listed as a key quality for security professionals?",
+    "options": [
+      {
+        "statement": "Because computers are slow.",
+        "istrue": false
+      },
+      {
+        "statement": "Because investigations and learning complex systems take time; results are rarely instant.",
+        "istrue": true
+      },
+      {
+        "statement": "Because you have to wait for the bus.",
+        "istrue": false
+      },
+      {
+        "statement": "To tolerate annoying users.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Like the Yoda analogy, mastery requires long-term dedication and practice, not just quick tricks."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the risk of using '2G' networks mentioned in the case?",
+    "options": [
+      {
+        "statement": "They are too fast.",
+        "istrue": false
+      },
+      {
+        "statement": "They lack mutual authentication (the phone trusts the tower blindly), making them vulnerable to fake base stations.",
+        "istrue": true
+      },
+      {
+        "statement": "They drain battery life.",
+        "istrue": false
+      },
+      {
+        "statement": "They don't support voice calls.",
+        "istrue": false
+      }
+    ],
+    "explanation": "In 2G, the network authenticates the phone, but the phone does not authenticate the network, allowing any fake tower to impersonate a real one."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which file system was used on the SD card in the case study?",
+    "options": [
+      {
+        "statement": "NTFS",
+        "istrue": false
+      },
+      {
+        "statement": "FAT32",
+        "istrue": false
+      },
+      {
+        "statement": "Ext4 (Linux)",
+        "istrue": true
+      },
+      {
+        "statement": "HFS+",
+        "istrue": false
+      }
+    ],
+    "explanation": "The device was running Armbian (a Linux distro), which typically uses the Ext4 filesystem."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the term 'Bit-by-bit' imply in forensic imaging?",
+    "options": [
+      {
+        "statement": "Copying only the important bits.",
+        "istrue": false
+      },
+      {
+        "statement": "Copying every single bit from the source drive, including empty space and deleted data.",
+        "istrue": true
+      },
+      {
+        "statement": "Copying files one by one.",
+        "istrue": false
+      },
+      {
+        "statement": "Using a drill to extract bits.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A bit-stream image is an exact duplicate of the physical media, essential for recovering data that the operating system no longer sees."
+  }
+]

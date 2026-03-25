@@ -1,0 +1,200 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ภาพดิจิทัลที่มีสีเป็นขาวดำ (black‑white) มีค่า bit depth เท่ากับเท่าไร",
+    "options": [
+      { "statement": "2", "istrue": false },
+      { "statement": "4", "istrue": false },
+      { "statement": "8", "istrue": false },
+      { "statement": "1", "istrue": true }
+    ],
+    "explanation": "ภาพขาว‑ดำมีเพียง 2 ค่า (ดำ/ขาว) จึงต้องการ 1 บิตเพื่อแทนสถานะทั้งสอง บิตเดปธ์จึงเท่ากับ 1 ส่วนค่า 2 4 8 บิตใช้กับภาพที่มีระดับสีเทาหรือสีมากกว่า 2 ค่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำว่า JPEG ย่อมาจากคำว่าอะไร",
+    "options": [
+      { "statement": "Joint Photographic Experts Group", "istrue": true },
+      { "statement": "Joint Photon Experts Group", "istrue": false },
+      { "statement": "Joint Photoshop Excellent Group", "istrue": false },
+      { "statement": "Joint Photo Excellent Group", "istrue": false }
+    ],
+    "explanation": "JPEG เป็นมาตรฐานการบีบอัดภาพนิ่งที่กำหนดโดยคณะ “Joint Photographic Experts Group” ตัวสะกดอื่นถูกปรับคำจนไม่ตรงชื่อคณะจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นลักษณะไฟล์ที่เหมาะกับการบีบอัดด้วย lossless compression มากที่สุด",
+    "options": [
+      { "statement": "ไฟล์เสียง", "istrue": false },
+      { "statement": "ไฟล์เอกสารรัฐธรรมนูญ", "istrue": true },
+      { "statement": "ไฟล์ภาพนิ่ง", "istrue": false },
+      { "statement": "ไฟล์ภาพยนตร์", "istrue": false }
+    ],
+    "explanation": "เอกสารข้อความต้องคงสาระครบถ้วนแม้ 1 อักษรจึงควรใช้การบีบอัดแบบ lossless เพื่อไม่สูญเสียข้อมูล ขณะที่เสียง ภาพนิ่ง หรือภาพยนตร์มักยอมเสียข้อมูลบางส่วนได้เพื่ออัตราบีบอัดสูงกว่า (lossy)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นคุณสมบัติของ lossless compression",
+    "options": [
+      { "statement": "การบีบอัดข้อมูลไม่มีโอกาสสูญเสียบิตข้อมูลเลยแม้แต่ส่วนเดียว", "istrue": true },
+      { "statement": "การบีบอัดข้อมูลมีโอกาสสูญเสียบิตข้อมูลจำนวนมาก", "istrue": false },
+      { "statement": "การบีบอัดข้อมูลมีโอกาสสูญเสียบิตข้อมูลบางส่วนแต่เป็นจำนวนน้อย", "istrue": false },
+      { "statement": "การบีบอัดข้อมูลมีโอกาสสูญเสียบิตข้อมูลบางส่วนแต่จะทดแทนด้วยข้อมูลอื่นที่ใกล้เคียงกัน", "istrue": false }
+    ],
+    "explanation": "หลักของ lossless คือเมื่อคลายบีบอัดต้องได้ข้อมูลเดิมทุกบิต ตัวเลือกอื่นกล่าวถึงการสูญเสียข้อมูลซึ่งเป็นคุณสมบัติของ lossy compression"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นสิ่งที่ไม่ใช่คุณสมบัติของ Huffman tree",
+    "options": [
+      { "statement": "ตัวอักษรที่ต้องการบีบอัดจะอยู่ในตำแหน่ง leave ของ tree เสมอ", "istrue": false },
+      { "statement": "ตัวอักษรที่พิจารณาเข้าสู่ tree ก่อนคือตัวอักษรที่มีความถี่ในการเกิดต่ำสุด", "istrue": false },
+      { "statement": "ตัวอักษรที่พิจารณาเข้าสู่ tree หลังสุดคือตัวอักษรที่มีความถี่ในการเกิดสูงสุด", "istrue": false },
+      { "statement": "ทุกตัวอักษรที่เกิดการบีบอัดจะเป็นตัวอักษรที่มีความยาวของรหัสเท่ากันทุกตัวอักษร", "istrue": true }
+    ],
+    "explanation": "รหัส Huffman ให้ความยาวโค้ดสั้นกับตัวอักษรที่เกิดบ่อย จึง “ไม่เท่ากันทุกตัว” ตัวเลือกอื่น ๆ เป็นคุณสมบัติตามกระบวนการสร้างต้นไม้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นคุณสมบัติของ P‑frame",
+    "options": [
+      { "statement": "มีความเป็นอิสระจาก I‑frame ต่าง ๆ", "istrue": false },
+      { "statement": "มีการนำข้อมูลปริมาณมากเพื่อนำมาใช้ในการบีบอัด", "istrue": false },
+      { "statement": "สร้างจาก I‑frame และ P‑frame ที่ปรากฏตามมา", "istrue": false },
+      { "statement": "มีความเกี่ยวข้องกับ I‑frame หรือ P‑frame", "istrue": true }
+    ],
+    "explanation": "P‑frame อาศัยการพยากรณ์จาก I‑frame หรือ P‑frame ก่อนหน้า (prediction) จึง “เกี่ยวข้อง” กับเฟรมอื่น ส่วนคำตอบอื่นขัดกับหลักการ (เช่น อิสระเหมือน I‑frame หรืออิงกับเฟรมถัดไปซึ่งผิดทิศทาง)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ภาพดิจิทัลที่มีสีเทา (gray) มีค่า bit depth เท่ากับเท่าไร",
+    "options": [
+      { "statement": "2", "istrue": false },
+      { "statement": "4", "istrue": false },
+      { "statement": "1", "istrue": false },
+      { "statement": "8", "istrue": true }
+    ],
+    "explanation": "ภาพโทนเทามาตรฐานใช้ 8 บิต/พิกเซล (0‑255 ระดับความสว่าง) ส่วนค่าบิตเดปธ์อื่นใช้กับภาพที่มีระดับสีเทาน้อยหรือภาพขาว‑ดำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้ไม่ใช่วิธีการบีบอัดข้อมูลแบบ lossless compression",
+    "options": [
+      { "statement": "predictive coding", "istrue": true },
+      { "statement": "dictionary coding", "istrue": false },
+      { "statement": "run‑length coding", "istrue": false },
+      { "statement": "huffman coding", "istrue": false }
+    ],
+    "explanation": "Predictive coding มักใช้การประมาณค่าและการควอนไทซ์ จึงมักเป็น lossy ในทางปฏิบัติ ส่วน dictionary, run‑length และ Huffman เป็นเทคนิค lossless"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดกล่าวถูกต้องเกี่ยวกับเฟรมในวีดิโอ",
+    "options": [
+      { "statement": "B‑frame ไม่มีความเกี่ยวข้องกับ B‑frame ใด ๆ", "istrue": true },
+      { "statement": "P‑frame มีความสัมพันธ์กับ I‑frame หรือ P‑frame ที่ตามมา", "istrue": false },
+      { "statement": "I‑frame จะปรากฏเพียงครั้งเดียวคือเฟรมแรกของวีดิโอ", "istrue": false },
+      { "statement": "B‑frame มีข้อมูลที่น้อยที่สุดเมื่อเทียบเฟรมอื่น ๆ", "istrue": false }
+    ],
+    "explanation": "B‑frame เป็นเฟรมที่พยากรณ์จากเฟรมก่อนหน้า (I‑frame หรือ P‑frame) และจากเฟรมหลังหน้า แต่ไม่เคยอ้างอิงไปยัง B‑frame อื่น จึงไม่มีความเกี่ยวข้องกับ B‑frame ตัวอื่น ส่วนตัวเลือกที่เหลือขัดกับหลักการของ I‑, P‑, และ B‑frame"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การส่งแบบ real‑time interactive audio/video เป็นการสื่อสารแบบใด",
+    "options": [
+      { "statement": "Circuit‑switched network", "istrue": false },
+      { "statement": "IP network", "istrue": false },
+      { "statement": "Packet‑switched network", "istrue": true },
+      { "statement": "Autonomous network", "istrue": false }
+    ],
+    "explanation": "เสียง/ภาพโต้ตอบทันที (VoIP, วิดีโอคอล) ใช้สัญญาณแพ็กเก็ตผ่านเครือข่าย IP ที่เป็น packet‑switched ไม่ใช่วงจรเฉพาะ (circuit‑switched)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "I‑frame ของไฟล์วีดิโอไม่มีลักษณะอย่างไร",
+    "options": [
+      { "statement": "การปรากฏของเฟรมจะปรากฏในเฟรมแรกและเฟรมสุดท้ายเท่านั้น", "istrue": true },
+      { "statement": "มีความเป็นอิสระจากเฟรมอื่น", "istrue": false },
+      { "statement": "การปรากฏของเฟรมจะปรากฏเป็นช่วง ๆ ที่มีระยะเวลาการปรากฏที่แน่นอน", "istrue": false },
+      { "statement": "การปรากฏของเฟรมจะปรากฏเป็นช่วงเวลาเพื่อแสดงให้เห็นถึงการเปลี่ยนแปลงที่เกิดขึ้นในเฟรมอย่างทันที", "istrue": false }
+    ],
+    "explanation": "I‑frame สามารถวางแทรกได้หลายตำแหน่งตามกลยุทธ์บีบอัด ไม่จำกัดเฉพาะเฟรมแรก‑สุดท้าย ดังนั้นข้อความที่ว่า “ปรากฏในเฟรมแรกและสุดท้ายเท่านั้น” จึงไม่ใช่คุณสมบัติของ I‑frame"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Temporal compression หมายถึงการบีบอัดในลักษณะใด",
+    "options": [
+      { "statement": "เฟรมหลาย ๆ เฟรมมีการบีบอัดรวมเฟรมกัน", "istrue": false },
+      { "statement": "เฟรมที่มีความซ้ำซ้อนจะถูกตัดทิ้ง", "istrue": true },
+      { "statement": "เฟรมจะถูกตัดตามการสุ่มเฟรมต่าง ๆ อย่างอิสระ", "istrue": false },
+      { "statement": "เฟรมแต่ละเฟรมมีการบีบอัดแยกเฟรมกัน", "istrue": false }
+    ],
+    "explanation": "Temporal compression มุ่งลดความซ้ำซ้อนระหว่างเฟรมต่อเนื่องกัน โดยจะตัดเฟรมหรือส่วนที่เหมือนกันออกแล้วบีบอัดเฉพาะความเปลี่ยนแปลง จึงเป็นการ ‘ตัดทิ้ง’ เฟรมที่ซ้ำซ้อน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อมูลใดที่บีบอัดแล้วมีค่าดังนี้ 8 3 2 0",
+    "options": [
+      { "statement": "11111111011101100", "istrue": false },
+      { "statement": "00000000100010011", "istrue": true },
+      { "statement": "000000001110011", "istrue": false },
+      { "statement": "0000000011100101", "istrue": false }
+    ],
+    "explanation": "ค่ารัน 8 3 2 0 หมายถึงศูนย์ 8 ตัว→1→ศูนย์ 3 ตัว→1→ศูนย์ 2 ตัว→1→ศูนย์ 0 ตัว→1 ผลลัพธ์เลขฐานสองจึงเป็น 00000000100010011 ซึ่งตรงกับตัวเลือกที่ 2"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่การสตรีมวีดิโอหรือออดิโอที่มีการเก็บไว้ในเครื่องให้บริการ",
+    "options": [
+      { "statement": "ไฟล์มัลติมีเดียจำเป็นต้องมีการเก็บไว้ ณ เครื่องเว็บที่ให้บริการ", "istrue": false },
+      { "statement": "ผู้เรียกใช้ไฟล์มัลติมีเดียเรียกใช้จากเครือข่ายอินเทอร์เน็ตผ่านเบาว์นเซอร์", "istrue": false },
+      { "statement": "วีดิโอหรือออดิโอไม่มีการบีบอัดและเก็บบนเครื่องให้บริการก่อนการเรียกใช้งาน", "istrue": true },
+      { "statement": "วีดิโอหรือออดิโอมีการบีบอัดและเก็บบนเครื่องให้บริการก่อนการเรียกใช้งาน", "istrue": false }
+    ],
+    "explanation": "บริการสตรีมปกติจะบีบอัดไฟล์ก่อนเก็บ หากไม่มีการบีบอัดจะใช้แบนด์วิดท์มากไม่เหมาะกับสตรีมมิง ตัวเลือกนี้จึงไม่ใช่ลักษณะสตรีมที่ถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กำหนดข้อมูล AAAPPPPXXXXXYY ถ้าบีบอัดด้วย run‑length coding จะได้รูปใด",
+    "options": [
+      { "statement": "3A4P5X2Y", "istrue": true },
+      { "statement": "A:P:X:Y", "istrue": false },
+      { "statement": "A3P4X5Y2", "istrue": false },
+      { "statement": "3A:4P:5X:2Y", "istrue": false }
+    ],
+    "explanation": "Run‑length จะนับจำนวนซ้ำต่อท้ายสัญลักษณ์ → A 3, P 4, X 5, Y 2 จึงได้ 3A4P5X2Y รูปแบบอื่นเรียงสลับหรือเว้นวรรคไม่ถูกหลัก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Huffman tree สร้างรหัส (0,1) จากการพิจารณาค่าใด",
+    "options": [
+      { "statement": "ผลรวมของค่าน้ำหนักของตัวอักษรแต่ละตัวโดยกำหนดให้ Z มีค่าน้ำหนักต่ำสุดและ A มีค่าน้ำหนักสูงสุด", "istrue": false },
+      { "statement": "ผลรวมของน้ำหนักของตัวอักษรแต่ละตัวที่คิดจากตำแหน่งแรกของตัวอักษรที่เกิดในแฟ้มข้อมูล", "istrue": false },
+      { "statement": "ความถี่ในการเกิดตัวอักษรแต่ละตัวในเนื้อหาภายในแฟ้มข้อมูล", "istrue": true },
+      { "statement": "ผลรวมของค่าน้ำหนักของตัวอักษรแต่ละตัวโดยกำหนดให้ A มีค่าน้ำหนักต่ำสุดและ Z มีค่าน้ำหนักสูงสุด", "istrue": false }
+    ],
+    "explanation": "Huffman ใช้ ‘ความถี่การเกิด’ เป็นน้ำหนักเพื่อสร้างต้นไม้ รหัสสั้นให้ตัวอักษรที่พบถี่สูง ตัวเลือกอื่นกล่าวถึงลำดับตัวอักษรหรือเงื่อนไขกำหนดค่าที่ไม่เกี่ยวกับขั้นตอนจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ภาพดิจิทัลที่มีสี (color) จะมีค่า bit depth เท่ากับเท่าไร",
+    "options": [
+      { "statement": "2", "istrue": false },
+      { "statement": "24", "istrue": true },
+      { "statement": "8", "istrue": false },
+      { "statement": "4", "istrue": false }
+    ],
+    "explanation": "ภาพสี 24‑บิต (8 บิตต่อช่อง R/G/B) เป็นมาตรฐาน RGB True‑color ให้เฉดสี ~16.7 ล้านสี ค่าบิตเดปธ์อื่นใช้กับโหมดสีจำกัด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่เฟรมข้อมูลจากไฟล์วีดิโอ",
+    "options": [
+      { "statement": "P‑frames", "istrue": false },
+      { "statement": "I‑frames", "istrue": false },
+      { "statement": "A‑frames", "istrue": true },
+      { "statement": "B‑frames", "istrue": false }
+    ],
+    "explanation": "เฟรมในมาตรฐานวิดีโอแบ่งเป็น I‑frame, P‑frame, B‑frame ไม่มีคำว่า A‑frame กำหนดไว้ จึงไม่ใช่เฟรมประเภทหนึ่งของวิดีโอ"
+  }
+]

@@ -1,0 +1,464 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which condition in memory protection using base register and limit register causes an addressing error?",
+    "options": [
+      {
+        "statement": "base > address",
+        "istrue": false
+      },
+      {
+        "statement": "address = base + limit",
+        "istrue": false
+      },
+      {
+        "statement": "address > base",
+        "istrue": false
+      },
+      {
+        "statement": "Both B and C, base + limit < address",
+        "istrue": true
+      }
+    ],
+    "explanation": "An addressing error occurs when the logical address exceeds the base + limit, violating the protection boundary."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the disadvantage of address binding?",
+    "options": [
+      {
+        "statement": "Compiler cannot check run time errors",
+        "istrue": false
+      },
+      {
+        "statement": "Compiler cannot use a shared library",
+        "istrue": false
+      },
+      {
+        "statement": "Process must be placed at a fixed location in memory",
+        "istrue": true
+      },
+      {
+        "statement": "Process cannot allocate more memory",
+        "istrue": false
+      }
+    ],
+    "explanation": "Static address binding restricts processes to fixed memory locations, limiting flexibility."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is dynamic linking?",
+    "options": [
+      {
+        "statement": "A process is linked to a library only when it is needed",
+        "istrue": true
+      },
+      {
+        "statement": "Frame is allocated only when it is needed",
+        "istrue": false
+      },
+      {
+        "statement": "Frame is swapped in and out when needed",
+        "istrue": false
+      },
+      {
+        "statement": "Frame is shared between processes only when needed",
+        "istrue": false
+      }
+    ],
+    "explanation": "Dynamic linking loads and links libraries at runtime only when required, saving memory."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a shared library?",
+    "options": [
+      {
+        "statement": "A parent shares a system library with child processes",
+        "istrue": false
+      },
+      {
+        "statement": "Only one copy of a system library is loaded and shared among processes",
+        "istrue": true
+      },
+      {
+        "statement": "Multiple libraries share the same executable code",
+        "istrue": false
+      },
+      {
+        "statement": "Libraries share CPU and memory",
+        "istrue": false
+      }
+    ],
+    "explanation": "Shared libraries allow multiple processes to use the same code loaded once in memory."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is swap out?",
+    "options": [
+      {
+        "statement": "Moving a process from memory to backing store",
+        "istrue": true
+      },
+      {
+        "statement": "Moving a process from backing store to memory",
+        "istrue": false
+      },
+      {
+        "statement": "Moving from logical to physical memory",
+        "istrue": false
+      },
+      {
+        "statement": "Moving from physical to logical memory",
+        "istrue": false
+      }
+    ],
+    "explanation": "Swapping out means transferring a process from main memory to backing store to free space."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the role of the dispatcher?",
+    "options": [
+      {
+        "statement": "Execute a process",
+        "istrue": false
+      },
+      {
+        "statement": "Swap in",
+        "istrue": false
+      },
+      {
+        "statement": "Swap out",
+        "istrue": false
+      },
+      {
+        "statement": "All of the above",
+        "istrue": true
+      }
+    ],
+    "explanation": "The dispatcher handles context switching, swapping, and process execution control."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which process should NOT be swapped out from memory?",
+    "options": [
+      {
+        "statement": "Process with many parent processes",
+        "istrue": true
+      },
+      {
+        "statement": "Process with low CPU usage",
+        "istrue": false
+      },
+      {
+        "statement": "Background process",
+        "istrue": false
+      },
+      {
+        "statement": "Idle process",
+        "istrue": false
+      }
+    ],
+    "explanation": "Processes with many parents should remain to avoid complex state restoration when swapped back."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the swapping policy in mobile OS such as Android and iOS?",
+    "options": [
+      {
+        "statement": "No swapping",
+        "istrue": true
+      },
+      {
+        "statement": "FIFO swapping",
+        "istrue": false
+      },
+      {
+        "statement": "LRU swapping",
+        "istrue": false
+      },
+      {
+        "statement": "Aging-based swapping",
+        "istrue": false
+      }
+    ],
+    "explanation": "Mobile operating systems avoid swapping to prolong flash storage lifespan."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the formula for translating logical address to physical address (contiguous allocation)?",
+    "options": [
+      {
+        "statement": "Physical address = base + logical address",
+        "istrue": true
+      },
+      {
+        "statement": "Physical address = limit + base",
+        "istrue": false
+      },
+      {
+        "statement": "Physical address = base - offset",
+        "istrue": false
+      },
+      {
+        "statement": "Physical address = offset + limit",
+        "istrue": false
+      }
+    ],
+    "explanation": "In contiguous memory allocation, the physical address is computed as base plus logical address."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Given N allocated blocks, what is the 50-percent rule?",
+    "options": [
+      {
+        "statement": "Another N/3 blocks will be lost to fragmentation",
+        "istrue": true
+      },
+      {
+        "statement": "Half the blocks are wasted",
+        "istrue": false
+      },
+      {
+        "statement": "Fragmentation is always zero",
+        "istrue": false
+      },
+      {
+        "statement": "All memory is contiguous",
+        "istrue": false
+      }
+    ],
+    "explanation": "The 50-percent rule states that for every N allocated blocks, about N/3 are lost to fragmentation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Given a square paper (1 m²), which cut results in external fragmentation?",
+    "options": [
+      {
+        "statement": "Cut to rectangle 20×25 cm²",
+        "istrue": false
+      },
+      {
+        "statement": "Cut to triangle 3×4×5 cm²",
+        "istrue": false
+      },
+      {
+        "statement": "Cut to circle radius 10 cm²",
+        "istrue": false
+      },
+      {
+        "statement": "Both triangle and circle",
+        "istrue": true
+      }
+    ],
+    "explanation": "Irregularly shaped pieces (triangle or circle) represent unusable leftover space analogous to external fragmentation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is NOT correct about contiguous allocation?",
+    "options": [
+      {
+        "statement": "Occupying contiguous blocks on the disk",
+        "istrue": false
+      },
+      {
+        "statement": "Minimizing disk head movement",
+        "istrue": false
+      },
+      {
+        "statement": "Causing internal fragmentation",
+        "istrue": true
+      },
+      {
+        "statement": "Suitable for DVD-ROM",
+        "istrue": false
+      }
+    ],
+    "explanation": "Contiguous allocation causes external, not internal fragmentation."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the formula for translating logical address to physical address (segmentation)?",
+    "options": [
+      {
+        "statement": "Physical address = base[s] + d",
+        "istrue": true
+      },
+      {
+        "statement": "Physical address = limit[s] + d",
+        "istrue": false
+      },
+      {
+        "statement": "Physical address = s + d",
+        "istrue": false
+      },
+      {
+        "statement": "Physical address = base + offset",
+        "istrue": false
+      }
+    ],
+    "explanation": "In segmentation, physical address is obtained by adding the base of the segment to the offset d."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the advantage of paging?",
+    "options": [
+      {
+        "statement": "Non-contiguous physical address space",
+        "istrue": true
+      },
+      {
+        "statement": "Reduced memory access time",
+        "istrue": false
+      },
+      {
+        "statement": "Reduced page fault",
+        "istrue": false
+      },
+      {
+        "statement": "Contiguous storage",
+        "istrue": false
+      }
+    ],
+    "explanation": "Paging allows non-contiguous allocation of physical memory while providing contiguous logical addresses."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which device stores the page table?",
+    "options": [
+      {
+        "statement": "Memory",
+        "istrue": true
+      },
+      {
+        "statement": "Cache",
+        "istrue": false
+      },
+      {
+        "statement": "CPU",
+        "istrue": false
+      },
+      {
+        "statement": "Disk",
+        "istrue": false
+      }
+    ],
+    "explanation": "The page table is kept in main memory, sometimes with part cached in the TLB."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does hit ratio = 80% mean?",
+    "options": [
+      {
+        "statement": "The desired page number is found in the TLB 80% of the time",
+        "istrue": true
+      },
+      {
+        "statement": "80% of memory is used",
+        "istrue": false
+      },
+      {
+        "statement": "80% page faults occur",
+        "istrue": false
+      },
+      {
+        "statement": "20% of accesses fail",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hit ratio refers to the percentage of address translations found in the TLB without memory access."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the valid/invalid bit signify when it is set to valid?",
+    "options": [
+      {
+        "statement": "The associated page is recently used but not modified",
+        "istrue": true
+      },
+      {
+        "statement": "The page is on disk",
+        "istrue": false
+      },
+      {
+        "statement": "The page is invalid",
+        "istrue": false
+      },
+      {
+        "statement": "The page is swapped out",
+        "istrue": false
+      }
+    ],
+    "explanation": "The valid bit indicates that the corresponding page is in memory and accessible."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the advantage of hierarchical paging?",
+    "options": [
+      {
+        "statement": "New process does not need to allocate the whole page table",
+        "istrue": false
+      },
+      {
+        "statement": "Page table can be non-contiguous in main memory",
+        "istrue": false
+      },
+      {
+        "statement": "Less translation steps",
+        "istrue": false
+      },
+      {
+        "statement": "Both A and B != less translation steps",
+        "istrue": true
+      }
+    ],
+    "explanation": "Hierarchical paging reduces memory usage by allocating page tables on demand and allows non-contiguous storage."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the maximum number of pages per process?",
+    "options": [
+      {
+        "statement": "Not 2^12",
+        "istrue": true
+      },
+      {
+        "statement": "2^10",
+        "istrue": false
+      },
+      {
+        "statement": "2^14",
+        "istrue": false
+      },
+      {
+        "statement": "2^16",
+        "istrue": false
+      }
+    ],
+    "explanation": "The question emphasizes that the number of pages is not 2^12, depending on address space configuration.",
+    "image": "random/OS/OS63-8/messageImage_1763914516349.jpg"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the size of an inner page table?",
+    "options": [
+      {
+        "statement": "2^10",
+        "istrue": true
+      },
+      {
+        "statement": "2^12",
+        "istrue": false
+      },
+      {
+        "statement": "2^8",
+        "istrue": false
+      },
+      {
+        "statement": "2^14",
+        "istrue": false
+      }
+    ],
+    "explanation": "In two-level paging, each inner page table typically holds 2^10 entries.",
+    "image": "random/OS/OS63-8/messageImage_1763914516349.jpg"
+  }
+]

@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Which statement best describes the definition of a 'Secure System' in the context of security policy?",
+    "options": [
+      {
+        "statement": "A system that encrypts all data to prevent unauthorized access.",
+        "istrue": false
+      },
+      {
+        "statement": "A system that starts in an authorized state and cannot transition to an unauthorized state.",
+        "istrue": true
+      },
+      {
+        "statement": "A system where all users have Administrator privileges.",
+        "istrue": false
+      },
+      {
+        "statement": "A system that automatically deletes data when a breach is detected.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A security policy partitions system states into 'authorized' and 'unauthorized'. A secure system is one that begins in an authorized state and never enters an unauthorized state."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the 'Examination Paper' scenario, if a teacher puts exam papers in a sealed envelope and then burns them, which aspect of the CIA Triad is primarily violated?",
+    "options": [
+      {
+        "statement": "Confidentiality",
+        "istrue": false
+      },
+      {
+        "statement": "Integrity",
+        "istrue": false
+      },
+      {
+        "statement": "Availability",
+        "istrue": true
+      },
+      {
+        "statement": "Authentication",
+        "istrue": false
+      }
+    ],
+    "explanation": "Burning the papers ensures no one reads them (Confidentiality) or alters them (Integrity), but it destroys the ability for students to access/take the exam, violating Availability."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which principle of the CIA Triad is concerned with determining 'Who has the right to alter or modify data'?",
+    "options": [
+      {
+        "statement": "Confidentiality",
+        "istrue": false
+      },
+      {
+        "statement": "Integrity",
+        "istrue": true
+      },
+      {
+        "statement": "Availability",
+        "istrue": false
+      },
+      {
+        "statement": "Authorization",
+        "istrue": false
+      }
+    ],
+    "explanation": "Integrity ensures that data is accurate and can only be modified (written/altered) by authorized subjects."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The Mandatory Access Control (MAC) model operates on the assumption that:",
+    "options": [
+      {
+        "statement": "Users are trustworthy and know best how to protect their data.",
+        "istrue": false
+      },
+      {
+        "statement": "Users are untrustworthy, so security decisions must be centralized and enforced by the system/admin.",
+        "istrue": true
+      },
+      {
+        "statement": "Security permissions should be based on the time of day.",
+        "istrue": false
+      },
+      {
+        "statement": "Access is determined by a vote among users.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MAC relies on a central authority (Admin) to define strict policies (like security labels) because it assumes individual users cannot be trusted to manage security."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In a Discretionary Access Control (DAC) model, who is responsible for defining access permissions for a file?",
+    "options": [
+      {
+        "statement": " The System Administrator only.",
+        "istrue": false
+      },
+      {
+        "statement": "The Creator/Owner of the file.",
+        "istrue": true
+      },
+      {
+        "statement": "The Human Resources department.",
+        "istrue": false
+      },
+      {
+        "statement": "The government.",
+        "istrue": false
+      }
+    ],
+    "explanation": "DAC is based on the idea that the data owner is responsible for it and has the discretion to grant or deny access to others."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which scenario is the best example of Role-Based Access Control (RBAC)?",
+    "options": [
+      {
+        "statement": "A user right-clicks a folder and selects 'Share with John'.",
+        "istrue": false
+      },
+      {
+        "statement": "A hospital system grants access to patient records based on whether the user is a 'Doctor', 'Nurse', or 'Janitor'.",
+        "istrue": true
+      },
+      {
+        "statement": "A military database restricts access to files labeled 'Top Secret'.",
+        "istrue": false
+      },
+      {
+        "statement": "A website allows login using Facebook.",
+        "istrue": false
+      }
+    ],
+    "explanation": "RBAC assigns permissions to abstract 'Roles' (like Doctor or Manager) rather than individual users. Users inherit permissions by being assigned to a role."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a major weakness of the Mandatory Access Control (MAC) model?",
+    "options": [
+      {
+        "statement": "It is too easy for users to accidentally share files.",
+        "istrue": false
+      },
+      {
+        "statement": "It lacks flexibility and context awareness (e.g., a high-ranking spy could access all cases, even unrelated ones).",
+        "istrue": true
+      },
+      {
+        "statement": "It is not secure enough for military use.",
+        "istrue": false
+      },
+      {
+        "statement": "It relies too much on user discretion.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MAC is rigid. It grants access based on clearance levels (labels) but ignores context or 'need-to-know', potentially allowing high-level users to see data irrelevant to their current task."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary vulnerability of Discretionary Access Control (DAC)?",
+    "options": [
+      {
+        "statement": "It is too difficult to implement on personal computers.",
+        "istrue": false
+      },
+      {
+        "statement": "It relies on users making good decisions; a user might accidentally grant access to everyone or be tricked by a Trojan.",
+        "istrue": true
+      },
+      {
+        "statement": "It does not allow users to share files.",
+        "istrue": false
+      },
+      {
+        "statement": "It requires a complex central server.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Since DAC trusts the user, a naive user can set permissions to 'Everyone' or execute a Trojan that inherits their permissions to steal data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which modern access control model uses conditional logic such as 'User Role + Time of Day + Device Type' to grant access?",
+    "options": [
+      {
+        "statement": "DAC (Discretionary Access Control)",
+        "istrue": false
+      },
+      {
+        "statement": "MAC (Mandatory Access Control)",
+        "istrue": false
+      },
+      {
+        "statement": "ABAC (Attribute-Based Access Control)",
+        "istrue": true
+      },
+      {
+        "statement": "RBAC (Role-Based Access Control)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ABAC is the most flexible model, allowing policies based on multiple attributes (Subject, Object, Environment) combined together."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Zero Trust Architecture' operates on which core philosophy?",
+    "options": [
+      {
+        "statement": "Trust everyone inside the firewall.",
+        "istrue": false
+      },
+      {
+        "statement": "Never trust, always verify.",
+        "istrue": true
+      },
+      {
+        "statement": "Trust users who have strong passwords.",
+        "istrue": false
+      },
+      {
+        "statement": "Trust devices that are corporate-owned.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Zero Trust assumes that no user or device—even inside the corporate network—should be trusted by default. Every access request must be verified."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In an Access Control Matrix, what do the rows and columns typically represent?",
+    "options": [
+      {
+        "statement": "Rows = Files, Columns = Users",
+        "istrue": false
+      },
+      {
+        "statement": "Rows = Subjects (Users), Columns = Objects (Resources)",
+        "istrue": true
+      },
+      {
+        "statement": "Rows = Time, Columns = Actions",
+        "istrue": false
+      },
+      {
+        "statement": "Rows = Passwords, Columns = Usernames",
+        "istrue": false
+      }
+    ],
+    "explanation": "The standard matrix representation places Subjects (Users/Roles) on the rows and Objects (Files/Assets) on the columns, with permissions in the intersecting cells."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which implementation of the Access Control Matrix corresponds to the 'Column View' (storing permissions with the object)?",
+    "options": [
+      {
+        "statement": "Capability Ticket",
+        "istrue": false
+      },
+      {
+        "statement": "Access Control List (ACL)",
+        "istrue": true
+      },
+      {
+        "statement": "Password List",
+        "istrue": false
+      },
+      {
+        "statement": "Biometrics",
+        "istrue": false
+      }
+    ],
+    "explanation": "ACLs store the list of authorized users *on the object itself* (like a list taped to a door), effectively slicing the matrix by column."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which concept corresponds to the 'Row View' (storing permissions with the user) of the Access Control Matrix?",
+    "options": [
+      {
+        "statement": "Access Control List (ACL)",
+        "istrue": false
+      },
+      {
+        "statement": "Capability",
+        "istrue": true
+      },
+      {
+        "statement": "Log files",
+        "istrue": false
+      },
+      {
+        "statement": "Firewall rules",
+        "istrue": false
+      }
+    ],
+    "explanation": "Capability systems give the user a 'token' or 'key' for each object they can access, effectively slicing the matrix by row (what can this user do?)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which is a primary advantage of Access Control Lists (ACLs)?",
+    "options": [
+      {
+        "statement": "It is easy to determine 'Which files can User A access?'",
+        "istrue": false
+      },
+      {
+        "statement": "It is easy to determine 'Who has access to File X?'",
+        "istrue": true
+      },
+      {
+        "statement": "It prevents the Confused Deputy problem.",
+        "istrue": false
+      },
+      {
+        "statement": "It is easy to delegate authority to a specific process.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Since the list is attached to the file, checking 'Who can read File X?' is instant. However, finding all files a specific user can access requires searching the whole system."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a major disadvantage of Capability-based systems?",
+    "options": [
+      {
+        "statement": "They are difficult to transfer to others.",
+        "istrue": false
+      },
+      {
+        "statement": "Revoking access is difficult once a capability (key) has been issued.",
+        "istrue": true
+      },
+      {
+        "statement": "They are not secure against external hackers.",
+        "istrue": false
+      },
+      {
+        "statement": "They cannot prevent the Confused Deputy problem.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Like a physical key, once you give a Capability to someone, it's hard to take it back (revoke) without changing the lock (the object) itself."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Confused Deputy' problem occurs when:",
+    "options": [
+      {
+        "statement": "A user forgets their password.",
+        "istrue": false
+      },
+      {
+        "statement": "A program (deputy) running with the user's authority is tricked into misusing that authority by a malicious party.",
+        "istrue": true
+      },
+      {
+        "statement": "An administrator grants access to the wrong person.",
+        "istrue": false
+      },
+      {
+        "statement": "A firewall blocks legitimate traffic.",
+        "istrue": false
+      }
+    ],
+    "explanation": "This happens in ACL systems where programs inherit the user's full rights. If a compiler (deputy) is asked to write output to a system file, it might succeed because the user has rights, even if the user didn't intend to overwrite that file."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary security goal of the 'Bell-LaPadula' model?",
+    "options": [
+      {
+        "statement": "Integrity (preventing modification)",
+        "istrue": false
+      },
+      {
+        "statement": "Confidentiality (preventing leakage)",
+        "istrue": true
+      },
+      {
+        "statement": "Availability (preventing downtime)",
+        "istrue": false
+      },
+      {
+        "statement": "Conflict of Interest avoidance",
+        "istrue": false
+      }
+    ],
+    "explanation": "Bell-LaPadula is a military-focused model designed specifically to prevent secret information from leaking to lower clearance levels."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the Bell-LaPadula model, the 'No Read Up' rule means:",
+    "options": [
+      {
+        "statement": "A user cannot read data at a lower security level.",
+        "istrue": false
+      },
+      {
+        "statement": "A user cannot read data at a higher security level.",
+        "istrue": true
+      },
+      {
+        "statement": "A user cannot write data to a higher security level.",
+        "istrue": false
+      },
+      {
+        "statement": "A user cannot write data to a lower security level.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Users at a lower clearance (e.g., Private) must not be able to read documents at a higher classification (e.g., General)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the Bell-LaPadula model, the 'No Write Down' rule is designed to prevent:",
+    "options": [
+      {
+        "statement": "Low-level users from corrupting high-level data.",
+        "istrue": false
+      },
+      {
+        "statement": "High-level users from accidentally leaking secrets to a lower security level.",
+        "istrue": true
+      },
+      {
+        "statement": "Users from deleting files.",
+        "istrue": false
+      },
+      {
+        "statement": "Outsiders from accessing the system.",
+        "istrue": false
+      }
+    ],
+    "explanation": "If a General (High) writes secret info into a Private's (Low) notebook, confidentiality is breached. Therefore, writing down is forbidden."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary security goal of the 'Biba' model?",
+    "options": [
+      {
+        "statement": "Confidentiality",
+        "istrue": false
+      },
+      {
+        "statement": "Integrity",
+        "istrue": true
+      },
+      {
+        "statement": "Availability",
+        "istrue": false
+      },
+      {
+        "statement": "Anonymity",
+        "istrue": false
+      }
+    ],
+    "explanation": "Biba is the inverse of Bell-LaPadula. It focuses on preventing untrustworthy data from corrupting trusted data (Integrity)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Under the Biba model, why is 'No Read Down' enforced?",
+    "options": [
+      {
+        "statement": "To prevent secrets from leaking down.",
+        "istrue": false
+      },
+      {
+        "statement": "To prevent a high-integrity subject from being contaminated by low-integrity (untrustworthy) information.",
+        "istrue": true
+      },
+      {
+        "statement": "To save bandwidth.",
+        "istrue": false
+      },
+      {
+        "statement": "To prevent low-level users from learning high-level secrets.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Reading from a lower source (e.g., random internet site) risks contaminating the high-integrity process (e.g., system kernel) with bad data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which rule belongs to the Biba model?",
+    "options": [
+      {
+        "statement": "No Write Up (A subject cannot write data to a higher integrity level).",
+        "istrue": true
+      },
+      {
+        "statement": "No Write Down (A subject cannot write data to a lower integrity level).",
+        "istrue": false
+      },
+      {
+        "statement": "No Read Up (A subject cannot read data from a higher integrity level).",
+        "istrue": false
+      },
+      {
+        "statement": "Read All, Write None.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Biba prevents low-integrity subjects (like a guest user) from writing to high-integrity objects (like system files) to preserve system integrity."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Chinese Wall' model is specifically designed to address which problem?",
+    "options": [
+      {
+        "statement": "Military espionage.",
+        "istrue": false
+      },
+      {
+        "statement": "Conflict of Interest in commercial settings.",
+        "istrue": true
+      },
+      {
+        "statement": "Network DDoS attacks.",
+        "istrue": false
+      },
+      {
+        "statement": "Password cracking.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Chinese Wall model creates barriers between datasets of competing clients (e.g., Coke vs. Pepsi) to prevent consultants from having a conflict of interest."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does 'Clean Room Design' use the Chinese Wall concept?",
+    "options": [
+      {
+        "statement": "To prevent viruses from entering the room.",
+        "istrue": false
+      },
+      {
+        "statement": "To reverse-engineer software without violating copyright, by separating the analysis team from the coding team.",
+        "istrue": true
+      },
+      {
+        "statement": "To ensure the office is physically clean.",
+        "istrue": false
+      },
+      {
+        "statement": "To stop hackers from hearing conversations.",
+        "istrue": false
+      }
+    ],
+    "explanation": "One team analyzes the code and writes specs; a second team (behind the wall) writes new code based *only* on the specs, proving they never copied the original code."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which access control model allows you to right-click a folder in Windows and check 'Read-only' for a specific user?",
+    "options": [
+      {
+        "statement": "MAC",
+        "istrue": false
+      },
+      {
+        "statement": "DAC",
+        "istrue": true
+      },
+      {
+        "statement": "Bell-LaPadula",
+        "istrue": false
+      },
+      {
+        "statement": "Chinese Wall",
+        "istrue": false
+      }
+    ],
+    "explanation": "Windows file permissions are the classic example of DAC, where the owner/user has discretion to set access controls."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If a spy in the CIA (Central Intelligence Agency) needs to access a specific case file, why might a pure MAC system hinder them?",
+    "options": [
+      {
+        "statement": "Because they forgot their password.",
+        "istrue": false
+      },
+      {
+        "statement": "Because MAC relies on rigid labels (e.g., Top Secret) and lacks the flexibility to understand context or specific case assignment.",
+        "istrue": true
+      },
+      {
+        "statement": "Because MAC is only for unclassified data.",
+        "istrue": false
+      },
+      {
+        "statement": "Because spies are not allowed to use computers.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MAC looks only at the clearance level. It doesn't handle the nuance that a spy should see 'Top Secret Case A' but not 'Top Secret Case B' if they aren't working on it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Authorization' considered Application Specific compared to Authentication?",
+    "options": [
+      {
+        "statement": "Because passwords are the same everywhere.",
+        "istrue": false
+      },
+      {
+        "statement": "Because while you can use one ID (Google) to log in everywhere, the specific rules of what you can do vary from app to app.",
+        "istrue": true
+      },
+      {
+        "statement": "It isn't; they are both universal.",
+        "istrue": false
+      },
+      {
+        "statement": "Because authorization requires hardware keys.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Authentication (Identity) can be federated/shared (SSO), but Authorization (Permissions) depends on the specific logic and roles within each unique application."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the context of the course, what is the recommended 'Design Process' for security?",
+    "options": [
+      {
+        "statement": "Buy the most expensive firewall first.",
+        "istrue": false
+      },
+      {
+        "statement": "Implement -> Analyze -> Model.",
+        "istrue": false
+      },
+      {
+        "statement": "Analyze Requirements -> Choose Model -> Create Matrix -> Implement.",
+        "istrue": true
+      },
+      {
+        "statement": "Write code immediately and fix bugs later.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The proper flow is to first understand the needs (Analyze), select the right theoretical framework (Model), map it out (Matrix), and finally configure the system (Implement)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Comparing ACL and Capability, which one is likened to a 'Guest List' at a party?",
+    "options": [
+      {
+        "statement": "Capability",
+        "istrue": false
+      },
+      {
+        "statement": "Access Control List (ACL)",
+        "istrue": true
+      },
+      {
+        "statement": "RBAC",
+        "istrue": false
+      },
+      {
+        "statement": "MAC",
+        "istrue": false
+      }
+    ],
+    "explanation": "An ACL is like a bouncer holding a list of names (Guest List) at the door (Object). If your name is on the list, you get in."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Comparing ACL and Capability, which one is likened to a 'Movie Ticket'?",
+    "options": [
+      {
+        "statement": "Access Control List (ACL)",
+        "istrue": false
+      },
+      {
+        "statement": "Capability",
+        "istrue": true
+      },
+      {
+        "statement": "Bell-LaPadula",
+        "istrue": false
+      },
+      {
+        "statement": "DAC",
+        "istrue": false
+      }
+    ],
+    "explanation": "A Capability is like a ticket or physical key. The holder possesses the right to enter, and the checker just validates the ticket, not the identity."
+  }
+]

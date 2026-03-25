@@ -1,0 +1,181 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "1. ในระบบ Paging เหตุผลหลักที่ทำให้การเข้าถึงหน่วยความจำช้าลงเมื่อเทียบกับ Contiguous allocation คือข้อใด?",
+    "options": [
+      {
+        "statement": "ต้องมีการแปลที่อยู่ (address translation) ทุกครั้งผ่าน Page Table",
+        "istrue": true
+      },
+      {
+        "statement": "ต้องมีการสลับข้อมูลออกดิสก์ทุกครั้งก่อนเข้าถึงข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "Page Table จะทำให้เกิด external fragmentation",
+        "istrue": false
+      },
+      { "statement": "ต้องมีการคำนวณ offset ที่ซับซ้อนเกินไป", "istrue": false }
+    ],
+    "explanation": "ระบบ Paging ต้องแปลที่อยู่ตรรกะ (logical address) ให้เป็นที่อยู่จริง (physical address) ทุกครั้งผ่าน MMU และ Page Table ซึ่งเพิ่มเวลาเข้าถึงหน่วยความจำหนึ่งขั้น แม้จะมี TLB มาช่วยลดความหน่วงก็ตาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "2. การใช้ TLB (Translation Lookaside Buffer) ช่วยปรับปรุงประสิทธิภาพได้อย่างไร?",
+    "options": [
+      {
+        "statement": "ลดเวลาการแปลที่อยู่โดยเก็บ mapping ที่ใช้บ่อยไว้ใน cache ฮาร์ดแวร์",
+        "istrue": true
+      },
+      { "statement": "ลดขนาดของ Page Table ลงได้โดยตรง", "istrue": false },
+      { "statement": "เพิ่มจำนวนเฟรมที่สามารถใช้ได้ในระบบ", "istrue": false },
+      { "statement": "ทำให้ไม่ต้องใช้ Page Table อีกต่อไป", "istrue": false }
+    ],
+    "explanation": "TLB ทำหน้าที่เป็น cache ของการแม็พ (page→frame) ที่ใช้บ่อย เมื่อเกิด hit สามารถข้ามการเข้าถึง Page Table ได้โดยตรง จึงลดเวลาการแปลที่อยู่ลงอย่างมาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "3. การใช้ Hierarchical Page Table ช่วยลดการใช้พื้นที่หน่วยความจำได้อย่างไร?",
+    "options": [
+      {
+        "statement": "เพราะสร้างเฉพาะ inner page table ที่ถูกใช้งานจริงเท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะลดจำนวนบิตของ page number ลงครึ่งหนึ่ง",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะแต่ละ process ใช้ page table ร่วมกันได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะไม่ต้องใช้ Page Table Base Register (PTBR)",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hierarchical หรือ multilevel paging แบ่ง page table เป็นหลายระดับ ทำให้สร้างเฉพาะตารางย่อยที่ address space ถูกใช้งานจริง ลดพื้นที่จากหลาย MB เหลือไม่กี่ KB ต่อ process"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "4. ข้อใดคือข้อดีที่โดดเด่นของ Hashed Page Table ในระบบ 64-bit?",
+    "options": [
+      {
+        "statement": "ลดขนาดของ Page Table เมื่อ address space มีขนาดใหญ่มากและกระจัดกระจาย (sparse)",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่ต้องใช้การ hash จริงในการค้นหา frame",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ระบบไม่จำเป็นต้องใช้ TLB อีกต่อไป",
+        "istrue": false
+      },
+      {
+        "statement": "เหมาะกับระบบที่มีโปรเซสขนาดเล็กจำนวนมาก",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hashed Page Table จะมี entry เฉพาะ page ที่ถูกใช้งานจริง และใช้ฟังก์ชัน hash ค้นหา frame ได้อย่างรวดเร็ว เหมาะกับ 64-bit systems ที่ address space ใหญ่มากแต่ไม่ถูกใช้งานทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "5. Inverted Page Table ช่วยประหยัดพื้นที่ได้อย่างไรเมื่อเทียบกับ Page Table แบบดั้งเดิม?",
+    "options": [
+      {
+        "statement": "ขนาดของตารางขึ้นอยู่กับจำนวนเฟรมในระบบ ไม่ขึ้นกับจำนวน page ของทุกโปรเซส",
+        "istrue": true
+      },
+      {
+        "statement": "สร้าง Page Table แยกให้แต่ละโปรเซสเพียงบางส่วน",
+        "istrue": false
+      },
+      { "statement": "ลดจำนวนบิตของ offset ใน address ลง", "istrue": false },
+      {
+        "statement": "รวมตาราง page table ทั้งหมดไว้ใน cache ของ CPU",
+        "istrue": false
+      }
+    ],
+    "explanation": "Inverted Page Table มีตารางเดียวทั้งระบบ ขนาดเท่ากับจำนวนเฟรมจริงในหน่วยความจำ ทำให้ไม่โตตามจำนวนโปรเซสหรือจำนวนเพจทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "6. การใช้ valid/invalid bit ใน Page Table มีวัตถุประสงค์เพื่ออะไร?",
+    "options": [
+      {
+        "statement": "ตรวจสอบว่าการอ้างอิงหน้านั้นอยู่ใน logical address space ของโปรเซสหรือไม่",
+        "istrue": true
+      },
+      { "statement": "ระบุว่าสามารถเขียนหรืออ่านได้หรือไม่", "istrue": false },
+      {
+        "statement": "ใช้แทนค่า page number ใน physical memory",
+        "istrue": false
+      },
+      { "statement": "เพิ่มความเร็วในการเข้าถึง TLB", "istrue": false }
+    ],
+    "explanation": "valid/invalid bit ใช้บ่งชี้ว่า page นั้นถูกแม็พอยู่ใน logical address space ของโปรเซสหรือไม่ ถ้า invalid แล้วถูกอ้างอิง ระบบจะ trigger trap (page fault)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "7. เมื่อใดที่ Shared Pages (Reentrant Code) จะมีประโยชน์สูงสุด?",
+    "options": [
+      {
+        "statement": "เมื่อหลายโปรเซสใช้โค้ดเดียวกันที่ไม่แก้ไขตัวเอง",
+        "istrue": true
+      },
+      {
+        "statement": "เมื่อแต่ละโปรเซสต้องเขียนทับโค้ดของตัวเองบ่อย ๆ",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อโค้ดแต่ละส่วนมีข้อมูลส่วนตัวของโปรเซสในตัวมันเอง",
+        "istrue": false
+      },
+      { "statement": "เมื่อระบบต้องการป้องกัน code injection", "istrue": false }
+    ],
+    "explanation": "Shared Pages ทำให้โค้ดแบบ reentrant (ไม่เปลี่ยนแปลงตัวเอง) สามารถถูกใช้ร่วมกันในหลายโปรเซสได้โดยไม่ต้องคัดลอกซ้ำในหน่วยความจำจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "8. การใช้ Segmentation ร่วมกับ Paging (Segmented Paging) แก้ข้อจำกัดอะไร?",
+    "options": [
+      {
+        "statement": "ลด external fragmentation จากการแบ่งหน่วยความจำขนาดแปรผันใน segmentation",
+        "istrue": true
+      },
+      { "statement": "ลดจำนวนบิตใน offset", "istrue": false },
+      {
+        "statement": "ทำให้สามารถแปลที่อยู่ได้โดยไม่ต้องมี MMU",
+        "istrue": false
+      },
+      { "statement": "ทำให้ทุกเซ็กเมนต์มีขนาดเท่ากัน", "istrue": false }
+    ],
+    "explanation": "การผสม Segmentation กับ Paging แก้ปัญหา external fragmentation โดยแบ่งแต่ละเซ็กเมนต์เป็นเพจย่อยอีกที ทำให้ได้ความยืดหยุ่นของ segmentation และประสิทธิภาพของ paging พร้อมกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9. ถ้า page size = 4 KB และ logical address 32 bits, ต้องใช้บิต page number และ offset กี่บิต?",
+    "options": [
+      { "statement": "page number 20 bits, offset 12 bits", "istrue": true },
+      { "statement": "page number 12 bits, offset 20 bits", "istrue": false },
+      { "statement": "page number 10 bits, offset 22 bits", "istrue": false },
+      { "statement": "page number 22 bits, offset 10 bits", "istrue": false }
+    ],
+    "explanation": "4 KB = 2¹² bytes → offset = 12 bits, ที่เหลือ 32−12 = 20 bits เป็น page number ดังนั้นแปลที่อยู่ด้วย (20,12) bits"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "10. ข้อใดต่อไปนี้ถูกต้องเกี่ยวกับการคำนวณ Effective Access Time (EAT)?",
+    "options": [
+      {
+        "statement": "EAT = T + α·M + (1−α)(M+M) เมื่อ T คือเวลา lookup TLB, M คือเวลา memory access",
+        "istrue": true
+      },
+      { "statement": "EAT = α·T + (1−α)·M", "istrue": false },
+      { "statement": "EAT = M + α·T²", "istrue": false },
+      { "statement": "EAT ไม่ขึ้นกับค่า hit ratio ของ TLB", "istrue": false }
+    ],
+    "explanation": "สูตร EAT ใช้คำนวณเวลาการเข้าถึงเฉลี่ยเมื่อมี TLB โดยขึ้นอยู่กับอัตรา hit (α) และเวลาการเข้าถึงของ TLB (T) และหน่วยความจำหลัก (M)"
+  }
+]

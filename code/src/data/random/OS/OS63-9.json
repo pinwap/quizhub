@@ -1,0 +1,463 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is the advantage of virtual memory?",
+    "options": [
+      {
+        "statement": "Host OS can run many guest operating systems",
+        "istrue": false
+      },
+      {
+        "statement": "Process can have a memory space larger than physical memory",
+        "istrue": true
+      },
+      {
+        "statement": "OS can protect a process’s memory from read/write by other processes",
+        "istrue": false
+      },
+      {
+        "statement": "Process can allocate non-contiguous memory with no fragmentation",
+        "istrue": false
+      }
+    ],
+    "explanation": "Virtual memory allows processes to use an address space larger than the available physical memory."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is demand paging?",
+    "options": [
+      {
+        "statement": "Swapping decided by compiler",
+        "istrue": false
+      },
+      {
+        "statement": "Swapping decided by long-term scheduler",
+        "istrue": false
+      },
+      {
+        "statement": "Swapping only when it is needed",
+        "istrue": true
+      },
+      {
+        "statement": "Swapping only when the system is idle",
+        "istrue": false
+      }
+    ],
+    "explanation": "Demand paging loads a page from backing store only when the process references it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the correct sequence of handling a page fault?",
+    "options": [
+      {
+        "statement": "5-1-2-4-6-3",
+        "istrue": true
+      },
+      {
+        "statement": "1-5-4-2-3-6",
+        "istrue": false
+      },
+      {
+        "statement": "2-5-1-4-3-6",
+        "istrue": false
+      },
+      {
+        "statement": "1-2-5-6-4-3",
+        "istrue": false
+      }
+    ],
+    "explanation": "The page fault sequence begins with memory reference, then trap, locating the page, bringing it in, updating table, and restarting."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is locality of reference?",
+    "options": [
+      {
+        "statement": "Processes reference random pages",
+        "istrue": false
+      },
+      {
+        "statement": "The most recent page references are of the same pages",
+        "istrue": true
+      },
+      {
+        "statement": "Pages are referenced in decreasing order",
+        "istrue": false
+      },
+      {
+        "statement": "Pages are referenced only once",
+        "istrue": false
+      }
+    ],
+    "explanation": "Locality of reference describes how memory references cluster around recently used pages."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the advantage of copy-on-write?",
+    "options": [
+      {
+        "statement": "Parent shares memory with its child",
+        "istrue": true
+      },
+      {
+        "statement": "Process executes faster",
+        "istrue": false
+      },
+      {
+        "statement": "Pages never get duplicated",
+        "istrue": false
+      },
+      {
+        "statement": "No need for page table",
+        "istrue": false
+      }
+    ],
+    "explanation": "Copy-on-write allows parent and child to share pages until one process writes to them."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the correct sequence of page replacement?",
+    "options": [
+      {
+        "statement": "(1) swap out victim page (2) change to invalid (3) swap desired page in (4) reset page table",
+        "istrue": true
+      },
+      {
+        "statement": "Swap in, then swap out",
+        "istrue": false
+      },
+      {
+        "statement": "Invalidate page before choosing victim",
+        "istrue": false
+      },
+      {
+        "statement": "Reset table first then swap",
+        "istrue": false
+      }
+    ],
+    "explanation": "Page replacement begins by swapping out the victim, invalidating, swapping in the needed page, and updating the page table."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If the modify bit is set, what does it mean?",
+    "options": [
+      {
+        "statement": "The page has been modified",
+        "istrue": true
+      },
+      {
+        "statement": "The page is clean",
+        "istrue": false
+      },
+      {
+        "statement": "The page is invalid",
+        "istrue": false
+      },
+      {
+        "statement": "The page is read only",
+        "istrue": false
+      }
+    ],
+    "explanation": "A set modify bit indicates the page has been written to and must be saved before replacement."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the role of the frame-allocation algorithm?",
+    "options": [
+      {
+        "statement": "Deciding a victim page to replace",
+        "istrue": false
+      },
+      {
+        "statement": "Deciding a number of frames per process",
+        "istrue": true
+      },
+      {
+        "statement": "Detecting thrashing",
+        "istrue": false
+      },
+      {
+        "statement": "Managing segmentation",
+        "istrue": false
+      }
+    ],
+    "explanation": "Frame-allocation algorithms determine how many frames each process receives."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the role of the page replacement algorithm?",
+    "options": [
+      {
+        "statement": "Choosing a victim page to be replaced",
+        "istrue": true
+      },
+      {
+        "statement": "Allocating frames per process",
+        "istrue": false
+      },
+      {
+        "statement": "Expanding memory",
+        "istrue": false
+      },
+      {
+        "statement": "Managing DMA transfers",
+        "istrue": false
+      }
+    ],
+    "explanation": "Page replacement algorithms select which page to evict when memory is full."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is Belady’s anomaly?",
+    "options": [
+      {
+        "statement": "More frames can cause more page faults",
+        "istrue": true
+      },
+      {
+        "statement": "Page faults always decrease with more frames",
+        "istrue": false
+      },
+      {
+        "statement": "LRU always causes anomalies",
+        "istrue": false
+      },
+      {
+        "statement": "Thrashing causes anomalies",
+        "istrue": false
+      }
+    ],
+    "explanation": "Belady’s anomaly occurs when increasing the number of frames results in more page faults under FIFO."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is LRU algorithm?",
+    "options": [
+      {
+        "statement": "Replace the least recently used page",
+        "istrue": true
+      },
+      {
+        "statement": "Replace the newest page",
+        "istrue": false
+      },
+      {
+        "statement": "Replace the page with the longest burst time",
+        "istrue": false
+      },
+      {
+        "statement": "Replace the page based on FIFO",
+        "istrue": false
+      }
+    ],
+    "explanation": "LRU replaces the page that has not been used for the longest period of time."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the data structure of the second-chance algorithm?",
+    "options": [
+      {
+        "statement": "Circular queue",
+        "istrue": true
+      },
+      {
+        "statement": "Stack",
+        "istrue": false
+      },
+      {
+        "statement": "Linked tree",
+        "istrue": false
+      },
+      {
+        "statement": "Hash table",
+        "istrue": false
+      }
+    ],
+    "explanation": "Second-chance uses a circular queue, giving each page a second chance before replacement."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the best page to replace by the enhanced second-chance algorithm?",
+    "options": [
+      {
+        "statement": "Recently used and modified",
+        "istrue": false
+      },
+      {
+        "statement": "Recently used but not modified",
+        "istrue": false
+      },
+      {
+        "statement": "Not recently used and not modified",
+        "istrue": true
+      },
+      {
+        "statement": "Modified only",
+        "istrue": false
+      }
+    ],
+    "explanation": "The best candidate is a page that is neither recently used nor modified, minimizing reload and write-back cost."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What determines the minimum number of frames needed by a process?",
+    "options": [
+      {
+        "statement": "Instruction set",
+        "istrue": true
+      },
+      {
+        "statement": "Page size",
+        "istrue": false
+      },
+      {
+        "statement": "TLB size",
+        "istrue": false
+      },
+      {
+        "statement": "Clock frequency",
+        "istrue": false
+      }
+    ],
+    "explanation": "Some instructions require multiple pages simultaneously, determining the minimum number of frames needed."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the drawback of both equal allocation and proportional allocation?",
+    "options": [
+      {
+        "statement": "High-priority processes are treated the same as low-priority processes",
+        "istrue": true
+      },
+      {
+        "statement": "Small processes get too many frames",
+        "istrue": false
+      },
+      {
+        "statement": "Large processes get too few frames",
+        "istrue": false
+      },
+      {
+        "statement": "Frames cannot be resized",
+        "istrue": false
+      }
+    ],
+    "explanation": "Equal and proportional allocation ignore process priority."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the drawback of global replacement algorithm?",
+    "options": [
+      {
+        "statement": "One process may steal frames from another",
+        "istrue": true
+      },
+      {
+        "statement": "Frames cannot be allocated dynamically",
+        "istrue": false
+      },
+      {
+        "statement": "Cannot replace any page",
+        "istrue": false
+      },
+      {
+        "statement": "It has no page faults",
+        "istrue": false
+      }
+    ],
+    "explanation": "Global replacement allows processes to take frames from each other, reducing stability."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In a NUMA system, memory should be allocated as close as possible to the CPU. What does close mean?",
+    "options": [
+      {
+        "statement": "Minimum latency",
+        "istrue": true
+      },
+      {
+        "statement": "Maximum CPU utilization",
+        "istrue": false
+      },
+      {
+        "statement": "Minimum address range",
+        "istrue": false
+      },
+      {
+        "statement": "Minimum fragmentation",
+        "istrue": false
+      }
+    ],
+    "explanation": "NUMA systems reduce access latency by allocating memory close to the processor."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the cause of thrashing?",
+    "options": [
+      {
+        "statement": "Running too many applications",
+        "istrue": true
+      },
+      {
+        "statement": "Using too large page size",
+        "istrue": false
+      },
+      {
+        "statement": "Insufficient TLB",
+        "istrue": false
+      },
+      {
+        "statement": "High CPU frequency",
+        "istrue": false
+      }
+    ],
+    "explanation": "Thrashing happens when excessive multiprogramming causes constant page faults."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the working set?",
+    "options": [
+      {
+        "statement": "The set of pages actively used in a recent time window",
+        "istrue": true
+      },
+      {
+        "statement": "All pages used by the system",
+        "istrue": false
+      },
+      {
+        "statement": "All pages used by a process since start",
+        "istrue": false
+      },
+      {
+        "statement": "Pages used at boot",
+        "istrue": false
+      }
+    ],
+    "explanation": "Working set defines the set of pages a process needs to run with minimal page faults.",
+    "image": "random/OS/OS63-9/messageImage_1763914961149.jpg"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does the OS detect thrashing?",
+    "options": [
+      {
+        "statement": "D > m",
+        "istrue": true
+      },
+      {
+        "statement": "D < m",
+        "istrue": false
+      },
+      {
+        "statement": "CPU utilization high",
+        "istrue": false
+      },
+      {
+        "statement": "Memory fully allocated",
+        "istrue": false
+      }
+    ],
+    "explanation": "Thrashing occurs when the demand on memory D exceeds the available frames m."
+  }
+]

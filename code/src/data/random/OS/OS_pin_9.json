@@ -1,0 +1,276 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบายแนวคิดของ Virtual Memory ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "เป็นกลไกที่ทำให้โปรเซสรันได้แม้ไม่มีพื้นที่จริงเพียงพอ โดยโหลดเฉพาะเพจที่จำเป็นเข้าสู่หน่วยความจำ",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นการเก็บทุกเพจของโปรเซสไว้ใน RAM ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการจำลองหน่วยความจำด้วย cache บน CPU",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้ได้เฉพาะในระบบที่ไม่มีการแบ่งหน้า (paging)",
+        "istrue": false
+      }
+    ],
+    "explanation": "Virtual Memory ช่วยให้โปรเซสสามารถใช้พื้นที่ address space ที่ใหญ่กว่า physical memory โดยโหลดเฉพาะเพจที่จำเป็น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือเหตุผลหลักที่ Demand Paging ช่วยประหยัดหน่วยความจำได้?",
+    "options": [
+      { "statement": "เพราะโหลดทุกเพจตั้งแต่เริ่มโปรเซส", "istrue": false },
+      {
+        "statement": "เพราะโหลดเพจเฉพาะเมื่อมีการอ้างอิงถึงเท่านั้น",
+        "istrue": true
+      },
+      { "statement": "เพราะใช้ swap space ขนาดใหญ่", "istrue": false },
+      { "statement": "เพราะ OS จะเก็บเพจทั้งหมดไว้ใน disk", "istrue": false }
+    ],
+    "explanation": "Demand Paging เป็นเทคนิคแบบ Lazy Loading โดยโหลดเฉพาะเพจที่มีการอ้างอิงจริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสูตร Effective Access Time (EAT) = (1−p)×MA + p×Page Fault Time, ค่าของ p หมายถึงอะไร?",
+    "options": [
+      { "statement": "โอกาสที่เพจจะอยู่ใน memory", "istrue": false },
+      { "statement": "อัตราการเกิด page fault", "istrue": true },
+      { "statement": "เวลาเฉลี่ยที่ใช้เข้าถึงเพจ", "istrue": false },
+      { "statement": "จำนวน frame ทั้งหมดในระบบ", "istrue": false }
+    ],
+    "explanation": "p คือ page fault rate (probability of page fault) ใช้คำนวณค่าเฉลี่ยเวลาเข้าถึง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า Memory Access Time = 200 ns และ Page Fault Service Time = 8 ms การเกิด page fault หนึ่งครั้งช้ากว่าการเข้าถึง memory ปกติกี่เท่า?",
+    "options": [
+      { "statement": "400 เท่า", "istrue": false },
+      { "statement": "4,000 เท่า", "istrue": false },
+      { "statement": "40,000 เท่า", "istrue": true },
+      { "statement": "400,000 เท่า", "istrue": false }
+    ],
+    "explanation": "8 ms = 8,000,000 ns → 8,000,000 / 200 = 40,000 เท่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากสไลด์ หากต้องการให้ performance ลดลงไม่เกิน 10% ค่า p ต้องน้อยกว่าเท่าใด?",
+    "options": [
+      { "statement": "2.5 × 10⁻³", "istrue": false },
+      { "statement": "2.5 × 10⁻⁴", "istrue": false },
+      { "statement": "2.5 × 10⁻⁶", "istrue": true },
+      { "statement": "2.5 × 10⁻⁸", "istrue": false }
+    ],
+    "explanation": "ต้องการ EAT ≤ 1.1×MA → p < 2.5×10⁻⁶ หรือประมาณ 1 fault ต่อ 400,000 access"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นลักษณะของ Major Page Fault?",
+    "options": [
+      {
+        "statement": "เพจที่ถูกอ้างอิงอยู่ใน memory แล้วแต่ยังไม่ถูกแมปใน page table",
+        "istrue": false
+      },
+      { "statement": "เพจไม่อยู่ใน memory ต้องโหลดจาก disk", "istrue": true },
+      { "statement": "เพจอยู่ใน cache", "istrue": false },
+      { "statement": "เกิดเฉพาะเมื่อเกิด context switch", "istrue": false }
+    ],
+    "explanation": "Major Page Fault = ต้องอ่านเพจจาก disk ซึ่งใช้เวลานาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือ Minor Page Fault (Soft Fault)?",
+    "options": [
+      { "statement": "ต้องโหลดเพจจาก disk เข้าหน่วยความจำ", "istrue": false },
+      {
+        "statement": "เพจอยู่ใน memory แล้ว แต่อยู่ใน shared frame หรือ free-frame list",
+        "istrue": true
+      },
+      { "statement": "เกิดจากการ swap out เพจ", "istrue": false },
+      { "statement": "เกิดเฉพาะในระบบที่ไม่มี virtual memory", "istrue": false }
+    ],
+    "explanation": "Minor fault เกิดเมื่อเพจอยู่ใน memory แล้วแต่ยังไม่มี mapping ใน page table ของโปรเซสนั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Windows Resource Monitor ค่าคอลัมน์ Hard Faults/sec หมายถึงอะไร?",
+    "options": [
+      { "statement": "จำนวน page fault ทั้งหมดต่อวินาที", "istrue": false },
+      { "statement": "จำนวน Major Page Faults ต่อวินาที", "istrue": true },
+      { "statement": "จำนวน Minor Page Faults ต่อวินาที", "istrue": false },
+      { "statement": "จำนวน context switch ต่อวินาที", "istrue": false }
+    ],
+    "explanation": "Hard Faults/sec ใน Windows คือจำนวน Major Page Faults ต่อวินาที"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Linux เมื่อหน่วยความจำใกล้หมด ระบบจะทำอะไร?",
+    "options": [
+      { "statement": "เพิ่ม swap file อัตโนมัติ", "istrue": false },
+      {
+        "statement": "ใช้ OOM Reaper เพื่อ reclaim frame และอาจเรียก OOM Killer เพื่อ terminate process",
+        "istrue": true
+      },
+      { "statement": "สั่ง reboot ระบบ", "istrue": false },
+      { "statement": "ล้างทุก cache ออกจากหน่วยความจำทันที", "istrue": false }
+    ],
+    "explanation": "Linux มี OOM Reaper ช่วย reclaim memory และ OOM Killer ฆ่า process ที่ใช้ memory มากเมื่อหน่วยความจำหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Thrashing หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "ภาวะที่ระบบต้องสลับเพจบ่อยจน CPU utilization ลดลง",
+        "istrue": true
+      },
+      {
+        "statement": "การเพิ่มจำนวน process เพื่อให้ CPU ใช้งานสูงสุด",
+        "istrue": false
+      },
+      { "statement": "การแบ่งเพจออกเป็นหลายเฟรมเล็กๆ", "istrue": false },
+      { "statement": "การเก็บเพจไว้ใน cache ทั้งหมด", "istrue": false }
+    ],
+    "explanation": "Thrashing คือ high paging activity ทำให้ CPU utilization ลดลงแม้เพิ่ม process"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากกราฟ Thrashing เมื่อเพิ่ม process เกินจุดหนึ่ง CPU utilization จะเป็นอย่างไร?",
+    "options": [
+      { "statement": "เพิ่มขึ้นต่อเนื่อง", "istrue": false },
+      { "statement": "คงที่", "istrue": false },
+      { "statement": "ลดลงอย่างรวดเร็ว", "istrue": true },
+      { "statement": "ไม่มีการเปลี่ยนแปลง", "istrue": false }
+    ],
+    "explanation": "เมื่อ process แย่ง frame กันมาก → เกิด thrashing → CPU utilization ลดลง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Working Set หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "เพจทั้งหมดของโปรเซสที่โหลดในหน่วยความจำ",
+        "istrue": false
+      },
+      {
+        "statement": "เซตของเพจที่ถูกอ้างอิงในช่วงเวลา Δ ล่าสุด",
+        "istrue": true
+      },
+      { "statement": "เฟรมที่มีการ swap ออกล่าสุด", "istrue": false },
+      { "statement": "หน่วยความจำ cache สำหรับโปรเซส", "istrue": false }
+    ],
+    "explanation": "Working Set คือเพจที่โปรเซสใช้งานในช่วงอ้างอิงล่าสุด Δ references"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า D = ΣWSSi > m (จำนวนเฟรมที่มีในระบบ) จะเกิดอะไรขึ้น?",
+    "options": [
+      { "statement": "ระบบทำงานเร็วขึ้น", "istrue": false },
+      { "statement": "Thrashing จะเกิดขึ้น", "istrue": true },
+      { "statement": "OS จะเพิ่ม swap file ทันที", "istrue": false },
+      { "statement": "ทุก process จะหยุดทำงาน", "istrue": false }
+    ],
+    "explanation": "ถ้าความต้องการเฟรมรวมเกินเฟรมที่มี → โปรเซสบางตัวไม่มีเฟรมพอ → เกิด thrashing"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Page-Fault Frequency (PFF) ใช้ควบคุมอะไร?",
+    "options": [
+      { "statement": "ความถี่ของ context switch", "istrue": false },
+      {
+        "statement": "จำนวนเฟรมที่จัดสรรให้ process โดยดูจากอัตรา page fault",
+        "istrue": true
+      },
+      { "statement": "จำนวน process ใน ready queue", "istrue": false },
+      { "statement": "เวลาเฉลี่ยของ disk I/O", "istrue": false }
+    ],
+    "explanation": "PFF ใช้อัตรา page fault เป็นตัวควบคุมการเพิ่มหรือลดเฟรมให้แต่ละ process"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน PFF model ถ้า page-fault rate สูงกว่า upper bound ควรทำอย่างไร?",
+    "options": [
+      { "statement": "เพิ่มจำนวนเฟรมให้ process นั้น", "istrue": true },
+      { "statement": "ลดจำนวนเฟรม", "istrue": false },
+      { "statement": "หยุด process ทันที", "istrue": false },
+      { "statement": "สลับไปใช้ FIFO replacement", "istrue": false }
+    ],
+    "explanation": "ถ้า fault rate สูง → เฟรมไม่พอ → เพิ่มเฟรมเพื่อลด fault rate"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดถูกต้องเกี่ยวกับความสัมพันธ์ระหว่าง Working Set และ Page Fault?",
+    "options": [
+      {
+        "statement": "เมื่อ Working Set ครบ Page Fault จะลดลง",
+        "istrue": true
+      },
+      {
+        "statement": "เมื่อ Working Set ครบ Page Fault จะเพิ่มขึ้น",
+        "istrue": false
+      },
+      { "statement": "Page Fault ไม่เกี่ยวกับ Working Set", "istrue": false },
+      { "statement": "Page Fault จะคงที่เสมอ", "istrue": false }
+    ],
+    "explanation": "เมื่อเพจใน working set ครบ → ไม่มีการโหลดเพจใหม่ → fault rate ต่ำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า page fault rate ต่ำกว่า lower bound ตาม PFF model ควรทำอย่างไร?",
+    "options": [
+      { "statement": "ลดจำนวนเฟรมเพื่อเพิ่มการใช้ทรัพยากร", "istrue": true },
+      { "statement": "เพิ่มเฟรมให้ process", "istrue": false },
+      { "statement": "ยุติ process", "istrue": false },
+      { "statement": "รีสตาร์ทระบบ", "istrue": false }
+    ],
+    "explanation": "ถ้า fault ต่ำเกินไป → มีเฟรมเหลือ → ควรลดเฟรมเพื่อให้ใช้ทรัพยากรอย่างมีประสิทธิภาพ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Local Replacement แตกต่างจาก Global Replacement อย่างไร?",
+    "options": [
+      {
+        "statement": "Local ใช้เฟรมของตนเองเท่านั้น ไม่แย่งจากโปรเซสอื่น",
+        "istrue": true
+      },
+      {
+        "statement": "Global ทำให้ process ใช้เฟรมได้คงที่เสมอ",
+        "istrue": false
+      },
+      { "statement": "Local ให้ throughput สูงกว่าเสมอ", "istrue": false },
+      { "statement": "Global ไม่ทำให้เกิด thrashing", "istrue": false }
+    ],
+    "explanation": "Local replacement จำกัดการแทนที่ในเฟรมของ process นั้น ลดผลกระทบต่อ process อื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคนิคใดช่วยลดการเกิด Thrashing ได้ดีที่สุด?",
+    "options": [
+      { "statement": "เพิ่ม degree of multiprogramming", "istrue": false },
+      {
+        "statement": "ใช้ Working Set และ Page-Fault Frequency ในการควบคุม",
+        "istrue": true
+      },
+      { "statement": "ใช้ FIFO page replacement", "istrue": false },
+      { "statement": "ปิดระบบ virtual memory", "istrue": false }
+    ],
+    "explanation": "WS และ PFF เป็นเทคนิคควบคุมจำนวนเฟรมต่อ process ให้เหมาะสม ลดการเกิด thrashing"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "CPU utilization ต่ำมากแม้ process หลายตัวอยู่ใน ready queue สาเหตุที่เป็นไปได้คืออะไร?",
+    "options": [
+      { "statement": "เกิด Thrashing ในระบบ", "istrue": true },
+      { "statement": "CPU ทำงานเกินพิกัด", "istrue": false },
+      { "statement": "เกิด deadlock ระหว่าง process", "istrue": false },
+      { "statement": "ระบบมี free-frame มากเกินไป", "istrue": false }
+    ],
+    "explanation": "Thrashing ทำให้ CPU รอ I/O page-in/out ตลอด ส่งผลให้ utilization ต่ำ"
+  }
+]

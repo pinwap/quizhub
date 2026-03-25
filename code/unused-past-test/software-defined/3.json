@@ -1,0 +1,1129 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "เครื่องมือ Docker Compose ถูกสร้างขึ้นมาเพื่อแก้ไขปัญหาหลักในเรื่องใด?",
+    "options": [
+      {
+        "statement": "การ build Docker image ให้มีขนาดเล็กลง",
+        "istrue": false
+      },
+      {
+        "statement": "ความยุ่งยากและซับซ้อนในการจัดการแอปพลิเคชันที่ประกอบด้วย Container หลายตัว",
+        "istrue": true
+      },
+      {
+        "statement": "การทำให้ Container ทำงานได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "การรักษาความปลอดภัยของ Docker daemon",
+        "istrue": false
+      }
+    ],
+    "explanation": "Docker Compose แก้ปัญหาการต้องรันคำสั่ง `docker run` ที่ซับซ้อนหลายๆ ครั้งสำหรับแต่ละ container โดยการรวมคำนิยามทั้งหมดไว้ในไฟล์เดีย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ไฟล์ตั้งค่าหลักที่ Docker Compose ใช้ในการนิยามแอปพลิเคชันมีชื่อและรูปแบบ (format) ว่าอะไร?",
+    "options": [
+      {
+        "statement": "config.json",
+        "istrue": false
+      },
+      {
+        "statement": "Dockerfile",
+        "istrue": false
+      },
+      {
+        "statement": "compose.yml (รูปแบบ YAML)",
+        "istrue": true
+      },
+      {
+        "statement": "settings.xml",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวใจของ Docker Compose คือการใช้ไฟล์ตั้งค่าในรูปแบบ YAML ซึ่งโดยปกติจะใช้ชื่อว่า `compose.yml` หรือ `docker-compose.yml`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Docker Compose, 'Service' หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "เครือข่ายที่เชื่อมต่อ Container เข้าด้วยกัน",
+        "istrue": false
+      },
+      {
+        "statement": "คำนิยามของ Container แต่ละตัวในโปรเจกต์ เช่น Image ที่ใช้, Port ที่เปิด",
+        "istrue": true
+      },
+      {
+        "statement": "โปรเจกต์ทั้งหมดที่กำลังทำงานอยู่",
+        "istrue": false
+      },
+      {
+        "statement": "พื้นที่สำหรับจัดเก็บข้อมูลถาวร",
+        "istrue": false
+      }
+    ],
+    "explanation": "Service คือบล็อกการกำหนดค่าสำหรับ container แต่ละประเภทในแอปพลิเคชันของเรา ซึ่งจะถูกใช้เป็นพิมพ์เขียวในการสร้าง container จริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โดยปกติแล้ว Docker Compose จะตั้งชื่อโปรเจกต์ (Project Name) จากอะไร?",
+    "options": [
+      {
+        "statement": "ชื่อของผู้ใช้งานปัจจุบัน",
+        "istrue": false
+      },
+      {
+        "statement": "ชื่อของไดเรกทอรีที่ไฟล์ `compose.yml` ตั้งอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "ชื่อของ Service แรกที่นิยามในไฟล์",
+        "istrue": false
+      },
+      {
+        "statement": "ชื่อที่ถูกสุ่มขึ้นมา",
+        "istrue": false
+      }
+    ],
+    "explanation": "ชื่อโปรเจกต์ทำหน้าที่เป็น namespace เพื่อแยกทรัพยากร (เช่น container, network) ของแต่ละโปรเจกต์ออกจากกัน และโดยปริยายจะใช้ชื่อของไดเรกทอรีเป็นชื่อโปรเจกต์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "องค์ประกอบระดับบนสุด (Top-level element) ใดในไฟล์ `compose.yml` ที่จำเป็นต้องมีเสมอ?",
+    "options": [
+      {
+        "statement": "networks",
+        "istrue": false
+      },
+      {
+        "statement": "volumes",
+        "istrue": false
+      },
+      {
+        "statement": "name",
+        "istrue": false
+      },
+      {
+        "statement": "services",
+        "istrue": true
+      }
+    ],
+    "explanation": "ส่วน `services` เป็นส่วนที่สำคัญที่สุดและต้องมีเสมอ เพราะเป็นที่ที่เราจะนิยาม container ทั้งหมดที่จะประกอบกันเป็นแอปพลิเคชันของเรา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่งใดที่ใช้ในการสร้างและรันทุกอย่างที่นิยามไว้ใน `compose.yml` ขึ้นมาพร้อมกัน?",
+    "options": [
+      {
+        "statement": "docker compose build",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose up",
+        "istrue": true
+      },
+      {
+        "statement": "docker compose ls",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose ps",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker compose up` เป็นคำสั่งหลักที่ใช้ในการเริ่มต้นโปรเจกต์ทั้งหมด มันจะสร้าง network, volume, และ container ตามที่กำหนดไว้ในไฟล์ compose"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเพิ่ม Option `-d` ในคำสั่ง `docker compose up` มีผลอย่างไร?",
+    "options": [
+      {
+        "statement": "ลบ Container ทั้งหมดหลังจากทำงานเสร็จ",
+        "istrue": false
+      },
+      {
+        "statement": "สั่งให้ build Image ใหม่ก่อนรัน",
+        "istrue": false
+      },
+      {
+        "statement": "สั่งให้รัน Service ทั้งหมดในเบื้องหลัง (Detached mode)",
+        "istrue": true
+      },
+      {
+        "statement": "แสดง Log การทำงานของทุก Service",
+        "istrue": false
+      }
+    ],
+    "explanation": "Option `-d` (detach) ทำให้ Compose รัน container ใน background และคืน command prompt กลับมาให้เราทันที ซึ่งเหมาะสำหรับการรันเซอร์วิสที่ต้องทำงานตลอดเวลา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `docker compose down` ทำอะไรบ้าง?",
+    "options": [
+      {
+        "statement": "หยุดการทำงานของ Container แต่ไม่ลบทิ้ง",
+        "istrue": false
+      },
+      {
+        "statement": "หยุดและลบ Container รวมถึง Network ที่เกี่ยวข้องกับโปรเจกต์นั้นๆ",
+        "istrue": true
+      },
+      {
+        "statement": "ลบเฉพาะ Network ของโปรเจกต์",
+        "istrue": false
+      },
+      {
+        "statement": "ลบ Volume ที่เก็บข้อมูลของโปรเจกต์ทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker compose down` เป็นคำสั่งสำหรับรื้อถอนโปรเจกต์ โดยจะหยุดและลบ container และ network ที่ compose สร้างขึ้น แต่โดยปกติจะไม่ลบ volume เพื่อป้องกันข้อมูลสูญหาย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณต้องการดูสถานะของ Service (Containers) ที่ทำงานอยู่ในโปรเจกต์ปัจจุบัน ควรใช้คำสั่งใด?",
+    "options": [
+      {
+        "statement": "docker compose ls",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose top",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose ps",
+        "istrue": true
+      },
+      {
+        "statement": "docker compose logs",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker compose ps` ทำหน้าที่คล้ายกับ `docker ps` แต่จะแสดงเฉพาะ container ที่เป็นส่วนหนึ่งของโปรเจกต์ compose ปัจจุบันเท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในตัวอย่าง Monitoring Stack, คีย์ `expose` ใน `compose.yml` แตกต่างจาก `ports` อย่างไร?",
+    "options": [
+      {
+        "statement": "ไม่แตกต่างกัน สามารถใช้แทนกันได้",
+        "istrue": false
+      },
+      {
+        "statement": "`expose` ทำให้ Service อื่นใน Network เดียวกันเข้าถึง Port นั้นได้ แต่ไม่ได้เปิด Port นั้นสู่เครื่อง Host",
+        "istrue": true
+      },
+      {
+        "statement": "`ports` ทำให้ Service อื่นใน Network เดียวกันเข้าถึงได้ แต่ `expose` ทำให้เข้าถึงจากภายนอกได้",
+        "istrue": false
+      },
+      {
+        "statement": "`expose` ใช้สำหรับ TCP ส่วน `ports` ใช้สำหรับ UDP",
+        "istrue": false
+      }
+    ],
+    "explanation": "`expose` เป็นการเปิด port สำหรับการสื่อสารภายใน network ที่ compose สร้างขึ้นเท่านั้น ในขณะที่ `ports` จะทำการ publish port นั้นออกไปยังเครื่อง host ทำให้เข้าถึงจากภายนอกได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในตัวอย่างแอปพลิเคชันนับจำนวนผู้เข้าชม, การใช้ `depends_on: - mongo` ใน Service `web` มีวัตถุประสงค์อะไร?",
+    "options": [
+      {
+        "statement": "เพื่อให้ Service `web` ทำงานเร็วกว่า `mongo`",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้ Service `web` สามารถใช้ Volume เดียวกับ `mongo` ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อกำหนดลำดับการเริ่มต้น โดยให้ Compose รอจนกว่า `mongo` จะพร้อมทำงานก่อน แล้วจึงเริ่ม `web`",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้ Service `web` มี IP Address เดียวกับ `mongo`",
+        "istrue": false
+      }
+    ],
+    "explanation": "`depends_on` ช่วยจัดการลำดับการ khởi độngของ service เพื่อป้องกันปัญหาที่แอปพลิเคชันพยายามเชื่อมต่อกับฐานข้อมูลที่ยังไม่พร้อมทำงาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การกำหนด `build: ./web` ใน `compose.yml` หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "ให้ดาวน์โหลด Image ชื่อ `build` จากโฟลเดอร์ `./web`",
+        "istrue": false
+      },
+      {
+        "statement": "ให้ใช้ Image สำเร็จรูปชื่อ `web`",
+        "istrue": false
+      },
+      {
+        "statement": "ให้ Docker Compose สร้าง Image จาก Dockerfile ที่อยู่ในไดเรกทอรี `./web`",
+        "istrue": true
+      },
+      {
+        "statement": "ให้รันคำสั่ง `build` ภายใน Container",
+        "istrue": false
+      }
+    ],
+    "explanation": "คีย์ `build` ใช้สำหรับบอก Compose ว่าแทนที่จะดึง image จาก registry ให้ทำการ build image เองโดยใช้ Dockerfile จาก path ที่ระบุ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `docker compose up --scale web=5` จะส่งผลให้เกิดอะไรขึ้น?",
+    "options": [
+      {
+        "statement": "สร้าง Service `web` ขึ้นมา 5 โปรเจกต์",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง Container ของ Service `web` ขึ้นมาทำงานพร้อมกัน 5 ตัว (replicas)",
+        "istrue": true
+      },
+      {
+        "statement": "จำกัดให้ Service `web` ใช้ CPU ได้ 5 core",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Service `web` รีสตาร์ทตัวเอง 5 ครั้ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Option `--scale` เป็นวิธีการเพิ่มจำนวน instance ของ service ที่ต้องการ เพื่อกระจายโหลดและเพิ่มความสามารถในการรองรับผู้ใช้งาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อทำการ Scale Service `web` เป็น 5 ตัว, Container `web` ทั้ง 5 ตัวจะเชื่อมต่อกับฐานข้อมูล `mongo` อย่างไร?",
+    "options": [
+      {
+        "statement": "แต่ละตัวจะสร้าง `mongo` container ของตัวเองขึ้นมาใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "จะมีการสร้าง `mongo` container เพิ่มขึ้นเป็น 5 ตัวเท่ากัน",
+        "istrue": false
+      },
+      {
+        "statement": "Container `web` ทั้ง 5 ตัวจะเชื่อมต่อกับ `mongo` container เพียงตัวเดียวที่มีอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "Container `web` จะไม่สามารถเชื่อมต่อกับ `mongo` ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "การ scale จะมีผลกับ service ที่ระบุเท่านั้น service อื่นๆ (เช่น ฐานข้อมูล) จะยังคงมีเพียง instance เดียว ทำให้ replica ทั้งหมดใช้ backend ร่วมกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คีย์ `deploy` ใน `compose.yml` ใช้สำหรับกำหนดค่าในเรื่องใด?",
+    "options": [
+      {
+        "statement": "ลำดับการ build Image",
+        "istrue": false
+      },
+      {
+        "statement": "การตั้งค่าเครือข่ายพื้นฐาน",
+        "istrue": false
+      },
+      {
+        "statement": "การทำ Replicas, การจำกัดทรัพยากร, และนโยบายการรีสตาร์ท (สำหรับ Production)",
+        "istrue": true
+      },
+      {
+        "statement": "ข้อมูล Metadata ของโปรเจกต์",
+        "istrue": false
+      }
+    ],
+    "explanation": "คีย์ `deploy` เป็นวิธีที่ทันสมัยและแนะนำสำหรับกำหนดค่าที่เกี่ยวข้องกับการนำไปใช้งานจริง (deployment) เช่น การ scaling และการจัดสรรทรัพยากร"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การตั้งค่า `restart_policy: condition: on-failure` จะทำให้เกิดอะไรขึ้น?",
+    "options": [
+      {
+        "statement": "Container จะรีสตาร์ทตัวเองเสมอเมื่อถูกสั่ง stop",
+        "istrue": false
+      },
+      {
+        "statement": "Container จะรีสตาร์ทโดยอัตโนมัติเฉพาะเมื่อมันล่มหรือหยุดทำงานโดยมี error",
+        "istrue": true
+      },
+      {
+        "statement": "Container จะไม่สามารถรีสตาร์ทได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "Container จะพยายามรีสตาร์ทเมื่อเครื่อง Host บูทขึ้นมาใหม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "`on-failure` เป็นนโยบายการรีสตาร์ทที่ช่วยเพิ่มความเสถียรของ service โดยจะพยายามปลุก container ให้กลับมาทำงานใหม่เฉพาะในกรณีที่เกิดความผิดพลาด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรมแบบ 3-Tier, เหตุใด Service `db` จึงควรเชื่อมต่อกับเครือข่าย `backend` เท่านั้น?",
+    "options": [
+      {
+        "statement": "เพื่อให้ทำงานได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเพิ่มความปลอดภัย โดยจำกัดการเข้าถึงให้เฉพาะ Service ที่จำเป็นเท่านั้น",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อประหยัด IP Address",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้ง่ายต่อการ Scale",
+        "istrue": false
+      }
+    ],
+    "explanation": "การแบ่งโซนเครือข่าย (Network Segmentation) เป็นหลักการความปลอดภัยที่สำคัญ เพื่อลดพื้นผิวการโจมตี (Attack Surface) และปกป้องส่วนที่สำคัญที่สุดของระบบ (ฐานข้อมูล) จากการเข้าถึงโดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โจทย์ปัญหาสำคัญที่ Docker Compose (ซึ่งทำงานบน Single Host) ไม่สามารถแก้ไขได้คืออะไร?",
+    "options": [
+      {
+        "statement": "การจัดการแอปพลิเคชันที่มี Container มากกว่า 10 ตัว",
+        "istrue": false
+      },
+      {
+        "statement": "การสร้างเครือข่ายที่ซับซ้อน",
+        "istrue": false
+      },
+      {
+        "statement": "การจัดการ Container ที่ต้องทำงานกระจายกันอยู่บนคอมพิวเตอร์หลายเครื่อง (Multiple Hosts)",
+        "istrue": true
+      },
+      {
+        "statement": "การจำกัดทรัพยากรของ Container",
+        "istrue": false
+      }
+    ],
+    "explanation": "Docker Compose ถูกออกแบบมาสำหรับการจัดการ container บน host เดียว เมื่อแอปพลิเคชันต้องการทรัพยากรเกินกว่าที่ host เดียวจะรับไหว หรือต้องการความพร้อมใช้งานสูง (High Availability) จึงจำเป็นต้องใช้เครื่องมือระดับถัดไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แพลตฟอร์มที่ใช้บริหารจัดการวงจรชีวิตของ Container ในสภาพแวดล้อมแบบ Cluster เรียกว่าอะไร?",
+    "options": [
+      {
+        "statement": "Container Registry",
+        "istrue": false
+      },
+      {
+        "statement": "Container Networking Interface (CNI)",
+        "istrue": false
+      },
+      {
+        "statement": "Container Orchestration",
+        "istrue": true
+      },
+      {
+        "statement": "Container Runtime",
+        "istrue": false
+      }
+    ],
+    "explanation": "Container Orchestration คือกลุ่มของเครื่องมือและกระบวนการที่ทำให้การจัดการแอปพลิเคชันที่ซับซ้อนบนกลุ่มของเครื่องคอมพิวเตอร์ (Cluster) เป็นไปโดยอัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ หน้าที่หลักของ Container Orchestrator?",
+    "options": [
+      {
+        "statement": "Deployment (การติดตั้ง)",
+        "istrue": false
+      },
+      {
+        "statement": "Scaling (การเพิ่ม/ลดขนาด)",
+        "istrue": false
+      },
+      {
+        "statement": "Self-healing (การฟื้นฟูตัวเอง)",
+        "istrue": false
+      },
+      {
+        "statement": "Code Compilation (การคอมไพล์โค้ด)",
+        "istrue": true
+      }
+    ],
+    "explanation": "Orchestrator มีหน้าที่จัดการ 'วงจรชีวิต' ของ container ที่ถูก build มาแล้ว แต่ไม่มีหน้าที่เกี่ยวข้องกับกระบวนการ 'สร้าง' แอปพลิเคชัน เช่น การเขียนหรือคอมไพล์โค้ด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แพลตฟอร์ม Container Orchestration ใดที่ได้รับความนิยมสูงสุดและถือเป็นมาตรฐานของวงการในปัจจุบัน?",
+    "options": [
+      {
+        "statement": "Docker Swarm",
+        "istrue": false
+      },
+      {
+        "statement": "Kubernetes (K8s)",
+        "istrue": true
+      },
+      {
+        "statement": "Apache Mesos",
+        "istrue": false
+      },
+      {
+        "statement": "Docker Compose",
+        "istrue": false
+      }
+    ],
+    "explanation": "Kubernetes (K8s) ได้กลายเป็นมาตรฐานอุตสาหกรรมสำหรับการทำ container orchestration เนื่องจากมีฟีเจอร์ที่ครบครัน, มี ecosystem ที่ใหญ่, และได้รับการสนับสนุนจากบริษัทเทคโนโลยีชั้นนำ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `docker compose exec web bash` ใช้ทำอะไร?",
+    "options": [
+      {
+        "statement": "ลบ Service ที่ชื่อ `web`",
+        "istrue": false
+      },
+      {
+        "statement": "ดู Log ของ Service `web`",
+        "istrue": false
+      },
+      {
+        "statement": "รันคำสั่ง `bash` เพื่อเข้าไปใน Container ของ Service `web` ที่กำลังทำงานอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "สร้าง Container ใหม่จาก Service `web`",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker compose exec` ทำหน้าที่เหมือน `docker exec` คือใช้สำหรับรันคำสั่งภายใน container ที่กำลังทำงานอยู่ โดยอ้างอิงผ่านชื่อ service แทนชื่อ container"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณรัน `docker compose up` โดยไม่ได้ใส่ `-d` จะเกิดอะไรขึ้น?",
+    "options": [
+      {
+        "statement": "Compose จะรันในเบื้องหลังโดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "Compose จะแสดง Log ของทุก Service ออกมาที่หน้าจอ Terminal และจะยึดหน้าจอนั้นไว้ (Foreground mode)",
+        "istrue": true
+      },
+      {
+        "statement": "จะเกิดข้อผิดพลาดและไม่ทำงาน",
+        "istrue": false
+      },
+      {
+        "statement": "Compose จะถามเพื่อยืนยันการทำงาน",
+        "istrue": false
+      }
+    ],
+    "explanation": "การรันใน foreground mode (โดยไม่ใช้ `-d`) มีประโยชน์สำหรับการพัฒนาและการดีบัก เพราะจะเห็น output และ log ของแอปพลิเคชันแบบ real-time"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในตัวอย่าง Monitoring Stack, การตั้งค่า `volumes: grafana-vol: external: true` หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "statement": "ให้ Compose สร้าง Volume ชื่อ `grafana-vol` ขึ้นมาใหม่เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "ให้ Compose ไปใช้ Volume ชื่อ `grafana-vol` ที่มีอยู่แล้วภายนอกโปรเจกต์ (ต้องสร้างไว้ก่อน)",
+        "istrue": true
+      },
+      {
+        "statement": "ให้ Volume นี้สามารถเข้าถึงได้จากภายนอกเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ให้ลบ Volume นี้ทิ้งเมื่อรัน `docker compose down`",
+        "istrue": false
+      }
+    ],
+    "explanation": "`external: true` เป็นการบอก Compose ว่า volume นี้ถูกจัดการอยู่นอกวงจรชีวิตของโปรเจกต์ compose และ compose ไม่ควรพยายามสร้างหรือลบมัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การกำหนด `ports: - \"5000\"` (ระบุแค่ Container Port) ใน `compose.yml` มีประโยชน์อย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้ไม่สามารถเข้าถึง Service นั้นได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Service นั้นทำงานได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เหมาะกับการ Scaling เพราะ Docker จะหา Port ว่างบนเครื่อง Host มาเชื่อมต่อให้โดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นการบังคับให้ Host ต้องใช้ Port 5000 เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "การไม่ระบุ host port ทำให้ Docker สามารถเลือก port ที่ว่างอยู่บน host มาแมปให้เอง ซึ่งจำเป็นมากเมื่อทำการ scale service เป็นหลายๆ replica เพื่อไม่ให้เกิด port conflict"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความสัมพันธ์ที่ถูกต้องระหว่าง `docker run` และ `compose.yml`?",
+    "options": [
+      {
+        "statement": "`compose.yml` ถูกใช้เพื่อสร้างคำสั่ง `docker run`",
+        "istrue": false
+      },
+      {
+        "statement": "`compose.yml` เป็นวิธีการเขียนคำนิยามแทนการใช้ option ที่ยาวและซับซ้อนของ `docker run`",
+        "istrue": true
+      },
+      {
+        "statement": "ทั้งสองอย่างไม่เกี่ยวข้องกันเลย",
+        "istrue": false
+      },
+      {
+        "statement": "`docker run` สามารถรันไฟล์ `compose.yml` ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "Docker Compose เป็น abstraction layer ที่อยู่เหนือ Docker Engine โดยแปลงการกำหนดค่าในไฟล์ YAML ไปเป็นคำสั่ง API ที่เทียบเท่ากับ `docker run`, `docker network create` ฯลฯ ให้เอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากคุณต้องการ build image ใหม่สำหรับ service `web` เท่านั้น โดยไม่ต้องการรันโปรเจกต์ทั้งหมด ควรใช้คำสั่งใด?",
+    "options": [
+      {
+        "statement": "docker compose build web",
+        "istrue": true
+      },
+      {
+        "statement": "docker compose up --build web",
+        "istrue": false
+      },
+      {
+        "statement": "docker build ./web",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose start web",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำสั่ง `docker compose build [SERVICE...]` ช่วยให้เราสามารถ build image สำหรับ service ที่ต้องการได้โดยเฉพาะ ซึ่งเร็วกว่าการ build ทั้งโปรเจกต์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในไฟล์ `compose.yml` เราสามารถจำกัดการใช้ CPU และ Memory ของ Service ได้ผ่านคีย์ใด?",
+    "options": [
+      {
+        "statement": "limits",
+        "istrue": false
+      },
+      {
+        "statement": "resources",
+        "istrue": false
+      },
+      {
+        "statement": "deploy",
+        "istrue": true
+      },
+      {
+        "statement": "scale",
+        "istrue": false
+      }
+    ],
+    "explanation": "การกำหนดขีดจำกัดทรัพยากร (resource limits and reservations) จะอยู่ภายใต้คีย์ `resources` ซึ่งเป็นส่วนหนึ่งของคีย์ `deploy`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การตั้งค่า `internal: true` ให้กับ network ใน `compose.yml` มีผลอย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้ network นั้นเชื่อมต่อกับอินเทอร์เน็ตได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ network นั้นถูกแยกขาดจากภายนอกโดยสิ้นเชิง ไม่สามารถเชื่อมต่อกับโลกภายนอกได้",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้เฉพาะ service ภายในโปรเจกต์เดียวกันเท่านั้นที่สามารถใช้ network นี้ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการเข้ารหัสข้อมูลใน network นั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "`internal: true` เป็นฟีเจอร์ด้านความปลอดภัยที่สำคัญ ใช้สำหรับสร้าง network ที่ถูกโดดเดี่ยวอย่างสมบูรณ์ เหมาะสำหรับ backend หรือ database tier"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าโปรเจกต์ของคุณชื่อ `myapp` และมี service ชื่อ `db`, Docker Compose จะสร้าง container ที่มีชื่อว่าอะไรโดยประมาณ?",
+    "options": [
+      {
+        "statement": "db",
+        "istrue": false
+      },
+      {
+        "statement": "db_myapp_1",
+        "istrue": false
+      },
+      {
+        "statement": "myapp_db_1",
+        "istrue": true
+      },
+      {
+        "statement": "container_db_1",
+        "istrue": false
+      }
+    ],
+    "explanation": "Compose จะใช้รูปแบบ `[project-name]_[service-name]_[replica-number]` ในการตั้งชื่อ container โดยอัตโนมัติเพื่อป้องกันชื่อซ้ำซ้อนและระบุที่มาได้ง่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นเหตุผลที่ดีที่สุดในการนำไฟล์ `compose.yml` ไปเก็บไว้ใน Git?",
+    "options": [
+      {
+        "statement": "เพื่อสำรองไฟล์ไว้ไม่ให้หาย",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้สามารถควบคุมเวอร์ชันของโครงสร้างแอปพลิเคชัน และทำงานร่วมกับทีมได้อย่างมีประสิทธิภาพ",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้ Git สามารถ build image ให้โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะเป็นข้อบังคับของ Docker Compose",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเก็บ `compose.yml` ใน version control ทำให้คำนิยามของแอปพลิเคชันเป็นเหมือนโค้ด (Infrastructure as Code) ซึ่งสามารถตรวจสอบย้อนหลัง, แตก branch, และทำงานร่วมกันเป็นทีมได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คุณมี service `web` และ `api` ที่ต้องคุยกัน และ service `db` ที่ `api` เท่านั้นที่ต้องคุยด้วย ควรออกแบบ network ใน `compose.yml` อย่างไร?",
+    "options": [
+      {
+        "statement": "สร้าง network เดียวให้ทั้ง 3 services อยู่รวมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง 2 networks: `frontend` (สำหรับ web, api) และ `backend` (สำหรับ api, db)",
+        "istrue": true
+      },
+      {
+        "statement": "สร้าง 3 networks แยกกันสำหรับแต่ละ service",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ต้องสร้าง network เลย ให้ใช้ default ไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "การออกแบบนี้ (web-api อยู่ใน network หนึ่ง, api-db อยู่ในอีก network หนึ่ง) เป็นการใช้หลักการ Least Privilege คือให้แต่ละส่วนประกอบเข้าถึงได้เฉพาะสิ่งที่จำเป็นเท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คำสั่ง `docker compose stop` แตกต่างจาก `docker compose down` อย่างไร?",
+    "options": [
+      {
+        "statement": "ไม่แตกต่างกันเลย",
+        "istrue": false
+      },
+      {
+        "statement": "`stop` จะหยุด container เท่านั้น แต่ `down` จะหยุดและลบ container และ network ทิ้งไปด้วย",
+        "istrue": true
+      },
+      {
+        "statement": "`down` เร็วกว่า `stop`",
+        "istrue": false
+      },
+      {
+        "statement": "`stop` ใช้กับ service เดียว แต่ `down` ใช้กับทั้งโปรเจกต์",
+        "istrue": false
+      }
+    ],
+    "explanation": "`stop` ทำให้ container อยู่ในสถานะ Exited ซึ่งสามารถ `start` กลับมาใหม่ได้พร้อมข้อมูลเดิม ในขณะที่ `down` เป็นการรื้อถอนที่สมบูรณ์กว่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าคุณต้องการดู Log ของ service `prometheus` ที่ทำงานในโปรเจกต์ของคุณ ควรใช้คำสั่งใด?",
+    "options": [
+      {
+        "statement": "docker logs prometheus",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose ps prometheus",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose logs prometheus",
+        "istrue": true
+      },
+      {
+        "statement": "docker compose top prometheus",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำสั่ง `docker compose logs` ถูกออกแบบมาเพื่อดึง log จาก container ที่จัดการโดย Compose โดยอ้างอิงจากชื่อ service ได้โดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำงานของ Container Orchestrator ที่เรียกว่า 'Self-healing' หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "การอัปเดตซอฟต์แวร์ใน container ให้โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "การสแกนหาไวรัสใน container",
+        "istrue": false
+      },
+      {
+        "statement": "หากมี container หรือเครื่องล่มไป Orchestrator จะย้ายงานไปรันที่เครื่องอื่นให้เองโดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "การปรับลดขนาดของ container เพื่อประหยัดทรัพยากร",
+        "istrue": false
+      }
+    ],
+    "explanation": "Self-healing เป็นคุณสมบัติสำคัญที่ช่วยเพิ่มความเสถียรและความพร้อมใช้งานของแอปพลิเคชัน โดยระบบจะพยายามรักษาสถานะที่ต้องการ (desired state) อยู่เสมอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการใช้ Docker Compose จึงช่วยลดความผิดพลาดในการติดตั้งแอปพลิเคชันที่ซับซ้อน?",
+    "options": [
+      {
+        "statement": "เพราะ Compose จะตรวจสอบโค้ดหา bug ให้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะการนิยามทุกอย่างไว้ในไฟล์เดียว ทำให้กระบวนการเป็นอัตโนมัติและทำซ้ำได้ ลดความเสี่ยงจาก human error",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Compose จะติดตั้ง Docker เวอร์ชันล่าสุดให้เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Compose ทำให้ไม่ต้องใช้ network",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเปลี่ยนจากกระบวนการที่ต้องทำด้วยมือ (manual) มาเป็นกระบวนการที่ถูกนิยามเป็นโค้ด (declarative) เป็นหัวใจสำคัญในการลดข้อผิดพลาดและเพิ่มความน่าเชื่อถือของระบบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คุณต้องการให้แอปพลิเคชันของคุณมี `web` server 3 ตัว และ `api` server 5 ตัว ควรใช้คำสั่งใด?",
+    "options": [
+      {
+        "statement": "docker compose up --scale all=8 -d",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose up --scale web=3,api=5 -d",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose up --scale web=3 --scale api=5 -d",
+        "istrue": true
+      },
+      {
+        "statement": "docker compose up --replicas web=3,api=5 -d",
+        "istrue": false
+      }
+    ],
+    "explanation": "เราสามารถใช้ option `--scale` หลายๆ ครั้งในคำสั่งเดียวเพื่อกำหนดจำนวน replica ของแต่ละ service แยกกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้า `compose.yml` ไม่ได้นิยาม `networks` ใดๆ เลย, service ทั้งหมดจะถูกเชื่อมต่อกับเครือข่ายลักษณะใด?",
+    "options": [
+      {
+        "statement": "จะไม่สามารถสื่อสารกันได้เลย",
+        "istrue": false
+      },
+      {
+        "statement": "จะถูกเชื่อมต่อกับเครือข่าย default bridge ของ Docker (ชื่อ `bridge`)",
+        "istrue": false
+      },
+      {
+        "statement": "Compose จะสร้างเครือข่าย bridge ส่วนตัวสำหรับโปรเจกต์นั้นให้โดยอัตโนมัติ",
+        "istrue": true
+      },
+      {
+        "statement": "จะถูกเชื่อมต่อกับเครือข่ายของเครื่อง Host โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "เพื่อความปลอดภัยและการแยกส่วน Compose จะสร้าง default network สำหรับแต่ละโปรเจกต์ (เช่น `myproject_default`) ให้เอง ทำให้ service ภายในโปรเจกต์สามารถคุยกันได้ผ่านชื่อ service"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นเหตุผลที่ไม่ควรใช้ Docker Compose สำหรับการจัดการแอปพลิเคชันขนาดใหญ่ในระดับ Production ที่ต้องการ High Availability?",
+    "options": [
+      {
+        "statement": "เพราะ Compose ไม่สามารถสร้าง network ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Compose ถูกจำกัดให้ทำงานบนเครื่องคอมพิวเตอร์เพียงเครื่องเดียว (Single Point of Failure)",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Compose ไม่สามารถจำกัด memory ได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะไฟล์ `compose.yml` มีขนาดใหญ่เกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อจำกัดที่ใหญ่ที่สุดของ Compose คือการผูกติดอยู่กับ single host ซึ่งหมายความว่าหาก host นั้นล่ม แอปพลิเคชันทั้งหมดก็จะล่มไปด้วย ซึ่งเป็นสิ่งที่ยอมรับไม่ได้ใน production ที่ต้องการความพร้อมใช้งานสูง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ `container_name` ใน `compose.yml` มีข้อเสียอย่างไรเมื่อต้องการทำ scaling?",
+    "options": [
+      {
+        "statement": "ทำให้ container ทำงานช้าลง",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ไม่สามารถ scale service นั้นได้ เพราะชื่อ container จะต้องไม่ซ้ำกัน",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ใช้ memory มากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ network ไม่เสถียร",
+        "istrue": false
+      }
+    ],
+    "explanation": "การกำหนดชื่อ container แบบตายตัวจะทำให้ Compose ไม่สามารถสร้าง replica ที่สองขึ้นมาได้ เพราะจะเกิดชื่อซ้ำกัน ดังนั้นจึงควรหลีกเลี่ยงการใช้ `container_name` หากมีแผนที่จะ scale service นั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คีย์ `reservations` ภายใน `deploy.resources` มีไว้เพื่ออะไร?",
+    "options": [
+      {
+        "statement": "กำหนดทรัพยากรสูงสุดที่ container ห้ามใช้เกิน",
+        "istrue": false
+      },
+      {
+        "statement": "กำหนดทรัพยากรขั้นต่ำที่ระบบจะการันตีว่า container จะได้รับเสมอ",
+        "istrue": true
+      },
+      {
+        "statement": "จอง IP address ไว้ล่วงหน้า",
+        "istrue": false
+      },
+      {
+        "statement": "จองพื้นที่ใน volume",
+        "istrue": false
+      }
+    ],
+    "explanation": "`reservations` (การจอง) ช่วยให้มั่นใจว่า container จะมีทรัพยากรเพียงพอในการเริ่มต้นและทำงานได้อย่างน้อยที่สุด ในขณะที่ `limits` (ขีดจำกัด) จะป้องกันไม่ให้มันใช้ทรัพยากรมากเกินไปจนกระทบ service อื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าคุณต้องการลบเฉพาะ container ของโปรเจกต์ที่หยุดทำงานแล้ว โดยไม่แตะต้อง container ที่กำลังทำงานอยู่ ควรใช้คำสั่งใด?",
+    "options": [
+      {
+        "statement": "docker compose down",
+        "istrue": false
+      },
+      {
+        "statement": "docker compose rm",
+        "istrue": true
+      },
+      {
+        "statement": "docker compose stop",
+        "istrue": false
+      },
+      {
+        "statement": "docker container prune",
+        "istrue": false
+      }
+    ],
+    "explanation": "`docker compose rm` จะลบเฉพาะ container ที่อยู่ในสถานะ exited (หยุดทำงานแล้ว) ของโปรเจกต์ปัจจุบันเท่านั้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Docker Compose มีประโยชน์ต่อวงจรการพัฒนาซอฟต์แวร์ (Development Lifecycle) อย่างไร?",
+    "options": [
+      {
+        "statement": "ช่วยให้นักพัฒนาสามารถจำลองสภาพแวดล้อมของ production ที่ซับซ้อนขึ้นมาบนเครื่องของตัวเองได้อย่างง่ายดาย",
+        "istrue": true
+      },
+      {
+        "statement": "ช่วยเขียน unit test ให้โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "ช่วยคอมไพล์โค้ดให้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ช่วยออกแบบฐานข้อมูลให้",
+        "istrue": false
+      }
+    ],
+    "explanation": "ด้วยไฟล์ `compose.yml` ไฟล์เดียว นักพัฒนาทุกคนในทีมสามารถสร้างสภาพแวดล้อมที่เหมือนกันเป๊ะขึ้นมาได้ด้วยคำสั่งเดียว ซึ่งช่วยลดปัญหา 'it works on my machine' ได้อย่างมาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "คุณต้องการอัปเดต image ของ service `grafana` และให้มันทำงานด้วย image ใหม่ ควรทำอย่างไร?",
+    "options": [
+      {
+        "statement": "รัน `docker compose stop grafana` ตามด้วย `docker compose start grafana`",
+        "istrue": false
+      },
+      {
+        "statement": "รัน `docker compose up -d --build grafana`",
+        "istrue": false
+      },
+      {
+        "statement": "แก้ไขเวอร์ชัน image ใน `compose.yml` แล้วรัน `docker compose up -d`",
+        "istrue": true
+      },
+      {
+        "statement": "รัน `docker pull grafana/grafana` แล้วรีสตาร์ทเครื่อง",
+        "istrue": false
+      }
+    ],
+    "explanation": "เมื่อรัน `docker compose up`, Compose จะตรวจสอบว่า image ที่ระบุในไฟล์ตรงกับ image ที่ใช้สร้าง container ปัจจุบันหรือไม่ หากไม่ตรง มันจะดึง image ใหม่และสร้าง container ขึ้นมาแทนที่ให้โดยอัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในตัวอย่างสถาปัตยกรรม 3-Tier, service `web` สามารถสื่อสารกับ `db` ได้เพราะอะไร?",
+    "options": [
+      {
+        "statement": "เพราะทั้งสอง service เปิด port สู่สาธารณะ",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ service `web` มี `depends_on: - db`",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ cả hai service đều được kết nối vào network `backend` เหมือนกัน",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ `db` อยู่ใน network ที่เป็น `internal: true`",
+        "istrue": false
+      }
+    ],
+    "explanation": "Container สามารถสื่อสารกันได้ก็ต่อเมื่อมันอยู่ใน network เดียวกัน ในกรณีนี้ ทั้ง `web` และ `db` ต่างก็เป็นสมาชิกของ network `backend` ทำให้สามารถสื่อสารกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นคำเปรียบเทียบที่ดีที่สุดสำหรับ Container Orchestrator?",
+    "options": [
+      {
+        "statement": "สถาปนิกผู้ออกแบบตึก",
+        "istrue": false
+      },
+      {
+        "statement": "วาทยกรผู้ควบคุมวงออร์เคสตรา",
+        "istrue": true
+      },
+      {
+        "statement": "บรรณารักษ์ในห้องสมุด",
+        "istrue": false
+      },
+      {
+        "statement": "ช่างก่อสร้าง",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเปรียบเทียบกับวาทยกร (Orchestrator) สะท้อนให้เห็นถึงหน้าที่ในการควบคุม, ประสานงาน, และดูแลให้ส่วนประกอบต่างๆ (นักดนตรี/container) ทำงานร่วมกันอย่างสอดคล้องและเป็นระบบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเปลี่ยนจากการใช้คำสั่ง `docker run` หลายๆ คำสั่งมาเป็น `compose.yml` เป็นตัวอย่างของแนวคิดใด?",
+    "options": [
+      {
+        "statement": "Imperative (การสั่งแบบเป็นขั้นตอน) ไปสู่ Declarative (การประกาศผลลัพธ์ที่ต้องการ)",
+        "istrue": true
+      },
+      {
+        "statement": "Declarative ไปสู่ Imperative",
+        "istrue": false
+      },
+      {
+        "statement": "Synchronous ไปสู่ Asynchronous",
+        "istrue": false
+      },
+      {
+        "statement": "Object-Oriented ไปสู่ Functional",
+        "istrue": false
+      }
+    ],
+    "explanation": "การรันคำสั่ง `docker run` คือการบอกว่า 'ให้ทำ' อะไรเป็นขั้นตอน (Imperative) แต่การเขียน `compose.yml` คือการบอกว่า 'ฉันต้องการ' ให้ระบบมีหน้าตาเป็นอย่างไร (Declarative) แล้วปล่อยให้ Compose ไปหาวิธีทำให้เอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ถ้าคุณลบไดเรกทอรีของโปรเจกต์ที่มี `compose.yml` ทิ้งไป จะเกิดอะไรขึ้นกับ container ที่รันจากโปรเจกต์นั้น?",
+    "options": [
+      {
+        "statement": "Container จะถูกลบไปด้วยโดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "Container จะยังคงทำงานอยู่ต่อไป แต่คุณอาจจะจัดการมันผ่าน `docker compose` ได้ลำบากขึ้น",
+        "istrue": true
+      },
+      {
+        "statement": "Container จะหยุดทำงานทันที",
+        "istrue": false
+      },
+      {
+        "statement": "ไฟล์ `compose.yml` จะถูกสร้างขึ้นมาใหม่",
+        "istrue": false
+      }
+    ],
+    "explanation": "วงจรชีวิตของ container ไม่ได้ผูกติดกับไฟล์ `compose.yml` โดยตรง ไฟล์เป็นเพียงพิมพ์เขียวในการสร้างเท่านั้น container ที่ถูกสร้างขึ้นแล้วจะยังคงอยู่จนกว่าจะถูกสั่ง `stop` หรือ `down`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นเหตุผลที่ Docker Compose ติดตั้งมาพร้อมกับ Docker Desktop?",
+    "options": [
+      {
+        "statement": "เพราะเป็นเครื่องมือที่จำเป็นอย่างยิ่งสำหรับ workflow การพัฒนาสมัยใหม่ที่มักเกี่ยวข้องกับหลายๆ service",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะเป็นข้อบังคับทางกฎหมาย",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะไม่มีวิธีอื่นในการรัน container หลายตัว",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะทั้งสองถูกพัฒนาโดยบริษัทเดียวกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Docker ตระหนักดีว่านักพัฒนามักจะทำงานกับแอปพลิเคชันที่ซับซ้อนกว่า container เดียว การมี Compose มาให้เลยจึงช่วยอำนวยความสะดวกและส่งเสริม best practice ในการพัฒนา"
+  }
+]

@@ -1,0 +1,385 @@
+[
+  {
+    "question": "1. คุณสมบัติ 4 ประการของการสื่อสารข้อมูลที่กล่าวถึง Delivery หมายถึงอะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "อุปกรณ์เชื่อมต่อต้องทำหน้าที่ในการกระจายสัญญาณได้ถูกต้อง",
+        "istrue": false
+      },
+      {
+        "statement": "อุปกรณ์ทุกชนิดที่สามารถควบคุมการส่งข้อมูลได้",
+        "istrue": false
+      },
+      {
+        "statement": "อุปกรณ์ทุกชนิดสามารถส่งข้อมูลได้",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งข้อมูลที่สามารถส่งไปยังปลายทางได้อย่างถูกต้อง",
+        "istrue": true
+      }
+    ],
+    "explanation": "Delivery หมายถึงการที่ข้อมูลถูกส่งจากต้นทางไปถึงปลายทางได้ตามที่ต้องการ โดยไม่มีการส่งผิดเครื่องหรือปลายทาง ทำให้ผู้รับได้รับข้อมูลถูกต้องตรงตามที่ผู้ส่งตั้งใจ"
+  },
+  {
+    "question": "2. คุณสมบัติ 4 ประการของการสื่อสารข้อมูลที่กล่าวถึง Jitter หมายถึงอะไร?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "ความเสถียรในการสื่อสารข้อมูล", "istrue": false },
+      { "statement": "ความแปรปรวนในการส่งแพ็กเก็ตข้อมูล", "istrue": true },
+      { "statement": "ปริมาณข้อมูลที่ส่งได้ในขณะหนึ่ง ๆ", "istrue": false },
+      { "statement": "Delay ในการส่งข้อมูล", "istrue": false }
+    ],
+    "explanation": "Jitter คือความแปรปรวนของระยะเวลาที่ใช้ในการรับ-ส่งข้อมูลของแต่ละแพ็กเก็ต ซึ่งทำให้การรับข้อมูลอาจไม่ราบรื่นหรือไม่ต่อเนื่อง โดยเฉพาะในงานมัลติมีเดียหรือการสตรีมมิง หาก Jitter สูงจะทำให้คุณภาพการรับชม/รับฟังลดลง"
+  },
+  {
+    "question": "3. ข้อใดกล่าวถึงองค์ประกอบของการสื่อสารข้อมูลได้ครบถ้วน?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "นิพนธ์คุยกับสมหมายในห้องเรียนว่า “เรียนไม่รู้เรื่อง”",
+        "istrue": false
+      },
+      {
+        "statement": "นิพนธ์ส่งข้อความ “สวัสดี” ไปให้สมหมายทาง Line (ซึ่งมีโปรโตคอลของตนเอง) บนโทรศัพท์มือถือที่ใช้คลื่น 5G",
+        "istrue": true
+      },
+      {
+        "statement": "นิพนธ์โทรหาสมหมายผ่าน Line แต่สมหมายไม่รับสาย",
+        "istrue": false
+      },
+      {
+        "statement": "นิพนธ์เขียนข้อความว่า “B๖๔๗๕๖” ส่งไปให้สมหมาย แต่สมหมายอ่านไม่เข้าใจ",
+        "istrue": false
+      }
+    ],
+    "explanation": "การสื่อสารข้อมูลต้องประกอบด้วย (1) ผู้ส่ง (2) ผู้รับ (3) สื่อกลางหรือช่องทางในการส่ง (4) โปรโตคอลหรือกติกาการสื่อสาร ในตัวเลือก (2) นิพนธ์เป็นผู้ส่ง สมหมายเป็นผู้รับ สื่อกลางคือเครือข่ายโทรศัพท์ 5G และใช้โปรโตคอลของแอป Line"
+  },
+  {
+    "question": "4. ข้อใดกล่าวถึงการส่งข้อมูลแบบ Simplex?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "การสแกนเอกสารด้วยโทรศัพท์มือถือ", "istrue": false },
+      { "statement": "การส่งเอกสารทางไปรษณีย์ให้เพื่อน", "istrue": false },
+      {
+        "statement": "การถ่ายโอนวิดีโอจากกล้องวิดีโอเข้าสู่คอมพิวเตอร์",
+        "istrue": true
+      },
+      { "statement": "การทิ้งข้อความไว้ใน Line ให้เพื่อนอ่าน", "istrue": false }
+    ],
+    "explanation": "Simplex คือการสื่อสารที่ทิศทางการส่งข้อมูลอยู่ด้านเดียว ผู้ส่งและผู้รับไม่สามารถสลับบทบาทได้พร้อม ๆ กัน เช่น การถ่ายวิดีโอจากกล้องเข้าคอมพิวเตอร์ กล้องเป็นผู้ส่ง คอมพิวเตอร์เป็นผู้รับ"
+  },
+  {
+    "question": "5. ข้อใดกล่าวถึงการส่งข้อมูลแบบ Half Duplex?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "การสแกนเอกสารด้วยโทรศัพท์มือถือ", "istrue": false },
+      { "statement": "การแก้ไฟล์จาก iCloud ด้วย iPad", "istrue": true },
+      {
+        "statement": "การสั่งพิมพ์เอกสารจาก iCloud เป็น PDF บน iPad",
+        "istrue": false
+      },
+      { "statement": "การส่งข้อความทักไปใน Line กลุ่ม", "istrue": false }
+    ],
+    "explanation": "Half Duplex สามารถส่งข้อมูลได้ทั้งสองทิศทาง แต่ไม่พร้อมกัน ต้องสลับกันส่ง-รับ ตัวเลือกที่ระบุว่าการแก้ไฟล์บน iCloud ด้วย iPad อาจหมายถึงเราส่งอัปเดตไปก่อน จากนั้นถึงจะรับข้อมูลตอบกลับมา (ซึ่งไม่เกิดขึ้นในเวลาเดียวกัน) จึงจัดเป็น Half Duplex"
+  },
+  {
+    "question": "6. ข้อใดเป็นความหมายของการส่งข้อความแบบ Half Duplex?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "การส่งทั้งสองทิศทางโดยใช้สายสื่อสารสองสาย",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งทั้งสองทิศทางบนสายเดียวกัน แต่เป็นคนละเวลา ด้วยความเร็วเต็มอัตรา",
+        "istrue": true
+      },
+      {
+        "statement": "การส่งทั้งสองทิศทางโดยแบ่งความเร็วทิศทางละครึ่ง",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งทั้งสองทิศทางคนละเวลา แต่แบ่งความเร็วคนละครึ่ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Half Duplex หมายถึงการใช้ช่องสัญญาณเดียวกันรับ-ส่งได้ทั้งสองทิศทาง แต่ต้องสลับช่วงเวลาในการส่ง ซึ่งแต่ละครั้งสามารถใช้ความเร็วเต็มอัตราเมื่อทำการส่งหรือรับ"
+  },
+  {
+    "question": "7. การสื่อสารด้วยสาย Optical Fiber จะสามารถเป็นแบบ Full Duplex ได้หรือไม่?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ได้ เพราะสามารถส่งข้อมูลสองทิศทางพร้อมกันเสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ได้ เพราะเป็นการส่งด้วยคลื่นแสงวิ่งทิศทางเดียว จึงเป็นได้แค่ Half Duplex",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ได้ เพราะเป็นการส่งด้วยคลื่นแสงวิ่งทิศทางเดียว จึงเป็นได้แค่ Simplex",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ได้ เพราะเป็นการส่งด้วยคลื่นแสงวิ่งทิศทางเดียว จึงเป็นได้แค่ Simplex หรือ Half Duplex",
+        "istrue": true
+      }
+    ],
+    "explanation": "ในสายไฟเบอร์ปกติ แสงจะเดินทางได้ทางเดียวในแต่ละเส้น แต่หากต้องการ Full Duplex มักต้องใช้ 2 เส้น (ส่ง 1 เส้น/รับ 1 เส้น) หรือใช้เทคนิค Wave Division Multiplexing (WDM) เพื่อแบ่งความยาวคลื่นให้ส่งรับได้พร้อมกัน"
+  },
+  {
+    "question": "8. ข้อใดกล่าวถูกต้อง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ประสิทธิภาพการทำงานจะยิ่งดีขึ้นถ้ามีผู้ใช้งานเชื่อมต่อมาก",
+        "istrue": false
+      },
+      {
+        "statement": "เครื่องที่หยุดทำงานบ่อยแต่ซ่อมเร็วถือว่ามีความน่าเชื่อถือ",
+        "istrue": false
+      },
+      {
+        "statement": "หากเครื่องไม่เคยหยุดทำงานเลย ก็ไม่ได้หมายความว่ามีความน่าเชื่อถือ",
+        "istrue": false
+      },
+      {
+        "statement": "ยิ่งมีผู้ใช้งานจำนวนมาก ประสิทธิภาพของการสื่อสารยิ่งตกต่ำลง",
+        "istrue": true
+      }
+    ],
+    "explanation": "เมื่อผู้ใช้งานในเครือข่ายมีจำนวนมากขึ้น ทรัพยากรเครือข่าย (เช่น แบนด์วิดท์) จะถูกแบ่งใช้ ทำให้ประสิทธิภาพ (throughput หรือ speed ที่แต่ละคนได้รับ) ลดลง"
+  },
+  {
+    "question": "9. ข้อใดกล่าวไม่ถูกต้อง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ประสิทธิภาพของเครือข่ายได้รับผลจากจำนวนผู้ใช้เครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "การวัดความปลอดภัยอาจทำเป็นช่วงเวลา (เช่น ทุก 1 เดือน หรือ 6 เดือน)",
+        "istrue": false
+      },
+      {
+        "statement": "ความปลอดภัยของเครือข่ายส่งผลต่อความน่าเชื่อถือของระบบ",
+        "istrue": false
+      },
+      {
+        "statement": "ความปลอดภัยของระบบเครือข่ายมุ่งเน้นแค่การเข้าใช้อุปกรณ์มากกว่าการปกป้องข้อมูล",
+        "istrue": true
+      }
+    ],
+    "explanation": "ปกติการรักษาความปลอดภัย (security) ควรดูแลทั้งการป้องกันไม่ให้ผู้ไม่ประสงค์ดีเข้าถึงระบบและการปกป้องข้อมูลของผู้ใช้งาน ไม่ใช่เน้นแค่การจำกัดการเข้าใช้อุปกรณ์"
+  },
+  {
+    "question": "10. ข้อใดต่อไปนี้ผิด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "คอมพิวเตอร์ทุกเครื่องสามารถเชื่อมต่อสายสื่อสารได้โดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "Hub สามารถส่งข้อมูลตรงไปยังปลายทางได้ทันทีโดยไม่กระจายสัญญาณ",
+        "istrue": true
+      },
+      {
+        "statement": "การเชื่อมต่อแบบสายมีความน่าเชื่อถือมากกว่าไร้สาย",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งข้อมูลด้วย Ring topology จะไม่มีการชนกันของสัญญาณ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hub ไม่มีความสามารถเลือกส่งตรงเฉพาะปลายทางได้ แต่จะกระจายข้อมูลไปทุกพอร์ต (broadcast) จึงทำให้ข้อความที่ว่า \"Hub สามารถส่งข้อมูลตรงไปยังปลายทางได้ทันที\" เป็นข้อความผิด"
+  },
+  {
+    "question": "11. ข้อใดกล่าวไม่ถูกต้อง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "การเชื่อมต่อแบบ Point-to-Point เป็นประเภทหนึ่งของการเชื่อมต่อแบบ Bus",
+        "istrue": true
+      },
+      {
+        "statement": "โอกาสการชนกันของสัญญาณมีสูงในการเชื่อมต่อแบบ Bus",
+        "istrue": false
+      }
+    ],
+    "explanation": "Point-to-Point ไม่ใช่รูปแบบเดียวกับ Bus เพราะ Bus มีสายสื่อสารหลักเพียงเส้นเดียวที่อุปกรณ์หลายตัวใช้ร่วมกัน ส่วน Point-to-Point คือการเชื่อมอุปกรณ์สองจุดเข้าด้วยกันเพียงคู่เดียว จึงเป็นข้อความที่ไม่ถูกต้อง"
+  },
+  {
+    "question": "12. ข้อใดเป็นคุณสมบัติของการเชื่อมต่อแบบ Bus?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "ติดตั้งง่าย", "istrue": false },
+      { "statement": "ขยายเครือข่ายได้ยาก", "istrue": false },
+      { "statement": "ความปลอดภัยบนเครือข่ายสูง", "istrue": false },
+      { "statement": "ข้อ a และ b ถูกต้อง", "istrue": true }
+    ],
+    "explanation": "Bus Topology ติดตั้งง่าย ใช้สายหลักเพียงเส้นเดียว แต่เมื่อเครือข่ายขยายใหญ่ขึ้น สาย Bus จะรับภาระมากขึ้น ทำให้ขยายเพิ่มเติมได้ยาก และความปลอดภัยต่ำเพราะข้อมูลวิ่งผ่านสายร่วมกัน"
+  },
+  {
+    "question": "13. ข้อใดเป็นคุณสมบัติของการเชื่อมต่อแบบ Multipoint?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "มีการแบ่งช่วงเวลาการเข้าใช้ช่องทางการสื่อสาร",
+        "istrue": false
+      },
+      { "statement": "ประสิทธิภาพต่ำกว่า Point-to-Point", "istrue": false },
+      { "statement": "ประหยัดงบประมาณในการเชื่อมต่อ", "istrue": false },
+      { "statement": "ถูกทุกข้อ", "istrue": true }
+    ],
+    "explanation": "Multipoint คือการให้อุปกรณ์หลายตัวใช้สื่อกลางร่วมกัน จึงต้องมีการแบ่งเวลา/แบ่งช่องสัญญาณ (Time/Channel Sharing) ทำให้ประสิทธิภาพโดยรวมอาจต่ำกว่าการเชื่อมต่อแบบ Point-to-Point แต่ช่วยประหยัดค่าใช้จ่ายเรื่องสายสื่อสารได้"
+  },
+  {
+    "question": "14. “หากอุปกรณ์หรือสายสื่อสารขาดเพียงจุดเดียว การสื่อสารจะล่มทั้งเครือข่าย” เป็นคุณสมบัติของทอพอโลยีแบบใด?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "Star และ Ring", "istrue": false },
+      { "statement": "Star และ Bus", "istrue": false },
+      { "statement": "Ring และ Bus", "istrue": true },
+      { "statement": "Bus และ Tree", "istrue": false }
+    ],
+    "explanation": "ใน Ring หากสายหรืออุปกรณ์จุดใดจุดหนึ่งขาด วงแหวนจะไม่สมบูรณ์และล่มได้ ส่วน Bus ก็ใช้สายหลักเส้นเดียว ถ้าขาดจะล่มทั้งเครือข่าย ในขณะที่ Star หากอุปกรณ์ศูนย์กลางเสียก็ล่มได้เช่นกัน แต่คำตอบนี้ระบุตรงตามเงื่อนไขของ Ring และ Bus"
+  },
+  {
+    "question": "15. หากมีการเชื่อมต่อ 10 segment แบบ Star-Wired Bus ใช้ Hub 10/100 Mbps และสาย UTP 100 Mbps ข้อใดถูกต้อง?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "แต่ละ segment มีความเร็ว 1 Mbps", "istrue": false },
+      { "statement": "แต่ละ segment มีความเร็ว 10 Mbps", "istrue": true },
+      { "statement": "แต่ละ segment มีความเร็ว 100 Mbps", "istrue": false },
+      { "statement": "แต่ละ segment มีความเร็ว 10/100 Mbps", "istrue": false }
+    ],
+    "explanation": "ใน Star-Wired Bus ที่ใช้ Hub แบบ 10/100 Mbps ส่วนใหญ่มักเชื่อมต่ออุปกรณ์ต่าง ๆ ที่ระดับความเร็ว 10 Mbps ต่อพอร์ต (เนื่องจาก Hub ไม่อาจแบ่งแบนด์วิดท์ตามเครื่องได้อย่าง Switch) สาย UTP 100 Mbps เป็นมาตรฐานสายที่รองรับได้ถึง 100 Mbps แต่ฮับแบ่งปันที่ 10 Mbps ในแต่ละพอร์ต"
+  },
+  {
+    "question": "16. การสื่อสารที่แบ่งฟังก์ชันการทำงานเป็นส่วน ๆ เรียกว่าอะไร (ตอบเป็นศัพท์ภาษาอังกฤษ)?",
+    "type": "fill-in-blank",
+    "correctAnswer": "Layering",
+    "explanation": "Layering เป็นแนวคิดการแบ่งงานเครือข่ายหรือการสื่อสารออกเป็นลำดับชั้น (layers) เพื่อให้ออกแบบและจัดการได้ง่ายขึ้น"
+  },
+  {
+    "question": "17. ระบบสื่อสารที่มีคุณสมบัติเชื่อมต่อถึงกันตลอดเวลา คือมีคุณสมบัติใด?",
+    "type": "fill-in-blank",
+    "correctAnswer": "Reliability",
+    "explanation": "Reliability หมายถึงความน่าเชื่อถือและความพร้อมในการให้บริการอยู่เสมอ หากระบบสื่อสารเชื่อมต่อได้ตลอดเวลาแสดงถึงความมีเสถียรภาพและความน่าเชื่อถือ"
+  },
+  {
+    "question": "18. ระบบสื่อสารที่สามารถเชื่อมต่อได้ตลอดเวลาถือได้ว่ามีคุณสมบัติแบบใด (ศัพท์ภาษาอังกฤษ)?",
+    "type": "fill-in-blank",
+    "correctAnswer": "Reliability",
+    "explanation": "Reliability ใช้อธิบายลักษณะของระบบที่สามารถให้บริการต่อเนื่อง โดยไม่หยุดหรือขาดการเชื่อมต่อ"
+  },
+  {
+    "question": "19. การแบ่งฟังก์ชันการทำงานเป็นลำดับชั้นช่วยลดสิ่งใด (ศัพท์ภาษาอังกฤษ)?",
+    "type": "fill-in-blank",
+    "correctAnswer": "Complexity",
+    "explanation": "Layering ช่วยแยกปัญหาออกเป็นส่วนย่อย ทำให้เข้าใจและพัฒนาระบบได้ง่ายขึ้น ช่วยลด Complexity ของการออกแบบเครือข่าย"
+  },
+  {
+    "question": "20. ใน OSI reference model ลำดับชั้นที่ติดกับ Application layer คือ (ตอบเป็นภาษาอังกฤษ)?",
+    "type": "fill-in-blank",
+    "correctAnswer": "Presentation",
+    "explanation": "โครงสร้าง OSI Model: (1) Physical, (2) Data Link, (3) Network, (4) Transport, (5) Session, (6) Presentation, (7) Application ชั้นที่อยู่ติดกับ Application layer คือ Presentation layer"
+  },
+  {
+    "question": "21. ข้อใดกล่าวถูกต้อง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "การทำงานของแต่ละเลเยอร์ไม่ขึ้นกับเลเยอร์ข้างเคียงเลย",
+        "istrue": false
+      },
+      {
+        "statement": "Physical Layer เกี่ยวข้องกับสัญญาณข้อมูลทางไฟฟ้าหรือแสง",
+        "istrue": true
+      },
+      {
+        "statement": "Physical Layer เกี่ยวข้องกับการกำหนดทอพอโลยีเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลใน Physical Layer จะถูกแปลงเป็นเลขฐานสิบหก",
+        "istrue": false
+      }
+    ],
+    "explanation": "Physical Layer เกี่ยวข้องกับการส่งสัญญาณบิต (0/1) ในรูปของไฟฟ้าหรือแสงบนสายหรือสื่อกลาง ไม่ได้กำหนดทอพอโลยี หรือเปลี่ยนเป็นเลขฐานสิบหก"
+  },
+  {
+    "question": "22. ข้อใดเป็นคำเรียกข้อมูลใน Transport Layer?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "Frame", "istrue": false },
+      { "statement": "Packet", "istrue": false },
+      { "statement": "Package", "istrue": false },
+      { "statement": "Segment", "istrue": true }
+    ],
+    "explanation": "Transport Layer เรียกหน่วยข้อมูลว่า Segment (ใน TCP) หรือ Datagram (ใน UDP) แต่ตามโมเดลโดยทั่วไปนิยมเรียกว่า Segment"
+  },
+  {
+    "question": "23. ข้อมูลทางออกจาก Network Layer เรียกว่าอะไร?",
+    "type": "multiple-choice",
+    "options": [
+      { "statement": "Frame", "istrue": false },
+      { "statement": "Datagram", "istrue": true },
+      { "statement": "Segment", "istrue": false },
+      { "statement": "Stream", "istrue": false }
+    ],
+    "explanation": "ใน Network Layer ข้อมูลมักเรียกว่า Packet หรือ Datagram (เช่นใน IP เรียกว่า IP Datagram)"
+  },
+  {
+    "question": "24. Transport Layer ใน OSI Reference Model ทำงานติดกับชั้นใดบ้าง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Network Layer - Application Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Data Link Layer - Session Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Session Layer - Network Layer",
+        "istrue": true
+      },
+      {
+        "statement": "Application Layer - Presentation Layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "Transport Layer อยู่ระหว่าง Network Layer (ชั้นล่าง) และ Session Layer (ชั้นบน) ตามโมเดล OSI จึงทำงานติดต่อกับสองชั้นนั้น"
+  },
+  {
+    "question": "25. ข้อใดกล่าวผิดเกี่ยวกับการทำ Layering?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ช่วยในการพัฒนาโปรโตคอลใหม่ได้ง่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ช่วยลดความผิดพลาดในการส่งข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "ช่วยเพิ่มความเร็วในการสื่อสาร",
+        "istrue": true
+      },
+      {
+        "statement": "ข้อ b และ c ถูกต้อง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Layering มุ่งลดความซับซ้อน ทำให้ดีไซน์และดีบักโปรโตคอลได้ง่ายขึ้น และช่วยลดความผิดพลาด (เพราะแต่ละชั้นจัดการหน้าที่ของตัวเองชัดเจน) แต่ไม่ได้มีจุดประสงค์หลักเพื่อเพิ่มความเร็วในการสื่อสาร"
+  }
+]

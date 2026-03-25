@@ -1,0 +1,462 @@
+[
+  {
+     "type": "multiple-choice",
+    "question": "ความหมายของ Update Timer ใน RIP คืออะไร?",
+    "options": [
+      {
+        "statement": "ระยะเวลาที่รอคอยให้เกิดการปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 180 วินาที",
+        "istrue": false
+      },
+      {
+        "statement": "ระยะเวลาที่รอคอยให้เราท์เตอร์ที่ติดกันตอบสนองต่อความต้องการในการปรับปรุงตารางเส้นทาง",
+        "istrue": false
+      },
+      {
+        "statement": "ระยะเวลาภายหลังจากสถานะ Invalid เกิดขึ้น คิดเป็น 240 วินาที",
+        "istrue": false
+      },
+      {
+        "statement": "ระยะเวลาที่เราท์เตอร์ต้องปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 30 วินาที",
+        "istrue": true
+      }
+    ],
+    "explanation": "Update Timer คือช่วงเวลาที่เราท์เตอร์จะส่งข้อมูลอัปเดตตารางเส้นทาง (Routing Table) ให้แก่เราท์เตอร์เพื่อนบ้านเป็นระยะ ๆ โดยค่าเริ่มต้นของ RIP จะอยู่ที่ 30 วินาที เมื่อถึงเวลานี้ เราท์เตอร์จะกระจายข้อมูล Routing Table ของตนเองออกไป"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ปัจจุบัน ASN (Autonomous System Number) มีความยาวเป็นจำนวนกี่บิต?",
+    "options": [
+      {
+        "statement": "16",
+        "istrue": false
+      },
+      {
+        "statement": "32",
+        "istrue": true
+      },
+      {
+        "statement": "64",
+        "istrue": false
+      },
+      {
+        "statement": "128",
+        "istrue": false
+      }
+    ],
+    "explanation": "ASN เดิมมีความยาวเพียง 16 บิต แต่เนื่องจากจำนวนระบบอัตโนมัติ (AS) ที่เพิ่มขึ้น จึงมีการขยาย ASN เป็น 32 บิต เพื่อรองรับได้มากขึ้น"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การทำงานเพื่อหาเส้นทางภายใน AS ขนาดใหญ่ ควรใช้โพรโทคอลใด?",
+    "options": [
+      {
+        "statement": "RIP และ IGRP",
+        "istrue": false
+      },
+      {
+        "statement": "OSPF และ IGRP",
+        "istrue": true
+      },
+      {
+        "statement": "EIGRP และ OSPF",
+        "istrue": false
+      },
+      {
+        "statement": "OSPF และ RIP",
+        "istrue": false
+      }
+    ],
+    "explanation": "OSPF และ IGRP เป็นตัวอย่างของ Interior Gateway Protocol (IGP) ที่สามารถใช้ภายใน AS ที่มีขนาดใหญ่ได้ (แม้ IGRP จะเป็นโปรโตคอลรุ่นเก่าของ Cisco แต่ก็ยังถูกจัดเป็น IGP) ส่วน OSPF เป็น Link-State Protocol ที่ปรับขยาย (scalable) สำหรับเครือข่ายใหญ่"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อมูลเส้นทางของ neighbors และค่า path cost ถูกเก็บไว้ที่ใด?",
+    "options": [
+      {
+        "statement": "Link-State Advertisements (LSA)",
+        "istrue": true
+      },
+      {
+        "statement": "Routing Table",
+        "istrue": false
+      },
+      {
+        "statement": "Routing Packet",
+        "istrue": false
+      },
+      {
+        "statement": "Link-State Database (LSDB)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในโพรโทคอล Link-State (เช่น OSPF) จะมีการประกาศข้อมูลของเพื่อนบ้าน (neighbors) และค่า cost ผ่าน Link-State Advertisements (LSA) ซึ่งถูกใช้ในการสร้างฐานข้อมูล Link-State (LSDB) เพื่อให้เราท์เตอร์แต่ละตัวรู้จักโครงสร้างเครือข่าย"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ลักษณะที่โดดเด่นของวิธีการ Link-State Routing คือข้อใด?",
+    "options": [
+      {
+        "statement": "สามารถหาเส้นทางที่มีค่า cost ติดลบได้อย่างรวดเร็ว",
+        "istrue": false
+      },
+      {
+        "statement": "แก้การวนลูปภายในกราฟได้",
+        "istrue": false
+      },
+      {
+        "statement": "ต้องมีการสร้างแผนที่ของเครือข่ายทั้งหมดก่อนการหาเส้นทางที่สั้นที่สุด",
+        "istrue": true
+      },
+      {
+        "statement": "ต้องใช้เวกเตอร์ในการคำนวณเส้นทางที่สั้นที่สุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "โพรโทคอล Link-State Routing (เช่น OSPF) จะรวบรวมข้อมูล topology ของเครือข่าย (สร้างแผนที่เครือข่าย) เอาไว้ใน LSDB แล้วจึงใช้ Dijkstra Algorithm เพื่อคำนวณเส้นทางที่สั้นที่สุดจากแผนที่ดังกล่าว"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดไม่ใช่ลักษณะการทำงานของ RIP?",
+    "options": [
+      {
+        "statement": "มีการปรับปรุง Routing Table เป็นระยะ ๆ",
+        "istrue": false
+      },
+      {
+        "statement": "การปรับปรุง Routing Table ใช้วิธีการแบบ Baseband",
+        "istrue": true
+      },
+      {
+        "statement": "การปรับปรุง Routing Table เป็นการปรับปรุงทั้งตาราง",
+        "istrue": false
+      },
+      {
+        "statement": "เราท์เตอร์มีความเชื่อมั่นในข้อมูลที่ได้จากเราท์เตอร์ข้างเคียงเสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "RIP ใช้การอัปเดตตารางเส้นทางผ่าน UDP (port 520) บน IP ซึ่งไม่เกี่ยวกับการใช้สื่อหรือเทคนิค Baseband จึงทำให้ \"การปรับปรุง Routing Table ใช้วิธีการแบบ Baseband\" ไม่ใช่ลักษณะของ RIP"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้เป็น Multihomed Network?",
+    "options": [
+      {
+        "statement": "เครือข่ายกลางของมหาวิทยาลัยทั่วประเทศ (UniNet)",
+        "istrue": false
+      },
+      {
+        "statement": "เครือข่ายของจุฬาลงกรณ์มหาวิทยาลัย (Chula Net)",
+        "istrue": true
+      },
+      {
+        "statement": "เครือข่ายโทรศัพท์ของบริษัท AIS",
+        "istrue": false
+      },
+      {
+        "statement": "เครือข่ายโทรศัพท์ของบริษัท True",
+        "istrue": false
+      }
+    ],
+    "explanation": "Chula Net (เครือข่ายของจุฬาลงกรณ์มหาวิทยาลัย) เชื่อมต่อกับผู้ให้บริการหรือเครือข่ายภายนอกหลายเส้นทาง (ISP หลายแห่ง) ทำให้เป็น Multihomed Network"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "อัลกอริทึมใดที่นำมาใช้ในการหาเส้นทางแบบ Distance Vector?",
+    "options": [
+      {
+        "statement": "Bellman-Ford",
+        "istrue": true
+      },
+      {
+        "statement": "Dijkstra's Algorithm",
+        "istrue": false
+      },
+      {
+        "statement": "OSPF",
+        "istrue": false
+      },
+      {
+        "statement": "Spanning Tree",
+        "istrue": false
+      }
+    ],
+    "explanation": "Distance Vector Routing เช่น RIP ใช้อัลกอริทึม Bellman-Ford ในการคำนวณหาเส้นทางที่มีระยะทาง (distance) น้อยที่สุด"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Transient AS หมายถึง AS ที่มีลักษณะการเชื่อมต่ออย่างไร?",
+    "options": [
+      {
+        "statement": "AS ที่เชื่อมต่อกับ AS มากกว่าหนึ่งแห่ง แต่ไม่ยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้",
+        "istrue": false
+      },
+      {
+        "statement": "AS ที่เชื่อมต่อกับ AS เพียงหนึ่งแห่ง และยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้",
+        "istrue": false
+      },
+      {
+        "statement": "AS ที่เชื่อมต่อกับ AS มากกว่าหนึ่งแห่ง และยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้",
+        "istrue": true
+      },
+      {
+        "statement": "AS ที่เชื่อมต่อกับ AS เพียงหนึ่งแห่ง แต่ไม่ยอมให้ข้อมูลจาก AS อื่นไหลผ่านได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "Transient AS (หรือบางครั้งเรียกว่า Transit AS) เป็นระบบอัตโนมัติที่เชื่อมต่อกับหลาย AS และยอมให้ข้อมูลของ AS อื่นวิ่งผ่าน (transit) ได้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "โพรโทคอลใดของ Unicast Routing Protocol ที่เป็น Distance Vector?",
+    "options": [
+      {
+        "statement": "RIP",
+        "istrue": true
+      },
+      {
+        "statement": "OSPF",
+        "istrue": false
+      },
+      {
+        "statement": "BGP",
+        "istrue": false
+      },
+      {
+        "statement": "IGP",
+        "istrue": false
+      }
+    ],
+    "explanation": "RIP เป็น Distance Vector Protocol ส่วน OSPF เป็น Link-State และ BGP เป็น Path-Vector"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "Path-Vector Routing แตกต่างจาก Distance Vector และ Link-State Routing อย่างไร?",
+    "options": [
+      {
+        "statement": "Distance Vector และ Link-State Routing ไม่สามารถกำหนดนโยบายหรือเงื่อนไขของการหาเส้นทางได้ เช่นเดียวกับที่ Path-Vector ทำได้",
+        "istrue": true
+      },
+      {
+        "statement": "Distance Vector และ Link-State Routing สามารถหาเส้นทางได้ปลอดภัยมากกว่า Path-Vector",
+        "istrue": false
+      },
+      {
+        "statement": "Distance Vector และ Link-State Routing มีความเหมือนกันทุกประการกับ Path-Vector Routing",
+        "istrue": false
+      },
+      {
+        "statement": "Distance Vector และ Link-State Routing มีการกำหนด cost ของการเลือกเส้นทางชัดเจนมากกว่า Path-Vector Routing",
+        "istrue": false
+      }
+    ],
+    "explanation": "Path-Vector Routing (เช่น BGP) มีความยืดหยุ่นสูงในการกำหนดนโยบายหรือเงื่อนไขสำหรับเลือกเส้นทางที่ต้องการ ในขณะที่ Distance Vector และ Link-State จะคำนวณเส้นทางสั้นที่สุดตามเมตริก (metric/cost) เป็นหลัก"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "หน้าที่ของ EGP คืออะไร?",
+    "options": [
+      {
+        "statement": "การหาเส้นทางของระบบเครือข่าย AS หนึ่งเพื่อไปสู่อีก AS หนึ่ง",
+        "istrue": true
+      },
+      {
+        "statement": "การหาเส้นทางภายใน AS เพื่อการส่งข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "การกำหนดเงื่อนไขการหาเส้นทางที่เหมาะสมที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "การหาเส้นทางเพื่อเชื่อมต่ออินเทอร์เน็ต",
+        "istrue": false
+      }
+    ],
+    "explanation": "EGP (Exterior Gateway Protocol) ใช้สำหรับคำนวณเส้นทางในการส่งข้อมูลระหว่างระบบอัตโนมัติ (AS) หลาย ๆ ระบบ เพื่อให้สามารถติดต่อกันได้"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดไม่เป็นคุณสมบัติที่ดีของ RIP?",
+    "options": [
+      {
+        "statement": "สามารถติดตั้งได้ง่าย",
+        "istrue": false
+      },
+      {
+        "statement": "มีความครอบคลุมในการทำงาน",
+        "istrue": false
+      },
+      {
+        "statement": "อัปเดตข้อมูลตารางเส้นทางอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "มีความปลอดภัยในการส่งข้อมูล",
+        "istrue": true
+      }
+    ],
+    "explanation": "RIP ไม่มีกลไกด้านความปลอดภัยในตัว (ไม่มีการเข้ารหัสหรือยืนยันตัวตน) จึงไม่ใช่ข้อดีหรือจุดเด่นของ RIP"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การทำงานของ OSPF เป็นการทำงานภายในหรือภายนอก AS?",
+    "options": [
+      {
+        "statement": "การทำงานภายใน AS เป็นประเภท Distance Vector Routing Algorithm",
+        "istrue": false
+      },
+      {
+        "statement": "การทำงานภายนอก AS เป็นประเภท Link-State Routing Algorithm",
+        "istrue": false
+      },
+      {
+        "statement": "การทำงานภายใน AS เป็นประเภท Link-State Routing Algorithm",
+        "istrue": true
+      },
+      {
+        "statement": "การทำงานภายนอก AS เป็นประเภท Distance Vector Routing Algorithm",
+        "istrue": false
+      }
+    ],
+    "explanation": "OSPF (Open Shortest Path First) เป็น Interior Gateway Protocol (IGP) ที่ทำงานภายใน AS และใช้ Link-State Algorithm (Dijkstra) ในการคำนวณเส้นทาง"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "BGP เป็นโพรโทคอลประเภทใด?",
+    "options": [
+      {
+        "statement": "Interdomain Routing Protocol แบบ Link-State Routing Algorithm",
+        "istrue": false
+      },
+      {
+        "statement": "Exterior Gateway Protocol แบบ Path-Vector Algorithm",
+        "istrue": true
+      },
+      {
+        "statement": "Interdomain Routing Protocol แบบ Distance Vector Algorithm",
+        "istrue": false
+      },
+      {
+        "statement": "Intradomain Routing Protocol แบบ Path-Vector Algorithm",
+        "istrue": false
+      }
+    ],
+    "explanation": "BGP (Border Gateway Protocol) เป็น Exterior Gateway Protocol ที่ใช้แนวทาง Path-Vector สำหรับเผยแพร่เส้นทางระหว่าง AS ต่าง ๆ"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "RIP ทำงานในระดับใดของโมเดล OSI?",
+    "options": [
+      {
+        "statement": "Physical Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Data Link Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Network Layer",
+        "istrue": true
+      },
+      {
+        "statement": "Transport Layer",
+        "istrue": false
+      }
+    ],
+    "explanation": "RIP เป็นโปรโตคอลที่ใช้แลกเปลี่ยนข้อมูลเส้นทาง (routing information) ระหว่างเราท์เตอร์ โดยอยู่ในขอบเขตของ Network Layer (แม้จะสื่อสารผ่าน UDP ใน Transport Layer แต่ตัวการทำงานหลักเกี่ยวกับการกำหนดเส้นทางถือเป็นหน้าที่ของ Network Layer)"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้แตกต่างจาก EGP?",
+    "options": [
+      {
+        "statement": "Inter-AS Routing Protocol",
+        "istrue": false
+      },
+      {
+        "statement": "Interdomain Routing Protocol",
+        "istrue": false
+      },
+      {
+        "statement": "Exterior Gateway Protocol",
+        "istrue": false
+      },
+      {
+        "statement": "Intra-AS Routing Protocol",
+        "istrue": true
+      }
+    ],
+    "explanation": "EGP (Exterior Gateway Protocol) เป็นโพรโทคอลที่ใช้ระหว่าง AS (interdomain) ส่วน Intra-AS Routing Protocol ใช้ภายใน AS เท่านั้น จึงต่างจาก EGP"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "เพราะเหตุใดใน Forwarding Table ของ RIP จึงต้องเก็บ Address ไว้สองค่า?",
+    "options": [
+      {
+        "statement": "เพราะ Address หนึ่งหมายถึงปลายทางที่ต้องการไป และอีก Address หนึ่งหมายถึงเราท์เตอร์ถัดไป",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ Address หนึ่งหมายถึงต้นทางของข้อมูลที่ส่ง และอีก Address หนึ่งหมายถึงปลายทางที่ต้องการไป",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Address หนึ่งหมายถึงต้นทางของข้อมูลที่ส่ง และอีก Address หนึ่งหมายถึงเราท์เตอร์ถัดไป",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Address หนึ่งหมายถึงต้นทางของข้อมูลที่ส่ง และอีก Address หนึ่งหมายถึงเราท์เตอร์ปลายทางที่ติดกับอุปกรณ์รับข้อมูล",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน RIP Forwarding Table จะระบุ (1) ปลายทาง (Destination Network) และ (2) เราท์เตอร์ถัดไป (Next Hop) เพื่อให้ทราบว่าแพ็กเก็ตที่มุ่งไปยังเครือข่ายใด ควรส่งต่อไปที่เราท์เตอร์ไหน"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "ความหมายของ Invalid Timer ใน RIP คืออะไร?",
+    "options": [
+      {
+        "statement": "ระยะเวลาที่เราท์เตอร์ต้องปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 30 วินาที",
+        "istrue": false
+      },
+      {
+        "statement": "ระยะเวลาที่รอคอยให้เกิดการปรับปรุงตารางเส้นทาง ปกติจะเป็นช่วง 180 วินาที",
+        "istrue": true
+      },
+      {
+        "statement": "ระยะเวลาที่รอคอยให้เราท์เตอร์ที่ติดกันตอบสนองต่อความต้องการปรับปรุงตารางเส้นทาง",
+        "istrue": false
+      },
+      {
+        "statement": "ระยะเวลาหลังจากสถานะ Invalid เกิดขึ้น คิดเป็น 240 วินาที",
+        "istrue": false
+      }
+    ],
+    "explanation": "Invalid Timer ของ RIP มีค่า 180 วินาที หมายถึงถ้าไม่ได้รับการอัปเดตเส้นทางจากเราท์เตอร์เพื่อนบ้านเลยในช่วงเวลานี้ จะถือว่าเส้นทางนั้นไม่สามารถใช้งานได้อีกต่อไป"
+  },
+  {
+     "type": "multiple-choice",
+    "question": "การส่งข้อมูลระหว่าง AS สามารถทราบได้ว่าต้นทางและปลายทางมาจาก AS ใด โดยพิจารณาจากข้อมูลใด?",
+    "options": [
+      {
+        "statement": "Autonomous Number",
+        "istrue": true
+      },
+      {
+        "statement": "Sequence Number",
+        "istrue": false
+      },
+      {
+        "statement": "Network Number",
+        "istrue": false
+      },
+      {
+        "statement": "Network ID",
+        "istrue": false
+      }
+    ],
+    "explanation": "Autonomous System Number (ASN) เป็นตัวระบุว่าข้อมูลนั้นมาจาก AS ใดหรือมุ่งไปยัง AS ใด ช่วยให้เราท์เตอร์ภายนอกรู้ว่าควรส่งต่อข้อมูลไปทางใด"
+  }
+]

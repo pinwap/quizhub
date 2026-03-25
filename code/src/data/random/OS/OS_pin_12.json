@@ -1,0 +1,303 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบาย File Concept ได้ถูกต้องที่สุดตามเนื้อหาในบทที่ 13?",
+    "options": [
+      {
+        "statement": "ไฟล์คือ logical address space ที่ต่อเนื่องกันซึ่งถูกสร้างโดยผู้ใช้หรือโปรแกรม",
+        "istrue": true
+      },
+      {
+        "statement": "ไฟล์คือ physical block บนดิสก์เสมอและไม่เกี่ยวกับ logical structure",
+        "istrue": false
+      },
+      {
+        "statement": "ไฟล์ต้องมีนามสกุลเสมอ เช่น .txt หรือ .exe จึงจะใช้ได้",
+        "istrue": false
+      },
+      {
+        "statement": "ไฟล์ไม่สามารถเก็บข้อมูลประเภทโปรแกรมได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตามสไลด์ ch13.pptx ไฟล์ถูกนิยามว่าเป็น contiguous logical address space และมีหลายรูปแบบขึ้นกับผู้สร้าง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Attribute ใดต่อไปนี้ใช้ระบุไฟล์แบบ human-readable ตามสไลด์?",
+    "options": [
+      { "statement": "Identifier", "istrue": false },
+      { "statement": "Location", "istrue": false },
+      { "statement": "Name", "istrue": true },
+      { "statement": "Protection", "istrue": false }
+    ],
+    "explanation": "สไลด์ระบุว่า Name เป็นข้อมูลที่ human-readable ส่วน attribute อื่นเป็นข้อมูลภายในของ OS"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "File-open count ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "ติดตามจำนวน process ที่เปิดไฟล์นั้นอยู่",
+        "istrue": true
+      },
+      {
+        "statement": "ใช้ตรวจสอบสิทธิ์ผู้ใช้ทุกครั้งที่อ่านไฟล์",
+        "istrue": false
+      },
+      { "statement": "ใช้กำหนดตำแหน่ง pointer เพื่ออ่านไฟล์", "istrue": false },
+      { "statement": "ใช้เก็บลำดับบล็อกของไฟล์ในดิสก์", "istrue": false }
+    ],
+    "explanation": "File-open count ช่วยให้ระบบรู้ว่าเมื่อใดไฟล์ถูกปิดโดย process สุดท้ายจึงลบ entry ออกจาก system-wide table"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อแตกต่างของ Shared lock และ Exclusive lock?",
+    "options": [
+      {
+        "statement": "Shared lock อนุญาตให้หลาย process อ่านพร้อมกันได้",
+        "istrue": true
+      },
+      {
+        "statement": "Exclusive lock อนุญาตให้หลาย process เขียนพร้อมกันได้",
+        "istrue": false
+      },
+      {
+        "statement": "Shared lock ใช้เฉพาะกับ Linux เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "Exclusive lock สามารถถูกแทนที่ด้วย shared lock ได้ทุกกรณี",
+        "istrue": false
+      }
+    ],
+    "explanation": "Shared lock ใช้กับ reader ส่วน Exclusive lock ให้ writer ใช้งานเพียงรายเดียว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Mandatory locking แตกต่างจาก Advisory locking อย่างไร?",
+    "options": [
+      {
+        "statement": "Mandatory locking บังคับให้ OS ตรวจสอบ lock ทุกครั้งก่อนเข้าถึงไฟล์",
+        "istrue": true
+      },
+      {
+        "statement": "Advisory locking ไม่สามารถตรวจสอบสถานะ lock ได้",
+        "istrue": false
+      },
+      {
+        "statement": "Mandatory locking เป็นค่า default ของ Linux",
+        "istrue": false
+      },
+      {
+        "statement": "Advisory locking ใช้เฉพาะกับ Windows เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "สไลด์ระบุว่า Windows ใช้ mandatory locking ส่วน Linux ใช้ advisory"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Magic number ใช้เพื่ออะไร?",
+    "options": [
+      { "statement": "ตรวจสอบประเภทของไฟล์แม้ไม่มีนามสกุล", "istrue": true },
+      { "statement": "ระบุตำแหน่งไฟล์บนดิสก์", "istrue": false },
+      { "statement": "แสดงสิทธิ์ของไฟล์", "istrue": false },
+      { "statement": "ระบุจำนวนบล็อกที่ไฟล์ใช้", "istrue": false }
+    ],
+    "explanation": "ไฟล์บน Linux ไม่จำเป็นต้องมีนามสกุล แต่ใช้ magic number เพื่อตรวจสอบชนิดไฟล์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือจุดเด่นของ Sequential Access?",
+    "options": [
+      {
+        "statement": "เหมาะกับไฟล์ที่ต้องอ่านตามลำดับ เช่น log files",
+        "istrue": true
+      },
+      { "statement": "สามารถเข้าถึงตำแหน่งใดก็ได้ทันที", "istrue": false },
+      { "statement": "มี index ภายในทุกไฟล์", "istrue": false },
+      {
+        "statement": "เหมาะสำหรับไฟล์ฐานข้อมูลที่ต้อง random read",
+        "istrue": false
+      }
+    ],
+    "explanation": "Sequential access ต้องอ่านข้อมูลตามลำดับ จึงเหมาะกับไฟล์ประเภท sequential text"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุผลหลักที่ Direct Access เหมาะกับไฟล์แบบ fixed-length คืออะไร?",
+    "options": [
+      {
+        "statement": "สามารถคำนวณตำแหน่งของ record ได้โดยตรงด้วยสูตร offset",
+        "istrue": true
+      },
+      { "statement": "รองรับการเก็บไฟล์หลายประเภทพร้อมกัน", "istrue": false },
+      { "statement": "ไม่ต้องใช้บล็อกบนดิสก์", "istrue": false },
+      { "statement": "ไม่ต้องมี pointer ใด ๆ", "istrue": false }
+    ],
+    "explanation": "Direct access ใช้ relative block number เพื่อกระโดดไปอ่าน record ได้เลย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ระบบ index เช่น ISAM มีข้อดีใด?",
+    "options": [
+      {
+        "statement": "ค้นหา block ได้รวดเร็วด้วย binary search",
+        "istrue": true
+      },
+      { "statement": "ไม่ต้องใช้พื้นที่เก็บ index", "istrue": false },
+      { "statement": "รองรับเฉพาะ Windows", "istrue": false },
+      { "statement": "ใช้แทน file system ได้ทั้งหมด", "istrue": false }
+    ],
+    "explanation": "ISAM เก็บ index ทำให้ค้นหาบล็อกได้เร็วขึ้นโดยใช้ binary search"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือลักษณะของ Single-Level Directory?",
+    "options": [
+      { "statement": "ใช้ directory เดียวสำหรับผู้ใช้ทั้งหมด", "istrue": true },
+      { "statement": "อนุญาต subdirectory ไม่จำกัด", "istrue": false },
+      {
+        "statement": "เหมาะกับระบบที่ต้องการป้องกันชื่อไฟล์ซ้ำ",
+        "istrue": false
+      },
+      { "statement": "แก้ปัญหาการ grouping ได้ดี", "istrue": false }
+    ],
+    "explanation": "Single-level directory มีปัญหา naming และ grouping เมื่อไฟล์เพิ่มขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Two-Level Directory แก้ปัญหาใดของ Single-Level Directory ได้ดีที่สุด?",
+    "options": [
+      { "statement": "ปัญหาชื่อไฟล์ซ้ำระหว่างผู้ใช้หลายคน", "istrue": true },
+      { "statement": "ปัญหา subdirectory ไม่เพียงพอ", "istrue": false },
+      { "statement": "ปัญหา I/O throughput ต่ำ", "istrue": false },
+      { "statement": "ปัญหา disk fragmentation", "istrue": false }
+    ],
+    "explanation": "ผู้ใช้แต่ละคนมี directory ของตัวเอง จึงใช้ชื่อไฟล์เดียวกันได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ลักษณะใดของ Tree-Structured Directory?",
+    "options": [
+      {
+        "statement": "รองรับโครงสร้าง directory แบบ hierarchical",
+        "istrue": true
+      },
+      { "statement": "ไม่มี subdirectory", "istrue": false },
+      { "statement": "ทุกไฟล์อยู่ในระดับเดียวกัน", "istrue": false },
+      { "statement": "บังคับให้ใช้ชื่อไฟล์ไม่ซ้ำทั่วระบบ", "istrue": false }
+    ],
+    "explanation": "Tree directory เป็นโครงสร้างแบบ hierarchical ใช้ในระบบปัจจุบัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Acyclic Graph Directory มีข้อดีอะไร?",
+    "options": [
+      { "statement": "รองรับ shared files โดยใช้ link", "istrue": true },
+      { "statement": "ไม่มีโอกาสเกิด dangling pointer", "istrue": false },
+      { "statement": "ไม่ต้องใช้ link ใด ๆ", "istrue": false },
+      { "statement": "ไม่รองรับ hard link หรือ symbolic link", "istrue": false }
+    ],
+    "explanation": "Acyclic graph อนุญาตให้ directory หลายที่ชี้ไปยังไฟล์เดียวกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "General Graph Directory มีความเสี่ยงใด?",
+    "options": [
+      { "statement": "อาจเกิด cycle ทำให้ traversal ไม่จบ", "istrue": true },
+      { "statement": "ไม่สามารถใช้ symbolic link ได้", "istrue": false },
+      { "statement": "จำเป็นต้องมีชื่อไฟล์ไม่ซ้ำทั่วระบบ", "istrue": false },
+      { "statement": "ไม่สามารถลบไฟล์ได้", "istrue": false }
+    ],
+    "explanation": "General graph directory อาจเกิด cycle จึงต้องใช้ cycle detection"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การ mount file system คืออะไร?",
+    "options": [
+      {
+        "statement": "เชื่อม volume เข้ากับ directory tree เพื่อใช้งาน",
+        "istrue": true
+      },
+      { "statement": "ฟอร์แมตดิสก์ใหม่ทุกครั้งก่อนใช้งาน", "istrue": false },
+      { "statement": "ใช้สำหรับ backup เท่านั้น", "istrue": false },
+      {
+        "statement": "เป็นกระบวนการ copy ไฟล์ทั้งหมดไปยัง RAM",
+        "istrue": false
+      }
+    ],
+    "explanation": "Mounting คือการเชื่อม file system เข้า directory tree"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือคุณสมบัติของ Protection ใน file system?",
+    "options": [
+      {
+        "statement": "กำหนดสิทธิ์ read/write/execute ต่อผู้ใช้",
+        "istrue": true
+      },
+      { "statement": "ใช้แบ่ง partition ของดิสก์", "istrue": false },
+      { "statement": "ใช้กำหนดขนาดไฟล์สูงสุด", "istrue": false },
+      { "statement": "ใช้ตรวจสอบ type ของไฟล์", "istrue": false }
+    ],
+    "explanation": "Protection ใช้ควบคุมการเข้าถึงไฟล์ตามสิทธิ์ของผู้ใช้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ค่า permission 755 หมายถึงอะไร?",
+    "options": [
+      { "statement": "owner = rwx, group = r-x, others = r-x", "istrue": true },
+      {
+        "statement": "owner = r--, group = rw-, others = r-x",
+        "istrue": false
+      },
+      { "statement": "ทุกคนเข้าถึงได้แบบ rwx", "istrue": false },
+      { "statement": "owner = rw-, group = r--, others = ---", "istrue": false }
+    ],
+    "explanation": "755 = 111 101 101 → owner = rwx, group = r-x, others = r-x"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อเสียของการใช้ Remote File System คืออะไร?",
+    "options": [
+      {
+        "statement": "ขึ้นกับความเร็วเครือข่าย หากช้า การเข้าถึงไฟล์จะช้าตาม",
+        "istrue": true
+      },
+      { "statement": "ผู้ใช้ไม่สามารถแชร์ไฟล์ร่วมกันได้", "istrue": false },
+      { "statement": "ไฟล์จะถูกลบบ่อยครั้งโดยอัตโนมัติ", "istrue": false },
+      { "statement": "ไม่สามารถใช้ร่วมกับ Windows client ได้", "istrue": false }
+    ],
+    "explanation": "Remote FS ใช้งานผ่านเครือข่าย จึงมีประสิทธิภาพขึ้นกับ bandwidth"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือสาเหตุที่ File Server ยังมีบทบาทแม้มี Cloud Storage?",
+    "options": [
+      {
+        "statement": "LAN เร็วกว่า Internet จึงเหมาะสำหรับข้อมูลขนาดใหญ่ภายในองค์กร",
+        "istrue": true
+      },
+      { "statement": "Cloud ไม่มีระบบ backup ใด ๆ", "istrue": false },
+      { "statement": "File Server ไม่มีค่าดูแลรักษา", "istrue": false },
+      { "statement": "Cloud ไม่รองรับไฟล์ประเภท binary", "istrue": false }
+    ],
+    "explanation": "องค์กรหลายแห่งใช้ File Server เพราะ LAN มีความเร็วสูงและรับโหลดข้อมูลขนาดใหญ่ได้ดี"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้เป็นลักษณะของ NAS?",
+    "options": [
+      {
+        "statement": "เป็นอุปกรณ์ที่ทำหน้าที่ File Server โดยเฉพาะ",
+        "istrue": true
+      },
+      { "statement": "ต้องติดตั้ง OS เองก่อนใช้งานเสมอ", "istrue": false },
+      { "statement": "ไม่รองรับ SMB/NFS", "istrue": false },
+      { "statement": "ไม่สามารถใช้ร่วมกับ Windows ได้", "istrue": false }
+    ],
+    "explanation": "NAS เป็นอุปกรณ์เฉพาะทางที่รองรับ SMB/NFS และแชร์ไฟล์ได้"
+  }
+]

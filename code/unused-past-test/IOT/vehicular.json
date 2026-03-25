@@ -1,0 +1,945 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือองค์ประกอบหลัก 3 ส่วนของเครือข่ายยานยนต์ (Vehicular Networks) ที่นำเสนอในบทนำ?",
+    "options": [
+      {
+        "statement": "Vehicle-to-Vehicle (V2V), Vehicle-to-Infrastructure (V2I), และ Vehicle-to-Pedestrian (V2P)",
+        "istrue": true
+      },
+      {
+        "statement": "Satellite, WiMax, และ 3G/LTE",
+        "istrue": false
+      },
+      {
+        "statement": "SDN, VANET, และ 802.11p",
+        "istrue": false
+      },
+      {
+        "statement": "Japan, Europe, และ Thailand",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาในบทนำได้จำแนกประเภทการสื่อสารหลักในเครือข่ายยานยนต์ออกเป็น 3 ส่วน ได้แก่ V2V (รถ-ถึง-รถ), V2I (รถ-ถึง-โครงสร้างพื้นฐาน), และ V2P (รถ-ถึง-คนเดินเท้า)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถานการณ์ใดต่อไปนี้คือตัวอย่างของการสื่อสารแบบ 'Vehicle-to-Vehicle (V2V)'?",
+    "options": [
+      {
+        "statement": "รถยนต์ A ได้รับข้อมูลสัญญาณไฟจราจรจากสี่แยก",
+        "istrue": false
+      },
+      {
+        "statement": "รถยนต์ A ส่งสัญญาณเตือน 'เบรกกะทันหัน' โดยตรงไปยังรถยนต์ B ที่อยู่ด้านหลัง",
+        "istrue": true
+      },
+      {
+        "statement": "รถยนต์ A เตือนคนเดินเท้าที่กำลังจะข้ามถนนผ่านสมาร์ทโฟน",
+        "istrue": false
+      },
+      {
+        "statement": "รถยนต์ A ดาวน์โหลดแผนที่อัปเดตจากเซิร์ฟเวอร์คลาวด์ผ่าน 4G/LTE",
+        "istrue": false
+      }
+    ],
+    "explanation": "V2V คือการสื่อสารโดยตรงระหว่างยานพาหนะ โดยมีวัตถุประสงค์หลักเพื่อความปลอดภัย เช่น การเตือนเบรกกะทันหัน หรือการเตือนการชน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถานการณ์ใดต่อไปนี้คือตัวอย่างของการสื่อสารแบบ 'Vehicle-to-Infrastructure (V2I)'?",
+    "options": [
+      {
+        "statement": "รถยนต์ A ชำระเงินค่าผ่านทางอัตโนมัติ (Toll Collecting) ขณะขับผ่านด่าน",
+        "istrue": true
+      },
+      {
+        "statement": "คนขับรถยนต์ A พูดคุยกับคนขับรถยนต์ B",
+        "istrue": false
+      },
+      {
+        "statement": "รถยนต์ A ใช้เรดาร์ตรวจจับรถยนต์ B ในจุดบอด",
+        "istrue": false
+      },
+      {
+        "statement": "รถยนต์ A ส่งสัญญาณเตือนไปยังสมาร์ทโฟนของคนเดินเท้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "V2I คือการสื่อสารระหว่างยานพาหนะกับโครงสร้างพื้นฐานริมถนน (Roadside Infrastructure) เช่น การรับข้อมูลสัญญาณไฟจราจร หรือการชำระค่าผ่านทางอัตโนมัติ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากแผนภาพ CVIS, เหตุใดเครือข่าย VANET จึงต้องรองรับเทคโนโลยีที่หลากหลาย (เช่น Satellite, 3G/LTE, WAVE/DSRC, WiFi)?",
+    "options": [
+      {
+        "statement": "เพื่อสร้างการแข่งขันระหว่างผู้ให้บริการเทคโนโลยี",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะแต่ละเทคโนโลยีมีคุณสมบัติที่เหมาะสมกับบริการที่แตกต่างกัน (เช่น DSRC/WAVE สำหรับความหน่วงต่ำ, 3G/LTE สำหรับการเชื่อมต่อระยะไกล)",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะมาตรฐาน 802.11p บังคับให้ต้องใช้ทุกเทคโนโลยี",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อใช้แทนที่เครือข่ายอินเทอร์เน็ตแบบมีสายทั้งหมด",
+        "istrue": false
+      }
+    ],
+    "explanation": "เครือข่ายยานยนต์ต้องการบริการที่หลากหลาย เช่น การเตือนภัยฉุกเฉิน (ต้องการความหน่วงต่ำมาก - DSRC/WAVE) และการดาวน์โหลดข้อมูลบันเทิง (ต้องการแบนด์วิดท์สูง - 3G/LTE/WiMax) จึงต้องใช้เทคโนโลยีผสมผสาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด 'ไม่ใช่' หนึ่งในแอปพลิเคชันของ Intelligent Transport System (ITS) ที่แสดงในแผนภาพ 'puzzle pieces'?",
+    "options": [
+      {
+        "statement": "Collision Avoidance (การหลีกเลี่ยงการชน)",
+        "istrue": false
+      },
+      {
+        "statement": "Parking Reservation (การจองที่จอดรถ)",
+        "istrue": false
+      },
+      {
+        "statement": "Autonomous Driving (การขับขี่อัตโนมัติเต็มรูปแบบ)",
+        "istrue": true
+      },
+      {
+        "statement": "Toll Collecting (การเก็บค่าผ่านทาง)",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดงแอปพลิเคชันต่างๆ เช่น Collision Avoidance, Traffic Management, Parking Reservation, Entertainment, Toll Collecting และ Traffic Monitoring แต่ไม่ได้ระบุถึง 'การขับขี่อัตโนมัติเต็มรูปแบบ' (Full Autonomous Driving) โดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "มาตรฐานการสื่อสารไร้สายใดที่ถูกระบุว่าเป็นเทคโนโลยีหลักสำหรับ V2X (เช่นในอุปกรณ์ LOCOMATE และโครงการ CU Shuttle Bus)?",
+    "options": [
+      {
+        "statement": "Bluetooth",
+        "istrue": false
+      },
+      {
+        "statement": "802.11p (WAVE/DSRC)",
+        "istrue": true
+      },
+      {
+        "statement": "WiMax",
+        "istrue": false
+      },
+      {
+        "statement": "GPS",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุว่าอุปกรณ์ LOCOMATE ใช้วิทยุ 802.11p และโครงการ CU Shuttle Bus ใช้ 802.11p Wireless Communication ซึ่งเป็นมาตรฐานหลักสำหรับ DSRC/WAVE"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามแนวโน้มในญี่ปุ่น (MIC), เหตุใดจึงต้องมี 'Theme 3: Infrastructure Radar System (79 GHz)' เพิ่มเติมจาก V2I/V2V (700 MHz)?",
+    "options": [
+      {
+        "statement": "เพื่อแทนที่การสื่อสาร 700 MHz ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อตรวจจับ 'small objects' (วัตถุขนาดเล็ก) เช่น คนเดินเท้าหรือจักรยาน ที่ 'อาจไม่มี' อุปกรณ์สื่อสาร 700 MHz ติดตัว",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้บริการ GPS ที่แม่นยำยิ่งขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้คนเดินเท้าสามารถสื่อสารกับรถยนต์ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "V2I/V2V/V2P (700 MHz) อาศัยการสื่อสารระหว่างอุปกรณ์ แต่เรดาร์ (79 GHz) เป็นเซ็นเซอร์ที่ 'ตรวจจับ' วัตถุได้โดยตรง แม้ว่าวัตถุนั้น (เช่น จักรยาน หรือคนเดินเท้าที่ไม่มีมือถือ) จะไม่มีเครื่องส่งสัญญาณก็ตาม"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการประยุกต์ใช้ 'Theme 2: Vehicle-to-Pedestrian (V2P)' ตามแนวโน้มของญี่ปุ่น?",
+    "options": [
+      {
+        "statement": "รถยนต์ส่งข้อมูลความเร็วไปยังรถคันอื่น",
+        "istrue": false
+      },
+      {
+        "statement": "โครงสร้างพื้นฐาน (RSE) ส่งข้อมูลสี่แยกมาให้รถยนต์",
+        "istrue": false
+      },
+      {
+        "statement": "รถยนต์และคนเดินเท้า (ผ่านโทรศัพท์มือถือ) แลกเปลี่ยนข้อมูลตำแหน่งเพื่อเตือนการชน",
+        "istrue": true
+      },
+      {
+        "statement": "เรดาร์ที่สี่แยกตรวจจับคนเดินเท้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "Theme 2 (V2P) ระบุว่า 'Information of a pedestrian and a vehicle are transmitted between pedestrians and vehicles' โดยใช้ย่าน 700 MHz หรือโทรศัพท์มือถือ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แผนภาพ 'Toward the Collaborative Automated Driving System' นำเสนอวิวัฒนาการของ V2X อย่างไร?",
+    "options": [
+      {
+        "statement": "V2I/V2V ถูกแทนที่ด้วย Radar ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เริ่มต้นจาก V2I/V2V เพื่อ 'Safety driving support' (เช่น ช่วยเตือนที่สี่แยก) และพัฒนาไปสู่ 'Cooperative Automated-driving' (เช่น Platooning)",
+        "istrue": true
+      },
+      {
+        "statement": "เน้นเฉพาะ 'Commercial Vehicle Automatic Driving' (รถบรรทุก) เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "มุ่งเน้นการลดการใช้ย่านความถี่ 700 MHz",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดงให้เห็นว่า V2I/V2V (ด้านบน) ซึ่งช่วยเรื่องความปลอดภัยในปัจจุบัน เป็นรากฐาน (ลูกศร 'Enhanced') ไปสู่ระบบอัตโนมัติที่ซับซ้อนขึ้น (ด้านล่าง) เช่น การขับขี่แบบร่วมมือกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามแผนภาพ 'Technological requirements' ประโยชน์หลักด้าน 'Environment' (สิ่งแวดล้อม) ของ Automated Driving คืออะไร?",
+    "options": [
+      {
+        "statement": "การเพิ่ม 'Cabin Safety' (ความปลอดภัยในห้องโดยสาร)",
+        "istrue": false
+      },
+      {
+        "statement": "การลด 'Traffic congestion & CO2 reduction' (ลดการจราจรติดขัดและ CO2)",
+        "istrue": true
+      },
+      {
+        "statement": "การมี 'Smart fare collection' (การเก็บค่าโดยสารอัจฉริยะ)",
+        "istrue": false
+      },
+      {
+        "statement": "การมี 'Advanced Driver Assistance' (ระบบช่วยเหลือผู้ขับขี่ขั้นสูง)",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพเชื่อมโยง 'Automated Driving Technologies' ไปยัง 'Environment' ซึ่งมีเป้าหมายหลักคือ 'Traffic congestion & CO2 reduction' ผ่านการควบคุมที่เหมาะสม (Optimum inter-vehicle distance)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่รถบัสอัตโนมัติสามารถ 'Automated pull-over to the platform' (จอดเทียบชานชาลาอัตโนมัติ) เพื่อให้เกิด 'Flat & Seamless boarding' (การขึ้นลงที่ราบเรียบ) เป็นประโยชน์ในด้านใด?",
+    "options": [
+      {
+        "statement": "Environment (สิ่งแวดล้อม)",
+        "istrue": false
+      },
+      {
+        "statement": "Safety (ความปลอดภัย)",
+        "istrue": false
+      },
+      {
+        "statement": "On-time connection & Accessibility (การเชื่อมต่อตรงเวลาและการเข้าถึง)",
+        "istrue": true
+      },
+      {
+        "statement": "Optimum Operation Management (การจัดการการเดินรถ)",
+        "istrue": false
+      }
+    ],
+    "explanation": "การจอดเทียบชานชาลาที่แม่นยำช่วยให้ผู้โดยสาร (โดยเฉพาะผู้ใช้รถเข็น) ขึ้นลงได้สะดวก (Accessibility) และรวดเร็ว (Smooth & Safety boarding)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในบริบทของ ITS, Dr. Frank Forsterling เปรียบเทียบ 'Data' (ข้อมูล) กับ 'Oil' (น้ำมัน) เพราะเหตุใด?",
+    "options": [
+      {
+        "statement": "เพราะข้อมูลเป็นทรัพยากรที่มีจำกัดและกำลังจะหมดไป",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะข้อมูลเป็นทรัพยากรดิบที่มีมูลค่ามหาศาล ซึ่งเป็นพื้นฐานของ 'value chain' (ห่วงโซ่มูลค่า) สำหรับบริการใหม่ๆ ของ ITS",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะข้อมูลก่อให้เกิดมลภาวะต่อสิ่งแวดล้อม",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะข้อมูลใช้สำหรับการขับเคลื่อนยานยนต์เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำกล่าวนี้หมายความว่า 'ข้อมูล' คือทรัพยากรขับเคลื่อนเศรษฐกิจยุคใหม่ (ศตวรรษที่ 21) เช่นเดียวกับที่ 'น้ำมัน' ขับเคลื่อนเศรษฐกิจยุคอุตสาหกรรม โดยข้อมูลเป็นพื้นฐานในการสร้างบริการ ITS"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวโน้ม 'Increasing the volume of Connected Car' (การเพิ่มขึ้นของรถยนต์ที่เชื่อมต่อ) มีความสำคัญต่อ ITS อย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้รถยนต์มีราคาถูกลง",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้การจราจรติดขัดมากขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้มี 'representative quantity of data' (ปริมาณข้อมูลตัวแทน) ที่เพียงพอสำหรับการรวบรวมและประมวลผลเพื่อให้บริการ ITS แบบ real-time",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ต้องยกเลิกการใช้ V2V",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำนิยาม ITS ระบุว่าต้องการ 'representative quantity of data' (ข้อมูลปริมาณมากพอ) การที่รถยนต์เชื่อมต่ออินเทอร์เน็ตมากขึ้น (40 ล้าน -> 60 ล้านคันต่อปี) หมายถึงมีแหล่งข้อมูล (fleet-based data) มากขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ตามคำนิยามของ Continental, 'Intelligent Transportation System (ITS)' คืออะไร?",
+    "options": [
+      {
+        "statement": "ผลิตภัณฑ์ที่ติดตั้งในรถยนต์ (in-vehicle products) เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "การสร้าง 'data network' (เครือข่ายข้อมูล) ระหว่างโครงสร้างพื้นฐาน, ยานพาหนะ และผู้ใช้ โดยใช้ ICT",
+        "istrue": true
+      },
+      {
+        "statement": "ระบบที่ช่วยประหยัดเวลา (Save Time) เท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "การเปลี่ยนรถยนต์ทุกคันให้เป็นรถยนต์ไฟฟ้า",
+        "istrue": false
+      }
+    ],
+    "explanation": "คำนิยามที่เน้นตัวหนาระบุว่า ITS คือ 'the creation of a data network between transport infrastructure, vehicles and users by using information and communication technology'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด 'ไม่ใช่' เป้าหมาย (Targets) ของ ITS ตามที่ระบุไว้?",
+    "options": [
+      {
+        "statement": "Save Costs (ประหยัดค่าใช้จ่าย)",
+        "istrue": false
+      },
+      {
+        "statement": "Protect Life (ปกป้องชีวิต)",
+        "istrue": false
+      },
+      {
+        "statement": "Increase Vehicle Speed (เพิ่มความเร็วรถยนต์)",
+        "istrue": true
+      },
+      {
+        "statement": "Protect Environment (ปกป้องสิ่งแวดล้อม)",
+        "istrue": false
+      }
+    ],
+    "explanation": "เป้าหมาย 4 ข้อที่ระบุไว้คือ Save Costs, Save Time, Protect Life, และ Protect Environment (การเพิ่มความเร็วไม่ใช่เป้าหมายหลัก แม้อาจเป็นผลพลอยได้จากการประหยัดเวลา)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดระบบขับขี่อัตโนมัติ (Automated Driving) จึงต้องการ 'Extended preview information (C-ITS)' นอกเหนือจาก 'Car sensor range (0-300m)'?",
+    "options": [
+      {
+        "statement": "เพื่อแทนที่เซ็นเซอร์ในรถยนต์ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อขยายขอบเขตการรับรู้ (perception) ให้ไกลกว่าที่เซ็นเซอร์ในรถมองเห็น (เช่น รู้สภาพถนน 10 นาทีล่วงหน้า) โดยใช้ข้อมูลจาก backend",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้รถยนต์สามารถขับได้เร็วเกิน 300 กม./ชม.",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อใช้สำหรับ 'self-localization' (การระบุตำแหน่งตนเอง) เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "C-ITS (Cooperative-ITS) ช่วย 'ขยาย' (extended) ข้อจำกัดทางกายภาพของเซ็นเซอร์ในรถ (300m) ทำให้รถสามารถวางแผนกลยุทธ์การขับขี่ที่ 'smoother' (ราบรื่นขึ้น) ได้ โดยอาศัยข้อมูลจาก cloud/backend"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ระบบขับขี่อัตโนมัติได้ข้อมูลที่ 'up-to-date' (ทันสมัย) สำหรับ 'Highly accurate digital map model' มาจากแหล่งใดเป็นหลัก?",
+    "options": [
+      {
+        "statement": "จากการป้อนข้อมูลของผู้ขับขี่ด้วยตนเอง",
+        "istrue": false
+      },
+      {
+        "statement": "จาก 'Fleet based data collection' (การรวบรวมข้อมูลแบบ crowd sourcing จากรถยนต์หลายๆ คัน)",
+        "istrue": true
+      },
+      {
+        "statement": "จากเซ็นเซอร์ในรถยนต์เพียงคันเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "จากดาวเทียม GPS เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื้อหาระบุว่าข้อมูลที่แม่นยำและตรวจสอบแล้ว (validated data) ได้มาจาก 'Fleet based data collection' ซึ่งเป็นแนวทางแบบ 'crowd sourcing' เพื่อให้แผนที่ทันสมัยอยู่เสมอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โครงการ 'CU Shuttle Bus Project' มีวัตถุประสงค์หลักเพื่ออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อให้บริการรถบัสไฟฟ้าฟรีแก่นิสิต",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อทดสอบและประเมินผล 'data dissemination protocol' (โปรโตคอลการแพร่กระจายข้อมูล) ในสภาพแวดล้อมจริง",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อพัฒนาระบบ SDN สำหรับรถบัส",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเปรียบเทียบ 802.11p กับ 4G/LTE",
+        "istrue": false
+      }
+    ],
+    "explanation": "สไลด์ระบุวัตถุประสงค์ชัดเจนว่า 'To evaluate data dissemination protocol in real world' โดยใช้รถบัสของจุฬาฯ เป็น 'Testbed'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โปรโตคอล 'DECA' ที่ทดสอบในโครงการ CU Shuttle Bus ใช้ข้อมูลใดเป็นหลักในการตัดสินใจทำงาน (operate)?",
+    "options": [
+      {
+        "statement": "ตำแหน่ง GPS ของรถบัสคันอื่น",
+        "istrue": false
+      },
+      {
+        "statement": "ความเร็วของรถบัส",
+        "istrue": false
+      },
+      {
+        "statement": "จำนวนของ '1-hop neighbor' (เพื่อนบ้านในระยะ 1-hop)",
+        "istrue": true
+      },
+      {
+        "statement": "ตารางเวลาการเดินรถ",
+        "istrue": false
+      }
+    ],
+    "explanation": "DECA (Density-Aware Reliable Broadcasting Protocol) ถูกอธิบายว่า 'uses only number of 1-hop neighbor to operate' ซึ่งเป็นตัวอย่างของ Non-Geographical Knowledge"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กราฟ 'Online ratio' ของ CU Shuttle Bus ที่แสดงการลดลงของสัดส่วนรถที่ออนไลน์ (drop in some period) สะท้อนถึงความท้าทายใดของ VANET?",
+    "options": [
+      {
+        "statement": "Unstable Link (ลิงก์ไม่เสถียร)",
+        "istrue": false
+      },
+      {
+        "statement": "Intermittent Connectivity (การเชื่อมต่อที่ไม่ต่อเนื่อง) / Long-time disconnection",
+        "istrue": true
+      },
+      {
+        "statement": "Time Asynchronization (เวลาไม่ตรงกัน)",
+        "istrue": false
+      },
+      {
+        "statement": "Collision Avoidance (การหลีกเลี่ยงการชน)",
+        "istrue": false
+      }
+    ],
+    "explanation": "การที่รถบัสต้อง 'bus maintenance routine' (เข้าซ่อมบำรุง) ทำให้รถหายไปจากเครือข่าย นี่คือตัวอย่างจริงของ 'Intermittent Connectivity' (การเชื่อมต่อขาดหาย) ซึ่งเป็นความท้าทายหลักของ VANET"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อได้เปรียบ (Advantage) ของเครือข่าย VANET แบบ Ad Hoc?",
+    "options": [
+      {
+        "statement": "ต้องการโครงสร้างพื้นฐาน (infrastructures) ราคาแพง",
+        "istrue": false
+      },
+      {
+        "statement": "มีการเชื่อมต่อที่เสถียร (Stable Link) ตลอดเวลา",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่ต้องการโครงสร้างพื้นฐาน (Do not require any infrastructures) และตอบสนองได้เร็ว (Fast respond)",
+        "istrue": true
+      },
+      {
+        "statement": "มีการควบคุมแบบรวมศูนย์ (Centralized system)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ข้อดีของ Ad Hoc คือความสามารถในการทำงานได้เองโดยไม่ต้องมีโครงสร้างพื้นฐาน (เช่น RSU หรือ Base Station) ทำให้ตอบสนองได้เร็ว (เช่น V2V เตือนเบรก)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด 'Realistic Vehicular Mobility Model' (ที่มีถนน, ไฟจราจร) จึงเหมาะสมกับการจำลอง VANET มากกว่า 'Random Waypoint Model'?",
+    "options": [
+      {
+        "statement": "เพราะ 'Random Waypoint Model' ซับซ้อนเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 'Random Waypoint Model' (โหนดเคลื่อนที่แบบสุ่ม) ไม่สะท้อนพฤติกรรมจริงของยานพาหนะที่ต้องวิ่งบนถนนและปฏิบัติตามกฎจราจร",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ 'Realistic Model' ใช้ 'Attraction Point' น้อยกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 'Random Waypoint Model' ไม่รองรับ V2V",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเคลื่อนที่ของยานพาหนะ (Vehicular Mobility) ไม่ใช่การสุ่ม แต่ถูกจำกัดโดย 'road network', 'traffic lights', และ 'Attraction Point' (จุดหมายปลายทาง) ซึ่ง 'Realistic Model' จำลองได้ดีกว่า"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือลักษณะสำคัญของ VANET ที่ทำให้การแพร่กระจายข้อมูล (Data Dissemination) เป็นเรื่องท้าทาย?",
+    "options": [
+      {
+        "statement": "โหนดอยู่นิ่งและมีความหนาแน่นคงที่",
+        "istrue": false
+      },
+      {
+        "statement": "ความเร็วและทิศทางของโหนด (Node speed and direction) ที่หลากหลาย และการเชื่อมต่อที่ไม่ต่อเนื่อง (Intermittent connectivity)",
+        "istrue": true
+      },
+      {
+        "statement": "โหนดทั้งหมดเชื่อมต่อกับอินเทอร์เน็ตตลอดเวลา",
+        "istrue": false
+      },
+      {
+        "statement": "โหนดมีการกระจายตัวแบบสม่ำเสมอ (Uniform distribution)",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความท้าทายของ VANET มาจากธรรมชาติของมัน: โหนด (รถยนต์) เคลื่อนที่เร็ว, เปลี่ยนทิศทาง, มีการกระจายตัวไม่สม่ำเสมอ (Non-uniform) และเชื่อมต่อกันแบบขาดๆ หายๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใดการใช้ 'Non-Geographical Knowledge' (เช่น ความหนาแน่นของโหนด) จึงอาจดีกว่า 'Geographical Knowledge' (เช่น GPS) ในการแพร่กระจายข้อมูล?",
+    "options": [
+      {
+        "statement": "เพราะ GPS ไม่แม่นยำเท่าความหนาแน่น",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 'Geographical' (GPS) ต้องการ 'High beacon freq.' (ส่ง beacon บ่อย) ซึ่งสิ้นเปลือง และอาจ 'Violate' (ละเมิด) ความเป็นส่วนตัวของผู้ใช้",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ 'Non-Geographical' ใช้ Overhead สูงกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ 'Geographical' ไม่สามารถคำนวณความสัมพันธ์ระหว่างโหนดได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตารางเปรียบเทียบชี้ให้เห็นข้อเสียของ Geographical (GPS) ว่ามี Overhead (High beacon freq.) และปัญหา Privacy (Violate) ในขณะที่ Non-Geographical (Density) มี Overhead ต่ำกว่าและไม่มีปัญหา Privacy"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โปรโตคอล NoG (Non-Geographical Knowledge) ใช้แนวคิด 'Connected Dominating Set (CDS)' เพื่อจุดประสงค์ใด?",
+    "options": [
+      {
+        "statement": "เพื่อเพิ่มจำนวนโหนดที่ต้องส่งข้อมูลซ้ำ (retransmission) ให้มากที่สุด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อลดจำนวนโหนดที่ต้องส่งข้อมูลซ้ำ (retransmission) ให้น้อยที่สุด แต่ยังคงครอบคลุมทุกโหนด",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อค้นหาตำแหน่ง GPS ของทุกโหนด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแก้ปัญหา NP-complete",
+        "istrue": false
+      }
+    ],
+    "explanation": "CDS คือชุดของโหนดที่ทำหน้าที่เป็น 'กระดูกสันหลัง' ของเครือข่าย การเลือกโหนดใน CDS (แทนที่จะให้ทุกโหนด) เพื่อส่งต่อ (retransmission) ข้อมูล จะช่วย 'Minimize a number of retransmission node'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โปรโตคอล NoG ใช้อะไรเป็น 'approximation algorithm' (อัลกอริทึมประมาณค่า) ในการเลือก CDS เนื่องจากปัญหานี้เป็น NP-complete?",
+    "options": [
+      {
+        "statement": "ตำแหน่ง GPS",
+        "istrue": false
+      },
+      {
+        "statement": "ความเร็วของรถ",
+        "istrue": false
+      },
+      {
+        "statement": "คุณสมบัติ 'Density' (ความหนาแน่น) และ 'Topology' (โทโพโลยี)",
+        "istrue": true
+      },
+      {
+        "statement": "เวลาของวัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจากการหา Minimum CDS เป็น NP-complete จึงต้องใช้อัลกอริทึมประมาณค่า ซึ่งสไลด์ระบุว่าใช้ 'Interesting properties for approximation algorithm' คือ 'Density' และ 'Topology'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กลไก 'Waiting Timeout' ในโปรโตคอล NoG มีไว้เพื่อจุดประสงค์ใด?",
+    "options": [
+      {
+        "statement": "เพื่อ 'collision avoidance' (หลีกเลี่ยงการชนกันของสัญญาณ) แต่ก็ทำให้เกิด 'additional delay' (ความล่าช้าเพิ่ม)",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อเพิ่มความเร็วในการส่งข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อซิงโครไนซ์เวลาระหว่างโหนด",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเลือก Forwarder Node",
+        "istrue": false
+      }
+    ],
+    "explanation": "Waiting timeout ถูกใช้เพื่อให้โหนดที่ต้องการส่งข้อมูลรอเป็นเวลาสุ่ม (หรือคำนวณ) ก่อนที่จะส่ง เพื่อป้องกันไม่ให้โหนดหลายตัวส่งข้อมูลพร้อมกัน (collision avoidance)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กราฟ 'Waiting Timeout' (Inversed function และ Directed function) แสดงให้เห็นว่าค่า Timeout ถูกคำนวณโดยขึ้นอยู่กับอะไร?",
+    "options": [
+      {
+        "statement": "เวลาของวัน",
+        "istrue": false
+      },
+      {
+        "statement": "ตำแหน่ง GPS",
+        "istrue": false
+      },
+      {
+        "statement": "Number of 1-hop Neighbors (จำนวนเพื่อนบ้าน 1-hop)",
+        "istrue": true
+      },
+      {
+        "statement": "ความแรงของสัญญาณ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ทั้งสองกราฟ (a) และ (b) มีป้ายกำกับแกน X เหมือนกันคือ 'Number of 1-hop Neighbors' แสดงว่าค่า Waiting Timeout จะแปรผันตามความหนาแน่นของโหนดรอบข้าง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อได้เปรียบหลักของการใช้ 'Bloom Filter Technique' สำหรับ 'Beacon Structure' ในโปรโตคอล NoG?",
+    "options": [
+      {
+        "statement": "มีขนาดแปรผันตามจำนวนเพื่อนบ้าน (Variable size)",
+        "istrue": false
+      },
+      {
+        "statement": "มี 'Fixed size structure' (โครงสร้างขนาดคงที่) และ 'Fast lookup' (ค้นหาเร็ว)",
+        "istrue": true
+      },
+      {
+        "statement": "สามารถเกิด 'False negative errors' (การแจ้งว่าไม่มีทั้งๆ ที่มี) ได้",
+        "istrue": false
+      },
+      {
+        "statement": "ใช้การดำเนินการแบบ Bitwise ไม่ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "สไลด์ระบุคุณสมบัติของ Bloom Filter ว่าเป็น 'Fixed size structure' (ไม่ขึ้นกับจำนวนองค์ประกอบ) และ 'Fast lookup mechanism' ซึ่งต่างจากโครงสร้างแบบ list (variable size)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Bloom Filter มีคุณสมบัติเกี่ยวกับความผิดพลาด (errors) อย่างไร?",
+    "options": [
+      {
+        "statement": "รับประกันว่าไม่มีข้อผิดพลาดใดๆ",
+        "istrue": false
+      },
+      {
+        "statement": "อาจเกิด 'False positive' (การแจ้งว่ามีทั้งๆ ที่ไม่มี) แต่ 'No false negative' (ไม่เกิดการแจ้งว่าไม่มีทั้งๆ ที่มี)",
+        "istrue": true
+      },
+      {
+        "statement": "อาจเกิด 'False negative' แต่ 'No false positive'",
+        "istrue": false
+      },
+      {
+        "statement": "เกิดทั้ง 'False positive' และ 'False negative'",
+        "istrue": false
+      }
+    ],
+    "explanation": "คุณสมบัติที่สำคัญของ Bloom Filter คือ 'No false negative errors' (ถ้ามันบอกว่าไม่มี คือไม่มีแน่นอน) แต่ 'cause more probability of false positive errors' (อาจบอกว่ามี ทั้งๆ ที่ไม่มี)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิดหลักของ 'Software Defined Networking (SDN)' ที่แสดงในแผนภาพคืออะไร?",
+    "options": [
+      {
+        "statement": "การรวม 'Control Plane' และ 'Data Plane' ไว้ในฮาร์ดแวร์เดียวเพื่อความเร็ว",
+        "istrue": false
+      },
+      {
+        "statement": "การแยก 'Control Plane' (ส่วนควบคุม/สมอง) ออกจาก 'Simple Packet Forwarding Hardware' (Data Plane) และควบคุมผ่าน 'Open programmable interface' (เช่น OpenFlow)",
+        "istrue": true
+      },
+      {
+        "statement": "การใช้ 'Flow Rules' เพื่อเพิ่มพลังการประมวลผลของฮาร์ดแวร์",
+        "istrue": false
+      },
+      {
+        "statement": "การเปลี่ยนฮาร์ดแวร์ทั้งหมดให้เป็นซอฟต์แวร์",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพ SDN Concept แสดง 'Control Plane' (สีแดง) อยู่ด้านบน แยกขาดจาก 'Simple Packet Forwarding Hardware' (สีน้ำเงิน) ด้านล่าง และเชื่อมต่อกันด้วย 'Open programmable interface' (OpenFlow)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือประโยชน์ของ 'Software-Defined VANET (SD-VANET)' ในการจัดการความแออัดของเครือข่าย?",
+    "options": [
+      {
+        "statement": "Power Selection: สั่งให้โหนดเพิ่มกำลังส่ง",
+        "istrue": false
+      },
+      {
+        "statement": "Path Selection: เมื่อเกิด 'Unbalanced traffic' (การจราจรไม่สมดุล) SDN Controller สามารถ 'Reroute traffic' (เปลี่ยนเส้นทาง) ไปยังเส้นทางที่ว่างกว่าได้",
+        "istrue": true
+      },
+      {
+        "statement": "Frequency/Channel Selection: เลือกคลื่นความถี่ใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "SDN Assisted VANET Safety Service: สำรองช่องสัญญาณฉุกเฉิน",
+        "istrue": false
+      }
+    ],
+    "explanation": "ประโยชน์ด้าน 'Path Selection' ระบุชัดเจนว่า SDN สามารถ 'Reroute traffic to improve network utility and reduce congestion' เมื่อเกิด 'Unbalanced traffic'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากเครือข่าย VANET อยู่ในพื้นที่ชนบทที่โหนด (รถ) อยู่ห่างกันมาก (sparse) SD-VANET Controller สามารถใช้ประโยชน์ (Benefit) ใดเพื่อปรับปรุงการเชื่อมต่อ?",
+    "options": [
+      {
+        "statement": "Path Selection",
+        "istrue": false
+      },
+      {
+        "statement": "Frequency/Channel Selection",
+        "istrue": false
+      },
+      {
+        "statement": "Power Selection: สั่งให้โหนด 'increase power' (เพิ่มกำลังส่ง) เพื่อให้สื่อสารได้ไกลขึ้น",
+        "istrue": true
+      },
+      {
+        "statement": "Wireless Network Virtualization",
+        "istrue": false
+      }
+    ],
+    "explanation": "ประโยชน์ด้าน 'Power Selection' ระบุว่าเมื่อ 'node density is too sparse' (หนาแน่นน้อย/ห่าง) Controller สามารถ 'Command all nodes to increase power' ได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "บริการ 'SDN Assisted VANET Safety Service' ทำงานอย่างไรในสถานการณ์ฉุกเฉิน?",
+    "options": [
+      {
+        "statement": "แทรก 'flow rules' เพื่อสอดแนมข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "สร้าง 'virtual wireless networks' (เครือข่ายเสมือน)",
+        "istrue": false
+      },
+      {
+        "statement": "'Reserve or limit specific frequencies for emergency traffic' (สำรองหรือจำกัดความถี่เฉพาะสำหรับทราฟฟิกฉุกเฉิน)",
+        "istrue": true
+      },
+      {
+        "statement": "สั่งให้ทุกโหนดเพิ่มกำลังส่ง",
+        "istrue": false
+      }
+    ],
+    "explanation": "บริการด้านความปลอดภัยของ SDN สามารถจัดลำดับความสำคัญของทราฟฟิกฉุกเฉินได้โดยการ 'Reserve or limit specific frequencies' (กันช่องสัญญาณ) หรือ 'Change rules during an emergency'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือตัวอย่างของ 'Wireless Network Virtualization Service' ใน SD-VANET?",
+    "options": [
+      {
+        "statement": "การส่งข้อมูล ITS (จราจร) ผ่านช่อง f1 และส่ง Video (บันเทิง) ผ่านช่อง f2",
+        "istrue": true
+      },
+      {
+        "statement": "การแทรก flow rules เพื่อสอดแนม",
+        "istrue": false
+      },
+      {
+        "statement": "การสำรองช่องสัญญาณฉุกเฉิน",
+        "istrue": false
+      },
+      {
+        "statement": "การเพิ่มกำลังส่งในพื้นที่ชนบท",
+        "istrue": false
+      }
+    ],
+    "explanation": "Virtualization คือการแบ่งทรัพยากร (เช่น คลื่นความถี่) เพื่อให้บริการหลายประเภทพร้อมกัน ตัวอย่างที่ชัดเจนคือ 'ITS traffic over channel f1 and video over channel f2'"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จากแผนภาพ 'Component and Communications' ข้อใดคือการสื่อสารแบบ 'Vehicle-to-base station' (V2N)?",
+    "options": [
+      {
+        "statement": "การสื่อสารระหว่างรถยนต์สีแดงสองคัน (เส้นสีแดง)",
+        "istrue": false
+      },
+      {
+        "statement": "การสื่อสารระหว่างรถยนต์สีน้ำเงินและ RSU (เส้นสีน้ำเงิน)",
+        "istrue": false
+      },
+      {
+        "statement": "การสื่อสารระหว่างรถยนต์สีดำและ 4G/LTE Base Station (เส้นสีส้ม)",
+        "istrue": true
+      },
+      {
+        "statement": "การสื่อสารระหว่าง RSU สองตัว",
+        "istrue": false
+      }
+    ],
+    "explanation": "แผนภาพแสดงเส้นสีส้ม (Vehicle-to-base station Communication) ที่เชื่อมต่อรถยนต์ (เช่น รถสีดำ) เข้ากับ '4G/LTE Base Station' ซึ่งเป็นเครือข่ายมือถือ (V2N)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แผนภาพ 'Software-Defined Vehicular Networks' แสดงการแยก 'Control Plane' และ 'Data Plane' อย่างไร?",
+    "options": [
+      {
+        "statement": "Control Plane (สีส้ม) คือ V2V และ Data Plane (สีแดง) คือ V2I",
+        "istrue": false
+      },
+      {
+        "statement": "Control Plane (สีส้ม) คือการสื่อสารเพื่อ 'จัดการ/ควบคุม' (เช่น SDN Controller ไปยัง RSU) และ Data Plane (สีแดง) คือการส่ง 'ข้อมูล' จริง (เช่น V2V, V2I)",
+        "istrue": true
+      },
+      {
+        "statement": "Control Plane (สีส้ม) ใช้ 4G/LTE และ Data Plane (สีแดง) ใช้ RSU",
+        "istrue": false
+      },
+      {
+        "statement": "ทั้งสอง Plane เหมือนกัน แต่ใช้สีต่างกัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือหลักการสำคัญของ SDN: Control Plane (สีส้ม) ใช้สำหรับส่งคำสั่ง, นโยบาย, และการจัดการเครือข่าย (จาก SDN Controller) ส่วน Data Plane (สีแดง) ใช้สำหรับส่งข้อมูลของผู้ใช้ (V2V, V2I)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบาย 'Operations : Central Control Mode' ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "รถยนต์ (V2V) ตัดสินใจเส้นทางข้อมูล (Data plane) กันเอง",
+        "istrue": false
+      },
+      {
+        "statement": "Central Control Tower และ Server (Control plane) เป็นผู้ตัดสินใจและส่ง 'Flow Rules' ไปยัง RSU และยานพาหนะโดยตรง",
+        "istrue": true
+      },
+      {
+        "statement": "RSU ทำหน้าที่เป็น Control Plane หลัก",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นโหมดที่ไม่มี Control Plane",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน Central Control Mode แผนภาพแสดงให้เห็นว่า Control Plane (สีส้ม) มาจาก 'Central Control Tower' และ 'Server' ซึ่งส่ง 'Flow Rules' (คำสั่ง) ไปยังองค์ประกอบอื่นๆ ทั้งหมด"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดอธิบาย 'Operations : Distributed Control Mode' ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "statement": "Central Server ควบคุมทุกอย่าง",
+        "istrue": false
+      },
+      {
+        "statement": "Control Plane (สีส้ม) และ Data Plane (สีแดง) มีการกระจายตัวสูง โดยเกิดขึ้นระหว่างยานพาหนะ (V2V) และ RSU โดยตรง โดยไม่มีการควบคุมจากส่วนกลางที่ชัดเจน",
+        "istrue": true
+      },
+      {
+        "statement": "RSU ทำหน้าที่เป็น Central Control",
+        "istrue": false
+      },
+      {
+        "statement": "Central Server ส่ง Data Plane เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ใน Distributed Control Mode แผนภาพแสดงให้เห็นว่าทั้ง Control Plane (สีส้ม) และ Data Plane (สีแดง) เกิดขึ้นแบบกระจายตัว (เช่น V2V, V2I) โดยไม่มี 'Central Control Tower' ที่โดดเด่นเหมือนในโหมด Central"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือจุดเด่นของ 'Operations : Hybrid Control Mode' ที่แตกต่างจากโหมด Central หรือ Distributed?",
+    "options": [
+      {
+        "statement": "ใช้ V2V (Data Plane) เพียงอย่างเดียว",
+        "istrue": false
+      },
+      {
+        "statement": "Central Tower (Control Plane) ควบคุม Data Plane ทั้งหมดโดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "Central Tower (Control Plane) ส่ง 'Policy/Info' (นโยบาย/ข้อมูล) ไปยัง RSU และยานพาหนะ เพื่อ 'แนะนำ' หรือ 'กำหนดกรอบ' การทำงานของ Data Plane (V2V/V2I) ที่เกิดขึ้นแบบกระจายตัว",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่มี Central Server",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hybrid Mode คือการผสมผสาน: Control Plane (สีส้ม) มาจากส่วนกลาง (Tower/Server) ในรูปแบบของ 'Policy/Info' ซึ่งจะถูกส่งไปให้โหนดต่างๆ (RSU/รถ) เพื่อใช้ในการตัดสินใจ Data Plane (สีแดง, V2V/V2I) ในพื้นที่"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การประยุกต์ใช้ SDN กับ VANET (SD-VANET) มีจุดมุ่งหมายหลักเพื่ออะไร?",
+    "options": [
+      {
+        "statement": "เพื่อเพิ่มความท้าทายของ 'Intermittent Connectivity'",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเพิ่มความยืดหยุ่น (Flexibility), ความสามารถในการโปรแกรม (Programmability), และการจัดการเครือข่าย (Management) แบบรวมศูนย์ ให้กับ VANET ที่มีความซับซ้อนและเปลี่ยนแปลงตลอดเวลา",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อลดบทบาทของ V2V และ V2I",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อแทนที่ 802.11p ด้วย OpenFlow",
+        "istrue": false
+      }
+    ],
+    "explanation": "VANET มีความท้าทายสูง (Intermittent Connectivity, Unstable Link, Distributed Issues) การนำ SDN (ที่มีประโยชน์ด้าน Path Selection, Frequency Selection, Virtualization) มาใช้ จะช่วยให้สามารถจัดการความซับซ้อนเหล่านี้ได้อย่างยืดหยุ่นและมีประสิทธิภาพมากขึ้น"
+  }
+]

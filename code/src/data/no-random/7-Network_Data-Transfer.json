@@ -1,0 +1,1069 @@
+[
+  {
+    "question": "ในกระบวนการ Packetizing ของ Network Layer มีหน้าที่หลักอย่างไร?",
+    "options": [
+      "จัดรูปแบบข้อมูลจาก Layer ด้านล่างให้เป็นสัญญาณไฟฟ้า",
+      "เพิ่มและจัดการ header เพื่อห่อหุ้มข้อมูล (payload) จาก Layer ด้านบน",
+      "เปลี่ยนข้อมูลเป็นรูปแบบเสียงและวิดีโอ",
+      "ตรวจสอบข้อมูลว่ามี Virus หรือมัลแวร์หรือไม่"
+    ],
+    "answer": 1,
+    "explanation": "Packetizing คือการ encapsulate ข้อมูล (payload) จาก Layer ด้านบนให้กลายเป็น packet ของ Network Layer โดยมีการเพิ่ม header ที่จำเป็น เช่น ที่อยู่ต้นทางและปลายทาง"
+  },
+  {
+    "question": "การ Routing ใน Network Layer มีวัตถุประสงค์หลักข้อใด?",
+    "options": [
+      "ควบคุมความเร็วในการรับส่งข้อมูล",
+      "ป้องกันข้อมูลสูญหายด้วยการเข้ารหัส",
+      "เลือกเส้นทางที่เหมาะสมในการส่ง Packet จากต้นทางไปปลายทาง",
+      "กำหนดรูปแบบของข้อมูลที่จะแสดงผลบนหน้าจอผู้ใช้"
+    ],
+    "answer": 2,
+    "explanation": "Routing คือกระบวนการเลือกเส้นทางที่ดีที่สุดสำหรับ Packet จากโหนดต้นทางถึงโหนดปลายทาง เพื่อให้การส่งข้อมูลมีประสิทธิภาพมากที่สุด"
+  },
+  {
+    "question": "Error Control ใน Network Layer มักใช้กลไกใดในการตรวจสอบความผิดพลาดของ header?",
+    "options": [
+      "Checksum ในส่วนของ header เท่านั้น",
+      "Checksum ที่ตรวจสอบทั้ง packet (header และ payload)",
+      "CRC-32 ที่ตรวจสอบเฉพาะ payload",
+      "Parity bit ที่อยู่ในส่วนของ Transport Layer"
+    ],
+    "answer": 0,
+    "explanation": "ใน IPv4 จะมีการใช้ checksum ตรวจสอบเฉพาะส่วน header ของ datagram เพื่อป้องกันความผิดพลาดระหว่างการส่ง"
+  },
+  {
+    "question": "Flow Control ใน Network Layer มีหน้าที่อะไร?",
+    "options": [
+      "ควบคุมให้ปลายทางไม่รับข้อมูลเกินความสามารถ",
+      "กำหนดเส้นทางให้ packet เดินทางได้เร็วขึ้น",
+      "บีบอัดข้อมูลเพื่อประหยัดแบนด์วิธ",
+      "แยกข้อมูลออกเป็น segment ขนาดคงที่"
+    ],
+    "answer": 0,
+    "explanation": "Flow Control ใน Network Layer คือการจำกัดอัตราการส่งข้อมูลเพื่อไม่ให้ปลายทางถูกส่งข้อมูลมากเกินไปจนรับไม่ไหว ซึ่งทำได้โดยการส่ง feedback กลับไปยังต้นทาง"
+  },
+  {
+    "question": "สาเหตุหลักของ Congestion ในเครือข่ายคือข้อใด?",
+    "options": [
+      "ปลายทางส่ง ACK ช้า",
+      "มีการกระจาย IP Address ซ้ำซ้อน",
+      "ปริมาณ packet ในเครือข่ายมากเกินกว่าความสามารถของเราเตอร์หรือเส้นทาง",
+      "การใช้โปรโตคอลการเข้ารหัสที่ซับซ้อนเกินไป"
+    ],
+    "answer": 2,
+    "explanation": "Congestion เกิดขึ้นเมื่อมี packet ไหลเข้ามาในเครือข่ายมากเกินกว่าที่เราเตอร์และลิงก์จะรองรับได้ จึงทำให้เกิดปัญหา packet loss และความล่าช้า"
+  },
+  {
+    "question": "Quality of Service (QoS) ในระดับ Network Layer มีวัตถุประสงค์ใด?",
+    "options": [
+      "ใช้ปรับสีของหน้าจอให้คมชัดขึ้น",
+      "ใช้สำรองข้อมูลในกรณีฮาร์ดดิสก์เสียหาย",
+      "ควบคุมคุณภาพการส่งข้อมูล เช่น ลดความหน่วงหรือเพิ่มความน่าเชื่อถือ",
+      "ป้องกันการถูกโจมตีโดยการปลอมแปลง IP"
+    ],
+    "answer": 2,
+    "explanation": "QoS ถูกออกแบบมาเพื่อควบคุมและปรับปรุงคุณภาพของการรับส่งข้อมูลในเครือข่าย เช่น ลด Latency หรือจัดลำดับความสำคัญของข้อมูล"
+  },
+  {
+    "question": "Packet Switching ที่ใช้งานใน Network Layer มีรูปแบบสำคัญใด?",
+    "options": [
+      "Circuit-Switched and Message-Switched",
+      "Datagram Approach และ Virtual-Circuit Approach",
+      "Frequency Switching และ Time Switching",
+      "Bitwise Switching และ Bytewise Switching"
+    ],
+    "answer": 1,
+    "explanation": "Network Layer ใช้เทคนิค Packet Switching เป็นหลัก ซึ่งแบ่งเป็น 2 รูปแบบคือ Datagram (connectionless) และ Virtual-Circuit (connection-oriented)"
+  },
+  {
+    "question": "ใน Datagram Approach แต่ละ packet จะถูกส่งอย่างไร?",
+    "options": [
+      "ทุก packet ถูกส่งผ่านเส้นทางเดียวกันเสมอ",
+      "ทุก packet จะถูกส่งแบบ multicast เท่านั้น",
+      "แต่ละ packet ถูกส่งแบบอิสระและอาจใช้เส้นทางต่างกัน",
+      "บีบอัด packet ก่อนส่งเสมอ"
+    ],
+    "answer": 2,
+    "explanation": "ในแบบ Datagram (connectionless) แต่ละ packet จะถูกส่งโดยเป็นหน่วยอิสระ มีหมายเลขปลายทางของตัวเอง และอาจเดินทางผ่านเส้นทางต่างกันไปได้"
+  },
+  {
+    "question": "Virtual-Circuit Approach มีขั้นตอนหลักอย่างไร?",
+    "options": [
+      "ไม่มีการเจรจาเส้นทางล่วงหน้า",
+      "ใช้ Broadcast ส่ง packet ทุกครั้ง",
+      "ต้องมีการ set up เส้นทางก่อนเพื่อสร้างเสมือนวงจร จากนั้นจึงส่ง packet ทั้งหมดไปในเส้นทางเดียวกัน",
+      "ผู้ส่งและผู้รับต้องทำการ Flow Control โดยตรงก่อนส่ง"
+    ],
+    "answer": 2,
+    "explanation": "Virtual-Circuit หรือ Connection-Oriented Service ต้องมีการสร้างเส้นทาง (setup) ก่อน packet ทั้งหมดจะวิ่งผ่านเส้นทางเสมือนเดียวกัน ทำให้ packet เดินทางในลำดับเดิม"
+  },
+  {
+    "question": "Delay หลัก ๆ ที่เกิดขึ้นในการส่งข้อมูลผ่าน Network Layer ไม่ได้เกิดจากข้อใด?",
+    "options": [
+      "Transmission Delay",
+      "Propagation Delay",
+      "Processing Delay",
+      "Cache Delay ของเว็บเบราว์เซอร์"
+    ],
+    "answer": 3,
+    "explanation": "Delay ใน Network Layer ปกติประกอบด้วย Transmission, Propagation, Processing และ Queuing Delay ส่วน Cache Delay ของเว็บเบราว์เซอร์เป็นเรื่องของ Application Layer"
+  },
+  {
+    "question": "Throughput ในเครือข่ายหมายถึงอะไร?",
+    "options": [
+      "เวลาทั้งหมดในการส่งไฟล์หนึ่งไฟล์",
+      "จำนวนบิตที่สามารถส่งผ่านจุดหนึ่งในหนึ่งวินาที",
+      "ความเร็วของ CPU ที่ประมวลผล Packet",
+      "ค่า checksum เพื่อตรวจสอบข้อผิดพลาด"
+    ],
+    "answer": 1,
+    "explanation": "Throughput คือจำนวนบิตที่ผ่านจุดใดจุดหนึ่งต่อหน่วยเวลา ซึ่งสื่อถึงอัตราการรับส่งข้อมูลจริงในระบบ"
+  },
+  {
+    "question": "สาเหตุหลักที่ทำให้เกิด Packet Loss ใน Network Layer คืออะไร?",
+    "options": [
+      "ผู้ส่งทำการเข้ารหัสผิดพลาด",
+      "รับส่งผ่านโปรโตคอล HTTP",
+      "Buffer ในเราเตอร์เต็มจนต้องทิ้ง Packet",
+      "เกิดไฟฟ้าสถิตย์รบกวนในสายสื่อสาร"
+    ],
+    "answer": 2,
+    "explanation": "Packet Loss มักจะเกิดเมื่อ Buffer ในเราเตอร์เต็ม (เนื่องมาจาก Congestion) จึงต้องทิ้ง Packet ส่วนความผิดพลาดอื่น ๆ เป็นส่วนน้อยหรืออยู่ใน Layer อื่น"
+  },
+  {
+    "question": "IPv4 มีความยาว Address กี่บิต?",
+    "options": [
+      "8 บิต",
+      "16 บิต",
+      "32 บิต",
+      "64 บิต"
+    ],
+    "answer": 2,
+    "explanation": "IPv4 Address มีความยาว 32 บิต และมักแสดงผลในรูปแบบ dotted-decimal (เช่น 192.168.0.1)"
+  },
+  {
+    "question": "ในระบบ Classless Addressing การเขียน Prefix Length นิยมเรียกว่าอะไร?",
+    "options": [
+      "Slash Notation (CIDR)",
+      "Subnet Pointer",
+      "Binary Tree Division",
+      "Relative Addressing"
+    ],
+    "answer": 0,
+    "explanation": "Classless Addressing นิยมระบุ Prefix Length ด้วย Slash Notation (เช่น /24) และเรียกกลไกนี้ว่า CIDR (Classless Interdomain Routing)"
+  },
+  {
+    "question": "การคำนวณ Address Mask ใน IPv4 /27 หมายถึงอะไร?",
+    "options": [
+      "มี 16 Subnets แยกย่อย",
+      "มี 27 บิตในส่วนของ Host",
+      "มี 27 บิตในส่วนของ Network และเหลือ 5 บิตสำหรับ Host",
+      "มีเพียง 27 Host เท่านั้นในเครือข่าย"
+    ],
+    "answer": 2,
+    "explanation": "Prefix Length /27 หมายถึงมี 27 บิตสำหรับ Network (หรือ Subnet) และ 5 บิตสำหรับ Host (เพราะ 32 - 27 = 5)"
+  },
+  {
+    "question": "Block Allocation ของ IPv4 Classless Addressing ถูกจัดสรรโดยใคร?",
+    "options": [
+      "ISP เล็ก ๆ ในพื้นที่",
+      "IANA หรือ ICANN",
+      "บริษัท Hardware ผู้ผลิต Router",
+      "ผู้ดูแลระบบของแต่ละองค์กร"
+    ],
+    "answer": 1,
+    "explanation": "การจัดสรร IP Address บนอินเทอร์เน็ตเป็นหน้าที่ขององค์กรกลาง เช่น ICANN (Internet Corporation for Assigned Names and Numbers) หรือ IANA"
+  },
+  {
+    "question": "ข้อใดเป็นเงื่อนไขสำคัญของการรับ Block Address ใน CIDR?",
+    "options": [
+      "จำนวน IP ใน Block ต้องเป็นพหุคูณของ 10",
+      "Block Address ทั้งหมดต้องใช้ MAC Address เดียวกัน",
+      "จำนวน Address ใน Block ต้องเป็นกำลังสอง (power of 2)",
+      "ไม่สามารถมีการ Subnet ภายใน Block ได้"
+    ],
+    "answer": 2,
+    "explanation": "ใน CIDR การขอ Block ต้องเป็นจำนวน IP ที่เป็นกำลังสอง เพื่อให้ Prefix Length เป็นจำนวนเต็ม (32 - log2 N)"
+  },
+  {
+    "question": "Subnetting เกิดขึ้นเพื่อวัตถุประสงค์ใด?",
+    "options": [
+      "เพิ่มความเร็วในการประมวลผลของ CPU",
+      "ลดจำนวนบิตของ IP Address",
+      "แบ่งเครือข่ายออกเป็นเครือข่ายย่อย ๆ เพื่อบริหารจัดการได้สะดวก",
+      "ยกเลิกการใช้ Network Layer"
+    ],
+    "answer": 2,
+    "explanation": "การ Subnet คือการแบ่งเครือข่ายใหญ่เป็นเครือข่ายย่อย เพื่อบริหารจัดการได้สะดวกยิ่งขึ้น และใช้ Address Space อย่างมีประสิทธิภาพ"
+  },
+  {
+    "question": "ในตัวอย่าง Subnetting ถ้ามี 3 Subnet ต้องการ 10, 60, 120 IP ตามลำดับ ควรจัดสรรอย่างไร?",
+    "options": [
+      "10 → /26, 60 → /25, 120 → /24",
+      "10 → /28, 60 → /26, 120 → /25",
+      "120 → /28, 60 → /28, 10 → /28",
+      "ไม่สามารถ Subnet ได้"
+    ],
+    "answer": 1,
+    "explanation": "หาก 10, 60, 120 ไม่ใช่กำลังสอง ต้องปัดเป็น 16 (/28), 64 (/26), และ 128 (/25) ตามลำดับ"
+  },
+  {
+    "question": "Address Aggregation (Route Summarization) มีประโยชน์อย่างไร?",
+    "options": [
+      "ทำให้การกำหนด VLAN ใน Layer 2 ง่ายขึ้น",
+      "ช่วยให้ตาราง Routing มีขนาดเล็กลง",
+      "บังคับให้ทุก Router มีเส้นทางไม่ซ้ำกัน",
+      "จำกัดการกระจายของ Broadcast Packet"
+    ],
+    "answer": 1,
+    "explanation": "Address Aggregation ช่วยสรุปหลาย Block ให้กลายเป็น Block ใหญ่เพื่อให้เส้นทางในตาราง Routing สั้นลง ลดภาระในการค้นหาเส้นทาง"
+  },
+  {
+    "question": "IPv4 เป็นโปรโตคอลแบบใด?",
+    "options": [
+      "Connection-oriented และเชื่อถือได้",
+      "Connectionless และ Best-effort Delivery",
+      "Connectionless และ Guaranteed Delivery",
+      "Connection-oriented และ Best-effort Delivery"
+    ],
+    "answer": 1,
+    "explanation": "IPv4 เป็นโปรโตคอล connectionless ให้บริการแบบ Best-effort คือไม่รับรองว่า packet จะไม่สูญหายหรือมาล่าช้า"
+  },
+  {
+    "question": "IPv4 Datagram สามารถเกิดการ Fragmentation ได้เมื่อใด?",
+    "options": [
+      "เมื่อขนาด Datagram มีค่าเกิน MTU ของ Data Link Layer",
+      "เมื่อมีการเข้ารหัสข้อมูล",
+      "เมื่อ TCP ตรวจพบการสูญหายของ Segment",
+      "เมื่อ Congestion เกิดขึ้นในเครือข่าย"
+    ],
+    "answer": 0,
+    "explanation": "Fragmentation จะเกิดขึ้นหากขนาด Datagram เกินค่า MTU (Maximum Transmission Unit) ของ Network Interface ที่ต้องส่งผ่าน"
+  },
+  {
+    "question": "ค่า Identification ใน IPv4 header ใช้เพื่อวัตถุประสงค์ใด?",
+    "options": [
+      "กำหนดหมายเลขการเชื่อมต่อ",
+      "ระบุว่า Packet นั้นเป็น Broadcast หรือ Unicast",
+      "ระบุ Datagram เดิม เพื่อใช้ในการ Reassemble เมื่อเกิด Fragment",
+      "บอกประเภทของ QoS ที่ใช้"
+    ],
+    "answer": 2,
+    "explanation": "Identification เป็นตัวระบุ Datagram แต่ละตัว เมื่อมีการ Fragment ค่า Identification จะเหมือนกันในแต่ละ Fragment เพื่อให้นำมาประกอบกลับได้ถูกต้อง"
+  },
+  {
+    "question": "Flag bit 'M' (More Fragments) ใน IPv4 header บ่งบอกว่าอย่างไร?",
+    "options": [
+      "เป็น Fragment ล่าสุด",
+      "ยังมี Fragment ต่อไปอีก",
+      "ไม่ให้ Fragment Datagram นี้",
+      "เป็นสัญญาณว่าข้อมูลขนาดใหญ่มาก"
+    ],
+    "answer": 1,
+    "explanation": "ถ้า M = 1 หมายถึงยังมี Fragment อื่นตามมา ถ้าเป็น 0 หมายถึงนี่คือ Fragment สุดท้ายหรือ Datagram ไม่ได้ถูกแบ่ง"
+  },
+  {
+    "question": "หาก Fragment Offset มีค่า 100 แสดงว่าข้อมูลใน Fragment เริ่มต้นที่ byte ใดของ Datagram ต้นฉบับ?",
+    "options": [
+      "100",
+      "400",
+      "800",
+      "1600"
+    ],
+    "answer": 2,
+    "explanation": "Offset ใน IPv4 คำนวณเป็นหน่วย 8 byte ดังนั้น Offset = 100 แสดงว่า byte แรกอยู่ที่ (100 x 8) = 800"
+  },
+  {
+    "question": "ICMPv4 ถูกสร้างขึ้นเพื่อแก้ปัญหาใดของ IPv4?",
+    "options": [
+      "เพิ่มขนาด IP Address เป็น 128 บิต",
+      "ลดการ Fragmentation",
+      "ให้มี Error-reporting และให้มี Host/Management Query",
+      "กำหนดรูปแบบ Subnet ให้เป็นไปโดยอัตโนมัติ"
+    ],
+    "answer": 2,
+    "explanation": "ICMPv4 ถูกสร้างขึ้นเพื่อใช้รายงานข้อผิดพลาดที่เกิดจากการส่ง IP และช่วยให้โฮสต์/เราเตอร์ส่งคำถาม (Query) เช่น เช็คการมีตัวตนของโฮสต์ได้"
+  },
+  {
+    "question": "ICMPv4 Debugging Tools ที่นิยมใช้งาน ได้แก่โปรแกรมใดบ้าง?",
+    "options": [
+      "ARP และ RARP",
+      "HTTP และ HTTPS",
+      "FTP และ TFTP",
+      "PING และ Traceroute"
+    ],
+    "answer": 3,
+    "explanation": "PING ใช้ตรวจสอบว่า Host ปลายทางยัง Active หรือไม่ ส่วน Traceroute ใช้ตรวจสอบเส้นทางของ Packet"
+  },
+  {
+    "question": "Mobile IP แก้ปัญหาอะไร?",
+    "options": [
+      "ปัญหาที่ต้องเปลี่ยน IP Address ทุกครั้งเมื่อ Host ย้ายเครือข่าย",
+      "ปัญหา Congestion ในเครือข่ายที่ใหญ่ขึ้น",
+      "ปัญหา DNS Resolution ผิดพลาด",
+      "ปัญหา Data Link ไม่รองรับความเร็วสูง"
+    ],
+    "answer": 0,
+    "explanation": "Mobile IP ได้รับการออกแบบมาเพื่อให้โฮสต์เคลื่อนที่ไปเครือข่ายอื่นได้โดยยังใช้ Home Address เดิมเพื่อความโปร่งใส ไม่ต้องเปลี่ยน IP"
+  },
+  {
+    "question": "การทำงานของ Mobile IP มีตัวช่วยสำคัญคือ Home Agent และ Foreign Agent หน้าที่ของ Home Agent คืออะไร?",
+    "options": [
+      "บีบอัดข้อมูลเพื่อประหยัดแบนด์วิธ",
+      "เก็บ Routing Table ไว้ใน Home Network",
+      "รับ Packet แทน Mobile Host เมื่อไม่อยู่ใน Home Network แล้วส่งต่อไปยัง Foreign Agent",
+      "ทำหน้าที่ DHCP Server"
+    ],
+    "answer": 2,
+    "explanation": "Home Agent จะรับ Packet จาก Remote Host แทน Mobile Host แล้ว Forward หรือ Tunneling ไปยัง Foreign Agent ที่ Mobile Host อยู่"
+  },
+  {
+    "question": "ใน Mobile IP ที่อยู่ชั่วคราวของ Mobile Host เมื่ออยู่ในเครือข่ายอื่น เรียกว่าอะไร?",
+    "options": [
+      "Home Address",
+      "Temporary MAC Address",
+      "Care-of Address",
+      "Multicast Address"
+    ],
+    "answer": 2,
+    "explanation": "Care-of Address คือ IP Address ชั่วคราวที่ได้รับจาก Foreign Network เพื่อใช้เป็นที่อยู่ขณะ Mobile Host พักอยู่ในเครือข่ายนั้น"
+  },
+  {
+    "question": "ขั้นตอน Register ใน Mobile IP ทำเพื่ออะไร?",
+    "options": [
+      "Broadcast Packet ไปทุกเครือข่าย",
+      "ลงทะเบียน Care-of Address กับ Home Agent",
+      "จัดการ Fragment ให้ครบถ้วน",
+      "Redirect DNS Queries"
+    ],
+    "answer": 1,
+    "explanation": "ในขั้นตอน Registration Mobile Host จะส่ง Registration Request เพื่อแจ้ง Care-of Address ต่อ Foreign Agent และ Home Agent"
+  },
+  {
+    "question": "ในโหมด Data Transfer ของ Mobile IP การส่ง Packet จาก Home Agent ไปยัง Mobile Host ทำได้อย่างไร?",
+    "options": [
+      "Home Agent สร้าง VLAN ใหม่",
+      "Home Agent Encapsulate Packet ไปยัง Foreign Agent",
+      "Mobile Host ต้อง Connect VPN ตลอดเวลา",
+      "ใช้ ICMP Redirect ให้โฮสต์อื่นช่วยส่ง Packet"
+    ],
+    "answer": 1,
+    "explanation": "Home Agent จะใช้วิธี Encapsulation หรือ Tunneling Packet ส่งไปยัง Foreign Agent ซึ่งจะ Decapsulate ก่อนส่งต่อไปยัง Mobile Host"
+  },
+  {
+    "question": "ข้อเสียหลักของ Mobile IP คือข้อใด?",
+    "options": [
+      "Address เปลี่ยนไม่ได้ตามต้องการ",
+      "Packet อาจต้องผ่าน Home Agent เสมอ ทำให้เส้นทางอ้อม (Triangle Routing)",
+      "ไม่รองรับการใช้งานอินเทอร์เน็ตไร้สาย",
+      "ต้องใช้ IPv4 เท่านั้น ไม่รองรับ IPv6"
+    ],
+    "answer": 1,
+    "explanation": "Mobile IP อาจเกิดปัญหา Triangle Routing เมื่อ Remote Host ส่ง Packet ไป Home Agent ก่อน แล้วจึงค่อยส่งต่อไปยัง Foreign Agent ทำให้เส้นทางยาวกว่า"
+  },
+  {
+    "question": "Forwarding หมายถึงกระบวนการใด?",
+    "options": [
+      "เลือกเส้นทางที่ดีที่สุดไปปลายทาง",
+      "จ่ายไฟเลี้ยงให้ Router",
+      "ส่ง Packet ไปยัง Next Hop ตามตาราง",
+      "เข้ารหัสข้อมูล"
+    ],
+    "answer": 2,
+    "explanation": "Forwarding คือการส่งต่อ Packet ไปยังอินเทอร์เฟซหรือ Next Hop ที่ถูกต้องตามตาราง Forwarding"
+  },
+  {
+    "question": "Longest Prefix Match มีความหมายว่าอย่างไรในการ Forwarding?",
+    "options": [
+      "เลือก Entries ที่มี Prefix สั้นที่สุดก่อน",
+      "ใช้ Flooding เพื่อส่ง Packet ทุกเส้นทาง",
+      "ค้นหา Route ที่มี Prefix ตรงกับ Destination Address มากที่สุด",
+      "ระบุเส้นทางตามหมายเลขพอร์ต"
+    ],
+    "answer": 2,
+    "explanation": "Longest Prefix Match คือการเลือก Route ที่มี Prefix ตรงกับปลายทางนานที่สุด (หรือจำนวนบิตตรงมากที่สุด) เพื่อตัดสินใจส่งต่อ Packet ได้แม่นยำ"
+  },
+  {
+    "question": "Multi-Protocol Label Switching (MPLS) ทำงานต่างจาก IPv4 Routing ปกติอย่างไร?",
+    "options": [
+      "MPLS ประมวลผลระดับ TCP",
+      "MPLS Forward Packet โดยอ้างอิง Label แทนที่จะใช้ IP Address",
+      "MPLS เป็นแค่โปรแกรมตรวจสอบ Virus",
+      "MPLS ไม่สามารถใช้ร่วมกับ IPv6"
+    ],
+    "answer": 1,
+    "explanation": "MPLS สามารถใช้ Label ในการ Switching Packet เพื่อเพิ่มความเร็วในการส่งต่อและสนับสนุน Traffic Engineering ได้ดีกว่าแค่ใช้ IP Address"
+  },
+  {
+    "question": "IPv6 มีความยาว Address กี่บิต?",
+    "options": [
+      "64 บิต",
+      "128 บิต",
+      "256 บิต",
+      "32 บิต"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 Address ยาว 128 บิต ซึ่งมากกว่า IPv4 ถึง 4 เท่า (32 บิต → 128 บิต)"
+  },
+  {
+    "question": "รูปแบบการเขียน Address ของ IPv6 นิยมใช้รูปแบบใด?",
+    "options": [
+      "Dotted-decimal",
+      "Colon-hexadecimal",
+      "Binary ทั้งหมด 128 ตัว",
+      "Base64 Encoding"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 Address นิยมใช้ colon-hexadecimal notation โดยแบ่งเป็น 8 กลุ่ม แต่ละกลุ่มมี 4 หลัก Base16"
+  },
+  {
+    "question": "ข้อใดไม่ใช่ประเภทของ IPv6 Address?",
+    "options": [
+      "Unicast",
+      "Multicast",
+      "Broadcast",
+      "Anycast"
+    ],
+    "answer": 2,
+    "explanation": "ใน IPv6 ได้ตัด Broadcast ออกไป เหลือ Unicast, Multicast และ Anycast"
+  },
+  {
+    "question": "Global Unicast Address ใน IPv6 แบ่งเป็นส่วนใดบ้าง?",
+    "options": [
+      "Global Routing Prefix, Subnet ID, Interface ID",
+      "Network ID, Host ID",
+      "Broadcast ID, Unicast ID, Multicast ID",
+      "Source ID, Destination ID"
+    ],
+    "answer": 0,
+    "explanation": "Global Unicast Address ใน IPv6 ถูกแบ่งเป็น Global Routing Prefix, Subnet ID และ Interface ID เพื่อความยืดหยุ่นในการแบ่งเครือข่าย"
+  },
+  {
+    "question": "Flow Label ใน IPv6 header มีไว้เพื่ออะไร?",
+    "options": [
+      "ระบุว่าต้อง Fragment หรือไม่",
+      "ใช้สำหรับกำหนด QoS หรือ Resource Allocation",
+      "ระบุตำแหน่ง Destination Interface",
+      "บอกชนิดของ Link Layer"
+    ],
+    "answer": 1,
+    "explanation": "Flow Label ใน IPv6 ช่วยระบุ flow ของ packet เพื่อให้ Router สามารถจัดการ QoS หรือ Resource Allocation ได้"
+  },
+  {
+    "question": "ICMPv6 แตกต่างจาก ICMPv4 อย่างไรเป็นหลัก?",
+    "options": [
+      "รองรับการเขียนที่อยู่แบบ 8 บิต",
+      "ใช้งานได้เฉพาะใน LAN",
+      "มีการปรับปรุงให้รองรับฟีเจอร์ของ IPv6 เช่น Neighbor Discovery",
+      "ICMPv6 ไม่สามารถใช้ตรวจสอบข้อผิดพลาดได้"
+    ],
+    "answer": 2,
+    "explanation": "ICMPv6 ถูกออกแบบให้รองรับการทำงานกับ IPv6 โดยมีการเพิ่มฟีเจอร์อย่าง Neighbor Discovery และ Router Solicitation/Advertisement เพื่อทดแทน ARP, RARP ใน IPv4"
+  },
+  {
+    "question": "วิธี Transition จาก IPv4 ไปเป็น IPv6 แบบ Dual Stack หมายถึงอะไร?",
+    "options": [
+      "หนึ่งเครื่องใช้ได้เฉพาะ IPv4 หรือ IPv6 เท่านั้น",
+      "ใช้โปรโตคอลอื่นแทน IP",
+      "ให้โฮสต์/เราเตอร์สามารถรองรับทั้ง IPv4 และ IPv6 พร้อมกัน",
+      "ปิด Layer 3 ทั้งหมด"
+    ],
+    "answer": 2,
+    "explanation": "Dual Stack คือการเปิดใช้งานทั้ง IPv4 และ IPv6 บนโฮสต์หรือเราเตอร์ตัวเดียวกัน เพื่อสามารถสื่อสารได้ทั้งสองรุ่นควบคู่กัน"
+  },
+  {
+    "question": "Tunneling ใน Transition IPv4 เป็น IPv6 มีหลักการใด?",
+    "options": [
+      "บังคับให้ทุก Packet ถูกบีบอัดก่อนส่ง",
+      "ใช้ Virtual Circuit เท่านั้น",
+      "Encapsulate IPv6 Packet ใน IPv4 Packet (หรือกลับกัน) เพื่อวิ่งข้ามเครือข่ายที่ยังไม่รองรับ IPv6",
+      "เปลี่ยน MTU ให้เล็กลง"
+    ],
+    "answer": 2,
+    "explanation": "Tunneling คือการห่อหุ้ม (encapsulate) IPv6 Packet ลงใน IPv4 Header เมื่อผ่านเครือข่ายที่รองรับแค่ IPv4 ทำให้ IPv6 ส่งผ่านได้"
+  },
+  {
+    "question": "Header Translation ในกระบวนการ Transition จาก IPv4 ไป IPv6 คืออะไร?",
+    "options": [
+      "เปลี่ยนตำแหน่ง bit ใน Layer 2",
+      "เปลี่ยน MAC Address แบบอัตโนมัติ",
+      "แปลง IPv4 header เป็น IPv6 header หรือกลับกัน สำหรับปลายทางที่รองรับคนละเวอร์ชัน",
+      "ยกเลิกการใช้ Packet Switching"
+    ],
+    "answer": 2,
+    "explanation": "Header Translation คือการแปลง IPv4 header เป็น IPv6 header (หรือกลับกัน) เพื่อให้โฮสต์ต้นทาง/ปลายทางที่ต่างเวอร์ชัน IP สามารถสื่อสารกันได้"
+  },
+  {
+    "question": "Datagram Approach ใน Network Layer คืออะไร?",
+    "options": [
+      "การเข้ารหัสข้อมูลก่อนส่ง",
+      "การแบ่งข้อมูลเป็นเซสชัน (session) ตลอดเส้นทาง",
+      "การส่งแต่ละ Packet อย่างอิสระและไม่สร้างการเชื่อมต่อ",
+      "การใช้ Flow Control แบบ TCP"
+    ],
+    "answer": 2,
+    "explanation": "Datagram Approach ส่ง Packet แต่ละตัวอย่างอิสระ (connectionless) โดยไม่สร้าง Virtual Circuit ล่วงหน้า"
+  },
+  {
+    "question": "Flag 'D' (Don't Fragment) ใน IPv4 header หากตั้งเป็น 1 หมายความว่าอย่างไร?",
+    "options": [
+      "อนุญาตให้แบ่ง Fragment ได้เสมอ",
+      "ห้ามแบ่ง Fragment หากต้องแบ่งแล้วไม่ได้ ก็ทิ้ง Packet",
+      "ห้ามใส่ Checksum",
+      "กำหนดให้ส่งต่อแบบ MPLS เท่านั้น"
+    ],
+    "answer": 1,
+    "explanation": "D bit = 1 หมายถึงห้าม Fragment Datagram ถ้าต้องผ่านลิงก์ที่ MTU ต่ำจนต้อง Fragment แล้วทำไม่ได้ Router จะทิ้ง Packet พร้อมส่ง ICMP Error กลับ"
+  },
+  {
+    "question": "ICMPv4 Type ไหนที่ใช้บอกว่า Network ไม่สามารถเข้าถึง (Destination Network Unreachable)?",
+    "options": [
+      "Type 0",
+      "Type 3",
+      "Type 5",
+      "Type 8"
+    ],
+    "answer": 1,
+    "explanation": "ICMP Type 3 คือ Destination Unreachable โดยจะมี Code ย่อยบอกเงื่อนไขต่าง ๆ เช่น Network Unreachable, Host Unreachable"
+  },
+  {
+    "question": "Traceroute ใช้กลไก ICMPv4 ใดในการค้นหาเส้นทาง?",
+    "options": [
+      "ส่ง Echo Request เฉย ๆ",
+      "ปรับค่า Time to Live (TTL) เริ่มจาก 1 เพิ่มไปเรื่อย ๆ และสังเกต ICMP Time Exceeded",
+      "ใช้ ICMP Router Advertisements",
+      "ใช้ ICMP ในโหมด Record Route"
+    ],
+    "answer": 1,
+    "explanation": "Traceroute ส่ง Packet พร้อม TTL=1,2,3,... หาก TTL หมดอายุ Router จะส่ง ICMP Time Exceeded กลับ ทำให้รู้เส้นทางจนถึงปลายทาง"
+  },
+  {
+    "question": "Address Mask สำหรับ /26 ในรูปแบบ dotted-decimal คืออะไร?",
+    "options": [
+      "255.255.255.192",
+      "255.255.255.224",
+      "255.255.254.0",
+      "255.255.248.0"
+    ],
+    "answer": 0,
+    "explanation": "/26 หมายถึง 26 บิตในส่วน Network (11111111.11111111.11111111.11000000) หรือ 255.255.255.192"
+  },
+  {
+    "question": "ตำแหน่งของ Network Layer ใน TCP/IP Protocol Suite อยู่ระหว่าง Layer ใด?",
+    "options": [
+      "ระหว่าง Physical Layer และ Data Link Layer",
+      "ระหว่าง Application Layer และ Transport Layer",
+      "ระหว่าง Data Link Layer และ Transport Layer",
+      "อยู่บนสุดของสถาปัตยกรรม"
+    ],
+    "answer": 2,
+    "explanation": "ใน TCP/IP Model, Network Layer (หรือ Internet Layer) จะอยู่ถัดจาก Data Link (หรือ Network Interface) และอยู่ก่อน Transport Layer"
+  },
+  {
+    "question": "Checksum ใน ICMPv4 คำนวณกับส่วนใดของข้อความ?",
+    "options": [
+      "เฉพาะส่วน header",
+      "เฉพาะ payload",
+      "ทั้ง header และ data ของ ICMP",
+      "ไม่ได้ใช้ checksum ใน ICMPv4"
+    ],
+    "answer": 2,
+    "explanation": "ICMPv4 ทำการคำนวณ Checksum ครอบคลุมทั้ง header และ data ของ ICMP message"
+  },
+  {
+    "question": "IPv4 และ IPv6 เป็นโปรโตคอลใน Layer ใดตาม Model ของ Internet?",
+    "options": [
+      "Application Layer",
+      "Transport Layer",
+      "Network Layer (Internet Layer)",
+      "Data Link Layer"
+    ],
+    "answer": 2,
+    "explanation": "ทั้ง IPv4 และ IPv6 เป็นโปรโตคอลในระดับ Network (Internet Layer) ในโมเดล TCP/IP"
+  },
+  {
+    "question": "IPv6 มีการกำหนดให้ใช้ Extension Header เพื่ออะไร?",
+    "options": [
+      "แทนที่การเชื่อมต่อ TCP",
+      "เพิ่มขนาด MTU",
+      "ขยายความสามารถโดยใส่ข้อมูลเฉพาะ เช่น Routing หรือ Fragmentation แยกต่างหากจาก Base Header",
+      "บังคับให้ต้องใช้ Stateful Inspection"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 อนุญาตให้มี Extension Header ได้ เช่น Routing Header, Fragment Header หรือ Hop-by-Hop Options เพื่อให้ส่วนหลักของ Header สั้นและยืดหยุ่น"
+  },
+  {
+    "question": "IPv6 ตัด Field ไหนออกไปเมื่อเทียบกับ IPv4?",
+    "options": [
+      "Source Address",
+      "Destination Address",
+      "Header Checksum",
+      "Next Header"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 ได้ตัด Header Checksum ออกเพื่อให้การประมวลผลของ Router เร็วขึ้น และใช้ Checksum ในระดับอื่นแทน"
+  },
+  {
+    "question": "ข้อใดเป็นวัตถุประสงค์ของ IPSec?",
+    "options": [
+      "บีบอัดข้อมูลในเครือข่ายให้เล็กลง",
+      "ให้ Network Layer มีความปลอดภัย เช่น Encryption, Authentication และ Integrity",
+      "แทนที่ DHCP ในการแจกจ่าย IP Address",
+      "ใช้แทน Application Layer Protocols ทั้งหมด"
+    ],
+    "answer": 1,
+    "explanation": "IPSec เพิ่มความปลอดภัย (security) ให้กับ IP โดยรองรับการเข้ารหัส (Encryption), การพิสูจน์ตัวตน (Authentication) และความสมบูรณ์ (Integrity) ของ Packet"
+  },
+  {
+    "question": "ใครเป็นผู้กำหนดวิธีการจัดสรร IP Address โดยรวมในอินเทอร์เน็ต (องค์กรระดับโลก)?",
+    "options": [
+      "IEEE",
+      "ICANN",
+      "IETF",
+      "ISO"
+    ],
+    "answer": 1,
+    "explanation": "ICANN (Internet Corporation for Assigned Names and Numbers) เป็นองค์กรที่ดูแลการจัดสรร IP Address และ Domain Name ระดับโลก"
+  },
+  {
+    "question": "ใน IPv4 Flag bit ใดบอกว่าห้ามมีการ Fragment?",
+    "options": [
+      "Reserved bit (RB)",
+      "Don't Fragment (DF)",
+      "More Fragments (MF)",
+      "Congestion Window (CW)"
+    ],
+    "answer": 1,
+    "explanation": "DF (Don't Fragment) = 1 หมายถึงห้าม Fragment Datagram นี้ หากจำเป็นต้อง Fragment แล้วทำไม่ได้ ให้ทิ้ง Packet"
+  },
+  {
+    "question": "เหตุใด IPv4 Fragmentation จึงเป็นภาระต่อเราเตอร์?",
+    "options": [
+      "เราเตอร์ต้องทำการแบ่งแพ็กเก็ตจนขนาดเล็กลงตาม MTU ทำให้เสียเวลา",
+      "เราเตอร์ต้องทำการเข้ารหัสซ้ำ",
+      "เราเตอร์ต้องรวมแพ็กเก็ตทุกตัวกลับมาก่อนจะส่งต่อ",
+      "เราเตอร์ต้องส่ง ACK กลับเสมอ"
+    ],
+    "answer": 0,
+    "explanation": "Fragmentation คือหน้าที่เราเตอร์ในการแบ่ง Datagram ให้เล็กลงตาม MTU ของ Link ถัดไป ซึ่งเพิ่มภาระในการคำนวณและปรับค่าใน Header"
+  },
+  {
+    "question": "ICMPv4 Packet Type 8 คือคำสั่งใด?",
+    "options": [
+      "Destination Unreachable",
+      "Time Exceeded",
+      "Echo Reply",
+      "Echo Request"
+    ],
+    "answer": 3,
+    "explanation": "ICMP Type 8 คือ Echo Request ที่ใช้โดยคำสั่ง PING เพื่อสอบถามว่า Host ปลายทางพร้อมตอบสนองหรือไม่"
+  },
+  {
+    "question": "ICMPv4 Packet Type 0 คือคำสั่งใด?",
+    "options": [
+      "Echo Reply",
+      "Echo Request",
+      "Time Exceeded",
+      "Redirect"
+    ],
+    "answer": 0,
+    "explanation": "ICMP Type 0 คือ Echo Reply เป็นการตอบกลับให้ Echo Request (Type 8) เพื่อยืนยันว่า Host ปลายทางยังอยู่"
+  },
+  {
+    "question": "Anycast Address ใน IPv6 มีลักษณะอย่างไร?",
+    "options": [
+      "Address ที่ใช้ระบุตัวอุปกรณ์เฉพาะตัว",
+      "Address ที่ส่งข้อมูลไปยังทุกโหนดในเครือข่าย",
+      "Address ที่ส่งข้อมูลไปยังโหนดใดโหนดหนึ่งในกลุ่มที่ใกล้หรือเหมาะสมที่สุด",
+      "Address ที่จำกัดการส่งเฉพาะระบบปฏิบัติการ Windows"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 Anycast Address คือที่อยู่ที่สามารถกำหนดกลุ่มโหนดไว้ และจะส่งข้อมูลไปยังโหนด 'ใดโหนดหนึ่ง' ที่ดีที่สุดหรือใกล้ที่สุดในกลุ่ม"
+  },
+  {
+    "question": "ข้อใดเกี่ยวกับ IPv6 Traffic Class?",
+    "options": [
+      "ระบุ MAC Address ของผู้ส่ง",
+      "ระบุว่าใช้ QoS หรือ Priority แบบใดในเครือข่าย",
+      "ใช้แทน Packet Length",
+      "กำหนดจำนวน Router ที่ Packet ผ่านได้"
+    ],
+    "answer": 1,
+    "explanation": "Traffic Class ใน IPv6 ใช้ระบุ QoS หรือ Priority ของ Packet ช่วยให้ Router ตัดสินใจได้ว่าควรจัดการทราฟฟิกอย่างไร"
+  },
+  {
+    "question": "IPv6 มีความสามารถในการทำ Fragmentation ที่จุดใด?",
+    "options": [
+      "Router ทุกตัวมีสิทธิ์ Fragment ได้",
+      "เฉพาะ End Host (ต้นทาง) เท่านั้น",
+      "Switch ระดับ 2 สามารถ Fragment ได้",
+      "ไม่มีการ Fragment เลยใน IPv6"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 ย้ายหน้าที่ Fragmentation ไปยัง End Host เท่านั้น โดยใช้ Extension Header ชื่อ Fragment Header Router จึงไม่ต้อง Fragment ช่วย"
+  },
+  {
+    "question": "Dual Stack host คืออะไร?",
+    "options": [
+      "โฮสต์ที่มี CPU 2 ตัว",
+      "โฮสต์ที่รัน TCP สองเวอร์ชัน",
+      "โฮสต์ที่รองรับทั้ง IPv4 และ IPv6",
+      "โฮสต์ที่มี Network Card 2 ใบ"
+    ],
+    "answer": 2,
+    "explanation": "Dual Stack host หมายถึงโฮสต์ที่สามารถรับส่งข้อมูลได้ทั้ง IPv4 และ IPv6 พร้อมกัน"
+  },
+  {
+    "question": "Tunneling ระหว่าง IPv4 และ IPv6 มีหลักการใดเป็นหัวใจ?",
+    "options": [
+      "ใช้โปรโตคอลอื่นเพื่อเชื่อมต่อ",
+      "Encapsulate แพ็กเก็ต IPv6 ใน IPv4 (หรือกลับกัน) เพื่อให้ผ่านเครือข่ายที่ไม่รองรับได้",
+      "สร้าง VLAN และกำหนด IP ซ้อนกัน",
+      "ปิด QoS ทั้งหมด"
+    ],
+    "answer": 1,
+    "explanation": "Tunneling ระหว่าง IPv4-IPv6 คือการเอา IPv6 Packet ไปห่อใน IPv4 Header แล้วส่งผ่านเครือข่ายที่รองรับแค่ IPv4"
+  },
+  {
+    "question": "ICMPv6 มีความสามารถใดที่ต่างจาก ICMPv4?",
+    "options": [
+      "Neighbor Discovery (แทน ARP) และ Router Solicitation/Advertisement",
+      "ไม่สามารถส่ง Error Message ได้",
+      "เป็นโปรโตคอลเดียวกับ TCP",
+      "ใช้งานได้เฉพาะในเครือข่าย Wi-Fi"
+    ],
+    "answer": 0,
+    "explanation": "ICMPv6 รวมฟังก์ชันของ ARP, IGMP, ICMPv4 ไว้ด้วย เช่น Neighbor Discovery, Router Solicitation/Advertisement"
+  },
+  {
+    "question": "ข้อใดกล่าวถึง IPv4 และ IPv6 ได้ถูกต้อง?",
+    "options": [
+      "IPv4 มีขนาด 128 บิต ส่วน IPv6 มีขนาด 32 บิต",
+      "IPv6 ไม่มีการใช้ Routing Table",
+      "IPv6 มีการออกแบบ Header ให้เรียบง่ายกว่าและมี Extension Header แยกต่างหาก",
+      "IPv4 รองรับ Multicast เท่านั้น"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 มี Header หลักที่เรียบง่ายกว่า IPv4 และใช้ Extension Header สำหรับฟังก์ชันเสริม เช่น Routing, Fragmentation, Security เป็นต้น"
+  },
+  {
+    "question": "การใช้ ARP ใน IPv6 แทนด้วยโปรโตคอลใด?",
+    "options": [
+      "DHCPv6",
+      "RARP",
+      "Neighbor Discovery Protocol (NDP)",
+      "ICMPv4"
+    ],
+    "answer": 2,
+    "explanation": "ใน IPv6 ไม่มี ARP แต่ใช้ Neighbor Discovery Protocol (ซึ่งเป็นส่วนหนึ่งของ ICMPv6) เพื่อตรวจสอบและจับคู่ระหว่าง IP กับ MAC Address"
+  },
+  {
+    "question": "Router Solicitation (RS) และ Router Advertisement (RA) ใน IPv6 อยู่ในโปรโตคอลใด?",
+    "options": [
+      "ICMPv6",
+      "DHCPv6",
+      "TCPv6",
+      "Application Layer"
+    ],
+    "answer": 0,
+    "explanation": "Router Solicitation (RS) และ Router Advertisement (RA) เป็นข้อความใน ICMPv6 ที่ใช้ประกาศข้อมูล Router และ Prefix ให้โฮสต์ในเครือข่าย"
+  },
+  {
+    "question": "ICMPv6 Type ไหนที่ใช้สำหรับ Neighbor Solicitation?",
+    "options": [
+      "Type 1",
+      "Type 133",
+      "Type 135",
+      "Type 137"
+    ],
+    "answer": 2,
+    "explanation": "ICMPv6 Type 135 คือ Neighbor Solicitation ใช้สอบถามหรือเรียนรู้ MAC Address ของเพื่อนบ้านใน LAN"
+  },
+  {
+    "question": "ICMPv6 ใช้เงื่อนไขใดในการบอก Time Exceeded?",
+    "options": [
+      "Hop Limit ใน IPv6 Header หมด",
+      "เพราะ QoS ถูกเปิดใช้",
+      "ไม่มีเงื่อนไขเช่นนี้ใน IPv6",
+      "Data Link Layer ส่งสัญญาณขัดข้อง"
+    ],
+    "answer": 0,
+    "explanation": "ICMPv6 Time Exceeded เกิดเมื่อ Hop Limit ใน IPv6 Header นับถึงศูนย์ระหว่างผ่าน Router"
+  },
+  {
+    "question": "IPv6 เน้นระบบ Auto-configuration ด้วยวิธีใด?",
+    "options": [
+      "SLAAC (Stateless Address Auto-configuration)",
+      "DNS-based IP Assignment",
+      "IPv4-compatible Address",
+      "Manual Editing"
+    ],
+    "answer": 0,
+    "explanation": "IPv6 มี SLAAC (Stateless Address Auto-configuration) เพื่อให้ Host สร้าง IPv6 Address เองได้จาก Prefix ที่ Router ประกาศ"
+  },
+  {
+    "question": "Header Translation ในการเปลี่ยนจาก IPv6 เป็น IPv4 ใช้กรณีใด?",
+    "options": [
+      "เมื่อเครือข่ายต้นทางกับปลายทางเป็น Dual Stack ทั้งคู่",
+      "เมื่อไม่สามารถใช้ Tunneling ได้และปลายทางไม่รองรับ IPv6",
+      "เมื่อต้องการเก็บค่าดั้งเดิมของ IPv4 Address",
+      "ไม่มีการใช้งานจริง"
+    ],
+    "answer": 1,
+    "explanation": "Header Translation จะใช้เมื่อต้นทางเป็น IPv6 แต่ปลายทางรองรับเพียง IPv4 การ Tunneling ทำไม่ได้หากปลายทางไม่เข้าใจ IPv6 เลย จึงต้องแปลง Header ให้เป็น IPv4"
+  },
+  {
+    "question": "Throughput ของเส้นทางถูกกำหนดด้วยค่าใดเป็นหลัก?",
+    "options": [
+      "Maximum Transmission Rate ของลิงก์ทุกลิงก์เรียงต่อกัน โดยเอาค่าเฉลี่ย",
+      "ค่าต่ำสุดของ Transmission Rate ในแต่ละลิงก์บนเส้นทาง",
+      "ความเร็วของ CPU ในโฮสต์ต้นทาง",
+      "จำนวน Hop ที่น้อยที่สุด"
+    ],
+    "answer": 1,
+    "explanation": "Throughput ของเครือข่ายตามเส้นทางจะถูกกำหนดโดยลิงก์ที่ช้าที่สุดในเส้นทาง (bottleneck link)"
+  },
+  {
+    "question": "Delay รวมในเครือข่ายพิจารณาจาก Delay ใดบ้าง?",
+    "options": [
+      "Transmission + Propagation + Processing + Queuing",
+      "Propagation อย่างเดียว",
+      "Processing อย่างเดียว",
+      "Delay จาก OS เท่านั้น"
+    ],
+    "answer": 0,
+    "explanation": "Delay ในเครือข่ายส่วนใหญ่เกิดจาก 4 ส่วนสำคัญคือ Transmission, Propagation, Processing, และ Queuing"
+  },
+  {
+    "question": "ICMP Type 5 (Redirect) ใน IPv4 มีประโยชน์อย่างไร?",
+    "options": [
+      "แจ้งโฮสต์ว่า Router ที่ใช้ไม่ใช่เส้นทางที่ดีที่สุด",
+      "ยืนยันว่าโฮสต์ยัง Online",
+      "ใช้งานแทน DHCP ในการแจก IP",
+      "ใช้ Fragment ข้อมูล"
+    ],
+    "answer": 0,
+    "explanation": "ICMP Redirect (Type 5) แจ้งโฮสต์ว่าควรส่ง Packet ไปยัง Router อื่นที่เหมาะสมกว่าเพื่อประสิทธิภาพ"
+  },
+  {
+    "question": "DHCP ทำงานใน Layer ใด?",
+    "options": [
+      "Application Layer",
+      "Network Layer",
+      "Transport Layer",
+      "Physical Layer"
+    ],
+    "answer": 0,
+    "explanation": "DHCP เป็นโปรโตคอลที่ทำงานใน Application Layer เพื่อแจกจ่าย IP Address ให้โฮสต์"
+  },
+  {
+    "question": "ข้อใดไม่ใช่หน้าที่ของ Network Layer?",
+    "options": [
+      "Routing",
+      "Encapsulation (Packetizing)",
+      "Flow Control ระหว่างต้นทางและปลายทางในระดับเซสชัน",
+      "Error Control เฉพาะในส่วน header"
+    ],
+    "answer": 2,
+    "explanation": "Flow Control ระดับเซสชันหรือ end-to-end detail เป็นหน้าที่ของ Transport Layer ไม่ใช่ Network Layer"
+  },
+  {
+    "question": "ในการ Subnet หากกำหนด Prefix Length ส่วนรวมคือ /24 แล้วต้องการ Subnet 4 ส่วนเท่า ๆ กัน จะต้องปรับเป็น Prefix ใด?",
+    "options": [
+      "/25",
+      "/26",
+      "/27",
+      "/28"
+    ],
+    "answer": 1,
+    "explanation": "ถ้า /24 แล้วแบ่งเป็น 4 Subnet แต่ละ Subnet จะต้องเพิ่ม 2 บิตให้ Network ⇒ /24 + 2 = /26"
+  },
+  {
+    "question": "Header Checksum ใน IPv6 ถูกตัดออกไปเพราะเหตุผลใด?",
+    "options": [
+      "IPv6 ต้องการลดการคำนวณของ Router",
+      "IPv6 ไม่สนใจความถูกต้องของข้อมูล",
+      "IPv6 ทิ้งการทำ Error Control ทั้งหมด",
+      "IPv6 ใช้ Layer 2 ในการจัดการทั้งหมด"
+    ],
+    "answer": 0,
+    "explanation": "IPv6 ต้องการลด Overhead ในการ Forwarding จึงตัด Header Checksum ออก และอาศัยการตรวจสอบจาก Layer อื่นแทน"
+  },
+  {
+    "question": "ค่า Hop Limit ใน IPv6 มีหลักการเหมือนค่าใดใน IPv4?",
+    "options": [
+      "Identification",
+      "Protocol",
+      "Flags",
+      "TTL (Time to Live)"
+    ],
+    "answer": 3,
+    "explanation": "Hop Limit ใน IPv6 ทำงานเหมือน TTL ใน IPv4 คือจะลดลงทุกครั้งที่ผ่าน Router เพื่อตรวจจับ looping"
+  },
+  {
+    "question": "ส่วนประกอบของ IPv6 Global Unicast Address ที่ใช้สำหรับแบ่งเครือข่ายภายในองค์กรคืออะไร?",
+    "options": [
+      "Global Routing Prefix",
+      "Subnet ID",
+      "Interface ID",
+      "Extension Header"
+    ],
+    "answer": 1,
+    "explanation": "Subnet ID ใน Global Unicast Address คือส่วนที่องค์กรสามารถใช้แบ่งย่อยเครือข่ายภายในได้"
+  },
+  {
+    "question": "Prefix Length /64 ใน IPv6 Global Unicast Address หมายความว่าอย่างไร?",
+    "options": [
+      "64 บิตแรกสำหรับ Interface ID",
+      "64 บิตสุดท้ายเป็น Global Routing Prefix",
+      "Subnet ID มีขนาด 64 บิต",
+      "64 บิตแรกสำหรับ Network (รวม Global Routing Prefix + Subnet) และ 64 บิตหลังสำหรับ Interface ID"
+    ],
+    "answer": 3,
+    "explanation": "IPv6 Global Unicast /64 หมายถึง Network Part 64 บิต (Global Routing Prefix + Subnet ID) และ Interface ID อีก 64 บิต"
+  },
+  {
+    "question": "อะไรคือประโยชน์ของการไม่มี Broadcast Address ใน IPv6?",
+    "options": [
+      "ลดการส่งข้อมูลที่ไม่จำเป็น ช่วยลด Traffic ที่เป็น Broadcast ทิ้งไป",
+      "ใช้ MAC Address ได้ยาวขึ้น",
+      "ไม่ต้องทำการประกาศ ARP",
+      "IPv6 ไม่รองรับการ Multicast"
+    ],
+    "answer": 0,
+    "explanation": "IPv6 ตัด Broadcast ออกเพื่อไม่ให้มี Traffic แบบฉีกรวมทั่วเครือข่าย แต่ใช้ Multicast หรือ Anycast แทน ซึ่งลด Traffic ที่ไม่จำเป็น"
+  },
+  {
+    "question": "ข้อใดเป็นปัจจัยหนึ่งที่ทำให้ IPv6 มี Security ดีขึ้น?",
+    "options": [
+      "มี DHCPv6 แทน DHCPv4",
+      "บังคับใช้ IPSec โดยเป็นส่วนหนึ่งของมาตรฐาน",
+      "ค่า Prefix Length มากถึง /48 เสมอ",
+      "ต้องใช้ WPA2 ในการเข้ารหัส"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 รวม IPSec เป็นมาตรฐานช่วยให้มีโอกาสนำไปใช้ด้านความปลอดภัย (Authentication, Encryption) ได้มากขึ้น"
+  },
+  {
+    "question": "ในการเลือก Forwarding แบบ Label Switching (เช่น MPLS) มีข้อดีอย่างไร?",
+    "options": [
+      "Router ไม่จำเป็นต้องมีตาราง Routing",
+      "Lookup เร็วกว่าเพราะใช้ Label เป็น Index ในการค้นหา",
+      "ไม่ต้องใช้ L2 Switch",
+      "สามารถข้ามการตรวจสอบ CRC ได้"
+    ],
+    "answer": 1,
+    "explanation": "Label Switching ช่วยให้การค้นหาเส้นทางทำได้อย่างรวดเร็ว เพราะเป็นการอ้างอิงตารางด้วย Label เป็น index ไม่ต้องเทียบ Prefix bit ต่อ bit"
+  },
+  {
+    "question": "ข้อใดถูกต้องเกี่ยวกับ Mobile IP ‘Care-of Address’?",
+    "options": [
+      "เป็น Address ที่กำหนดให้เฉพาะใน Home Network",
+      "เป็น Address ชั่วคราวใน Foreign Network",
+      "คือ MAC Address ของ Home Agent",
+      "เป็น Address สำหรับ Multicast เท่านั้น"
+    ],
+    "answer": 1,
+    "explanation": "Care-of Address เป็นที่อยู่ชั่วคราวที่ Mobile Host ได้จาก Foreign Agent หรือ DHCP ของเครือข่ายที่ไปเยือน"
+  },
+  {
+    "question": "ICANN อนุมัติ Block Address ขนาดใหญ่ให้ ISP แล้ว ISP แบ่งย่อยให้ลูกค้า เรียกว่าอะไร?",
+    "options": [
+      "Address Aggregation",
+      "Subnetting แบบคงที่",
+      "MPLS Encapsulation",
+      "DHCP Relay"
+    ],
+    "answer": 0,
+    "explanation": "การที่ ICANN แจก Block ใหญ่ให้ ISP แล้ว ISP แบ่งต่อ เรียกว่า Address Aggregation (หรือ Route Summarization) ลดจำนวน Route ใน Core"
+  },
+  {
+    "question": "ข้อใดคือสาเหตุหลักที่ IPv6 สามารถมีที่อยู่จำนวนมากกว่า IPv4?",
+    "options": [
+      "ใช้เทคนิค Datagram Approach",
+      "ใช้ Address ยาวถึง 128 บิต",
+      "ใช้ Label Switching",
+      "เป็นโปรโตคอล Connection-oriented"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 มี 128 บิตใน Address Space ทำให้มีจำนวนที่อยู่ (2^128) มากกว่าของ IPv4 (2^32) หลายเท่า"
+  },
+  {
+    "question": "ICMPv4 Type 11 (Time Exceeded) ใช้บอกเหตุการณ์ใด?",
+    "options": [
+      "Checksum ผิดพลาด",
+      "TTL หมดอายุระหว่างทาง",
+      "Destination Port Unreachable",
+      "งานประมวลผล CPU มากเกิน"
+    ],
+    "answer": 1,
+    "explanation": "ICMPv4 Type 11 คือ Time Exceeded ใช้แจ้งว่าค่า TTL ใน IP Header หมดก่อนถึงปลายทาง"
+  },
+  {
+    "question": "ในการใช้ IPv6 หาก Router ในเครือข่ายต้องการประกาศ Prefix ให้ Host อัตโนมัติ ควรใช้กลไกใด?",
+    "options": [
+      "ARP Request",
+      "DHCP Relay",
+      "Router Advertisement (RA)",
+      "ICMPv4 Destination Unreachable"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 Router จะใช้ Router Advertisement (RA) (ICMPv6) เพื่อประกาศ Prefix สำหรับ SLAAC ให้ Host สร้าง IP เอง"
+  },
+  {
+    "question": "เนื่องจาก IPv6 ไม่รองรับ ARP ดังนั้นการหา MAC Address ของเพื่อนบ้านใช้วิธีใด?",
+    "options": [
+      "DHCPv6 Snooping",
+      "ICMPv6 Neighbor Solicitation/Advertisement",
+      "IPv6 จะสุ่ม MAC Address ขึ้นมาเอง",
+      "ใช้ MPLS VPN"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 ใช้ Neighbor Solicitation/Advertisement (ICMPv6) เพื่อสอบถามและเรียนรู้ MAC Address แทนที่ ARP ของ IPv4"
+  },
+  {
+    "question": "Fragmentation ใน IPv6 มีการจัดเก็บอยู่ใน Extension Header ใด?",
+    "options": [
+      "Destination Options Header",
+      "Routing Header",
+      "Fragment Header",
+      "Hop-by-Hop Options Header"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 แยก Fragmentation ออกไปอยู่ใน Fragment Header ซึ่งจะถูกใช้เฉพาะเมื่อจำเป็นโดย Host ต้นทาง"
+  },
+  {
+    "question": "ข้อใดเป็นขั้นตอนแรกของ Mobile IP เมื่อโฮสต์ย้ายไปยังเครือข่ายใหม่?",
+    "options": [
+      "Flow Control ไปยัง Foreign Agent",
+      "Home Agent ประกาศ ICMP Redirect",
+      "Agent Discovery (โฮสต์ค้นหา Foreign Agent)",
+      "Encapsulate Datagram ทันที"
+    ],
+    "answer": 2,
+    "explanation": "ขั้นตอนแรกของ Mobile IP คือ Agent Discovery เพื่อค้นหา Address ของ Foreign Agent และตั้งค่าการเชื่อมต่อ"
+  },
+  {
+    "question": "ICMPv4 Error-reporting ทำงานอย่างไร?",
+    "options": [
+      "ICMPv4 จะแก้ไข Packet ให้ถูกต้องแทนเราเตอร์",
+      "ICMPv4 แจ้งข้อผิดพลาดกลับไปยังโฮสต์ต้นทาง",
+      "ICMPv4 ส่ง Packet ซ้ำเอง",
+      "ICMPv4 รวม Packet หลาย ๆ Packet เข้าด้วยกัน"
+    ],
+    "answer": 1,
+    "explanation": "ICMPv4 สำหรับ Error-reporting จะส่งข้อความถึงโฮสต์ต้นทางเพื่อแจ้งว่าเกิดข้อผิดพลาดอะไร เช่น Destination Unreachable, Time Exceeded"
+  },
+  {
+    "question": "ข้อใดไม่ใช่การวัด Performance ในระดับ Network Layer?",
+    "options": [
+      "Delay",
+      "Throughput",
+      "Packet Loss",
+      "Encryption Time"
+    ],
+    "answer": 3,
+    "explanation": "Encryption Time ไม่ใช่ตัวชี้วัด Performance หลักใน Network Layer ส่วน Delay, Throughput และ Packet Loss เป็นตัวชี้วัดหลัก"
+  }
+]

@@ -1,0 +1,283 @@
+[
+  {
+    "question": "7. ข้อใดคือข้อเสียของ Standard Ethernet?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ขนาดของข้อมูลไม่แน่นอน",
+        "istrue": false
+      },
+      {
+        "statement": "มีความล่าช้าในการส่งข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลมีการสูญหายได้",
+        "istrue": true
+      }
+    ],
+    "explanation": "ข้อเสียหลักประการหนึ่งของ Standard Ethernet เมื่อใช้งานจำนวนมากหรือมีการชนกัน (collision) อาจทำให้ข้อมูลบางส่วนสูญหายได้ และผู้ส่งต้องทำการส่งซ้ำ"
+  },
+  {
+    "question": "8. ใน Ethernet frame format มี address field ท่านจงอธิบายข้อมูลใน field นี้",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "ข้อมูลเป็น MAC address โดย destination address คือ address ของอุปกรณ์เชื่อมต่อระหว่างเครือข่าย (Bridge/Router)",
+        "istrue": false
+      },
+      {
+        "statement": "ข้อมูลเป็น MAC address โดย destination address คือ address ของอุปกรณ์ปลายทางที่ต้องการข้อมูล",
+        "istrue": true
+      },
+      {
+        "statement": "ข้อมูลเป็น IP address โดย destination address คือ address ของอุปกรณ์ปลายทางที่ต้องการข้อมูล",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ethernet frame กำหนด field Address เป็น MAC Address ทั้งของผู้ส่ง (Source) และผู้รับ (Destination) โดย Destination Address ระบุอุปกรณ์ปลายทางที่ต้องการรับข้อมูลจริง ๆ ในระดับลิงก์เลเยอร์"
+  },
+  {
+    "question": "9. ขนาดของข้อมูลที่รับจาก Network Layer (Payload) ใน Ethernet สามารถมีขนาดเท่าไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "60 – 1514 ไบต์",
+        "istrue": false
+      },
+      {
+        "statement": "64 – 1518 ไบต์",
+        "istrue": false
+      },
+      {
+        "statement": "46 – 1500 ไบต์",
+        "istrue": true
+      }
+    ],
+    "explanation": "ใน Ethernet Frame (มาตรฐาน Ethernet II) ส่วนข้อมูล (Payload) จะมีขนาดขั้นต่ำ 46 ไบต์และไม่เกิน 1500 ไบต์ หากข้อมูลจริงสั้นเกิน 46 ไบต์ ต้องมีการเติม Pad ให้ได้ 46 ไบต์ ส่วน 1500 ไบต์คือขนาดสูงสุดตามมาตรฐาน"
+  },
+  {
+    "question": "10. Fast Ethernet มีอัตราการส่งข้อมูลเท่าไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "100 Mbps",
+        "istrue": true
+      },
+      {
+        "statement": "10 Mbps",
+        "istrue": false
+      }
+    ],
+    "explanation": "Fast Ethernet เป็นอีเทอร์เน็ตที่เพิ่มความเร็วจาก 10 Mbps (Standard Ethernet) เป็น 100 Mbps เช่น 100BASE-TX, 100BASE-FX"
+  },
+  {
+    "question": "11. ขนาดของ address ใน Fast Ethernet มีขนาดเท่าไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "48 bits address",
+        "istrue": true
+      },
+      {
+        "statement": "64 bits address",
+        "istrue": false
+      },
+      {
+        "statement": "46 bits address",
+        "istrue": false
+      }
+    ],
+    "explanation": "Fast Ethernet และ Ethernet รุ่นอื่น ๆ ต่างก็ยังคงใช้ MAC Address 48 บิต (6 ไบต์) ในระดับ Data Link Layer"
+  },
+  {
+    "question": "12. การเข้ารหัสของ Standard Ethernet คือวิธีใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "PCM",
+        "istrue": false
+      },
+      {
+        "statement": "Block encoding",
+        "istrue": false
+      },
+      {
+        "statement": "Line encoding",
+        "istrue": true
+      }
+    ],
+    "explanation": "Standard Ethernet (10 Mbps) ส่วนใหญ่ใช้ Manchester encoding ซึ่งเป็นชนิดหนึ่งของ line encoding เพื่อแปลงบิตดิจิทัลให้เป็นสัญญาณไฟฟ้า"
+  },
+  {
+    "question": "13. การเข้ารหัสของ Fast Ethernet คือวิธีใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Block encoding",
+        "istrue": false
+      },
+      {
+        "statement": "Line encoding",
+        "istrue": false
+      },
+      {
+        "statement": "Block encoding + Manchester",
+        "istrue": true
+      }
+    ],
+    "explanation": "Fast Ethernet (100BASE-TX) ใช้วิธีการเข้ารหัสแบบ 4B5B หรือบางแหล่งจะอธิบายว่าเป็น Block encoding ร่วมกับ MLT-3 (ซึ่งเป็น line encoding) หรืออาจเทียบได้กับ Manchester ในบริบทหนึ่ง ทั้งนี้ โครงสร้างจริงคือ block encoding + line encoding"
+  },
+  {
+    "question": "14. Autonegotiation เป็นกลไกที่มีอยู่ใน Ethernet ชนิดใดบ้าง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Standard Ethernet",
+        "istrue": false
+      },
+      {
+        "statement": "Fast Ethernet + Standard Ethernet",
+        "istrue": false
+      },
+      {
+        "statement": "Fast Ethernet + Gigabit Ethernet",
+        "istrue": true
+      }
+    ],
+    "explanation": "Autonegotiation เริ่มปรากฏใน Fast Ethernet (100 Mbps) เพื่อให้เชื่อมต่อกันที่ความเร็วและโหมดเหมาะสม และยังใช้ใน Gigabit Ethernet ด้วย"
+  },
+  {
+    "question": "16. การสื่อสารไร้สายที่มีเพียง Basic Service Set (BSS) ไม่มี Access Point เรียกว่าอะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Ad hoc BSS",
+        "istrue": true
+      },
+      {
+        "statement": "Direct BSS",
+        "istrue": false
+      },
+      {
+        "statement": "Connection-oriented BSS",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ad hoc BSS คือโหมดที่สถานี (stations) ทุกตัวเชื่อมต่อกันเองโดยตรง (peer-to-peer) โดยไม่มี access point ทำหน้าที่เป็นศูนย์กลาง"
+  },
+  {
+    "question": "17. เครือข่ายที่มี BSS และ AP เรียกว่าเครือข่ายชนิดใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Mitigate BSS",
+        "istrue": false
+      },
+      {
+        "statement": "Intermediate BSS",
+        "istrue": false
+      },
+      {
+        "statement": "Infrastructure BSS",
+        "istrue": true
+      }
+    ],
+    "explanation": "ใน Infrastructure BSS จะมี Access Point (AP) เป็นตัวกลางให้ทุก station เชื่อมต่อผ่าน AP เพื่อสื่อสารกัน"
+  },
+  {
+    "question": "18. Station ในระบบไร้สายมีกี่ประเภท และมีอะไรบ้าง?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "2 ประเภท คือ BSS-transition, ESS-transition mobility",
+        "istrue": false
+      },
+      {
+        "statement": "2 ประเภท คือ fixed station, mobile station",
+        "istrue": false
+      },
+      {
+        "statement": "3 ประเภท คือ no-transition, BSS-transition, ESS-transition mobility",
+        "istrue": true
+      }
+    ],
+    "explanation": "มาตรฐาน IEEE 802.11 นิยามรูปแบบ mobility ของสถานีเป็น 3 แบบ: (1) no-transition (เคลื่อนที่ใน BSS เดิม), (2) BSS-transition, (3) ESS-transition"
+  },
+  {
+    "question": "19. Hidden Station Problem หมายถึงอะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "กรณีที่ station 2 ตัวไม่สามารถรับรู้ได้ว่ามี station ที่ 3 อยู่ในขอบเขตการเชื่อมต่อของ station ใดตัวหนึ่ง",
+        "istrue": false
+      },
+      {
+        "statement": "กรณีที่ station 2 ตัวไม่รับรู้เลยว่ามี station ที่ 3 อยู่ในขอบเขตการเชื่อมต่อของทั้งสองตัว",
+        "istrue": false
+      },
+      {
+        "statement": "กรณีที่ station 2 ตัวรับรู้ว่ามี station ที่ 3 อยู่ แต่ไม่สามารถเชื่อมต่อได้",
+        "istrue": true
+      }
+    ],
+    "explanation": "Hidden Station Problem คือสถานการณ์ที่สถานี A และ B ไม่เห็นกัน แต่ทั้งสองเชื่อมต่อกับ AP หรือปลายทางอื่นคนละมุม พวกเขาอาจส่งสัญญาณชนกันโดยไม่รู้ตัว ทำให้เกิด collision"
+  },
+  {
+    "question": "24. ความหมายของ 64B/66B คืออะไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "Block coding ที่ input ขนาด 64 bits แปลงเป็น output ขนาด 66 bits",
+        "istrue": true
+      },
+      {
+        "statement": "Block coding ที่ input ขนาด 64 bytes แปลงเป็น output ขนาด 66 bytes",
+        "istrue": false
+      },
+      {
+        "statement": "Block coding ที่ input ขนาด 66 bytes แปลงเป็น output ขนาด 64 bytes",
+        "istrue": false
+      }
+    ],
+    "explanation": "64B/66B เป็นเทคนิคการเข้ารหัส (block coding) ใน Gigabit Ethernet และ 10 Gigabit Ethernet ซึ่งจะแทรก 2 บิตพิเศษทุก ๆ 64 บิต เพื่อช่วยในกระบวนการซิงโครไนซ์และตรวจจับข้อผิดพลาดบางส่วน"
+  },
+  {
+    "question": "25. ต้นฉบับที่ส่งข้อมูลคือ 0110 1101 1100 1010 ปลายทางได้รับข้อมูล 0111 1001 0100 1010 จำนวน Burst error มีค่าเท่าไร?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "6",
+        "istrue": true
+      },
+      {
+        "statement": "4",
+        "istrue": false
+      },
+      {
+        "statement": "2",
+        "istrue": false
+      }
+    ],
+    "explanation": "Burst error คือช่วงที่บิตผิดพลาดเกิดติดกันเป็นกลุ่ม เมื่อเปรียบเทียบ 0110 1101 1100 1010 กับ 0111 1001 0100 1010 พบว่าผิดตรงตำแหน่งที่ต่อเนื่องกันจำนวน 6 บิต"
+  },
+  {
+    "question": "26. การหารค่าบิตเพื่อหาเศษของ CRC จะต้องหารด้วยค่าบิตที่มีคุณสมบัติใด?",
+    "type": "multiple-choice",
+    "options": [
+      {
+        "statement": "บิตซ้ายสุดและบิตขวาสุดมีค่าเป็น 0 เสมอ",
+        "istrue": false
+      },
+      {
+        "statement": "บิตซ้ายสุดและบิตขวาสุดมีค่าเป็น 1 เสมอ",
+        "istrue": true
+      },
+      {
+        "statement": "บิตซ้ายสุดมีค่าเป็น 0 เสมอ และบิตขวาสุดมีค่าเป็น 1 เสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "Generator Polynomial ที่ใช้คำนวณ CRC จะต้องมีบิตซ้ายสุด (MSB) เป็น 1 และบิตขวาสุด (LSB) เป็น 1 เพื่อให้ตรวจจับข้อผิดพลาดในกรณีบิตสูญหายหรือลดจำนวนตำแหน่งได้ดี"
+  }
+]

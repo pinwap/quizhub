@@ -1,0 +1,835 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทค้าส่งต้องการพัฒนาระบบวิเคราะห์ยอดขายรายสัปดาห์ โดยทีมพบว่าการเพิ่มฟีเจอร์ใหม่ทำให้บางรายงานที่เคยแสดงข้อมูลถูกต้องกลับผิดพลาดทันทีหลัง deploy ทั้งที่ unit test ผ่านทั้งหมด ทีมสงสัยว่าเป็นผลจากความเชื่อมโยงระหว่างโมดูลหลายตัว ข้อใดอธิบายสาเหตุที่เป็นไปได้ที่สุด?",
+    "options": [
+      { "statement": "Unit test ไม่ครอบคลุม interaction ระหว่างโมดูล จึงต้องมี integration/regression test", "istrue": true },
+      { "statement": "Unit test ควรทดสอบระบบทั้งหมดพร้อมกัน", "istrue": false },
+      { "statement": "การ deploy ไม่ควรทำหลังเพิ่มฟีเจอร์", "istrue": false },
+      { "statement": "การเพิ่มฟีเจอร์ไม่เคยทำให้เกิดปัญหากับฟีเจอร์เก่า", "istrue": false }
+    ],
+    "explanation": "ปัญหาเกิดเพราะ interaction ระหว่างโมดูล ไม่ใช่จาก unit test"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีม Dev ต้อง deploy ระบบใหม่ให้ผู้ใช้กว่า 800 คน ข้อมูลยอดขายเป็นข้อมูลสำคัญมากและไม่สามารถเสียหายได้แม้เพียง 1 นาที ทีมต้องการทดสอบกระบวนการ deploy ก่อนจึงสร้าง environment ที่เหมือน production ทุกประการ ข้อใดคือกลยุทธ์ที่ใช้อยู่?",
+    "options": [
+      { "statement": "Staged deployment เพราะทดสอบการ deploy ใน environment ที่จำลองได้เหมือนจริง", "istrue": true },
+      { "statement": "Parallel testing เพราะให้ผู้ใช้ใช้สองระบบพร้อมกัน", "istrue": false },
+      { "statement": "Incremental deployment เพราะปล่อยฟีเจอร์ทีละชุด", "istrue": false },
+      { "statement": "Gradual cutover เพราะผู้ใช้สลับระบบทีละส่วน", "istrue": false }
+    ],
+    "explanation": "Staging ใช้ environment เสมือน production"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "นักวิเคราะห์ต้องการเปรียบเทียบผลผลิตของสองทีมที่ใช้ภาษาแตกต่างกัน ได้แก่ Go และ Python แต่พบว่าการใช้ LOC ให้ผลลัพธ์ผิดเพี้ยน ข้อใดเป็นปัญหาสำคัญที่สุดของ LOC ในกรณีนี้?",
+    "options": [
+      { "statement": "LOC ไม่สะท้อนความซับซ้อนเพราะแต่ละภาษาใช้โค้ดไม่เท่ากัน", "istrue": true },
+      { "statement": "LOC ใช้เปรียบเทียบได้เฉพาะภาษา Python เท่านั้น", "istrue": false },
+      { "statement": "ภาษา Go ต้องใช้ LOC มากกว่า Python เสมอ", "istrue": false },
+      { "statement": "LOC ใช้ไม่ได้กับทุกกรณีของงาน Software Engineering", "istrue": false }
+    ],
+    "explanation": "ภาษาแตกต่างกันจึงเปรียบเทียบ LOC ตรง ๆ ไม่ได้ ต้องใช้ FP"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทอัปเกรดระบบปฏิบัติการของ server ทำให้โมดูลอ่านข้อมูลล้มเหลว ทีมพบว่าสาเหตุเกิดจากการเปลี่ยน API บางตัว การบำรุงรักษาประเภทใดตรงที่สุด?",
+    "options": [
+      { "statement": "Adaptive maintenance เพราะ environment เปลี่ยน", "istrue": true },
+      { "statement": "Corrective maintenance เพราะเป็นบั๊กเดิมที่ยังไม่ได้แก้", "istrue": false },
+      { "statement": "Perfective maintenance เพราะต้องเพิ่มฟีเจอร์ใหม่", "istrue": false },
+      { "statement": "Preventive maintenance เพราะต้อง refactor โค้ดใหม่ทั้งหมด", "istrue": false }
+    ],
+    "explanation": "Adaptive = ปรับระบบให้เข้ากับ environment ใหม่"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "โครงการใหม่มีความต้องการชัดเจน ไม่มีการเปลี่ยน requirement คาดว่าจะเกิดขึ้น ทีมมีประสบการณ์สูง ผู้บริหารต้องการความคาดเดาได้ทั้งเวลาและค่าใช้จ่าย ควรใช้โมเดลใด?",
+    "options": [
+      { "statement": "Predictive Waterfall เพราะสถานการณ์เหมาะกับการวางแผนแบบล่วงหน้า", "istrue": true },
+      { "statement": "Agile Scrum เพราะทำงานเร็วกว่าเสมอ", "istrue": false },
+      { "statement": "RAD เพราะต้องการผลลัพธ์เร็วที่สุด", "istrue": false },
+      { "statement": "Spiral เพราะเน้นความเสี่ยงแม้ไม่มีความเสี่ยงสำคัญ", "istrue": false }
+    ],
+    "explanation": "Predictive เหมาะกับ requirement คงที่"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมต้องสร้างแอปที่มี prototype คุณภาพต่ำก่อนเพื่อแสดง flow การทำงานให้ผู้บริหาร และหลังจากนั้นค่อยพัฒนาคุณภาพระบบให้สูงขึ้นโดยไม่เพิ่มฟีเจอร์ใหม่ การเข้าหมวดใด?",
+    "options": [
+      { "statement": "Iterative เพราะปรับ fidelity ของระบบใน iteration ถัดไป", "istrue": true },
+      { "statement": "Incremental เพราะเพิ่มฟีเจอร์ใหม่ทุก iteration", "istrue": false },
+      { "statement": "Predictive เพราะเหมาะกับ prototype fidelity ต่ำ", "istrue": false },
+      { "statement": "Waterfall เพราะสามารถส่ง prototype ทุกระยะ", "istrue": false }
+    ],
+    "explanation": "Iterative = เพิ่มคุณภาพ (fidelity) โดยไม่เพิ่มฟีเจอร์"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมพัฒนาแสดง prototype ใหม่ให้ผู้บริหารดู แต่ผู้บริหารเข้าใจผิดว่าระบบใกล้เสร็จเพราะ UI ดูสมบูรณ์ ส่งผลให้ timeline ถูกกดดันอย่างมาก ข้อใดคือ 'ผลเสีย' ของ prototype?",
+    "options": [
+      { "statement": "Raised expectations เพราะลูกค้าเชื่อว่าระบบใกล้เสร็จแล้ว", "istrue": true },
+      { "statement": "Narrowing vision เพราะผู้ใช้สนใจแต่ feature ที่ทีมเสนอ", "istrue": false },
+      { "statement": "Better design เพราะผู้ใช้เข้าใจระบบมากขึ้น", "istrue": false },
+      { "statement": "Improved feedback เพราะผู้ใช้ให้ความคิดเห็นเร็วขึ้น", "istrue": false }
+    ],
+    "explanation": "Prototype มักทำให้ผู้บริหารเข้าใจผิดว่าระบบเสร็จแล้ว"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ผู้บริหารสั่งให้ทุกงานต้องทำ pair programming โดยไม่มีข้อยกเว้น ทำให้ทีมทำงานช้าลงอย่างมากและรู้สึกหมดกำลังใจ ข้อใดสะท้อนข้อเสียของ pair programming?",
+    "options": [
+      { "statement": "บางงานไม่คุ้มค่ากับการใช้คนสองคน เช่นงาน routine หรือ simple script", "istrue": true },
+      { "statement": "Pair programming ทำให้คุณภาพลดลง", "istrue": false },
+      { "statement": "Pair programming ทำให้ไม่พบข้อผิดพลาด", "istrue": false },
+      { "statement": "Pair programming ลด communication ภายในทีม", "istrue": false }
+    ],
+    "explanation": "บางงานไม่จำเป็นต้องใช้คนสองคน"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ในช่วงกลาง sprint Product Owner ต้องการเพิ่ม user story ที่ critical มาก แต่ทีมเห็นว่าการเพิ่มตอนนี้จะกระทบแผนทั้งหมด ข้อใดเป็นหลัก Scrum ที่ควรใช้ตัดสินใจ?",
+    "options": [
+      { "statement": "Sprint backlog ต้องไม่ถูกเปลี่ยนระหว่าง sprint โดยไม่มีเหตุสุดวิสัย", "istrue": true },
+      { "statement": "PO สามารถเพิ่มงานได้ตลอดเวลาโดยไม่จำกัด", "istrue": false },
+      { "statement": "Scrum master ต้องยอมทำตามคำสั่งผู้บริหาร", "istrue": false },
+      { "statement": "ควรเพิ่ม user story ทันทีเพราะเป็นงานสำคัญ", "istrue": false }
+    ],
+    "explanation": "Scrum ไม่ให้เปลี่ยน scope กลาง sprint"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีม Lean พบว่าข้อมูลลูกค้าส่วนใหญ่ยังไม่เสถียร ต้องทำ assumption เยอะมากหากพัฒนาใน iteration นี้ ข้อใดคือหลัก Lean ที่เกี่ยวข้อง?",
+    "options": [
+      { "statement": "Defer commitment – รอจนกว่าจะมีข้อมูลเพียงพอก่อนตัดสินใจ", "istrue": true },
+      { "statement": "Deliver fast – ทำทันทีโดยไม่ต้องคิดมาก", "istrue": false },
+      { "statement": "Eliminate waste – ทำก่อนเพื่อกันความเสี่ยงเรื่องเวลา", "istrue": false },
+      { "statement": "Build knowledge – พัฒนาหลัง deploy", "istrue": false }
+    ],
+    "explanation": "Lean ต้องเลื่อนงานเมื่อข้อมูลไม่พอ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีม Crystal ขนาดใหญ่และทีม Crystal Clear ขนาดเล็กต้องทำงานร่วมกัน แต่ใช้ process คนละแบบ ส่งผลให้ความเร็วไม่สัมพันธ์กัน ข้อใดเป็นหลักการ Crystal?",
+    "options": [
+      { "statement": "Crystal ปรับตาม team size และ criticality ทำให้ process ไม่จำเป็นต้องเหมือนกัน", "istrue": true },
+      { "statement": "Crystal บังคับให้ทุกทีมทำ process เดียวกัน", "istrue": false },
+      { "statement": "Crystal เน้นการรวมทีมขนาดใหญ่เท่านั้น", "istrue": false },
+      { "statement": "Crystal ต้องมี pair programming เสมอ", "istrue": false }
+    ],
+    "explanation": "Crystal ให้อิสระตามทีมและระดับความสำคัญ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ระบบวิเคราะห์ยอดขายเริ่มมี bug ซ้ำใน module เดิมหลายครั้งจนกลายเป็น bug swarm ทีมต้องตัดสินใจว่าจะ refactor หรือไม่ ข้อใดถูกต้องที่สุด?",
+    "options": [
+      { "statement": "ควรทำ cost-benefit analysis ก่อน เพราะ refactor module ที่เต็มไปด้วย bugs อาจเสี่ยงสูง", "istrue": true },
+      { "statement": "ควร refactor ทันทีเสมอเมื่อพบ bug มากกว่า 1 ตัว", "istrue": false },
+      { "statement": "ห้าม refactor หากระบบยังทำงานได้", "istrue": false },
+      { "statement": "ไม่ต้องวิเคราะห์ใด ๆ เพราะ bug swarm เป็นเรื่องปกติ", "istrue": false }
+    ],
+    "explanation": "Bug swarm ต้องวิเคราะห์ความคุ้มค่าก่อน refactor"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีม deploy ระบบใหม่แต่ลืมเตรียม rollback plan ทำให้ต้องปิดระบบนานกว่า 3 ชั่วโมงเพราะ revert ไม่ได้ ข้อใดเป็นข้อผิดพลาดหลักตามบท Deployment?",
+    "options": [
+      { "statement": "ไม่เตรียม rollback plan ซึ่งเป็นส่วนสำคัญของ deployment plan", "istrue": true },
+      { "statement": "ไม่ควรทำ staging environment", "istrue": false },
+      { "statement": "ควร deploy แบบ parallel เสมอ", "istrue": false },
+      { "statement": "ไม่ควรทดสอบในระบบจริงก่อน deploy", "istrue": false }
+    ],
+    "explanation": "Rollback คือหัวใจของ deployment plan"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมต้องวัดคุณภาพ release เพื่อดูว่าคุณภาพลดลงหรือดีขึ้นเมื่อเวลาผ่านไป ควรใช้ metric ประเภทใด?",
+    "options": [
+      { "statement": "Project metrics เช่น defect trend ใน release แต่ละเวอร์ชัน", "istrue": true },
+      { "statement": "Process metrics เช่น ชั่วโมง review ต่อ KLOC", "istrue": false },
+      { "statement": "LOC เพราะสะท้อนคุณภาพโค้ดโดยตรง", "istrue": false },
+      { "statement": "Story points เพราะใช้วัดคุณภาพได้ดีที่สุด", "istrue": false }
+    ],
+    "explanation": "Project metrics ใช้วัด output เช่น defect rate ของ release"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมพบว่าฟีเจอร์ใหม่ที่เพิ่มเข้ามาทำให้ระบบใช้เวลาโหลดนานขึ้นมาก แม้ฟีเจอร์นั้นเองไม่หนัก ทีมสงสัยว่าปัญหาเกิดจาก interaction ระหว่างโมดูล ควรทำ testing แบบใด?",
+    "options": [
+      { "statement": "System testing + performance testing", "istrue": true },
+      { "statement": "Unit testing เท่านั้น", "istrue": false },
+      { "statement": "Alpha testing เท่านั้น", "istrue": false },
+      { "statement": "Destructive testing", "istrue": false }
+    ],
+    "explanation": "ปัญหา performance ต้องดู interaction และ behavior ของระบบ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อทำ FP analysis พบว่า input/output เยอะมากแต่ internal file น้อย ข้อใดตีความได้ถูกต้องที่สุด?",
+    "options": [
+      { "statement": "ระบบมี data flow สูงแต่ data storage ต่ำ", "istrue": true },
+      { "statement": "ระบบมี complexity ต่ำเพราะ input เยอะเสมอหมายถึงง่าย", "istrue": false },
+      { "statement": "ระบบเก็บข้อมูลจำนวนมากแต่ไม่รับ input", "istrue": false },
+      { "statement": "FP ไม่สามารถวัดจำนวน input/output", "istrue": false }
+    ],
+    "explanation": "FP ประเมิน complexity จาก I/O และไฟล์ภายใน"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทต้องพัฒนาระบบแบบ iteration โดยแก้ requirement ในทุกรอบ ทีมมีประสบการณ์สูง แต่ต้องมี testing ทุกครั้งเพื่อให้ระบบไม่ regression โมเดลใดเหมาะสมที่สุด?",
+    "options": [
+      { "statement": "Unified Process เพราะรองรับ iterative และเน้น risk mitigation", "istrue": true },
+      { "statement": "Waterfall เพราะใช้ testing เฉพาะปลายทาง", "istrue": false },
+      { "statement": "Cleanroom เพราะไม่ใช้ testing ในระหว่างการพัฒนา", "istrue": false },
+      { "statement": "Sashimi เพราะใช้ iteration น้อยมาก", "istrue": false }
+    ],
+    "explanation": "UP รองรับการ iterate และ manage risk"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ระบบมีผู้ใช้จำนวนมากและต้อง deploy แบบไม่หยุดระบบ ทีมพิจารณาทำ cutover แบบ gradual ข้อใดเป็นข้อเสียของ gradual cutover?",
+    "options": [
+      { "statement": "ผู้ใช้บางส่วนจะใช้ระบบคนละเวอร์ชัน ทำให้ต้องแยก data หรือเขียน tool พิเศษ", "istrue": true },
+      { "statement": "ไม่สามารถใช้กับระบบใหญ่ได้เลย", "istrue": false },
+      { "statement": "ทำให้ผู้ใช้ไม่มีโอกาสทดสอบระบบก่อน", "istrue": false },
+      { "statement": "ไม่สามารถ rollback ได้", "istrue": false }
+    ],
+    "explanation": "Gradual = ต้องแยก group ผู้ใช้และจัดการ data mapping"
+  },
+
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมพัฒนาใช้ Spiral Model แต่ข้ามขั้นตอนการวิเคราะห์ความเสี่ยงในบางรอบเพราะต้องการความเร็ว ผลลัพธ์คือระบบล้มเหลวหลายครั้ง ข้อใดคือความผิดพลาดหลัก?",
+    "options": [
+      { "statement": "Spiral ต้องทำ risk analysis ทุก cycle เพราะเป็นหัวใจของโมเดล", "istrue": true },
+      { "statement": "Spiral ไม่จำเป็นต้องทำ prototype ทุกครั้ง", "istrue": false },
+      { "statement": "Spiral ไม่สามารถใช้กับโปรเจกต์ใหญ่", "istrue": false },
+      { "statement": "Spiral ต้องมี requirement ชัดเจน 100%", "istrue": false }
+    ],
+    "explanation": "Spiral = risk-driven model"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Application มีจำนวนฟีเจอร์มากขึ้นเรื่อย ๆ และทีมพบว่าฟีเจอร์เก่าหลายตัวแทบไม่มีใครใช้ แต่ยังต้อง maintain ตลอดเวลา ข้อใดเป็นกลยุทธ์ของ preventive maintenance?",
+    "options": [
+      { "statement": "Remove/retire feature ที่ไม่จำเป็น เพื่อลด complexity และค่าบำรุงรักษา", "istrue": true },
+      { "statement": "เพิ่ม documentation ให้มากที่สุดแม้ไม่จำเป็น", "istrue": false },
+      { "statement": "เพิ่มฟีเจอร์ใหม่ให้มากขึ้นเพื่อ balance", "istrue": false },
+      { "statement": "เลิกทำ testing เพื่อประหยัดเวลา", "istrue": false }
+    ],
+    "explanation": "Preventive เน้นลด complexity"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมต้องการวัดความน่าเชื่อถือของระบบหลัง deploy เพื่อดูว่าปัญหาเกิดขึ้นที่จุดใดของ flow ข้อใดเป็น metric ที่เหมาะสมที่สุด?",
+    "options": [
+      { "statement": "Defect arrival rate ต่อ time period", "istrue": true },
+      { "statement": "LOC ของระบบทั้งหมด", "istrue": false },
+      { "statement": "Story points ที่ใช้ใน sprint ล่าสุด", "istrue": false },
+      { "statement": "จำนวน developer ในทีม", "istrue": false }
+    ],
+    "explanation": "Defect rate สะท้อน reliability ของ release"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "โครงการมี requirement เปลี่ยนทุกสัปดาห์ และลูกค้ามีส่วนร่วมสูงมาก แต่ต้องการ MVP ในเวลาสั้นที่สุด โมเดลใดเหมาะสมที่สุด?",
+    "options": [
+      { "statement": "RAD เพราะเน้น iteration สั้นและลูกค้ามีส่วนร่วมสูง", "istrue": true },
+      { "statement": "Waterfall เพราะควบคุมการเปลี่ยน requirement ดีที่สุด", "istrue": false },
+      { "statement": "V-model เพราะไม่ต้อง iterate", "istrue": false },
+      { "statement": "Incremental waterfall เพราะเหมาะกับ requirement คงที่", "istrue": false }
+    ],
+    "explanation": "RAD ใช้ iteration สั้นและเน้น speed + feedback"
+  },
+
+
+  {
+    "type": "multiple-choice",
+    "question": "ในระบบรายงานยอดขาย ทีมพบว่ากราฟแสดงค่าผิดบางช่วง แม้ข้อมูลในฐานข้อมูลถูกต้อง แต่ logic คำนวณบางส่วนผิด ทีมต้องวิเคราะห์ root cause ด้วย Ishikawa Diagram ข้อใดเป็นตัวอย่าง 'สาเหตุระดับกระดูกสันหลัง' (major rib) ที่ถูกต้อง?",
+    "options": [
+      { "statement": "Method: สูตรคำนวณผิดหรือไม่ครบ", "istrue": true },
+      { "statement": "รายได้เดือนนี้เพิ่มขึ้นกว่าปีก่อน", "istrue": false },
+      { "statement": "มีผู้ใช้กด refresh ไม่พร้อมกัน", "istrue": false },
+      { "statement": "อินเทอร์เน็ตผู้ใช้อาจช้า", "istrue": false }
+    ],
+    "explanation": "Ishikawa major ribs = Method, People, Data, Machine, Measurement"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมใช้ V-model ในการพัฒนาระบบซื้อขาย แต่พบว่า acceptance test ไม่ครอบคลุมบาง requirement ที่ผู้ใช้ต้องการ ข้อใดอธิบายความผิดพลาดนี้ดีที่สุด?",
+    "options": [
+      { "statement": "V-model ผูก test แต่ละระดับกับ requirement หาก requirement ไม่ครบ test ก็ไม่ครบ", "istrue": true },
+      { "statement": "V-model ไม่รองรับ acceptance test", "istrue": false },
+      { "statement": "V-model ไม่รองรับผู้ใช้ที่มากกว่า 1 กลุ่ม", "istrue": false },
+      { "statement": "Acceptance test ไม่ควรขึ้นกับ requirement", "istrue": false }
+    ],
+    "explanation": "V-model = mapping requirement ↔ testing level"
+  },
+
+
+  {
+    "type": "multiple-choice",
+    "question": "ระบบวิเคราะห์ยอดขายมีการแจ้งเตือนจำนวนมากเพราะข้อมูลเข้ามารวดเร็ว ทีมสงสัยว่าระบบไม่สามารถ scale ได้ดี ทีมควรใช้ testing แบบใดเพื่อค้นหาคอขวด?",
+    "options": [
+      { "statement": "Performance test + stress test", "istrue": true },
+      { "statement": "Unit test", "istrue": false },
+      { "statement": "Security test", "istrue": false },
+      { "statement": "Functional test", "istrue": false }
+    ],
+    "explanation": "Scale → performance/stress test"
+  },
+
+
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทต้องเตรียม deploy ระบบที่เชื่อมโยงกับระบบของ partner หลายรายและเก็บข้อมูลจำนวนมาก หาก deploy ผิดจะกระทบระบบอื่น ๆ ข้อใดคือความเสี่ยงหลักตามบท Deployment?",
+    "options": [
+      { "statement": "การ dependency กับ external systems ทำให้ error cascade ได้", "istrue": true },
+      { "statement": "ระบบใหญ่ทำให้ไม่จำเป็นต้องทำ rollback", "istrue": false },
+      { "statement": "ระบบ partner ไม่ต้องเข้าร่วมทดสอบ", "istrue": false },
+      { "statement": "ยิ่งระบบใหญ่ยิ่ง deploy ง่าย", "istrue": false }
+    ],
+    "explanation": "ระบบใหญ่เชื่อมต่อกัน → error cascade risk"
+  },
+
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมพบว่า defect ที่ร้ายแรงที่สุดคือ defect ที่ค้นพบโดยลูกค้าใน production หลังอยู่ในระบบนานกว่า 6 เดือน ข้อใดอธิบายได้ถูกต้อง?",
+    "options": [
+      { "statement": "Defect age + discovered by customer = highest severity/impact", "istrue": true },
+      { "statement": "Defect age ไม่มีผลต่อความร้ายแรง", "istrue": false },
+      { "statement": "Defect ที่เจอโดยลูกค้าไม่นับเป็น defect", "istrue": false },
+      { "statement": "Severity ของ defect ไม่เกี่ยวกับ impact", "istrue": false }
+    ],
+    "explanation": "อายุมาก + ผู้ใช้เจอ → impact สูงสุด"
+  },
+
+
+  {
+    "type": "multiple-choice",
+    "question": "ทีมพบว่าการเพิ่มฟีเจอร์ใหม่ทำให้ต้องแก้ test suite มากขึ้นเรื่อย ๆ จน test suite ช้าลงมาก ข้อใดเป็นวิธีที่เหมาะสมที่สุด?",
+    "options": [
+      { "statement": "เพิ่ม automated regression test ให้เร็วขึ้นโดย parallelization", "istrue": true },
+      { "statement": "ลบ test เก่าออกทั้งหมด", "istrue": false },
+      { "statement": "ทดสอบเฉพาะ unit test ไม่ต้อง run system test", "istrue": false },
+      { "statement": "หยุดทำ test-driven development", "istrue": false }
+    ],
+    "explanation": "ต้องปรับใช้ automation parallel"
+  },
+
+
+
+  {
+    "type": "multiple-choice",
+    "question": "Regression test มีหน้าที่ตรวจสอบว่าฟีเจอร์ใหม่ทำให้ฟีเจอร์เก่าเสียหรือไม่",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Regression test ตรวจหาการถอยหลังของคุณภาพ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Staged deployment ต้องใช้ environment ที่เหมือน production มากที่สุด",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Staging = environment clone"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "LOC สามารถเปรียบเทียบ productivity ระหว่างภาษาโปรแกรมต่างชนิดได้อย่างแม่นยำ",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "LOC ไม่เทียบกันได้ข้ามภาษา"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Adaptive maintenance ใช้เมื่อระบบต้องปรับตัวให้เข้ากับ environment ใหม่",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ตามนิยาม adaptive"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Predictive model เหมาะกับ requirement ที่คงที่และไม่เปลี่ยนแปลงบ่อย",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Predictive ต้องการความเสถียร"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Iterative model เพิ่ม fidelity ของระบบในแต่ละรอบโดยไม่จำเป็นต้องเพิ่มฟีเจอร์ใหม่",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Iterative เน้น refinement"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Prototype อาจทำให้ผู้ใช้คาดหวังเกินจริงต่อคุณภาพของระบบจริง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Raised expectations"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Pair programming ลดโอกาสเกิดบั๊กเพราะมีการตรวจสอบแบบเรียลไทม์",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ข้อดีของ pair programming"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Scrum ไม่อนุญาตให้เปลี่ยน sprint backlog หลังเริ่ม sprint ยกเว้นมีเหตุจำเป็นจริง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "หลัก Scrum"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Lean ใช้หลัก Defer Commitment เพื่อเลื่อนการตัดสินใจที่ต้องการข้อมูลมากขึ้น",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "หลัก Lean"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Crystal ปรับกระบวนการตามจำนวนสมาชิกทีมและระดับความเสี่ยงของโครงการ",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Crystal methodology"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Bug swarm คือการมีจำนวนบั๊กจำนวนมากในโมดูลเดียวจนเป็นสัญญาณว่าควรทำ cost-benefit analysis ก่อน refactor",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ตามบท maintenance"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Deployment ที่ดีควรมี rollback plan เสมอเพื่อรองรับความผิดพลาด",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Rollback เป็นหัวใจของ deployment"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Project metrics วัดกระบวนการภายในทีมพัฒนาโดยตรง เช่น ชั่วโมง review ต่อ KLOC",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "นั่นคือ process metrics"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "System testing เป็นการทดสอบระบบโดยรวมตั้งแต่ต้นจนจบ flow ของผู้ใช้",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "System test = end-to-end"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "White-box testing ต้องดูโครงสร้างภายในของโค้ดถึงจะเขียน test ได้",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "White-box = access to code"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Function Point ไม่ขึ้นกับเทคโนโลยีที่ใช้พัฒนาแอปพลิเคชัน",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "FP ไม่ขึ้นกับภาษา"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Prototype แบบ throwaway ใช้เพียงเพื่อศึกษาและทิ้ง ไม่พัฒนาเป็นระบบจริง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Throwaway = ทิ้ง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Spiral Model สามารถข้าม risk analysis ได้หากทีมมีประสบการณ์เพียงพอ",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Risk analysis เป็นหัวใจของ Spiral"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Perfective maintenance ใช้เพื่อเพิ่มคุณสมบัติใหม่หรือปรับปรุงฟีเจอร์ให้ดีขึ้น",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Perfective เพิ่ม feature"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Preventive maintenance มีเป้าหมายเพื่อทำให้ระบบพร้อมสำหรับการเปลี่ยนแปลงในอนาคต เช่น refactor code smell",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Preventive = make maintainable"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Alpha testing ทำโดยผู้ใช้จริงใน production environment",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Alpha = internal testers"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Beta testing ทำโดยกลุ่มผู้ใช้ภายนอกที่ลองใช้ระบบก่อน release จริง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Beta = external group"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Cleanroom development เน้น testing เป็นหลักมากกว่าการพิสูจน์ correctness แบบ formal method",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Cleanroom เน้น formal verification มากกว่า testing"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Unified Process (UP) รองรับ iterative และสามารถผสม predictive ในบาง phase ได้",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "UP มี flexibility สูง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Scrum ใช้ burndown chart เพื่อวัดความคืบหน้าของ sprint ว่าเหลืองานเท่าไหร่",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Burndown chart = remaining work"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Velocity ควรเพิ่มขึ้นทุก sprint เพื่อแสดงว่าทีมมี productivity สูงขึ้นเสมอ",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Velocity ไม่จำเป็นต้องเพิ่มเสมอ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Lean เน้นการกำจัด waste เช่น การประชุมที่ไม่จำเป็น หรือการเขียนโค้ดเกินความต้องการ",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Eliminate waste"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Crystal Clear เหมาะสำหรับทีมขนาดใหญ่ที่มีความ critical สูง",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Crystal Clear = small team 1–6"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ automated test ลดความจำเป็นของ tester จนไม่ต้องมี tester ในทีม",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Automation เสริม ไม่ได้แทนที่ tester ทั้งหมด"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Blackbox testing ใช้เพื่อทดสอบ logic ภายในของระบบว่าเขียนถูกต้องหรือไม่",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Black-box = ไม่ดูภายใน"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "V-model เชื่อมขั้นตอนทดสอบแต่ละระดับเข้ากับขั้นตอนในฝั่ง development โดยตรง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "V-model = mapping dev ↔ test"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Function Point คำนึงถึงจำนวน input/output และ internal files ในระบบเพื่อหาความซับซ้อน",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "FP metrics"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ระบบที่มี defect age มากมักมีความเสี่ยงสูงกว่าบั๊กที่พบเร็ว",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "บั๊กที่อยู่มานานมีผลกระทบกว้าง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Parallel testing ให้ผู้ใช้จริงใช้งานระบบใหม่แทนระบบเก่าทันที",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Parallel = ทำงานคู่กัน"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Destructive testing ใช้เพื่อดูว่าระบบจะทำงานแบบปกติเมื่อเกิด input ผิดปกติ",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Destructive = ทำให้พัง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Deployment mistakes มักเกิดจากการละเลย edge cases และการไม่ทดสอบ rollback อย่างเพียงพอ",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Edge cases + rollback คือจุดเสี่ยงที่สุด"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Preventive maintenance เกี่ยวข้องกับการ refactor เพื่อเพิ่ม maintainability",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Preventive refactoring"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Cleanroom ใช้วิธี formal verification มากกว่า manual testing เพื่อให้แน่ใจว่าระบบถูกต้อง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Formal methods เป็นหัวใจของ cleanroom"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "In UP, elaboration phase เน้นการบริหารความเสี่ยงเป็นหลัก",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "UP = risk-focused"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Scrum retrospective ใช้เพื่อทบทวนงานที่ทำไปและหาวิธีปรับปรุงใน sprint ถัดไป",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Retrospective = improve process"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Velocity ใช้เปรียบเทียบ productivity ระหว่างทีมได้อย่างแม่นยำโดยไม่คำนึงถึงความแตกต่างของทีม",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Velocity ไม่ควรใช้ cross-team"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Crystal เหมาะกับการพัฒนาหลายทีมที่มีระดับ criticality และขนาดต่างกัน",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Crystal ปรับตามทีม"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Spiral Model เหมาะกับโปรเจกต์ที่มีความเสี่ยงต่ำและง่ายต่อการพัฒนา",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Spiral ใช้กับ high-risk"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Prototype ใช้เพื่อศึกษาฟีเจอร์ก่อนทำระบบจริง จึงควรเป็นระบบสมบูรณ์ทุกครั้ง",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Prototype ไม่ต้องสมบูรณ์"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "System test มักเกิดก่อน unit test เสมอใน predictive model",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Unit → integration → system"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "RAD ไม่เหมาะกับโปรเจกต์ใหญ่ที่มีผู้พัฒนาหลายสิบคนเนื่องจาก communication overhead สูง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "RAD ต้องทีมเล็ก"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Function Point สามารถใช้ทำนาย cost ได้เมื่อประกอบกับข้อมูล productivity ของทีม",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "FP ใช้ normalize project"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "การ deploy แบบ incremental หมายถึงเพิ่มฟีเจอร์ทั้งหมดพร้อมกันในครั้งเดียว",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Incremental = ทีละส่วน"
+  }
+]

@@ -1,0 +1,880 @@
+[
+  {
+    "question": "1. Which statement best describes the purpose of a checksum in reliable data transfer protocols?",
+    "options": [
+      "A. It signals the receiver that a packet was delivered in order",
+      "B. It lets the sender know a packet was not received correctly",
+      "C. It detects bit errors that occur during transmission",
+      "D. It allows the receiver to request retransmission of a lost segment"
+    ],
+    "answer": 2,
+    "explanation": "Checksums are used to detect bit-level corruption in transmitted data. They do not inform on order (A), correctness at higher levels (B), or request retransmissions directly (D)."
+  },
+  {
+    "question": "2. Which of the following best summarizes the Internet\u2019s best-effort service model at the network layer?",
+    "options": [
+      "A. Packets are guaranteed to arrive in the correct order",
+      "B. Packets are delivered reliably with no chance of loss",
+      "C. The network will attempt to deliver packets but offers no delivery guarantees",
+      "D. Each packet is routed strictly on the shortest path"
+    ],
+    "answer": 2,
+    "explanation": "Best-effort means the network tries to deliver packets but does not guarantee delivery, in-order arrival, or reliability."
+  },
+  {
+    "question": "3. In UDP communication, if host A sends a segment from port 6500 to host B\u2019s port 7000, what ports does host B use in its reply back to A?",
+    "options": [
+      "A. Source port 7000, destination port 6500",
+      "B. Source port 6500, destination port 7000",
+      "C. Source port 7000, destination port 7000",
+      "D. Source port 6500, destination port 6500"
+    ],
+    "answer": 0,
+    "explanation": "When replying, the roles of source and destination ports reverse: host B\u2019s source port becomes 7000, and it sends back to A at port 6500."
+  },
+  {
+    "question": "4. Which of the following statements about UDP multiplexing and demultiplexing is true?",
+    "options": [
+      "A. Demultiplexing is only based on IP addresses, ignoring port numbers",
+      "B. Multiple senders targeting the same destination port map to the same socket in UDP",
+      "C. A single UDP socket cannot send segments to more than one distinct remote IP",
+      "D. Multiplexing and demultiplexing are handled by router hardware, not end hosts"
+    ],
+    "answer": 1,
+    "explanation": "UDP uses destination port for demultiplexing. If the same destination port is used, the receiver\u2019s OS will direct those incoming UDP segments to the same socket unless further logic is applied."
+  },
+  {
+    "question": "5. Which mechanism allows a TCP sender to confirm that data was received correctly by the receiver?",
+    "options": [
+      "A. The checksum field in the IP header",
+      "B. ACK segments that reference the next expected byte",
+      "C. SYN flag in the TCP header",
+      "D. The error-detection code in the Ethernet trailer"
+    ],
+    "answer": 1,
+    "explanation": "TCP uses ACK segments to confirm correct receipt of data. The other items (IP checksums, SYN flags, or Ethernet error codes) do not serve that function for TCP data correctness."
+  },
+  {
+    "question": "6. Where is the majority of transport-layer logic (for example, TCP reliability) implemented in the Internet architecture?",
+    "options": [
+      "A. Inside core routers within the network",
+      "B. In the application layer on each server only",
+      "C. In the end systems (hosts) at the network\u2019s edge",
+      "D. Directly in the physical layer hardware"
+    ],
+    "answer": 2,
+    "explanation": "Transport-layer functionality (TCP, UDP) primarily resides in the end hosts, not in routers or lower-layer hardware."
+  },
+  {
+    "question": "7. In a reliable data transfer protocol, how does the sender detect that a packet might be lost or corrupted and hence should be retransmitted?",
+    "options": [
+      "A. By performing a bitwise XOR of all packets in the queue",
+      "B. By failing to receive an ACK before a timeout expires",
+      "C. By sending a NAK to itself",
+      "D. By periodically polling the receiver for status"
+    ],
+    "answer": 1,
+    "explanation": "Timeouts are a key mechanism for the sender to detect possible loss (or corruption if unACKed) of a transmitted packet."
+  },
+  {
+    "question": "8. Which statement correctly describes the transport layer\u2019s logical communication path?",
+    "options": [
+      "A. It is host-to-router communication only",
+      "B. It is end-to-end between processes on different hosts",
+      "C. It directly delivers packets to MAC addresses at the link layer",
+      "D. It ensures the fastest route is always chosen"
+    ],
+    "answer": 1,
+    "explanation": "Transport-layer protocols provide end-to-end logical communication between application processes running on different hosts."
+  },
+  {
+    "question": "9. Transport-layer demultiplexing at the receiving host involves:",
+    "options": [
+      "A. Choosing a route through the network to get to the right destination",
+      "B. Deciding which local socket the incoming segment\u2019s data should be delivered to",
+      "C. Concatenating data from multiple sockets and creating a new segment",
+      "D. Checking the ARP cache for the destination\u2019s MAC address"
+    ],
+    "answer": 1,
+    "explanation": "Demultiplexing uses the incoming segment\u2019s header fields to direct the segment\u2019s payload to the correct receiving socket (process)."
+  },
+  {
+    "question": "10. In the context of transport-layer multiplexing, which is most accurate?",
+    "options": [
+      "A. Multiplexing is combining multiple streams into one segment for the same destination port",
+      "B. Multiplexing uses sequence numbers to reorder out-of-sequence packets",
+      "C. Multiplexing allows data from different sockets to be encapsulated for transmission",
+      "D. It is only available in TCP and not supported by UDP"
+    ],
+    "answer": 2,
+    "explanation": "Multiplexing means taking data from multiple sockets or processes and packaging it into transport segments. Both TCP and UDP do this, though in different ways."
+  },
+  {
+    "question": "11. Sequence numbers in a reliable data transfer protocol are used to:",
+    "options": [
+      "A. Detect lost or corrupted packets once they arrive at the network layer",
+      "B. Remove the need for retransmissions",
+      "C. Allow the receiver to detect duplicates and to properly order segments",
+      "D. Increase the checksum\u2019s accuracy"
+    ],
+    "answer": 2,
+    "explanation": "Sequence numbers help the receiver identify duplicate or out-of-order packets. They are not directly used for checksums or eliminating retransmissions."
+  },
+  {
+    "question": "12. Which set of properties best characterizes TCP but not UDP?",
+    "options": [
+      "A. Simple, connectionless, best-effort",
+      "B. Reliable, in-order delivery, congestion control, flow control",
+      "C. Random delivery with potential reordering, minimal overhead",
+      "D. Guaranteed bandwidth and delay"
+    ],
+    "answer": 1,
+    "explanation": "TCP provides reliability, in-order data delivery, congestion control, and flow control. UDP is connectionless, with no guaranteed ordering or reliability."
+  },
+  {
+    "question": "13. A negative acknowledgment (NAK) in a reliable data transfer context signifies:",
+    "options": [
+      "A. The receiver has correctly received a packet",
+      "B. A new flow must be established",
+      "C. The receiver detected an error or missing data in the last packet",
+      "D. The receiver buffer is full"
+    ],
+    "answer": 2,
+    "explanation": "A NAK generally notifies the sender that the receiver found an error or cannot use the current packet, prompting retransmission."
+  },
+  {
+    "question": "14. Which of the following best describes UDP?",
+    "options": [
+      "A. Connection-oriented, provides flow control and reliable transfer",
+      "B. Connectionless, minimal overhead, no built-in congestion control",
+      "C. Always ensures strictly in-order delivery of packets",
+      "D. Reserves a fixed bandwidth over the duration of the connection"
+    ],
+    "answer": 1,
+    "explanation": "UDP is connectionless, lightweight, does not incorporate reliability or congestion control by default, and does not guarantee in-order delivery."
+  },
+  {
+    "question": "15. Why does a UDP segment include a length field in its header?",
+    "options": [
+      "A. To limit the maximum number of retransmissions",
+      "B. To specify the application ID needed for flow control",
+      "C. To indicate how many bytes of data are contained in the segment payload",
+      "D. To ensure all segments are of equal size"
+    ],
+    "answer": 2,
+    "explanation": "The UDP length field tells the receiver how many bytes are in the UDP segment (header + data), allowing the receiver to extract the correct amount of payload data."
+  },
+  {
+    "question": "16. What is the primary function of retransmission in a reliable data transfer protocol?",
+    "options": [
+      "A. To ensure the receiver buffer never overflows",
+      "B. To give the sender real-time updates on routing paths",
+      "C. To resend packets that may have been lost or corrupted",
+      "D. To encrypt the segment payload"
+    ],
+    "answer": 2,
+    "explanation": "Retransmissions allow the receiver to receive data that was lost or corrupted on the first send. They are not for buffering or encryption."
+  },
+  {
+    "question": "17. Which assumption does rdt3.0 (the stop-and-wait protocol with timers and sequence numbers) make about the channel?",
+    "options": [
+      "A. The channel has unlimited bandwidth and zero loss",
+      "B. The channel may corrupt or drop packets",
+      "C. The channel does not allow flow control messages",
+      "D. The channel reorders packets but never loses them"
+    ],
+    "answer": 1,
+    "explanation": "Rdt3.0 is designed for channels where packets can be corrupted or lost, requiring timeouts and retransmissions."
+  },
+  {
+    "question": "18. Comparing Go-Back-N (GBN) and Selective Repeat (SR) protocols, the primary difference is:",
+    "options": [
+      "A. GBN uses an adaptive checksum, while SR does not",
+      "B. GBN sends only one packet at a time, whereas SR sends multiple in flight",
+      "C. GBN uses cumulative ACKs, while SR sends ACKs for specific packets allowing out-of-order buffering",
+      "D. SR relies on negative ACKs exclusively, while GBN uses positive ACKs"
+    ],
+    "answer": 2,
+    "explanation": "In GBN, the receiver sends cumulative ACKs and discards out-of-order packets. In SR, the receiver individually ACKs each packet and can buffer out-of-order data."
+  },
+  {
+    "question": "19. How does TCP Reno update the congestion window when a timeout occurs?",
+    "options": [
+      "A. It reduces cwnd by 1 MSS",
+      "B. It resets cwnd to 1 MSS (slow start)",
+      "C. It cuts cwnd in half",
+      "D. It immediately closes the connection"
+    ],
+    "answer": 1,
+    "explanation": "Upon timeout, TCP Reno sets its congestion window to 1 MSS and re-enters slow start."
+  },
+  {
+    "question": "20. In TCP Reno, how is the congestion window adjusted after detecting triple duplicate ACKs?",
+    "options": [
+      "A. Reset cwnd to 1 MSS",
+      "B. Decrease cwnd by 1 MSS only once",
+      "C. Cut cwnd in half, enter fast recovery",
+      "D. Close the connection after repeated triple duplicate ACKs"
+    ],
+    "answer": 2,
+    "explanation": "TCP Reno halves the congestion window on triple duplicate ACKs (fast retransmit/fast recovery) instead of dropping it to 1 MSS."
+  },
+  {
+    "question": "21. Which window advertisement controls how much data can be sent by the TCP sender without exceeding the receiver\u2019s buffer capacity?",
+    "options": [
+      "A. The congestion window",
+      "B. The flow window in rdt2.0",
+      "C. The receiver window (rwnd)",
+      "D. The NAT translation window"
+    ],
+    "answer": 2,
+    "explanation": "In TCP, the receiver window (rwnd) is used by the receiver to inform the sender of how much buffer space is available."
+  },
+  {
+    "question": "22. Which statement describes the standard method by which a TCP connection is established?",
+    "options": [
+      "A. A single SYN message from the client followed by an ACK from the server",
+      "B. A four-way handshake using FIN and ACK flags",
+      "C. A three-way handshake with SYN, SYN+ACK, and ACK messages",
+      "D. Sending a FIN message to start the connection and an ACK to confirm"
+    ],
+    "answer": 2,
+    "explanation": "TCP uses a three-way handshake: client sends SYN, server responds with SYN+ACK, client replies with ACK."
+  },
+  {
+    "question": "23. The average throughput of a TCP sender can be approximated by considering:",
+    "options": [
+      "A. Average congestion window and average RTT",
+      "B. The maximum link bandwidth only",
+      "C. The receiver\u2019s IP address and average queue length at the router",
+      "D. The size of the port number fields"
+    ],
+    "answer": 0,
+    "explanation": "TCP throughput is roughly (cwnd / RTT). The link capacity matters but is not the direct formula used to approximate short-term throughput."
+  },
+  {
+    "question": "24. TCP is generally said to be fair in sharing network capacity among competing flows because:",
+    "options": [
+      "A. It specifically reserves bandwidth for each flow from the start",
+      "B. Each TCP flow\u2019s slow start phase is always identical",
+      "C. TCP\u2019s congestion control (AIMD) reduces sending rate upon detecting loss, preventing single flows from hogging the link",
+      "D. It uses a priority-based queue in the router"
+    ],
+    "answer": 2,
+    "explanation": "TCP\u2019s Additive Increase, Multiplicative Decrease (AIMD) fosters fairness by scaling back sending rate on packet loss, distributing bandwidth among flows over time."
+  },
+  {
+    "question": "25. The default length of the TCP header, excluding options, is:",
+    "options": [
+      "A. 16 bytes",
+      "B. 20 bytes",
+      "C. 32 bytes",
+      "D. 40 bytes"
+    ],
+    "answer": 1,
+    "explanation": "TCP\u2019s base header is 20 bytes without additional options like timestamps."
+  },
+  {
+    "question": "26. In the stop-and-wait protocol, utilization depends on packet size, link bandwidth, and propagation delay because:",
+    "options": [
+      "A. The sender can only send one packet and must await an ACK, causing idle times proportional to RTT",
+      "B. The receiver buffers multiple packets simultaneously",
+      "C. The window size is unbounded, so it\u2019s always fully utilized",
+      "D. The checksum is too large for smaller packets"
+    ],
+    "answer": 0,
+    "explanation": "Stop-and-wait allows only one outstanding packet at a time, so the ratio of transmission time to round-trip time affects utilization."
+  },
+  {
+    "question": "27. Which header fields are common to both TCP and UDP?",
+    "options": [
+      "A. Source IP and Destination IP",
+      "B. Source port and Destination port",
+      "C. Sequence number and Acknowledgment number",
+      "D. Receive window size and Congestion window"
+    ],
+    "answer": 1,
+    "explanation": "Both TCP and UDP headers include source and destination port fields. Sequence/ACK numbers and windows are unique to TCP."
+  },
+  {
+    "question": "28. A major advantage of Selective Repeat over Go-Back-N is that SR:",
+    "options": [
+      "A. Discards all out-of-order packets",
+      "B. Buffers out-of-order segments and individually ACKs each packet",
+      "C. Sends exactly one packet at a time before waiting for an ACK",
+      "D. Does not require timers"
+    ],
+    "answer": 1,
+    "explanation": "Selective Repeat can buffer out-of-order data and acknowledge each packet individually, reducing unnecessary retransmissions."
+  },
+  {
+    "question": "29. A cumulative acknowledgment, ACK(n), in a reliable protocol indicates that:",
+    "options": [
+      "A. Only packet n has arrived safely",
+      "B. All packets up to and including byte n have been received",
+      "C. The receiver expects the next packet to begin at byte n-1",
+      "D. A negative ACK for packet n is requested"
+    ],
+    "answer": 1,
+    "explanation": "Cumulative acknowledgments confirm receipt of all bytes up to and including n, indicating readiness for the next data byte."
+  },
+  {
+    "question": "30. In TCP Telnet examples, when a host receives an ACK for a particular sequence number, what timer action is taken?",
+    "options": [
+      "A. The timer is canceled for that unACKed segment if it was running",
+      "B. The timer is reset to zero and the segment is resent",
+      "C. The timer is ignored, letting it expire naturally",
+      "D. The timer is multiplied by two to handle congestion"
+    ],
+    "answer": 0,
+    "explanation": "Upon receiving an ACK for the outstanding segment, TCP cancels the corresponding retransmission timer."
+  },
+  {
+    "question": "31. True or False: If the receiver\u2019s advertised window is smaller than the size of one MSS, then the TCP sender cannot send more data than that window allows.",
+    "options": [
+      "A. TRUE",
+      "B. FALSE"
+    ],
+    "answer": 0,
+    "explanation": "Flow control ensures the sender does not exceed the receiver\u2019s advertised window. If the window is smaller than an MSS, the sender can only send up to that window size."
+  },
+  {
+    "question": "32. Which scenario best illustrates a need for flow control (rather than congestion control)?",
+    "options": [
+      "A. Packets are lost due to router queue overflow in the core",
+      "B. A sender attempts to send data at a rate faster than the receiver can handle, leading to receiver buffer overflow",
+      "C. Multiple senders saturate a shared link at the same time",
+      "D. RTT variations cause repeated timeouts"
+    ],
+    "answer": 1,
+    "explanation": "Flow control is specifically about ensuring the receiver isn\u2019t overwhelmed. Congestion control deals with the network\u2019s capacity constraints."
+  },
+  {
+    "question": "33. In a scenario with two senders and one shared bottleneck link, if each sender\u2019s arrival rate is near R/2 and measured throughput is 0.85 \u00d7 R/2, what fraction of packets sent are effectively wasted due to retransmissions or losses?",
+    "options": [
+      "A. 0.15",
+      "B. 0.5",
+      "C. 0.85",
+      "D. 0"
+    ],
+    "answer": 0,
+    "explanation": "If the ratio of goodput to send rate is 0.85, then 15% (i.e., 0.15) of transmitted packets are not contributing to final successful delivery."
+  },
+  {
+    "question": "34. Which of the following is an example of end-to-end congestion control in TCP?",
+    "options": [
+      "A. A router explicitly telling the sender to slow down",
+      "B. The sender using packet loss or increased RTT as a signal of congestion and adjusting cwnd",
+      "C. Sending a triple handshake message to the router",
+      "D. The receiver ignoring the advertised window"
+    ],
+    "answer": 1,
+    "explanation": "End-to-end congestion control relies on the sender\u2019s inference (loss, RTT) to adjust sending rate, not explicit router feedback."
+  },
+  {
+    "question": "35. Which of the following best summarizes additive-increase, multiplicative-decrease (AIMD) in TCP?",
+    "options": [
+      "A. Increase cwnd by 1 each RTT in congestion avoidance and halve cwnd upon detecting a loss",
+      "B. Double cwnd each RTT in congestion avoidance and cut cwnd to 1 on loss",
+      "C. Keep cwnd fixed for each RTT and do not react to losses",
+      "D. Decrease cwnd by 1 each RTT until a threshold, then reset the connection"
+    ],
+    "answer": 0,
+    "explanation": "AIMD increments congestion window by ~1 per RTT (additive increase) but halves cwnd upon loss (multiplicative decrease)."
+  },
+  {
+    "question": "36. During TCP slow start, the congestion window grows:",
+    "options": [
+      "A. Linearly over time until the threshold is reached",
+      "B. Exponentially each RTT until a threshold or loss event",
+      "C. Remains constant at 1 MSS throughout slow start",
+      "D. Decreases by half each time a new ACK arrives"
+    ],
+    "answer": 1,
+    "explanation": "Slow start doubles the congestion window every RTT until it reaches the threshold or detects a loss, leading to an exponential increase."
+  },
+  {
+    "question": "37. Compared to traditional TCP Reno, which statement is true for TCP CUBIC\u2019s approach to congestion control?",
+    "options": [
+      "A. CUBIC discards all congestion window logic",
+      "B. CUBIC grows cwnd using a cubic function of time since the last congestion event",
+      "C. CUBIC never does a multiplicative decrease on loss",
+      "D. CUBIC only works with small bandwidth-delay products"
+    ],
+    "answer": 1,
+    "explanation": "TCP CUBIC modifies window growth to a function of (t - K)^3, allowing faster ramp-up until near the previous Wmax, then slower approach to reduce overshoot."
+  },
+  {
+    "question": "38. In a NAT (Network Address Translation) scenario, how does the NAT router keep track of connections from internal hosts?",
+    "options": [
+      "A. It creates a table mapping each local IP/port to a single external IP/port",
+      "B. It enforces each internal host to have a unique public IP address",
+      "C. It uses router CPU cycles to read application-layer data",
+      "D. It uses ICMP messages to track session states"
+    ],
+    "answer": 0,
+    "explanation": "NAT devices maintain a translation table that maps private (IP, port) pairs to public (IP, port) pairs so that return traffic can be correctly forwarded."
+  },
+  {
+    "question": "39. One critique of NAT from a traditional Internet architecture viewpoint is that NAT:",
+    "options": [
+      "A. Increases the maximum possible throughput for each flow",
+      "B. Violates the end-to-end argument by modifying transport-layer port numbers",
+      "C. Requires a global redefinition of TCP congestion control",
+      "D. Is mandated by IPv6"
+    ],
+    "answer": 1,
+    "explanation": "NAT disrupts the end-to-end model by altering IP addresses and port numbers in transit, complicating application protocols that expect full transparency."
+  },
+  {
+    "question": "40. An IPv6 address has how many bits?",
+    "options": [
+      "A. 32 bits",
+      "B. 64 bits",
+      "C. 128 bits",
+      "D. 256 bits"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 uses 128-bit addresses, a major expansion from IPv4\u2019s 32-bit addresses."
+  },
+  {
+    "question": "41. Tunneling IPv6 over IPv4 means:",
+    "options": [
+      "A. Storing an entire IPv6 packet within the payload of an IPv4 packet",
+      "B. Translating all IPv6 addresses to IPv4 addresses in the packet header",
+      "C. Dropping all IPv6 headers during transit",
+      "D. Aggregating multiple IPv6 addresses into one IPv4 address"
+    ],
+    "answer": 0,
+    "explanation": "Tunneling involves encapsulating the IPv6 datagram inside an IPv4 datagram for IPv4-only network segments."
+  },
+  {
+    "question": "42. Why was IPv6 created, besides just enlarging the address space?",
+    "options": [
+      "A. To ensure guaranteed delivery at the network layer",
+      "B. To simplify packet headers, remove fragmentation from routers, and allow extension headers",
+      "C. To remove the time-to-live (TTL) feature",
+      "D. To incorporate transport-layer reliability into IP"
+    ],
+    "answer": 1,
+    "explanation": "IPv6\u2019s design motivations include simpler headers (no checksums, no fragmentation by routers), flexible extension headers, and an expanded address space."
+  },
+  {
+    "question": "43. Which statement about IPv6 adoption is correct?",
+    "options": [
+      "A. IPv6 replaced IPv4 entirely in 2010",
+      "B. IPv6 is partially deployed in many networks, with a gradual global transition continuing",
+      "C. IPv6 is used only in data centers with no consumer adoption",
+      "D. IPv6 does not support fragmentation under any circumstances"
+    ],
+    "answer": 1,
+    "explanation": "Many ISPs and domains support both IPv4 and IPv6; the transition is gradual and ongoing. Some fragmentation can occur at endpoints in IPv6 but not typically at routers."
+  },
+  {
+    "question": "44. At which layer of the Internet stack is DHCP (Dynamic Host Configuration Protocol) primarily implemented?",
+    "options": [
+      "A. Transport layer",
+      "B. Application layer",
+      "C. Network layer",
+      "D. Data link layer"
+    ],
+    "answer": 1,
+    "explanation": "DHCP is an application-layer protocol that helps devices obtain network configuration, such as IP addresses, from a DHCP server."
+  },
+  {
+    "question": "45. Which statement best describes the typical sequence of DHCP messages when a host joins a network?",
+    "options": [
+      "A. Discover, Offer, Request, ACK",
+      "B. Request, Discover, ACK, Provide",
+      "C. Offer, Discover, Request, ACK",
+      "D. SYN, SYN+ACK, ACK"
+    ],
+    "answer": 0,
+    "explanation": "A new host broadcasts a DHCP Discover, the server replies with an Offer, the host sends a Request, and finally the server sends an ACK."
+  },
+  {
+    "question": "46. In the data plane of a router, the function of forwarding typically involves:",
+    "options": [
+      "A. Generating new IP addresses for inbound packets",
+      "B. Transferring a packet from the input port to the correct output port",
+      "C. Running a distance-vector routing algorithm",
+      "D. Determining the next IP header checksum"
+    ],
+    "answer": 1,
+    "explanation": "Data-plane forwarding is about moving incoming packets from input interfaces to the appropriate output interface based on the forwarding table."
+  },
+  {
+    "question": "47. In input-queued routers, head-of-line (HOL) blocking occurs when:",
+    "options": [
+      "A. A packet at the front of the input queue cannot move to the output port it requires, thus blocking other packets behind it",
+      "B. All output queues are empty",
+      "C. The output port has infinite buffers",
+      "D. The router performs no IP checksum"
+    ],
+    "answer": 0,
+    "explanation": "HOL blocking means the first packet in the input queue is blocked, preventing other packets from progressing, even if they could otherwise be switched to different outputs."
+  },
+  {
+    "question": "48. Which queueing discipline ensures that all traffic classes get an equal turn in transmission, sending one packet per class if available?",
+    "options": [
+      "A. FIFO",
+      "B. Priority scheduling",
+      "C. Round Robin",
+      "D. Weighted Fair Queueing"
+    ],
+    "answer": 2,
+    "explanation": "Round Robin scheduling cycles through each queue, sending one packet from each class in turn."
+  },
+  {
+    "question": "49. If all packets have the same priority and belong to only one class, which scheduling mechanism is typically used?",
+    "options": [
+      "A. Weighted Fair Queueing",
+      "B. Priority scheduling",
+      "C. FIFO (First-In-First-Out)",
+      "D. Token Bucket shaping"
+    ],
+    "answer": 2,
+    "explanation": "With no differentiation among packets, a simple FIFO queue is typically used to send the earliest arrived packet first."
+  },
+  {
+    "question": "50. Generalized forwarding using a \u201cmatch plus action\u201d abstraction allows the router to:",
+    "options": [
+      "A. Forward packets only based on destination IP prefix",
+      "B. Match on multiple header fields (e.g., IP source, TCP port) and perform actions like drop, forward, or modify",
+      "C. Avoid storing any forwarding state",
+      "D. Use purely random forwarding decisions"
+    ],
+    "answer": 1,
+    "explanation": "Generalized forwarding extends beyond destination-based forwarding by allowing matches on multiple header fields and a range of actions (drop, modify, forward, etc.)."
+  },
+  {
+    "question": "51. In OpenFlow, which is not typically matched in the flow table?",
+    "options": [
+      "A. MAC address",
+      "B. TCP port numbers",
+      "C. VLAN identifier",
+      "D. Physical layer waveforms"
+    ],
+    "answer": 3,
+    "explanation": "OpenFlow can match on link (MAC), network (IP), and transport (TCP/UDP) headers, plus VLAN tags, but not on raw physical layer waveforms."
+  },
+  {
+    "question": "52. A middlebox is characterized by which behavior?",
+    "options": [
+      "A. Simply forwarding packets by destination IP address",
+      "B. Operating as a standard router implementing IP within the network core",
+      "C. Providing specialized functions (e.g., NAT, firewall) beyond normal IP forwarding",
+      "D. Doubling the maximum bandwidth on each link"
+    ],
+    "answer": 2,
+    "explanation": "Middleboxes do tasks such as NAT, firewalls, or caching, going beyond standard IP forwarding. They do not simply act as normal routers."
+  },
+  {
+    "question": "53. Which statement about the IP hourglass design is correct?",
+    "options": [
+      "A. It mandates multiple network-layer protocols must exist equally",
+      "B. IP is at the \u201cthin waist,\u201d meaning all applications run over IP, and IP can run over many link technologies",
+      "C. The transport layer is narrower than IP in the hourglass architecture",
+      "D. The IP hourglass prevents any new application protocols from being developed"
+    ],
+    "answer": 1,
+    "explanation": "The hourglass principle highlights IP as the universal thin waist, supporting diverse link layers below and varied transport/application protocols above."
+  },
+  {
+    "question": "54. Which layer of the Internet is primarily responsible for providing end-to-end error detection and correction in TCP-based applications?",
+    "options": [
+      "A. Physical layer",
+      "B. Link layer",
+      "C. Transport layer",
+      "D. Network layer"
+    ],
+    "answer": 2,
+    "explanation": "TCP operates in the transport layer and provides error detection/correction (via retransmissions) and reliable delivery."
+  },
+  {
+    "question": "55. The main reason behind the existence of NAT boxes in IPv4 networks is:",
+    "options": [
+      "A. Because NAT can guarantee 100% reliability",
+      "B. To handle the depletion of the IPv4 address space by allowing private reuse of IP addresses",
+      "C. To handle physical-layer issues like wave reflection",
+      "D. To replace TCP with a simpler protocol"
+    ],
+    "answer": 1,
+    "explanation": "NAT helps multiple internal hosts share a single public IPv4 address, mitigating IPv4 address depletion. It does not address reliability or wave reflections."
+  },
+  {
+    "question": "56. Which method does IPv6 use to ensure simpler router processing compared to IPv4?",
+    "options": [
+      "A. Removing the IP addresses from packet headers",
+      "B. Eliminating router-based fragmentation and the IP-level checksum field",
+      "C. Guaranteeing in-order delivery at the IP layer",
+      "D. Forcing static routes for all segments"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 omits router fragmentation and the IP header checksum, speeding up processing on intermediate routers."
+  },
+  {
+    "question": "57. The DHCP server typically provides which of the following to the host? (Select the best combination)",
+    "options": [
+      "A. Only the host\u2019s MAC address",
+      "B. The host\u2019s IP address, subnet mask, default gateway, DNS server address",
+      "C. The router\u2019s MAC address and a custom hop-limit value",
+      "D. The entire forwarding table used by local routers"
+    ],
+    "answer": 1,
+    "explanation": "DHCP supplies IP configuration details to the host, including IP address, subnet mask, default gateway, and DNS server. It doesn\u2019t assign MAC addresses or supply routing tables."
+  },
+  {
+    "question": "58. In the context of router design, the memory-based switching fabric approach was used primarily in early routers because:",
+    "options": [
+      "A. It doubled throughput on each port",
+      "B. It had the fastest possible switching rate",
+      "C. It relied on the CPU to copy packets from input to output using system memory",
+      "D. It required no CPU involvement"
+    ],
+    "answer": 2,
+    "explanation": "Early routers used a shared bus or CPU approach, copying each incoming packet into system memory and then to the output port, which can be a bottleneck but was simpler to implement."
+  },
+  {
+    "question": "59. A router implementing bus-based switching might suffer performance issues because:",
+    "options": [
+      "A. Each input port can only buffer one packet at a time",
+      "B. The shared bus can only support one packet transfer at a time",
+      "C. It has no memory for storing packets",
+      "D. It uses an extremely large header for every packet"
+    ],
+    "answer": 1,
+    "explanation": "In bus-based switching, only one packet can traverse the bus at any moment, limiting throughput if multiple ports need to send simultaneously."
+  },
+  {
+    "question": "60. Crossbar switching allows parallel transfers provided that:",
+    "options": [
+      "A. All input ports attempt to send to the same output port",
+      "B. No two input packets share the same output port at the same time",
+      "C. TTL is set to zero in each IP header",
+      "D. Each input port is assigned a unique MAC address"
+    ],
+    "answer": 1,
+    "explanation": "Crossbar (multistage interconnection) can support multiple simultaneous transmissions if they don\u2019t conflict for the same output port. Conflicts require scheduling or queueing."
+  },
+  {
+    "question": "61. An output port queue might overflow (and drop a packet) when:",
+    "options": [
+      "A. Incoming traffic to that output port exceeds link capacity and buffer size",
+      "B. The router has an infinite buffer",
+      "C. The link is completely idle",
+      "D. The input port has enough buffer for all future traffic"
+    ],
+    "answer": 0,
+    "explanation": "Queue overflow happens if packets arrive faster than they can be transmitted plus the finite buffer is full."
+  },
+  {
+    "question": "62. Tail drop in buffer management means:",
+    "options": [
+      "A. The router discards the earliest arrived packet in the queue when full",
+      "B. The router selectively discards the highest priority packet when full",
+      "C. The router discards the newly arriving packet if the buffer is full",
+      "D. The router floods all incoming packets out of every interface"
+    ],
+    "answer": 2,
+    "explanation": "Tail drop discards the arriving packet when the queue/buffer is full, ignoring priority or other policy."
+  },
+  {
+    "question": "63. Round Robin scheduling ensures:",
+    "options": [
+      "A. Each queue receives service in a repeated cyclic order, sending one packet per cycle if available",
+      "B. The highest priority queue always empties before lower priority queues are served",
+      "C. Every class receives strictly equal bandwidth irrespective of packet size",
+      "D. No queue can be served more than once"
+    ],
+    "answer": 0,
+    "explanation": "Round Robin cycles through each queue, sending up to one packet from each active queue in turn."
+  },
+  {
+    "question": "64. Weighted Fair Queueing (WFQ) differs from simple Round Robin in that WFQ:",
+    "options": [
+      "A. Always sends the largest packet first",
+      "B. Has no concept of scheduling based on traffic classes",
+      "C. Allocates bandwidth proportionally to weights assigned to each class",
+      "D. Randomly selects a queue to send from"
+    ],
+    "answer": 2,
+    "explanation": "WFQ is like Round Robin with a weighting factor that gives certain queues proportionally more transmission opportunity based on assigned weights."
+  },
+  {
+    "question": "65. Network neutrality discussions often revolve around:",
+    "options": [
+      "A. Routers discarding all traffic from certain addresses",
+      "B. Whether ISPs can prioritize certain traffic classes and degrade others",
+      "C. Forcing all hosts to use TCP only",
+      "D. Eliminating all physical-layer upgrades"
+    ],
+    "answer": 1,
+    "explanation": "Network neutrality concerns revolve around potential prioritization or throttling of specific traffic, affecting fairness and open access principles."
+  },
+  {
+    "question": "66. IP fragmentation and reassembly typically occur at which points?",
+    "options": [
+      "A. Routers fragment, intermediate routers reassemble",
+      "B. Source host fragments, destination reassembles",
+      "C. Source host reassembles fragments from different flows",
+      "D. Link-layer devices handle fragmentation, not IP"
+    ],
+    "answer": 1,
+    "explanation": "In IPv4, routers can fragment if the packet is too large for the outgoing link MTU, but reassembly is done only at the destination host."
+  },
+  {
+    "question": "67. A main function of the time-to-live (TTL) field in an IPv4 header is to:",
+    "options": [
+      "A. Provide advanced flow scheduling in routers",
+      "B. Disable a packet\u2019s checksums when it reaches zero",
+      "C. Prevent a packet from looping indefinitely by decrementing at each hop",
+      "D. Mark packets for load balancing across multiple paths"
+    ],
+    "answer": 2,
+    "explanation": "TTL is decremented each time a packet passes through a router, and the packet is dropped when TTL reaches zero, preventing loops."
+  },
+  {
+    "question": "68. In Classless InterDomain Routing (CIDR), a prefix like 192.168.100.0/22 means:",
+    "options": [
+      "A. The first 22 bits are the network portion",
+      "B. Exactly 22 addresses in total are in that network",
+      "C. The first 22 bytes are for the subnet",
+      "D. Only used for IPv6"
+    ],
+    "answer": 0,
+    "explanation": "/22 indicates that the top 22 bits define the subnet portion. The remaining bits define the host portion."
+  },
+  {
+    "question": "69. The purpose of DHCP is to:",
+    "options": [
+      "A. Dynamically assign an IP configuration to a host, including IP address, subnet mask, and gateway",
+      "B. Enable routers to share their routing tables with each other",
+      "C. Update the ARP cache of all hosts in a broadcast domain",
+      "D. Provide reliable data transfer at the transport layer"
+    ],
+    "answer": 0,
+    "explanation": "DHCP automatically configures hosts with IP addresses and other network parameters. Routing updates are handled by routing protocols, not DHCP."
+  },
+  {
+    "question": "70. An IPv4 address is typically how many bits in length?",
+    "options": [
+      "A. 16 bits",
+      "B. 32 bits",
+      "C. 64 bits",
+      "D. 128 bits"
+    ],
+    "answer": 1,
+    "explanation": "IPv4 uses 32-bit addresses, usually represented in dotted-decimal notation, e.g., 192.168.0.1."
+  },
+  {
+    "question": "71. Which statement about a router\u2019s data plane is correct?",
+    "options": [
+      "A. It calculates dynamic routes for all hosts",
+      "B. It performs per-packet forwarding based on the forwarding table",
+      "C. It never uses hardware acceleration",
+      "D. It only runs on the control processor"
+    ],
+    "answer": 1,
+    "explanation": "The data plane is responsible for forwarding packets at line speed using the existing forwarding table, possibly implemented in specialized hardware."
+  },
+  {
+    "question": "72. Go-Back-N might retransmit multiple packets after a single loss because:",
+    "options": [
+      "A. Every packet has the same sequence number",
+      "B. The receiver only sends cumulative ACKs, so the sender doesn\u2019t know which specific packet is missing",
+      "C. The sender\u2019s timer is disabled after the first packet is sent",
+      "D. The receiver never acknowledges any packets"
+    ],
+    "answer": 1,
+    "explanation": "In Go-Back-N, cumulative ACKs force the sender to retransmit the lost packet and all subsequent packets in the window, as it can\u2019t be certain which ones arrived successfully after the gap."
+  },
+  {
+    "question": "73. The Selective Repeat protocol allows for better efficiency than Go-Back-N because the receiver:",
+    "options": [
+      "A. Only uses negative ACKs and discards all correct packets",
+      "B. Automatically sends each packet in triplicate",
+      "C. Buffers out-of-order packets, requiring fewer retransmissions from the sender",
+      "D. Does not support timeouts"
+    ],
+    "answer": 2,
+    "explanation": "By buffering out-of-order packets and ACKing individually, SR avoids resending all subsequent packets after one loss, improving efficiency."
+  },
+  {
+    "question": "74. Consider a fast retransmit scenario in TCP: after detecting three duplicate ACKs, the sender generally:",
+    "options": [
+      "A. Resets cwnd to 1 and transitions to slow start",
+      "B. Retransmits the lost segment immediately and halves the congestion window",
+      "C. Closes the connection and notifies the user",
+      "D. Resets all timers and continues sending with no changes"
+    ],
+    "answer": 1,
+    "explanation": "Fast retransmit triggers an immediate retransmission of the missing segment, and in TCP Reno it halves the cwnd while entering fast recovery."
+  },
+  {
+    "question": "75. By default, can multiple UDP client packets directed to the same host/port arrive at the same socket?",
+    "options": [
+      "A. Yes, because UDP uses only destination port demultiplexing unless told otherwise",
+      "B. No, each remote IP must have a distinct socket",
+      "C. Only if the receiving socket has the correct sequence number",
+      "D. Only if the sender\u2019s port is 0"
+    ],
+    "answer": 0,
+    "explanation": "Multiple senders sending to the same UDP destination port on a host typically end up at the same receiving socket if the OS is using a single socket for that port."
+  },
+  {
+    "question": "76. The purpose of the urgent pointer (URG) in TCP is to:",
+    "options": [
+      "A. Drop lower priority packets when congestion occurs",
+      "B. Alert the receiver to read urgent data before the rest of the buffer",
+      "C. Trigger an immediate FIN to close the connection",
+      "D. Expand the TCP window beyond 65535 bytes"
+    ],
+    "answer": 1,
+    "explanation": "The URG pointer allows some data to be flagged as urgent, prompting the receiver to process it ahead of other queued bytes."
+  },
+  {
+    "question": "77. In a high bandwidth-delay product environment, standard TCP might be inefficient because:",
+    "options": [
+      "A. The sequence numbers cannot represent such large windows",
+      "B. The congestion window might take too long to grow to fully utilize the link",
+      "C. The physical layer changes IP addresses frequently",
+      "D. The three-way handshake is repeated every RTT"
+    ],
+    "answer": 1,
+    "explanation": "Large bandwidth-delay products require a large congestion window for high throughput. Classic TCP might grow cwnd slowly, underutilizing the link."
+  },
+  {
+    "question": "78. In hierarchical (CIDR) addressing, route aggregation provides which benefit?",
+    "options": [
+      "A. It forces each network to broadcast its entire local routing table globally",
+      "B. It reduces the global routing table size by combining multiple subnets into a single advertisement",
+      "C. It prohibits any sub-delegations of IP addresses",
+      "D. It eliminates NAT usage"
+    ],
+    "answer": 1,
+    "explanation": "Route aggregation allows multiple contiguous address blocks to be advertised under one prefix, shrinking routing tables in the core."
+  },
+  {
+    "question": "79. Software-Defined Networking\u2019s (SDN) main concept is to:",
+    "options": [
+      "A. Distribute the routing logic across all routers equally",
+      "B. Combine the control plane and data plane in specialized hardware",
+      "C. Split the control plane from the data plane, enabling centralized network logic",
+      "D. Remove forwarding decisions from switches"
+    ],
+    "answer": 2,
+    "explanation": "SDN decouples the network\u2019s control plane from the data plane and places control logic in a (logically) centralized controller, simplifying data-plane devices."
+  },
+  {
+    "question": "80. In a scenario with two IPv6 routers separated by an IPv4 network, which technique can allow IPv6 traffic between them without each router having a global IPv6 route?",
+    "options": [
+      "A. IPv6 fragmentation over IPv4",
+      "B. DHCPv4 Option 82",
+      "C. Tunneling: encapsulate IPv6 packets in IPv4 datagrams",
+      "D. NAT66"
+    ],
+    "answer": 2,
+    "explanation": "Tunneling IPv6 packets within IPv4 datagrams lets IPv6 routers communicate over an IPv4-only region. NAT66 is IPv6-to-IPv6 NAT, not relevant here."
+  }
+]

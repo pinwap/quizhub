@@ -1,0 +1,893 @@
+[
+  {
+    "question": "1. Which statements describe the assumptions of the rdt3.0 protocol?\n\n(a) The channel never loses packets.\n(b) The channel may corrupt packets.\n(c) The channel may lose packets.\n\nPick a choice:",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "a, b",
+      "b, c"
+    ],
+    "answer": 4,
+    "explanation": "rdt3.0 assumes that the channel may corrupt or lose packets, requiring timeouts and retransmissions."
+  },
+  {
+    "question": "2. Which statements about UDP are correct?\n\n(a) It is connectionless.\n(b) It guarantees in-order delivery.\n(c) It has no built-in congestion control.\n\nPick a choice:",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "a, c",
+      "b, c"
+    ],
+    "answer": 3,
+    "explanation": "UDP is connectionless and lacks congestion control but does not guarantee in-order delivery."
+  },
+  {
+    "question": "3. Consider TCP congestion control mechanisms:\n\n(a) Slow start increases cwnd exponentially.\n(b) A triple-duplicate ACK sets cwnd to 1 immediately.\n(c) A timeout causes cwnd to reset to 1.\n\nPick a choice:",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "a, c",
+      "b, c"
+    ],
+    "answer": 3,
+    "explanation": "In slow start, cwnd grows exponentially. On timeout, cwnd returns to 1, but a triple-duplicate ACK halves cwnd (not 1)."
+  },
+  {
+    "question": "4. Which of the following statements are true regarding Go-Back-N?\n\n(a) The receiver can buffer out-of-order packets.\n(b) The sender uses a sliding window.\n(c) The receiver sends cumulative ACKs.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Go-Back-N uses a sliding window at the sender and cumulative ACKs at the receiver. It discards out-of-order packets."
+  },
+  {
+    "question": "5. Which are features of TCP flow control?\n\n(a) The receiver advertises its available buffer size.\n(b) The sender can exceed the receiver\u2019s buffer if congestion is light.\n(c) The sender ensures it does not send more than the receiver can handle.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Flow control is driven by receiver-advertised window. The sender will not exceed that window."
+  },
+  {
+    "question": "6. Which statements about the TCP three-way handshake are correct?\n\n(a) It begins with a SYN.\n(b) The second message is SYN+ACK.\n(c) The third message is FIN.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The three-way handshake is SYN, SYN+ACK, ACK. FIN is used for connection teardown, not in the handshake."
+  },
+  {
+    "question": "7. Which statements describe the behavior of rdt2.2 (NAK-free) protocol?\n\n(a) It uses NAK segments to signal errors.\n(b) It uses ACK duplicates to retransmit.\n(c) It checks for corruption using a checksum.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, b, c",
+      "a, c",
+      "b"
+    ],
+    "answer": 0,
+    "explanation": "rdt2.2 does not use NAKs; it relies on duplicate ACKs to indicate corrupted or missing data and a checksum to detect errors."
+  },
+  {
+    "question": "8. Which are valid reasons to choose UDP over TCP?\n\n(a) The application can tolerate packet loss.\n(b) The application needs guaranteed reliable delivery.\n(c) The application requires minimal latency.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 2,
+    "explanation": "UDP is chosen when some packet loss is acceptable, and the app wants low overhead or minimal delay. Reliable delivery is not guaranteed by UDP."
+  },
+  {
+    "question": "9. Which statements about selective repeat (SR) are true?\n\n(a) The receiver sends a cumulative ACK for all packets up to a missing one.\n(b) The receiver can buffer out-of-order packets.\n(c) Each packet has its own timer at the sender.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Selective Repeat individually acknowledges each packet, allowing out-of-order buffering, and typically each unACKed packet has a timer."
+  },
+  {
+    "question": "10. Which of these are responsibilities of the transport layer?\n\n(a) Congestion control\n(b) Multiplexing/demultiplexing\n(c) Best-effort packet forwarding in the network core\n(d) Flow control\n\nPick a choice:",
+    "options": [
+      "a, b, d",
+      "b, c, d",
+      "a, c",
+      "a, b, c, d"
+    ],
+    "answer": 0,
+    "explanation": "Best-effort packet forwarding is a network-layer function, not transport. The other three are typical transport duties."
+  },
+  {
+    "question": "11. Which statements about a stop-and-wait protocol are correct?\n\n(a) It can suffer from poor efficiency on high delay-bandwidth paths.\n(b) It allows multiple outstanding packets in flight.\n(c) The sender waits for an ACK after each packet.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Stop-and-wait sends exactly one packet, then waits for an ACK. This yields low utilization on large delay-bandwidth product links."
+  },
+  {
+    "question": "12. In the TCP segment header, which fields are typically used by the sender for reliability and ordering?\n\n(a) Sequence number\n(b) Source port\n(c) Acknowledgment number\n(d) Urgent pointer\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, d",
+      "b, c, d",
+      "a, b, c, d"
+    ],
+    "answer": 0,
+    "explanation": "Sequence and acknowledgment numbers primarily handle reliability and ordering. Ports identify sockets, urgent pointer is for urgent data, not strictly ordering."
+  },
+  {
+    "question": "13. Which behaviors describe TCP\u2019s slow start?\n\n(a) cwnd increases exponentially each RTT until ssthresh is reached or a loss occurs.\n(b) cwnd remains constant until a triple-duplicate ACK.\n(c) The flow is regulated by the receiver window only.\n\nPick a choice:",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Slow start doubles cwnd every RTT, ignoring the other claims about staying constant or only using the receiver window."
+  },
+  {
+    "question": "14. Which statements are true regarding TCP\u2019s additive increase, multiplicative decrease (AIMD)?\n\n(a) Upon detecting loss, the congestion window is halved.\n(b) During congestion avoidance, cwnd grows linearly.\n(c) The congestion window remains fixed if no loss occurs.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "AIMD linearly increases cwnd during congestion avoidance and halves it on loss. cwnd does not remain fixed if no loss occurs."
+  },
+  {
+    "question": "15. Which statements about flow control in TCP are correct?\n\n(a) The receiver advertises a window size.\n(b) The sender must never exceed the advertised window.\n(c) The router decides how much data can be sent.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Flow control is between endpoints. The receiver\u2019s window dictates sending capacity, not the router."
+  },
+  {
+    "question": "16. Which of these statements about TCP fast retransmit are true?\n\n(a) It is triggered by three duplicate ACKs.\n(b) It resets cwnd to 1.\n(c) The lost segment is resent immediately.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Fast retransmit occurs on triple duplicate ACK, prompting immediate retransmission. It does not set cwnd to 1, but halves it."
+  },
+  {
+    "question": "17. Which statements about cumulative acknowledgments are correct?\n\n(a) They acknowledge all packets up to and including a certain sequence number.\n(b) They require storing out-of-order packets.\n(c) They are used by Go-Back-N.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Cumulative ACKs confirm all data up to a point is received. They are characteristic of Go-Back-N. Storing out-of-order data is optional or not typical in GBN."
+  },
+  {
+    "question": "18. Which of these is an effect of setting a short retransmission timeout (RTO) in TCP?\n\n(a) It may lead to spurious retransmissions.\n(b) It helps fully utilize the bandwidth of high-delay paths.\n(c) It lowers the incidence of timeouts.\n\nPick a choice:",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "An overly short RTO leads to frequent, spurious retransmissions if ACKs arrive just after the early timeout."
+  },
+  {
+    "question": "19. Which statements about the TCP receiver window are correct?\n\n(a) It is used for congestion control.\n(b) It is used for flow control.\n(c) It indicates how many bytes the receiver is currently willing to accept.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "The receiver window is for flow control, specifying how many bytes the receiver can handle. Congestion control is separate."
+  },
+  {
+    "question": "20. Which behavior is characteristic of rdt3.0\u2019s stop-and-wait approach?\n\n(a) Multiple unACKed segments can be outstanding.\n(b) If an ACK is lost, the sender may retransmit the same packet.\n(c) The protocol depends on timers and sequence numbers.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, b",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Stop-and-wait can cause retransmissions if an ACK is lost, and it uses timers and seq. numbers. It does not allow multiple in-flight segments."
+  },
+  {
+    "question": "21. Which statements about TCP\u2019s finishing (teardown) phase are correct?\n\n(a) It uses a three-way FIN handshake.\n(b) After one side sends a FIN, the connection enters FIN_WAIT_1.\n(c) Both sides must send a FIN.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "TCP teardown typically requires each side to send its own FIN. The states include FIN_WAIT_1, FIN_WAIT_2, etc. The handshake for teardown is often described as four steps, not a three-way handshake."
+  },
+  {
+    "question": "22. Which statements about the cost of pipelining are correct?\n\n(a) It requires more complex buffering at the receiver.\n(b) It can improve utilization compared to stop-and-wait.\n(c) It eliminates the need for retransmissions.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Pipelining can require extra complexity (e.g., buffering) but improves utilization. Retransmissions are still needed on loss."
+  },
+  {
+    "question": "23. Which statements about DNS are correct?\n\n(a) DNS uses TCP for all queries.\n(b) DNS can use UDP for most queries.\n(c) DNS translates hostnames to IP addresses.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "DNS typically uses UDP for queries, resorting to TCP for zone transfers or large responses, and it translates names to IP addresses."
+  },
+  {
+    "question": "24. Which factors does TCP consider for congestion control?\n\n(a) Packet losses as an indication of congestion.\n(b) Router queue occupancy explicitly signaled.\n(c) Measured RTTs to detect rising congestion.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 2,
+    "explanation": "TCP typically uses packet loss and rising RTT as congestion indicators. Explicit queue occupancy signals would be network-assisted, which classic TCP does not rely on."
+  },
+  {
+    "question": "25. Which statements about fast recovery in TCP Reno are accurate?\n\n(a) The congestion window is set to ssthresh + 3 when triple-duplicate ACKs are detected.\n(b) The sender reduces cwnd to 1 MSS.\n(c) The sender remains in fast recovery until a new ACK acknowledges data beyond the missing segment.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "In fast recovery, cwnd is set to ssthresh + 3*MSS after triple dup ACK. The sender recovers by sending additional segments until an ACK arrives acknowledging new data. It does not set cwnd=1 in fast recovery."
+  },
+  {
+    "question": "26. Which statements about UDP checksums are correct?\n\n(a) They detect corrupted bits in the packet data.\n(b) They ensure in-order delivery.\n(c) If the checksum is incorrect, the packet is typically discarded.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "UDP checksums detect bit corruption. A corrupted packet is usually discarded. There's no ordering guarantee."
+  },
+  {
+    "question": "27. Which statements about the length field in a UDP segment are correct?\n\n(a) It includes the size of both header and data.\n(b) It is always 20 bytes.\n(c) It helps the receiver identify how many bytes of payload are present.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The length field covers the total UDP segment (header + data). The size can vary; it's not fixed at 20 bytes."
+  },
+  {
+    "question": "28. Which statements about connection setup in TCP are correct?\n\n(a) The client sends a SYN.\n(b) The server sends a SYN in response.\n(c) The client\u2019s final ACK includes the server's initial sequence number + 1.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 3,
+    "explanation": "TCP handshake: client -> SYN, server -> SYN+ACK, client -> ACK. The ACK from the client increments the server's ISN."
+  },
+  {
+    "question": "29. Which statements about TCP sequence numbers are true?\n\n(a) They count bytes rather than packets.\n(b) They remain the same for every segment.\n(c) They start at 0 for every new connection.\n\nPick a choice:",
+    "options": [
+      "a",
+      "a, b",
+      "b, c",
+      "a, c"
+    ],
+    "answer": 0,
+    "explanation": "TCP sequence numbers correspond to bytes in the data stream. Each new connection chooses an initial sequence number that\u2019s not necessarily 0."
+  },
+  {
+    "question": "30. Which of the following are typical responsibilities of the network layer?\n\n(a) End-to-end encryption\n(b) Best-effort routing\n(c) IP addressing\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "The network layer handles routing and addressing. Encryption is not a standard network-layer function (that\u2019s typically higher-layer or IPsec)."
+  },
+  {
+    "question": "31. Which are potential outcomes of an overly large TCP retransmission timeout (RTO)?\n\n(a) Very slow reaction to actual losses\n(b) Frequent spurious retransmissions\n(c) Inefficient link utilization during loss periods\n\nPick a choice:",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "a, c",
+      "b, c"
+    ],
+    "answer": 3,
+    "explanation": "A large RTO leads to slow detection of packet loss, so the link might remain underutilized or waiting. Spurious retransmissions come from too short an RTO."
+  },
+  {
+    "question": "32. Which statements about RTT estimation in TCP are correct?\n\n(a) TCP uses an exponential weighted moving average (EWMA) for RTT.\n(b) The SampleRTT is always the same as the EstimatedRTT.\n(c) The timeout is set to EstimatedRTT + 4 * DevRTT.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "TCP uses an EWMA to compute EstimatedRTT, and sets RTO to EstimatedRTT plus a safety margin (4 * DevRTT). SampleRTT can differ from the average."
+  },
+  {
+    "question": "33. Which statements about an RDT 2.0-like protocol are correct?\n\n(a) Checksums detect bit flips.\n(b) The receiver uses a sequence number to handle duplicates.\n(c) Negative acknowledgments prompt retransmissions.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "rdt2.0 uses checksums for error detection and uses NAK for errors. Duplicate detection by seq. number is introduced in 2.1. So 2.0 doesn't rely heavily on that mechanism."
+  },
+  {
+    "question": "34. Which statements about head-of-line (HOL) blocking in an input-queued router are true?\n\n(a) It occurs when a packet at the front of the input queue is blocked.\n(b) It increases throughput.\n(c) It can cause queueing delay even if other packets could otherwise proceed.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 2,
+    "explanation": "HOL blocking can degrade throughput by blocking subsequent packets behind the front packet. It's harmful, not helpful."
+  },
+  {
+    "question": "35. Which statements about IPv4 fragmentation are correct?\n\n(a) Intermediate routers can fragment large packets.\n(b) Reassembly occurs at each router.\n(c) The IP header includes fields for fragmentation offset.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Routers may fragment, storing offset info. Reassembly, however, happens only at the final destination, not at each router."
+  },
+  {
+    "question": "36. Which statements about IPv6 are correct?\n\n(a) The address space is 128 bits.\n(b) Fragmentation is done by routers.\n(c) The base header is fixed length.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "IPv6 uses 128-bit addresses and has a fixed 40-byte base header. Routers don\u2019t do fragmentation in IPv6."
+  },
+  {
+    "question": "37. Which of the following statements about DHCP are true?\n\n(a) It requires manual IP address configuration.\n(b) It provides IP address, subnet mask, default gateway, DNS.\n(c) It uses a 4-step process: Discover, Offer, Request, ACK.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, b",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "DHCP automates IP assignment (no manual config) and typically uses the four-message sequence to provide the host\u2019s networking parameters."
+  },
+  {
+    "question": "38. Which statements about NAT (Network Address Translation) are correct?\n\n(a) It allows multiple hosts to share a single public IP.\n(b) It modifies source IP and port for outgoing packets.\n(c) It preserves the end-to-end argument strictly.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "NAT breaks the end-to-end argument by rewriting addresses. It does allow multiple hosts behind one IP and does modify source info."
+  },
+  {
+    "question": "39. Which statements about destination-based forwarding are correct?\n\n(a) The router looks at the packet\u2019s destination IP to decide the outgoing link.\n(b) It can handle partial matches of IP addresses.\n(c) It typically uses longest prefix matching.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Destination-based forwarding uses the IP address for decisions and often employs longest prefix matching. Partial matches alone are insufficient; it must match a prefix in the forwarding table."
+  },
+  {
+    "question": "40. Which statements about ICMP (Internet Control Message Protocol) are true?\n\n(a) It is used for error reporting and diagnostic messages.\n(b) It modifies the payload of data packets directly.\n(c) ICMP messages can signal issues like host unreachable.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "ICMP is for error/diagnostic reporting (like unreachable). It does not modify the payload of user data packets."
+  },
+  {
+    "question": "41. Which statements about link-layer addressing and ARP are correct?\n\n(a) An ARP request is broadcast on the local network.\n(b) ARP resolves IP addresses to MAC addresses.\n(c) ARP updates the DNS records.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "ARP broadcasts a request to map IP to MAC. It does not update DNS, which resolves domain names to IP addresses."
+  },
+  {
+    "question": "42. Which statements are true regarding the crossbar switching fabric?\n\n(a) Only one input-output pair can connect at a time.\n(b) Multiple simultaneous transfers can occur if they do not share input or output.\n(c) It is typically faster than bus-based switching.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Crossbar allows parallel transfers for distinct inputs/outputs, generally offering higher throughput than a single bus."
+  },
+  {
+    "question": "43. Which statements about Weighted Fair Queueing (WFQ) are correct?\n\n(a) It is a strict priority scheduling.\n(b) Each traffic class has a weight that determines its share of bandwidth.\n(c) With equal weights for all classes, it becomes Round Robin.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "WFQ assigns bandwidth proportionally to weights. If all weights are equal, it effectively does round-robin scheduling."
+  },
+  {
+    "question": "44. Which statements about tail drop buffering policy are correct?\n\n(a) The arriving packet is dropped when the buffer is full.\n(b) It ensures fairness across different flows.\n(c) It can lead to global synchronization in TCP.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Tail drop discards the newly arrived packet if the queue is full, which can cause TCP flows to synchronize. It is not inherently fair across flows."
+  },
+  {
+    "question": "45. Which statements about host-based NAT are correct?\n\n(a) Each internal host has a globally unique IP assigned by NAT.\n(b) NAT uses a translation table mapping internal IP:port to external IP:port.\n(c) NAT modifies the destination IP of incoming packets.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, b",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "NAT typically modifies IP/port fields, mapping internal addresses to one external IP with distinct ports. Internal hosts do not each get a global IP."
+  },
+  {
+    "question": "46. Which statements about IPv6 extension headers are accurate?\n\n(a) They replace the entire IPv6 header.\n(b) They allow optional features like fragmentation or routing.\n(c) They must be processed by every router in the path.\n\nPick a choice:",
+    "options": [
+      "b",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "IPv6 extension headers follow the base header for optional features. Not all extension headers must be processed by every router, and they do not replace the entire IPv6 base header."
+  },
+  {
+    "question": "47. Which statements about ICMPv6 are correct?\n\n(a) It replaces ARP with Neighbor Discovery in IPv6.\n(b) It is never used for error reporting.\n(c) It includes features for router solicitation/advertisement.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "ICMPv6 merges ARP functionality with neighbor discovery. It is also used for error reporting, so (b) is false."
+  },
+  {
+    "question": "48. Which are properties of the IP service model?\n\n(a) It guarantees in-order delivery.\n(b) It provides best-effort delivery.\n(c) It does not guarantee reliable delivery.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "IP is best-effort and does not guarantee reliability or order. So (b) and (c) are correct, (a) is false."
+  },
+  {
+    "question": "49. Which statements about routing vs. forwarding are true?\n\n(a) Forwarding is the act of moving packets from input to output within a router.\n(b) Routing is determining the path across the network.\n(c) Forwarding is an end-to-end function, while routing is a per-router function.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Forwarding is local to a router (input to output). Routing finds entire paths. (c) is reversed: forwarding is per-router, routing is network-wide."
+  },
+  {
+    "question": "50. Which statements about the time-to-live (TTL) field in IPv4 are correct?\n\n(a) It decrements by one at each hop.\n(b) When it reaches zero, the packet is dropped.\n(c) It identifies which transport protocol is in use.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "TTL is decremented each hop and the packet is dropped at zero. It does not identify the transport protocol."
+  },
+  {
+    "question": "51. Which statements about IPv4 addressing are correct?\n\n(a) Classful addressing is still universally used.\n(b) CIDR uses notation like /24 to define the subnet portion.\n(c) NAT modifies the source IP of outgoing traffic.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Classful addressing is mostly replaced by CIDR. NAT modifies source IP (and possibly port)."
+  },
+  {
+    "question": "52. Which statements about DHCP\u2019s Offer message are correct?\n\n(a) It is unicast directly to the client\u2019s MAC.\n(b) It typically includes the proposed IP address and lease time.\n(c) It includes the domain name of the client.\n\nPick a choice:",
+    "options": [
+      "b",
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "A DHCP Offer includes the IP address lease info. Usually it\u2019s broadcast or unicast to an IP of 0.0.0.0, not specifically to the client\u2019s MAC at layer 2 in typical practice. Domain name is optional or not always present."
+  },
+  {
+    "question": "53. Which statements about link-layer broadcast addresses are correct?\n\n(a) They are used by ARP requests.\n(b) They are used by DNS queries.\n(c) They have all bits set to 1 in the MAC address.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "ARP requests typically use the MAC broadcast (FF:FF:FF:FF:FF:FF). DNS queries do not typically use link-layer broadcast."
+  },
+  {
+    "question": "54. Which statements about the transport-layer demultiplexing process are correct?\n\n(a) It uses source and destination port numbers.\n(b) It always uses the MAC address.\n(c) It can also use IP addresses for the socket ID.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Transport-layer demux can use (source IP, source port, destination IP, destination port). MAC addresses are link-layer specifics, not used by transport-level demux."
+  },
+  {
+    "question": "55. Which statements about ephemeral ports are correct?\n\n(a) They are used by clients for short-lived connections.\n(b) They are always below 1024.\n(c) The OS typically assigns them dynamically.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Ephemeral ports are usually in a range above 1024. They\u2019re assigned by the OS for client connections."
+  },
+  {
+    "question": "56. Which statements about the link-state routing algorithm are correct?\n\n(a) Each router floods link cost information to every other router.\n(b) It only uses local updates, never flooding.\n(c) Each router computes shortest paths to all subnets.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "In link-state, routers flood cost info and each router computes shortest paths using that global knowledge. (b) is false."
+  },
+  {
+    "question": "57. Which statements about the distance-vector routing algorithm are correct?\n\n(a) Routers periodically exchange distance vectors with neighbors.\n(b) It\u2019s robust against count-to-infinity issues.\n(c) Each router knows only the next hop and cost to reach each destination.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Distance-vector does risk count-to-infinity. Routers exchange vectors with neighbors and store next-hop info and cost."
+  },
+  {
+    "question": "58. Which statements about TCP's error detection are correct?\n\n(a) It uses a transport-layer checksum over segment data.\n(b) It relies on the IP-layer checksum.\n(c) If an error is detected, the segment is typically dropped, causing a retransmission.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "TCP includes its own checksum. IPv4 has a header checksum only, not covering the entire TCP segment. A bad TCP checksum leads to the segment being discarded."
+  },
+  {
+    "question": "59. Which statements about the MSS (Maximum Segment Size) in TCP are correct?\n\n(a) It\u2019s the largest amount of data that can fit in a TCP segment\u2019s payload.\n(b) It does not include TCP/IP headers.\n(c) It's negotiated during connection setup.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 3,
+    "explanation": "MSS is the maximum data portion. It excludes headers and can be negotiated in the SYN exchange."
+  },
+  {
+    "question": "60. Which statements about Round Robin queue scheduling are correct?\n\n(a) It always transmits the earliest arrived packet first.\n(b) It cycles through each queue in turn, sending one packet if available.\n(c) It might lead to per-class fairness under equal queues.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "Round Robin visits each queue in a cycle. If all classes are equally weighted, it can achieve fairness. Earliest arrival is FIFO, not RR."
+  },
+  {
+    "question": "61. Which statements regarding Weighted Fair Queueing (WFQ) are accurate?\n\n(a) A class with double the weight of another class gets about twice the share.\n(b) It eliminates queueing delay entirely.\n(c) It can manage multiple traffic classes simultaneously.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 2,
+    "explanation": "WFQ tries to allocate bandwidth proportionally to weights among classes. It doesn\u2019t remove queueing delay, but manages classes concurrently."
+  },
+  {
+    "question": "62. Which statements about head-of-line blocking in an input-queued router are correct?\n\n(a) It can be alleviated with crossbar switch scheduling.\n(b) It is beneficial for overall throughput.\n(c) It occurs even if some packets behind the front can go to free outputs.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Scheduling can reduce HOL blocking, which is otherwise detrimental. The front packet blocks subsequent packets that might otherwise move."
+  },
+  {
+    "question": "63. Which statements about IP addressing are valid?\n\n(a) Class A, B, C distinctions are strictly used in modern Internet.\n(b) CIDR allows variable-length subnet masks.\n(c) NAT can help reuse private address space.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, b",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Classful addressing is mostly obsolete. CIDR uses variable-length masks, and NAT allows private IP reuse."
+  },
+  {
+    "question": "64. Which statements about the IPv4 Header Checksum are correct?\n\n(a) It covers both header and payload.\n(b) It covers only the IP header fields.\n(c) It\u2019s recalculated at every router.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, b",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "IPv4\u2019s checksum covers only the header. Every router updates fields like TTL, requiring a new checksum calculation."
+  },
+  {
+    "question": "65. Which statements about DHCP\u2019s Request message are correct?\n\n(a) It\u2019s typically broadcast, confirming the chosen IP from the Offer.\n(b) It\u2019s unicast to the server.\n(c) It might include a requested parameters list.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The DHCP Request is usually broadcast to ensure the Offer from the selected server is confirmed. The message can request additional parameters, e.g., DNS servers."
+  },
+  {
+    "question": "66. Which statements about the TCP urgent pointer (URG) mechanism are correct?\n\n(a) It indicates priority data that should be delivered to the application immediately.\n(b) It informs the network layer to drop other packets.\n(c) The receiving application may use out-of-band data if URG is set.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "URG signals urgent data to the receiving application. The network layer does not drop other packets for URG."
+  },
+  {
+    "question": "67. Which statements about indefinite looping in the network layer are correct?\n\n(a) TTL/hop limit fields prevent infinite looping.\n(b) A routing protocol might converge incorrectly, causing loops.\n(c) IP forcibly reassembles fragments at each router to avoid loops.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "TTL halts indefinite looping. Routing issues can cause loops, but IP reassembly is done at the destination, not each router."
+  },
+  {
+    "question": "68. Which statements about TCP\u2019s congestion control are correct?\n\n(a) It uses packet loss as a primary congestion signal.\n(b) It cannot use variations in RTT to detect congestion.\n(c) It is an end-to-end control mechanism, not requiring router support.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 2,
+    "explanation": "TCP uses packet loss signals for congestion and can also consider RTT. It is end-to-end, no explicit router support required. So statement (b) is incorrect."
+  },
+  {
+    "question": "69. Which statements about reliability in TCP are correct?\n\n(a) TCP uses sequence numbers and cumulative ACKs.\n(b) Packets can still arrive out of order.\n(c) The receiver discards any out-of-order segments.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "TCP can handle out-of-order arrival by buffering. It does not simply discard them. So (c) is false."
+  },
+  {
+    "question": "70. Which statements about the IP ID (Identification) field are true?\n\n(a) It identifies fragments of the same original datagram.\n(b) It is used by TCP for flow control.\n(c) Routers use the ID field to reassemble fragments.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The ID field labels fragments belonging to the same datagram so the destination can reassemble them. It\u2019s not a TCP flow control mechanism."
+  },
+  {
+    "question": "71. Which statements about IPv4 header fields are correct?\n\n(a) The version field is 4 bits.\n(b) The source address is 128 bits.\n(c) The header length is measured in 32-bit words.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The version field (4 bits) indicates IPv4. The source address is 32 bits, not 128. The header length is in 32-bit words."
+  },
+  {
+    "question": "72. Which statements about the IP options field (in IPv4) are true?\n\n(a) It can carry timestamps or record routes.\n(b) It is fixed length.\n(c) Routers skip processing IP options.\n\nPick a choice:",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "a, b",
+      "a, c",
+      "b, c"
+    ],
+    "answer": 0,
+    "explanation": "The IP options field is variable length and can be processed by routers for functionalities like route recording or timestamps."
+  },
+  {
+    "question": "73. Which statements about the queueing delay at a router output port are correct?\n\n(a) It grows if the arrival rate to that port exceeds the link capacity.\n(b) It is prevented by NAT.\n(c) If the buffer is finite, packet drops can occur.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "a, b",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Queueing delay forms when arrivals exceed service rate. NAT has no direct effect on queueing. If the buffer is full, drops occur."
+  },
+  {
+    "question": "74. Which statements about IPv4\u2019s total length field are correct?\n\n(a) It includes header and data.\n(b) It is fixed at 65535.\n(c) It determines how large the entire IP datagram is.\n\nPick a choice:",
+    "options": [
+      "a, c",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The total length includes both the IP header and payload, telling the total size of the datagram. It can be up to 65535, not fixed at that value."
+  },
+  {
+    "question": "75. Which statements about the layered Internet architecture are correct?\n\n(a) The transport layer provides process-to-process communication.\n(b) The network layer ensures guaranteed delivery.\n(c) The link layer handles reliability end-to-end.\n\nPick a choice:",
+    "options": [
+      "a",
+      "b, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The network layer does best-effort delivery; the link layer provides reliability hop-by-hop, not end-to-end. The transport layer does process-to-process."
+  },
+  {
+    "question": "76. Which statements about IPv6\u2019s Next Header field are correct?\n\n(a) It\u2019s analogous to the IPv4 Protocol field.\n(b) It can indicate an extension header or a transport-layer protocol.\n(c) It is 16 bits wide.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "The Next Header is 8 bits, analogous to the IPv4 Protocol field, and can point to extension headers or a transport protocol."
+  },
+  {
+    "question": "77. Which statements about IP forwarding tables are true?\n\n(a) They include port numbers for demultiplexing.\n(b) They store network prefixes and corresponding outbound interfaces.\n(c) They rely on longest prefix match.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, b",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "Forwarding tables match on IP prefixes to choose output interfaces, often using longest prefix match. Port numbers are for transport-layer demux, not IP forwarding."
+  },
+  {
+    "question": "78. Which statements about the sending host\u2019s ARP table are correct?\n\n(a) It maps MAC addresses to IP addresses.\n(b) It caches IP-to-MAC mappings for the local network.\n(c) It is used by the transport layer.\n\nPick a choice:",
+    "options": [
+      "b",
+      "a, b",
+      "b, c",
+      "a, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "ARP tables map IP addresses to MAC addresses. The statement says \u201c(a) It maps MAC addresses to IP addresses,\u201d but ARP is actually IP->MAC. So (a) is reversed. (c) is not correct; ARP is used by the link layer/Internet stack to send frames."
+  },
+  {
+    "question": "79. Which statements about the DHCP \u201cACK\u201d message are correct?\n\n(a) It confirms the requested IP address for the client.\n(b) It is broadcast to all devices on the network.\n(c) It finalizes the lease.\n\nPick a choice:",
+    "options": [
+      "b, c",
+      "a, c",
+      "a, b",
+      "a, b, c"
+    ],
+    "answer": 1,
+    "explanation": "DHCP ACK finalizes the lease, confirming the IP address for the client. The ACK can be broadcast or unicast, depending on the environment, so (b) is not strictly always true."
+  },
+  {
+    "question": "80. Which statements about QUIC are correct?\n\n(a) It runs over UDP.\n(b) It merges transport and security handshakes in one round trip.\n(c) It requires a three-way handshake identical to TCP.\n\nPick a choice:",
+    "options": [
+      "a, b",
+      "a, c",
+      "b, c",
+      "a, b, c"
+    ],
+    "answer": 0,
+    "explanation": "QUIC is built on UDP and combines security and transport setup in a single handshake, not the TCP three-way handshake."
+  }
+]

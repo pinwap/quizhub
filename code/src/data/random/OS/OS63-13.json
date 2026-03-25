@@ -1,0 +1,101 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is a port?",
+    "options": [
+      { "statement": "A connection point", "istrue": true },
+      { "statement": "A type of memory", "istrue": false },
+      { "statement": "A disk controller", "istrue": false },
+      { "statement": "A CPU instruction", "istrue": false }
+    ],
+    "explanation": "A port is a connection interface between the computer and an I/O device."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a bus?",
+    "options": [
+      { "statement": "A group of wires and a communication protocol", "istrue": true },
+      { "statement": "A CPU instruction", "istrue": false },
+      { "statement": "A DMA controller", "istrue": false },
+      { "statement": "A disk partition", "istrue": false }
+    ],
+    "explanation": "A bus consists of physical wires and the protocol that governs data transfer."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How many daisy-chaining connections are possible with n devices?",
+    "options": [
+      { "statement": "n", "istrue": false },
+      { "statement": "n - 1", "istrue": true },
+      { "statement": "2n", "istrue": false },
+      { "statement": "n + 1", "istrue": false }
+    ],
+    "explanation": "Daisy-chaining supports n − 1 connections among n devices."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does PC in PCI stand for?",
+    "options": [
+      { "statement": "Peripheral Component", "istrue": true },
+      { "statement": "Processing Controller", "istrue": false },
+      { "statement": "Programmed Communication", "istrue": false },
+      { "statement": "Parallel Channel", "istrue": false }
+    ],
+    "explanation": "PCI stands for Peripheral Component Interconnect."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Figure 13.2 device I/O port locations on PCs (partial) — What is in this table?",
+    "options": [
+      { "statement": "Memory-mapped I/O", "istrue": true },
+      { "statement": "File allocation entries", "istrue": false },
+      { "statement": "Interrupt service routines", "istrue": false },
+      { "statement": "CPU scheduling entries", "istrue": false }
+    ],
+    "explanation": "The table lists memory-mapped I/O port locations for various devices."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Figure 13.4 Intel Pentium processor event-vector table — What is in this table?",
+    "options": [
+      { "statement": "Interrupt vector", "istrue": true },
+      { "statement": "Cache entries", "istrue": false },
+      { "statement": "TLB entries", "istrue": false },
+      { "statement": "CPU registers", "istrue": false }
+    ],
+    "explanation": "The event-vector table contains interrupt vectors pointing to interrupt service routines."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which one is a controller?",
+    "options": [
+      { "statement": "A circuit that operates a port", "istrue": false },
+      { "statement": "A circuit that operates a bus", "istrue": false },
+      { "statement": "A circuit that operates a device", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "Controllers manage ports, buses, and devices, making all choices correct."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the role of the control register?",
+    "options": [
+      { "statement": "It is read by the host to get device state", "istrue": false },
+      { "statement": "It maintains device buffer contents", "istrue": false },
+      { "statement": "It contains bits that can be read by the host", "istrue": false },
+      { "statement": "It is written by the host to start a command", "istrue": true }
+    ],
+    "explanation": "The control register is used by the host to issue commands to the device."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In Figure 13.5 steps in a DMA transfer — which step is correct?",
+    "options": [
+      { "statement": "CPU moves data directly", "istrue": false },
+      { "statement": "DMA controller transfers data to memory", "istrue": true },
+      { "statement": "Disk controller writes to cache only", "istrue": false },
+      { "statement": "CPU handles each byte transferred", "istrue": false }
+    ],
+    "explanation": "DMA transfers data between I/O devices and memory without CPU involvement."
+  }
+]

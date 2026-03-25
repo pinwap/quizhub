@@ -1,0 +1,222 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "Port number ที่มีค่าระหว่าง 0‑1023 มีชื่อเรียกว่าอะไร",
+    "options": [
+      { "statement": "Dynamic port", "istrue": false },
+      { "statement": "Well‑known port", "istrue": true },
+      { "statement": "Registered port", "istrue": false },
+      { "statement": "Standard port", "istrue": false }
+    ],
+    "explanation": "ช่วงพอร์ต 0‑1023 ถูกกำหนดโดย IANA ให้บริการโพรโทคอลมาตรฐาน จึงเรียกว่า Well‑known port. พอร์ต Dynamic/Private (49152‑65535) และ Registered (1024‑49151) อยู่คนละช่วง ส่วน “Standard port” ไม่ใช่ชื่ออย่างเป็นทางการ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ลักษณะการทำงานของ connection‑oriented คือข้อใด",
+    "options": [
+      { "statement": "นิยมกดโทรศัพท์เพื่อขอพูดกับเพื่อน เมื่อเพื่อนรับโทรศัพท์แล้ว ได้สนทนาแล้วเรียบร้อย นิยมจึงวางสาย", "istrue": true },
+      { "statement": "นิยมส่ง SMS ไปที่มือถือของเพื่อนเพื่อแจ้งข่าวการได้รับทุนการศึกษา", "istrue": false },
+      { "statement": "นิยมต้องการส่งข่าวการได้รับทุนการศึกษาไปให้เพื่อนจึงส่งอีเมลแจ้งให้เพื่อนทราบ", "istrue": false },
+      { "statement": "นิยมส่งข้อความไปหาเพื่อนทาง Line เพื่อแจ้งให้เพื่อนทราบว่านิยมเดินทางมาถึงที่นัดหมายแล้ว", "istrue": false }
+    ],
+    "explanation": "Connection‑oriented ต้อง “เชื่อมต่อ‑สื่อสาร‑ปิด” เหมือนการโทรศัพท์ที่มีการรับสายก่อนคุย ตัวเลือกอื่น (SMS, อีเมล, ข้อความ Line) เป็นแบบไม่ต้องสร้างช่องทางล่วงหน้า (connectionless)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "กำหนดให้หัวข้อ UDP เป็น “001E000B001C0014” จงหาความยาวของข้อมูล (data)",
+    "options": [
+      { "statement": "10 ไบต์", "istrue": false },
+      { "statement": "40 ไบต์", "istrue": false },
+      { "statement": "20 ไบต์", "istrue": true },
+      { "statement": "30 ไบต์", "istrue": false }
+    ],
+    "explanation": "ฟิลด์ Length (ไบต์ที่ 5‑6) = 0x001C = 28 ไบต์ รวมส่วนหัว 8 ไบต์ → ข้อมูล = 28 ‑ 8 = 20 ไบต์. ค่าที่เหลือจึงไม่ถูก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำ error control ของข้อมูลที่ส่ง มีการดำเนินการในระดับใด",
+    "options": [
+      { "statement": "Transport layer และ Network layer", "istrue": false },
+      { "statement": "Data‑link layer และ Transport layer", "istrue": true },
+      { "statement": "Data‑link layer และ Network layer", "istrue": false },
+      { "statement": "Data‑link layer และ Physical layer", "istrue": false }
+    ],
+    "explanation": "Data‑link ตรวจสอบบิตผิดพลาดเฟรมต่อเฟรม (เช่น CRC) ส่วน Transport (TCP) ตรวจสอบ‑แก้ไขด้วย checksum และ ACK/NAK. Network layer (IP) และ Physical layer ไม่ทำ error control โดยตรง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "โพรโทคอลใดต่อไปนี้มีการเชื่อมต่อแบบ connection‑oriented",
+    "options": [
+      { "statement": "IP", "istrue": false },
+      { "statement": "HTTP", "istrue": true },
+      { "statement": "UDP", "istrue": false },
+      { "statement": "ICMP", "istrue": false }
+    ],
+    "explanation": "HTTP ทำงานบน TCP ซึ่งสร้าง “การเชื่อมต่อ” ก่อนรับ‑ส่งเอกสาร จึงถือว่าเป็น connection‑oriented. IP, UDP, และ ICMP เป็น connectionless"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การบริการของ UDP ชนิด process‑to‑process อาศัยข้อมูลใด",
+    "options": [
+      { "statement": "IP address", "istrue": false },
+      { "statement": "Port address", "istrue": false },
+      { "statement": "Socket address", "istrue": true },
+      { "statement": "MAC address", "istrue": false }
+    ],
+    "explanation": "UDP จัดเป็นโพรโทคอล process‑to‑process จึงอาศัย socket address ซึ่งประกอบด้วย IP address และ port number ในการระบุต้นทางและปลายทางของแต่ละ process บนโฮสต์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารใดเป็นแบบ connectionless",
+    "options": [
+      { "statement": "นิยมโทรศัพท์ไปหาเพื่อนเพื่อคุยเรื่องงาน", "istrue": false },
+      { "statement": "นิยมใช้ Line โทรไปหาเพื่อนเพื่อคุยเรื่องงาน", "istrue": false },
+      { "statement": "นิยมส่งข้อความจาก Line ไปหาเพื่อน", "istrue": true },
+      { "statement": "การสั่งสแกนเอกสารด้วยเครื่อง scanner สู่เครื่องคอมพิวเตอร์", "istrue": false }
+    ],
+    "explanation": "การส่งข้อความ LINE ไม่ต้องสร้างช่องทางสื่อสารล่วงหน้า ส่งแล้วจบ จึงเป็น connectionless. การโทร (โทรศัพท์หรือ Line Call) ต้องตั้งสายก่อน‑คุย‑วาง จัดเป็น connection‑oriented"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารใดเป็นแบบ connection‑oriented",
+    "options": [
+      { "statement": "นิยมส่งอีเมลไปหาเพื่อนที่อเมริกา", "istrue": false },
+      { "statement": "นิยมใช้ Line โทรไปหาเพื่อนเพื่อคุยเรื่องงาน", "istrue": true },
+      { "statement": "การสั่งสแกนเอกสารด้วยเครื่อง scanner สู่เครื่องคอมพิวเตอร์", "istrue": false },
+      { "statement": "นิยมส่งข้อความจาก Line ไปหาเพื่อน", "istrue": false }
+    ],
+    "explanation": "Line Call ต้องตั้งสาย (เชื่อมต่อ) ก่อนสนทนา แล้ววางสายเมื่อเสร็จ จึงเป็น connection‑oriented. อีเมลและข้อความ LINE เป็น connectionless"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "จาก UDP header “001E000B001C0014” ค่า destination port number เป็นเท่าใด",
+    "options": [
+      { "statement": "11", "istrue": true },
+      { "statement": "29", "istrue": false },
+      { "statement": "20", "istrue": false },
+      { "statement": "28", "istrue": false }
+    ],
+    "explanation": "บิตที่ 3‑4 (0x000B) = 11 in decimal คือพอร์ตปลายทาง. ค่าตัวเลือกอื่นไม่ตรงกับค่า header"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อปลายทางรับข้อมูลเรียบร้อย จะต้องส่งสิ่งใดกลับมาที่ต้นทาง",
+    "options": [
+      { "statement": "ACK", "istrue": true },
+      { "statement": "NCK", "istrue": false },
+      { "statement": "Flag", "istrue": false },
+      { "statement": "CRC", "istrue": false }
+    ],
+    "explanation": "ACK (Acknowledgement) เป็นข้อความตอบกลับจากปลายทางเพื่อยืนยันว่าข้อมูลถูกต้องและรับเรียบร้อย ส่วน NCK ไม่ใช่มาตรฐาน, Flag เป็นแค่บิตสถานะ และ CRC เป็นวิธีตรวจสอบความถูกต้อง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้กล่าวถูกต้อง",
+    "options": [
+      { "statement": "หากมีการทำงานหลาย application ที่มีการส่งข้อมูลในเวลาเดียวกัน จำเป็นต้องใช้ช่องส่งสัญญาณหลาย ช่องเพื่อส่งข้อมูลพร้อมกัน", "istrue": false },
+      { "statement": "กลไกการ push ข้อมูลในระดับ Transport layer จะกระทำเมื่อปลายทางพร้อมรับข้อมูล", "istrue": false },
+      { "statement": "หากมีการทำงานหลาย application ที่มีการส่งข้อมูลในเวลาเดียวกัน จำเป็นจะต้องมี multiplexer เพื่อรวมสัญญาณข้อมูลทุกแหล่งก่อนการส่งสู่ช่องทางการสื่อสาร", "istrue": true },
+      { "statement": "กลไกการ pulling ข้อมูลในระดับ Transport layer เกิดเมื่ออุปกรณ์ต้นทางมีข้อมูลเพื่อกระจาย", "istrue": false }
+    ],
+    "explanation": "การ multiplexing คือการรวมข้อมูลจากหลาย application ลงในช่องทางเดียว ก่อนส่งต่อผ่าน transport layer จึงต้องใช้ multiplexer. ตัวเลือกอื่นไม่ตรงกับหน้าที่จริง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Buffer เพื่อควบคุมการไหลของข้อมูลจะต้องติดตั้งไว้ ณ ที่ใด",
+    "options": [
+      { "statement": "Network layer ของผู้ส่งและผู้รับข้อมูล", "istrue": false },
+      { "statement": "Transport layer ของผู้ส่งและผู้รับข้อมูล", "istrue": true },
+      { "statement": "Data‑link layer ของผู้ส่งและผู้รับข้อมูล", "istrue": false },
+      { "statement": "Application layer ของผู้ส่งและผู้รับข้อมูล", "istrue": false }
+    ],
+    "explanation": "Flow control เช่น sliding window ดำเนินการใน transport layer (TCP) จึงต้องมี buffer ทั้งฝั่งส่งและรับที่ชั้นนี้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การบริหารจัดการความผิดพลาดใน Transport layer แก้ไขด้วยวิธีใด",
+    "options": [
+      { "statement": "ใช้ flag และ sequence number", "istrue": false },
+      { "statement": "ใช้ sequence number และ acknowledgement", "istrue": true },
+      { "statement": "ใช้ port number และ sequence number", "istrue": false },
+      { "statement": "ใช้ CRC และ acknowledgement", "istrue": false }
+    ],
+    "explanation": "TCP ใช้ sequence number เพื่อติดตามลำดับ และ acknowledgement (ACK) เพื่อยืนยันหรือขอส่งซ้ำเมื่อเกิดข้อผิดพลาด. Flag แค่บอกสถานะ, CRC อยู่ lower layer"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer ณ แหล่งส่งข้อมูลต้นทางที่มีหน้าที่เป็น consumer จะทำงานอย่างไร",
+    "options": [
+      { "statement": "ถอดการหุ้มห่อข้อมูล (decapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ Application layer", "istrue": false },
+      { "statement": "รับข้อมูลจาก Application layer เพื่อส่งต่อไปหุ้มห่อ (encapsulate) ในระดับ Transport layer", "istrue": true },
+      { "statement": "หุ้มห่อข้อมูล (encapsulate) ณ Transport layer เพื่อส่งข้อมูลต่อไปให้ Network layer ทำงานต่อไป", "istrue": false },
+      { "statement": "รับข้อมูลจาก Network layer เพื่อส่งต่อไปสู่การ decapsulate", "istrue": false }
+    ],
+    "explanation": "ในฝั่งต้นทาง transport layer ทำหน้าที่รับข้อมูลจาก application layer แล้วทำการ encapsulation เพื่อเตรียมส่งต่อให้ network layer ทำงานต่อไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การทำ multiplexing กระทำ ณ จุดใด",
+    "options": [
+      { "statement": "Transport layer ที่ฝั่งผู้รับ (Message receiver)", "istrue": false },
+      { "statement": "Router queue", "istrue": false },
+      { "statement": "Transport layer ที่ฝั่งผู้ส่ง (Message sender)", "istrue": true },
+      { "statement": "Forwarding table", "istrue": false }
+    ],
+    "explanation": "Multiplexing คือการรวมข้อมูลจากหลาย process เข้าช่องทางเดียวเกิดขึ้นที่ transport layer ฝั่งผู้ส่ง ส่วนฝั่งรับเป็น demultiplexing"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเกิดสภาวะ congestion ณ Network layer เกิดจากอะไร",
+    "options": [
+      { "statement": "เป็นผลจากการควบคุมการไหล (Flow control) ที่ไม่มีประสิทธิภาพ", "istrue": false },
+      { "statement": "เป็นผลจากการเกิด congestion ในระดับ Transport layer", "istrue": true },
+      { "statement": "เป็นผลจากการเกิดการส่งข้อมูลในปริมาณมาก ๆ พร้อม ๆ กัน", "istrue": false },
+      { "statement": "เป็นผลจากการเกิด congestion ในช่องทางการสื่อสาร", "istrue": false }
+    ],
+    "explanation": "Network layer มักอาศัยสัญญาณจาก transport layer (เช่น ECN หรือ TCP congestion notification) ในการตรวจจับและจัดการ congestion จึงกล่าวได้ว่าสภาวะ congestion ใน network layer เกิดจากการแจ้งเตือนจาก transport layer"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Congestion เกิดในกรณีใดต่อไปนี้ที่ถูกที่สุด",
+    "options": [
+      { "statement": "เมื่อปริมาณของข้อมูลต้นทางมีปริมาณมากกว่าปริมาณข้อมูลที่ปลายทางสามารถรับได้", "istrue": false },
+      { "statement": "ความจุที่ช่องทางการสื่อสารสามารถรับได้", "istrue": false },
+      { "statement": "เมื่อปริมาณข้อมูลที่ส่งในช่องทางการสื่อสารมีมากกว่าขนาดของความจุที่ช่องทางการสื่อสารสามารถรับได้", "istrue": true },
+      { "statement": "เมื่อปริมาณของข้อมูลต้นทางมีมากกว่า", "istrue": false }
+    ],
+    "explanation": "นิยามของ congestion คือทราฟฟิกผ่านช่องทางเกินกว่าความจุ (capacity) ที่ช่องทางจะรับได้ จึงตรงกับตัวเลือกที่ 3"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ลักษณะการทำงานของ connectionless คือข้อใด",
+    "options": [
+      { "statement": "นิยมโทรศัพท์ไปหาเพื่อนทาง Messenger เพื่อแจ้งให้เพื่อนทราบว่าได้รับทุนการศึกษาแล้ว", "istrue": false },
+      { "statement": "นิยมได้ข่าวว่าเพื่อนได้รับทุนการศึกษาจึงเขียน Line แจ้งให้เพื่อนทราบ", "istrue": true },
+      { "statement": "นิยมโทร Line ไปหาเพื่อนเพื่อแจ้งว่าได้รับทุน เมื่อเพื่อนรับการโทรทาง Line เรียบร้อยจึงวางสายไป", "istrue": false },
+      { "statement": "นิยมเชื่อมต่อโทรศัพท์มือถือกับเครื่องคอมพิวเตอร์เพื่อถ่ายโอนวิดีโอ เมื่อสิ้นสุดการถ่ายโอนแล้วจึงตัดการเชื่อมต่อ", "istrue": false }
+    ],
+    "explanation": "การส่งข้อความ Line แบบสั้นไม่ต้องสร้างช่องทางสื่อสารล่วงหน้า ส่งแล้วเสร็จทันที (connectionless) ต่างจาก Line Call ที่ต้องตั้งสายก่อนคุย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Transport layer จะเป็นผู้รับบริการจากระดับใด",
+    "options": [
+      { "statement": "Application layer", "istrue": false },
+      { "statement": "Network layer", "istrue": true },
+      { "statement": "Physical layer", "istrue": false },
+      { "statement": "Data‑link layer", "istrue": false }
+    ],
+    "explanation": "ในโมเดล OSI/TCP‑IP transport layer ใช้บริการจาก network layer (IP) เพื่อส่ง segment ต่อไปยัง hop ถัดไป และให้บริการต่อ application layer"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Private ports มีชื่อเรียกอีกชื่อหนึ่งว่าอะไร",
+    "options": [
+      { "statement": "Standard ports", "istrue": false },
+      { "statement": "Well‑known ports", "istrue": false },
+      { "statement": "Registered ports", "istrue": false },
+      { "statement": "Dynamic ports", "istrue": true }
+    ],
+    "explanation": "ช่วง 49152‑65535 เรียกว่า Dynamic หรือ Private ports ใช้สำหรับพอร์ตชั่วคราวโดยระบบ. Well‑known (0‑1023) และ Registered (1024‑49151) เป็นกลุ่มอื่น"
+  }
+]

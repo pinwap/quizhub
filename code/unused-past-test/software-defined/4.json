@@ -1,0 +1,1106 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรมแบบ 'Monolith' หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "การสร้างแอปพลิเคชันโดยแบ่งเป็นบริการย่อยๆ ที่ทำงานเป็นอิสระต่อกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การสร้างแอปพลิเคชันโดยที่ทุกฟังก์ชันและส่วนประกอบถูกรวมอยู่ในโปรเจกต์เดียวกันทั้งหมด",
+        "istrue": true
+      },
+      {
+        "statement": "สถาปัตยกรรมที่ใช้สำหรับแอปพลิเคชันบนมือถือเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "สถาปัตยกรรมที่เน้นการใช้ฐานข้อมูลหลายๆ ตัว",
+        "istrue": false
+      }
+    ],
+    "explanation": "Monolith (โมโน แปลว่า หนึ่งเดียว) คือแนวทางการสร้างซอฟต์แวร์โดยรวมทุกอย่างไว้เป็นก้อนเดียวกันในโค้ดเบสและโปรแกรมที่ทำงานเพียงตัวเดียว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อดีของสถาปัตยกรรมแบบ Monolith โดยเฉพาะในช่วงเริ่มต้นของการพัฒนา?",
+    "options": [
+      {
+        "statement": "มีความยืดหยุ่นในการเลือกใช้เทคโนโลยีสูง",
+        "istrue": false
+      },
+      {
+        "statement": "ง่ายต่อการทำความเข้าใจ, เริ่มต้นได้ง่าย, และเหมาะกับทีมขนาดเล็ก",
+        "istrue": true
+      },
+      {
+        "statement": "สามารถอัปเดตแต่ละฟังก์ชันได้อย่างอิสระ",
+        "istrue": false
+      },
+      {
+        "statement": "มีความทนทานต่อความล้มเหลวสูงมาก",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในช่วงเริ่มต้น Monolith มีความเรียบง่าย ทำให้ทีมขนาดเล็กสามารถพัฒนาและนำผลิตภัณฑ์ออกสู่ตลาดได้อย่างรวดเร็ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหาใดที่มักจะเกิดขึ้นเมื่อแอปพลิเคชันแบบ Monolith ประสบความสำเร็จและเติบโตขึ้น?",
+    "options": [
+      {
+        "statement": "ประสิทธิภาพของแอปพลิเคชันจะลดลงอย่างรวดเร็ว",
+        "istrue": false
+      },
+      {
+        "statement": "การทดสอบและติดตั้ง (Deployment) กลายเป็นเรื่องที่ใช้เวลานานและมีความเสี่ยงสูง",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่สามารถเพิ่มฟังก์ชันใหม่ๆ เข้าไปได้อีก",
+        "istrue": false
+      },
+      {
+        "statement": "ค่าใช้จ่ายในการดูแลรักษาจะลดลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "เนื่องจากการเปลี่ยนแปลงเล็กน้อยจำเป็นต้องทดสอบและติดตั้งแอปพลิเคชันใหม่ทั้งหมด ทำให้กระบวนการนี้กลายเป็นคอขวดที่ช้าและเสี่ยงต่อการทำให้ส่วนอื่นพัง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหา 'Technology stack becomes obsolete' ในสถาปัตยกรรม Monolith หมายถึงอะไร?",
+    "options": [
+      {
+        "statement": "นักพัฒนาไม่สามารถเรียนรู้เทคโนโลยีใหม่ๆ ได้",
+        "istrue": false
+      },
+      {
+        "statement": "แอปพลิเคชันจะ 'ติดกับ' เทคโนโลยีที่เลือกใช้ในวันแรก ทำให้ยากต่อการนำเทคโนโลยีใหม่ๆ ที่ดีกว่ามาปรับใช้",
+        "istrue": true
+      },
+      {
+        "statement": "เทคโนโลยีที่ใช้จะหยุดการสนับสนุนจากผู้ผลิต",
+        "istrue": false
+      },
+      {
+        "statement": "ต้องจ่ายค่าลิขสิทธิ์เทคโนโลยีแพงขึ้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "Monolith ผูกมัดทุกส่วนประกอบไว้กับเทคโนโลยีเดียวกัน ทำให้ไม่สามารถเลือกใช้เทคโนโลยีที่เหมาะสมกับแต่ละงานย่อยๆ ได้ และการปรับเปลี่ยนทั้งระบบก็มีค่าใช้จ่ายสูงมาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "แนวคิดหลักของ 'Microservice Architecture' คืออะไร?",
+    "options": [
+      {
+        "statement": "การรวมทุก Service เข้าด้วยกันเพื่อเพิ่มประสิทธิภาพ",
+        "istrue": false
+      },
+      {
+        "statement": "การ 'ทุบ' แอปพลิเคชันก้อนใหญ่ออกมาเป็นบริการย่อยๆ ที่ทำงานเป็นอิสระต่อกัน",
+        "istrue": true
+      },
+      {
+        "statement": "การเขียนแอปพลิเคชันทั้งหมดด้วยภาษาโปรแกรมขนาดเล็ก",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ Microcomputer ในการรันแอปพลิเคชัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "หัวใจของ Microservices คือการแบ่งแยก (Decomposition) แอปพลิเคชันขนาดใหญ่ออกเป็นส่วนประกอบย่อยๆ ที่จัดการได้ง่ายและเป็นอิสระต่อกัน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือคุณสมบัติที่สำคัญที่สุดของ Microservices ที่ช่วยให้องค์กรมีความคล่องตัว (Agility)?",
+    "options": [
+      {
+        "statement": "ทุก Service ต้องเขียนด้วยภาษาเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "แต่ละ Service สามารถพัฒนา, ทดสอบ, และติดตั้งได้อย่างอิสระ และสามารถเลือกใช้เทคโนโลยีที่เหมาะสมกับตัวเองได้",
+        "istrue": true
+      },
+      {
+        "statement": "ทุก Service ต้องใช้ฐานข้อมูลร่วมกัน",
+        "istrue": false
+      },
+      {
+        "statement": "มีขนาดของโค้ดที่น้อยกว่า Monolith เสมอ",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความเป็นอิสระ (Independence) และความสามารถในการเลือกใช้เทคโนโลยีที่หลากหลาย (Polyglot) คือสิ่งที่ช่วยให้แต่ละทีมสามารถทำงานและส่งมอบนวัตกรรมได้อย่างรวดเร็วโดยไม่ต้องรอทีมอื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การสื่อสารระหว่างเซอร์วิสแบบ 'Synchronous' มีลักษณะอย่างไร?",
+    "options": [
+      {
+        "statement": "เซอร์วิสผู้ส่งจะส่งข้อความออกไปแล้วทำงานต่อทันทีโดยไม่รอคำตอบ",
+        "istrue": false
+      },
+      {
+        "statement": "เซอร์วิสผู้ส่งจะส่งคำร้องขอแล้ว 'หยุดรอ' จนกว่าจะได้รับคำตอบกลับมาจึงจะทำงานต่อ",
+        "istrue": true
+      },
+      {
+        "statement": "เป็นการสื่อสารทางเดียวเท่านั้น",
+        "istrue": false
+      },
+      {
+        "statement": "เป็นการสื่อสารผ่านการเขียนไฟล์ลงในฐานข้อมูลกลาง",
+        "istrue": false
+      }
+    ],
+    "explanation": "Synchronous communication เป็นการสื่อสารแบบ Request/Reply ที่ผู้เรียก (caller) จะถูกบล็อก (block) จนกว่าจะได้รับการตอบกลับ เปรียบได้กับการโทรศัพท์"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคโนโลยีใดที่นิยมใช้สำหรับการสื่อสารแบบ Synchronous ใน Microservices?",
+    "options": [
+      {
+        "statement": "Email และ SMS",
+        "istrue": false
+      },
+      {
+        "statement": "Message Queue",
+        "istrue": false
+      },
+      {
+        "statement": "REST และ gRPC",
+        "istrue": true
+      },
+      {
+        "statement": "FTP และ Telnet",
+        "istrue": false
+      }
+    ],
+    "explanation": "REST เป็นสไตล์การออกแบบที่นิยมมากที่สุดเนื่องจากความเรียบง่าย ในขณะที่ gRPC เป็นทางเลือกที่ให้ประสิทธิภาพสูงกว่าสำหรับการสื่อสารภายใน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "REST API ใช้ HTTP Method ใดในการสร้างข้อมูลใหม่ (Create)?",
+    "options": [
+      {
+        "statement": "GET",
+        "istrue": false
+      },
+      {
+        "statement": "POST",
+        "istrue": true
+      },
+      {
+        "statement": "PUT",
+        "istrue": false
+      },
+      {
+        "statement": "DELETE",
+        "istrue": false
+      }
+    ],
+    "explanation": "ตามหลักการของ REST, HTTP Method `POST` ถูกใช้สำหรับการสร้างทรัพยากรใหม่ (Create) ซึ่งเป็นส่วนหนึ่งของการทำ CRUD operations"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด gRPC จึงมีประสิทธิภาพสูงกว่า REST?",
+    "options": [
+      {
+        "statement": "เพราะทำงานบนโปรโตคอล TCP แทน HTTP",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะใช้รูปแบบข้อมูลแบบ Binary (Protocol Buffer) ซึ่งมีขนาดเล็กและประมวลผลได้เร็วกว่า JSON",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะถูกสร้างโดย Google",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะไม่ต้องใช้เครือข่ายในการสื่อสาร",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้ Protocol Buffer ซึ่งเป็น binary format ทำให้ gRPC ลดขนาดข้อมูลที่ต้องส่งผ่านเครือข่ายและลดเวลาในการ serialize/deserialize เมื่อเทียบกับ JSON ที่เป็น text-based"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อเสียหรือความท้าทายที่ใหญ่ที่สุดของสถาปัตยกรรมแบบ Microservices คืออะไร?",
+    "options": [
+      {
+        "statement": "ประสิทธิภาพในการทำงานต่ำ",
+        "istrue": false
+      },
+      {
+        "statement": "ความซับซ้อน (Complexity) ที่เพิ่มขึ้นอย่างมากจากการจัดการระบบแบบกระจาย",
+        "istrue": true
+      },
+      {
+        "statement": "ไม่สามารถขยายระบบ (Scale) ได้",
+        "istrue": false
+      },
+      {
+        "statement": "บังคับให้ต้องใช้เทคโนโลยีของบริษัทเดียวเท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "การเปลี่ยนจากแอปพลิเคชันก้อนเดียวมาเป็นระบบแบบกระจาย (Distributed System) ทำให้เกิดความท้าทายใหม่ๆ ในการจัดการ, การทดสอบ, และการหาต้นตอของปัญหา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เทคโนโลยีใดที่เปรียบเสมือน 'จิ๊กซอว์ชิ้นสุดท้าย' ที่เข้ามาช่วยจัดการกับความซับซ้อนของ Microservices?",
+    "options": [
+      {
+        "statement": "Monolithic Architecture",
+        "istrue": false
+      },
+      {
+        "statement": "Containers",
+        "istrue": true
+      },
+      {
+        "statement": "Relational Databases",
+        "istrue": false
+      },
+      {
+        "statement": "Mainframe Computers",
+        "istrue": false
+      }
+    ],
+    "explanation": "Containers เข้ามาช่วยแก้ปัญหาโดยการ 'ห่อหุ้ม' microservice แต่ละตัวให้อยู่ในแพ็กเกจมาตรฐาน ทำให้ง่ายต่อการจัดการ, ติดตั้ง, และเคลื่อนย้าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เหตุใด Containers จึงเหมาะสมกับการเป็น 'บ้าน' ให้ Microservices มากกว่า Virtual Machines (VMs)?",
+    "options": [
+      {
+        "statement": "เพราะ Containers มีความปลอดภัยสูงกว่า VMs ในทุกกรณี",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Containers เบากว่า, เริ่มทำงานเร็วกว่า, และใช้ทรัพยากรน้อยกว่า VMs มาก",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะ VMs ไม่สามารถเชื่อมต่อเครือข่ายได้",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Containers สามารถรันได้ทุกระบบปฏิบัติการโดยไม่ต้องมี OS เลย",
+        "istrue": false
+      }
+    ],
+    "explanation": "คุณสมบัติที่เบาและเร็วของ Container ทำให้สามารถรัน microservice หลายสิบตัวบนเครื่องเดียวได้อย่างมีประสิทธิภาพ ซึ่งเป็นไปได้ยากสำหรับ VM ที่มี overhead สูง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "สถาปัตยกรรมสมัยใหม่ที่ทรงพลังประกอบด้วย 'สามทหารเสือ' อะไรบ้าง?",
+    "options": [
+      {
+        "statement": "Monolith, VMs, และ Waterfall",
+        "istrue": false
+      },
+      {
+        "statement": "Microservices, Containers, และ Container Orchestration",
+        "istrue": true
+      },
+      {
+        "statement": "REST, JSON, และ gRPC",
+        "istrue": false
+      },
+      {
+        "statement": "Java, Python, และ Go",
+        "istrue": false
+      }
+    ],
+    "explanation": "Microservices (แนวคิดการออกแบบ), Containers (เทคโนโลยีการแพ็ก), และ Container Orchestration (เทคโนโลยีการจัดการ) คือสามองค์ประกอบหลักของระบบ Cloud-Native ที่ทันสมัย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในกรณีศึกษา Uber Todo Service, การที่ Backend เขียนด้วย Python และ Frontend เขียนด้วย Javascript เป็นตัวอย่างของแนวคิดใด?",
+    "options": [
+      {
+        "statement": "Monolithic Architecture",
+        "istrue": false
+      },
+      {
+        "statement": "Tightly coupled",
+        "istrue": false
+      },
+      {
+        "statement": "Mix platform หรือ Platform independent",
+        "istrue": true
+      },
+      {
+        "statement": "Synchronous communication",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือข้อดีที่สำคัญของ Microservices ที่แต่ละทีมสามารถเลือกใช้เทคโนโลยีที่เหมาะสมที่สุดสำหรับ service ของตนเองได้ ตราบใดที่ยังสื่อสารกันผ่าน API ที่เป็นมาตรฐาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ใน Lab, การรันคำสั่ง `git checkout release-1.3` มีความสำคัญอย่างไร?",
+    "options": [
+      {
+        "statement": "เพื่อลบ repository ทิ้ง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้แน่ใจว่าซอร์สโค้ดที่ใช้นั้นตรงกับเวอร์ชันที่ระบุไว้ในขั้นตอนของ Lab",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อสร้างเวอร์ชันใหม่ชื่อ release-1.3",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อดาวน์โหลดโค้ดเวอร์ชันล่าสุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "การ checkout ไปยัง tag หรือ version ที่เจาะจงเป็นขั้นตอนสำคัญเพื่อให้แน่ใจว่าผู้ที่ทำตาม lab จะมีโค้ดตั้งต้นที่เหมือนกันและได้ผลลัพธ์ที่คาดหวัง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อ `todo` service ถูกอัปเกรดให้ใช้ Redis เป็นฐานข้อมูล, `webapp` (Frontend) จำเป็นต้องเปลี่ยนแปลงโค้ดหรือไม่?",
+    "options": [
+      {
+        "statement": "จำเป็น, ต้องเขียนโค้ดใหม่ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "ไม่จำเป็น, เพราะ Frontend ยังคงเรียกใช้ API ที่ endpoint เดิม โดยไม่จำเป็นต้องรู้การเปลี่ยนแปลงเบื้องหลัง",
+        "istrue": true
+      },
+      {
+        "statement": "จำเป็น, ต้องเปลี่ยนภาษาจาก Javascript เป็น Python",
+        "istrue": false
+      },
+      {
+        "statement": "จำเป็น, ต้องเปลี่ยนไปเรียก Redis โดยตรง",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือพลังของหลักการ Encapsulation (การห่อหุ้ม) และ Separation of Concerns (การแบ่งแยกหน้าที่) ที่ทำให้สามารถอัปเกรด service หนึ่งได้อย่างอิสระโดยไม่กระทบ service อื่น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การใช้ User-Defined Network (เช่น `todo-net`) ช่วยแก้ปัญหาการเชื่อมต่อระหว่าง Container ได้อย่างไร?",
+    "options": [
+      {
+        "statement": "ทำให้ Container ทุกตัวมี IP Address เดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "Docker จะมีระบบ DNS ภายในให้ ทำให้ Container สามารถรู้จักและสื่อสารกันผ่าน 'ชื่อ' Service ได้",
+        "istrue": true
+      },
+      {
+        "statement": "ทำให้ Container สามารถเชื่อมต่ออินเทอร์เน็ตได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ไม่ต้องใช้ Docker Compose",
+        "istrue": false
+      }
+    ],
+    "explanation": "User-defined bridge networks มีระบบ DNS service discovery ในตัว ซึ่งเป็นคุณสมบัติที่สำคัญที่ช่วยให้การเชื่อมต่อระหว่าง service มีความเสถียรและไม่ต้องผูกติดกับ IP address ที่เปลี่ยนแปลงได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือประโยชน์ด้านความปลอดภัยของการใช้ User-Defined Network?",
+    "options": [
+      {
+        "statement": "ทำให้สามารถเชื่อมต่อ Redis โดยใช้ชื่อ 'redis' ได้ โดยไม่จำเป็นต้องเปิด Port ของ Redis สู่ภายนอก",
+        "istrue": true
+      },
+      {
+        "statement": "เข้ารหัสข้อมูลทั้งหมดในเครือข่าย",
+        "istrue": false
+      },
+      {
+        "statement": "ป้องกันไวรัส",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้ Container ทุกตัวทำงานในโหมด read-only",
+        "istrue": false
+      }
+    ],
+    "explanation": "การสื่อสารกันภายใน network ทำให้เราไม่จำเป็นต้อง publish port ของ service ภายใน (เช่น database) ออกสู่เครื่อง host ซึ่งช่วยลดพื้นผิวการโจมตี (Attack Surface) ได้อย่างมาก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การควบคุมเวอร์ชันของ Infrastructure โดยใช้ไฟล์ `docker-compose.yml` มีประโยชน์อย่างไรเมื่อเกิดปัญหา?",
+    "options": [
+      {
+        "statement": "ไฟล์จะทำการแก้ไขปัญหาให้โดยอัตโนมัติ",
+        "istrue": false
+      },
+      {
+        "statement": "ทำให้สามารถ 'Rollback' หรือย้อนกลับไปใช้สถาปัตยกรรมเวอร์ชันก่อนหน้าได้ง่ายๆ เพียงแค่ใช้ไฟล์เวอร์ชันเก่า",
+        "istrue": true
+      },
+      {
+        "statement": "ไฟล์จะส่งอีเมลแจ้งเตือนผู้ดูแลระบบ",
+        "istrue": false
+      },
+      {
+        "statement": "ไฟล์จะลบ Container ที่มีปัญหาทิ้งไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "การจัดเก็บไฟล์ compose ไว้ใน version control (เช่น Git) ทำให้เราสามารถย้อนกลับไปใช้โครงสร้างพื้นฐานเวอร์ชันที่เคยทำงานได้ดีอยู่ได้อย่างรวดเร็วและน่าเชื่อถือ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ปัญหา 'Client ที่ช่างคุย' (Chatty Client) ในสถาปัตยกรรม Microservices คืออะไร?",
+    "options": [
+      {
+        "statement": "Client ส่งข้อมูลมาเยอะเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "Client (เช่น Mobile App) ต้องรู้จักและเชื่อมต่อกับ Microservice ทุกตัวโดยตรง ทำให้โค้ดซับซ้อนและไม่ปลอดภัย",
+        "istrue": true
+      },
+      {
+        "statement": "Microservice ตอบกลับ Client ช้าเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "มี Client เชื่อมต่อเข้ามาพร้อมกันจำนวนมาก",
+        "istrue": false
+      }
+    ],
+    "explanation": "การให้ client ติดต่อกับทุก service โดยตรงเป็นการผูกมัด client เข้ากับโครงสร้างภายในของระบบ (tight coupling) และเปิดเผยโครงสร้างนั้นสู่ภายนอก"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Design Pattern ใดที่ถูกนำมาใช้แก้ปัญหา 'Client ที่ช่างคุย' ในรูปแบบของ API Gateway?",
+    "options": [
+      {
+        "statement": "Singleton",
+        "istrue": false
+      },
+      {
+        "statement": "Observer",
+        "istrue": false
+      },
+      {
+        "statement": "Façade",
+        "istrue": true
+      },
+      {
+        "statement": "Factory",
+        "istrue": false
+      }
+    ],
+    "explanation": "Façade pattern คือการสร้าง object ที่เป็น 'หน้าฉาก' ที่เรียบง่ายขึ้นมา เพื่อห่อหุ้มและซ่อนความซับซ้อนของระบบที่อยู่เบื้องหลัง ซึ่งตรงกับหน้าที่ของ API Gateway"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "API Gateway ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "เก็บข้อมูลทั้งหมดของแอปพลิเคชัน",
+        "istrue": false
+      },
+      {
+        "statement": "เป็น 'ประตูหน้าด่าน' เพียงจุดเดียวที่รับ Request จาก Client แล้วส่งต่อไปยัง Microservice ที่เหมาะสม",
+        "istrue": true
+      },
+      {
+        "statement": "คอมไพล์โค้ดของ Microservice ทั้งหมด",
+        "istrue": false
+      },
+      {
+        "statement": "รันการทดสอบทั้งหมดของระบบ",
+        "istrue": false
+      }
+    ],
+    "explanation": "API Gateway ทำหน้าที่เป็น single entry point สำหรับ client ทั้งหมด ช่วยซ่อนความซับซ้อนของระบบภายในและเป็นศูนย์กลางในการจัดการฟังก์ชันข้ามสายงาน (cross-cutting concerns)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใด ไม่ใช่ ประโยชน์หรือหน้าที่ของ API Gateway?",
+    "options": [
+      {
+        "statement": "Load Balancing (กระจายโหลด)",
+        "istrue": false
+      },
+      {
+        "statement": "Security (การยืนยันตัวตน)",
+        "istrue": false
+      },
+      {
+        "statement": "Data Persistence (การเก็บข้อมูลถาวร)",
+        "istrue": true
+      },
+      {
+        "statement": "Failure Handling (การรับมือกับความล้มเหลว)",
+        "istrue": false
+      }
+    ],
+    "explanation": "API Gateway มีหน้าที่จัดการด้านการสื่อสาร, ความปลอดภัย, และการควบคุม traffic แต่ไม่มีหน้าที่ในการจัดเก็บข้อมูลของแอปพลิเคชัน ซึ่งเป็นหน้าที่ของ database service"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Service Registry & Discovery ถูกสร้างขึ้นมาเพื่อแก้ปัญหาอะไร?",
+    "options": [
+      {
+        "statement": "Service มีขนาดใหญ่เกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "ในสภาพแวดล้อมแบบ Cloud, ที่อยู่ (IP Address และ Port) ของ Service จะไม่คงที่และเปลี่ยนแปลงได้ตลอดเวลา",
+        "istrue": true
+      },
+      {
+        "statement": "ข้อมูลที่ส่งระหว่าง Service ไม่ปลอดภัย",
+        "istrue": false
+      },
+      {
+        "statement": "มี Service จำนวนน้อยเกินไป",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในสภาพแวดล้อมแบบไดนามิก เราไม่สามารถ hardcode ที่อยู่ของ service ได้ Service Registry จึงทำหน้าที่เป็น 'สมุดโทรศัพท์' ที่อัปเดตอยู่ตลอดเวลา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อ Service Instance ตัวใหม่เริ่มทำงาน มันจะทำอะไรกับ Service Registry?",
+    "options": [
+      {
+        "statement": "ถามหาที่อยู่ของ Service อื่น",
+        "istrue": false
+      },
+      {
+        "statement": "ลบข้อมูลของ Service ที่ล่มไปแล้ว",
+        "istrue": false
+      },
+      {
+        "statement": "ทำการ 'ลงทะเบียน' (Register) ชื่อและที่อยู่ของตัวเอง",
+        "istrue": true
+      },
+      {
+        "statement": "ดาวน์โหลดการตั้งค่าล่าสุด",
+        "istrue": false
+      }
+    ],
+    "explanation": "การลงทะเบียนเป็นขั้นตอนแรกในวงจรชีวิตของ service instance เพื่อทำให้ตัวเองเป็นที่รู้จักและพร้อมรับ traffic จาก service อื่นในระบบ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในรูปแบบ 'Server-Side Discovery', ใครคือผู้ที่ไปสอบถาม Service Registry เพื่อหาที่อยู่ของ Service ปลายทาง?",
+    "options": [
+      {
+        "statement": "Client (Service ผู้เรียก)",
+        "istrue": false
+      },
+      {
+        "statement": "Load Balancer หรือ API Gateway",
+        "istrue": true
+      },
+      {
+        "statement": "Service Registry จะส่งที่อยู่ไปให้ Client เอง",
+        "istrue": false
+      },
+      {
+        "statement": "Database",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในรูปแบบ Server-Side, Client จะไม่ต้องยุ่งเกี่ยวกับความซับซ้อนของ discovery เลย มันจะส่ง request ไปยังตัวกลาง (Load Balancer/Gateway) ซึ่งจะทำหน้าที่ค้นหาและส่งต่อไปให้เอง"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ซอฟต์แวร์ใดที่ถูกนำมาใช้สร้าง API Gateway แบบง่ายในกรณีศึกษา?",
+    "options": [
+      {
+        "statement": "Apache Tomcat",
+        "istrue": false
+      },
+      {
+        "statement": "Redis",
+        "istrue": false
+      },
+      {
+        "statement": "Nginx",
+        "istrue": true
+      },
+      {
+        "statement": "MySQL",
+        "istrue": false
+      }
+    ],
+    "explanation": "Nginx เป็น web server ประสิทธิภาพสูงที่มีความสามารถในการทำ Reverse Proxy และ Load Balancing ซึ่งเหมาะอย่างยิ่งสำหรับการสร้าง API Gateway"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในไฟล์ตั้งค่าของ Nginx, คำสั่ง `proxy_pass http://todo:8000/;` ทำหน้าที่อะไร?",
+    "options": [
+      {
+        "statement": "ตรวจสอบว่า Service 'todo' ทำงานอยู่หรือไม่",
+        "istrue": false
+      },
+      {
+        "statement": "ส่งต่อ (Forward) Request ที่เข้ามาไปยัง Service ชื่อ 'todo' ที่ Port 8000",
+        "istrue": true
+      },
+      {
+        "statement": "สร้าง Service ใหม่ชื่อ 'todo'",
+        "istrue": false
+      },
+      {
+        "statement": "เปลี่ยนเส้นทางของผู้ใช้ไปยังหน้าเว็บอื่น",
+        "istrue": false
+      }
+    ],
+    "explanation": "`proxy_pass` เป็น directive หลักของ Nginx ที่ใช้ในการทำ Reverse Proxy โดยจะส่งต่อ request ที่ได้รับไปยัง backend server ที่ระบุ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเปลี่ยนจาก Monolith สู่ Microservices เปรียบได้กับการเปลี่ยนแปลงจากสัตว์ชนิดใดไปเป็นชนิดใด?",
+    "options": [
+      {
+        "statement": "จากเสือชีตาห์ไปสู่แรด",
+        "istrue": false
+      },
+      {
+        "statement": "จากแรดไปสู่เสือชีตาห์",
+        "istrue": true
+      },
+      {
+        "statement": "จากปลาไปสู่นก",
+        "istrue": false
+      },
+      {
+        "statement": "จากช้างไปสู่มด",
+        "istrue": false
+      }
+    ],
+    "explanation": "Monolith ให้ความเสถียรเหมือน 'แรด' แต่ขาดความคล่องตัว การเปลี่ยนไปสู่ Microservices คือการพยายามให้ได้ 'ความคล่องตัว' เหมือน 'เสือชีตาห์' กลับคืนมา"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือการทดสอบ `todo` service ด้วย cURL ที่ถูกต้องสำหรับการสร้างข้อมูลใหม่?",
+    "options": [
+      {
+        "statement": "curl -X GET http://localhost:8000",
+        "istrue": false
+      },
+      {
+        "statement": "curl -X DELETE http://localhost:8000/0",
+        "istrue": false
+      },
+      {
+        "statement": "curl -d '{\"title\":\"test\"}' -X POST http://localhost:8000",
+        "istrue": true
+      },
+      {
+        "statement": "curl -X PUT http://localhost:8000",
+        "istrue": false
+      }
+    ],
+    "explanation": "การสร้างข้อมูลใหม่ต้องใช้ HTTP Method `POST` และส่งข้อมูล (payload) ไปด้วยโดยใช้ option `-d`"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หาก `webapp` container ถูกตั้งค่า `ENV TODO_ENDPOINT http://todo:8000/`, สิ่งใดที่จำเป็นเพื่อให้การเชื่อมต่อนี้สำเร็จ?",
+    "options": [
+      {
+        "statement": "ต้องเปิด Port 8000 ของ `todo` container สู่เครื่อง Host",
+        "istrue": false
+      },
+      {
+        "statement": "container `webapp` และ `todo` ต้องอยู่ใน Docker Network เดียวกัน",
+        "istrue": true
+      },
+      {
+        "statement": "ต้องติดตั้ง Redis ก่อน",
+        "istrue": false
+      },
+      {
+        "statement": "เครื่อง Host ต้องสามารถ ping ไปยัง 'todo' ได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "การใช้ชื่อ service เป็น hostname (`todo`) จะทำงานได้ก็ต่อเมื่อ container ทั้งสองอยู่ใน network ที่มีระบบ DNS ภายใน ซึ่งก็คือ User-Defined Network"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นเหตุผลที่ดีที่สุดในการใช้ Deployment Orchestration (เช่น Docker Compose) สำหรับแอปพลิเคชันที่มี 5 services?",
+    "options": [
+      {
+        "statement": "เพื่อให้สามารถรัน container ได้มากกว่า 5 ตัว",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเปลี่ยนจากชุดคำสั่ง `docker run` ที่ยาวและซับซ้อน มาเป็นการนิยามสถาปัตยกรรมทั้งหมดในไฟล์เดียวที่จัดการง่าย",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้สามารถเขียนโค้ดได้เร็วขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อให้ไม่ต้องใช้ Nginx",
+        "istrue": false
+      }
+    ],
+    "explanation": "Orchestration tool ช่วยลดความซับซ้อน, ลดความผิดพลาดจากมนุษย์, และทำให้กระบวนการติดตั้งและจัดการแอปพลิเคชันที่มีหลายส่วนประกอบเป็นไปโดยอัตโนมัติและทำซ้ำได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่หน้าสินค้าของ Amazon ประกอบขึ้นมาจากข้อมูลของ 6 Microservices ที่แตกต่างกัน เป็นตัวอย่างของการทำงานของส่วนประกอบใด?",
+    "options": [
+      {
+        "statement": "Service Registry",
+        "istrue": false
+      },
+      {
+        "statement": "Container Orchestration",
+        "istrue": false
+      },
+      {
+        "statement": "API Gateway",
+        "istrue": true
+      },
+      {
+        "statement": "Monolithic Architecture",
+        "istrue": false
+      }
+    ],
+    "explanation": "API Gateway ทำหน้าที่เป็นจุดรวบรวม (Aggregation) โดยรับ request เดียวจาก client แล้วไปดึงข้อมูลจากหลายๆ service ภายในมาประกอบกันเป็น response เดียวส่งกลับไป"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Service Registry จะลบ Service Instance ออกจาก 'สมุดโทรศัพท์' เมื่อใด?",
+    "options": [
+      {
+        "statement": "เมื่อมี traffic เข้ามาเยอะเกินไป",
+        "istrue": false
+      },
+      {
+        "statement": "เมื่อไม่ได้รับสัญญาณ 'ชีพจร' (heartbeat) จาก Instance นั้นเป็นระยะเวลาหนึ่ง",
+        "istrue": true
+      },
+      {
+        "statement": "เมื่อมีการ deploy service เวอร์ชันใหม่",
+        "istrue": false
+      },
+      {
+        "statement": "ทุกๆ เที่ยงคืน",
+        "istrue": false
+      }
+    ],
+    "explanation": "กลไก Health Check โดยใช้ heartbeat เป็นวิธีมาตรฐานที่ Service Registry ใช้ในการตรวจสอบว่า instance ใดที่ยังทำงานได้ดีอยู่และพร้อมรับงาน"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือความแตกต่างระหว่าง Client-Side Discovery และ Server-Side Discovery?",
+    "options": [
+      {
+        "statement": "Client-Side ปลอดภัยกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "ใน Client-Side, Client จะเป็นผู้ถาม Registry โดยตรง แต่ใน Server-Side, Load Balancer จะเป็นผู้ถามให้",
+        "istrue": true
+      },
+      {
+        "statement": "Server-Side ทำงานเร็วกว่า",
+        "istrue": false
+      },
+      {
+        "statement": "Client-Side ใช้กับ REST เท่านั้น ส่วน Server-Side ใช้กับ gRPC เท่านั้น",
+        "istrue": false
+      }
+    ],
+    "explanation": "ความแตกต่างอยู่ที่ว่า 'ความฉลาด' ในการค้นหา service อยู่ที่ใคร ระหว่างตัว client เอง หรือตัวกลางอย่าง Load Balancer/Gateway ซึ่งรูปแบบ Server-Side เป็นที่นิยมกว่าเพราะทำให้ client เรียบง่ายขึ้น"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การที่ทุกทีมในแอป SlowQueue ต้องทำงานบนโค้ดเบสก้อนเดียวกัน เป็นลักษณะของข้อจำกัดใดใน Monolith?",
+    "options": [
+      {
+        "statement": "Loosely coupled",
+        "istrue": false
+      },
+      {
+        "statement": "Tightly coupled",
+        "istrue": true
+      },
+      {
+        "statement": "Platform independent",
+        "istrue": false
+      },
+      {
+        "statement": "Fine-grained",
+        "istrue": false
+      }
+    ],
+    "explanation": "Tightly coupled (ผูกมัดกันแน่น) หมายถึงส่วนต่างๆ ของระบบขึ้นต่อกันสูง การเปลี่ยนแปลงในส่วนหนึ่งสามารถส่งผลกระทบลูกโซ่ไปยังส่วนอื่นๆ ได้ง่าย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "JSON ย่อมาจากอะไร?",
+    "options": [
+      {
+        "statement": "Java Source Object Notation",
+        "istrue": false
+      },
+      {
+        "statement": "JavaScript Object Notation",
+        "istrue": true
+      },
+      {
+        "statement": "JavaScript Online Naming",
+        "istrue": false
+      },
+      {
+        "statement": "Java Standard Object Naming",
+        "istrue": false
+      }
+    ],
+    "explanation": "JSON (JavaScript Object Notation) เป็นรูปแบบการแลกเปลี่ยนข้อมูลที่มีพื้นฐานมาจากไวยากรณ์ของภาษา JavaScript แต่ปัจจุบันเป็นมาตรฐานเปิดที่ไม่ขึ้นกับภาษาใดๆ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ในสถาปัตยกรรม Microservices, เหตุใดแต่ละ Service จึงควรมีฐานข้อมูลเป็นของตัวเอง (Data-Per-Service Pattern)?",
+    "options": [
+      {
+        "statement": "เพื่อให้ทุก Service สามารถเข้าถึงข้อมูลของกันและกันได้โดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อรักษาความเป็นอิสระ (independence) และป้องกันไม่ให้การเปลี่ยนแปลง schema ของ Service หนึ่งไปกระทบ Service อื่น",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อลดค่าใช้จ่ายในการซื้อลิขสิทธิ์ฐานข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะฐานข้อมูลเดียวไม่สามารถเก็บข้อมูลทั้งหมดได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "การมีฐานข้อมูลแยกกันช่วยให้แต่ละ service เป็นอิสระอย่างแท้จริง (loosely coupled) ทั้งในระดับโค้ดและระดับข้อมูล ทำให้สามารถพัฒนาและเปลี่ยนแปลงได้อย่างอิสระ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นตัวอย่างที่ดีที่สุดของหลักการ 'Separation of Concerns'?",
+    "options": [
+      {
+        "statement": "การรวมฟังก์ชันจัดการคิวและจัดการร้านอาหารไว้ในโปรแกรมเดียวกัน",
+        "istrue": false
+      },
+      {
+        "statement": "การสร้าง Queue Service ที่รับผิดชอบเรื่องการจัดการคิวเพียงอย่างเดียว และ Restaurant Service ที่รับผิดชอบเรื่องร้านอาหารเพียงอย่างเดียว",
+        "istrue": true
+      },
+      {
+        "statement": "การให้ Frontend เรียกฐานข้อมูลโดยตรง",
+        "istrue": false
+      },
+      {
+        "statement": "การใช้ฐานข้อมูล MySQL สำหรับทุกๆ ฟังก์ชันในแอปพลิเคชัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "Separation of Concerns คือการแบ่งระบบออกเป็นส่วนๆ โดยแต่ละส่วนมีความรับผิดชอบที่ชัดเจนและเฉพาะเจาะจง ซึ่งเป็นแนวคิดพื้นฐานของ Microservices"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "บริษัทชั้นนำอย่าง Amazon สามารถ Deploy โค้ดใหม่ได้ทุกๆ 11.6 วินาที สะท้อนให้เห็นถึงประโยชน์ข้อใดของ Microservices และ DevOps?",
+    "options": [
+      {
+        "statement": "ความซับซ้อนที่เพิ่มขึ้น",
+        "istrue": false
+      },
+      {
+        "statement": "ความสามารถในการส่งมอบซอฟต์แวร์ได้อย่างรวดเร็วและบ่อยครั้ง (Agility)",
+        "istrue": true
+      },
+      {
+        "statement": "การผูกมัดกับเทคโนโลยี",
+        "istrue": false
+      },
+      {
+        "statement": "ประสิทธิภาพที่สูงขึ้นในการสื่อสารภายในโปรเซส",
+        "istrue": false
+      }
+    ],
+    "explanation": "การที่แต่ละ service มีขนาดเล็กและเป็นอิสระ ทำให้วงจรการทดสอบและติดตั้งสั้นลงมาก ส่งผลให้สามารถปล่อยฟีเจอร์หรือแก้ไขข้อผิดพลาดได้บ่อยและรวดเร็ว"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "เมื่อระบบซับซ้อนขึ้น, การหาต้นตอของปัญหาแบบ 'Cascading Failures' (ความล้มเหลวแบบต่อเนื่อง) ทำได้ยากใน Microservices เพราะอะไร?",
+    "options": [
+      {
+        "statement": "เพราะแต่ละ Service เขียนด้วยภาษาต่างกัน",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะปัญหาอาจเริ่มต้นที่ Service หนึ่ง แล้วส่งผลกระทบต่อไปยัง Service อื่นๆ ผ่านการเรียก API ทำให้ต้องไล่ตามรอยผ่านหลายๆ ระบบ",
+        "istrue": true
+      },
+      {
+        "statement": "เพราะไม่มี Log ให้ดู",
+        "istrue": false
+      },
+      {
+        "statement": "เพราะ Container ทำงานเร็วเกินไปจนดูไม่ทัน",
+        "istrue": false
+      }
+    ],
+    "explanation": "ในระบบแบบกระจาย การติดตาม request หนึ่งๆ ที่เดินทางผ่าน service หลายตัวเป็นเรื่องท้าทาย จึงจำเป็นต้องมีเครื่องมือด้าน Observability (เช่น distributed tracing) เข้ามาช่วย"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "การเปรียบเทียบแอปพลิเคชัน Monolith เป็นไฟล์ WAR/EAR ที่ทำงานบน Tomcat สะท้อนถึงเทคโนโลยีใด?",
+    "options": [
+      {
+        "statement": "NodeJS",
+        "istrue": false
+      },
+      {
+        "statement": "Python",
+        "istrue": false
+      },
+      {
+        "statement": "Java/J2EE",
+        "istrue": true
+      },
+      {
+        "statement": "Go",
+        "istrue": false
+      }
+    ],
+    "explanation": "WAR (Web Application Archive) และ EAR (Enterprise Application Archive) เป็นรูปแบบการแพ็กเกจมาตรฐานสำหรับแอปพลิเคชันที่สร้างด้วยเทคโนโลยี Java Enterprise Edition (J2EE)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "องค์ประกอบใดในสถาปัตยกรรม Microservices ที่ทำหน้าที่คล้าย 'ประชาสัมพันธ์' ของตึก?",
+    "options": [
+      {
+        "statement": "Service Registry",
+        "istrue": false
+      },
+      {
+        "statement": "Container Orchestration",
+        "istrue": false
+      },
+      {
+        "statement": "API Gateway",
+        "istrue": true
+      },
+      {
+        "statement": "Database",
+        "istrue": false
+      }
+    ],
+    "explanation": "API Gateway เปรียบเสมือนประชาสัมพันธ์ที่คอยรับเรื่องจากผู้มาติดต่อ (client) แล้วประสานงานหรือส่งต่อไปยังแผนก (microservice) ที่เกี่ยวข้องให้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "องค์ประกอบใดในสถาปัตยกรรม Microservices ที่ทำหน้าที่คล้าย 'สมุดโทรศัพท์' ของตึก?",
+    "options": [
+      {
+        "statement": "Service Registry",
+        "istrue": true
+      },
+      {
+        "statement": "Container Orchestration",
+        "istrue": false
+      },
+      {
+        "statement": "API Gateway",
+        "istrue": false
+      },
+      {
+        "statement": "Database",
+        "istrue": false
+      }
+    ],
+    "explanation": "Service Registry เปรียบเสมือนสมุดโทรศัพท์ที่คอยเก็บข้อมูลว่าแผนก (microservice) ไหนอยู่ที่เบอร์ต่อ (IP:Port) อะไร และคอยอัปเดตข้อมูลให้เป็นปัจจุบันอยู่เสมอ"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "หากเปรียบเทียบการสื่อสารแบบ Synchronous กับการโทรศัพท์, การสื่อสารแบบ Asynchronous ควรเปรียบเทียบกับอะไร?",
+    "options": [
+      {
+        "statement": "การประชุมแบบวิดีโอคอล",
+        "istrue": false
+      },
+      {
+        "statement": "การส่งอีเมลหรือโพสต์ข้อความในกลุ่มไลน์",
+        "istrue": true
+      },
+      {
+        "statement": "การตะโกนคุยกันข้ามห้อง",
+        "istrue": false
+      },
+      {
+        "statement": "การอ่านหนังสือ",
+        "istrue": false
+      }
+    ],
+    "explanation": "การส่งอีเมลหรือโพสต์ข้อความเป็นแบบ Asynchronous เพราะผู้ส่งไม่ต้องหยุดรอให้ผู้รับทุกคนมาอ่านและตอบกลับทันที แต่สามารถทำงานของตัวเองต่อไปได้"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นเหตุผลที่ดีที่สุดในการเปลี่ยนจาก Monolith ไปสู่ Microservices?",
+    "options": [
+      {
+        "statement": "เพื่อลดจำนวนนักพัฒนาในทีม",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อเพิ่มความคล่องตัว (Agility) ให้องค์กรสามารถส่งมอบซอฟต์แวร์ได้รวดเร็ว, บ่อยครั้ง, และน่าเชื่อถือ",
+        "istrue": true
+      },
+      {
+        "statement": "เพื่อให้แอปพลิเคชันทำงานได้โดยไม่ต้องมีฐานข้อมูล",
+        "istrue": false
+      },
+      {
+        "statement": "เพื่อลดความซับซ้อนของสถาปัตยกรรมลง",
+        "istrue": false
+      }
+    ],
+    "explanation": "แม้ Microservices จะเพิ่มความซับซ้อนทางเทคนิค แต่เป้าหมายหลักทางธุรกิจคือการเพิ่มความสามารถในการแข่งขันโดยการลดระยะเวลาในการนำฟีเจอร์ใหม่ออกสู่ตลาด (Time-to-Market)"
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดสรุปเส้นทางการเดินทางของสถาปัตยกรรมในกรณีศึกษาได้ดีที่สุด?",
+    "options": [
+      {
+        "statement": "เริ่มต้นด้วย Microservices และเปลี่ยนไปเป็น Monolith เพื่อความเรียบง่าย",
+        "istrue": false
+      },
+      {
+        "statement": "เริ่มต้นด้วย Monolith, พบปัญหาเมื่อเติบโต, จึงค่อยๆ เปลี่ยนผ่านไปสู่ Microservices ที่ทำงานใน Containers และจัดการผ่าน API Gateway",
+        "istrue": true
+      },
+      {
+        "statement": "เริ่มต้นด้วยการใช้ VM และเปลี่ยนไปใช้ Server จริงเพื่อประสิทธิภาพ",
+        "istrue": false
+      },
+      {
+        "statement": "เริ่มต้นด้วย gRPC และเปลี่ยนไปใช้ REST เพื่อความเข้ากันได้",
+        "istrue": false
+      }
+    ],
+    "explanation": "นี่คือเส้นทางวิวัฒนาการทั่วไปของหลายๆ องค์กร ที่เริ่มจากความเรียบง่ายของ Monolith และค่อยๆ ปรับเปลี่ยนสถาปัตยกรรมเพื่อรับมือกับการเติบโตและความต้องการทางธุรกิจ"
+  }
+]

@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary definition of 'Auditing' in the context of computer security as described in the material?",
+    "options": [
+      {
+        "statement": "Installing antivirus software.",
+        "istrue": false
+      },
+      {
+        "statement": "A systematic review or recording of events to drive Continuous Quality Improvement (CQI).",
+        "istrue": true
+      },
+      {
+        "statement": "Blocking all external connections.",
+        "istrue": false
+      },
+      {
+        "statement": "Encrypting all hard drives.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Auditing is defined as a systematic review of records and activities to assess the adequacy of system controls and improve quality."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is Auditing considered one of the 'simplest' yet most important security components?",
+    "options": [
+      {
+        "statement": "Because it requires no software installation.",
+        "istrue": false
+      },
+      {
+        "statement": "Because enabling logs is technically easy, but the insights gained are foundational for improving security policy.",
+        "istrue": true
+      },
+      {
+        "statement": "Because it prevents all attacks automatically.",
+        "istrue": false
+      },
+      {
+        "statement": "Because it uses the least amount of electricity.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Technically, turning on logging is often just a configuration switch (easy), but the data it provides is crucial for understanding threats and refining defenses."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The original 'Syslog' standard created in the 1980s had a peculiar limitation due to its rushed development. What was it?",
+    "options": [
+      {
+        "statement": "It could not record the time.",
+        "istrue": false
+      },
+      {
+        "statement": "It did not record the 'Year' in the timestamp.",
+        "istrue": true
+      },
+      {
+        "statement": "It could only record in uppercase letters.",
+        "istrue": false
+      },
+      {
+        "statement": "It only worked on Tuesdays.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Eric Allman wrote Syslog quickly to debug Sendmail and catch a hacker, overlooking the need for a 'Year' field in the timestamp."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the famous 'The Cuckoo's Egg' case (1986), what triggered Clifford Stoll's investigation?",
+    "options": [
+      {
+        "statement": "A massive server crash.",
+        "istrue": false
+      },
+      {
+        "statement": "A warning from the FBI.",
+        "istrue": false
+      },
+      {
+        "statement": "A minor accounting error of 75 cents.",
+        "istrue": true
+      },
+      {
+        "statement": "A ransom note on the screen.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Stoll pursued a tiny 75-cent discrepancy in computer usage billing, which eventually led him to uncover a major espionage ring."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Who was ultimately found to be behind the intrusion in 'The Cuckoo's Egg' case?",
+    "options": [
+      {
+        "statement": "A bored teenager.",
+        "istrue": false
+      },
+      {
+        "statement": "A rival university.",
+        "istrue": false
+      },
+      {
+        "statement": "A KGB spy ring stealing military secrets.",
+        "istrue": true
+      },
+      {
+        "statement": "An automated AI bot.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The investigation revealed that the hacker was part of a ring selling US military secrets to the KGB."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "When analyzing Big Data logs, what does 'Clustering' do?",
+    "options": [
+      {
+        "statement": "Deletes old log files.",
+        "istrue": false
+      },
+      {
+        "statement": "Groups similar behaviors or data points together to identify patterns.",
+        "istrue": true
+      },
+      {
+        "statement": "Encrypts the logs.",
+        "istrue": false
+      },
+      {
+        "statement": "Translates logs into different languages.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Clustering is a data mining technique used to group objects that are similar to each other, helping analysts understand common usage patterns."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Anomaly Detection' in the context of log analysis?",
+    "options": [
+      {
+        "statement": "Detecting viruses by their names.",
+        "istrue": false
+      },
+      {
+        "statement": "Identifying events that deviate significantly from the normal baseline (e.g., massive data transfer at 3 AM).",
+        "istrue": true
+      },
+      {
+        "statement": "Fixing spelling errors in logs.",
+        "istrue": false
+      },
+      {
+        "statement": "Detecting when the hard drive is full.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Anomaly detection builds a model of 'normal' behavior and flags anything that doesn't fit that model, which is useful for finding unknown threats."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Based on the CU CAS example, what insight was gained from analyzing the authentication logs?",
+    "options": [
+      {
+        "statement": "Students prefer Android over iOS.",
+        "istrue": false
+      },
+      {
+        "statement": "Students wake up around 8 AM and go to sleep after 1 AM.",
+        "istrue": true
+      },
+      {
+        "statement": "Most students use Firefox.",
+        "istrue": false
+      },
+      {
+        "statement": "The server is never used on weekends.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The usage graphs showed a clear pattern of activity rising at 8 AM and dropping after 1 AM, reflecting the students' lifestyle."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary difference between an IDS (Intrusion Detection System) and an IPS (Intrusion Prevention System)?",
+    "options": [
+      {
+        "statement": "IDS is expensive; IPS is free.",
+        "istrue": false
+      },
+      {
+        "statement": "IDS only alerts (Passive); IPS can actively block the attack (Active).",
+        "istrue": true
+      },
+      {
+        "statement": "IDS blocks attacks; IPS only alerts.",
+        "istrue": false
+      },
+      {
+        "statement": "There is no difference.",
+        "istrue": false
+      }
+    ],
+    "explanation": "IDS acts like a burglar alarm (notifies you), while IPS acts like a guard who can stop the intruder (blocks access)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does 'Signature-based' detection work?",
+    "options": [
+      {
+        "statement": "It uses AI to guess the attacker's intent.",
+        "istrue": false
+      },
+      {
+        "statement": "It compares network traffic against a database of known attack patterns (fingerprints).",
+        "istrue": true
+      },
+      {
+        "statement": "It requires users to sign their names.",
+        "istrue": false
+      },
+      {
+        "statement": "It checks the physical location of the attacker.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Signature-based detection looks for specific byte sequences known to be associated with specific exploits, much like antivirus software."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'MINDS' system detected the SQL Slammer worm not because it knew the worm, but because:",
+    "options": [
+      {
+        "statement": "It had the latest virus definitions.",
+        "istrue": false
+      },
+      {
+        "statement": "It used Anomaly Detection to spot behavior that was drastically different from normal traffic.",
+        "istrue": true
+      },
+      {
+        "statement": "The worm sent an email announcing itself.",
+        "istrue": false
+      },
+      {
+        "statement": "The administrator manually found it.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MINDS used data mining to identify anomalous traffic patterns, allowing it to catch a zero-day threat (unknown attack) that had no signature yet."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the most serious risk associated with an IPS (Intrusion Prevention System)?",
+    "options": [
+      {
+        "statement": "It might use too much electricity.",
+        "istrue": false
+      },
+      {
+        "statement": "False Alarms can cause the system to block legitimate users, effectively creating a Denial of Service (DoS).",
+        "istrue": true
+      },
+      {
+        "statement": "It runs too fast.",
+        "istrue": false
+      },
+      {
+        "statement": "It cannot send emails.",
+        "istrue": false
+      }
+    ],
+    "explanation": "If an IPS mistakes normal traffic for an attack (False Positive) and blocks it, it disrupts business operations and stops real users from working."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary function of a 'Firewall'?",
+    "options": [
+      {
+        "statement": "To cool down the server.",
+        "istrue": false
+      },
+      {
+        "statement": "To filter network packets between a trusted internal network and an untrusted external network.",
+        "istrue": true
+      },
+      {
+        "statement": "To store backup files.",
+        "istrue": false
+      },
+      {
+        "statement": "To speed up the internet.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A firewall acts as a barrier, inspecting packets and deciding whether to allow or block them based on security rules."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a DMZ (Demilitarized Zone) in network security?",
+    "options": [
+      {
+        "statement": "A zone where no computers are allowed.",
+        "istrue": false
+      },
+      {
+        "statement": "A buffer zone where public-facing servers (like Web/Mail) are placed to isolate them from the internal network.",
+        "istrue": true
+      },
+      {
+        "statement": "A zone for military gaming.",
+        "istrue": false
+      },
+      {
+        "statement": "The most secure part of the hard drive.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The DMZ prevents outside users from having direct access to the internal network. If a server in the DMZ is compromised, the attacker is still isolated from the core internal network."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following servers is most likely to be placed in a DMZ?",
+    "options": [
+      {
+        "statement": "Internal Database Server containing payroll data.",
+        "istrue": false
+      },
+      {
+        "statement": "Public Web Server.",
+        "istrue": true
+      },
+      {
+        "statement": "The CEO's personal laptop.",
+        "istrue": false
+      },
+      {
+        "statement": "Internal Printer Server.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Public web servers need to accept traffic from the internet, making them vulnerable. Placing them in a DMZ limits the risk if they are hacked."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How might an attacker use 'Fragmentation' to evade a Firewall or IDS?",
+    "options": [
+      {
+        "statement": "By sending the virus in a ZIP file.",
+        "istrue": false
+      },
+      {
+        "statement": "By breaking the attack payload into tiny packets so the security system cannot recognize the full pattern.",
+        "istrue": true
+      },
+      {
+        "statement": "By using a very fast computer.",
+        "istrue": false
+      },
+      {
+        "statement": "By unplugging the firewall.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Fragmentation splits the malicious code across multiple packets. If the IDS doesn't reassemble them properly, it won't see the attack signature."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which technique allows an IDS to be blinded to the content of network traffic?",
+    "options": [
+      {
+        "statement": "Encryption (e.g., HTTPS).",
+        "istrue": true
+      },
+      {
+        "statement": "Compression.",
+        "istrue": false
+      },
+      {
+        "statement": "Using a large monitor.",
+        "istrue": false
+      },
+      {
+        "statement": "Using a mouse instead of a keyboard.",
+        "istrue": false
+      }
+    ],
+    "explanation": "If traffic is encrypted, the IDS sees only scrambled data and cannot inspect the payload for malicious signatures unless it can decrypt it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'Firewall Pinhole'?",
+    "options": [
+      {
+        "statement": "A physical hole in the server casing.",
+        "istrue": false
+      },
+      {
+        "statement": "A temporary allowance for return traffic from the outside, initiated by an internal request (e.g., ordering pizza).",
+        "istrue": true
+      },
+      {
+        "statement": "A permanent security flaw.",
+        "istrue": false
+      },
+      {
+        "statement": "A tool for fixing firewalls.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A pinhole is a dynamic rule that allows a specific external response to pass through the firewall because an internal user requested it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which type of application commonly relies on 'Hole Punching' to function?",
+    "options": [
+      {
+        "statement": "Microsoft Word",
+        "istrue": false
+      },
+      {
+        "statement": "Calculator",
+        "istrue": false
+      },
+      {
+        "statement": "VoIP and P2P applications like Skype or Line.",
+        "istrue": true
+      },
+      {
+        "statement": "Notepad",
+        "istrue": false
+      }
+    ],
+    "explanation": "Peer-to-Peer apps need devices behind different firewalls to talk directly. Hole punching tricks the firewalls into keeping a connection open."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Hole Punching' considered a nightmare for network administrators?",
+    "options": [
+      {
+        "statement": "It uses too much hard drive space.",
+        "istrue": false
+      },
+      {
+        "statement": "It creates unmonitored tunnels through the firewall, bypassing security policies.",
+        "istrue": true
+      },
+      {
+        "statement": "It makes the internet too fast.",
+        "istrue": false
+      },
+      {
+        "statement": "It deletes user accounts.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Admins configure firewalls to block unauthorized access. Hole punching effectively bypasses these rules, creating blind spots in security."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is an example of a 'Physical Audit Trail'?",
+    "options": [
+      {
+        "statement": "Syslog",
+        "istrue": false
+      },
+      {
+        "statement": "CCTV Footage.",
+        "istrue": true
+      },
+      {
+        "statement": "Windows Event Log",
+        "istrue": false
+      },
+      {
+        "statement": "Browser History",
+        "istrue": false
+      }
+    ],
+    "explanation": "Physical audit trails record physical events and presence, such as video recordings from security cameras or visitor logbooks."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "NCSA Common Log Format is a standard primarily used for:",
+    "options": [
+      {
+        "statement": "Web Servers",
+        "istrue": true
+      },
+      {
+        "statement": "Email Servers",
+        "istrue": false
+      },
+      {
+        "statement": "Printers",
+        "istrue": false
+      },
+      {
+        "statement": "Database Servers",
+        "istrue": false
+      }
+    ],
+    "explanation": "The NCSA format became the standard for logging web server requests (access logs) in the early days of the web."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The analogy 'Fight in the front yard, not the bedroom' refers to the design philosophy of:",
+    "options": [
+      {
+        "statement": "VPN",
+        "istrue": false
+      },
+      {
+        "statement": "DMZ (Demilitarized Zone)",
+        "istrue": true
+      },
+      {
+        "statement": "Encryption",
+        "istrue": false
+      },
+      {
+        "statement": "Password Management",
+        "istrue": false
+      }
+    ],
+    "explanation": "This analogy illustrates keeping the conflict (external attacks/traffic) contained in an isolated zone (DMZ/Front Yard) rather than letting it reach the critical internal assets (Bedroom)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If an IPS acts like a security guard who can arrest people, what does an IDS act like?",
+    "options": [
+      {
+        "statement": "A sniper.",
+        "istrue": false
+      },
+      {
+        "statement": "A burglar alarm or CCTV that notifies someone.",
+        "istrue": true
+      },
+      {
+        "statement": "A lock on the door.",
+        "istrue": false
+      },
+      {
+        "statement": "A receptionist.",
+        "istrue": false
+      }
+    ],
+    "explanation": "An IDS detects and alerts but usually doesn't take direct physical action to stop the intruder, much like an alarm."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "According to the course conclusion, what is the 'Ultimate Combo' for prevention?",
+    "options": [
+      {
+        "statement": "Antivirus + Backup",
+        "istrue": false
+      },
+      {
+        "statement": "Detection (Auditing/IDS) + Prevention (Firewall) = IPS",
+        "istrue": true
+      },
+      {
+        "statement": "Passwords + Usernames",
+        "istrue": false
+      },
+      {
+        "statement": "CCTV + Guards",
+        "istrue": false
+      }
+    ],
+    "explanation": "Combining the visibility of detection (knowing an attack is happening) with the blocking power of a firewall allows for dynamic protection (IPS)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Continuous Monitoring' essential in security?",
+    "options": [
+      {
+        "statement": "Because hackers work 9-to-5.",
+        "istrue": false
+      },
+      {
+        "statement": "Because security is a process, not a product; threats evolve and happen anytime.",
+        "istrue": true
+      },
+      {
+        "statement": "To make sure the server doesn't sleep.",
+        "istrue": false
+      },
+      {
+        "statement": "To justify the security budget.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Security is not a 'set and forget' task. Continuous auditing is required to catch new threats and ensure controls remain effective."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the context of Auditing, what is a 'Feedback Loop'?",
+    "options": [
+      {
+        "statement": "A microphone error.",
+        "istrue": false
+      },
+      {
+        "statement": "Using findings from audit reports to update and improve security policies.",
+        "istrue": true
+      },
+      {
+        "statement": "Sending data back to the hacker.",
+        "istrue": false
+      },
+      {
+        "statement": "Restarting the computer repeatedly.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A feedback loop ensures that the lessons learned from auditing (what went wrong, what was attacked) are used to strengthen the system's defenses."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which analysis method involves using Machine Learning/Deep Learning to understand normal system behavior?",
+    "options": [
+      {
+        "statement": "Manual Reading",
+        "istrue": false
+      },
+      {
+        "statement": "Statistical Averaging",
+        "istrue": false
+      },
+      {
+        "statement": "AI-based Anomaly Detection",
+        "istrue": true
+      },
+      {
+        "statement": "Alphabetical Sorting",
+        "istrue": false
+      }
+    ],
+    "explanation": "Modern AI/ML techniques can learn complex patterns of 'normal' behavior to automatically flag subtle deviations that simple statistics might miss."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Who created the Syslog standard?",
+    "options": [
+      {
+        "statement": "Bill Gates",
+        "istrue": false
+      },
+      {
+        "statement": "Eric Allman",
+        "istrue": true
+      },
+      {
+        "statement": "Steve Jobs",
+        "istrue": false
+      },
+      {
+        "statement": "Linus Torvalds",
+        "istrue": false
+      }
+    ],
+    "explanation": "Eric Allman, the creator of Sendmail, developed syslog to help debug his mail software."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Data Mining' necessary for modern log analysis?",
+    "options": [
+      {
+        "statement": "Because logs are too small.",
+        "istrue": false
+      },
+      {
+        "statement": "Because the volume of logs (Big Data) is too large for humans to analyze manually.",
+        "istrue": true
+      },
+      {
+        "statement": "Because it sounds cool.",
+        "istrue": false
+      },
+      {
+        "statement": "Because logs are hidden in caves.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The sheer volume of logs generated by modern systems makes manual inspection impossible, necessitating automated tools like data mining to find insights."
+  }
+]

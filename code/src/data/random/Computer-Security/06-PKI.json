@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is the fundamental security problem that Public Key Infrastructure (PKI) aims to solve?",
+    "options": [
+      {
+        "statement": "How to encrypt data faster.",
+        "istrue": false
+      },
+      {
+        "statement": "How to verify that a Public Key truly belongs to the claimed identity (Authentication).",
+        "istrue": true
+      },
+      {
+        "statement": "How to make passwords longer.",
+        "istrue": false
+      },
+      {
+        "statement": "How to prevent hardware failure.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The core issue is trust: knowing that the public key you received actually belongs to the person you think it does, to prevent Man-in-the-Middle attacks."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If you receive a Public Key from 'Alice' via email without any certificate, what is the primary risk?",
+    "options": [
+      {
+        "statement": "The key might be broken.",
+        "istrue": false
+      },
+      {
+        "statement": "A Man-in-the-Middle attacker could have swapped Alice's key with their own key.",
+        "istrue": true
+      },
+      {
+        "statement": "The email will go to spam.",
+        "istrue": false
+      },
+      {
+        "statement": "The key will expire immediately.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Without a trusted third party verifying the key, an attacker could intercept the communication and substitute the key, allowing them to decrypt your messages."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the best analogy for a 'Digital Certificate'?",
+    "options": [
+      {
+        "statement": "A credit card.",
+        "istrue": false
+      },
+      {
+        "statement": "An ID card or Passport that binds a person's identity to their face (or in this case, a Public Key).",
+        "istrue": true
+      },
+      {
+        "statement": "A receipt from a store.",
+        "istrue": false
+      },
+      {
+        "statement": "A bus ticket.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A digital certificate acts like an electronic ID card, binding an identity (Subject) to a specific Public Key."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which entity acts as the 'Trusted Third Party' in a PKI system?",
+    "options": [
+      {
+        "statement": "The User (End-Entity)",
+        "istrue": false
+      },
+      {
+        "statement": "The Internet Service Provider (ISP)",
+        "istrue": false
+      },
+      {
+        "statement": "The Certificate Authority (CA)",
+        "istrue": true
+      },
+      {
+        "statement": "The Hacker",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Certificate Authority (CA) is the trusted organization (like Digicert or Verisign) that issues and signs digital certificates."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does a Web Browser know which Certificate Authorities (CAs) to trust?",
+    "options": [
+      {
+        "statement": "It asks the user every time.",
+        "istrue": false
+      },
+      {
+        "statement": "It has a pre-installed list of 'Root CAs' embedded in the browser or operating system.",
+        "istrue": true
+      },
+      {
+        "statement": "It checks Google.",
+        "istrue": false
+      },
+      {
+        "statement": "It trusts everyone by default.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Browsers come shipped with a 'Trust Store' containing the public keys of major Root CAs. If a certificate traces back to one of these, it is trusted."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the anatomy of a Digital Certificate (X.509), what is the 'Subject'?",
+    "options": [
+      {
+        "statement": "The entity that issued the certificate.",
+        "istrue": false
+      },
+      {
+        "statement": "The entity (person, website, or organization) that owns the Public Key.",
+        "istrue": true
+      },
+      {
+        "statement": "The topic of the website.",
+        "istrue": false
+      },
+      {
+        "statement": "The expiration date.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The 'Subject' field identifies the owner of the certificate (e.g., 'www.chula.ac.th')."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the function of the 'Signature' field in a Digital Certificate?",
+    "options": [
+      {
+        "statement": "To make the certificate look official.",
+        "istrue": false
+      },
+      {
+        "statement": "It is the digital signature of the Issuer (CA), preventing anyone from faking or altering the certificate.",
+        "istrue": true
+      },
+      {
+        "statement": "It is the user's signature.",
+        "istrue": false
+      },
+      {
+        "statement": "It is the password for the certificate.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Issuer signs the certificate with their Private Key. This allows anyone to verify that the certificate was genuinely issued by that CA and hasn't been tampered with."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the PKI ecosystem, what is the role of the 'Registration Authority' (RA)?",
+    "options": [
+      {
+        "statement": "To store the certificates.",
+        "istrue": false
+      },
+      {
+        "statement": "To verify the identity of the requester before telling the CA to issue a certificate.",
+        "istrue": true
+      },
+      {
+        "statement": "To sign the root certificate.",
+        "istrue": false
+      },
+      {
+        "statement": "To hack the system.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The RA acts like a 'District Office' or a verification checkpoint. They check your ID documents before authorizing the CA ('Registry') to issue the digital ID."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'Self-Signed Certificate'?",
+    "options": [
+      {
+        "statement": "A certificate signed by a Root CA.",
+        "istrue": false
+      },
+      {
+        "statement": "A certificate where the owner and the issuer are the same entity.",
+        "istrue": true
+      },
+      {
+        "statement": "A certificate that has no signature.",
+        "istrue": false
+      },
+      {
+        "statement": "A certificate for email only.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A self-signed certificate is issued by the user themselves, not by a trusted CA. It works for encryption but lacks third-party trust."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why does a web browser display a 'Not Secure' warning (red screen) for a Self-Signed Certificate?",
+    "options": [
+      {
+        "statement": "Because the encryption is weak.",
+        "istrue": false
+      },
+      {
+        "statement": "Because the browser does not trust the issuer (since anyone can sign their own certificate).",
+        "istrue": true
+      },
+      {
+        "statement": "Because the internet connection is slow.",
+        "istrue": false
+      },
+      {
+        "statement": "Because the website contains a virus.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Since anyone can generate a self-signed certificate claiming to be 'google.com', browsers cannot trust the identity unless it is vouched for by a trusted CA."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Path Discovery' or 'Chain of Trust' in PKI?",
+    "options": [
+      {
+        "statement": "Finding the path to the server room.",
+        "istrue": false
+      },
+      {
+        "statement": "The process of tracing a certificate's issuer up through Intermediate CAs until a trusted Root CA is found.",
+        "istrue": true
+      },
+      {
+        "statement": "Discovering the user's password.",
+        "istrue": false
+      },
+      {
+        "statement": "A method for hacking certificates.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Browsers verify a certificate by following the chain of signatures from the End-Entity -> Intermediate CA -> Root CA."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why do Root CAs delegate authority to 'Intermediate CAs' instead of signing every website certificate themselves?",
+    "options": [
+      {
+        "statement": "Because Root CAs are lazy.",
+        "istrue": false
+      },
+      {
+        "statement": "For security and risk management; the Root Key can be kept offline and secure, while Intermediates handle daily issuance.",
+        "istrue": true
+      },
+      {
+        "statement": "Because Intermediate CAs are faster.",
+        "istrue": false
+      },
+      {
+        "statement": "Because Root CAs ran out of disk space.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Using Intermediate CAs protects the Root Key. If an Intermediate is compromised, only its certificates are affected, not the entire Trust Anchor."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What happens if a Digital Certificate expires (passes its 'Validity Period')?",
+    "options": [
+      {
+        "statement": "The website is deleted.",
+        "istrue": false
+      },
+      {
+        "statement": "The browser displays a warning to the user that the connection may not be secure.",
+        "istrue": true
+      },
+      {
+        "statement": "The computer restarts.",
+        "istrue": false
+      },
+      {
+        "statement": "Nothing happens; certificates are valid forever.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Validity periods are crucial. Expired certificates are treated as invalid by browsers to force regular renewal and re-verification."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the 'WoSign/StartCom' incident, why were their certificates banned by major browsers?",
+    "options": [
+      {
+        "statement": "They charged too much money.",
+        "istrue": false
+      },
+      {
+        "statement": "They violated trust by backdating certificates to bypass security rules and issuing fake certificates for GitHub.",
+        "istrue": true
+      },
+      {
+        "statement": "They were located in Antarctica.",
+        "istrue": false
+      },
+      {
+        "statement": "Their servers were too slow.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The incident highlighted that trust is fragile. By acting deceptively (backdating, issuing unauthorized certs), they lost the trust of the browser vendors."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the danger of a hacker installing a malicious 'Root Certificate' on your computer?",
+    "options": [
+      {
+        "statement": "They can steal your mouse cursor.",
+        "istrue": false
+      },
+      {
+        "statement": "They can execute a perfect Man-in-the-Middle attack, creating fake websites that your browser fully trusts (Green Lock).",
+        "istrue": true
+      },
+      {
+        "statement": "It slows down your computer boot time.",
+        "istrue": false
+      },
+      {
+        "statement": "They can physically break your screen.",
+        "istrue": false
+      }
+    ],
+    "explanation": "If a hacker controls a trusted Root, they can sign fake certificates for any website (e.g., bank.com), and your computer will accept them as valid."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which component of PKI is responsible for storing certificates and the Certificate Revocation List (CRL)?",
+    "options": [
+      {
+        "statement": "The Repository / Directory",
+        "istrue": true
+      },
+      {
+        "statement": "The Firewall",
+        "istrue": false
+      },
+      {
+        "statement": "The User's Desktop",
+        "istrue": false
+      },
+      {
+        "statement": "The Printer",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Repository acts like a phonebook, publishing active certificates and listing those that have been revoked."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The process of 'Revocation' occurs when:",
+    "options": [
+      {
+        "statement": "A certificate is issued.",
+        "istrue": false
+      },
+      {
+        "statement": "A certificate is invalid before its expiration date (e.g., key compromise) and is added to a CRL.",
+        "istrue": true
+      },
+      {
+        "statement": "A certificate is renewed.",
+        "istrue": false
+      },
+      {
+        "statement": "A user logs in.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Revocation is the formal cancellation of a certificate before its natural expiry, usually due to a compromised private key."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the hardest part of managing a PKI system according to the conclusion?",
+    "options": [
+      {
+        "statement": "The mathematical calculations.",
+        "istrue": false
+      },
+      {
+        "statement": "Installing the software.",
+        "istrue": false
+      },
+      {
+        "statement": "Trust Management and Policy (Human/Legal factors).",
+        "istrue": true
+      },
+      {
+        "statement": "Buying the servers.",
+        "istrue": false
+      }
+    ],
+    "explanation": "While the math is standard, managing who to trust, how to verify identities, and handling legal liabilities are the most complex aspects."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which X.509 field prevents an attacker from simply changing the 'Subject' name in a certificate to their own name?",
+    "options": [
+      {
+        "statement": "The Validity Period",
+        "istrue": false
+      },
+      {
+        "statement": "The Issuer's Digital Signature",
+        "istrue": true
+      },
+      {
+        "statement": "The Serial Number",
+        "istrue": false
+      },
+      {
+        "statement": "The Version Number",
+        "istrue": false
+      }
+    ],
+    "explanation": "Any change to the certificate content (like changing the name) would invalidate the Issuer's Digital Signature, alerting the browser that the cert is forged."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "A digital certificate 'binds' which two things together?",
+    "options": [
+      {
+        "statement": "A Username and Password.",
+        "istrue": false
+      },
+      {
+        "statement": "A Public Key and an Identity.",
+        "istrue": true
+      },
+      {
+        "statement": "An IP Address and a MAC Address.",
+        "istrue": false
+      },
+      {
+        "statement": "A File and a Folder.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The fundamental purpose of a certificate is to cryptographically link a specific Public Key to a specific Identity (Subject)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following describes the correct 'Lifecycle' of a certificate?",
+    "options": [
+      {
+        "statement": "Revocation -> Issuance -> Usage",
+        "istrue": false
+      },
+      {
+        "statement": "Enrollment -> Validation -> Issuance -> Usage -> Revocation/Expiration",
+        "istrue": true
+      },
+      {
+        "statement": "Usage -> Enrollment -> Validation",
+        "istrue": false
+      },
+      {
+        "statement": "Expiration -> Usage -> Issuance",
+        "istrue": false
+      }
+    ],
+    "explanation": "The lifecycle begins with requesting a cert (Enrollment), checking ID (Validation), getting the cert (Issuance), using it, and finally ending it (Revocation/Expiration)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If a CA accidentally issues a certificate for 'microsoft.com' to a hacker, this is primarily a failure of:",
+    "options": [
+      {
+        "statement": "Encryption algorithms.",
+        "istrue": false
+      },
+      {
+        "statement": "Identity Proofing / Verification Process.",
+        "istrue": true
+      },
+      {
+        "statement": "Network speed.",
+        "istrue": false
+      },
+      {
+        "statement": "The hacker's computer.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The technology didn't fail; the CA's process of verifying 'who is asking for this certificate' failed."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which part of the X.509 certificate actually performs the encryption/verification functions during communication?",
+    "options": [
+      {
+        "statement": "The Subject Public Key",
+        "istrue": true
+      },
+      {
+        "statement": "The Issuer Name",
+        "istrue": false
+      },
+      {
+        "statement": "The Serial Number",
+        "istrue": false
+      },
+      {
+        "statement": "The Expiry Date",
+        "istrue": false
+      }
+    ],
+    "explanation": "The certificate is just a wrapper. The actual cryptographic operations use the Public Key contained within it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the 'Web of Trust' (in the context of PGP) compared to the CA model?",
+    "options": [
+      {
+        "statement": "It relies on a central server.",
+        "istrue": false
+      },
+      {
+        "statement": "It relies on decentralized users vouching for each other, rather than a centralized authority.",
+        "istrue": true
+      },
+      {
+        "statement": "It is used only for spiders.",
+        "istrue": false
+      },
+      {
+        "statement": "It is less secure than no encryption.",
+        "istrue": false
+      }
+    ],
+    "explanation": "While PKI uses a centralized CA, PGP uses a Web of Trust where individuals sign each other's keys to build a network of trust."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Green Lock' icon in a browser specifically indicates:",
+    "options": [
+      {
+        "statement": "The website is free from viruses.",
+        "istrue": false
+      },
+      {
+        "statement": "The connection is encrypted AND the website's identity has been verified by a trusted CA.",
+        "istrue": true
+      },
+      {
+        "statement": "The website is legal.",
+        "istrue": false
+      },
+      {
+        "statement": "The website is hosted in a green data center.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The lock symbol confirms both confidentiality (encryption) and authenticity (identity verification via PKI)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a CRL?",
+    "options": [
+      {
+        "statement": "Certificate Request Language",
+        "istrue": false
+      },
+      {
+        "statement": "Certificate Revocation List",
+        "istrue": true
+      },
+      {
+        "statement": "Central Root Layer",
+        "istrue": false
+      },
+      {
+        "statement": "Computer Rescue Link",
+        "istrue": false
+      }
+    ],
+    "explanation": "CRL stands for Certificate Revocation List, a blacklist of certificates that should no longer be trusted."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Who signs the Root CA's certificate?",
+    "options": [
+      {
+        "statement": "Microsoft",
+        "istrue": false
+      },
+      {
+        "statement": "The Root CA signs it themselves (Self-Signed).",
+        "istrue": true
+      },
+      {
+        "statement": "The Government",
+        "istrue": false
+      },
+      {
+        "statement": "No one",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Root CA is the top of the trust pyramid (Trust Anchor). There is no one higher to sign for them, so they sign their own certificate."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is the WoSign incident described as 'Backdating' certificates?",
+    "options": [
+      {
+        "statement": "They issued certificates with a date in the past to avoid new security restrictions (like SHA-1 deprecation).",
+        "istrue": true
+      },
+      {
+        "statement": "They issued certificates that expire in the past.",
+        "istrue": false
+      },
+      {
+        "statement": "They used old computers.",
+        "istrue": false
+      },
+      {
+        "statement": "They refused to update their software.",
+        "istrue": false
+      }
+    ],
+    "explanation": "WoSign fraudulently set the issuance date of new certificates to an earlier date to bypass the ban on older, insecure encryption standards."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If you use a Self-Signed certificate for an internal company website used only by employees, is it safe?",
+    "options": [
+      {
+        "statement": "No, it is never safe.",
+        "istrue": false
+      },
+      {
+        "statement": "Yes, provided the employees manually install/trust the certificate, it provides encryption without the cost of a public CA.",
+        "istrue": true
+      },
+      {
+        "statement": "Yes, browsers will trust it automatically.",
+        "istrue": false
+      },
+      {
+        "statement": "No, hackers can easily decrypt it.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Self-signed certs are valid for encryption. The 'safety' issue is trust. In a controlled environment (Intranet), admins can force computers to trust the self-signed cert."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Ultimately, PKI allows strangers on the internet to:",
+    "options": [
+      {
+        "statement": "Share passwords freely.",
+        "istrue": false
+      },
+      {
+        "statement": "Exchange information securely and confidently knowing they are talking to the right person/entity.",
+        "istrue": true
+      },
+      {
+        "statement": "Hack each other.",
+        "istrue": false
+      },
+      {
+        "statement": "Avoid paying internet bills.",
+        "istrue": false
+      }
+    ],
+    "explanation": "PKI enables secure e-commerce and communication by solving the problem of trust and identity in an open network."
+  }
+]

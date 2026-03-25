@@ -1,0 +1,112 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is NOT in a File-control block (FCB)?",
+    "options": [
+      { "statement": "File lock", "istrue": true },
+      { "statement": "File owner", "istrue": false },
+      { "statement": "File size", "istrue": false },
+      { "statement": "File permissions", "istrue": false }
+    ],
+    "explanation": "The file-control block (FCB) contains metadata such as owner, size, and permissions, but not file locks."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the disadvantage of hash table for directory implementation?",
+    "options": [
+      { "statement": "Searching a file is slow", "istrue": false },
+      { "statement": "Sorting is required", "istrue": false },
+      { "statement": "Table size is fixed", "istrue": false },
+      { "statement": "All of the above", "istrue": true }
+    ],
+    "explanation": "Hash tables have fixed size, cannot maintain sorted order, and may require overflow handling, making them less flexible."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is in a process’s open-file table?",
+    "options": [
+      { "statement": "File pointer", "istrue": false },
+      { "statement": "File-open count", "istrue": false },
+      { "statement": "Disk location", "istrue": false },
+      { "statement": "Access rights", "istrue": true }
+    ],
+    "explanation": "The per-process open-file table stores access rights describing how the process may operate on the file."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which file system uses linked allocation?",
+    "options": [
+      { "statement": "Ext4", "istrue": false },
+      { "statement": "NTFS", "istrue": false },
+      { "statement": "FAT", "istrue": true },
+      { "statement": "XFS", "istrue": false }
+    ],
+    "explanation": "The FAT file system uses linked allocation where each block points to the next block."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the UNIX inode ratio?",
+    "options": [
+      { "statement": "12:1:1:1", "istrue": true },
+      { "statement": "10:1:1:1", "istrue": false },
+      { "statement": "8:1:1:1", "istrue": false },
+      { "statement": "12:2:1:1", "istrue": false }
+    ],
+    "explanation": "The inode structure typically has 12 direct pointers, 1 single indirect, 1 double indirect, and 1 triple indirect pointer."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the disadvantage of linked list for free-space management?",
+    "options": [
+      { "statement": "Traversing the list is too slow", "istrue": true },
+      { "statement": "Requires too much memory", "istrue": false },
+      { "statement": "Does not support deallocation", "istrue": false },
+      { "statement": "Cannot be used for file systems", "istrue": false }
+    ],
+    "explanation": "Traversing a linked list can be slow because every node must be visited to find free space."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the file system of Linux?",
+    "options": [
+      { "statement": "NTFS", "istrue": false },
+      { "statement": "Ext4", "istrue": true },
+      { "statement": "FAT32", "istrue": false },
+      { "statement": "APFS", "istrue": false }
+    ],
+    "explanation": "Ext4 is the default and widely used file system in many Linux distributions."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the file system of Windows?",
+    "options": [
+      { "statement": "Ext4", "istrue": false },
+      { "statement": "ReiserFS", "istrue": false },
+      { "statement": "NTFS", "istrue": true },
+      { "statement": "ZFS", "istrue": false }
+    ],
+    "explanation": "NTFS is the main file system for Microsoft Windows operating systems."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the cause of difference between size and size on disk?",
+    "options": [
+      { "statement": "Internal fragmentation", "istrue": true },
+      { "statement": "External fragmentation", "istrue": false },
+      { "statement": "Operating system", "istrue": false },
+      { "statement": "File name length", "istrue": false }
+    ],
+    "explanation": "Internal fragmentation occurs because file system blocks are larger than the actual file content."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the purpose of log-based transaction-oriented (journaling)?",
+    "options": [
+      { "statement": "Consistency check and file system recovery", "istrue": true },
+      { "statement": "Increase disk size", "istrue": false },
+      { "statement": "Reduce access time", "istrue": false },
+      { "statement": "Encrypt file blocks", "istrue": false }
+    ],
+    "explanation": "Journaling keeps logs to maintain file system consistency and speed up recovery after crashes."
+  }
+]

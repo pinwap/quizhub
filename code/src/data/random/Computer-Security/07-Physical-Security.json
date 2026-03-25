@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "What is the core theme comparing Computer Security to 'Defense Against the Dark Arts' in this chapter?",
+    "options": [
+      {
+        "statement": "It requires magic spells to fix computers.",
+        "istrue": false
+      },
+      {
+        "statement": "It emphasizes the importance of Physical Security, which is often overlooked.",
+        "istrue": true
+      },
+      {
+        "statement": "It focuses solely on defending against ghosts.",
+        "istrue": false
+      },
+      {
+        "statement": "It teaches how to use dark magic to hack others.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The chapter uses the Harry Potter theme to highlight Physical Security as a critical 'defense' skill against 'dark arts' (threats) that are often ignored."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "According to the 'Golden Rule' of physical security, what happens if a hacker gains physical access to your machine?",
+    "options": [
+      {
+        "statement": "Software protections become largely meaningless ('Game Over').",
+        "istrue": true
+      },
+      {
+        "statement": "The antivirus software automatically deletes all data.",
+        "istrue": false
+      },
+      {
+        "statement": "The computer physically explodes.",
+        "istrue": false
+      },
+      {
+        "statement": "Nothing happens if you have a strong password.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Physical access allows attackers to bypass software controls (like firewalls or OS permissions) by booting from external drives, using hardware tools, or physically resetting components."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the 'Power Pwn' device mentioned in the slides?",
+    "options": [
+      {
+        "statement": "A powerful battery charger.",
+        "istrue": false
+      },
+      {
+        "statement": "A malicious power strip containing a hidden computer to hack enterprise networks.",
+        "istrue": true
+      },
+      {
+        "statement": "A new type of CPU.",
+        "istrue": false
+      },
+      {
+        "statement": "A software for managing power consumption.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Power Pwn looks like a normal power strip but contains hacking hardware  to infiltrate networks physically."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the 'Library Scenario', what is the primary mistake the victim made?",
+    "options": [
+      {
+        "statement": "Going to the bathroom.",
+        "istrue": false
+      },
+      {
+        "statement": "Leaving their device unattended and unlocked in a public place.",
+        "istrue": true
+      },
+      {
+        "statement": "Using a laptop instead of a tablet.",
+        "istrue": false
+      },
+      {
+        "statement": "Reading a book instead of studying.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Leaving a device unattended, even for a few minutes, gives an attacker the window of opportunity needed to compromise it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the primary goal of the 'JavaScript Injection' lab described in the course?",
+    "options": [
+      {
+        "statement": "To make the website look prettier.",
+        "istrue": false
+      },
+      {
+        "statement": "To fix bugs in the website code.",
+        "istrue": false
+      },
+      {
+        "statement": "To steal the Username and Password from a login page.",
+        "istrue": true
+      },
+      {
+        "statement": "To speed up the internet connection.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The lab demonstrates how a brief moment of physical access allows an attacker to inject code that captures credentials when the user logs in."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Where does the attacker inject the malicious JavaScript code in the demonstrated attack?",
+    "options": [
+      {
+        "statement": "In the computer's BIOS.",
+        "istrue": false
+      },
+      {
+        "statement": "In the Browser's Address Bar or Console.",
+        "istrue": true
+      },
+      {
+        "statement": "In a text file on the desktop.",
+        "istrue": false
+      },
+      {
+        "statement": "In the Wi-Fi router settings.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The attacker uses the browser's developer tools (Console) or the address bar (using 'javascript:...') to execute code within the context of the current page [Image of browser developer console]."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the code `javascript:alert('Hello from bad guy.')` demonstrate?",
+    "options": [
+      {
+        "statement": "A complex virus.",
+        "istrue": false
+      },
+      {
+        "statement": "A Proof of Concept that the attacker can run arbitrary code on the victim's browser.",
+        "istrue": true
+      },
+      {
+        "statement": "A method to clean the browser cache.",
+        "istrue": false
+      },
+      {
+        "statement": "A way to increase volume.",
+        "istrue": false
+      }
+    ],
+    "explanation": "This simple alert box proves that the browser is accepting and executing commands from the user, paving the way for more malicious scripts."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In a real-world JavaScript injection attack, when does the malicious code usually execute?",
+    "options": [
+      {
+        "statement": "Immediately when the attacker types it.",
+        "istrue": false
+      },
+      {
+        "statement": "When the victim returns and attempts to click 'Login'.",
+        "istrue": true
+      },
+      {
+        "statement": "The next day.",
+        "istrue": false
+      },
+      {
+        "statement": "When the computer is turned off.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The attacker sets a 'trap' (e.g., an event listener on the Submit button). The code triggers only when the victim interacts with the page."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is 'Netcat' described as in the context of network security?",
+    "options": [
+      {
+        "statement": "A video game involving cats.",
+        "istrue": false
+      },
+      {
+        "statement": "The 'Swiss Army Knife' of networking tools.",
+        "istrue": true
+      },
+      {
+        "statement": "A type of firewall.",
+        "istrue": false
+      },
+      {
+        "statement": "A web browser.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Netcat is a versatile utility used for reading from and writing to network connections, often used for debugging or hacking."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the 'Trojan Horse' scenario using Netcat, what is a 'Reverse Shell'?",
+    "options": [
+      {
+        "statement": "The attacker connects to the victim.",
+        "istrue": false
+      },
+      {
+        "statement": "The victim's machine initiates the connection back to the attacker's machine.",
+        "istrue": true
+      },
+      {
+        "statement": "A shell that spells commands backwards.",
+        "istrue": false
+      },
+      {
+        "statement": "A defensive shield around the shell.",
+        "istrue": false
+      }
+    ],
+    "explanation": "In a Reverse Shell , the victim (who ran the Trojan) connects OUT to the attacker. This often bypasses firewalls that block incoming connections."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What command allows the Netcat connection to execute commands on the victim's Linux machine?",
+    "options": [
+      {
+        "statement": "-p 80",
+        "istrue": false
+      },
+      {
+        "statement": "-e /bin/bash",
+        "istrue": true
+      },
+      {
+        "statement": "-l (listen)",
+        "istrue": false
+      },
+      {
+        "statement": "-v (verbose)",
+        "istrue": false
+      }
+    ],
+    "explanation": "The `-e` flag stands for execute. On Linux, `/bin/bash` gives the remote user access to the command line shell."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "If the attacker is on a Mac and the victim is on Linux, will the Netcat attack work?",
+    "options": [
+      {
+        "statement": "No, they need to use the same OS.",
+        "istrue": false
+      },
+      {
+        "statement": "Yes, Netcat and standard network protocols work across different platforms.",
+        "istrue": true
+      },
+      {
+        "statement": "Only if they are on the same Wi-Fi.",
+        "istrue": false
+      },
+      {
+        "statement": "No, Mac cannot understand Linux commands.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Network protocols (TCP/IP) are universal. As long as Netcat is running on both ends, the OS doesn't matter."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does the attacker see on their screen once the Reverse Shell is successful?",
+    "options": [
+      {
+        "statement": "The victim's webcam feed.",
+        "istrue": false
+      },
+      {
+        "statement": "A command prompt (Shell) controlling the victim's computer.",
+        "istrue": true
+      },
+      {
+        "statement": "The victim's desktop wallpaper.",
+        "istrue": false
+      },
+      {
+        "statement": "A blue screen of death.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The attacker gets a text-based interface (Shell) where they can type commands that execute on the victim's machine."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How does Social Engineering play a role in the Trojan Horse attack?",
+    "options": [
+      {
+        "statement": "It is used to physically steal the computer.",
+        "istrue": false
+      },
+      {
+        "statement": "It is used to trick the victim into running the malicious program (e.g., 'Download this new game!').",
+        "istrue": true
+      },
+      {
+        "statement": "It is used to guess the password.",
+        "istrue": false
+      },
+      {
+        "statement": "It is not used in this attack.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The technical attack (Netcat) relies on the human failure (Social Engineering) of the user willingly running the untrusted file."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'Bind Shell' (as opposed to a Reverse Shell)?",
+    "options": [
+      {
+        "statement": "The victim connects to the attacker.",
+        "istrue": false
+      },
+      {
+        "statement": "The victim opens a port and waits (Listens) for the attacker to connect to them.",
+        "istrue": true
+      },
+      {
+        "statement": "A shell that uses glue.",
+        "istrue": false
+      },
+      {
+        "statement": "A shell with limited commands.",
+        "istrue": false
+      }
+    ],
+    "explanation": "In a Bind Shell, the victim acts as the server (Listening), and the attacker acts as the client connecting to the victim's open port."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is a 'Reverse Shell' generally preferred by hackers over a 'Bind Shell'?",
+    "options": [
+      {
+        "statement": "It is faster.",
+        "istrue": false
+      },
+      {
+        "statement": "Firewalls usually block incoming connections (Bind Shell) but allow outgoing connections (Reverse Shell).",
+        "istrue": true
+      },
+      {
+        "statement": "It uses less data.",
+        "istrue": false
+      },
+      {
+        "statement": "It is easier to type.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Most personal and corporate firewalls are configured to block unsolicited inbound traffic but allow users to browse the web (outbound traffic)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'Keylogger'?",
+    "options": [
+      {
+        "statement": "A person who makes keys.",
+        "istrue": false
+      },
+      {
+        "statement": "Hardware or software that records every keystroke typed by the user.",
+        "istrue": true
+      },
+      {
+        "statement": "A secure password manager.",
+        "istrue": false
+      },
+      {
+        "statement": "A type of musical instrument.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Keyloggers  capture input, allowing attackers to steal passwords and sensitive data typed on the keyboard."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Mindset' recommended in this chapter is:",
+    "options": [
+      {
+        "statement": "Trust everyone.",
+        "istrue": false
+      },
+      {
+        "statement": "Think like a bad guy to understand vulnerabilities.",
+        "istrue": true
+      },
+      {
+        "statement": "Don't use computers.",
+        "istrue": false
+      },
+      {
+        "statement": "Rely solely on antivirus.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Adopting an adversarial mindset helps you identify risks you might otherwise overlook."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which keyboard shortcut is recommended to secure your Windows computer before walking away?",
+    "options": [
+      {
+        "statement": "Ctrl + C",
+        "istrue": false
+      },
+      {
+        "statement": "Windows Key + L",
+        "istrue": true
+      },
+      {
+        "statement": "Alt + F4",
+        "istrue": false
+      },
+      {
+        "statement": "Ctrl + Alt + Del",
+        "istrue": false
+      }
+    ],
+    "explanation": "Windows Key + L immediately locks the workstation, requiring a password to re-enter."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is Multi-Factor Authentication (MFA) a crucial defense against Physical/Trojan attacks?",
+    "options": [
+      {
+        "statement": "It makes the computer run faster.",
+        "istrue": false
+      },
+      {
+        "statement": "Even if the attacker steals your password (via Keylogger/Injection), they cannot login without the second factor (e.g., your phone).",
+        "istrue": true
+      },
+      {
+        "statement": "It prevents the computer from being stolen.",
+        "istrue": false
+      },
+      {
+        "statement": "It deletes the virus automatically.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MFA adds a layer of security that relies on 'something you have', which a remote attacker usually lacks."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is it recommended to use a Webcam Cover?",
+    "options": [
+      {
+        "statement": "To prevent dust from getting on the lens.",
+        "istrue": false
+      },
+      {
+        "statement": "Because RATs (Remote Access Trojans) can activate the camera to spy on you without the light turning on.",
+        "istrue": true
+      },
+      {
+        "statement": "To make the image quality better.",
+        "istrue": false
+      },
+      {
+        "statement": "To save battery power.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Physical covers provide a foolproof guarantee that no software (malware) can view the room."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What defines a 'Trojan Horse' in malware terms?",
+    "options": [
+      {
+        "statement": "A virus that duplicates itself.",
+        "istrue": false
+      },
+      {
+        "statement": "A program that looks legitimate or useful but contains malicious functionality.",
+        "istrue": true
+      },
+      {
+        "statement": "A bug in the operating system.",
+        "istrue": false
+      },
+      {
+        "statement": "A type of firewall.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Like the wooden horse in mythology, a Trojan relies on disguise to trick the victim into inviting the threat inside."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the Netcat command `nc -l -p 60000`, what does the `-l` stand for?",
+    "options": [
+      {
+        "statement": "Login",
+        "istrue": false
+      },
+      {
+        "statement": "Listen",
+        "istrue": true
+      },
+      {
+        "statement": "Loop",
+        "istrue": false
+      },
+      {
+        "statement": "Load",
+        "istrue": false
+      }
+    ],
+    "explanation": "The `-l` flag tells Netcat to open a port and 'listen' for incoming connections."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "How long does it typically take for a physical attacker to compromise an unattended, unlocked machine?",
+    "options": [
+      {
+        "statement": "Several hours.",
+        "istrue": false
+      },
+      {
+        "statement": "Only seconds or a few minutes.",
+        "istrue": true
+      },
+      {
+        "statement": "Days.",
+        "istrue": false
+      },
+      {
+        "statement": "It is impossible.",
+        "istrue": false
+      }
+    ],
+    "explanation": "As shown in the lab, typing a single line of code or inserting a USB drive takes less than a minute."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'RAT' in cybersecurity?",
+    "options": [
+      {
+        "statement": "Remote Administration Tool (or Remote Access Trojan).",
+        "istrue": true
+      },
+      {
+        "statement": "Random Access Technology.",
+        "istrue": false
+      },
+      {
+        "statement": "Real-time Attack Threat.",
+        "istrue": false
+      },
+      {
+        "statement": "A mouse-like device.",
+        "istrue": false
+      }
+    ],
+    "explanation": "RATs allow attackers to control a computer remotely, often including webcam access, file management, and keylogging."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Ethical Hacking' lab in this chapter implies that:",
+    "options": [
+      {
+        "statement": "You should hack your friends for fun.",
+        "istrue": false
+      },
+      {
+        "statement": "Understanding attack methods is necessary to defend against them effectively.",
+        "istrue": true
+      },
+      {
+        "statement": "Hacking is legal everywhere.",
+        "istrue": false
+      },
+      {
+        "statement": "Defensive tools are useless.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The purpose of learning offensive techniques (the Dark Arts) in this context is to better understand defense (Defense Against the Dark Arts)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the limitation of a 'Physical Keylogger' compared to a software one?",
+    "options": [
+      {
+        "statement": "It cannot record numbers.",
+        "istrue": false
+      },
+      {
+        "statement": "The attacker usually needs to physically retrieve the device to get the data.",
+        "istrue": true
+      },
+      {
+        "statement": "It is easily detected by antivirus.",
+        "istrue": false
+      },
+      {
+        "statement": "It stops working when the internet is off.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Physical keyloggers sit between the keyboard and the computer. Unless they have Wi-Fi (some do), the attacker must return to the scene to collect the device."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a recommendation for physical security?",
+    "options": [
+      {
+        "statement": "Locking your screen when away.",
+        "istrue": false
+      },
+      {
+        "statement": "Sharing your password with a trusted colleague for emergencies.",
+        "istrue": true
+      },
+      {
+        "statement": "Keeping devices with you in public.",
+        "istrue": false
+      },
+      {
+        "statement": "Using MFA.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Passwords should never be shared. This violates the principle of non-repudiation and security best practices."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "When using the command `javascript:alert(...)` in the address bar, why might it fail on modern browsers?",
+    "options": [
+      {
+        "statement": "Modern browsers strip the 'javascript:' prefix when pasting for security reasons (you must type it manually).",
+        "istrue": true
+      },
+      {
+        "statement": "Browsers no longer support JavaScript.",
+        "istrue": false
+      },
+      {
+        "statement": "The computer is too slow.",
+        "istrue": false
+      },
+      {
+        "statement": "It only works on the dark web.",
+        "istrue": false
+      }
+    ],
+    "explanation": "To prevent accidental self-XSS, modern browsers often remove the protocol prefix when pasting code into the address bar."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the ultimate takeaway regarding 'Unattended Devices'?",
+    "options": [
+      {
+        "statement": "They are safe if they have a screensaver.",
+        "istrue": false
+      },
+      {
+        "statement": "They are an open invitation for compromise and should be avoided at all costs.",
+        "istrue": true
+      },
+      {
+        "statement": "They are only dangerous in libraries.",
+        "istrue": false
+      },
+      {
+        "statement": "They are safe if the volume is muted.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Leaving a device unattended breaks the chain of custody and physical security, making it the easiest target for an attacker."
+  }
+]

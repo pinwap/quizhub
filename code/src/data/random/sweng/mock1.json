@@ -1,0 +1,664 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นเหตุผลที่อธิบายได้ว่าทำไมบางบั๊กไม่ควรแก้ในระยะท้ายของโครงการ?",
+    "options": [
+      { "statement": "อาจมีผลกระทบต่อส่วนอื่นและเสี่ยงสร้างบั๊กใหม่", "istrue": true },
+      { "statement": "ต้นทุนแก้ไขต่ำมาก", "istrue": false },
+      { "statement": "บั๊กมักไม่กระทบต่อประสบการณ์ผู้ใช้", "istrue": false },
+      { "statement": "บั๊กทุกตัวควรแก้ทันทีเสมอ", "istrue": false }
+    ],
+    "explanation": "บทที่ 13 ระบุว่าการแก้บั๊กปลายทางเสี่ยงกระทบส่วนอื่นและอาจสร้างบั๊กใหม่"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Unit Test มีวัตถุประสงค์อย่างไร?",
+    "options": [
+      { "statement": "ทดสอบการทำงานร่วมของหลายโมดูล", "istrue": false },
+      { "statement": "ทดสอบฟังก์ชันย่อยให้ทำงานถูกต้องแยกจากส่วนอื่น", "istrue": true },
+      { "statement": "ทดสอบการยอมรับของผู้ใช้", "istrue": false },
+      { "statement": "ทดสอบการทำงานของระบบรวมทั้งหมด", "istrue": false }
+    ],
+    "explanation": "Unit Test ตรวจสอบส่วนย่อยของโค้ดแยกจากระบบ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "เหตุผลใดที่ Regression Test จำเป็น?",
+    "options": [
+      { "statement": "เพื่อเพิ่มฟีเจอร์ใหม่โดยไม่ต้องทดสอบซ้ำ", "istrue": false },
+      { "statement": "เพื่อจับปัญหาที่เกิดขึ้นหลังแก้โค้ดหรือเพิ่มฟีเจอร์", "istrue": true },
+      { "statement": "เพื่อให้ระบบทำงานเร็วขึ้นโดยอัตโนมัติ", "istrue": false },
+      { "statement": "เพื่อแทนที่ unit test", "istrue": false }
+    ],
+    "explanation": "Regression Test ตรวจสอบว่าโค้ดใหม่ไม่ทำให้สิ่งเก่าพัง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อดีของ Staged Deployment?",
+    "options": [
+      { "statement": "ไม่ต้องเตรียมระบบล่วงหน้า", "istrue": false },
+      { "statement": "ช่วยทดสอบการ deploy ในสภาพแวดล้อมใกล้เคียงจริง", "istrue": true },
+      { "statement": "ผู้ใช้ไม่ต้องทดสอบระบบ", "istrue": false },
+      { "statement": "ไม่มีการย้อนกลับของเวอร์ชัน", "istrue": false }
+    ],
+    "explanation": "Staged deployment ใช้สภาพแวดล้อม staging เพื่อซ้อมก่อน deploy จริง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดจัดเป็น Process Metric?",
+    "options": [
+      { "statement": "จำนวนบั๊กทั้งหมดในโปรเจกต์", "istrue": false },
+      { "statement": "เวลา review code ต่อ KLOC", "istrue": true },
+      { "statement": "คะแนนพึงพอใจของผู้ใช้", "istrue": false },
+      { "statement": "จำนวนฟีเจอร์ที่ release", "istrue": false }
+    ],
+    "explanation": "Process metrics วัดกระบวนการ เช่น เวลา review ต่อขนาดโค้ด"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Maintenance ประเภทใดหมายถึงการปรับระบบให้ทำงานกับสภาพแวดล้อมใหม่ เช่น OS เวอร์ชันใหม่?",
+    "options": [
+      { "statement": "Corrective", "istrue": false },
+      { "statement": "Adaptive", "istrue": true },
+      { "statement": "Perfective", "istrue": false },
+      { "statement": "Preventive", "istrue": false }
+    ],
+    "explanation": "Adaptive maintenance ใช้เมื่อสิ่งแวดล้อมภายนอกเปลี่ยน"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Predictive Model เหมาะกับสถานการณ์ใด?",
+    "options": [
+      { "statement": "ข้อกำหนดไม่ชัดเจน", "istrue": false },
+      { "statement": "ต้องการปล่อยเวอร์ชันเร็วมาก", "istrue": false },
+      { "statement": "ข้อกำหนดคงที่และทีมมีประสบการณ์สูง", "istrue": true },
+      { "statement": "ต้องแก้ requirement ระหว่างพัฒนา", "istrue": false }
+    ],
+    "explanation": "Predictive เหมาะเมื่อ requirement ชัดเจนและเสถียร"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Sashimi Model แตกต่างจาก Waterfall แบบดั้งเดิมอย่างไร?",
+    "options": [
+      { "statement": "ไม่มีลำดับขั้นตอน", "istrue": false },
+      { "statement": "ขั้นตอนสามารถซ้อนทับกันได้", "istrue": true },
+      { "statement": "ใช้เฉพาะในระบบ Embedded", "istrue": false },
+      { "statement": "ตัดขั้นตอน testing ออก", "istrue": false }
+    ],
+    "explanation": "Sashimi อนุญาตให้ขั้นตอน overlap กันได้"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นจุดเด่นของ Spiral Model?",
+    "options": [
+      { "statement": "ไม่มีการวิเคราะห์ความเสี่ยง", "istrue": false },
+      { "statement": "เน้นการวิเคราะห์ความเสี่ยงในแต่ละรอบ", "istrue": true },
+      { "statement": "ใช้กับโปรเจกต์เล็กเท่านั้น", "istrue": false },
+      { "statement": "ไม่สามารถปรับเปลี่ยนได้", "istrue": false }
+    ],
+    "explanation": "Spiral มีแกนหลักคือ risk-driven development"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นหลักการของ RAD?",
+    "options": [
+      { "statement": "เน้น documentation มากที่สุด", "istrue": false },
+      { "statement": "ใช้ iteration ระยะสั้นมาก", "istrue": true },
+      { "statement": "ใช้ทีมใหญ่มากเพื่อเพิ่มความเร็ว", "istrue": false },
+      { "statement": "ลดจำนวน prototype", "istrue": false }
+    ],
+    "explanation": "RAD ใช้ iteration สั้น เช่น 1–2 สัปดาห์"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Scrum Master มีหน้าที่ใด?",
+    "options": [
+      { "statement": "กำหนด requirement", "istrue": false },
+      { "statement": "ลบอุปสรรคให้ทีมและรักษา Scrum process", "istrue": true },
+      { "statement": "ทำงานแทน Product Owner", "istrue": false },
+      { "statement": "ตัดสินใจด้านสถาปัตยกรรม", "istrue": false }
+    ],
+    "explanation": "Scrum Master รับผิดชอบด้านกระบวนการและอุปสรรคของทีม"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นข้อดีของ XP Pair Programming?",
+    "options": [
+      { "statement": "ลดคุณภาพของ code review", "istrue": false },
+      { "statement": "เพิ่มการคิดร่วมและลดบั๊ก", "istrue": true },
+      { "statement": "ลดความเร็วในการพัฒนาเสมอ", "istrue": false },
+      { "statement": "ไม่ต้องการนักพัฒนาที่มีทักษะ", "istrue": false }
+    ],
+    "explanation": "Pair programming ช่วยลดบั๊กและเพิ่มคุณภาพโค้ด"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Lean Software Development เน้นอะไร?",
+    "options": [
+      { "statement": "เพิ่มเอกสาร", "istrue": false },
+      { "statement": "ลด waste และเพิ่ม value", "istrue": true },
+      { "statement": "ขยายทีมให้ใหญ่ที่สุด", "istrue": false },
+      { "statement": "ลด iteration ให้เหลือน้อยที่สุด", "istrue": false }
+    ],
+    "explanation": "Lean เน้น elimination of waste และ delivering value"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Crystal Method เลือกระดับของวิธีการตามอะไร?",
+    "options": [
+      { "statement": "จำนวน developer และ Criticality", "istrue": true },
+      { "statement": "ภาษาที่ใช้เขียนโปรแกรม", "istrue": false },
+      { "statement": "ความเร็วอินเทอร์เน็ต", "istrue": false },
+      { "statement": "จำนวนเมนูใน UI", "istrue": false }
+    ],
+    "explanation": "Crystal ใช้ team size + project criticality เป็นตัวกำหนด"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นสาเหตุของ Bug Snowball Effect?",
+    "options": [
+      { "statement": "บั๊กถูกสร้างในช่วงท้ายของโครงการ", "istrue": false },
+      { "statement": "บั๊กที่เกิดต้นโครงการจะส่งผลกระทบเป็นลูกโซ่มากกว่า", "istrue": true },
+      { "statement": "ไม่จำเป็นต้องทดสอบ early code", "istrue": false },
+      { "statement": "ไม่มีผลต่อคุณภาพระบบ", "istrue": false }
+    ],
+    "explanation": "บั๊กที่เกิดเร็วจะส่งผลต่อหลายส่วน ทำให้แก้ยากมากขึ้น"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดต่อไปนี้เป็นการทำ Preventive Maintenance?",
+    "options": [
+      { "statement": "เพิ่ม feature ใหม่", "istrue": false },
+      { "statement": "แก้บั๊กที่ลูกค้ารายงาน", "istrue": false },
+      { "statement": "Refactor code smell", "istrue": true },
+      { "statement": "แก้ฐานข้อมูลให้รองรับ OS ใหม่", "istrue": false }
+    ],
+    "explanation": "Preventive มุ่งป้องกันปัญหาล่วงหน้า เช่น refactoring"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Function Point (FP) ใช้ทำอะไร?",
+    "options": [
+      { "statement": "วัดจำนวนโค้ด", "istrue": false },
+      { "statement": "วัดความซับซ้อนตามมุมมองผู้ใช้", "istrue": true },
+      { "statement": "วัดเวลาในการพัฒนา", "istrue": false },
+      { "statement": "วัดจำนวน developer", "istrue": false }
+    ],
+    "explanation": "FP เน้น complexity ที่ user มองเห็น ไม่ขึ้นกับภาษาหรือเทคโนโลยี"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดคือข้อดีของ Automated Testing?",
+    "options": [
+      { "statement": "ลดความจำเป็นของ unit test", "istrue": false },
+      { "statement": "รัน test ซ้ำจำนวนมากได้อัตโนมัติและแม่นยำ", "istrue": true },
+      { "statement": "ลดความจำเป็นของ regression test", "istrue": false },
+      { "statement": "ลดความต้องการผู้ทดสอบทั้งหมด", "istrue": false }
+    ],
+    "explanation": "Automated test เพิ่มความเร็วและความแม่นยำในการทดสอบซ้ำ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นคุณสมบัติของการทดสอบแบบ Black-Box?",
+    "options": [
+      { "statement": "รู้วิธีการทำงานภายในของระบบ", "istrue": false },
+      { "statement": "ทดสอบจากมุมมอง input-output โดยไม่สนใจโค้ดภายใน", "istrue": true },
+      { "statement": "ทดสอบเฉพาะด้าน performance", "istrue": false },
+      { "statement": "ทดสอบ logic ภายในเท่านั้น", "istrue": false }
+    ],
+    "explanation": "Black-box มองจากภายนอก ไม่สนใจโครงสร้างภายใน"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดเป็นตัววัดที่เหมาะสมสำหรับ Project Metrics?",
+    "options": [
+      { "statement": "ผลลัพธ์คุณภาพของ release ล่าสุด", "istrue": true },
+      { "statement": "เวลาที่ใช้ในการ review ต่อ KLOC", "istrue": false },
+      { "statement": "ตัวชี้วัดทักษะของ developer", "istrue": false },
+      { "statement": "จำนวนประชุมรายสัปดาห์", "istrue": false }
+    ],
+    "explanation": "Project metrics วัดสิ่งที่เกิดขึ้นกับ project เช่น คุณภาพ release"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ข้อใดบ่งบอกว่าเป็น Perfective Maintenance?",
+    "options": [
+      { "statement": "แก้ error input validation", "istrue": false },
+      { "statement": "เพิ่มฟีเจอร์รายงานใหม่", "istrue": true },
+      { "statement": "รองรับฐานข้อมูลใหม่", "istrue": false },
+      { "statement": "Refactor โครงสร้างโค้ด", "istrue": false }
+    ],
+    "explanation": "Perfective คือเพิ่ม feature หรือปรับปรุงของเดิม"
+  },
+
+
+  {
+    "type": "multiple-choice",
+    "question": "การทำ Regression Test จำเป็นต้องตรวจสอบเฉพาะ module ที่มีการแก้ไขเท่านั้น",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Regression ต้องทดสอบระบบเดิมทั้งหมดที่อาจได้รับผลกระทบ"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Staged Deployment ช่วยลดความเสี่ยงของการย้ายระบบ",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Staging ทำให้ทดสอบก่อน deploy จริง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Process metrics ใช้เพื่อวัดผลการทำงานของโปรเจกต์เท่านั้น",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Process metrics วัดกระบวนการ ไม่ใช่ผลลัพธ์โปรเจกต์"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Corrective Maintenance คือการเพิ่มความสามารถของระบบ",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Corrective คือแก้บั๊ก"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Predictive Model ไม่เหมาะกับ requirement ที่เปลี่ยนตลอด",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Predictive เหมาะกับ requirement คงที่"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Sashimi อนุญาตให้ขั้นตอนพัฒนาเกิดร่วมกันบางส่วนได้",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Sashimi คือ waterfall แบบ overlap"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Spiral Model ไม่จำเป็นต้องทำ risk analysis",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Spiral เน้น risk-driven"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "RAD ใช้ iteration ยาวมากเพื่อเพิ่มคุณภาพ",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "RAD ใช้ iteration สั้น"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Scrum Master มีหน้าที่บริหารทีมแบบสั่งการโดยตรง",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Scrum master ไม่ใช่ manager"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Pair Programming ช่วยลดบั๊กจากการตรวจโค้ดทันที",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "อีกคนคอยรีวิว real-time"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Lean เน้นการตัด waste เช่น การประชุมที่ไม่จำเป็น",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Lean ลด waste ทุกประเภท"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Crystal เหมาะกับโปรเจกต์ที่มีจำนวนคนคงที่ตลอด",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Crystal ปรับตาม team size และ criticality"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Bug ที่ถูกค้นพบโดยลูกค้ามีความรุนแรงมากกว่าบั๊กที่พบโดยทีม",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ลูกค้าค้นพบ = ความเสี่ยงต่อความเชื่อมั่นสูง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Preventive maintenance มุ่งเน้นการป้องกันปัญหาก่อนจะเกิด",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Preventive คือปรับปรุงเพื่อป้องกันปัญหาในอนาคต"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Function Point ไม่ขึ้นกับภาษาที่ใช้เขียนระบบ",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "FP วัดจากมุมมองผู้ใช้"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "การทำ Automated Testing ทำให้ไม่จำเป็นต้องมี tester",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "ยังต้องมี tester"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Black-box ไม่สนใจโค้ดภายในระบบ",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ทดสอบจาก input/output"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Project metrics มุ่งวัดกระบวนการทำงานภายในของทีมพัฒนา",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Project metrics วัดผลลัพธ์ของ project ไม่ใช่ process"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Waterfall เหมาะกับข้อกำหนดที่เปลี่ยนบ่อย",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Waterfall เหมาะกับ requirement คงที่"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Iterative Model เหมาะกับ requirement ที่ยังไม่ชัดเจนในช่วงแรก",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Iterative พัฒนาแล้วค่อย refine ภายหลัง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Incremental Model เพิ่มคุณภาพ feature เดิมในแต่ละรอบ",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Incremental เพิ่ม feature ใหม่ ไม่ได้ปรับปรุง feature เดิม"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Prototype แบบ Throwaway ถูกทิ้งหลังใช้งาน",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Throwaway = สร้างเพื่อศึกษา แล้วทิ้ง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Spiral Model ใช้หลายรอบของ cycle เพื่อแก้ความเสี่ยง",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "แต่ละรอบลด risk"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Scrum ใช้ Sprint backlog เป็นตัวกำหนดงานของ sprint นั้น",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Sprint backlog = รายการงานที่เลือกจาก product backlog"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "ใน XP นักพัฒนาไม่ควร refactor บ่อยเกินไป",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Refactor เป็น core practice"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Lean ให้เริ่มตัดสินใจทางเทคนิคทุกอย่างตั้งแต่ต้น",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "Lean สนับสนุน defer decisions"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Crystal Clear เหมาะกับทีมขนาด 1–6 คน",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Crystal Clear สำหรับทีมเล็ก"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Bug Tracking System มีประโยชน์ในการไม่ให้บั๊กลืมแก้",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ระบบติดตามช่วยไม่ให้บั๊กลืมหรือหาย"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Function Point เน้นการวัดที่ขึ้นกับ technology",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "FP เป็น technology-independent"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Deployment แบบ Parallel Testing ให้ผู้ใช้ทำงานสองระบบพร้อมกัน",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Parallel = ใช้ระบบใหม่แบบจำลอง พร้อมกับระบบจริง"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Destructive Testing คือการทดสอบเพื่อให้ระบบล้มเหลว",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ทำให้ระบบพังเพื่อดู behaviour"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Acceptance Test ทำโดยผู้ใช้หรือผู้แทนผู้ใช้",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Acceptance test คือตรวจการยอมรับจากลูกค้า"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "System Testing ทดสอบระบบรวมทั้งหมด",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "System test คือ end-to-end"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "White-box Test เหมาะกับกรณีไม่มีโค้ดให้ดู",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "White-box ต้องดูโค้ด"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "การทำ Preventive Maintenance ช่วยลดต้นทุนในระยะยาว",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "ลดโอกาสบั๊กก้อนโตในอนาคต"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Second System Effect คือการทำระบบรุ่นสองที่ใหญ่เกินความจำเป็น",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "มักเกิดจากคาดหวังสูงเกินไป"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "XP ไม่สนับสนุนการทำงานเป็นทีม",
+    "options": [
+      { "statement": "True", "istrue": false },
+      { "statement": "False", "istrue": true }
+    ],
+    "explanation": "XP เน้น teamwork เช่น pair programming"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Scrum วัดความเร็วทีมโดยใช้ Velocity",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Velocity คือจำนวนงานที่ทีมทำได้ใน sprint"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "RAD เกิดข้อจำกัดเมื่อทีมใหญ่เกินไป",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "RAD ต้องใช้ทีมเล็กเพื่อเร่งการสื่อสาร"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Prototyping ช่วยทำให้ requirement ชัดเจนขึ้นในช่วงต้น",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "Prototype ช่วยลด misunderstanding"
+  },
+
+  {
+    "type": "multiple-choice",
+    "question": "Waterfall with Feedback อนุญาตให้ย้อนกลับไปขั้นตอนก่อนหน้าได้",
+    "options": [
+      { "statement": "True", "istrue": true },
+      { "statement": "False", "istrue": false }
+    ],
+    "explanation": "เป็น waterfall ที่ยืดหยุ่นขึ้น"
+  }
+]

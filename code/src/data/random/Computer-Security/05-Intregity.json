@@ -1,0 +1,692 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "In the context of information security, 'Integrity' primarily ensures that:",
+    "options": [
+      {
+        "statement": "Data is kept secret from unauthorized users.",
+        "istrue": false
+      },
+      {
+        "statement": "Data is correct, complete, and has not been unaltered by unauthorized means.",
+        "istrue": true
+      },
+      {
+        "statement": "The system is always available when needed.",
+        "istrue": false
+      },
+      {
+        "statement": "The user's identity is verified.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Integrity refers to the accuracy and completeness of data, ensuring it hasn't been tampered with or corrupted (e.g., by disk failure or hackers)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is 'Trust' not the same as 'Secure' in the context of Code Signing?",
+    "options": [
+      {
+        "statement": "Code signing only verifies the author and integrity, not the quality of the code; signed software can still contain bugs or vulnerabilities.",
+        "istrue": true
+      },
+      {
+        "statement": "Code signing is illegal in some countries.",
+        "istrue": false
+      },
+      {
+        "statement": "Signed code is automatically deleted by the OS.",
+        "istrue": false
+      },
+      {
+        "statement": "Trust means the code is open source.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A digital signature proves *who* sent the code and that it wasn't modified, but it does not guarantee that the trusted company wrote bug-free or secure code."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the purpose of 'Sandboxing' (e.g., in Java Applets)?",
+    "options": [
+      {
+        "statement": "To clean the computer memory.",
+        "istrue": false
+      },
+      {
+        "statement": "To run untrusted code in a restricted environment to prevent it from harming the core system.",
+        "istrue": true
+      },
+      {
+        "statement": "To speed up the internet connection.",
+        "istrue": false
+      },
+      {
+        "statement": "To encrypt the hard drive.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Sandboxing isolates untrusted programs, preventing them from accessing critical resources or files outside their designated area (the 'sandbox')."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the 'Protection Rings' architecture (x86), which ring has the highest privilege (Kernel Level)?",
+    "options": [
+      {
+        "statement": "Ring 3",
+        "istrue": false
+      },
+      {
+        "statement": "Ring 1",
+        "istrue": false
+      },
+      {
+        "statement": "Ring 0",
+        "istrue": true
+      },
+      {
+        "statement": "Ring -1",
+        "istrue": false
+      }
+    ],
+    "explanation": "Ring 0 is the innermost ring with full access to hardware (Kernel), while applications typically run in Ring 3 (User Mode)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which classical encryption method involves wrapping a leather strip around a wooden rod of a specific diameter?",
+    "options": [
+      {
+        "statement": "Caesar Cipher",
+        "istrue": false
+      },
+      {
+        "statement": "Scytale",
+        "istrue": true
+      },
+      {
+        "statement": "Enigma",
+        "istrue": false
+      },
+      {
+        "statement": "Vigenere",
+        "istrue": false
+      }
+    ],
+    "explanation": "The Scytale is an ancient Greek transposition cipher that relies on the diameter of the rod (the key) to align letters correctly."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is the Caesar Cipher (Substitution Cipher) vulnerable to 'Frequency Analysis'?",
+    "options": [
+      {
+        "statement": "It uses a very long key.",
+        "istrue": false
+      },
+      {
+        "statement": "It preserves the statistical distribution of letters (e.g., 'e' is the most common letter in English), allowing attackers to guess the shift.",
+        "istrue": true
+      },
+      {
+        "statement": "It requires a computer to solve.",
+        "istrue": false
+      },
+      {
+        "statement": "It only works with numbers.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Since each letter is mapped one-to-one, common letters in the ciphertext directly correspond to common letters in the language (like 'e'), making it easy to crack."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is a key property of a Cryptographic Hash Function?",
+    "options": [
+      {
+        "statement": "It is reversible (you can get the original text from the hash).",
+        "istrue": false
+      },
+      {
+        "statement": "It is a one-way function; you cannot compute the original input from the output.",
+        "istrue": true
+      },
+      {
+        "statement": "It always produces a different output length.",
+        "istrue": false
+      },
+      {
+        "statement": "It requires two keys.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Hashes are designed to be irreversible digests of data, used for integrity checks and password storage."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The 'Avalanche Effect' in hashing means:",
+    "options": [
+      {
+        "statement": "The hash function runs slower over time.",
+        "istrue": false
+      },
+      {
+        "statement": "A small change in the input (even one bit) results in a drastically different hash output.",
+        "istrue": true
+      },
+      {
+        "statement": "The system crashes if the file is too big.",
+        "istrue": false
+      },
+      {
+        "statement": "The hash value can be predicted easily.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A good hash function ensures that similar inputs produce completely unrelated outputs to prevent pattern analysis."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the defining characteristic of 'Symmetric Encryption'?",
+    "options": [
+      {
+        "statement": "It uses a public key and a private key.",
+        "istrue": false
+      },
+      {
+        "statement": "It uses the same single key for both encryption and decryption.",
+        "istrue": true
+      },
+      {
+        "statement": "It does not use any keys.",
+        "istrue": false
+      },
+      {
+        "statement": "It only works for text files.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Symmetric algorithms (like AES) rely on a shared secret key that must be known by both the sender and the receiver."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which type of Symmetric Encryption processes data bit-by-bit or byte-by-byte like a continuous flow?",
+    "options": [
+      {
+        "statement": "Block Cipher",
+        "istrue": false
+      },
+      {
+        "statement": "Stream Cipher",
+        "istrue": true
+      },
+      {
+        "statement": "Hash Function",
+        "istrue": false
+      },
+      {
+        "statement": "RSA",
+        "istrue": false
+      }
+    ],
+    "explanation": "Stream ciphers (e.g., RC4) encrypt data as a stream of bits, making them fast and suitable for real-time applications."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the major security flaw of the ECB (Electronic Codebook) mode in Block Ciphers?",
+    "options": [
+      {
+        "statement": "It uses too much CPU.",
+        "istrue": false
+      },
+      {
+        "statement": "Identical plaintext blocks produce identical ciphertext blocks, revealing patterns (e.g., the Penguin image remains visible).",
+        "istrue": true
+      },
+      {
+        "statement": "It cannot encrypt large files.",
+        "istrue": false
+      },
+      {
+        "statement": "It requires an Initialization Vector (IV).",
+        "istrue": false
+      }
+    ],
+    "explanation": "ECB does not hide data patterns because it encrypts each block independently without randomization."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In CBC (Cipher Block Chaining) mode, what is the purpose of the Initialization Vector (IV)?",
+    "options": [
+      {
+        "statement": "To make the encryption faster.",
+        "istrue": false
+      },
+      {
+        "statement": "To ensure that the first block is unique, so identical messages produce different ciphertexts.",
+        "istrue": true
+      },
+      {
+        "statement": "To act as a secondary password.",
+        "istrue": false
+      },
+      {
+        "statement": "To compress the data.",
+        "istrue": false
+      }
+    ],
+    "explanation": "The IV adds randomness to the start of the chain, ensuring that even if the same message is encrypted twice, the output looks completely different."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a key advantage of CTR (Counter) mode over CBC mode?",
+    "options": [
+      {
+        "statement": "It allows for parallel processing (encrypting blocks simultaneously) because blocks don't depend on each other.",
+        "istrue": true
+      },
+      {
+        "statement": "It uses a shorter key.",
+        "istrue": false
+      },
+      {
+        "statement": "It does not need a computer.",
+        "istrue": false
+      },
+      {
+        "statement": "It is an asymmetric algorithm.",
+        "istrue": false
+      }
+    ],
+    "explanation": "CTR mode turns a block cipher into a stream cipher using a counter, allowing multiple blocks to be encrypted at once (parallelism)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In Asymmetric Encryption, if Bob wants to send a secret message that ONLY Alice can read, which key should he use to encrypt it?",
+    "options": [
+      {
+        "statement": "Bob's Private Key",
+        "istrue": false
+      },
+      {
+        "statement": "Bob's Public Key",
+        "istrue": false
+      },
+      {
+        "statement": "Alice's Public Key",
+        "istrue": true
+      },
+      {
+        "statement": "Alice's Private Key",
+        "istrue": false
+      }
+    ],
+    "explanation": "To ensure confidentiality for Alice, encrypt with her Public Key. Only she has the corresponding Private Key to decrypt it."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In Digital Signatures, which key does the sender use to 'sign' the document?",
+    "options": [
+      {
+        "statement": "The Sender's Private Key",
+        "istrue": true
+      },
+      {
+        "statement": "The Sender's Public Key",
+        "istrue": false
+      },
+      {
+        "statement": "The Receiver's Private Key",
+        "istrue": false
+      },
+      {
+        "statement": "The Receiver's Public Key",
+        "istrue": false
+      }
+    ],
+    "explanation": "Signing requires proof of identity. Only the sender has their Private Key, so encrypting/signing with it proves the origin."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is the 'Sign then Encrypt' order generally preferred over 'Encrypt then Sign'?",
+    "options": [
+      {
+        "statement": "It is faster.",
+        "istrue": false
+      },
+      {
+        "statement": "It hides the identity of the signer (the signature is inside the envelope) and prevents 'surreptitious forwarding' attacks.",
+        "istrue": true
+      },
+      {
+        "statement": "It uses less memory.",
+        "istrue": false
+      },
+      {
+        "statement": "Encryption is impossible without signing first.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Signing inside the encryption layer protects the signature's confidentiality and binds the signature to the original plaintext."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why does HTTPS use a 'Hybrid' approach (Asymmetric for handshake, Symmetric for data)?",
+    "options": [
+      {
+        "statement": "Symmetric encryption is more secure than Asymmetric.",
+        "istrue": false
+      },
+      {
+        "statement": "Asymmetric encryption is computationally expensive (slow), so it's only used to exchange the key. Symmetric is fast for data transfer.",
+        "istrue": true
+      },
+      {
+        "statement": "Browsers do not support Asymmetric encryption.",
+        "istrue": false
+      },
+      {
+        "statement": "Symmetric keys never expire.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Asymmetric math is slow. The protocol uses it briefly to securely agree on a Symmetric Session Key, which is then used for the heavy lifting of data transfer."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which algorithm is considered the current standard for Symmetric Encryption?",
+    "options": [
+      {
+        "statement": "Caesar Cipher",
+        "istrue": false
+      },
+      {
+        "statement": "DES (Data Encryption Standard)",
+        "istrue": false
+      },
+      {
+        "statement": "AES (Advanced Encryption Standard)",
+        "istrue": true
+      },
+      {
+        "statement": "RSA",
+        "istrue": false
+      }
+    ],
+    "explanation": "AES is the globally accepted standard for symmetric encryption, replacing the older and weaker DES."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is a 'Hash Collision'?",
+    "options": [
+      {
+        "statement": "When two packets collide on the network.",
+        "istrue": false
+      },
+      {
+        "statement": "When two different inputs produce the exact same Hash output.",
+        "istrue": true
+      },
+      {
+        "statement": "When a computer crashes during hashing.",
+        "istrue": false
+      },
+      {
+        "statement": "When a password is typed incorrectly.",
+        "istrue": false
+      }
+    ],
+    "explanation": "A collision occurs when distinct data sets generate the same hash signature, compromising integrity checks (as seen with MD5)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why is the MD5 hash algorithm no longer recommended?",
+    "options": [
+      {
+        "statement": "It is too slow.",
+        "istrue": false
+      },
+      {
+        "statement": "It is prone to collisions (researchers can generate two files with the same MD5 hash).",
+        "istrue": true
+      },
+      {
+        "statement": "It costs money to use.",
+        "istrue": false
+      },
+      {
+        "statement": "It is incompatible with Windows.",
+        "istrue": false
+      }
+    ],
+    "explanation": "MD5 is cryptographically broken because collisions can be artificially created, making it unsafe for digital signatures or certificates."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What threat does 'Quantum Computing' pose to current cryptography?",
+    "options": [
+      {
+        "statement": "It will make computers overheat.",
+        "istrue": false
+      },
+      {
+        "statement": "It could break current Asymmetric algorithms (like RSA) by solving mathematical problems much faster than classical computers.",
+        "istrue": true
+      },
+      {
+        "statement": "It will delete all cloud data.",
+        "istrue": false
+      },
+      {
+        "statement": "It makes symmetric keys longer.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Quantum computers, using algorithms like Shor's algorithm, threaten to crack the factorization problems that underpin RSA security."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "In the context of integrity, if a hard drive sector containing a database file becomes corrupted physically, what happens to the file's integrity?",
+    "options": [
+      {
+        "statement": "It remains intact because software protects it.",
+        "istrue": false
+      },
+      {
+        "statement": "Integrity is compromised because the data is altered/unreadable, regardless of malicious intent.",
+        "istrue": true
+      },
+      {
+        "statement": "The integrity increases.",
+        "istrue": false
+      },
+      {
+        "statement": "It switches to confidentiality.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Integrity relies on stable hardware. Physical corruption breaks the 'correctness' and 'unaltered' state of the data."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the main problem with using Symmetric Key encryption for a large group of users (e.g., a teacher and 100 students)?",
+    "options": [
+      {
+        "statement": "It is too slow.",
+        "istrue": false
+      },
+      {
+        "statement": "Key distribution is difficult; if everyone shares the same key, anyone can forge messages claiming to be the teacher.",
+        "istrue": true
+      },
+      {
+        "statement": "It requires internet access.",
+        "istrue": false
+      },
+      {
+        "statement": "Symmetric keys cannot encrypt text.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Shared symmetric keys do not provide non-repudiation. If 100 people have the key, any one of them can impersonate the others."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What does a Digital Signature fundamentally rely on to ensure efficiency?",
+    "options": [
+      {
+        "statement": "Encrypting the entire file.",
+        "istrue": false
+      },
+      {
+        "statement": "Signing the Hash (Digest) of the file instead of the whole file.",
+        "istrue": true
+      },
+      {
+        "statement": "Using a password manager.",
+        "istrue": false
+      },
+      {
+        "statement": "Using only uppercase letters.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Encrypting a large file with an asymmetric private key is slow. Instead, we hash the file and sign the tiny hash, which is fast and equally secure."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "The term 'Side-Channel Attack' refers to:",
+    "options": [
+      {
+        "statement": "Attacking the firewall from the side.",
+        "istrue": false
+      },
+      {
+        "statement": "Gathering information from the physical implementation of the system (e.g., power consumption, sound) rather than the algorithm itself.",
+        "istrue": true
+      },
+      {
+        "statement": "Sending spam emails.",
+        "istrue": false
+      },
+      {
+        "statement": "Using a USB drive to hack.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Side-channel attacks exploit physical leakage (power, timing, noise) during the decryption process to infer the key."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which component is essential for 'Authenticity' in a message?",
+    "options": [
+      {
+        "statement": "Making the message short.",
+        "istrue": false
+      },
+      {
+        "statement": "Ensuring the message was created by the claimed sender and has not been modified (Integrity).",
+        "istrue": true
+      },
+      {
+        "statement": "Sending it via email.",
+        "istrue": false
+      },
+      {
+        "statement": "Deleting the message after reading.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Authenticity verifies the origin. If integrity is broken (modified message), the message is no longer authentic."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Why did early Operating Systems (like DOS) have weak security regarding file deletion?",
+    "options": [
+      {
+        "statement": "Programmers were lazy.",
+        "istrue": false
+      },
+      {
+        "statement": "They were designed with 100% trust in the user, assuming the user knew what they were doing.",
+        "istrue": true
+      },
+      {
+        "statement": "Hard drives were too small.",
+        "istrue": false
+      },
+      {
+        "statement": "They didn't have keyboards.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Early systems were single-user and assumed the operator was the owner/admin, thus granting full control without 'Are you sure?' protections against system damage."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "What is the function of a 'Certificate' in HTTPS?",
+    "options": [
+      {
+        "statement": "To slow down the connection.",
+        "istrue": false
+      },
+      {
+        "statement": "To verify that the Public Key belongs to the legitimate website (binding the key to the identity).",
+        "istrue": true
+      },
+      {
+        "statement": "To compress images.",
+        "istrue": false
+      },
+      {
+        "statement": "To block ads.",
+        "istrue": false
+      }
+    ],
+    "explanation": "Certificates prevent Man-in-the-Middle attacks by having a trusted third party (CA) vouch that 'This Public Key belongs to google.com'."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "Which of the following is an example of a Stream Cipher?",
+    "options": [
+      {
+        "statement": "AES",
+        "istrue": false
+      },
+      {
+        "statement": "RC4",
+        "istrue": true
+      },
+      {
+        "statement": "RSA",
+        "istrue": false
+      },
+      {
+        "statement": "SHA-256",
+        "istrue": false
+      }
+    ],
+    "explanation": "RC4 is the classic example of a stream cipher (though now considered insecure, it is the textbook example)."
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ROT13 is an example of:",
+    "options": [
+      {
+        "statement": "A strong modern encryption.",
+        "istrue": false
+      },
+      {
+        "statement": "A simple Caesar Cipher with a shift of 13.",
+        "istrue": true
+      },
+      {
+        "statement": "A Hashing algorithm.",
+        "istrue": false
+      },
+      {
+        "statement": "A Public Key algorithm.",
+        "istrue": false
+      }
+    ],
+    "explanation": "ROT13 rotates the alphabet by 13 places. It is a symmetric substitution cipher often used for spoilers, not serious security."
+  }
+]
